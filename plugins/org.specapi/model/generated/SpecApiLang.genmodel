@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.specapi/src-gen" editDirectory="/org.specapi.edit/src"
+    editorDirectory="/org.specapi.editor/src" modelPluginID="org.specapi" forceOverwrite="true"
+    modelName="SpecApiLang" updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    complianceLevel="5.0" copyrightFields="false" editPluginID="org.specapi.edit"
+    editorPluginID="org.specapi.editor" runtimeVersion="2.9">
+  <genPackages prefix="SpecapiLang" basePackage="org.specapi" disposableProviderFactory="true"
+      fileExtensions="specapi" ecorePackage="SpecApiLang.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="SpecApiLang.ecore#//HttpMethodType">
+      <genEnumLiterals ecoreEnumLiteral="SpecApiLang.ecore#//HttpMethodType/get"/>
+      <genEnumLiterals ecoreEnumLiteral="SpecApiLang.ecore#//HttpMethodType/put"/>
+      <genEnumLiterals ecoreEnumLiteral="SpecApiLang.ecore#//HttpMethodType/post"/>
+      <genEnumLiterals ecoreEnumLiteral="SpecApiLang.ecore#//HttpMethodType/delete"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="SpecApiLang.ecore#//BooleanValue">
+      <genEnumLiterals ecoreEnumLiteral="SpecApiLang.ecore#//BooleanValue/true"/>
+      <genEnumLiterals ecoreEnumLiteral="SpecApiLang.ecore#//BooleanValue/false"/>
+    </genEnums>
+    <genClasses ecoreClass="SpecApiLang.ecore#//Model">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpecApiLang.ecore#//Model/packageName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpecApiLang.ecore#//Model/declarations"/>
+    </genClasses>
+    <genClasses ecoreClass="SpecApiLang.ecore#//Declaration">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpecApiLang.ecore#//Declaration/name"/>
+    </genClasses>
+    <genClasses ecoreClass="SpecApiLang.ecore#//Api">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpecApiLang.ecore#//Api/baseUrl"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpecApiLang.ecore#//Api/blocks"/>
+    </genClasses>
+    <genClasses ecoreClass="SpecApiLang.ecore#//ServiceBlock"/>
+    <genClasses ecoreClass="SpecApiLang.ecore#//HeaderBlock">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpecApiLang.ecore#//HeaderBlock/headers"/>
+    </genClasses>
+    <genClasses ecoreClass="SpecApiLang.ecore#//Header">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpecApiLang.ecore#//Header/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpecApiLang.ecore#//Header/value"/>
+    </genClasses>
+    <genClasses ecoreClass="SpecApiLang.ecore#//HttpMethod">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpecApiLang.ecore#//HttpMethod/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpecApiLang.ecore#//HttpMethod/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpecApiLang.ecore#//HttpMethod/path"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpecApiLang.ecore#//HttpMethod/blocks"/>
+    </genClasses>
+    <genClasses ecoreClass="SpecApiLang.ecore#//HttpMethodBlock"/>
+    <genClasses ecoreClass="SpecApiLang.ecore#//Path">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpecApiLang.ecore#//Path/params"/>
+    </genClasses>
+    <genClasses ecoreClass="SpecApiLang.ecore#//ParamsBlock">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpecApiLang.ecore#//ParamsBlock/params"/>
+    </genClasses>
+    <genClasses ecoreClass="SpecApiLang.ecore#//SimpleMemberAssignment">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpecApiLang.ecore#//SimpleMemberAssignment/member"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpecApiLang.ecore#//SimpleMemberAssignment/defaultValue"/>
+    </genClasses>
+    <genClasses ecoreClass="SpecApiLang.ecore#//Literal"/>
+    <genClasses ecoreClass="SpecApiLang.ecore#//BodyBlock">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpecApiLang.ecore#//BodyBlock/type"/>
+    </genClasses>
+    <genClasses ecoreClass="SpecApiLang.ecore#//ResponseBlock">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SpecApiLang.ecore#//ResponseBlock/superType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpecApiLang.ecore#//ResponseBlock/type"/>
+    </genClasses>
+    <genClasses ecoreClass="SpecApiLang.ecore#//BlockType"/>
+    <genClasses ecoreClass="SpecApiLang.ecore#//Member">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpecApiLang.ecore#//Member/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpecApiLang.ecore#//Member/type"/>
+    </genClasses>
+    <genClasses ecoreClass="SpecApiLang.ecore#//SimpleMember">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpecApiLang.ecore#//SimpleMember/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpecApiLang.ecore#//SimpleMember/type"/>
+    </genClasses>
+    <genClasses ecoreClass="SpecApiLang.ecore#//Type"/>
+    <genClasses ecoreClass="SpecApiLang.ecore#//ArrayType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpecApiLang.ecore#//ArrayType/elementType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpecApiLang.ecore#//ArrayType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="SpecApiLang.ecore#//UserType">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SpecApiLang.ecore#//UserType/declaration"/>
+    </genClasses>
+    <genClasses ecoreClass="SpecApiLang.ecore#//UserTypeDeclaration">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpecApiLang.ecore#//UserTypeDeclaration/keyword"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpecApiLang.ecore#//UserTypeDeclaration/nogen"/>
+    </genClasses>
+    <genClasses ecoreClass="SpecApiLang.ecore#//ComplexTypeDeclaration">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpecApiLang.ecore#//ComplexTypeDeclaration/literal"/>
+    </genClasses>
+    <genClasses ecoreClass="SpecApiLang.ecore#//EnumTypeDeclaration">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpecApiLang.ecore#//EnumTypeDeclaration/superType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpecApiLang.ecore#//EnumTypeDeclaration/literal"/>
+    </genClasses>
+    <genClasses ecoreClass="SpecApiLang.ecore#//EnumTypeLiteral">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpecApiLang.ecore#//EnumTypeLiteral/members"/>
+    </genClasses>
+    <genClasses ecoreClass="SpecApiLang.ecore#//EnumMember">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpecApiLang.ecore#//EnumMember/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpecApiLang.ecore#//EnumMember/assignment"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpecApiLang.ecore#//EnumMember/value"/>
+    </genClasses>
+    <genClasses ecoreClass="SpecApiLang.ecore#//ComplexTypeLiteral">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpecApiLang.ecore#//ComplexTypeLiteral/members"/>
+    </genClasses>
+    <genClasses ecoreClass="SpecApiLang.ecore#//IntrinsicType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpecApiLang.ecore#//IntrinsicType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="SpecApiLang.ecore#//StringType"/>
+    <genClasses ecoreClass="SpecApiLang.ecore#//BooleanType"/>
+    <genClasses ecoreClass="SpecApiLang.ecore#//NumericType"/>
+    <genClasses ecoreClass="SpecApiLang.ecore#//IntegerType"/>
+    <genClasses ecoreClass="SpecApiLang.ecore#//LongType"/>
+    <genClasses ecoreClass="SpecApiLang.ecore#//DoubleType"/>
+    <genClasses ecoreClass="SpecApiLang.ecore#//BooleanLiteral">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpecApiLang.ecore#//BooleanLiteral/literal"/>
+    </genClasses>
+    <genClasses ecoreClass="SpecApiLang.ecore#//StringLiteral">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpecApiLang.ecore#//StringLiteral/literal"/>
+    </genClasses>
+    <genClasses ecoreClass="SpecApiLang.ecore#//NumericLiteral">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpecApiLang.ecore#//NumericLiteral/literal"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

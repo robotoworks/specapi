@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Swagger
+Bundle-SymbolicName: org.specapi.plugins.swagger
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: ROBOTOWORKS
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Require-Bundle: org.eclipse.xtext.generator,
+ org.specapi;bundle-version="0.1.0",
+ org.apache.commons.logging;bundle-version="1.1.1"

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/org.specapi.sdk_0.1.0.qualifier.jar" id="org.specapi.sdk" version="0.1.0.qualifier"/>
+</site>
