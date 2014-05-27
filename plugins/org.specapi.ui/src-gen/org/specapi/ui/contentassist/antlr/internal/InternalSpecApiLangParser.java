@@ -22,10 +22,11 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalSpecApiLangParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_NUMBER", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'get'", "'put'", "'post'", "'delete'", "'true'", "'false'", "'package'", "'api'", "'{'", "'}'", "'headers'", "','", "':'", "'/'", "'-'", "'params'", "'='", "'body'", "'response'", "'extends'", "'.'", "'[]'", "'entity'", "'nogen'", "'enum'", "'string'", "'boolean'", "'int'", "'long'", "'double'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_NUMBER", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'get'", "'put'", "'post'", "'delete'", "'patch'", "'true'", "'false'", "'package'", "'api'", "'{'", "'}'", "'headers'", "','", "':'", "'/'", "'-'", "'params'", "'='", "'body'", "'response'", "'extends'", "'.'", "'[]'", "'entity'", "'nogen'", "'enum'", "'string'", "'boolean'", "'int'", "'long'", "'double'"
     };
     public static final int RULE_ID=4;
     public static final int T__40=40;
+    public static final int T__41=41;
     public static final int T__29=29;
     public static final int T__28=28;
     public static final int T__27=27;
@@ -2977,10 +2978,10 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
             int alt1=2;
             int LA1_0 = input.LA(1);
 
-            if ( (LA1_0==33||LA1_0==35) ) {
+            if ( (LA1_0==34||LA1_0==36) ) {
                 alt1=1;
             }
-            else if ( (LA1_0==18) ) {
+            else if ( (LA1_0==19) ) {
                 alt1=2;
             }
             else {
@@ -3055,12 +3056,12 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
             // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1132:1: ( ( ruleHeaderBlock ) | ( ruleParamsBlock ) | ( ruleHttpMethod ) )
             int alt2=3;
             switch ( input.LA(1) ) {
-            case 21:
+            case 22:
                 {
                 alt2=1;
                 }
                 break;
-            case 26:
+            case 27:
                 {
                 alt2=2;
                 }
@@ -3069,6 +3070,7 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
             case 12:
             case 13:
             case 14:
+            case 15:
                 {
                 alt2=3;
                 }
@@ -3165,22 +3167,22 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
             // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1160:1: ( ( ruleHeaderBlock ) | ( ruleParamsBlock ) | ( ruleBodyBlock ) | ( ruleResponseBlock ) )
             int alt3=4;
             switch ( input.LA(1) ) {
-            case 21:
+            case 22:
                 {
                 alt3=1;
                 }
                 break;
-            case 26:
+            case 27:
                 {
                 alt3=2;
                 }
                 break;
-            case 28:
+            case 29:
                 {
                 alt3=3;
                 }
                 break;
-            case 29:
+            case 30:
                 {
                 alt3=4;
                 }
@@ -3300,11 +3302,11 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
             if ( (LA4_0==RULE_ID) ) {
                 int LA4_1 = input.LA(2);
 
-                if ( (LA4_1==EOF||LA4_1==19||(LA4_1>=24 && LA4_1<=25)||LA4_1==31) ) {
-                    alt4=1;
-                }
-                else if ( (LA4_1==23) ) {
+                if ( (LA4_1==24) ) {
                     alt4=2;
+                }
+                else if ( (LA4_1==EOF||LA4_1==20||(LA4_1>=25 && LA4_1<=26)||LA4_1==32) ) {
+                    alt4=1;
                 }
                 else {
                     NoViableAltException nvae =
@@ -3398,10 +3400,10 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
             if ( (LA5_0==RULE_ID) ) {
                 int LA5_1 = input.LA(2);
 
-                if ( (LA5_1==23) ) {
+                if ( (LA5_1==24) ) {
                     alt5=2;
                 }
-                else if ( (LA5_1==EOF||LA5_1==19||(LA5_1>=24 && LA5_1<=25)||LA5_1==31) ) {
+                else if ( (LA5_1==EOF||LA5_1==20||(LA5_1>=25 && LA5_1<=26)||LA5_1==32) ) {
                     alt5=1;
                 }
                 else {
@@ -3492,8 +3494,8 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
             // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1238:1: ( ( ( rule__Literal__Group_0__0 ) ) | ( ( rule__Literal__Group_1__0 ) ) | ( ( rule__Literal__Group_2__0 ) ) )
             int alt6=3;
             switch ( input.LA(1) ) {
-            case 15:
             case 16:
+            case 17:
                 {
                 alt6=1;
                 }
@@ -3504,7 +3506,7 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
                 }
                 break;
             case RULE_NUMBER:
-            case 25:
+            case 26:
                 {
                 alt6=3;
                 }
@@ -3620,10 +3622,10 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
             int alt7=2;
             int LA7_0 = input.LA(1);
 
-            if ( (LA7_0==RULE_ID||(LA7_0>=36 && LA7_0<=40)) ) {
+            if ( (LA7_0==RULE_ID||(LA7_0>=37 && LA7_0<=41)) ) {
                 alt7=1;
             }
-            else if ( (LA7_0==19) ) {
+            else if ( (LA7_0==20) ) {
                 alt7=2;
             }
             else {
@@ -3929,7 +3931,7 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
             if ( (LA11_0==RULE_ID) ) {
                 alt11=1;
             }
-            else if ( ((LA11_0>=36 && LA11_0<=40)) ) {
+            else if ( ((LA11_0>=37 && LA11_0<=41)) ) {
                 alt11=2;
             }
             else {
@@ -4005,10 +4007,10 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
             int alt12=2;
             int LA12_0 = input.LA(1);
 
-            if ( (LA12_0==33) ) {
+            if ( (LA12_0==34) ) {
                 alt12=1;
             }
-            else if ( (LA12_0==35) ) {
+            else if ( (LA12_0==36) ) {
                 alt12=2;
             }
             else {
@@ -4083,19 +4085,19 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
             // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1404:1: ( ( ruleStringType ) | ( ruleBooleanType ) | ( ruleNumericType ) )
             int alt13=3;
             switch ( input.LA(1) ) {
-            case 36:
+            case 37:
                 {
                 alt13=1;
                 }
                 break;
-            case 37:
+            case 38:
                 {
                 alt13=2;
                 }
                 break;
-            case 38:
             case 39:
             case 40:
+            case 41:
                 {
                 alt13=3;
                 }
@@ -4192,17 +4194,17 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
             // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1432:1: ( ( ruleIntegerType ) | ( ruleLongType ) | ( ruleDoubleType ) )
             int alt14=3;
             switch ( input.LA(1) ) {
-            case 38:
+            case 39:
                 {
                 alt14=1;
                 }
                 break;
-            case 39:
+            case 40:
                 {
                 alt14=2;
                 }
                 break;
-            case 40:
+            case 41:
                 {
                 alt14=3;
                 }
@@ -4290,14 +4292,14 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__HttpMethodType__Alternatives"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1456:1: rule__HttpMethodType__Alternatives : ( ( ( 'get' ) ) | ( ( 'put' ) ) | ( ( 'post' ) ) | ( ( 'delete' ) ) );
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1456:1: rule__HttpMethodType__Alternatives : ( ( ( 'get' ) ) | ( ( 'put' ) ) | ( ( 'post' ) ) | ( ( 'delete' ) ) | ( ( 'patch' ) ) );
     public final void rule__HttpMethodType__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1460:1: ( ( ( 'get' ) ) | ( ( 'put' ) ) | ( ( 'post' ) ) | ( ( 'delete' ) ) )
-            int alt15=4;
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1460:1: ( ( ( 'get' ) ) | ( ( 'put' ) ) | ( ( 'post' ) ) | ( ( 'delete' ) ) | ( ( 'patch' ) ) )
+            int alt15=5;
             switch ( input.LA(1) ) {
             case 11:
                 {
@@ -4317,6 +4319,11 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
             case 14:
                 {
                 alt15=4;
+                }
+                break;
+            case 15:
+                {
+                alt15=5;
                 }
                 break;
             default:
@@ -4411,6 +4418,27 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
                     }
                     break;
+                case 5 :
+                    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1489:6: ( ( 'patch' ) )
+                    {
+                    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1489:6: ( ( 'patch' ) )
+                    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1490:1: ( 'patch' )
+                    {
+                     before(grammarAccess.getHttpMethodTypeAccess().getPatchEnumLiteralDeclaration_4()); 
+                    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1491:1: ( 'patch' )
+                    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1491:3: 'patch'
+                    {
+                    match(input,15,FOLLOW_15_in_rule__HttpMethodType__Alternatives3197); 
+
+                    }
+
+                     after(grammarAccess.getHttpMethodTypeAccess().getPatchEnumLiteralDeclaration_4()); 
+
+                    }
+
+
+                    }
+                    break;
 
             }
         }
@@ -4429,20 +4457,20 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__BooleanValue__Alternatives"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1494:1: rule__BooleanValue__Alternatives : ( ( ( 'true' ) ) | ( ( 'false' ) ) );
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1501:1: rule__BooleanValue__Alternatives : ( ( ( 'true' ) ) | ( ( 'false' ) ) );
     public final void rule__BooleanValue__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1498:1: ( ( ( 'true' ) ) | ( ( 'false' ) ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1505:1: ( ( ( 'true' ) ) | ( ( 'false' ) ) )
             int alt16=2;
             int LA16_0 = input.LA(1);
 
-            if ( (LA16_0==15) ) {
+            if ( (LA16_0==16) ) {
                 alt16=1;
             }
-            else if ( (LA16_0==16) ) {
+            else if ( (LA16_0==17) ) {
                 alt16=2;
             }
             else {
@@ -4453,16 +4481,16 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
             }
             switch (alt16) {
                 case 1 :
-                    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1499:1: ( ( 'true' ) )
+                    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1506:1: ( ( 'true' ) )
                     {
-                    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1499:1: ( ( 'true' ) )
-                    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1500:1: ( 'true' )
+                    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1506:1: ( ( 'true' ) )
+                    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1507:1: ( 'true' )
                     {
                      before(grammarAccess.getBooleanValueAccess().getTrueEnumLiteralDeclaration_0()); 
-                    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1501:1: ( 'true' )
-                    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1501:3: 'true'
+                    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1508:1: ( 'true' )
+                    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1508:3: 'true'
                     {
-                    match(input,15,FOLLOW_15_in_rule__BooleanValue__Alternatives3212); 
+                    match(input,16,FOLLOW_16_in_rule__BooleanValue__Alternatives3233); 
 
                     }
 
@@ -4474,16 +4502,16 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
                     }
                     break;
                 case 2 :
-                    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1506:6: ( ( 'false' ) )
+                    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1513:6: ( ( 'false' ) )
                     {
-                    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1506:6: ( ( 'false' ) )
-                    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1507:1: ( 'false' )
+                    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1513:6: ( ( 'false' ) )
+                    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1514:1: ( 'false' )
                     {
                      before(grammarAccess.getBooleanValueAccess().getFalseEnumLiteralDeclaration_1()); 
-                    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1508:1: ( 'false' )
-                    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1508:3: 'false'
+                    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1515:1: ( 'false' )
+                    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1515:3: 'false'
                     {
-                    match(input,16,FOLLOW_16_in_rule__BooleanValue__Alternatives3233); 
+                    match(input,17,FOLLOW_17_in_rule__BooleanValue__Alternatives3254); 
 
                     }
 
@@ -4512,21 +4540,21 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Model__Group__0"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1520:1: rule__Model__Group__0 : rule__Model__Group__0__Impl rule__Model__Group__1 ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1527:1: rule__Model__Group__0 : rule__Model__Group__0__Impl rule__Model__Group__1 ;
     public final void rule__Model__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1524:1: ( rule__Model__Group__0__Impl rule__Model__Group__1 )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1525:2: rule__Model__Group__0__Impl rule__Model__Group__1
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1531:1: ( rule__Model__Group__0__Impl rule__Model__Group__1 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1532:2: rule__Model__Group__0__Impl rule__Model__Group__1
             {
-            pushFollow(FOLLOW_rule__Model__Group__0__Impl_in_rule__Model__Group__03266);
+            pushFollow(FOLLOW_rule__Model__Group__0__Impl_in_rule__Model__Group__03287);
             rule__Model__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Model__Group__1_in_rule__Model__Group__03269);
+            pushFollow(FOLLOW_rule__Model__Group__1_in_rule__Model__Group__03290);
             rule__Model__Group__1();
 
             state._fsp--;
@@ -4550,20 +4578,20 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Model__Group__0__Impl"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1532:1: rule__Model__Group__0__Impl : ( 'package' ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1539:1: rule__Model__Group__0__Impl : ( 'package' ) ;
     public final void rule__Model__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1536:1: ( ( 'package' ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1537:1: ( 'package' )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1543:1: ( ( 'package' ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1544:1: ( 'package' )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1537:1: ( 'package' )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1538:1: 'package'
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1544:1: ( 'package' )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1545:1: 'package'
             {
              before(grammarAccess.getModelAccess().getPackageKeyword_0()); 
-            match(input,17,FOLLOW_17_in_rule__Model__Group__0__Impl3297); 
+            match(input,18,FOLLOW_18_in_rule__Model__Group__0__Impl3318); 
              after(grammarAccess.getModelAccess().getPackageKeyword_0()); 
 
             }
@@ -4587,21 +4615,21 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Model__Group__1"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1551:1: rule__Model__Group__1 : rule__Model__Group__1__Impl rule__Model__Group__2 ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1558:1: rule__Model__Group__1 : rule__Model__Group__1__Impl rule__Model__Group__2 ;
     public final void rule__Model__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1555:1: ( rule__Model__Group__1__Impl rule__Model__Group__2 )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1556:2: rule__Model__Group__1__Impl rule__Model__Group__2
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1562:1: ( rule__Model__Group__1__Impl rule__Model__Group__2 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1563:2: rule__Model__Group__1__Impl rule__Model__Group__2
             {
-            pushFollow(FOLLOW_rule__Model__Group__1__Impl_in_rule__Model__Group__13328);
+            pushFollow(FOLLOW_rule__Model__Group__1__Impl_in_rule__Model__Group__13349);
             rule__Model__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Model__Group__2_in_rule__Model__Group__13331);
+            pushFollow(FOLLOW_rule__Model__Group__2_in_rule__Model__Group__13352);
             rule__Model__Group__2();
 
             state._fsp--;
@@ -4625,23 +4653,23 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Model__Group__1__Impl"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1563:1: rule__Model__Group__1__Impl : ( ( rule__Model__PackageNameAssignment_1 ) ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1570:1: rule__Model__Group__1__Impl : ( ( rule__Model__PackageNameAssignment_1 ) ) ;
     public final void rule__Model__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1567:1: ( ( ( rule__Model__PackageNameAssignment_1 ) ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1568:1: ( ( rule__Model__PackageNameAssignment_1 ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1574:1: ( ( ( rule__Model__PackageNameAssignment_1 ) ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1575:1: ( ( rule__Model__PackageNameAssignment_1 ) )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1568:1: ( ( rule__Model__PackageNameAssignment_1 ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1569:1: ( rule__Model__PackageNameAssignment_1 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1575:1: ( ( rule__Model__PackageNameAssignment_1 ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1576:1: ( rule__Model__PackageNameAssignment_1 )
             {
              before(grammarAccess.getModelAccess().getPackageNameAssignment_1()); 
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1570:1: ( rule__Model__PackageNameAssignment_1 )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1570:2: rule__Model__PackageNameAssignment_1
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1577:1: ( rule__Model__PackageNameAssignment_1 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1577:2: rule__Model__PackageNameAssignment_1
             {
-            pushFollow(FOLLOW_rule__Model__PackageNameAssignment_1_in_rule__Model__Group__1__Impl3358);
+            pushFollow(FOLLOW_rule__Model__PackageNameAssignment_1_in_rule__Model__Group__1__Impl3379);
             rule__Model__PackageNameAssignment_1();
 
             state._fsp--;
@@ -4672,16 +4700,16 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Model__Group__2"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1580:1: rule__Model__Group__2 : rule__Model__Group__2__Impl ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1587:1: rule__Model__Group__2 : rule__Model__Group__2__Impl ;
     public final void rule__Model__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1584:1: ( rule__Model__Group__2__Impl )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1585:2: rule__Model__Group__2__Impl
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1591:1: ( rule__Model__Group__2__Impl )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1592:2: rule__Model__Group__2__Impl
             {
-            pushFollow(FOLLOW_rule__Model__Group__2__Impl_in_rule__Model__Group__23388);
+            pushFollow(FOLLOW_rule__Model__Group__2__Impl_in_rule__Model__Group__23409);
             rule__Model__Group__2__Impl();
 
             state._fsp--;
@@ -4705,35 +4733,35 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Model__Group__2__Impl"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1591:1: rule__Model__Group__2__Impl : ( ( rule__Model__DeclarationsAssignment_2 )* ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1598:1: rule__Model__Group__2__Impl : ( ( rule__Model__DeclarationsAssignment_2 )* ) ;
     public final void rule__Model__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1595:1: ( ( ( rule__Model__DeclarationsAssignment_2 )* ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1596:1: ( ( rule__Model__DeclarationsAssignment_2 )* )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1602:1: ( ( ( rule__Model__DeclarationsAssignment_2 )* ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1603:1: ( ( rule__Model__DeclarationsAssignment_2 )* )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1596:1: ( ( rule__Model__DeclarationsAssignment_2 )* )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1597:1: ( rule__Model__DeclarationsAssignment_2 )*
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1603:1: ( ( rule__Model__DeclarationsAssignment_2 )* )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1604:1: ( rule__Model__DeclarationsAssignment_2 )*
             {
              before(grammarAccess.getModelAccess().getDeclarationsAssignment_2()); 
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1598:1: ( rule__Model__DeclarationsAssignment_2 )*
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1605:1: ( rule__Model__DeclarationsAssignment_2 )*
             loop17:
             do {
                 int alt17=2;
                 int LA17_0 = input.LA(1);
 
-                if ( (LA17_0==18||LA17_0==33||LA17_0==35) ) {
+                if ( (LA17_0==19||LA17_0==34||LA17_0==36) ) {
                     alt17=1;
                 }
 
 
                 switch (alt17) {
             	case 1 :
-            	    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1598:2: rule__Model__DeclarationsAssignment_2
+            	    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1605:2: rule__Model__DeclarationsAssignment_2
             	    {
-            	    pushFollow(FOLLOW_rule__Model__DeclarationsAssignment_2_in_rule__Model__Group__2__Impl3415);
+            	    pushFollow(FOLLOW_rule__Model__DeclarationsAssignment_2_in_rule__Model__Group__2__Impl3436);
             	    rule__Model__DeclarationsAssignment_2();
 
             	    state._fsp--;
@@ -4770,21 +4798,21 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Api__Group__0"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1614:1: rule__Api__Group__0 : rule__Api__Group__0__Impl rule__Api__Group__1 ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1621:1: rule__Api__Group__0 : rule__Api__Group__0__Impl rule__Api__Group__1 ;
     public final void rule__Api__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1618:1: ( rule__Api__Group__0__Impl rule__Api__Group__1 )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1619:2: rule__Api__Group__0__Impl rule__Api__Group__1
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1625:1: ( rule__Api__Group__0__Impl rule__Api__Group__1 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1626:2: rule__Api__Group__0__Impl rule__Api__Group__1
             {
-            pushFollow(FOLLOW_rule__Api__Group__0__Impl_in_rule__Api__Group__03452);
+            pushFollow(FOLLOW_rule__Api__Group__0__Impl_in_rule__Api__Group__03473);
             rule__Api__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Api__Group__1_in_rule__Api__Group__03455);
+            pushFollow(FOLLOW_rule__Api__Group__1_in_rule__Api__Group__03476);
             rule__Api__Group__1();
 
             state._fsp--;
@@ -4808,20 +4836,20 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Api__Group__0__Impl"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1626:1: rule__Api__Group__0__Impl : ( 'api' ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1633:1: rule__Api__Group__0__Impl : ( 'api' ) ;
     public final void rule__Api__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1630:1: ( ( 'api' ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1631:1: ( 'api' )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1637:1: ( ( 'api' ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1638:1: ( 'api' )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1631:1: ( 'api' )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1632:1: 'api'
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1638:1: ( 'api' )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1639:1: 'api'
             {
              before(grammarAccess.getApiAccess().getApiKeyword_0()); 
-            match(input,18,FOLLOW_18_in_rule__Api__Group__0__Impl3483); 
+            match(input,19,FOLLOW_19_in_rule__Api__Group__0__Impl3504); 
              after(grammarAccess.getApiAccess().getApiKeyword_0()); 
 
             }
@@ -4845,21 +4873,21 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Api__Group__1"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1645:1: rule__Api__Group__1 : rule__Api__Group__1__Impl rule__Api__Group__2 ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1652:1: rule__Api__Group__1 : rule__Api__Group__1__Impl rule__Api__Group__2 ;
     public final void rule__Api__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1649:1: ( rule__Api__Group__1__Impl rule__Api__Group__2 )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1650:2: rule__Api__Group__1__Impl rule__Api__Group__2
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1656:1: ( rule__Api__Group__1__Impl rule__Api__Group__2 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1657:2: rule__Api__Group__1__Impl rule__Api__Group__2
             {
-            pushFollow(FOLLOW_rule__Api__Group__1__Impl_in_rule__Api__Group__13514);
+            pushFollow(FOLLOW_rule__Api__Group__1__Impl_in_rule__Api__Group__13535);
             rule__Api__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Api__Group__2_in_rule__Api__Group__13517);
+            pushFollow(FOLLOW_rule__Api__Group__2_in_rule__Api__Group__13538);
             rule__Api__Group__2();
 
             state._fsp--;
@@ -4883,23 +4911,23 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Api__Group__1__Impl"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1657:1: rule__Api__Group__1__Impl : ( ( rule__Api__NameAssignment_1 ) ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1664:1: rule__Api__Group__1__Impl : ( ( rule__Api__NameAssignment_1 ) ) ;
     public final void rule__Api__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1661:1: ( ( ( rule__Api__NameAssignment_1 ) ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1662:1: ( ( rule__Api__NameAssignment_1 ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1668:1: ( ( ( rule__Api__NameAssignment_1 ) ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1669:1: ( ( rule__Api__NameAssignment_1 ) )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1662:1: ( ( rule__Api__NameAssignment_1 ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1663:1: ( rule__Api__NameAssignment_1 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1669:1: ( ( rule__Api__NameAssignment_1 ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1670:1: ( rule__Api__NameAssignment_1 )
             {
              before(grammarAccess.getApiAccess().getNameAssignment_1()); 
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1664:1: ( rule__Api__NameAssignment_1 )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1664:2: rule__Api__NameAssignment_1
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1671:1: ( rule__Api__NameAssignment_1 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1671:2: rule__Api__NameAssignment_1
             {
-            pushFollow(FOLLOW_rule__Api__NameAssignment_1_in_rule__Api__Group__1__Impl3544);
+            pushFollow(FOLLOW_rule__Api__NameAssignment_1_in_rule__Api__Group__1__Impl3565);
             rule__Api__NameAssignment_1();
 
             state._fsp--;
@@ -4930,21 +4958,21 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Api__Group__2"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1674:1: rule__Api__Group__2 : rule__Api__Group__2__Impl rule__Api__Group__3 ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1681:1: rule__Api__Group__2 : rule__Api__Group__2__Impl rule__Api__Group__3 ;
     public final void rule__Api__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1678:1: ( rule__Api__Group__2__Impl rule__Api__Group__3 )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1679:2: rule__Api__Group__2__Impl rule__Api__Group__3
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1685:1: ( rule__Api__Group__2__Impl rule__Api__Group__3 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1686:2: rule__Api__Group__2__Impl rule__Api__Group__3
             {
-            pushFollow(FOLLOW_rule__Api__Group__2__Impl_in_rule__Api__Group__23574);
+            pushFollow(FOLLOW_rule__Api__Group__2__Impl_in_rule__Api__Group__23595);
             rule__Api__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Api__Group__3_in_rule__Api__Group__23577);
+            pushFollow(FOLLOW_rule__Api__Group__3_in_rule__Api__Group__23598);
             rule__Api__Group__3();
 
             state._fsp--;
@@ -4968,20 +4996,20 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Api__Group__2__Impl"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1686:1: rule__Api__Group__2__Impl : ( ( rule__Api__BaseUrlAssignment_2 )? ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1693:1: rule__Api__Group__2__Impl : ( ( rule__Api__BaseUrlAssignment_2 )? ) ;
     public final void rule__Api__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1690:1: ( ( ( rule__Api__BaseUrlAssignment_2 )? ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1691:1: ( ( rule__Api__BaseUrlAssignment_2 )? )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1697:1: ( ( ( rule__Api__BaseUrlAssignment_2 )? ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1698:1: ( ( rule__Api__BaseUrlAssignment_2 )? )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1691:1: ( ( rule__Api__BaseUrlAssignment_2 )? )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1692:1: ( rule__Api__BaseUrlAssignment_2 )?
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1698:1: ( ( rule__Api__BaseUrlAssignment_2 )? )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1699:1: ( rule__Api__BaseUrlAssignment_2 )?
             {
              before(grammarAccess.getApiAccess().getBaseUrlAssignment_2()); 
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1693:1: ( rule__Api__BaseUrlAssignment_2 )?
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1700:1: ( rule__Api__BaseUrlAssignment_2 )?
             int alt18=2;
             int LA18_0 = input.LA(1);
 
@@ -4990,9 +5018,9 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
             }
             switch (alt18) {
                 case 1 :
-                    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1693:2: rule__Api__BaseUrlAssignment_2
+                    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1700:2: rule__Api__BaseUrlAssignment_2
                     {
-                    pushFollow(FOLLOW_rule__Api__BaseUrlAssignment_2_in_rule__Api__Group__2__Impl3604);
+                    pushFollow(FOLLOW_rule__Api__BaseUrlAssignment_2_in_rule__Api__Group__2__Impl3625);
                     rule__Api__BaseUrlAssignment_2();
 
                     state._fsp--;
@@ -5026,21 +5054,21 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Api__Group__3"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1703:1: rule__Api__Group__3 : rule__Api__Group__3__Impl rule__Api__Group__4 ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1710:1: rule__Api__Group__3 : rule__Api__Group__3__Impl rule__Api__Group__4 ;
     public final void rule__Api__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1707:1: ( rule__Api__Group__3__Impl rule__Api__Group__4 )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1708:2: rule__Api__Group__3__Impl rule__Api__Group__4
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1714:1: ( rule__Api__Group__3__Impl rule__Api__Group__4 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1715:2: rule__Api__Group__3__Impl rule__Api__Group__4
             {
-            pushFollow(FOLLOW_rule__Api__Group__3__Impl_in_rule__Api__Group__33635);
+            pushFollow(FOLLOW_rule__Api__Group__3__Impl_in_rule__Api__Group__33656);
             rule__Api__Group__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Api__Group__4_in_rule__Api__Group__33638);
+            pushFollow(FOLLOW_rule__Api__Group__4_in_rule__Api__Group__33659);
             rule__Api__Group__4();
 
             state._fsp--;
@@ -5064,20 +5092,20 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Api__Group__3__Impl"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1715:1: rule__Api__Group__3__Impl : ( '{' ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1722:1: rule__Api__Group__3__Impl : ( '{' ) ;
     public final void rule__Api__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1719:1: ( ( '{' ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1720:1: ( '{' )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1726:1: ( ( '{' ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1727:1: ( '{' )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1720:1: ( '{' )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1721:1: '{'
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1727:1: ( '{' )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1728:1: '{'
             {
              before(grammarAccess.getApiAccess().getLeftCurlyBracketKeyword_3()); 
-            match(input,19,FOLLOW_19_in_rule__Api__Group__3__Impl3666); 
+            match(input,20,FOLLOW_20_in_rule__Api__Group__3__Impl3687); 
              after(grammarAccess.getApiAccess().getLeftCurlyBracketKeyword_3()); 
 
             }
@@ -5101,21 +5129,21 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Api__Group__4"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1734:1: rule__Api__Group__4 : rule__Api__Group__4__Impl rule__Api__Group__5 ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1741:1: rule__Api__Group__4 : rule__Api__Group__4__Impl rule__Api__Group__5 ;
     public final void rule__Api__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1738:1: ( rule__Api__Group__4__Impl rule__Api__Group__5 )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1739:2: rule__Api__Group__4__Impl rule__Api__Group__5
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1745:1: ( rule__Api__Group__4__Impl rule__Api__Group__5 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1746:2: rule__Api__Group__4__Impl rule__Api__Group__5
             {
-            pushFollow(FOLLOW_rule__Api__Group__4__Impl_in_rule__Api__Group__43697);
+            pushFollow(FOLLOW_rule__Api__Group__4__Impl_in_rule__Api__Group__43718);
             rule__Api__Group__4__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Api__Group__5_in_rule__Api__Group__43700);
+            pushFollow(FOLLOW_rule__Api__Group__5_in_rule__Api__Group__43721);
             rule__Api__Group__5();
 
             state._fsp--;
@@ -5139,35 +5167,35 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Api__Group__4__Impl"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1746:1: rule__Api__Group__4__Impl : ( ( rule__Api__BlocksAssignment_4 )* ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1753:1: rule__Api__Group__4__Impl : ( ( rule__Api__BlocksAssignment_4 )* ) ;
     public final void rule__Api__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1750:1: ( ( ( rule__Api__BlocksAssignment_4 )* ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1751:1: ( ( rule__Api__BlocksAssignment_4 )* )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1757:1: ( ( ( rule__Api__BlocksAssignment_4 )* ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1758:1: ( ( rule__Api__BlocksAssignment_4 )* )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1751:1: ( ( rule__Api__BlocksAssignment_4 )* )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1752:1: ( rule__Api__BlocksAssignment_4 )*
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1758:1: ( ( rule__Api__BlocksAssignment_4 )* )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1759:1: ( rule__Api__BlocksAssignment_4 )*
             {
              before(grammarAccess.getApiAccess().getBlocksAssignment_4()); 
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1753:1: ( rule__Api__BlocksAssignment_4 )*
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1760:1: ( rule__Api__BlocksAssignment_4 )*
             loop19:
             do {
                 int alt19=2;
                 int LA19_0 = input.LA(1);
 
-                if ( ((LA19_0>=11 && LA19_0<=14)||LA19_0==21||LA19_0==26) ) {
+                if ( ((LA19_0>=11 && LA19_0<=15)||LA19_0==22||LA19_0==27) ) {
                     alt19=1;
                 }
 
 
                 switch (alt19) {
             	case 1 :
-            	    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1753:2: rule__Api__BlocksAssignment_4
+            	    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1760:2: rule__Api__BlocksAssignment_4
             	    {
-            	    pushFollow(FOLLOW_rule__Api__BlocksAssignment_4_in_rule__Api__Group__4__Impl3727);
+            	    pushFollow(FOLLOW_rule__Api__BlocksAssignment_4_in_rule__Api__Group__4__Impl3748);
             	    rule__Api__BlocksAssignment_4();
 
             	    state._fsp--;
@@ -5204,16 +5232,16 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Api__Group__5"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1763:1: rule__Api__Group__5 : rule__Api__Group__5__Impl ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1770:1: rule__Api__Group__5 : rule__Api__Group__5__Impl ;
     public final void rule__Api__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1767:1: ( rule__Api__Group__5__Impl )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1768:2: rule__Api__Group__5__Impl
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1774:1: ( rule__Api__Group__5__Impl )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1775:2: rule__Api__Group__5__Impl
             {
-            pushFollow(FOLLOW_rule__Api__Group__5__Impl_in_rule__Api__Group__53758);
+            pushFollow(FOLLOW_rule__Api__Group__5__Impl_in_rule__Api__Group__53779);
             rule__Api__Group__5__Impl();
 
             state._fsp--;
@@ -5237,20 +5265,20 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Api__Group__5__Impl"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1774:1: rule__Api__Group__5__Impl : ( '}' ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1781:1: rule__Api__Group__5__Impl : ( '}' ) ;
     public final void rule__Api__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1778:1: ( ( '}' ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1779:1: ( '}' )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1785:1: ( ( '}' ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1786:1: ( '}' )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1779:1: ( '}' )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1780:1: '}'
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1786:1: ( '}' )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1787:1: '}'
             {
              before(grammarAccess.getApiAccess().getRightCurlyBracketKeyword_5()); 
-            match(input,20,FOLLOW_20_in_rule__Api__Group__5__Impl3786); 
+            match(input,21,FOLLOW_21_in_rule__Api__Group__5__Impl3807); 
              after(grammarAccess.getApiAccess().getRightCurlyBracketKeyword_5()); 
 
             }
@@ -5274,21 +5302,21 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__HeaderBlock__Group__0"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1805:1: rule__HeaderBlock__Group__0 : rule__HeaderBlock__Group__0__Impl rule__HeaderBlock__Group__1 ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1812:1: rule__HeaderBlock__Group__0 : rule__HeaderBlock__Group__0__Impl rule__HeaderBlock__Group__1 ;
     public final void rule__HeaderBlock__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1809:1: ( rule__HeaderBlock__Group__0__Impl rule__HeaderBlock__Group__1 )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1810:2: rule__HeaderBlock__Group__0__Impl rule__HeaderBlock__Group__1
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1816:1: ( rule__HeaderBlock__Group__0__Impl rule__HeaderBlock__Group__1 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1817:2: rule__HeaderBlock__Group__0__Impl rule__HeaderBlock__Group__1
             {
-            pushFollow(FOLLOW_rule__HeaderBlock__Group__0__Impl_in_rule__HeaderBlock__Group__03829);
+            pushFollow(FOLLOW_rule__HeaderBlock__Group__0__Impl_in_rule__HeaderBlock__Group__03850);
             rule__HeaderBlock__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__HeaderBlock__Group__1_in_rule__HeaderBlock__Group__03832);
+            pushFollow(FOLLOW_rule__HeaderBlock__Group__1_in_rule__HeaderBlock__Group__03853);
             rule__HeaderBlock__Group__1();
 
             state._fsp--;
@@ -5312,20 +5340,20 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__HeaderBlock__Group__0__Impl"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1817:1: rule__HeaderBlock__Group__0__Impl : ( 'headers' ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1824:1: rule__HeaderBlock__Group__0__Impl : ( 'headers' ) ;
     public final void rule__HeaderBlock__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1821:1: ( ( 'headers' ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1822:1: ( 'headers' )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1828:1: ( ( 'headers' ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1829:1: ( 'headers' )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1822:1: ( 'headers' )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1823:1: 'headers'
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1829:1: ( 'headers' )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1830:1: 'headers'
             {
              before(grammarAccess.getHeaderBlockAccess().getHeadersKeyword_0()); 
-            match(input,21,FOLLOW_21_in_rule__HeaderBlock__Group__0__Impl3860); 
+            match(input,22,FOLLOW_22_in_rule__HeaderBlock__Group__0__Impl3881); 
              after(grammarAccess.getHeaderBlockAccess().getHeadersKeyword_0()); 
 
             }
@@ -5349,21 +5377,21 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__HeaderBlock__Group__1"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1836:1: rule__HeaderBlock__Group__1 : rule__HeaderBlock__Group__1__Impl rule__HeaderBlock__Group__2 ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1843:1: rule__HeaderBlock__Group__1 : rule__HeaderBlock__Group__1__Impl rule__HeaderBlock__Group__2 ;
     public final void rule__HeaderBlock__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1840:1: ( rule__HeaderBlock__Group__1__Impl rule__HeaderBlock__Group__2 )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1841:2: rule__HeaderBlock__Group__1__Impl rule__HeaderBlock__Group__2
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1847:1: ( rule__HeaderBlock__Group__1__Impl rule__HeaderBlock__Group__2 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1848:2: rule__HeaderBlock__Group__1__Impl rule__HeaderBlock__Group__2
             {
-            pushFollow(FOLLOW_rule__HeaderBlock__Group__1__Impl_in_rule__HeaderBlock__Group__13891);
+            pushFollow(FOLLOW_rule__HeaderBlock__Group__1__Impl_in_rule__HeaderBlock__Group__13912);
             rule__HeaderBlock__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__HeaderBlock__Group__2_in_rule__HeaderBlock__Group__13894);
+            pushFollow(FOLLOW_rule__HeaderBlock__Group__2_in_rule__HeaderBlock__Group__13915);
             rule__HeaderBlock__Group__2();
 
             state._fsp--;
@@ -5387,23 +5415,23 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__HeaderBlock__Group__1__Impl"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1848:1: rule__HeaderBlock__Group__1__Impl : ( ( rule__HeaderBlock__HeadersAssignment_1 ) ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1855:1: rule__HeaderBlock__Group__1__Impl : ( ( rule__HeaderBlock__HeadersAssignment_1 ) ) ;
     public final void rule__HeaderBlock__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1852:1: ( ( ( rule__HeaderBlock__HeadersAssignment_1 ) ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1853:1: ( ( rule__HeaderBlock__HeadersAssignment_1 ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1859:1: ( ( ( rule__HeaderBlock__HeadersAssignment_1 ) ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1860:1: ( ( rule__HeaderBlock__HeadersAssignment_1 ) )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1853:1: ( ( rule__HeaderBlock__HeadersAssignment_1 ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1854:1: ( rule__HeaderBlock__HeadersAssignment_1 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1860:1: ( ( rule__HeaderBlock__HeadersAssignment_1 ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1861:1: ( rule__HeaderBlock__HeadersAssignment_1 )
             {
              before(grammarAccess.getHeaderBlockAccess().getHeadersAssignment_1()); 
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1855:1: ( rule__HeaderBlock__HeadersAssignment_1 )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1855:2: rule__HeaderBlock__HeadersAssignment_1
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1862:1: ( rule__HeaderBlock__HeadersAssignment_1 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1862:2: rule__HeaderBlock__HeadersAssignment_1
             {
-            pushFollow(FOLLOW_rule__HeaderBlock__HeadersAssignment_1_in_rule__HeaderBlock__Group__1__Impl3921);
+            pushFollow(FOLLOW_rule__HeaderBlock__HeadersAssignment_1_in_rule__HeaderBlock__Group__1__Impl3942);
             rule__HeaderBlock__HeadersAssignment_1();
 
             state._fsp--;
@@ -5434,16 +5462,16 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__HeaderBlock__Group__2"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1865:1: rule__HeaderBlock__Group__2 : rule__HeaderBlock__Group__2__Impl ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1872:1: rule__HeaderBlock__Group__2 : rule__HeaderBlock__Group__2__Impl ;
     public final void rule__HeaderBlock__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1869:1: ( rule__HeaderBlock__Group__2__Impl )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1870:2: rule__HeaderBlock__Group__2__Impl
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1876:1: ( rule__HeaderBlock__Group__2__Impl )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1877:2: rule__HeaderBlock__Group__2__Impl
             {
-            pushFollow(FOLLOW_rule__HeaderBlock__Group__2__Impl_in_rule__HeaderBlock__Group__23951);
+            pushFollow(FOLLOW_rule__HeaderBlock__Group__2__Impl_in_rule__HeaderBlock__Group__23972);
             rule__HeaderBlock__Group__2__Impl();
 
             state._fsp--;
@@ -5467,35 +5495,35 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__HeaderBlock__Group__2__Impl"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1876:1: rule__HeaderBlock__Group__2__Impl : ( ( rule__HeaderBlock__Group_2__0 )* ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1883:1: rule__HeaderBlock__Group__2__Impl : ( ( rule__HeaderBlock__Group_2__0 )* ) ;
     public final void rule__HeaderBlock__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1880:1: ( ( ( rule__HeaderBlock__Group_2__0 )* ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1881:1: ( ( rule__HeaderBlock__Group_2__0 )* )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1887:1: ( ( ( rule__HeaderBlock__Group_2__0 )* ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1888:1: ( ( rule__HeaderBlock__Group_2__0 )* )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1881:1: ( ( rule__HeaderBlock__Group_2__0 )* )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1882:1: ( rule__HeaderBlock__Group_2__0 )*
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1888:1: ( ( rule__HeaderBlock__Group_2__0 )* )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1889:1: ( rule__HeaderBlock__Group_2__0 )*
             {
              before(grammarAccess.getHeaderBlockAccess().getGroup_2()); 
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1883:1: ( rule__HeaderBlock__Group_2__0 )*
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1890:1: ( rule__HeaderBlock__Group_2__0 )*
             loop20:
             do {
                 int alt20=2;
                 int LA20_0 = input.LA(1);
 
-                if ( (LA20_0==22) ) {
+                if ( (LA20_0==23) ) {
                     alt20=1;
                 }
 
 
                 switch (alt20) {
             	case 1 :
-            	    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1883:2: rule__HeaderBlock__Group_2__0
+            	    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1890:2: rule__HeaderBlock__Group_2__0
             	    {
-            	    pushFollow(FOLLOW_rule__HeaderBlock__Group_2__0_in_rule__HeaderBlock__Group__2__Impl3978);
+            	    pushFollow(FOLLOW_rule__HeaderBlock__Group_2__0_in_rule__HeaderBlock__Group__2__Impl3999);
             	    rule__HeaderBlock__Group_2__0();
 
             	    state._fsp--;
@@ -5532,21 +5560,21 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__HeaderBlock__Group_2__0"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1899:1: rule__HeaderBlock__Group_2__0 : rule__HeaderBlock__Group_2__0__Impl rule__HeaderBlock__Group_2__1 ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1906:1: rule__HeaderBlock__Group_2__0 : rule__HeaderBlock__Group_2__0__Impl rule__HeaderBlock__Group_2__1 ;
     public final void rule__HeaderBlock__Group_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1903:1: ( rule__HeaderBlock__Group_2__0__Impl rule__HeaderBlock__Group_2__1 )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1904:2: rule__HeaderBlock__Group_2__0__Impl rule__HeaderBlock__Group_2__1
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1910:1: ( rule__HeaderBlock__Group_2__0__Impl rule__HeaderBlock__Group_2__1 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1911:2: rule__HeaderBlock__Group_2__0__Impl rule__HeaderBlock__Group_2__1
             {
-            pushFollow(FOLLOW_rule__HeaderBlock__Group_2__0__Impl_in_rule__HeaderBlock__Group_2__04015);
+            pushFollow(FOLLOW_rule__HeaderBlock__Group_2__0__Impl_in_rule__HeaderBlock__Group_2__04036);
             rule__HeaderBlock__Group_2__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__HeaderBlock__Group_2__1_in_rule__HeaderBlock__Group_2__04018);
+            pushFollow(FOLLOW_rule__HeaderBlock__Group_2__1_in_rule__HeaderBlock__Group_2__04039);
             rule__HeaderBlock__Group_2__1();
 
             state._fsp--;
@@ -5570,20 +5598,20 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__HeaderBlock__Group_2__0__Impl"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1911:1: rule__HeaderBlock__Group_2__0__Impl : ( ',' ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1918:1: rule__HeaderBlock__Group_2__0__Impl : ( ',' ) ;
     public final void rule__HeaderBlock__Group_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1915:1: ( ( ',' ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1916:1: ( ',' )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1922:1: ( ( ',' ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1923:1: ( ',' )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1916:1: ( ',' )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1917:1: ','
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1923:1: ( ',' )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1924:1: ','
             {
              before(grammarAccess.getHeaderBlockAccess().getCommaKeyword_2_0()); 
-            match(input,22,FOLLOW_22_in_rule__HeaderBlock__Group_2__0__Impl4046); 
+            match(input,23,FOLLOW_23_in_rule__HeaderBlock__Group_2__0__Impl4067); 
              after(grammarAccess.getHeaderBlockAccess().getCommaKeyword_2_0()); 
 
             }
@@ -5607,16 +5635,16 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__HeaderBlock__Group_2__1"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1930:1: rule__HeaderBlock__Group_2__1 : rule__HeaderBlock__Group_2__1__Impl ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1937:1: rule__HeaderBlock__Group_2__1 : rule__HeaderBlock__Group_2__1__Impl ;
     public final void rule__HeaderBlock__Group_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1934:1: ( rule__HeaderBlock__Group_2__1__Impl )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1935:2: rule__HeaderBlock__Group_2__1__Impl
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1941:1: ( rule__HeaderBlock__Group_2__1__Impl )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1942:2: rule__HeaderBlock__Group_2__1__Impl
             {
-            pushFollow(FOLLOW_rule__HeaderBlock__Group_2__1__Impl_in_rule__HeaderBlock__Group_2__14077);
+            pushFollow(FOLLOW_rule__HeaderBlock__Group_2__1__Impl_in_rule__HeaderBlock__Group_2__14098);
             rule__HeaderBlock__Group_2__1__Impl();
 
             state._fsp--;
@@ -5640,23 +5668,23 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__HeaderBlock__Group_2__1__Impl"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1941:1: rule__HeaderBlock__Group_2__1__Impl : ( ( rule__HeaderBlock__HeadersAssignment_2_1 ) ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1948:1: rule__HeaderBlock__Group_2__1__Impl : ( ( rule__HeaderBlock__HeadersAssignment_2_1 ) ) ;
     public final void rule__HeaderBlock__Group_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1945:1: ( ( ( rule__HeaderBlock__HeadersAssignment_2_1 ) ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1946:1: ( ( rule__HeaderBlock__HeadersAssignment_2_1 ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1952:1: ( ( ( rule__HeaderBlock__HeadersAssignment_2_1 ) ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1953:1: ( ( rule__HeaderBlock__HeadersAssignment_2_1 ) )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1946:1: ( ( rule__HeaderBlock__HeadersAssignment_2_1 ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1947:1: ( rule__HeaderBlock__HeadersAssignment_2_1 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1953:1: ( ( rule__HeaderBlock__HeadersAssignment_2_1 ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1954:1: ( rule__HeaderBlock__HeadersAssignment_2_1 )
             {
              before(grammarAccess.getHeaderBlockAccess().getHeadersAssignment_2_1()); 
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1948:1: ( rule__HeaderBlock__HeadersAssignment_2_1 )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1948:2: rule__HeaderBlock__HeadersAssignment_2_1
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1955:1: ( rule__HeaderBlock__HeadersAssignment_2_1 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1955:2: rule__HeaderBlock__HeadersAssignment_2_1
             {
-            pushFollow(FOLLOW_rule__HeaderBlock__HeadersAssignment_2_1_in_rule__HeaderBlock__Group_2__1__Impl4104);
+            pushFollow(FOLLOW_rule__HeaderBlock__HeadersAssignment_2_1_in_rule__HeaderBlock__Group_2__1__Impl4125);
             rule__HeaderBlock__HeadersAssignment_2_1();
 
             state._fsp--;
@@ -5687,21 +5715,21 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Header__Group__0"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1962:1: rule__Header__Group__0 : rule__Header__Group__0__Impl rule__Header__Group__1 ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1969:1: rule__Header__Group__0 : rule__Header__Group__0__Impl rule__Header__Group__1 ;
     public final void rule__Header__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1966:1: ( rule__Header__Group__0__Impl rule__Header__Group__1 )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1967:2: rule__Header__Group__0__Impl rule__Header__Group__1
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1973:1: ( rule__Header__Group__0__Impl rule__Header__Group__1 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1974:2: rule__Header__Group__0__Impl rule__Header__Group__1
             {
-            pushFollow(FOLLOW_rule__Header__Group__0__Impl_in_rule__Header__Group__04138);
+            pushFollow(FOLLOW_rule__Header__Group__0__Impl_in_rule__Header__Group__04159);
             rule__Header__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Header__Group__1_in_rule__Header__Group__04141);
+            pushFollow(FOLLOW_rule__Header__Group__1_in_rule__Header__Group__04162);
             rule__Header__Group__1();
 
             state._fsp--;
@@ -5725,23 +5753,23 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Header__Group__0__Impl"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1974:1: rule__Header__Group__0__Impl : ( ( rule__Header__NameAssignment_0 ) ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1981:1: rule__Header__Group__0__Impl : ( ( rule__Header__NameAssignment_0 ) ) ;
     public final void rule__Header__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1978:1: ( ( ( rule__Header__NameAssignment_0 ) ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1979:1: ( ( rule__Header__NameAssignment_0 ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1985:1: ( ( ( rule__Header__NameAssignment_0 ) ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1986:1: ( ( rule__Header__NameAssignment_0 ) )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1979:1: ( ( rule__Header__NameAssignment_0 ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1980:1: ( rule__Header__NameAssignment_0 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1986:1: ( ( rule__Header__NameAssignment_0 ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1987:1: ( rule__Header__NameAssignment_0 )
             {
              before(grammarAccess.getHeaderAccess().getNameAssignment_0()); 
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1981:1: ( rule__Header__NameAssignment_0 )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1981:2: rule__Header__NameAssignment_0
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1988:1: ( rule__Header__NameAssignment_0 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1988:2: rule__Header__NameAssignment_0
             {
-            pushFollow(FOLLOW_rule__Header__NameAssignment_0_in_rule__Header__Group__0__Impl4168);
+            pushFollow(FOLLOW_rule__Header__NameAssignment_0_in_rule__Header__Group__0__Impl4189);
             rule__Header__NameAssignment_0();
 
             state._fsp--;
@@ -5772,21 +5800,21 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Header__Group__1"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1991:1: rule__Header__Group__1 : rule__Header__Group__1__Impl rule__Header__Group__2 ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1998:1: rule__Header__Group__1 : rule__Header__Group__1__Impl rule__Header__Group__2 ;
     public final void rule__Header__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1995:1: ( rule__Header__Group__1__Impl rule__Header__Group__2 )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1996:2: rule__Header__Group__1__Impl rule__Header__Group__2
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2002:1: ( rule__Header__Group__1__Impl rule__Header__Group__2 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2003:2: rule__Header__Group__1__Impl rule__Header__Group__2
             {
-            pushFollow(FOLLOW_rule__Header__Group__1__Impl_in_rule__Header__Group__14198);
+            pushFollow(FOLLOW_rule__Header__Group__1__Impl_in_rule__Header__Group__14219);
             rule__Header__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Header__Group__2_in_rule__Header__Group__14201);
+            pushFollow(FOLLOW_rule__Header__Group__2_in_rule__Header__Group__14222);
             rule__Header__Group__2();
 
             state._fsp--;
@@ -5810,20 +5838,20 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Header__Group__1__Impl"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2003:1: rule__Header__Group__1__Impl : ( ':' ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2010:1: rule__Header__Group__1__Impl : ( ':' ) ;
     public final void rule__Header__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2007:1: ( ( ':' ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2008:1: ( ':' )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2014:1: ( ( ':' ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2015:1: ( ':' )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2008:1: ( ':' )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2009:1: ':'
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2015:1: ( ':' )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2016:1: ':'
             {
              before(grammarAccess.getHeaderAccess().getColonKeyword_1()); 
-            match(input,23,FOLLOW_23_in_rule__Header__Group__1__Impl4229); 
+            match(input,24,FOLLOW_24_in_rule__Header__Group__1__Impl4250); 
              after(grammarAccess.getHeaderAccess().getColonKeyword_1()); 
 
             }
@@ -5847,16 +5875,16 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Header__Group__2"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2022:1: rule__Header__Group__2 : rule__Header__Group__2__Impl ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2029:1: rule__Header__Group__2 : rule__Header__Group__2__Impl ;
     public final void rule__Header__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2026:1: ( rule__Header__Group__2__Impl )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2027:2: rule__Header__Group__2__Impl
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2033:1: ( rule__Header__Group__2__Impl )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2034:2: rule__Header__Group__2__Impl
             {
-            pushFollow(FOLLOW_rule__Header__Group__2__Impl_in_rule__Header__Group__24260);
+            pushFollow(FOLLOW_rule__Header__Group__2__Impl_in_rule__Header__Group__24281);
             rule__Header__Group__2__Impl();
 
             state._fsp--;
@@ -5880,23 +5908,23 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Header__Group__2__Impl"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2033:1: rule__Header__Group__2__Impl : ( ( rule__Header__ValueAssignment_2 ) ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2040:1: rule__Header__Group__2__Impl : ( ( rule__Header__ValueAssignment_2 ) ) ;
     public final void rule__Header__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2037:1: ( ( ( rule__Header__ValueAssignment_2 ) ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2038:1: ( ( rule__Header__ValueAssignment_2 ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2044:1: ( ( ( rule__Header__ValueAssignment_2 ) ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2045:1: ( ( rule__Header__ValueAssignment_2 ) )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2038:1: ( ( rule__Header__ValueAssignment_2 ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2039:1: ( rule__Header__ValueAssignment_2 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2045:1: ( ( rule__Header__ValueAssignment_2 ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2046:1: ( rule__Header__ValueAssignment_2 )
             {
              before(grammarAccess.getHeaderAccess().getValueAssignment_2()); 
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2040:1: ( rule__Header__ValueAssignment_2 )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2040:2: rule__Header__ValueAssignment_2
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2047:1: ( rule__Header__ValueAssignment_2 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2047:2: rule__Header__ValueAssignment_2
             {
-            pushFollow(FOLLOW_rule__Header__ValueAssignment_2_in_rule__Header__Group__2__Impl4287);
+            pushFollow(FOLLOW_rule__Header__ValueAssignment_2_in_rule__Header__Group__2__Impl4308);
             rule__Header__ValueAssignment_2();
 
             state._fsp--;
@@ -5927,21 +5955,21 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__HttpMethod__Group__0"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2056:1: rule__HttpMethod__Group__0 : rule__HttpMethod__Group__0__Impl rule__HttpMethod__Group__1 ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2063:1: rule__HttpMethod__Group__0 : rule__HttpMethod__Group__0__Impl rule__HttpMethod__Group__1 ;
     public final void rule__HttpMethod__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2060:1: ( rule__HttpMethod__Group__0__Impl rule__HttpMethod__Group__1 )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2061:2: rule__HttpMethod__Group__0__Impl rule__HttpMethod__Group__1
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2067:1: ( rule__HttpMethod__Group__0__Impl rule__HttpMethod__Group__1 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2068:2: rule__HttpMethod__Group__0__Impl rule__HttpMethod__Group__1
             {
-            pushFollow(FOLLOW_rule__HttpMethod__Group__0__Impl_in_rule__HttpMethod__Group__04323);
+            pushFollow(FOLLOW_rule__HttpMethod__Group__0__Impl_in_rule__HttpMethod__Group__04344);
             rule__HttpMethod__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__HttpMethod__Group__1_in_rule__HttpMethod__Group__04326);
+            pushFollow(FOLLOW_rule__HttpMethod__Group__1_in_rule__HttpMethod__Group__04347);
             rule__HttpMethod__Group__1();
 
             state._fsp--;
@@ -5965,23 +5993,23 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__HttpMethod__Group__0__Impl"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2068:1: rule__HttpMethod__Group__0__Impl : ( ( rule__HttpMethod__TypeAssignment_0 ) ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2075:1: rule__HttpMethod__Group__0__Impl : ( ( rule__HttpMethod__TypeAssignment_0 ) ) ;
     public final void rule__HttpMethod__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2072:1: ( ( ( rule__HttpMethod__TypeAssignment_0 ) ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2073:1: ( ( rule__HttpMethod__TypeAssignment_0 ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2079:1: ( ( ( rule__HttpMethod__TypeAssignment_0 ) ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2080:1: ( ( rule__HttpMethod__TypeAssignment_0 ) )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2073:1: ( ( rule__HttpMethod__TypeAssignment_0 ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2074:1: ( rule__HttpMethod__TypeAssignment_0 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2080:1: ( ( rule__HttpMethod__TypeAssignment_0 ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2081:1: ( rule__HttpMethod__TypeAssignment_0 )
             {
              before(grammarAccess.getHttpMethodAccess().getTypeAssignment_0()); 
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2075:1: ( rule__HttpMethod__TypeAssignment_0 )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2075:2: rule__HttpMethod__TypeAssignment_0
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2082:1: ( rule__HttpMethod__TypeAssignment_0 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2082:2: rule__HttpMethod__TypeAssignment_0
             {
-            pushFollow(FOLLOW_rule__HttpMethod__TypeAssignment_0_in_rule__HttpMethod__Group__0__Impl4353);
+            pushFollow(FOLLOW_rule__HttpMethod__TypeAssignment_0_in_rule__HttpMethod__Group__0__Impl4374);
             rule__HttpMethod__TypeAssignment_0();
 
             state._fsp--;
@@ -6012,21 +6040,21 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__HttpMethod__Group__1"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2085:1: rule__HttpMethod__Group__1 : rule__HttpMethod__Group__1__Impl rule__HttpMethod__Group__2 ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2092:1: rule__HttpMethod__Group__1 : rule__HttpMethod__Group__1__Impl rule__HttpMethod__Group__2 ;
     public final void rule__HttpMethod__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2089:1: ( rule__HttpMethod__Group__1__Impl rule__HttpMethod__Group__2 )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2090:2: rule__HttpMethod__Group__1__Impl rule__HttpMethod__Group__2
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2096:1: ( rule__HttpMethod__Group__1__Impl rule__HttpMethod__Group__2 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2097:2: rule__HttpMethod__Group__1__Impl rule__HttpMethod__Group__2
             {
-            pushFollow(FOLLOW_rule__HttpMethod__Group__1__Impl_in_rule__HttpMethod__Group__14383);
+            pushFollow(FOLLOW_rule__HttpMethod__Group__1__Impl_in_rule__HttpMethod__Group__14404);
             rule__HttpMethod__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__HttpMethod__Group__2_in_rule__HttpMethod__Group__14386);
+            pushFollow(FOLLOW_rule__HttpMethod__Group__2_in_rule__HttpMethod__Group__14407);
             rule__HttpMethod__Group__2();
 
             state._fsp--;
@@ -6050,23 +6078,23 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__HttpMethod__Group__1__Impl"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2097:1: rule__HttpMethod__Group__1__Impl : ( ( rule__HttpMethod__NameAssignment_1 ) ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2104:1: rule__HttpMethod__Group__1__Impl : ( ( rule__HttpMethod__NameAssignment_1 ) ) ;
     public final void rule__HttpMethod__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2101:1: ( ( ( rule__HttpMethod__NameAssignment_1 ) ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2102:1: ( ( rule__HttpMethod__NameAssignment_1 ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2108:1: ( ( ( rule__HttpMethod__NameAssignment_1 ) ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2109:1: ( ( rule__HttpMethod__NameAssignment_1 ) )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2102:1: ( ( rule__HttpMethod__NameAssignment_1 ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2103:1: ( rule__HttpMethod__NameAssignment_1 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2109:1: ( ( rule__HttpMethod__NameAssignment_1 ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2110:1: ( rule__HttpMethod__NameAssignment_1 )
             {
              before(grammarAccess.getHttpMethodAccess().getNameAssignment_1()); 
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2104:1: ( rule__HttpMethod__NameAssignment_1 )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2104:2: rule__HttpMethod__NameAssignment_1
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2111:1: ( rule__HttpMethod__NameAssignment_1 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2111:2: rule__HttpMethod__NameAssignment_1
             {
-            pushFollow(FOLLOW_rule__HttpMethod__NameAssignment_1_in_rule__HttpMethod__Group__1__Impl4413);
+            pushFollow(FOLLOW_rule__HttpMethod__NameAssignment_1_in_rule__HttpMethod__Group__1__Impl4434);
             rule__HttpMethod__NameAssignment_1();
 
             state._fsp--;
@@ -6097,21 +6125,21 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__HttpMethod__Group__2"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2114:1: rule__HttpMethod__Group__2 : rule__HttpMethod__Group__2__Impl rule__HttpMethod__Group__3 ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2121:1: rule__HttpMethod__Group__2 : rule__HttpMethod__Group__2__Impl rule__HttpMethod__Group__3 ;
     public final void rule__HttpMethod__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2118:1: ( rule__HttpMethod__Group__2__Impl rule__HttpMethod__Group__3 )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2119:2: rule__HttpMethod__Group__2__Impl rule__HttpMethod__Group__3
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2125:1: ( rule__HttpMethod__Group__2__Impl rule__HttpMethod__Group__3 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2126:2: rule__HttpMethod__Group__2__Impl rule__HttpMethod__Group__3
             {
-            pushFollow(FOLLOW_rule__HttpMethod__Group__2__Impl_in_rule__HttpMethod__Group__24443);
+            pushFollow(FOLLOW_rule__HttpMethod__Group__2__Impl_in_rule__HttpMethod__Group__24464);
             rule__HttpMethod__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__HttpMethod__Group__3_in_rule__HttpMethod__Group__24446);
+            pushFollow(FOLLOW_rule__HttpMethod__Group__3_in_rule__HttpMethod__Group__24467);
             rule__HttpMethod__Group__3();
 
             state._fsp--;
@@ -6135,31 +6163,31 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__HttpMethod__Group__2__Impl"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2126:1: rule__HttpMethod__Group__2__Impl : ( ( rule__HttpMethod__PathAssignment_2 )? ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2133:1: rule__HttpMethod__Group__2__Impl : ( ( rule__HttpMethod__PathAssignment_2 )? ) ;
     public final void rule__HttpMethod__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2130:1: ( ( ( rule__HttpMethod__PathAssignment_2 )? ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2131:1: ( ( rule__HttpMethod__PathAssignment_2 )? )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2137:1: ( ( ( rule__HttpMethod__PathAssignment_2 )? ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2138:1: ( ( rule__HttpMethod__PathAssignment_2 )? )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2131:1: ( ( rule__HttpMethod__PathAssignment_2 )? )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2132:1: ( rule__HttpMethod__PathAssignment_2 )?
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2138:1: ( ( rule__HttpMethod__PathAssignment_2 )? )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2139:1: ( rule__HttpMethod__PathAssignment_2 )?
             {
              before(grammarAccess.getHttpMethodAccess().getPathAssignment_2()); 
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2133:1: ( rule__HttpMethod__PathAssignment_2 )?
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2140:1: ( rule__HttpMethod__PathAssignment_2 )?
             int alt21=2;
             int LA21_0 = input.LA(1);
 
-            if ( (LA21_0==24) ) {
+            if ( (LA21_0==25) ) {
                 alt21=1;
             }
             switch (alt21) {
                 case 1 :
-                    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2133:2: rule__HttpMethod__PathAssignment_2
+                    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2140:2: rule__HttpMethod__PathAssignment_2
                     {
-                    pushFollow(FOLLOW_rule__HttpMethod__PathAssignment_2_in_rule__HttpMethod__Group__2__Impl4473);
+                    pushFollow(FOLLOW_rule__HttpMethod__PathAssignment_2_in_rule__HttpMethod__Group__2__Impl4494);
                     rule__HttpMethod__PathAssignment_2();
 
                     state._fsp--;
@@ -6193,21 +6221,21 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__HttpMethod__Group__3"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2143:1: rule__HttpMethod__Group__3 : rule__HttpMethod__Group__3__Impl rule__HttpMethod__Group__4 ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2150:1: rule__HttpMethod__Group__3 : rule__HttpMethod__Group__3__Impl rule__HttpMethod__Group__4 ;
     public final void rule__HttpMethod__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2147:1: ( rule__HttpMethod__Group__3__Impl rule__HttpMethod__Group__4 )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2148:2: rule__HttpMethod__Group__3__Impl rule__HttpMethod__Group__4
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2154:1: ( rule__HttpMethod__Group__3__Impl rule__HttpMethod__Group__4 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2155:2: rule__HttpMethod__Group__3__Impl rule__HttpMethod__Group__4
             {
-            pushFollow(FOLLOW_rule__HttpMethod__Group__3__Impl_in_rule__HttpMethod__Group__34504);
+            pushFollow(FOLLOW_rule__HttpMethod__Group__3__Impl_in_rule__HttpMethod__Group__34525);
             rule__HttpMethod__Group__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__HttpMethod__Group__4_in_rule__HttpMethod__Group__34507);
+            pushFollow(FOLLOW_rule__HttpMethod__Group__4_in_rule__HttpMethod__Group__34528);
             rule__HttpMethod__Group__4();
 
             state._fsp--;
@@ -6231,20 +6259,20 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__HttpMethod__Group__3__Impl"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2155:1: rule__HttpMethod__Group__3__Impl : ( '{' ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2162:1: rule__HttpMethod__Group__3__Impl : ( '{' ) ;
     public final void rule__HttpMethod__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2159:1: ( ( '{' ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2160:1: ( '{' )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2166:1: ( ( '{' ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2167:1: ( '{' )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2160:1: ( '{' )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2161:1: '{'
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2167:1: ( '{' )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2168:1: '{'
             {
              before(grammarAccess.getHttpMethodAccess().getLeftCurlyBracketKeyword_3()); 
-            match(input,19,FOLLOW_19_in_rule__HttpMethod__Group__3__Impl4535); 
+            match(input,20,FOLLOW_20_in_rule__HttpMethod__Group__3__Impl4556); 
              after(grammarAccess.getHttpMethodAccess().getLeftCurlyBracketKeyword_3()); 
 
             }
@@ -6268,21 +6296,21 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__HttpMethod__Group__4"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2174:1: rule__HttpMethod__Group__4 : rule__HttpMethod__Group__4__Impl rule__HttpMethod__Group__5 ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2181:1: rule__HttpMethod__Group__4 : rule__HttpMethod__Group__4__Impl rule__HttpMethod__Group__5 ;
     public final void rule__HttpMethod__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2178:1: ( rule__HttpMethod__Group__4__Impl rule__HttpMethod__Group__5 )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2179:2: rule__HttpMethod__Group__4__Impl rule__HttpMethod__Group__5
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2185:1: ( rule__HttpMethod__Group__4__Impl rule__HttpMethod__Group__5 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2186:2: rule__HttpMethod__Group__4__Impl rule__HttpMethod__Group__5
             {
-            pushFollow(FOLLOW_rule__HttpMethod__Group__4__Impl_in_rule__HttpMethod__Group__44566);
+            pushFollow(FOLLOW_rule__HttpMethod__Group__4__Impl_in_rule__HttpMethod__Group__44587);
             rule__HttpMethod__Group__4__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__HttpMethod__Group__5_in_rule__HttpMethod__Group__44569);
+            pushFollow(FOLLOW_rule__HttpMethod__Group__5_in_rule__HttpMethod__Group__44590);
             rule__HttpMethod__Group__5();
 
             state._fsp--;
@@ -6306,35 +6334,35 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__HttpMethod__Group__4__Impl"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2186:1: rule__HttpMethod__Group__4__Impl : ( ( rule__HttpMethod__BlocksAssignment_4 )* ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2193:1: rule__HttpMethod__Group__4__Impl : ( ( rule__HttpMethod__BlocksAssignment_4 )* ) ;
     public final void rule__HttpMethod__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2190:1: ( ( ( rule__HttpMethod__BlocksAssignment_4 )* ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2191:1: ( ( rule__HttpMethod__BlocksAssignment_4 )* )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2197:1: ( ( ( rule__HttpMethod__BlocksAssignment_4 )* ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2198:1: ( ( rule__HttpMethod__BlocksAssignment_4 )* )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2191:1: ( ( rule__HttpMethod__BlocksAssignment_4 )* )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2192:1: ( rule__HttpMethod__BlocksAssignment_4 )*
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2198:1: ( ( rule__HttpMethod__BlocksAssignment_4 )* )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2199:1: ( rule__HttpMethod__BlocksAssignment_4 )*
             {
              before(grammarAccess.getHttpMethodAccess().getBlocksAssignment_4()); 
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2193:1: ( rule__HttpMethod__BlocksAssignment_4 )*
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2200:1: ( rule__HttpMethod__BlocksAssignment_4 )*
             loop22:
             do {
                 int alt22=2;
                 int LA22_0 = input.LA(1);
 
-                if ( (LA22_0==21||LA22_0==26||(LA22_0>=28 && LA22_0<=29)) ) {
+                if ( (LA22_0==22||LA22_0==27||(LA22_0>=29 && LA22_0<=30)) ) {
                     alt22=1;
                 }
 
 
                 switch (alt22) {
             	case 1 :
-            	    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2193:2: rule__HttpMethod__BlocksAssignment_4
+            	    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2200:2: rule__HttpMethod__BlocksAssignment_4
             	    {
-            	    pushFollow(FOLLOW_rule__HttpMethod__BlocksAssignment_4_in_rule__HttpMethod__Group__4__Impl4596);
+            	    pushFollow(FOLLOW_rule__HttpMethod__BlocksAssignment_4_in_rule__HttpMethod__Group__4__Impl4617);
             	    rule__HttpMethod__BlocksAssignment_4();
 
             	    state._fsp--;
@@ -6371,16 +6399,16 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__HttpMethod__Group__5"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2203:1: rule__HttpMethod__Group__5 : rule__HttpMethod__Group__5__Impl ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2210:1: rule__HttpMethod__Group__5 : rule__HttpMethod__Group__5__Impl ;
     public final void rule__HttpMethod__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2207:1: ( rule__HttpMethod__Group__5__Impl )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2208:2: rule__HttpMethod__Group__5__Impl
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2214:1: ( rule__HttpMethod__Group__5__Impl )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2215:2: rule__HttpMethod__Group__5__Impl
             {
-            pushFollow(FOLLOW_rule__HttpMethod__Group__5__Impl_in_rule__HttpMethod__Group__54627);
+            pushFollow(FOLLOW_rule__HttpMethod__Group__5__Impl_in_rule__HttpMethod__Group__54648);
             rule__HttpMethod__Group__5__Impl();
 
             state._fsp--;
@@ -6404,20 +6432,20 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__HttpMethod__Group__5__Impl"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2214:1: rule__HttpMethod__Group__5__Impl : ( '}' ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2221:1: rule__HttpMethod__Group__5__Impl : ( '}' ) ;
     public final void rule__HttpMethod__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2218:1: ( ( '}' ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2219:1: ( '}' )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2225:1: ( ( '}' ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2226:1: ( '}' )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2219:1: ( '}' )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2220:1: '}'
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2226:1: ( '}' )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2227:1: '}'
             {
              before(grammarAccess.getHttpMethodAccess().getRightCurlyBracketKeyword_5()); 
-            match(input,20,FOLLOW_20_in_rule__HttpMethod__Group__5__Impl4655); 
+            match(input,21,FOLLOW_21_in_rule__HttpMethod__Group__5__Impl4676); 
              after(grammarAccess.getHttpMethodAccess().getRightCurlyBracketKeyword_5()); 
 
             }
@@ -6441,21 +6469,21 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Path__Group__0"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2245:1: rule__Path__Group__0 : rule__Path__Group__0__Impl rule__Path__Group__1 ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2252:1: rule__Path__Group__0 : rule__Path__Group__0__Impl rule__Path__Group__1 ;
     public final void rule__Path__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2249:1: ( rule__Path__Group__0__Impl rule__Path__Group__1 )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2250:2: rule__Path__Group__0__Impl rule__Path__Group__1
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2256:1: ( rule__Path__Group__0__Impl rule__Path__Group__1 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2257:2: rule__Path__Group__0__Impl rule__Path__Group__1
             {
-            pushFollow(FOLLOW_rule__Path__Group__0__Impl_in_rule__Path__Group__04698);
+            pushFollow(FOLLOW_rule__Path__Group__0__Impl_in_rule__Path__Group__04719);
             rule__Path__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Path__Group__1_in_rule__Path__Group__04701);
+            pushFollow(FOLLOW_rule__Path__Group__1_in_rule__Path__Group__04722);
             rule__Path__Group__1();
 
             state._fsp--;
@@ -6479,21 +6507,21 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Path__Group__0__Impl"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2257:1: rule__Path__Group__0__Impl : ( () ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2264:1: rule__Path__Group__0__Impl : ( () ) ;
     public final void rule__Path__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2261:1: ( ( () ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2262:1: ( () )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2268:1: ( ( () ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2269:1: ( () )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2262:1: ( () )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2263:1: ()
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2269:1: ( () )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2270:1: ()
             {
              before(grammarAccess.getPathAccess().getPathAction_0()); 
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2264:1: ()
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2266:1: 
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2271:1: ()
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2273:1: 
             {
             }
 
@@ -6516,21 +6544,21 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Path__Group__1"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2276:1: rule__Path__Group__1 : rule__Path__Group__1__Impl rule__Path__Group__2 ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2283:1: rule__Path__Group__1 : rule__Path__Group__1__Impl rule__Path__Group__2 ;
     public final void rule__Path__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2280:1: ( rule__Path__Group__1__Impl rule__Path__Group__2 )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2281:2: rule__Path__Group__1__Impl rule__Path__Group__2
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2287:1: ( rule__Path__Group__1__Impl rule__Path__Group__2 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2288:2: rule__Path__Group__1__Impl rule__Path__Group__2
             {
-            pushFollow(FOLLOW_rule__Path__Group__1__Impl_in_rule__Path__Group__14759);
+            pushFollow(FOLLOW_rule__Path__Group__1__Impl_in_rule__Path__Group__14780);
             rule__Path__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Path__Group__2_in_rule__Path__Group__14762);
+            pushFollow(FOLLOW_rule__Path__Group__2_in_rule__Path__Group__14783);
             rule__Path__Group__2();
 
             state._fsp--;
@@ -6554,20 +6582,20 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Path__Group__1__Impl"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2288:1: rule__Path__Group__1__Impl : ( '/' ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2295:1: rule__Path__Group__1__Impl : ( '/' ) ;
     public final void rule__Path__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2292:1: ( ( '/' ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2293:1: ( '/' )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2299:1: ( ( '/' ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2300:1: ( '/' )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2293:1: ( '/' )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2294:1: '/'
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2300:1: ( '/' )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2301:1: '/'
             {
              before(grammarAccess.getPathAccess().getSolidusKeyword_1()); 
-            match(input,24,FOLLOW_24_in_rule__Path__Group__1__Impl4790); 
+            match(input,25,FOLLOW_25_in_rule__Path__Group__1__Impl4811); 
              after(grammarAccess.getPathAccess().getSolidusKeyword_1()); 
 
             }
@@ -6591,21 +6619,21 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Path__Group__2"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2307:1: rule__Path__Group__2 : rule__Path__Group__2__Impl rule__Path__Group__3 ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2314:1: rule__Path__Group__2 : rule__Path__Group__2__Impl rule__Path__Group__3 ;
     public final void rule__Path__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2311:1: ( rule__Path__Group__2__Impl rule__Path__Group__3 )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2312:2: rule__Path__Group__2__Impl rule__Path__Group__3
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2318:1: ( rule__Path__Group__2__Impl rule__Path__Group__3 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2319:2: rule__Path__Group__2__Impl rule__Path__Group__3
             {
-            pushFollow(FOLLOW_rule__Path__Group__2__Impl_in_rule__Path__Group__24821);
+            pushFollow(FOLLOW_rule__Path__Group__2__Impl_in_rule__Path__Group__24842);
             rule__Path__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Path__Group__3_in_rule__Path__Group__24824);
+            pushFollow(FOLLOW_rule__Path__Group__3_in_rule__Path__Group__24845);
             rule__Path__Group__3();
 
             state._fsp--;
@@ -6629,23 +6657,23 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Path__Group__2__Impl"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2319:1: rule__Path__Group__2__Impl : ( ( rule__Path__Alternatives_2 ) ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2326:1: rule__Path__Group__2__Impl : ( ( rule__Path__Alternatives_2 ) ) ;
     public final void rule__Path__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2323:1: ( ( ( rule__Path__Alternatives_2 ) ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2324:1: ( ( rule__Path__Alternatives_2 ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2330:1: ( ( ( rule__Path__Alternatives_2 ) ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2331:1: ( ( rule__Path__Alternatives_2 ) )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2324:1: ( ( rule__Path__Alternatives_2 ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2325:1: ( rule__Path__Alternatives_2 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2331:1: ( ( rule__Path__Alternatives_2 ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2332:1: ( rule__Path__Alternatives_2 )
             {
              before(grammarAccess.getPathAccess().getAlternatives_2()); 
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2326:1: ( rule__Path__Alternatives_2 )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2326:2: rule__Path__Alternatives_2
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2333:1: ( rule__Path__Alternatives_2 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2333:2: rule__Path__Alternatives_2
             {
-            pushFollow(FOLLOW_rule__Path__Alternatives_2_in_rule__Path__Group__2__Impl4851);
+            pushFollow(FOLLOW_rule__Path__Alternatives_2_in_rule__Path__Group__2__Impl4872);
             rule__Path__Alternatives_2();
 
             state._fsp--;
@@ -6676,16 +6704,16 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Path__Group__3"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2336:1: rule__Path__Group__3 : rule__Path__Group__3__Impl ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2343:1: rule__Path__Group__3 : rule__Path__Group__3__Impl ;
     public final void rule__Path__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2340:1: ( rule__Path__Group__3__Impl )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2341:2: rule__Path__Group__3__Impl
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2347:1: ( rule__Path__Group__3__Impl )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2348:2: rule__Path__Group__3__Impl
             {
-            pushFollow(FOLLOW_rule__Path__Group__3__Impl_in_rule__Path__Group__34881);
+            pushFollow(FOLLOW_rule__Path__Group__3__Impl_in_rule__Path__Group__34902);
             rule__Path__Group__3__Impl();
 
             state._fsp--;
@@ -6709,35 +6737,35 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Path__Group__3__Impl"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2347:1: rule__Path__Group__3__Impl : ( ( rule__Path__Group_3__0 )* ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2354:1: rule__Path__Group__3__Impl : ( ( rule__Path__Group_3__0 )* ) ;
     public final void rule__Path__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2351:1: ( ( ( rule__Path__Group_3__0 )* ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2352:1: ( ( rule__Path__Group_3__0 )* )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2358:1: ( ( ( rule__Path__Group_3__0 )* ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2359:1: ( ( rule__Path__Group_3__0 )* )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2352:1: ( ( rule__Path__Group_3__0 )* )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2353:1: ( rule__Path__Group_3__0 )*
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2359:1: ( ( rule__Path__Group_3__0 )* )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2360:1: ( rule__Path__Group_3__0 )*
             {
              before(grammarAccess.getPathAccess().getGroup_3()); 
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2354:1: ( rule__Path__Group_3__0 )*
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2361:1: ( rule__Path__Group_3__0 )*
             loop23:
             do {
                 int alt23=2;
                 int LA23_0 = input.LA(1);
 
-                if ( (LA23_0==24) ) {
+                if ( (LA23_0==25) ) {
                     alt23=1;
                 }
 
 
                 switch (alt23) {
             	case 1 :
-            	    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2354:2: rule__Path__Group_3__0
+            	    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2361:2: rule__Path__Group_3__0
             	    {
-            	    pushFollow(FOLLOW_rule__Path__Group_3__0_in_rule__Path__Group__3__Impl4908);
+            	    pushFollow(FOLLOW_rule__Path__Group_3__0_in_rule__Path__Group__3__Impl4929);
             	    rule__Path__Group_3__0();
 
             	    state._fsp--;
@@ -6774,21 +6802,21 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Path__Group_3__0"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2372:1: rule__Path__Group_3__0 : rule__Path__Group_3__0__Impl rule__Path__Group_3__1 ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2379:1: rule__Path__Group_3__0 : rule__Path__Group_3__0__Impl rule__Path__Group_3__1 ;
     public final void rule__Path__Group_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2376:1: ( rule__Path__Group_3__0__Impl rule__Path__Group_3__1 )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2377:2: rule__Path__Group_3__0__Impl rule__Path__Group_3__1
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2383:1: ( rule__Path__Group_3__0__Impl rule__Path__Group_3__1 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2384:2: rule__Path__Group_3__0__Impl rule__Path__Group_3__1
             {
-            pushFollow(FOLLOW_rule__Path__Group_3__0__Impl_in_rule__Path__Group_3__04947);
+            pushFollow(FOLLOW_rule__Path__Group_3__0__Impl_in_rule__Path__Group_3__04968);
             rule__Path__Group_3__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Path__Group_3__1_in_rule__Path__Group_3__04950);
+            pushFollow(FOLLOW_rule__Path__Group_3__1_in_rule__Path__Group_3__04971);
             rule__Path__Group_3__1();
 
             state._fsp--;
@@ -6812,20 +6840,20 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Path__Group_3__0__Impl"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2384:1: rule__Path__Group_3__0__Impl : ( '/' ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2391:1: rule__Path__Group_3__0__Impl : ( '/' ) ;
     public final void rule__Path__Group_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2388:1: ( ( '/' ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2389:1: ( '/' )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2395:1: ( ( '/' ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2396:1: ( '/' )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2389:1: ( '/' )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2390:1: '/'
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2396:1: ( '/' )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2397:1: '/'
             {
              before(grammarAccess.getPathAccess().getSolidusKeyword_3_0()); 
-            match(input,24,FOLLOW_24_in_rule__Path__Group_3__0__Impl4978); 
+            match(input,25,FOLLOW_25_in_rule__Path__Group_3__0__Impl4999); 
              after(grammarAccess.getPathAccess().getSolidusKeyword_3_0()); 
 
             }
@@ -6849,16 +6877,16 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Path__Group_3__1"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2403:1: rule__Path__Group_3__1 : rule__Path__Group_3__1__Impl ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2410:1: rule__Path__Group_3__1 : rule__Path__Group_3__1__Impl ;
     public final void rule__Path__Group_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2407:1: ( rule__Path__Group_3__1__Impl )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2408:2: rule__Path__Group_3__1__Impl
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2414:1: ( rule__Path__Group_3__1__Impl )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2415:2: rule__Path__Group_3__1__Impl
             {
-            pushFollow(FOLLOW_rule__Path__Group_3__1__Impl_in_rule__Path__Group_3__15009);
+            pushFollow(FOLLOW_rule__Path__Group_3__1__Impl_in_rule__Path__Group_3__15030);
             rule__Path__Group_3__1__Impl();
 
             state._fsp--;
@@ -6882,23 +6910,23 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Path__Group_3__1__Impl"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2414:1: rule__Path__Group_3__1__Impl : ( ( rule__Path__Alternatives_3_1 ) ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2421:1: rule__Path__Group_3__1__Impl : ( ( rule__Path__Alternatives_3_1 ) ) ;
     public final void rule__Path__Group_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2418:1: ( ( ( rule__Path__Alternatives_3_1 ) ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2419:1: ( ( rule__Path__Alternatives_3_1 ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2425:1: ( ( ( rule__Path__Alternatives_3_1 ) ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2426:1: ( ( rule__Path__Alternatives_3_1 ) )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2419:1: ( ( rule__Path__Alternatives_3_1 ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2420:1: ( rule__Path__Alternatives_3_1 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2426:1: ( ( rule__Path__Alternatives_3_1 ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2427:1: ( rule__Path__Alternatives_3_1 )
             {
              before(grammarAccess.getPathAccess().getAlternatives_3_1()); 
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2421:1: ( rule__Path__Alternatives_3_1 )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2421:2: rule__Path__Alternatives_3_1
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2428:1: ( rule__Path__Alternatives_3_1 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2428:2: rule__Path__Alternatives_3_1
             {
-            pushFollow(FOLLOW_rule__Path__Alternatives_3_1_in_rule__Path__Group_3__1__Impl5036);
+            pushFollow(FOLLOW_rule__Path__Alternatives_3_1_in_rule__Path__Group_3__1__Impl5057);
             rule__Path__Alternatives_3_1();
 
             state._fsp--;
@@ -6929,21 +6957,21 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ArbitraryPathSegment__Group__0"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2435:1: rule__ArbitraryPathSegment__Group__0 : rule__ArbitraryPathSegment__Group__0__Impl rule__ArbitraryPathSegment__Group__1 ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2442:1: rule__ArbitraryPathSegment__Group__0 : rule__ArbitraryPathSegment__Group__0__Impl rule__ArbitraryPathSegment__Group__1 ;
     public final void rule__ArbitraryPathSegment__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2439:1: ( rule__ArbitraryPathSegment__Group__0__Impl rule__ArbitraryPathSegment__Group__1 )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2440:2: rule__ArbitraryPathSegment__Group__0__Impl rule__ArbitraryPathSegment__Group__1
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2446:1: ( rule__ArbitraryPathSegment__Group__0__Impl rule__ArbitraryPathSegment__Group__1 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2447:2: rule__ArbitraryPathSegment__Group__0__Impl rule__ArbitraryPathSegment__Group__1
             {
-            pushFollow(FOLLOW_rule__ArbitraryPathSegment__Group__0__Impl_in_rule__ArbitraryPathSegment__Group__05070);
+            pushFollow(FOLLOW_rule__ArbitraryPathSegment__Group__0__Impl_in_rule__ArbitraryPathSegment__Group__05091);
             rule__ArbitraryPathSegment__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__ArbitraryPathSegment__Group__1_in_rule__ArbitraryPathSegment__Group__05073);
+            pushFollow(FOLLOW_rule__ArbitraryPathSegment__Group__1_in_rule__ArbitraryPathSegment__Group__05094);
             rule__ArbitraryPathSegment__Group__1();
 
             state._fsp--;
@@ -6967,20 +6995,20 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ArbitraryPathSegment__Group__0__Impl"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2447:1: rule__ArbitraryPathSegment__Group__0__Impl : ( ruleQualifiedName ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2454:1: rule__ArbitraryPathSegment__Group__0__Impl : ( ruleQualifiedName ) ;
     public final void rule__ArbitraryPathSegment__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2451:1: ( ( ruleQualifiedName ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2452:1: ( ruleQualifiedName )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2458:1: ( ( ruleQualifiedName ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2459:1: ( ruleQualifiedName )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2452:1: ( ruleQualifiedName )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2453:1: ruleQualifiedName
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2459:1: ( ruleQualifiedName )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2460:1: ruleQualifiedName
             {
              before(grammarAccess.getArbitraryPathSegmentAccess().getQualifiedNameParserRuleCall_0()); 
-            pushFollow(FOLLOW_ruleQualifiedName_in_rule__ArbitraryPathSegment__Group__0__Impl5100);
+            pushFollow(FOLLOW_ruleQualifiedName_in_rule__ArbitraryPathSegment__Group__0__Impl5121);
             ruleQualifiedName();
 
             state._fsp--;
@@ -7008,16 +7036,16 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ArbitraryPathSegment__Group__1"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2464:1: rule__ArbitraryPathSegment__Group__1 : rule__ArbitraryPathSegment__Group__1__Impl ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2471:1: rule__ArbitraryPathSegment__Group__1 : rule__ArbitraryPathSegment__Group__1__Impl ;
     public final void rule__ArbitraryPathSegment__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2468:1: ( rule__ArbitraryPathSegment__Group__1__Impl )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2469:2: rule__ArbitraryPathSegment__Group__1__Impl
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2475:1: ( rule__ArbitraryPathSegment__Group__1__Impl )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2476:2: rule__ArbitraryPathSegment__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__ArbitraryPathSegment__Group__1__Impl_in_rule__ArbitraryPathSegment__Group__15129);
+            pushFollow(FOLLOW_rule__ArbitraryPathSegment__Group__1__Impl_in_rule__ArbitraryPathSegment__Group__15150);
             rule__ArbitraryPathSegment__Group__1__Impl();
 
             state._fsp--;
@@ -7041,35 +7069,35 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ArbitraryPathSegment__Group__1__Impl"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2475:1: rule__ArbitraryPathSegment__Group__1__Impl : ( ( rule__ArbitraryPathSegment__Group_1__0 )* ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2482:1: rule__ArbitraryPathSegment__Group__1__Impl : ( ( rule__ArbitraryPathSegment__Group_1__0 )* ) ;
     public final void rule__ArbitraryPathSegment__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2479:1: ( ( ( rule__ArbitraryPathSegment__Group_1__0 )* ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2480:1: ( ( rule__ArbitraryPathSegment__Group_1__0 )* )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2486:1: ( ( ( rule__ArbitraryPathSegment__Group_1__0 )* ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2487:1: ( ( rule__ArbitraryPathSegment__Group_1__0 )* )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2480:1: ( ( rule__ArbitraryPathSegment__Group_1__0 )* )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2481:1: ( rule__ArbitraryPathSegment__Group_1__0 )*
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2487:1: ( ( rule__ArbitraryPathSegment__Group_1__0 )* )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2488:1: ( rule__ArbitraryPathSegment__Group_1__0 )*
             {
              before(grammarAccess.getArbitraryPathSegmentAccess().getGroup_1()); 
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2482:1: ( rule__ArbitraryPathSegment__Group_1__0 )*
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2489:1: ( rule__ArbitraryPathSegment__Group_1__0 )*
             loop24:
             do {
                 int alt24=2;
                 int LA24_0 = input.LA(1);
 
-                if ( (LA24_0==25) ) {
+                if ( (LA24_0==26) ) {
                     alt24=1;
                 }
 
 
                 switch (alt24) {
             	case 1 :
-            	    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2482:2: rule__ArbitraryPathSegment__Group_1__0
+            	    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2489:2: rule__ArbitraryPathSegment__Group_1__0
             	    {
-            	    pushFollow(FOLLOW_rule__ArbitraryPathSegment__Group_1__0_in_rule__ArbitraryPathSegment__Group__1__Impl5156);
+            	    pushFollow(FOLLOW_rule__ArbitraryPathSegment__Group_1__0_in_rule__ArbitraryPathSegment__Group__1__Impl5177);
             	    rule__ArbitraryPathSegment__Group_1__0();
 
             	    state._fsp--;
@@ -7106,21 +7134,21 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ArbitraryPathSegment__Group_1__0"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2496:1: rule__ArbitraryPathSegment__Group_1__0 : rule__ArbitraryPathSegment__Group_1__0__Impl rule__ArbitraryPathSegment__Group_1__1 ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2503:1: rule__ArbitraryPathSegment__Group_1__0 : rule__ArbitraryPathSegment__Group_1__0__Impl rule__ArbitraryPathSegment__Group_1__1 ;
     public final void rule__ArbitraryPathSegment__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2500:1: ( rule__ArbitraryPathSegment__Group_1__0__Impl rule__ArbitraryPathSegment__Group_1__1 )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2501:2: rule__ArbitraryPathSegment__Group_1__0__Impl rule__ArbitraryPathSegment__Group_1__1
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2507:1: ( rule__ArbitraryPathSegment__Group_1__0__Impl rule__ArbitraryPathSegment__Group_1__1 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2508:2: rule__ArbitraryPathSegment__Group_1__0__Impl rule__ArbitraryPathSegment__Group_1__1
             {
-            pushFollow(FOLLOW_rule__ArbitraryPathSegment__Group_1__0__Impl_in_rule__ArbitraryPathSegment__Group_1__05191);
+            pushFollow(FOLLOW_rule__ArbitraryPathSegment__Group_1__0__Impl_in_rule__ArbitraryPathSegment__Group_1__05212);
             rule__ArbitraryPathSegment__Group_1__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__ArbitraryPathSegment__Group_1__1_in_rule__ArbitraryPathSegment__Group_1__05194);
+            pushFollow(FOLLOW_rule__ArbitraryPathSegment__Group_1__1_in_rule__ArbitraryPathSegment__Group_1__05215);
             rule__ArbitraryPathSegment__Group_1__1();
 
             state._fsp--;
@@ -7144,20 +7172,20 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ArbitraryPathSegment__Group_1__0__Impl"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2508:1: rule__ArbitraryPathSegment__Group_1__0__Impl : ( '-' ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2515:1: rule__ArbitraryPathSegment__Group_1__0__Impl : ( '-' ) ;
     public final void rule__ArbitraryPathSegment__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2512:1: ( ( '-' ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2513:1: ( '-' )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2519:1: ( ( '-' ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2520:1: ( '-' )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2513:1: ( '-' )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2514:1: '-'
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2520:1: ( '-' )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2521:1: '-'
             {
              before(grammarAccess.getArbitraryPathSegmentAccess().getHyphenMinusKeyword_1_0()); 
-            match(input,25,FOLLOW_25_in_rule__ArbitraryPathSegment__Group_1__0__Impl5222); 
+            match(input,26,FOLLOW_26_in_rule__ArbitraryPathSegment__Group_1__0__Impl5243); 
              after(grammarAccess.getArbitraryPathSegmentAccess().getHyphenMinusKeyword_1_0()); 
 
             }
@@ -7181,16 +7209,16 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ArbitraryPathSegment__Group_1__1"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2527:1: rule__ArbitraryPathSegment__Group_1__1 : rule__ArbitraryPathSegment__Group_1__1__Impl ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2534:1: rule__ArbitraryPathSegment__Group_1__1 : rule__ArbitraryPathSegment__Group_1__1__Impl ;
     public final void rule__ArbitraryPathSegment__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2531:1: ( rule__ArbitraryPathSegment__Group_1__1__Impl )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2532:2: rule__ArbitraryPathSegment__Group_1__1__Impl
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2538:1: ( rule__ArbitraryPathSegment__Group_1__1__Impl )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2539:2: rule__ArbitraryPathSegment__Group_1__1__Impl
             {
-            pushFollow(FOLLOW_rule__ArbitraryPathSegment__Group_1__1__Impl_in_rule__ArbitraryPathSegment__Group_1__15253);
+            pushFollow(FOLLOW_rule__ArbitraryPathSegment__Group_1__1__Impl_in_rule__ArbitraryPathSegment__Group_1__15274);
             rule__ArbitraryPathSegment__Group_1__1__Impl();
 
             state._fsp--;
@@ -7214,20 +7242,20 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ArbitraryPathSegment__Group_1__1__Impl"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2538:1: rule__ArbitraryPathSegment__Group_1__1__Impl : ( ruleQualifiedName ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2545:1: rule__ArbitraryPathSegment__Group_1__1__Impl : ( ruleQualifiedName ) ;
     public final void rule__ArbitraryPathSegment__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2542:1: ( ( ruleQualifiedName ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2543:1: ( ruleQualifiedName )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2549:1: ( ( ruleQualifiedName ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2550:1: ( ruleQualifiedName )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2543:1: ( ruleQualifiedName )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2544:1: ruleQualifiedName
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2550:1: ( ruleQualifiedName )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2551:1: ruleQualifiedName
             {
              before(grammarAccess.getArbitraryPathSegmentAccess().getQualifiedNameParserRuleCall_1_1()); 
-            pushFollow(FOLLOW_ruleQualifiedName_in_rule__ArbitraryPathSegment__Group_1__1__Impl5280);
+            pushFollow(FOLLOW_ruleQualifiedName_in_rule__ArbitraryPathSegment__Group_1__1__Impl5301);
             ruleQualifiedName();
 
             state._fsp--;
@@ -7255,21 +7283,21 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ParamsBlock__Group__0"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2559:1: rule__ParamsBlock__Group__0 : rule__ParamsBlock__Group__0__Impl rule__ParamsBlock__Group__1 ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2566:1: rule__ParamsBlock__Group__0 : rule__ParamsBlock__Group__0__Impl rule__ParamsBlock__Group__1 ;
     public final void rule__ParamsBlock__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2563:1: ( rule__ParamsBlock__Group__0__Impl rule__ParamsBlock__Group__1 )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2564:2: rule__ParamsBlock__Group__0__Impl rule__ParamsBlock__Group__1
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2570:1: ( rule__ParamsBlock__Group__0__Impl rule__ParamsBlock__Group__1 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2571:2: rule__ParamsBlock__Group__0__Impl rule__ParamsBlock__Group__1
             {
-            pushFollow(FOLLOW_rule__ParamsBlock__Group__0__Impl_in_rule__ParamsBlock__Group__05313);
+            pushFollow(FOLLOW_rule__ParamsBlock__Group__0__Impl_in_rule__ParamsBlock__Group__05334);
             rule__ParamsBlock__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__ParamsBlock__Group__1_in_rule__ParamsBlock__Group__05316);
+            pushFollow(FOLLOW_rule__ParamsBlock__Group__1_in_rule__ParamsBlock__Group__05337);
             rule__ParamsBlock__Group__1();
 
             state._fsp--;
@@ -7293,21 +7321,21 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ParamsBlock__Group__0__Impl"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2571:1: rule__ParamsBlock__Group__0__Impl : ( () ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2578:1: rule__ParamsBlock__Group__0__Impl : ( () ) ;
     public final void rule__ParamsBlock__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2575:1: ( ( () ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2576:1: ( () )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2582:1: ( ( () ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2583:1: ( () )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2576:1: ( () )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2577:1: ()
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2583:1: ( () )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2584:1: ()
             {
              before(grammarAccess.getParamsBlockAccess().getParamsBlockAction_0()); 
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2578:1: ()
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2580:1: 
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2585:1: ()
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2587:1: 
             {
             }
 
@@ -7330,21 +7358,21 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ParamsBlock__Group__1"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2590:1: rule__ParamsBlock__Group__1 : rule__ParamsBlock__Group__1__Impl rule__ParamsBlock__Group__2 ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2597:1: rule__ParamsBlock__Group__1 : rule__ParamsBlock__Group__1__Impl rule__ParamsBlock__Group__2 ;
     public final void rule__ParamsBlock__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2594:1: ( rule__ParamsBlock__Group__1__Impl rule__ParamsBlock__Group__2 )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2595:2: rule__ParamsBlock__Group__1__Impl rule__ParamsBlock__Group__2
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2601:1: ( rule__ParamsBlock__Group__1__Impl rule__ParamsBlock__Group__2 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2602:2: rule__ParamsBlock__Group__1__Impl rule__ParamsBlock__Group__2
             {
-            pushFollow(FOLLOW_rule__ParamsBlock__Group__1__Impl_in_rule__ParamsBlock__Group__15374);
+            pushFollow(FOLLOW_rule__ParamsBlock__Group__1__Impl_in_rule__ParamsBlock__Group__15395);
             rule__ParamsBlock__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__ParamsBlock__Group__2_in_rule__ParamsBlock__Group__15377);
+            pushFollow(FOLLOW_rule__ParamsBlock__Group__2_in_rule__ParamsBlock__Group__15398);
             rule__ParamsBlock__Group__2();
 
             state._fsp--;
@@ -7368,20 +7396,20 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ParamsBlock__Group__1__Impl"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2602:1: rule__ParamsBlock__Group__1__Impl : ( 'params' ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2609:1: rule__ParamsBlock__Group__1__Impl : ( 'params' ) ;
     public final void rule__ParamsBlock__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2606:1: ( ( 'params' ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2607:1: ( 'params' )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2613:1: ( ( 'params' ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2614:1: ( 'params' )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2607:1: ( 'params' )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2608:1: 'params'
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2614:1: ( 'params' )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2615:1: 'params'
             {
              before(grammarAccess.getParamsBlockAccess().getParamsKeyword_1()); 
-            match(input,26,FOLLOW_26_in_rule__ParamsBlock__Group__1__Impl5405); 
+            match(input,27,FOLLOW_27_in_rule__ParamsBlock__Group__1__Impl5426); 
              after(grammarAccess.getParamsBlockAccess().getParamsKeyword_1()); 
 
             }
@@ -7405,21 +7433,21 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ParamsBlock__Group__2"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2621:1: rule__ParamsBlock__Group__2 : rule__ParamsBlock__Group__2__Impl rule__ParamsBlock__Group__3 ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2628:1: rule__ParamsBlock__Group__2 : rule__ParamsBlock__Group__2__Impl rule__ParamsBlock__Group__3 ;
     public final void rule__ParamsBlock__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2625:1: ( rule__ParamsBlock__Group__2__Impl rule__ParamsBlock__Group__3 )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2626:2: rule__ParamsBlock__Group__2__Impl rule__ParamsBlock__Group__3
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2632:1: ( rule__ParamsBlock__Group__2__Impl rule__ParamsBlock__Group__3 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2633:2: rule__ParamsBlock__Group__2__Impl rule__ParamsBlock__Group__3
             {
-            pushFollow(FOLLOW_rule__ParamsBlock__Group__2__Impl_in_rule__ParamsBlock__Group__25436);
+            pushFollow(FOLLOW_rule__ParamsBlock__Group__2__Impl_in_rule__ParamsBlock__Group__25457);
             rule__ParamsBlock__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__ParamsBlock__Group__3_in_rule__ParamsBlock__Group__25439);
+            pushFollow(FOLLOW_rule__ParamsBlock__Group__3_in_rule__ParamsBlock__Group__25460);
             rule__ParamsBlock__Group__3();
 
             state._fsp--;
@@ -7443,23 +7471,23 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ParamsBlock__Group__2__Impl"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2633:1: rule__ParamsBlock__Group__2__Impl : ( ( rule__ParamsBlock__ParamsAssignment_2 ) ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2640:1: rule__ParamsBlock__Group__2__Impl : ( ( rule__ParamsBlock__ParamsAssignment_2 ) ) ;
     public final void rule__ParamsBlock__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2637:1: ( ( ( rule__ParamsBlock__ParamsAssignment_2 ) ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2638:1: ( ( rule__ParamsBlock__ParamsAssignment_2 ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2644:1: ( ( ( rule__ParamsBlock__ParamsAssignment_2 ) ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2645:1: ( ( rule__ParamsBlock__ParamsAssignment_2 ) )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2638:1: ( ( rule__ParamsBlock__ParamsAssignment_2 ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2639:1: ( rule__ParamsBlock__ParamsAssignment_2 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2645:1: ( ( rule__ParamsBlock__ParamsAssignment_2 ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2646:1: ( rule__ParamsBlock__ParamsAssignment_2 )
             {
              before(grammarAccess.getParamsBlockAccess().getParamsAssignment_2()); 
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2640:1: ( rule__ParamsBlock__ParamsAssignment_2 )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2640:2: rule__ParamsBlock__ParamsAssignment_2
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2647:1: ( rule__ParamsBlock__ParamsAssignment_2 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2647:2: rule__ParamsBlock__ParamsAssignment_2
             {
-            pushFollow(FOLLOW_rule__ParamsBlock__ParamsAssignment_2_in_rule__ParamsBlock__Group__2__Impl5466);
+            pushFollow(FOLLOW_rule__ParamsBlock__ParamsAssignment_2_in_rule__ParamsBlock__Group__2__Impl5487);
             rule__ParamsBlock__ParamsAssignment_2();
 
             state._fsp--;
@@ -7490,16 +7518,16 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ParamsBlock__Group__3"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2650:1: rule__ParamsBlock__Group__3 : rule__ParamsBlock__Group__3__Impl ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2657:1: rule__ParamsBlock__Group__3 : rule__ParamsBlock__Group__3__Impl ;
     public final void rule__ParamsBlock__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2654:1: ( rule__ParamsBlock__Group__3__Impl )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2655:2: rule__ParamsBlock__Group__3__Impl
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2661:1: ( rule__ParamsBlock__Group__3__Impl )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2662:2: rule__ParamsBlock__Group__3__Impl
             {
-            pushFollow(FOLLOW_rule__ParamsBlock__Group__3__Impl_in_rule__ParamsBlock__Group__35496);
+            pushFollow(FOLLOW_rule__ParamsBlock__Group__3__Impl_in_rule__ParamsBlock__Group__35517);
             rule__ParamsBlock__Group__3__Impl();
 
             state._fsp--;
@@ -7523,35 +7551,35 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ParamsBlock__Group__3__Impl"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2661:1: rule__ParamsBlock__Group__3__Impl : ( ( rule__ParamsBlock__Group_3__0 )* ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2668:1: rule__ParamsBlock__Group__3__Impl : ( ( rule__ParamsBlock__Group_3__0 )* ) ;
     public final void rule__ParamsBlock__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2665:1: ( ( ( rule__ParamsBlock__Group_3__0 )* ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2666:1: ( ( rule__ParamsBlock__Group_3__0 )* )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2672:1: ( ( ( rule__ParamsBlock__Group_3__0 )* ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2673:1: ( ( rule__ParamsBlock__Group_3__0 )* )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2666:1: ( ( rule__ParamsBlock__Group_3__0 )* )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2667:1: ( rule__ParamsBlock__Group_3__0 )*
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2673:1: ( ( rule__ParamsBlock__Group_3__0 )* )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2674:1: ( rule__ParamsBlock__Group_3__0 )*
             {
              before(grammarAccess.getParamsBlockAccess().getGroup_3()); 
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2668:1: ( rule__ParamsBlock__Group_3__0 )*
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2675:1: ( rule__ParamsBlock__Group_3__0 )*
             loop25:
             do {
                 int alt25=2;
                 int LA25_0 = input.LA(1);
 
-                if ( (LA25_0==22) ) {
+                if ( (LA25_0==23) ) {
                     alt25=1;
                 }
 
 
                 switch (alt25) {
             	case 1 :
-            	    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2668:2: rule__ParamsBlock__Group_3__0
+            	    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2675:2: rule__ParamsBlock__Group_3__0
             	    {
-            	    pushFollow(FOLLOW_rule__ParamsBlock__Group_3__0_in_rule__ParamsBlock__Group__3__Impl5523);
+            	    pushFollow(FOLLOW_rule__ParamsBlock__Group_3__0_in_rule__ParamsBlock__Group__3__Impl5544);
             	    rule__ParamsBlock__Group_3__0();
 
             	    state._fsp--;
@@ -7588,21 +7616,21 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ParamsBlock__Group_3__0"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2686:1: rule__ParamsBlock__Group_3__0 : rule__ParamsBlock__Group_3__0__Impl rule__ParamsBlock__Group_3__1 ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2693:1: rule__ParamsBlock__Group_3__0 : rule__ParamsBlock__Group_3__0__Impl rule__ParamsBlock__Group_3__1 ;
     public final void rule__ParamsBlock__Group_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2690:1: ( rule__ParamsBlock__Group_3__0__Impl rule__ParamsBlock__Group_3__1 )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2691:2: rule__ParamsBlock__Group_3__0__Impl rule__ParamsBlock__Group_3__1
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2697:1: ( rule__ParamsBlock__Group_3__0__Impl rule__ParamsBlock__Group_3__1 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2698:2: rule__ParamsBlock__Group_3__0__Impl rule__ParamsBlock__Group_3__1
             {
-            pushFollow(FOLLOW_rule__ParamsBlock__Group_3__0__Impl_in_rule__ParamsBlock__Group_3__05562);
+            pushFollow(FOLLOW_rule__ParamsBlock__Group_3__0__Impl_in_rule__ParamsBlock__Group_3__05583);
             rule__ParamsBlock__Group_3__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__ParamsBlock__Group_3__1_in_rule__ParamsBlock__Group_3__05565);
+            pushFollow(FOLLOW_rule__ParamsBlock__Group_3__1_in_rule__ParamsBlock__Group_3__05586);
             rule__ParamsBlock__Group_3__1();
 
             state._fsp--;
@@ -7626,20 +7654,20 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ParamsBlock__Group_3__0__Impl"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2698:1: rule__ParamsBlock__Group_3__0__Impl : ( ',' ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2705:1: rule__ParamsBlock__Group_3__0__Impl : ( ',' ) ;
     public final void rule__ParamsBlock__Group_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2702:1: ( ( ',' ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2703:1: ( ',' )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2709:1: ( ( ',' ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2710:1: ( ',' )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2703:1: ( ',' )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2704:1: ','
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2710:1: ( ',' )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2711:1: ','
             {
              before(grammarAccess.getParamsBlockAccess().getCommaKeyword_3_0()); 
-            match(input,22,FOLLOW_22_in_rule__ParamsBlock__Group_3__0__Impl5593); 
+            match(input,23,FOLLOW_23_in_rule__ParamsBlock__Group_3__0__Impl5614); 
              after(grammarAccess.getParamsBlockAccess().getCommaKeyword_3_0()); 
 
             }
@@ -7663,16 +7691,16 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ParamsBlock__Group_3__1"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2717:1: rule__ParamsBlock__Group_3__1 : rule__ParamsBlock__Group_3__1__Impl ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2724:1: rule__ParamsBlock__Group_3__1 : rule__ParamsBlock__Group_3__1__Impl ;
     public final void rule__ParamsBlock__Group_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2721:1: ( rule__ParamsBlock__Group_3__1__Impl )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2722:2: rule__ParamsBlock__Group_3__1__Impl
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2728:1: ( rule__ParamsBlock__Group_3__1__Impl )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2729:2: rule__ParamsBlock__Group_3__1__Impl
             {
-            pushFollow(FOLLOW_rule__ParamsBlock__Group_3__1__Impl_in_rule__ParamsBlock__Group_3__15624);
+            pushFollow(FOLLOW_rule__ParamsBlock__Group_3__1__Impl_in_rule__ParamsBlock__Group_3__15645);
             rule__ParamsBlock__Group_3__1__Impl();
 
             state._fsp--;
@@ -7696,23 +7724,23 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ParamsBlock__Group_3__1__Impl"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2728:1: rule__ParamsBlock__Group_3__1__Impl : ( ( rule__ParamsBlock__ParamsAssignment_3_1 ) ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2735:1: rule__ParamsBlock__Group_3__1__Impl : ( ( rule__ParamsBlock__ParamsAssignment_3_1 ) ) ;
     public final void rule__ParamsBlock__Group_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2732:1: ( ( ( rule__ParamsBlock__ParamsAssignment_3_1 ) ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2733:1: ( ( rule__ParamsBlock__ParamsAssignment_3_1 ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2739:1: ( ( ( rule__ParamsBlock__ParamsAssignment_3_1 ) ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2740:1: ( ( rule__ParamsBlock__ParamsAssignment_3_1 ) )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2733:1: ( ( rule__ParamsBlock__ParamsAssignment_3_1 ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2734:1: ( rule__ParamsBlock__ParamsAssignment_3_1 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2740:1: ( ( rule__ParamsBlock__ParamsAssignment_3_1 ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2741:1: ( rule__ParamsBlock__ParamsAssignment_3_1 )
             {
              before(grammarAccess.getParamsBlockAccess().getParamsAssignment_3_1()); 
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2735:1: ( rule__ParamsBlock__ParamsAssignment_3_1 )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2735:2: rule__ParamsBlock__ParamsAssignment_3_1
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2742:1: ( rule__ParamsBlock__ParamsAssignment_3_1 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2742:2: rule__ParamsBlock__ParamsAssignment_3_1
             {
-            pushFollow(FOLLOW_rule__ParamsBlock__ParamsAssignment_3_1_in_rule__ParamsBlock__Group_3__1__Impl5651);
+            pushFollow(FOLLOW_rule__ParamsBlock__ParamsAssignment_3_1_in_rule__ParamsBlock__Group_3__1__Impl5672);
             rule__ParamsBlock__ParamsAssignment_3_1();
 
             state._fsp--;
@@ -7743,21 +7771,21 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__SimpleMemberAssignment__Group__0"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2749:1: rule__SimpleMemberAssignment__Group__0 : rule__SimpleMemberAssignment__Group__0__Impl rule__SimpleMemberAssignment__Group__1 ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2756:1: rule__SimpleMemberAssignment__Group__0 : rule__SimpleMemberAssignment__Group__0__Impl rule__SimpleMemberAssignment__Group__1 ;
     public final void rule__SimpleMemberAssignment__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2753:1: ( rule__SimpleMemberAssignment__Group__0__Impl rule__SimpleMemberAssignment__Group__1 )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2754:2: rule__SimpleMemberAssignment__Group__0__Impl rule__SimpleMemberAssignment__Group__1
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2760:1: ( rule__SimpleMemberAssignment__Group__0__Impl rule__SimpleMemberAssignment__Group__1 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2761:2: rule__SimpleMemberAssignment__Group__0__Impl rule__SimpleMemberAssignment__Group__1
             {
-            pushFollow(FOLLOW_rule__SimpleMemberAssignment__Group__0__Impl_in_rule__SimpleMemberAssignment__Group__05685);
+            pushFollow(FOLLOW_rule__SimpleMemberAssignment__Group__0__Impl_in_rule__SimpleMemberAssignment__Group__05706);
             rule__SimpleMemberAssignment__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__SimpleMemberAssignment__Group__1_in_rule__SimpleMemberAssignment__Group__05688);
+            pushFollow(FOLLOW_rule__SimpleMemberAssignment__Group__1_in_rule__SimpleMemberAssignment__Group__05709);
             rule__SimpleMemberAssignment__Group__1();
 
             state._fsp--;
@@ -7781,23 +7809,23 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__SimpleMemberAssignment__Group__0__Impl"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2761:1: rule__SimpleMemberAssignment__Group__0__Impl : ( ( rule__SimpleMemberAssignment__MemberAssignment_0 ) ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2768:1: rule__SimpleMemberAssignment__Group__0__Impl : ( ( rule__SimpleMemberAssignment__MemberAssignment_0 ) ) ;
     public final void rule__SimpleMemberAssignment__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2765:1: ( ( ( rule__SimpleMemberAssignment__MemberAssignment_0 ) ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2766:1: ( ( rule__SimpleMemberAssignment__MemberAssignment_0 ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2772:1: ( ( ( rule__SimpleMemberAssignment__MemberAssignment_0 ) ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2773:1: ( ( rule__SimpleMemberAssignment__MemberAssignment_0 ) )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2766:1: ( ( rule__SimpleMemberAssignment__MemberAssignment_0 ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2767:1: ( rule__SimpleMemberAssignment__MemberAssignment_0 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2773:1: ( ( rule__SimpleMemberAssignment__MemberAssignment_0 ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2774:1: ( rule__SimpleMemberAssignment__MemberAssignment_0 )
             {
              before(grammarAccess.getSimpleMemberAssignmentAccess().getMemberAssignment_0()); 
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2768:1: ( rule__SimpleMemberAssignment__MemberAssignment_0 )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2768:2: rule__SimpleMemberAssignment__MemberAssignment_0
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2775:1: ( rule__SimpleMemberAssignment__MemberAssignment_0 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2775:2: rule__SimpleMemberAssignment__MemberAssignment_0
             {
-            pushFollow(FOLLOW_rule__SimpleMemberAssignment__MemberAssignment_0_in_rule__SimpleMemberAssignment__Group__0__Impl5715);
+            pushFollow(FOLLOW_rule__SimpleMemberAssignment__MemberAssignment_0_in_rule__SimpleMemberAssignment__Group__0__Impl5736);
             rule__SimpleMemberAssignment__MemberAssignment_0();
 
             state._fsp--;
@@ -7828,16 +7856,16 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__SimpleMemberAssignment__Group__1"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2778:1: rule__SimpleMemberAssignment__Group__1 : rule__SimpleMemberAssignment__Group__1__Impl ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2785:1: rule__SimpleMemberAssignment__Group__1 : rule__SimpleMemberAssignment__Group__1__Impl ;
     public final void rule__SimpleMemberAssignment__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2782:1: ( rule__SimpleMemberAssignment__Group__1__Impl )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2783:2: rule__SimpleMemberAssignment__Group__1__Impl
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2789:1: ( rule__SimpleMemberAssignment__Group__1__Impl )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2790:2: rule__SimpleMemberAssignment__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__SimpleMemberAssignment__Group__1__Impl_in_rule__SimpleMemberAssignment__Group__15745);
+            pushFollow(FOLLOW_rule__SimpleMemberAssignment__Group__1__Impl_in_rule__SimpleMemberAssignment__Group__15766);
             rule__SimpleMemberAssignment__Group__1__Impl();
 
             state._fsp--;
@@ -7861,31 +7889,31 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__SimpleMemberAssignment__Group__1__Impl"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2789:1: rule__SimpleMemberAssignment__Group__1__Impl : ( ( rule__SimpleMemberAssignment__Group_1__0 )? ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2796:1: rule__SimpleMemberAssignment__Group__1__Impl : ( ( rule__SimpleMemberAssignment__Group_1__0 )? ) ;
     public final void rule__SimpleMemberAssignment__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2793:1: ( ( ( rule__SimpleMemberAssignment__Group_1__0 )? ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2794:1: ( ( rule__SimpleMemberAssignment__Group_1__0 )? )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2800:1: ( ( ( rule__SimpleMemberAssignment__Group_1__0 )? ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2801:1: ( ( rule__SimpleMemberAssignment__Group_1__0 )? )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2794:1: ( ( rule__SimpleMemberAssignment__Group_1__0 )? )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2795:1: ( rule__SimpleMemberAssignment__Group_1__0 )?
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2801:1: ( ( rule__SimpleMemberAssignment__Group_1__0 )? )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2802:1: ( rule__SimpleMemberAssignment__Group_1__0 )?
             {
              before(grammarAccess.getSimpleMemberAssignmentAccess().getGroup_1()); 
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2796:1: ( rule__SimpleMemberAssignment__Group_1__0 )?
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2803:1: ( rule__SimpleMemberAssignment__Group_1__0 )?
             int alt26=2;
             int LA26_0 = input.LA(1);
 
-            if ( (LA26_0==27) ) {
+            if ( (LA26_0==28) ) {
                 alt26=1;
             }
             switch (alt26) {
                 case 1 :
-                    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2796:2: rule__SimpleMemberAssignment__Group_1__0
+                    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2803:2: rule__SimpleMemberAssignment__Group_1__0
                     {
-                    pushFollow(FOLLOW_rule__SimpleMemberAssignment__Group_1__0_in_rule__SimpleMemberAssignment__Group__1__Impl5772);
+                    pushFollow(FOLLOW_rule__SimpleMemberAssignment__Group_1__0_in_rule__SimpleMemberAssignment__Group__1__Impl5793);
                     rule__SimpleMemberAssignment__Group_1__0();
 
                     state._fsp--;
@@ -7919,21 +7947,21 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__SimpleMemberAssignment__Group_1__0"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2810:1: rule__SimpleMemberAssignment__Group_1__0 : rule__SimpleMemberAssignment__Group_1__0__Impl rule__SimpleMemberAssignment__Group_1__1 ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2817:1: rule__SimpleMemberAssignment__Group_1__0 : rule__SimpleMemberAssignment__Group_1__0__Impl rule__SimpleMemberAssignment__Group_1__1 ;
     public final void rule__SimpleMemberAssignment__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2814:1: ( rule__SimpleMemberAssignment__Group_1__0__Impl rule__SimpleMemberAssignment__Group_1__1 )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2815:2: rule__SimpleMemberAssignment__Group_1__0__Impl rule__SimpleMemberAssignment__Group_1__1
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2821:1: ( rule__SimpleMemberAssignment__Group_1__0__Impl rule__SimpleMemberAssignment__Group_1__1 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2822:2: rule__SimpleMemberAssignment__Group_1__0__Impl rule__SimpleMemberAssignment__Group_1__1
             {
-            pushFollow(FOLLOW_rule__SimpleMemberAssignment__Group_1__0__Impl_in_rule__SimpleMemberAssignment__Group_1__05807);
+            pushFollow(FOLLOW_rule__SimpleMemberAssignment__Group_1__0__Impl_in_rule__SimpleMemberAssignment__Group_1__05828);
             rule__SimpleMemberAssignment__Group_1__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__SimpleMemberAssignment__Group_1__1_in_rule__SimpleMemberAssignment__Group_1__05810);
+            pushFollow(FOLLOW_rule__SimpleMemberAssignment__Group_1__1_in_rule__SimpleMemberAssignment__Group_1__05831);
             rule__SimpleMemberAssignment__Group_1__1();
 
             state._fsp--;
@@ -7957,20 +7985,20 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__SimpleMemberAssignment__Group_1__0__Impl"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2822:1: rule__SimpleMemberAssignment__Group_1__0__Impl : ( '=' ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2829:1: rule__SimpleMemberAssignment__Group_1__0__Impl : ( '=' ) ;
     public final void rule__SimpleMemberAssignment__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2826:1: ( ( '=' ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2827:1: ( '=' )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2833:1: ( ( '=' ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2834:1: ( '=' )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2827:1: ( '=' )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2828:1: '='
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2834:1: ( '=' )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2835:1: '='
             {
              before(grammarAccess.getSimpleMemberAssignmentAccess().getEqualsSignKeyword_1_0()); 
-            match(input,27,FOLLOW_27_in_rule__SimpleMemberAssignment__Group_1__0__Impl5838); 
+            match(input,28,FOLLOW_28_in_rule__SimpleMemberAssignment__Group_1__0__Impl5859); 
              after(grammarAccess.getSimpleMemberAssignmentAccess().getEqualsSignKeyword_1_0()); 
 
             }
@@ -7994,16 +8022,16 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__SimpleMemberAssignment__Group_1__1"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2841:1: rule__SimpleMemberAssignment__Group_1__1 : rule__SimpleMemberAssignment__Group_1__1__Impl ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2848:1: rule__SimpleMemberAssignment__Group_1__1 : rule__SimpleMemberAssignment__Group_1__1__Impl ;
     public final void rule__SimpleMemberAssignment__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2845:1: ( rule__SimpleMemberAssignment__Group_1__1__Impl )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2846:2: rule__SimpleMemberAssignment__Group_1__1__Impl
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2852:1: ( rule__SimpleMemberAssignment__Group_1__1__Impl )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2853:2: rule__SimpleMemberAssignment__Group_1__1__Impl
             {
-            pushFollow(FOLLOW_rule__SimpleMemberAssignment__Group_1__1__Impl_in_rule__SimpleMemberAssignment__Group_1__15869);
+            pushFollow(FOLLOW_rule__SimpleMemberAssignment__Group_1__1__Impl_in_rule__SimpleMemberAssignment__Group_1__15890);
             rule__SimpleMemberAssignment__Group_1__1__Impl();
 
             state._fsp--;
@@ -8027,23 +8055,23 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__SimpleMemberAssignment__Group_1__1__Impl"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2852:1: rule__SimpleMemberAssignment__Group_1__1__Impl : ( ( rule__SimpleMemberAssignment__DefaultValueAssignment_1_1 ) ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2859:1: rule__SimpleMemberAssignment__Group_1__1__Impl : ( ( rule__SimpleMemberAssignment__DefaultValueAssignment_1_1 ) ) ;
     public final void rule__SimpleMemberAssignment__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2856:1: ( ( ( rule__SimpleMemberAssignment__DefaultValueAssignment_1_1 ) ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2857:1: ( ( rule__SimpleMemberAssignment__DefaultValueAssignment_1_1 ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2863:1: ( ( ( rule__SimpleMemberAssignment__DefaultValueAssignment_1_1 ) ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2864:1: ( ( rule__SimpleMemberAssignment__DefaultValueAssignment_1_1 ) )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2857:1: ( ( rule__SimpleMemberAssignment__DefaultValueAssignment_1_1 ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2858:1: ( rule__SimpleMemberAssignment__DefaultValueAssignment_1_1 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2864:1: ( ( rule__SimpleMemberAssignment__DefaultValueAssignment_1_1 ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2865:1: ( rule__SimpleMemberAssignment__DefaultValueAssignment_1_1 )
             {
              before(grammarAccess.getSimpleMemberAssignmentAccess().getDefaultValueAssignment_1_1()); 
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2859:1: ( rule__SimpleMemberAssignment__DefaultValueAssignment_1_1 )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2859:2: rule__SimpleMemberAssignment__DefaultValueAssignment_1_1
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2866:1: ( rule__SimpleMemberAssignment__DefaultValueAssignment_1_1 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2866:2: rule__SimpleMemberAssignment__DefaultValueAssignment_1_1
             {
-            pushFollow(FOLLOW_rule__SimpleMemberAssignment__DefaultValueAssignment_1_1_in_rule__SimpleMemberAssignment__Group_1__1__Impl5896);
+            pushFollow(FOLLOW_rule__SimpleMemberAssignment__DefaultValueAssignment_1_1_in_rule__SimpleMemberAssignment__Group_1__1__Impl5917);
             rule__SimpleMemberAssignment__DefaultValueAssignment_1_1();
 
             state._fsp--;
@@ -8074,21 +8102,21 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Literal__Group_0__0"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2873:1: rule__Literal__Group_0__0 : rule__Literal__Group_0__0__Impl rule__Literal__Group_0__1 ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2880:1: rule__Literal__Group_0__0 : rule__Literal__Group_0__0__Impl rule__Literal__Group_0__1 ;
     public final void rule__Literal__Group_0__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2877:1: ( rule__Literal__Group_0__0__Impl rule__Literal__Group_0__1 )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2878:2: rule__Literal__Group_0__0__Impl rule__Literal__Group_0__1
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2884:1: ( rule__Literal__Group_0__0__Impl rule__Literal__Group_0__1 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2885:2: rule__Literal__Group_0__0__Impl rule__Literal__Group_0__1
             {
-            pushFollow(FOLLOW_rule__Literal__Group_0__0__Impl_in_rule__Literal__Group_0__05930);
+            pushFollow(FOLLOW_rule__Literal__Group_0__0__Impl_in_rule__Literal__Group_0__05951);
             rule__Literal__Group_0__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Literal__Group_0__1_in_rule__Literal__Group_0__05933);
+            pushFollow(FOLLOW_rule__Literal__Group_0__1_in_rule__Literal__Group_0__05954);
             rule__Literal__Group_0__1();
 
             state._fsp--;
@@ -8112,21 +8140,21 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Literal__Group_0__0__Impl"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2885:1: rule__Literal__Group_0__0__Impl : ( () ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2892:1: rule__Literal__Group_0__0__Impl : ( () ) ;
     public final void rule__Literal__Group_0__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2889:1: ( ( () ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2890:1: ( () )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2896:1: ( ( () ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2897:1: ( () )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2890:1: ( () )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2891:1: ()
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2897:1: ( () )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2898:1: ()
             {
              before(grammarAccess.getLiteralAccess().getBooleanLiteralAction_0_0()); 
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2892:1: ()
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2894:1: 
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2899:1: ()
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2901:1: 
             {
             }
 
@@ -8149,16 +8177,16 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Literal__Group_0__1"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2904:1: rule__Literal__Group_0__1 : rule__Literal__Group_0__1__Impl ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2911:1: rule__Literal__Group_0__1 : rule__Literal__Group_0__1__Impl ;
     public final void rule__Literal__Group_0__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2908:1: ( rule__Literal__Group_0__1__Impl )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2909:2: rule__Literal__Group_0__1__Impl
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2915:1: ( rule__Literal__Group_0__1__Impl )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2916:2: rule__Literal__Group_0__1__Impl
             {
-            pushFollow(FOLLOW_rule__Literal__Group_0__1__Impl_in_rule__Literal__Group_0__15991);
+            pushFollow(FOLLOW_rule__Literal__Group_0__1__Impl_in_rule__Literal__Group_0__16012);
             rule__Literal__Group_0__1__Impl();
 
             state._fsp--;
@@ -8182,23 +8210,23 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Literal__Group_0__1__Impl"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2915:1: rule__Literal__Group_0__1__Impl : ( ( rule__Literal__LiteralAssignment_0_1 ) ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2922:1: rule__Literal__Group_0__1__Impl : ( ( rule__Literal__LiteralAssignment_0_1 ) ) ;
     public final void rule__Literal__Group_0__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2919:1: ( ( ( rule__Literal__LiteralAssignment_0_1 ) ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2920:1: ( ( rule__Literal__LiteralAssignment_0_1 ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2926:1: ( ( ( rule__Literal__LiteralAssignment_0_1 ) ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2927:1: ( ( rule__Literal__LiteralAssignment_0_1 ) )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2920:1: ( ( rule__Literal__LiteralAssignment_0_1 ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2921:1: ( rule__Literal__LiteralAssignment_0_1 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2927:1: ( ( rule__Literal__LiteralAssignment_0_1 ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2928:1: ( rule__Literal__LiteralAssignment_0_1 )
             {
              before(grammarAccess.getLiteralAccess().getLiteralAssignment_0_1()); 
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2922:1: ( rule__Literal__LiteralAssignment_0_1 )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2922:2: rule__Literal__LiteralAssignment_0_1
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2929:1: ( rule__Literal__LiteralAssignment_0_1 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2929:2: rule__Literal__LiteralAssignment_0_1
             {
-            pushFollow(FOLLOW_rule__Literal__LiteralAssignment_0_1_in_rule__Literal__Group_0__1__Impl6018);
+            pushFollow(FOLLOW_rule__Literal__LiteralAssignment_0_1_in_rule__Literal__Group_0__1__Impl6039);
             rule__Literal__LiteralAssignment_0_1();
 
             state._fsp--;
@@ -8229,21 +8257,21 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Literal__Group_1__0"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2936:1: rule__Literal__Group_1__0 : rule__Literal__Group_1__0__Impl rule__Literal__Group_1__1 ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2943:1: rule__Literal__Group_1__0 : rule__Literal__Group_1__0__Impl rule__Literal__Group_1__1 ;
     public final void rule__Literal__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2940:1: ( rule__Literal__Group_1__0__Impl rule__Literal__Group_1__1 )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2941:2: rule__Literal__Group_1__0__Impl rule__Literal__Group_1__1
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2947:1: ( rule__Literal__Group_1__0__Impl rule__Literal__Group_1__1 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2948:2: rule__Literal__Group_1__0__Impl rule__Literal__Group_1__1
             {
-            pushFollow(FOLLOW_rule__Literal__Group_1__0__Impl_in_rule__Literal__Group_1__06052);
+            pushFollow(FOLLOW_rule__Literal__Group_1__0__Impl_in_rule__Literal__Group_1__06073);
             rule__Literal__Group_1__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Literal__Group_1__1_in_rule__Literal__Group_1__06055);
+            pushFollow(FOLLOW_rule__Literal__Group_1__1_in_rule__Literal__Group_1__06076);
             rule__Literal__Group_1__1();
 
             state._fsp--;
@@ -8267,21 +8295,21 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Literal__Group_1__0__Impl"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2948:1: rule__Literal__Group_1__0__Impl : ( () ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2955:1: rule__Literal__Group_1__0__Impl : ( () ) ;
     public final void rule__Literal__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2952:1: ( ( () ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2953:1: ( () )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2959:1: ( ( () ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2960:1: ( () )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2953:1: ( () )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2954:1: ()
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2960:1: ( () )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2961:1: ()
             {
              before(grammarAccess.getLiteralAccess().getStringLiteralAction_1_0()); 
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2955:1: ()
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2957:1: 
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2962:1: ()
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2964:1: 
             {
             }
 
@@ -8304,16 +8332,16 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Literal__Group_1__1"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2967:1: rule__Literal__Group_1__1 : rule__Literal__Group_1__1__Impl ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2974:1: rule__Literal__Group_1__1 : rule__Literal__Group_1__1__Impl ;
     public final void rule__Literal__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2971:1: ( rule__Literal__Group_1__1__Impl )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2972:2: rule__Literal__Group_1__1__Impl
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2978:1: ( rule__Literal__Group_1__1__Impl )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2979:2: rule__Literal__Group_1__1__Impl
             {
-            pushFollow(FOLLOW_rule__Literal__Group_1__1__Impl_in_rule__Literal__Group_1__16113);
+            pushFollow(FOLLOW_rule__Literal__Group_1__1__Impl_in_rule__Literal__Group_1__16134);
             rule__Literal__Group_1__1__Impl();
 
             state._fsp--;
@@ -8337,23 +8365,23 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Literal__Group_1__1__Impl"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2978:1: rule__Literal__Group_1__1__Impl : ( ( rule__Literal__LiteralAssignment_1_1 ) ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2985:1: rule__Literal__Group_1__1__Impl : ( ( rule__Literal__LiteralAssignment_1_1 ) ) ;
     public final void rule__Literal__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2982:1: ( ( ( rule__Literal__LiteralAssignment_1_1 ) ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2983:1: ( ( rule__Literal__LiteralAssignment_1_1 ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2989:1: ( ( ( rule__Literal__LiteralAssignment_1_1 ) ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2990:1: ( ( rule__Literal__LiteralAssignment_1_1 ) )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2983:1: ( ( rule__Literal__LiteralAssignment_1_1 ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2984:1: ( rule__Literal__LiteralAssignment_1_1 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2990:1: ( ( rule__Literal__LiteralAssignment_1_1 ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2991:1: ( rule__Literal__LiteralAssignment_1_1 )
             {
              before(grammarAccess.getLiteralAccess().getLiteralAssignment_1_1()); 
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2985:1: ( rule__Literal__LiteralAssignment_1_1 )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2985:2: rule__Literal__LiteralAssignment_1_1
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2992:1: ( rule__Literal__LiteralAssignment_1_1 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2992:2: rule__Literal__LiteralAssignment_1_1
             {
-            pushFollow(FOLLOW_rule__Literal__LiteralAssignment_1_1_in_rule__Literal__Group_1__1__Impl6140);
+            pushFollow(FOLLOW_rule__Literal__LiteralAssignment_1_1_in_rule__Literal__Group_1__1__Impl6161);
             rule__Literal__LiteralAssignment_1_1();
 
             state._fsp--;
@@ -8384,21 +8412,21 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Literal__Group_2__0"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2999:1: rule__Literal__Group_2__0 : rule__Literal__Group_2__0__Impl rule__Literal__Group_2__1 ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3006:1: rule__Literal__Group_2__0 : rule__Literal__Group_2__0__Impl rule__Literal__Group_2__1 ;
     public final void rule__Literal__Group_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3003:1: ( rule__Literal__Group_2__0__Impl rule__Literal__Group_2__1 )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3004:2: rule__Literal__Group_2__0__Impl rule__Literal__Group_2__1
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3010:1: ( rule__Literal__Group_2__0__Impl rule__Literal__Group_2__1 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3011:2: rule__Literal__Group_2__0__Impl rule__Literal__Group_2__1
             {
-            pushFollow(FOLLOW_rule__Literal__Group_2__0__Impl_in_rule__Literal__Group_2__06174);
+            pushFollow(FOLLOW_rule__Literal__Group_2__0__Impl_in_rule__Literal__Group_2__06195);
             rule__Literal__Group_2__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Literal__Group_2__1_in_rule__Literal__Group_2__06177);
+            pushFollow(FOLLOW_rule__Literal__Group_2__1_in_rule__Literal__Group_2__06198);
             rule__Literal__Group_2__1();
 
             state._fsp--;
@@ -8422,21 +8450,21 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Literal__Group_2__0__Impl"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3011:1: rule__Literal__Group_2__0__Impl : ( () ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3018:1: rule__Literal__Group_2__0__Impl : ( () ) ;
     public final void rule__Literal__Group_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3015:1: ( ( () ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3016:1: ( () )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3022:1: ( ( () ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3023:1: ( () )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3016:1: ( () )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3017:1: ()
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3023:1: ( () )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3024:1: ()
             {
              before(grammarAccess.getLiteralAccess().getNumericLiteralAction_2_0()); 
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3018:1: ()
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3020:1: 
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3025:1: ()
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3027:1: 
             {
             }
 
@@ -8459,16 +8487,16 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Literal__Group_2__1"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3030:1: rule__Literal__Group_2__1 : rule__Literal__Group_2__1__Impl ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3037:1: rule__Literal__Group_2__1 : rule__Literal__Group_2__1__Impl ;
     public final void rule__Literal__Group_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3034:1: ( rule__Literal__Group_2__1__Impl )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3035:2: rule__Literal__Group_2__1__Impl
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3041:1: ( rule__Literal__Group_2__1__Impl )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3042:2: rule__Literal__Group_2__1__Impl
             {
-            pushFollow(FOLLOW_rule__Literal__Group_2__1__Impl_in_rule__Literal__Group_2__16235);
+            pushFollow(FOLLOW_rule__Literal__Group_2__1__Impl_in_rule__Literal__Group_2__16256);
             rule__Literal__Group_2__1__Impl();
 
             state._fsp--;
@@ -8492,23 +8520,23 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Literal__Group_2__1__Impl"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3041:1: rule__Literal__Group_2__1__Impl : ( ( rule__Literal__LiteralAssignment_2_1 ) ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3048:1: rule__Literal__Group_2__1__Impl : ( ( rule__Literal__LiteralAssignment_2_1 ) ) ;
     public final void rule__Literal__Group_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3045:1: ( ( ( rule__Literal__LiteralAssignment_2_1 ) ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3046:1: ( ( rule__Literal__LiteralAssignment_2_1 ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3052:1: ( ( ( rule__Literal__LiteralAssignment_2_1 ) ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3053:1: ( ( rule__Literal__LiteralAssignment_2_1 ) )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3046:1: ( ( rule__Literal__LiteralAssignment_2_1 ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3047:1: ( rule__Literal__LiteralAssignment_2_1 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3053:1: ( ( rule__Literal__LiteralAssignment_2_1 ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3054:1: ( rule__Literal__LiteralAssignment_2_1 )
             {
              before(grammarAccess.getLiteralAccess().getLiteralAssignment_2_1()); 
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3048:1: ( rule__Literal__LiteralAssignment_2_1 )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3048:2: rule__Literal__LiteralAssignment_2_1
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3055:1: ( rule__Literal__LiteralAssignment_2_1 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3055:2: rule__Literal__LiteralAssignment_2_1
             {
-            pushFollow(FOLLOW_rule__Literal__LiteralAssignment_2_1_in_rule__Literal__Group_2__1__Impl6262);
+            pushFollow(FOLLOW_rule__Literal__LiteralAssignment_2_1_in_rule__Literal__Group_2__1__Impl6283);
             rule__Literal__LiteralAssignment_2_1();
 
             state._fsp--;
@@ -8539,21 +8567,21 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__BodyBlock__Group__0"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3062:1: rule__BodyBlock__Group__0 : rule__BodyBlock__Group__0__Impl rule__BodyBlock__Group__1 ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3069:1: rule__BodyBlock__Group__0 : rule__BodyBlock__Group__0__Impl rule__BodyBlock__Group__1 ;
     public final void rule__BodyBlock__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3066:1: ( rule__BodyBlock__Group__0__Impl rule__BodyBlock__Group__1 )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3067:2: rule__BodyBlock__Group__0__Impl rule__BodyBlock__Group__1
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3073:1: ( rule__BodyBlock__Group__0__Impl rule__BodyBlock__Group__1 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3074:2: rule__BodyBlock__Group__0__Impl rule__BodyBlock__Group__1
             {
-            pushFollow(FOLLOW_rule__BodyBlock__Group__0__Impl_in_rule__BodyBlock__Group__06296);
+            pushFollow(FOLLOW_rule__BodyBlock__Group__0__Impl_in_rule__BodyBlock__Group__06317);
             rule__BodyBlock__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__BodyBlock__Group__1_in_rule__BodyBlock__Group__06299);
+            pushFollow(FOLLOW_rule__BodyBlock__Group__1_in_rule__BodyBlock__Group__06320);
             rule__BodyBlock__Group__1();
 
             state._fsp--;
@@ -8577,20 +8605,20 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__BodyBlock__Group__0__Impl"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3074:1: rule__BodyBlock__Group__0__Impl : ( 'body' ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3081:1: rule__BodyBlock__Group__0__Impl : ( 'body' ) ;
     public final void rule__BodyBlock__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3078:1: ( ( 'body' ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3079:1: ( 'body' )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3085:1: ( ( 'body' ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3086:1: ( 'body' )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3079:1: ( 'body' )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3080:1: 'body'
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3086:1: ( 'body' )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3087:1: 'body'
             {
              before(grammarAccess.getBodyBlockAccess().getBodyKeyword_0()); 
-            match(input,28,FOLLOW_28_in_rule__BodyBlock__Group__0__Impl6327); 
+            match(input,29,FOLLOW_29_in_rule__BodyBlock__Group__0__Impl6348); 
              after(grammarAccess.getBodyBlockAccess().getBodyKeyword_0()); 
 
             }
@@ -8614,16 +8642,16 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__BodyBlock__Group__1"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3093:1: rule__BodyBlock__Group__1 : rule__BodyBlock__Group__1__Impl ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3100:1: rule__BodyBlock__Group__1 : rule__BodyBlock__Group__1__Impl ;
     public final void rule__BodyBlock__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3097:1: ( rule__BodyBlock__Group__1__Impl )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3098:2: rule__BodyBlock__Group__1__Impl
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3104:1: ( rule__BodyBlock__Group__1__Impl )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3105:2: rule__BodyBlock__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__BodyBlock__Group__1__Impl_in_rule__BodyBlock__Group__16358);
+            pushFollow(FOLLOW_rule__BodyBlock__Group__1__Impl_in_rule__BodyBlock__Group__16379);
             rule__BodyBlock__Group__1__Impl();
 
             state._fsp--;
@@ -8647,23 +8675,23 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__BodyBlock__Group__1__Impl"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3104:1: rule__BodyBlock__Group__1__Impl : ( ( rule__BodyBlock__TypeAssignment_1 ) ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3111:1: rule__BodyBlock__Group__1__Impl : ( ( rule__BodyBlock__TypeAssignment_1 ) ) ;
     public final void rule__BodyBlock__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3108:1: ( ( ( rule__BodyBlock__TypeAssignment_1 ) ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3109:1: ( ( rule__BodyBlock__TypeAssignment_1 ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3115:1: ( ( ( rule__BodyBlock__TypeAssignment_1 ) ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3116:1: ( ( rule__BodyBlock__TypeAssignment_1 ) )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3109:1: ( ( rule__BodyBlock__TypeAssignment_1 ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3110:1: ( rule__BodyBlock__TypeAssignment_1 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3116:1: ( ( rule__BodyBlock__TypeAssignment_1 ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3117:1: ( rule__BodyBlock__TypeAssignment_1 )
             {
              before(grammarAccess.getBodyBlockAccess().getTypeAssignment_1()); 
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3111:1: ( rule__BodyBlock__TypeAssignment_1 )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3111:2: rule__BodyBlock__TypeAssignment_1
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3118:1: ( rule__BodyBlock__TypeAssignment_1 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3118:2: rule__BodyBlock__TypeAssignment_1
             {
-            pushFollow(FOLLOW_rule__BodyBlock__TypeAssignment_1_in_rule__BodyBlock__Group__1__Impl6385);
+            pushFollow(FOLLOW_rule__BodyBlock__TypeAssignment_1_in_rule__BodyBlock__Group__1__Impl6406);
             rule__BodyBlock__TypeAssignment_1();
 
             state._fsp--;
@@ -8694,21 +8722,21 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ResponseBlock__Group__0"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3125:1: rule__ResponseBlock__Group__0 : rule__ResponseBlock__Group__0__Impl rule__ResponseBlock__Group__1 ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3132:1: rule__ResponseBlock__Group__0 : rule__ResponseBlock__Group__0__Impl rule__ResponseBlock__Group__1 ;
     public final void rule__ResponseBlock__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3129:1: ( rule__ResponseBlock__Group__0__Impl rule__ResponseBlock__Group__1 )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3130:2: rule__ResponseBlock__Group__0__Impl rule__ResponseBlock__Group__1
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3136:1: ( rule__ResponseBlock__Group__0__Impl rule__ResponseBlock__Group__1 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3137:2: rule__ResponseBlock__Group__0__Impl rule__ResponseBlock__Group__1
             {
-            pushFollow(FOLLOW_rule__ResponseBlock__Group__0__Impl_in_rule__ResponseBlock__Group__06419);
+            pushFollow(FOLLOW_rule__ResponseBlock__Group__0__Impl_in_rule__ResponseBlock__Group__06440);
             rule__ResponseBlock__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__ResponseBlock__Group__1_in_rule__ResponseBlock__Group__06422);
+            pushFollow(FOLLOW_rule__ResponseBlock__Group__1_in_rule__ResponseBlock__Group__06443);
             rule__ResponseBlock__Group__1();
 
             state._fsp--;
@@ -8732,21 +8760,21 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ResponseBlock__Group__0__Impl"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3137:1: rule__ResponseBlock__Group__0__Impl : ( () ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3144:1: rule__ResponseBlock__Group__0__Impl : ( () ) ;
     public final void rule__ResponseBlock__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3141:1: ( ( () ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3142:1: ( () )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3148:1: ( ( () ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3149:1: ( () )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3142:1: ( () )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3143:1: ()
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3149:1: ( () )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3150:1: ()
             {
              before(grammarAccess.getResponseBlockAccess().getResponseBlockAction_0()); 
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3144:1: ()
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3146:1: 
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3151:1: ()
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3153:1: 
             {
             }
 
@@ -8769,21 +8797,21 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ResponseBlock__Group__1"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3156:1: rule__ResponseBlock__Group__1 : rule__ResponseBlock__Group__1__Impl rule__ResponseBlock__Group__2 ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3163:1: rule__ResponseBlock__Group__1 : rule__ResponseBlock__Group__1__Impl rule__ResponseBlock__Group__2 ;
     public final void rule__ResponseBlock__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3160:1: ( rule__ResponseBlock__Group__1__Impl rule__ResponseBlock__Group__2 )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3161:2: rule__ResponseBlock__Group__1__Impl rule__ResponseBlock__Group__2
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3167:1: ( rule__ResponseBlock__Group__1__Impl rule__ResponseBlock__Group__2 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3168:2: rule__ResponseBlock__Group__1__Impl rule__ResponseBlock__Group__2
             {
-            pushFollow(FOLLOW_rule__ResponseBlock__Group__1__Impl_in_rule__ResponseBlock__Group__16480);
+            pushFollow(FOLLOW_rule__ResponseBlock__Group__1__Impl_in_rule__ResponseBlock__Group__16501);
             rule__ResponseBlock__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__ResponseBlock__Group__2_in_rule__ResponseBlock__Group__16483);
+            pushFollow(FOLLOW_rule__ResponseBlock__Group__2_in_rule__ResponseBlock__Group__16504);
             rule__ResponseBlock__Group__2();
 
             state._fsp--;
@@ -8807,20 +8835,20 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ResponseBlock__Group__1__Impl"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3168:1: rule__ResponseBlock__Group__1__Impl : ( 'response' ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3175:1: rule__ResponseBlock__Group__1__Impl : ( 'response' ) ;
     public final void rule__ResponseBlock__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3172:1: ( ( 'response' ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3173:1: ( 'response' )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3179:1: ( ( 'response' ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3180:1: ( 'response' )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3173:1: ( 'response' )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3174:1: 'response'
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3180:1: ( 'response' )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3181:1: 'response'
             {
              before(grammarAccess.getResponseBlockAccess().getResponseKeyword_1()); 
-            match(input,29,FOLLOW_29_in_rule__ResponseBlock__Group__1__Impl6511); 
+            match(input,30,FOLLOW_30_in_rule__ResponseBlock__Group__1__Impl6532); 
              after(grammarAccess.getResponseBlockAccess().getResponseKeyword_1()); 
 
             }
@@ -8844,21 +8872,21 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ResponseBlock__Group__2"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3187:1: rule__ResponseBlock__Group__2 : rule__ResponseBlock__Group__2__Impl rule__ResponseBlock__Group__3 ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3194:1: rule__ResponseBlock__Group__2 : rule__ResponseBlock__Group__2__Impl rule__ResponseBlock__Group__3 ;
     public final void rule__ResponseBlock__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3191:1: ( rule__ResponseBlock__Group__2__Impl rule__ResponseBlock__Group__3 )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3192:2: rule__ResponseBlock__Group__2__Impl rule__ResponseBlock__Group__3
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3198:1: ( rule__ResponseBlock__Group__2__Impl rule__ResponseBlock__Group__3 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3199:2: rule__ResponseBlock__Group__2__Impl rule__ResponseBlock__Group__3
             {
-            pushFollow(FOLLOW_rule__ResponseBlock__Group__2__Impl_in_rule__ResponseBlock__Group__26542);
+            pushFollow(FOLLOW_rule__ResponseBlock__Group__2__Impl_in_rule__ResponseBlock__Group__26563);
             rule__ResponseBlock__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__ResponseBlock__Group__3_in_rule__ResponseBlock__Group__26545);
+            pushFollow(FOLLOW_rule__ResponseBlock__Group__3_in_rule__ResponseBlock__Group__26566);
             rule__ResponseBlock__Group__3();
 
             state._fsp--;
@@ -8882,31 +8910,31 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ResponseBlock__Group__2__Impl"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3199:1: rule__ResponseBlock__Group__2__Impl : ( ( rule__ResponseBlock__Group_2__0 )? ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3206:1: rule__ResponseBlock__Group__2__Impl : ( ( rule__ResponseBlock__Group_2__0 )? ) ;
     public final void rule__ResponseBlock__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3203:1: ( ( ( rule__ResponseBlock__Group_2__0 )? ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3204:1: ( ( rule__ResponseBlock__Group_2__0 )? )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3210:1: ( ( ( rule__ResponseBlock__Group_2__0 )? ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3211:1: ( ( rule__ResponseBlock__Group_2__0 )? )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3204:1: ( ( rule__ResponseBlock__Group_2__0 )? )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3205:1: ( rule__ResponseBlock__Group_2__0 )?
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3211:1: ( ( rule__ResponseBlock__Group_2__0 )? )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3212:1: ( rule__ResponseBlock__Group_2__0 )?
             {
              before(grammarAccess.getResponseBlockAccess().getGroup_2()); 
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3206:1: ( rule__ResponseBlock__Group_2__0 )?
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3213:1: ( rule__ResponseBlock__Group_2__0 )?
             int alt27=2;
             int LA27_0 = input.LA(1);
 
-            if ( (LA27_0==30) ) {
+            if ( (LA27_0==31) ) {
                 alt27=1;
             }
             switch (alt27) {
                 case 1 :
-                    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3206:2: rule__ResponseBlock__Group_2__0
+                    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3213:2: rule__ResponseBlock__Group_2__0
                     {
-                    pushFollow(FOLLOW_rule__ResponseBlock__Group_2__0_in_rule__ResponseBlock__Group__2__Impl6572);
+                    pushFollow(FOLLOW_rule__ResponseBlock__Group_2__0_in_rule__ResponseBlock__Group__2__Impl6593);
                     rule__ResponseBlock__Group_2__0();
 
                     state._fsp--;
@@ -8940,16 +8968,16 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ResponseBlock__Group__3"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3216:1: rule__ResponseBlock__Group__3 : rule__ResponseBlock__Group__3__Impl ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3223:1: rule__ResponseBlock__Group__3 : rule__ResponseBlock__Group__3__Impl ;
     public final void rule__ResponseBlock__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3220:1: ( rule__ResponseBlock__Group__3__Impl )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3221:2: rule__ResponseBlock__Group__3__Impl
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3227:1: ( rule__ResponseBlock__Group__3__Impl )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3228:2: rule__ResponseBlock__Group__3__Impl
             {
-            pushFollow(FOLLOW_rule__ResponseBlock__Group__3__Impl_in_rule__ResponseBlock__Group__36603);
+            pushFollow(FOLLOW_rule__ResponseBlock__Group__3__Impl_in_rule__ResponseBlock__Group__36624);
             rule__ResponseBlock__Group__3__Impl();
 
             state._fsp--;
@@ -8973,31 +9001,31 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ResponseBlock__Group__3__Impl"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3227:1: rule__ResponseBlock__Group__3__Impl : ( ( rule__ResponseBlock__TypeAssignment_3 )? ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3234:1: rule__ResponseBlock__Group__3__Impl : ( ( rule__ResponseBlock__TypeAssignment_3 )? ) ;
     public final void rule__ResponseBlock__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3231:1: ( ( ( rule__ResponseBlock__TypeAssignment_3 )? ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3232:1: ( ( rule__ResponseBlock__TypeAssignment_3 )? )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3238:1: ( ( ( rule__ResponseBlock__TypeAssignment_3 )? ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3239:1: ( ( rule__ResponseBlock__TypeAssignment_3 )? )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3232:1: ( ( rule__ResponseBlock__TypeAssignment_3 )? )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3233:1: ( rule__ResponseBlock__TypeAssignment_3 )?
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3239:1: ( ( rule__ResponseBlock__TypeAssignment_3 )? )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3240:1: ( rule__ResponseBlock__TypeAssignment_3 )?
             {
              before(grammarAccess.getResponseBlockAccess().getTypeAssignment_3()); 
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3234:1: ( rule__ResponseBlock__TypeAssignment_3 )?
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3241:1: ( rule__ResponseBlock__TypeAssignment_3 )?
             int alt28=2;
             int LA28_0 = input.LA(1);
 
-            if ( (LA28_0==RULE_ID||LA28_0==19||(LA28_0>=36 && LA28_0<=40)) ) {
+            if ( (LA28_0==RULE_ID||LA28_0==20||(LA28_0>=37 && LA28_0<=41)) ) {
                 alt28=1;
             }
             switch (alt28) {
                 case 1 :
-                    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3234:2: rule__ResponseBlock__TypeAssignment_3
+                    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3241:2: rule__ResponseBlock__TypeAssignment_3
                     {
-                    pushFollow(FOLLOW_rule__ResponseBlock__TypeAssignment_3_in_rule__ResponseBlock__Group__3__Impl6630);
+                    pushFollow(FOLLOW_rule__ResponseBlock__TypeAssignment_3_in_rule__ResponseBlock__Group__3__Impl6651);
                     rule__ResponseBlock__TypeAssignment_3();
 
                     state._fsp--;
@@ -9031,21 +9059,21 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ResponseBlock__Group_2__0"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3252:1: rule__ResponseBlock__Group_2__0 : rule__ResponseBlock__Group_2__0__Impl rule__ResponseBlock__Group_2__1 ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3259:1: rule__ResponseBlock__Group_2__0 : rule__ResponseBlock__Group_2__0__Impl rule__ResponseBlock__Group_2__1 ;
     public final void rule__ResponseBlock__Group_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3256:1: ( rule__ResponseBlock__Group_2__0__Impl rule__ResponseBlock__Group_2__1 )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3257:2: rule__ResponseBlock__Group_2__0__Impl rule__ResponseBlock__Group_2__1
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3263:1: ( rule__ResponseBlock__Group_2__0__Impl rule__ResponseBlock__Group_2__1 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3264:2: rule__ResponseBlock__Group_2__0__Impl rule__ResponseBlock__Group_2__1
             {
-            pushFollow(FOLLOW_rule__ResponseBlock__Group_2__0__Impl_in_rule__ResponseBlock__Group_2__06669);
+            pushFollow(FOLLOW_rule__ResponseBlock__Group_2__0__Impl_in_rule__ResponseBlock__Group_2__06690);
             rule__ResponseBlock__Group_2__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__ResponseBlock__Group_2__1_in_rule__ResponseBlock__Group_2__06672);
+            pushFollow(FOLLOW_rule__ResponseBlock__Group_2__1_in_rule__ResponseBlock__Group_2__06693);
             rule__ResponseBlock__Group_2__1();
 
             state._fsp--;
@@ -9069,20 +9097,20 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ResponseBlock__Group_2__0__Impl"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3264:1: rule__ResponseBlock__Group_2__0__Impl : ( 'extends' ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3271:1: rule__ResponseBlock__Group_2__0__Impl : ( 'extends' ) ;
     public final void rule__ResponseBlock__Group_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3268:1: ( ( 'extends' ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3269:1: ( 'extends' )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3275:1: ( ( 'extends' ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3276:1: ( 'extends' )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3269:1: ( 'extends' )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3270:1: 'extends'
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3276:1: ( 'extends' )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3277:1: 'extends'
             {
              before(grammarAccess.getResponseBlockAccess().getExtendsKeyword_2_0()); 
-            match(input,30,FOLLOW_30_in_rule__ResponseBlock__Group_2__0__Impl6700); 
+            match(input,31,FOLLOW_31_in_rule__ResponseBlock__Group_2__0__Impl6721); 
              after(grammarAccess.getResponseBlockAccess().getExtendsKeyword_2_0()); 
 
             }
@@ -9106,16 +9134,16 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ResponseBlock__Group_2__1"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3283:1: rule__ResponseBlock__Group_2__1 : rule__ResponseBlock__Group_2__1__Impl ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3290:1: rule__ResponseBlock__Group_2__1 : rule__ResponseBlock__Group_2__1__Impl ;
     public final void rule__ResponseBlock__Group_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3287:1: ( rule__ResponseBlock__Group_2__1__Impl )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3288:2: rule__ResponseBlock__Group_2__1__Impl
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3294:1: ( rule__ResponseBlock__Group_2__1__Impl )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3295:2: rule__ResponseBlock__Group_2__1__Impl
             {
-            pushFollow(FOLLOW_rule__ResponseBlock__Group_2__1__Impl_in_rule__ResponseBlock__Group_2__16731);
+            pushFollow(FOLLOW_rule__ResponseBlock__Group_2__1__Impl_in_rule__ResponseBlock__Group_2__16752);
             rule__ResponseBlock__Group_2__1__Impl();
 
             state._fsp--;
@@ -9139,23 +9167,23 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ResponseBlock__Group_2__1__Impl"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3294:1: rule__ResponseBlock__Group_2__1__Impl : ( ( rule__ResponseBlock__SuperTypeAssignment_2_1 ) ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3301:1: rule__ResponseBlock__Group_2__1__Impl : ( ( rule__ResponseBlock__SuperTypeAssignment_2_1 ) ) ;
     public final void rule__ResponseBlock__Group_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3298:1: ( ( ( rule__ResponseBlock__SuperTypeAssignment_2_1 ) ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3299:1: ( ( rule__ResponseBlock__SuperTypeAssignment_2_1 ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3305:1: ( ( ( rule__ResponseBlock__SuperTypeAssignment_2_1 ) ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3306:1: ( ( rule__ResponseBlock__SuperTypeAssignment_2_1 ) )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3299:1: ( ( rule__ResponseBlock__SuperTypeAssignment_2_1 ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3300:1: ( rule__ResponseBlock__SuperTypeAssignment_2_1 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3306:1: ( ( rule__ResponseBlock__SuperTypeAssignment_2_1 ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3307:1: ( rule__ResponseBlock__SuperTypeAssignment_2_1 )
             {
              before(grammarAccess.getResponseBlockAccess().getSuperTypeAssignment_2_1()); 
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3301:1: ( rule__ResponseBlock__SuperTypeAssignment_2_1 )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3301:2: rule__ResponseBlock__SuperTypeAssignment_2_1
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3308:1: ( rule__ResponseBlock__SuperTypeAssignment_2_1 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3308:2: rule__ResponseBlock__SuperTypeAssignment_2_1
             {
-            pushFollow(FOLLOW_rule__ResponseBlock__SuperTypeAssignment_2_1_in_rule__ResponseBlock__Group_2__1__Impl6758);
+            pushFollow(FOLLOW_rule__ResponseBlock__SuperTypeAssignment_2_1_in_rule__ResponseBlock__Group_2__1__Impl6779);
             rule__ResponseBlock__SuperTypeAssignment_2_1();
 
             state._fsp--;
@@ -9186,21 +9214,21 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Member__Group__0"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3315:1: rule__Member__Group__0 : rule__Member__Group__0__Impl rule__Member__Group__1 ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3322:1: rule__Member__Group__0 : rule__Member__Group__0__Impl rule__Member__Group__1 ;
     public final void rule__Member__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3319:1: ( rule__Member__Group__0__Impl rule__Member__Group__1 )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3320:2: rule__Member__Group__0__Impl rule__Member__Group__1
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3326:1: ( rule__Member__Group__0__Impl rule__Member__Group__1 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3327:2: rule__Member__Group__0__Impl rule__Member__Group__1
             {
-            pushFollow(FOLLOW_rule__Member__Group__0__Impl_in_rule__Member__Group__06792);
+            pushFollow(FOLLOW_rule__Member__Group__0__Impl_in_rule__Member__Group__06813);
             rule__Member__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Member__Group__1_in_rule__Member__Group__06795);
+            pushFollow(FOLLOW_rule__Member__Group__1_in_rule__Member__Group__06816);
             rule__Member__Group__1();
 
             state._fsp--;
@@ -9224,23 +9252,23 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Member__Group__0__Impl"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3327:1: rule__Member__Group__0__Impl : ( ( rule__Member__NameAssignment_0 ) ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3334:1: rule__Member__Group__0__Impl : ( ( rule__Member__NameAssignment_0 ) ) ;
     public final void rule__Member__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3331:1: ( ( ( rule__Member__NameAssignment_0 ) ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3332:1: ( ( rule__Member__NameAssignment_0 ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3338:1: ( ( ( rule__Member__NameAssignment_0 ) ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3339:1: ( ( rule__Member__NameAssignment_0 ) )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3332:1: ( ( rule__Member__NameAssignment_0 ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3333:1: ( rule__Member__NameAssignment_0 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3339:1: ( ( rule__Member__NameAssignment_0 ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3340:1: ( rule__Member__NameAssignment_0 )
             {
              before(grammarAccess.getMemberAccess().getNameAssignment_0()); 
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3334:1: ( rule__Member__NameAssignment_0 )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3334:2: rule__Member__NameAssignment_0
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3341:1: ( rule__Member__NameAssignment_0 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3341:2: rule__Member__NameAssignment_0
             {
-            pushFollow(FOLLOW_rule__Member__NameAssignment_0_in_rule__Member__Group__0__Impl6822);
+            pushFollow(FOLLOW_rule__Member__NameAssignment_0_in_rule__Member__Group__0__Impl6843);
             rule__Member__NameAssignment_0();
 
             state._fsp--;
@@ -9271,21 +9299,21 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Member__Group__1"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3344:1: rule__Member__Group__1 : rule__Member__Group__1__Impl rule__Member__Group__2 ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3351:1: rule__Member__Group__1 : rule__Member__Group__1__Impl rule__Member__Group__2 ;
     public final void rule__Member__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3348:1: ( rule__Member__Group__1__Impl rule__Member__Group__2 )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3349:2: rule__Member__Group__1__Impl rule__Member__Group__2
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3355:1: ( rule__Member__Group__1__Impl rule__Member__Group__2 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3356:2: rule__Member__Group__1__Impl rule__Member__Group__2
             {
-            pushFollow(FOLLOW_rule__Member__Group__1__Impl_in_rule__Member__Group__16852);
+            pushFollow(FOLLOW_rule__Member__Group__1__Impl_in_rule__Member__Group__16873);
             rule__Member__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Member__Group__2_in_rule__Member__Group__16855);
+            pushFollow(FOLLOW_rule__Member__Group__2_in_rule__Member__Group__16876);
             rule__Member__Group__2();
 
             state._fsp--;
@@ -9309,20 +9337,20 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Member__Group__1__Impl"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3356:1: rule__Member__Group__1__Impl : ( ':' ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3363:1: rule__Member__Group__1__Impl : ( ':' ) ;
     public final void rule__Member__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3360:1: ( ( ':' ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3361:1: ( ':' )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3367:1: ( ( ':' ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3368:1: ( ':' )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3361:1: ( ':' )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3362:1: ':'
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3368:1: ( ':' )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3369:1: ':'
             {
              before(grammarAccess.getMemberAccess().getColonKeyword_1()); 
-            match(input,23,FOLLOW_23_in_rule__Member__Group__1__Impl6883); 
+            match(input,24,FOLLOW_24_in_rule__Member__Group__1__Impl6904); 
              after(grammarAccess.getMemberAccess().getColonKeyword_1()); 
 
             }
@@ -9346,16 +9374,16 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Member__Group__2"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3375:1: rule__Member__Group__2 : rule__Member__Group__2__Impl ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3382:1: rule__Member__Group__2 : rule__Member__Group__2__Impl ;
     public final void rule__Member__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3379:1: ( rule__Member__Group__2__Impl )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3380:2: rule__Member__Group__2__Impl
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3386:1: ( rule__Member__Group__2__Impl )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3387:2: rule__Member__Group__2__Impl
             {
-            pushFollow(FOLLOW_rule__Member__Group__2__Impl_in_rule__Member__Group__26914);
+            pushFollow(FOLLOW_rule__Member__Group__2__Impl_in_rule__Member__Group__26935);
             rule__Member__Group__2__Impl();
 
             state._fsp--;
@@ -9379,23 +9407,23 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Member__Group__2__Impl"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3386:1: rule__Member__Group__2__Impl : ( ( rule__Member__TypeAssignment_2 ) ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3393:1: rule__Member__Group__2__Impl : ( ( rule__Member__TypeAssignment_2 ) ) ;
     public final void rule__Member__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3390:1: ( ( ( rule__Member__TypeAssignment_2 ) ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3391:1: ( ( rule__Member__TypeAssignment_2 ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3397:1: ( ( ( rule__Member__TypeAssignment_2 ) ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3398:1: ( ( rule__Member__TypeAssignment_2 ) )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3391:1: ( ( rule__Member__TypeAssignment_2 ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3392:1: ( rule__Member__TypeAssignment_2 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3398:1: ( ( rule__Member__TypeAssignment_2 ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3399:1: ( rule__Member__TypeAssignment_2 )
             {
              before(grammarAccess.getMemberAccess().getTypeAssignment_2()); 
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3393:1: ( rule__Member__TypeAssignment_2 )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3393:2: rule__Member__TypeAssignment_2
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3400:1: ( rule__Member__TypeAssignment_2 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3400:2: rule__Member__TypeAssignment_2
             {
-            pushFollow(FOLLOW_rule__Member__TypeAssignment_2_in_rule__Member__Group__2__Impl6941);
+            pushFollow(FOLLOW_rule__Member__TypeAssignment_2_in_rule__Member__Group__2__Impl6962);
             rule__Member__TypeAssignment_2();
 
             state._fsp--;
@@ -9426,21 +9454,21 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__SimpleMember__Group__0"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3409:1: rule__SimpleMember__Group__0 : rule__SimpleMember__Group__0__Impl rule__SimpleMember__Group__1 ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3416:1: rule__SimpleMember__Group__0 : rule__SimpleMember__Group__0__Impl rule__SimpleMember__Group__1 ;
     public final void rule__SimpleMember__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3413:1: ( rule__SimpleMember__Group__0__Impl rule__SimpleMember__Group__1 )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3414:2: rule__SimpleMember__Group__0__Impl rule__SimpleMember__Group__1
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3420:1: ( rule__SimpleMember__Group__0__Impl rule__SimpleMember__Group__1 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3421:2: rule__SimpleMember__Group__0__Impl rule__SimpleMember__Group__1
             {
-            pushFollow(FOLLOW_rule__SimpleMember__Group__0__Impl_in_rule__SimpleMember__Group__06977);
+            pushFollow(FOLLOW_rule__SimpleMember__Group__0__Impl_in_rule__SimpleMember__Group__06998);
             rule__SimpleMember__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__SimpleMember__Group__1_in_rule__SimpleMember__Group__06980);
+            pushFollow(FOLLOW_rule__SimpleMember__Group__1_in_rule__SimpleMember__Group__07001);
             rule__SimpleMember__Group__1();
 
             state._fsp--;
@@ -9464,23 +9492,23 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__SimpleMember__Group__0__Impl"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3421:1: rule__SimpleMember__Group__0__Impl : ( ( rule__SimpleMember__NameAssignment_0 ) ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3428:1: rule__SimpleMember__Group__0__Impl : ( ( rule__SimpleMember__NameAssignment_0 ) ) ;
     public final void rule__SimpleMember__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3425:1: ( ( ( rule__SimpleMember__NameAssignment_0 ) ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3426:1: ( ( rule__SimpleMember__NameAssignment_0 ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3432:1: ( ( ( rule__SimpleMember__NameAssignment_0 ) ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3433:1: ( ( rule__SimpleMember__NameAssignment_0 ) )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3426:1: ( ( rule__SimpleMember__NameAssignment_0 ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3427:1: ( rule__SimpleMember__NameAssignment_0 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3433:1: ( ( rule__SimpleMember__NameAssignment_0 ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3434:1: ( rule__SimpleMember__NameAssignment_0 )
             {
              before(grammarAccess.getSimpleMemberAccess().getNameAssignment_0()); 
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3428:1: ( rule__SimpleMember__NameAssignment_0 )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3428:2: rule__SimpleMember__NameAssignment_0
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3435:1: ( rule__SimpleMember__NameAssignment_0 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3435:2: rule__SimpleMember__NameAssignment_0
             {
-            pushFollow(FOLLOW_rule__SimpleMember__NameAssignment_0_in_rule__SimpleMember__Group__0__Impl7007);
+            pushFollow(FOLLOW_rule__SimpleMember__NameAssignment_0_in_rule__SimpleMember__Group__0__Impl7028);
             rule__SimpleMember__NameAssignment_0();
 
             state._fsp--;
@@ -9511,21 +9539,21 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__SimpleMember__Group__1"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3438:1: rule__SimpleMember__Group__1 : rule__SimpleMember__Group__1__Impl rule__SimpleMember__Group__2 ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3445:1: rule__SimpleMember__Group__1 : rule__SimpleMember__Group__1__Impl rule__SimpleMember__Group__2 ;
     public final void rule__SimpleMember__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3442:1: ( rule__SimpleMember__Group__1__Impl rule__SimpleMember__Group__2 )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3443:2: rule__SimpleMember__Group__1__Impl rule__SimpleMember__Group__2
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3449:1: ( rule__SimpleMember__Group__1__Impl rule__SimpleMember__Group__2 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3450:2: rule__SimpleMember__Group__1__Impl rule__SimpleMember__Group__2
             {
-            pushFollow(FOLLOW_rule__SimpleMember__Group__1__Impl_in_rule__SimpleMember__Group__17037);
+            pushFollow(FOLLOW_rule__SimpleMember__Group__1__Impl_in_rule__SimpleMember__Group__17058);
             rule__SimpleMember__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__SimpleMember__Group__2_in_rule__SimpleMember__Group__17040);
+            pushFollow(FOLLOW_rule__SimpleMember__Group__2_in_rule__SimpleMember__Group__17061);
             rule__SimpleMember__Group__2();
 
             state._fsp--;
@@ -9549,20 +9577,20 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__SimpleMember__Group__1__Impl"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3450:1: rule__SimpleMember__Group__1__Impl : ( ':' ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3457:1: rule__SimpleMember__Group__1__Impl : ( ':' ) ;
     public final void rule__SimpleMember__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3454:1: ( ( ':' ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3455:1: ( ':' )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3461:1: ( ( ':' ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3462:1: ( ':' )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3455:1: ( ':' )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3456:1: ':'
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3462:1: ( ':' )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3463:1: ':'
             {
              before(grammarAccess.getSimpleMemberAccess().getColonKeyword_1()); 
-            match(input,23,FOLLOW_23_in_rule__SimpleMember__Group__1__Impl7068); 
+            match(input,24,FOLLOW_24_in_rule__SimpleMember__Group__1__Impl7089); 
              after(grammarAccess.getSimpleMemberAccess().getColonKeyword_1()); 
 
             }
@@ -9586,16 +9614,16 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__SimpleMember__Group__2"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3469:1: rule__SimpleMember__Group__2 : rule__SimpleMember__Group__2__Impl ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3476:1: rule__SimpleMember__Group__2 : rule__SimpleMember__Group__2__Impl ;
     public final void rule__SimpleMember__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3473:1: ( rule__SimpleMember__Group__2__Impl )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3474:2: rule__SimpleMember__Group__2__Impl
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3480:1: ( rule__SimpleMember__Group__2__Impl )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3481:2: rule__SimpleMember__Group__2__Impl
             {
-            pushFollow(FOLLOW_rule__SimpleMember__Group__2__Impl_in_rule__SimpleMember__Group__27099);
+            pushFollow(FOLLOW_rule__SimpleMember__Group__2__Impl_in_rule__SimpleMember__Group__27120);
             rule__SimpleMember__Group__2__Impl();
 
             state._fsp--;
@@ -9619,23 +9647,23 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__SimpleMember__Group__2__Impl"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3480:1: rule__SimpleMember__Group__2__Impl : ( ( rule__SimpleMember__TypeAssignment_2 ) ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3487:1: rule__SimpleMember__Group__2__Impl : ( ( rule__SimpleMember__TypeAssignment_2 ) ) ;
     public final void rule__SimpleMember__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3484:1: ( ( ( rule__SimpleMember__TypeAssignment_2 ) ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3485:1: ( ( rule__SimpleMember__TypeAssignment_2 ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3491:1: ( ( ( rule__SimpleMember__TypeAssignment_2 ) ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3492:1: ( ( rule__SimpleMember__TypeAssignment_2 ) )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3485:1: ( ( rule__SimpleMember__TypeAssignment_2 ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3486:1: ( rule__SimpleMember__TypeAssignment_2 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3492:1: ( ( rule__SimpleMember__TypeAssignment_2 ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3493:1: ( rule__SimpleMember__TypeAssignment_2 )
             {
              before(grammarAccess.getSimpleMemberAccess().getTypeAssignment_2()); 
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3487:1: ( rule__SimpleMember__TypeAssignment_2 )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3487:2: rule__SimpleMember__TypeAssignment_2
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3494:1: ( rule__SimpleMember__TypeAssignment_2 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3494:2: rule__SimpleMember__TypeAssignment_2
             {
-            pushFollow(FOLLOW_rule__SimpleMember__TypeAssignment_2_in_rule__SimpleMember__Group__2__Impl7126);
+            pushFollow(FOLLOW_rule__SimpleMember__TypeAssignment_2_in_rule__SimpleMember__Group__2__Impl7147);
             rule__SimpleMember__TypeAssignment_2();
 
             state._fsp--;
@@ -9666,21 +9694,21 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ArrayType__Group__0"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3503:1: rule__ArrayType__Group__0 : rule__ArrayType__Group__0__Impl rule__ArrayType__Group__1 ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3510:1: rule__ArrayType__Group__0 : rule__ArrayType__Group__0__Impl rule__ArrayType__Group__1 ;
     public final void rule__ArrayType__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3507:1: ( rule__ArrayType__Group__0__Impl rule__ArrayType__Group__1 )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3508:2: rule__ArrayType__Group__0__Impl rule__ArrayType__Group__1
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3514:1: ( rule__ArrayType__Group__0__Impl rule__ArrayType__Group__1 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3515:2: rule__ArrayType__Group__0__Impl rule__ArrayType__Group__1
             {
-            pushFollow(FOLLOW_rule__ArrayType__Group__0__Impl_in_rule__ArrayType__Group__07162);
+            pushFollow(FOLLOW_rule__ArrayType__Group__0__Impl_in_rule__ArrayType__Group__07183);
             rule__ArrayType__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__ArrayType__Group__1_in_rule__ArrayType__Group__07165);
+            pushFollow(FOLLOW_rule__ArrayType__Group__1_in_rule__ArrayType__Group__07186);
             rule__ArrayType__Group__1();
 
             state._fsp--;
@@ -9704,23 +9732,23 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ArrayType__Group__0__Impl"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3515:1: rule__ArrayType__Group__0__Impl : ( ( rule__ArrayType__ElementTypeAssignment_0 ) ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3522:1: rule__ArrayType__Group__0__Impl : ( ( rule__ArrayType__ElementTypeAssignment_0 ) ) ;
     public final void rule__ArrayType__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3519:1: ( ( ( rule__ArrayType__ElementTypeAssignment_0 ) ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3520:1: ( ( rule__ArrayType__ElementTypeAssignment_0 ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3526:1: ( ( ( rule__ArrayType__ElementTypeAssignment_0 ) ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3527:1: ( ( rule__ArrayType__ElementTypeAssignment_0 ) )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3520:1: ( ( rule__ArrayType__ElementTypeAssignment_0 ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3521:1: ( rule__ArrayType__ElementTypeAssignment_0 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3527:1: ( ( rule__ArrayType__ElementTypeAssignment_0 ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3528:1: ( rule__ArrayType__ElementTypeAssignment_0 )
             {
              before(grammarAccess.getArrayTypeAccess().getElementTypeAssignment_0()); 
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3522:1: ( rule__ArrayType__ElementTypeAssignment_0 )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3522:2: rule__ArrayType__ElementTypeAssignment_0
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3529:1: ( rule__ArrayType__ElementTypeAssignment_0 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3529:2: rule__ArrayType__ElementTypeAssignment_0
             {
-            pushFollow(FOLLOW_rule__ArrayType__ElementTypeAssignment_0_in_rule__ArrayType__Group__0__Impl7192);
+            pushFollow(FOLLOW_rule__ArrayType__ElementTypeAssignment_0_in_rule__ArrayType__Group__0__Impl7213);
             rule__ArrayType__ElementTypeAssignment_0();
 
             state._fsp--;
@@ -9751,16 +9779,16 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ArrayType__Group__1"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3532:1: rule__ArrayType__Group__1 : rule__ArrayType__Group__1__Impl ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3539:1: rule__ArrayType__Group__1 : rule__ArrayType__Group__1__Impl ;
     public final void rule__ArrayType__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3536:1: ( rule__ArrayType__Group__1__Impl )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3537:2: rule__ArrayType__Group__1__Impl
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3543:1: ( rule__ArrayType__Group__1__Impl )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3544:2: rule__ArrayType__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__ArrayType__Group__1__Impl_in_rule__ArrayType__Group__17222);
+            pushFollow(FOLLOW_rule__ArrayType__Group__1__Impl_in_rule__ArrayType__Group__17243);
             rule__ArrayType__Group__1__Impl();
 
             state._fsp--;
@@ -9784,23 +9812,23 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ArrayType__Group__1__Impl"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3543:1: rule__ArrayType__Group__1__Impl : ( ( rule__ArrayType__IdAssignment_1 ) ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3550:1: rule__ArrayType__Group__1__Impl : ( ( rule__ArrayType__IdAssignment_1 ) ) ;
     public final void rule__ArrayType__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3547:1: ( ( ( rule__ArrayType__IdAssignment_1 ) ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3548:1: ( ( rule__ArrayType__IdAssignment_1 ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3554:1: ( ( ( rule__ArrayType__IdAssignment_1 ) ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3555:1: ( ( rule__ArrayType__IdAssignment_1 ) )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3548:1: ( ( rule__ArrayType__IdAssignment_1 ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3549:1: ( rule__ArrayType__IdAssignment_1 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3555:1: ( ( rule__ArrayType__IdAssignment_1 ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3556:1: ( rule__ArrayType__IdAssignment_1 )
             {
              before(grammarAccess.getArrayTypeAccess().getIdAssignment_1()); 
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3550:1: ( rule__ArrayType__IdAssignment_1 )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3550:2: rule__ArrayType__IdAssignment_1
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3557:1: ( rule__ArrayType__IdAssignment_1 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3557:2: rule__ArrayType__IdAssignment_1
             {
-            pushFollow(FOLLOW_rule__ArrayType__IdAssignment_1_in_rule__ArrayType__Group__1__Impl7249);
+            pushFollow(FOLLOW_rule__ArrayType__IdAssignment_1_in_rule__ArrayType__Group__1__Impl7270);
             rule__ArrayType__IdAssignment_1();
 
             state._fsp--;
@@ -9831,21 +9859,21 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ComplexTypeDeclaration__Group__0"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3564:1: rule__ComplexTypeDeclaration__Group__0 : rule__ComplexTypeDeclaration__Group__0__Impl rule__ComplexTypeDeclaration__Group__1 ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3571:1: rule__ComplexTypeDeclaration__Group__0 : rule__ComplexTypeDeclaration__Group__0__Impl rule__ComplexTypeDeclaration__Group__1 ;
     public final void rule__ComplexTypeDeclaration__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3568:1: ( rule__ComplexTypeDeclaration__Group__0__Impl rule__ComplexTypeDeclaration__Group__1 )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3569:2: rule__ComplexTypeDeclaration__Group__0__Impl rule__ComplexTypeDeclaration__Group__1
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3575:1: ( rule__ComplexTypeDeclaration__Group__0__Impl rule__ComplexTypeDeclaration__Group__1 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3576:2: rule__ComplexTypeDeclaration__Group__0__Impl rule__ComplexTypeDeclaration__Group__1
             {
-            pushFollow(FOLLOW_rule__ComplexTypeDeclaration__Group__0__Impl_in_rule__ComplexTypeDeclaration__Group__07283);
+            pushFollow(FOLLOW_rule__ComplexTypeDeclaration__Group__0__Impl_in_rule__ComplexTypeDeclaration__Group__07304);
             rule__ComplexTypeDeclaration__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__ComplexTypeDeclaration__Group__1_in_rule__ComplexTypeDeclaration__Group__07286);
+            pushFollow(FOLLOW_rule__ComplexTypeDeclaration__Group__1_in_rule__ComplexTypeDeclaration__Group__07307);
             rule__ComplexTypeDeclaration__Group__1();
 
             state._fsp--;
@@ -9869,23 +9897,23 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ComplexTypeDeclaration__Group__0__Impl"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3576:1: rule__ComplexTypeDeclaration__Group__0__Impl : ( ( rule__ComplexTypeDeclaration__KeywordAssignment_0 ) ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3583:1: rule__ComplexTypeDeclaration__Group__0__Impl : ( ( rule__ComplexTypeDeclaration__KeywordAssignment_0 ) ) ;
     public final void rule__ComplexTypeDeclaration__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3580:1: ( ( ( rule__ComplexTypeDeclaration__KeywordAssignment_0 ) ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3581:1: ( ( rule__ComplexTypeDeclaration__KeywordAssignment_0 ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3587:1: ( ( ( rule__ComplexTypeDeclaration__KeywordAssignment_0 ) ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3588:1: ( ( rule__ComplexTypeDeclaration__KeywordAssignment_0 ) )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3581:1: ( ( rule__ComplexTypeDeclaration__KeywordAssignment_0 ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3582:1: ( rule__ComplexTypeDeclaration__KeywordAssignment_0 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3588:1: ( ( rule__ComplexTypeDeclaration__KeywordAssignment_0 ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3589:1: ( rule__ComplexTypeDeclaration__KeywordAssignment_0 )
             {
              before(grammarAccess.getComplexTypeDeclarationAccess().getKeywordAssignment_0()); 
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3583:1: ( rule__ComplexTypeDeclaration__KeywordAssignment_0 )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3583:2: rule__ComplexTypeDeclaration__KeywordAssignment_0
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3590:1: ( rule__ComplexTypeDeclaration__KeywordAssignment_0 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3590:2: rule__ComplexTypeDeclaration__KeywordAssignment_0
             {
-            pushFollow(FOLLOW_rule__ComplexTypeDeclaration__KeywordAssignment_0_in_rule__ComplexTypeDeclaration__Group__0__Impl7313);
+            pushFollow(FOLLOW_rule__ComplexTypeDeclaration__KeywordAssignment_0_in_rule__ComplexTypeDeclaration__Group__0__Impl7334);
             rule__ComplexTypeDeclaration__KeywordAssignment_0();
 
             state._fsp--;
@@ -9916,21 +9944,21 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ComplexTypeDeclaration__Group__1"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3593:1: rule__ComplexTypeDeclaration__Group__1 : rule__ComplexTypeDeclaration__Group__1__Impl rule__ComplexTypeDeclaration__Group__2 ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3600:1: rule__ComplexTypeDeclaration__Group__1 : rule__ComplexTypeDeclaration__Group__1__Impl rule__ComplexTypeDeclaration__Group__2 ;
     public final void rule__ComplexTypeDeclaration__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3597:1: ( rule__ComplexTypeDeclaration__Group__1__Impl rule__ComplexTypeDeclaration__Group__2 )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3598:2: rule__ComplexTypeDeclaration__Group__1__Impl rule__ComplexTypeDeclaration__Group__2
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3604:1: ( rule__ComplexTypeDeclaration__Group__1__Impl rule__ComplexTypeDeclaration__Group__2 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3605:2: rule__ComplexTypeDeclaration__Group__1__Impl rule__ComplexTypeDeclaration__Group__2
             {
-            pushFollow(FOLLOW_rule__ComplexTypeDeclaration__Group__1__Impl_in_rule__ComplexTypeDeclaration__Group__17343);
+            pushFollow(FOLLOW_rule__ComplexTypeDeclaration__Group__1__Impl_in_rule__ComplexTypeDeclaration__Group__17364);
             rule__ComplexTypeDeclaration__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__ComplexTypeDeclaration__Group__2_in_rule__ComplexTypeDeclaration__Group__17346);
+            pushFollow(FOLLOW_rule__ComplexTypeDeclaration__Group__2_in_rule__ComplexTypeDeclaration__Group__17367);
             rule__ComplexTypeDeclaration__Group__2();
 
             state._fsp--;
@@ -9954,31 +9982,31 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ComplexTypeDeclaration__Group__1__Impl"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3605:1: rule__ComplexTypeDeclaration__Group__1__Impl : ( ( rule__ComplexTypeDeclaration__NogenAssignment_1 )? ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3612:1: rule__ComplexTypeDeclaration__Group__1__Impl : ( ( rule__ComplexTypeDeclaration__NogenAssignment_1 )? ) ;
     public final void rule__ComplexTypeDeclaration__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3609:1: ( ( ( rule__ComplexTypeDeclaration__NogenAssignment_1 )? ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3610:1: ( ( rule__ComplexTypeDeclaration__NogenAssignment_1 )? )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3616:1: ( ( ( rule__ComplexTypeDeclaration__NogenAssignment_1 )? ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3617:1: ( ( rule__ComplexTypeDeclaration__NogenAssignment_1 )? )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3610:1: ( ( rule__ComplexTypeDeclaration__NogenAssignment_1 )? )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3611:1: ( rule__ComplexTypeDeclaration__NogenAssignment_1 )?
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3617:1: ( ( rule__ComplexTypeDeclaration__NogenAssignment_1 )? )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3618:1: ( rule__ComplexTypeDeclaration__NogenAssignment_1 )?
             {
              before(grammarAccess.getComplexTypeDeclarationAccess().getNogenAssignment_1()); 
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3612:1: ( rule__ComplexTypeDeclaration__NogenAssignment_1 )?
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3619:1: ( rule__ComplexTypeDeclaration__NogenAssignment_1 )?
             int alt29=2;
             int LA29_0 = input.LA(1);
 
-            if ( (LA29_0==34) ) {
+            if ( (LA29_0==35) ) {
                 alt29=1;
             }
             switch (alt29) {
                 case 1 :
-                    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3612:2: rule__ComplexTypeDeclaration__NogenAssignment_1
+                    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3619:2: rule__ComplexTypeDeclaration__NogenAssignment_1
                     {
-                    pushFollow(FOLLOW_rule__ComplexTypeDeclaration__NogenAssignment_1_in_rule__ComplexTypeDeclaration__Group__1__Impl7373);
+                    pushFollow(FOLLOW_rule__ComplexTypeDeclaration__NogenAssignment_1_in_rule__ComplexTypeDeclaration__Group__1__Impl7394);
                     rule__ComplexTypeDeclaration__NogenAssignment_1();
 
                     state._fsp--;
@@ -10012,21 +10040,21 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ComplexTypeDeclaration__Group__2"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3622:1: rule__ComplexTypeDeclaration__Group__2 : rule__ComplexTypeDeclaration__Group__2__Impl rule__ComplexTypeDeclaration__Group__3 ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3629:1: rule__ComplexTypeDeclaration__Group__2 : rule__ComplexTypeDeclaration__Group__2__Impl rule__ComplexTypeDeclaration__Group__3 ;
     public final void rule__ComplexTypeDeclaration__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3626:1: ( rule__ComplexTypeDeclaration__Group__2__Impl rule__ComplexTypeDeclaration__Group__3 )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3627:2: rule__ComplexTypeDeclaration__Group__2__Impl rule__ComplexTypeDeclaration__Group__3
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3633:1: ( rule__ComplexTypeDeclaration__Group__2__Impl rule__ComplexTypeDeclaration__Group__3 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3634:2: rule__ComplexTypeDeclaration__Group__2__Impl rule__ComplexTypeDeclaration__Group__3
             {
-            pushFollow(FOLLOW_rule__ComplexTypeDeclaration__Group__2__Impl_in_rule__ComplexTypeDeclaration__Group__27404);
+            pushFollow(FOLLOW_rule__ComplexTypeDeclaration__Group__2__Impl_in_rule__ComplexTypeDeclaration__Group__27425);
             rule__ComplexTypeDeclaration__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__ComplexTypeDeclaration__Group__3_in_rule__ComplexTypeDeclaration__Group__27407);
+            pushFollow(FOLLOW_rule__ComplexTypeDeclaration__Group__3_in_rule__ComplexTypeDeclaration__Group__27428);
             rule__ComplexTypeDeclaration__Group__3();
 
             state._fsp--;
@@ -10050,23 +10078,23 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ComplexTypeDeclaration__Group__2__Impl"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3634:1: rule__ComplexTypeDeclaration__Group__2__Impl : ( ( rule__ComplexTypeDeclaration__NameAssignment_2 ) ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3641:1: rule__ComplexTypeDeclaration__Group__2__Impl : ( ( rule__ComplexTypeDeclaration__NameAssignment_2 ) ) ;
     public final void rule__ComplexTypeDeclaration__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3638:1: ( ( ( rule__ComplexTypeDeclaration__NameAssignment_2 ) ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3639:1: ( ( rule__ComplexTypeDeclaration__NameAssignment_2 ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3645:1: ( ( ( rule__ComplexTypeDeclaration__NameAssignment_2 ) ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3646:1: ( ( rule__ComplexTypeDeclaration__NameAssignment_2 ) )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3639:1: ( ( rule__ComplexTypeDeclaration__NameAssignment_2 ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3640:1: ( rule__ComplexTypeDeclaration__NameAssignment_2 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3646:1: ( ( rule__ComplexTypeDeclaration__NameAssignment_2 ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3647:1: ( rule__ComplexTypeDeclaration__NameAssignment_2 )
             {
              before(grammarAccess.getComplexTypeDeclarationAccess().getNameAssignment_2()); 
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3641:1: ( rule__ComplexTypeDeclaration__NameAssignment_2 )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3641:2: rule__ComplexTypeDeclaration__NameAssignment_2
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3648:1: ( rule__ComplexTypeDeclaration__NameAssignment_2 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3648:2: rule__ComplexTypeDeclaration__NameAssignment_2
             {
-            pushFollow(FOLLOW_rule__ComplexTypeDeclaration__NameAssignment_2_in_rule__ComplexTypeDeclaration__Group__2__Impl7434);
+            pushFollow(FOLLOW_rule__ComplexTypeDeclaration__NameAssignment_2_in_rule__ComplexTypeDeclaration__Group__2__Impl7455);
             rule__ComplexTypeDeclaration__NameAssignment_2();
 
             state._fsp--;
@@ -10097,16 +10125,16 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ComplexTypeDeclaration__Group__3"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3651:1: rule__ComplexTypeDeclaration__Group__3 : rule__ComplexTypeDeclaration__Group__3__Impl ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3658:1: rule__ComplexTypeDeclaration__Group__3 : rule__ComplexTypeDeclaration__Group__3__Impl ;
     public final void rule__ComplexTypeDeclaration__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3655:1: ( rule__ComplexTypeDeclaration__Group__3__Impl )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3656:2: rule__ComplexTypeDeclaration__Group__3__Impl
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3662:1: ( rule__ComplexTypeDeclaration__Group__3__Impl )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3663:2: rule__ComplexTypeDeclaration__Group__3__Impl
             {
-            pushFollow(FOLLOW_rule__ComplexTypeDeclaration__Group__3__Impl_in_rule__ComplexTypeDeclaration__Group__37464);
+            pushFollow(FOLLOW_rule__ComplexTypeDeclaration__Group__3__Impl_in_rule__ComplexTypeDeclaration__Group__37485);
             rule__ComplexTypeDeclaration__Group__3__Impl();
 
             state._fsp--;
@@ -10130,31 +10158,31 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ComplexTypeDeclaration__Group__3__Impl"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3662:1: rule__ComplexTypeDeclaration__Group__3__Impl : ( ( rule__ComplexTypeDeclaration__LiteralAssignment_3 )? ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3669:1: rule__ComplexTypeDeclaration__Group__3__Impl : ( ( rule__ComplexTypeDeclaration__LiteralAssignment_3 )? ) ;
     public final void rule__ComplexTypeDeclaration__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3666:1: ( ( ( rule__ComplexTypeDeclaration__LiteralAssignment_3 )? ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3667:1: ( ( rule__ComplexTypeDeclaration__LiteralAssignment_3 )? )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3673:1: ( ( ( rule__ComplexTypeDeclaration__LiteralAssignment_3 )? ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3674:1: ( ( rule__ComplexTypeDeclaration__LiteralAssignment_3 )? )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3667:1: ( ( rule__ComplexTypeDeclaration__LiteralAssignment_3 )? )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3668:1: ( rule__ComplexTypeDeclaration__LiteralAssignment_3 )?
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3674:1: ( ( rule__ComplexTypeDeclaration__LiteralAssignment_3 )? )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3675:1: ( rule__ComplexTypeDeclaration__LiteralAssignment_3 )?
             {
              before(grammarAccess.getComplexTypeDeclarationAccess().getLiteralAssignment_3()); 
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3669:1: ( rule__ComplexTypeDeclaration__LiteralAssignment_3 )?
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3676:1: ( rule__ComplexTypeDeclaration__LiteralAssignment_3 )?
             int alt30=2;
             int LA30_0 = input.LA(1);
 
-            if ( (LA30_0==19) ) {
+            if ( (LA30_0==20) ) {
                 alt30=1;
             }
             switch (alt30) {
                 case 1 :
-                    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3669:2: rule__ComplexTypeDeclaration__LiteralAssignment_3
+                    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3676:2: rule__ComplexTypeDeclaration__LiteralAssignment_3
                     {
-                    pushFollow(FOLLOW_rule__ComplexTypeDeclaration__LiteralAssignment_3_in_rule__ComplexTypeDeclaration__Group__3__Impl7491);
+                    pushFollow(FOLLOW_rule__ComplexTypeDeclaration__LiteralAssignment_3_in_rule__ComplexTypeDeclaration__Group__3__Impl7512);
                     rule__ComplexTypeDeclaration__LiteralAssignment_3();
 
                     state._fsp--;
@@ -10188,21 +10216,21 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__EnumTypeDeclaration__Group__0"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3687:1: rule__EnumTypeDeclaration__Group__0 : rule__EnumTypeDeclaration__Group__0__Impl rule__EnumTypeDeclaration__Group__1 ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3694:1: rule__EnumTypeDeclaration__Group__0 : rule__EnumTypeDeclaration__Group__0__Impl rule__EnumTypeDeclaration__Group__1 ;
     public final void rule__EnumTypeDeclaration__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3691:1: ( rule__EnumTypeDeclaration__Group__0__Impl rule__EnumTypeDeclaration__Group__1 )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3692:2: rule__EnumTypeDeclaration__Group__0__Impl rule__EnumTypeDeclaration__Group__1
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3698:1: ( rule__EnumTypeDeclaration__Group__0__Impl rule__EnumTypeDeclaration__Group__1 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3699:2: rule__EnumTypeDeclaration__Group__0__Impl rule__EnumTypeDeclaration__Group__1
             {
-            pushFollow(FOLLOW_rule__EnumTypeDeclaration__Group__0__Impl_in_rule__EnumTypeDeclaration__Group__07530);
+            pushFollow(FOLLOW_rule__EnumTypeDeclaration__Group__0__Impl_in_rule__EnumTypeDeclaration__Group__07551);
             rule__EnumTypeDeclaration__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__EnumTypeDeclaration__Group__1_in_rule__EnumTypeDeclaration__Group__07533);
+            pushFollow(FOLLOW_rule__EnumTypeDeclaration__Group__1_in_rule__EnumTypeDeclaration__Group__07554);
             rule__EnumTypeDeclaration__Group__1();
 
             state._fsp--;
@@ -10226,23 +10254,23 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__EnumTypeDeclaration__Group__0__Impl"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3699:1: rule__EnumTypeDeclaration__Group__0__Impl : ( ( rule__EnumTypeDeclaration__KeywordAssignment_0 ) ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3706:1: rule__EnumTypeDeclaration__Group__0__Impl : ( ( rule__EnumTypeDeclaration__KeywordAssignment_0 ) ) ;
     public final void rule__EnumTypeDeclaration__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3703:1: ( ( ( rule__EnumTypeDeclaration__KeywordAssignment_0 ) ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3704:1: ( ( rule__EnumTypeDeclaration__KeywordAssignment_0 ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3710:1: ( ( ( rule__EnumTypeDeclaration__KeywordAssignment_0 ) ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3711:1: ( ( rule__EnumTypeDeclaration__KeywordAssignment_0 ) )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3704:1: ( ( rule__EnumTypeDeclaration__KeywordAssignment_0 ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3705:1: ( rule__EnumTypeDeclaration__KeywordAssignment_0 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3711:1: ( ( rule__EnumTypeDeclaration__KeywordAssignment_0 ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3712:1: ( rule__EnumTypeDeclaration__KeywordAssignment_0 )
             {
              before(grammarAccess.getEnumTypeDeclarationAccess().getKeywordAssignment_0()); 
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3706:1: ( rule__EnumTypeDeclaration__KeywordAssignment_0 )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3706:2: rule__EnumTypeDeclaration__KeywordAssignment_0
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3713:1: ( rule__EnumTypeDeclaration__KeywordAssignment_0 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3713:2: rule__EnumTypeDeclaration__KeywordAssignment_0
             {
-            pushFollow(FOLLOW_rule__EnumTypeDeclaration__KeywordAssignment_0_in_rule__EnumTypeDeclaration__Group__0__Impl7560);
+            pushFollow(FOLLOW_rule__EnumTypeDeclaration__KeywordAssignment_0_in_rule__EnumTypeDeclaration__Group__0__Impl7581);
             rule__EnumTypeDeclaration__KeywordAssignment_0();
 
             state._fsp--;
@@ -10273,21 +10301,21 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__EnumTypeDeclaration__Group__1"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3716:1: rule__EnumTypeDeclaration__Group__1 : rule__EnumTypeDeclaration__Group__1__Impl rule__EnumTypeDeclaration__Group__2 ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3723:1: rule__EnumTypeDeclaration__Group__1 : rule__EnumTypeDeclaration__Group__1__Impl rule__EnumTypeDeclaration__Group__2 ;
     public final void rule__EnumTypeDeclaration__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3720:1: ( rule__EnumTypeDeclaration__Group__1__Impl rule__EnumTypeDeclaration__Group__2 )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3721:2: rule__EnumTypeDeclaration__Group__1__Impl rule__EnumTypeDeclaration__Group__2
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3727:1: ( rule__EnumTypeDeclaration__Group__1__Impl rule__EnumTypeDeclaration__Group__2 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3728:2: rule__EnumTypeDeclaration__Group__1__Impl rule__EnumTypeDeclaration__Group__2
             {
-            pushFollow(FOLLOW_rule__EnumTypeDeclaration__Group__1__Impl_in_rule__EnumTypeDeclaration__Group__17590);
+            pushFollow(FOLLOW_rule__EnumTypeDeclaration__Group__1__Impl_in_rule__EnumTypeDeclaration__Group__17611);
             rule__EnumTypeDeclaration__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__EnumTypeDeclaration__Group__2_in_rule__EnumTypeDeclaration__Group__17593);
+            pushFollow(FOLLOW_rule__EnumTypeDeclaration__Group__2_in_rule__EnumTypeDeclaration__Group__17614);
             rule__EnumTypeDeclaration__Group__2();
 
             state._fsp--;
@@ -10311,31 +10339,31 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__EnumTypeDeclaration__Group__1__Impl"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3728:1: rule__EnumTypeDeclaration__Group__1__Impl : ( ( rule__EnumTypeDeclaration__NogenAssignment_1 )? ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3735:1: rule__EnumTypeDeclaration__Group__1__Impl : ( ( rule__EnumTypeDeclaration__NogenAssignment_1 )? ) ;
     public final void rule__EnumTypeDeclaration__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3732:1: ( ( ( rule__EnumTypeDeclaration__NogenAssignment_1 )? ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3733:1: ( ( rule__EnumTypeDeclaration__NogenAssignment_1 )? )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3739:1: ( ( ( rule__EnumTypeDeclaration__NogenAssignment_1 )? ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3740:1: ( ( rule__EnumTypeDeclaration__NogenAssignment_1 )? )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3733:1: ( ( rule__EnumTypeDeclaration__NogenAssignment_1 )? )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3734:1: ( rule__EnumTypeDeclaration__NogenAssignment_1 )?
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3740:1: ( ( rule__EnumTypeDeclaration__NogenAssignment_1 )? )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3741:1: ( rule__EnumTypeDeclaration__NogenAssignment_1 )?
             {
              before(grammarAccess.getEnumTypeDeclarationAccess().getNogenAssignment_1()); 
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3735:1: ( rule__EnumTypeDeclaration__NogenAssignment_1 )?
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3742:1: ( rule__EnumTypeDeclaration__NogenAssignment_1 )?
             int alt31=2;
             int LA31_0 = input.LA(1);
 
-            if ( (LA31_0==34) ) {
+            if ( (LA31_0==35) ) {
                 alt31=1;
             }
             switch (alt31) {
                 case 1 :
-                    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3735:2: rule__EnumTypeDeclaration__NogenAssignment_1
+                    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3742:2: rule__EnumTypeDeclaration__NogenAssignment_1
                     {
-                    pushFollow(FOLLOW_rule__EnumTypeDeclaration__NogenAssignment_1_in_rule__EnumTypeDeclaration__Group__1__Impl7620);
+                    pushFollow(FOLLOW_rule__EnumTypeDeclaration__NogenAssignment_1_in_rule__EnumTypeDeclaration__Group__1__Impl7641);
                     rule__EnumTypeDeclaration__NogenAssignment_1();
 
                     state._fsp--;
@@ -10369,21 +10397,21 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__EnumTypeDeclaration__Group__2"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3745:1: rule__EnumTypeDeclaration__Group__2 : rule__EnumTypeDeclaration__Group__2__Impl rule__EnumTypeDeclaration__Group__3 ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3752:1: rule__EnumTypeDeclaration__Group__2 : rule__EnumTypeDeclaration__Group__2__Impl rule__EnumTypeDeclaration__Group__3 ;
     public final void rule__EnumTypeDeclaration__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3749:1: ( rule__EnumTypeDeclaration__Group__2__Impl rule__EnumTypeDeclaration__Group__3 )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3750:2: rule__EnumTypeDeclaration__Group__2__Impl rule__EnumTypeDeclaration__Group__3
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3756:1: ( rule__EnumTypeDeclaration__Group__2__Impl rule__EnumTypeDeclaration__Group__3 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3757:2: rule__EnumTypeDeclaration__Group__2__Impl rule__EnumTypeDeclaration__Group__3
             {
-            pushFollow(FOLLOW_rule__EnumTypeDeclaration__Group__2__Impl_in_rule__EnumTypeDeclaration__Group__27651);
+            pushFollow(FOLLOW_rule__EnumTypeDeclaration__Group__2__Impl_in_rule__EnumTypeDeclaration__Group__27672);
             rule__EnumTypeDeclaration__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__EnumTypeDeclaration__Group__3_in_rule__EnumTypeDeclaration__Group__27654);
+            pushFollow(FOLLOW_rule__EnumTypeDeclaration__Group__3_in_rule__EnumTypeDeclaration__Group__27675);
             rule__EnumTypeDeclaration__Group__3();
 
             state._fsp--;
@@ -10407,23 +10435,23 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__EnumTypeDeclaration__Group__2__Impl"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3757:1: rule__EnumTypeDeclaration__Group__2__Impl : ( ( rule__EnumTypeDeclaration__NameAssignment_2 ) ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3764:1: rule__EnumTypeDeclaration__Group__2__Impl : ( ( rule__EnumTypeDeclaration__NameAssignment_2 ) ) ;
     public final void rule__EnumTypeDeclaration__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3761:1: ( ( ( rule__EnumTypeDeclaration__NameAssignment_2 ) ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3762:1: ( ( rule__EnumTypeDeclaration__NameAssignment_2 ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3768:1: ( ( ( rule__EnumTypeDeclaration__NameAssignment_2 ) ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3769:1: ( ( rule__EnumTypeDeclaration__NameAssignment_2 ) )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3762:1: ( ( rule__EnumTypeDeclaration__NameAssignment_2 ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3763:1: ( rule__EnumTypeDeclaration__NameAssignment_2 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3769:1: ( ( rule__EnumTypeDeclaration__NameAssignment_2 ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3770:1: ( rule__EnumTypeDeclaration__NameAssignment_2 )
             {
              before(grammarAccess.getEnumTypeDeclarationAccess().getNameAssignment_2()); 
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3764:1: ( rule__EnumTypeDeclaration__NameAssignment_2 )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3764:2: rule__EnumTypeDeclaration__NameAssignment_2
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3771:1: ( rule__EnumTypeDeclaration__NameAssignment_2 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3771:2: rule__EnumTypeDeclaration__NameAssignment_2
             {
-            pushFollow(FOLLOW_rule__EnumTypeDeclaration__NameAssignment_2_in_rule__EnumTypeDeclaration__Group__2__Impl7681);
+            pushFollow(FOLLOW_rule__EnumTypeDeclaration__NameAssignment_2_in_rule__EnumTypeDeclaration__Group__2__Impl7702);
             rule__EnumTypeDeclaration__NameAssignment_2();
 
             state._fsp--;
@@ -10454,21 +10482,21 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__EnumTypeDeclaration__Group__3"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3774:1: rule__EnumTypeDeclaration__Group__3 : rule__EnumTypeDeclaration__Group__3__Impl rule__EnumTypeDeclaration__Group__4 ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3781:1: rule__EnumTypeDeclaration__Group__3 : rule__EnumTypeDeclaration__Group__3__Impl rule__EnumTypeDeclaration__Group__4 ;
     public final void rule__EnumTypeDeclaration__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3778:1: ( rule__EnumTypeDeclaration__Group__3__Impl rule__EnumTypeDeclaration__Group__4 )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3779:2: rule__EnumTypeDeclaration__Group__3__Impl rule__EnumTypeDeclaration__Group__4
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3785:1: ( rule__EnumTypeDeclaration__Group__3__Impl rule__EnumTypeDeclaration__Group__4 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3786:2: rule__EnumTypeDeclaration__Group__3__Impl rule__EnumTypeDeclaration__Group__4
             {
-            pushFollow(FOLLOW_rule__EnumTypeDeclaration__Group__3__Impl_in_rule__EnumTypeDeclaration__Group__37711);
+            pushFollow(FOLLOW_rule__EnumTypeDeclaration__Group__3__Impl_in_rule__EnumTypeDeclaration__Group__37732);
             rule__EnumTypeDeclaration__Group__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__EnumTypeDeclaration__Group__4_in_rule__EnumTypeDeclaration__Group__37714);
+            pushFollow(FOLLOW_rule__EnumTypeDeclaration__Group__4_in_rule__EnumTypeDeclaration__Group__37735);
             rule__EnumTypeDeclaration__Group__4();
 
             state._fsp--;
@@ -10492,31 +10520,31 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__EnumTypeDeclaration__Group__3__Impl"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3786:1: rule__EnumTypeDeclaration__Group__3__Impl : ( ( rule__EnumTypeDeclaration__Group_3__0 )? ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3793:1: rule__EnumTypeDeclaration__Group__3__Impl : ( ( rule__EnumTypeDeclaration__Group_3__0 )? ) ;
     public final void rule__EnumTypeDeclaration__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3790:1: ( ( ( rule__EnumTypeDeclaration__Group_3__0 )? ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3791:1: ( ( rule__EnumTypeDeclaration__Group_3__0 )? )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3797:1: ( ( ( rule__EnumTypeDeclaration__Group_3__0 )? ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3798:1: ( ( rule__EnumTypeDeclaration__Group_3__0 )? )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3791:1: ( ( rule__EnumTypeDeclaration__Group_3__0 )? )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3792:1: ( rule__EnumTypeDeclaration__Group_3__0 )?
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3798:1: ( ( rule__EnumTypeDeclaration__Group_3__0 )? )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3799:1: ( rule__EnumTypeDeclaration__Group_3__0 )?
             {
              before(grammarAccess.getEnumTypeDeclarationAccess().getGroup_3()); 
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3793:1: ( rule__EnumTypeDeclaration__Group_3__0 )?
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3800:1: ( rule__EnumTypeDeclaration__Group_3__0 )?
             int alt32=2;
             int LA32_0 = input.LA(1);
 
-            if ( (LA32_0==30) ) {
+            if ( (LA32_0==31) ) {
                 alt32=1;
             }
             switch (alt32) {
                 case 1 :
-                    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3793:2: rule__EnumTypeDeclaration__Group_3__0
+                    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3800:2: rule__EnumTypeDeclaration__Group_3__0
                     {
-                    pushFollow(FOLLOW_rule__EnumTypeDeclaration__Group_3__0_in_rule__EnumTypeDeclaration__Group__3__Impl7741);
+                    pushFollow(FOLLOW_rule__EnumTypeDeclaration__Group_3__0_in_rule__EnumTypeDeclaration__Group__3__Impl7762);
                     rule__EnumTypeDeclaration__Group_3__0();
 
                     state._fsp--;
@@ -10550,16 +10578,16 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__EnumTypeDeclaration__Group__4"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3803:1: rule__EnumTypeDeclaration__Group__4 : rule__EnumTypeDeclaration__Group__4__Impl ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3810:1: rule__EnumTypeDeclaration__Group__4 : rule__EnumTypeDeclaration__Group__4__Impl ;
     public final void rule__EnumTypeDeclaration__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3807:1: ( rule__EnumTypeDeclaration__Group__4__Impl )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3808:2: rule__EnumTypeDeclaration__Group__4__Impl
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3814:1: ( rule__EnumTypeDeclaration__Group__4__Impl )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3815:2: rule__EnumTypeDeclaration__Group__4__Impl
             {
-            pushFollow(FOLLOW_rule__EnumTypeDeclaration__Group__4__Impl_in_rule__EnumTypeDeclaration__Group__47772);
+            pushFollow(FOLLOW_rule__EnumTypeDeclaration__Group__4__Impl_in_rule__EnumTypeDeclaration__Group__47793);
             rule__EnumTypeDeclaration__Group__4__Impl();
 
             state._fsp--;
@@ -10583,31 +10611,31 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__EnumTypeDeclaration__Group__4__Impl"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3814:1: rule__EnumTypeDeclaration__Group__4__Impl : ( ( rule__EnumTypeDeclaration__LiteralAssignment_4 )? ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3821:1: rule__EnumTypeDeclaration__Group__4__Impl : ( ( rule__EnumTypeDeclaration__LiteralAssignment_4 )? ) ;
     public final void rule__EnumTypeDeclaration__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3818:1: ( ( ( rule__EnumTypeDeclaration__LiteralAssignment_4 )? ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3819:1: ( ( rule__EnumTypeDeclaration__LiteralAssignment_4 )? )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3825:1: ( ( ( rule__EnumTypeDeclaration__LiteralAssignment_4 )? ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3826:1: ( ( rule__EnumTypeDeclaration__LiteralAssignment_4 )? )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3819:1: ( ( rule__EnumTypeDeclaration__LiteralAssignment_4 )? )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3820:1: ( rule__EnumTypeDeclaration__LiteralAssignment_4 )?
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3826:1: ( ( rule__EnumTypeDeclaration__LiteralAssignment_4 )? )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3827:1: ( rule__EnumTypeDeclaration__LiteralAssignment_4 )?
             {
              before(grammarAccess.getEnumTypeDeclarationAccess().getLiteralAssignment_4()); 
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3821:1: ( rule__EnumTypeDeclaration__LiteralAssignment_4 )?
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3828:1: ( rule__EnumTypeDeclaration__LiteralAssignment_4 )?
             int alt33=2;
             int LA33_0 = input.LA(1);
 
-            if ( (LA33_0==19) ) {
+            if ( (LA33_0==20) ) {
                 alt33=1;
             }
             switch (alt33) {
                 case 1 :
-                    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3821:2: rule__EnumTypeDeclaration__LiteralAssignment_4
+                    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3828:2: rule__EnumTypeDeclaration__LiteralAssignment_4
                     {
-                    pushFollow(FOLLOW_rule__EnumTypeDeclaration__LiteralAssignment_4_in_rule__EnumTypeDeclaration__Group__4__Impl7799);
+                    pushFollow(FOLLOW_rule__EnumTypeDeclaration__LiteralAssignment_4_in_rule__EnumTypeDeclaration__Group__4__Impl7820);
                     rule__EnumTypeDeclaration__LiteralAssignment_4();
 
                     state._fsp--;
@@ -10641,21 +10669,21 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__EnumTypeDeclaration__Group_3__0"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3841:1: rule__EnumTypeDeclaration__Group_3__0 : rule__EnumTypeDeclaration__Group_3__0__Impl rule__EnumTypeDeclaration__Group_3__1 ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3848:1: rule__EnumTypeDeclaration__Group_3__0 : rule__EnumTypeDeclaration__Group_3__0__Impl rule__EnumTypeDeclaration__Group_3__1 ;
     public final void rule__EnumTypeDeclaration__Group_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3845:1: ( rule__EnumTypeDeclaration__Group_3__0__Impl rule__EnumTypeDeclaration__Group_3__1 )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3846:2: rule__EnumTypeDeclaration__Group_3__0__Impl rule__EnumTypeDeclaration__Group_3__1
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3852:1: ( rule__EnumTypeDeclaration__Group_3__0__Impl rule__EnumTypeDeclaration__Group_3__1 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3853:2: rule__EnumTypeDeclaration__Group_3__0__Impl rule__EnumTypeDeclaration__Group_3__1
             {
-            pushFollow(FOLLOW_rule__EnumTypeDeclaration__Group_3__0__Impl_in_rule__EnumTypeDeclaration__Group_3__07840);
+            pushFollow(FOLLOW_rule__EnumTypeDeclaration__Group_3__0__Impl_in_rule__EnumTypeDeclaration__Group_3__07861);
             rule__EnumTypeDeclaration__Group_3__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__EnumTypeDeclaration__Group_3__1_in_rule__EnumTypeDeclaration__Group_3__07843);
+            pushFollow(FOLLOW_rule__EnumTypeDeclaration__Group_3__1_in_rule__EnumTypeDeclaration__Group_3__07864);
             rule__EnumTypeDeclaration__Group_3__1();
 
             state._fsp--;
@@ -10679,20 +10707,20 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__EnumTypeDeclaration__Group_3__0__Impl"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3853:1: rule__EnumTypeDeclaration__Group_3__0__Impl : ( 'extends' ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3860:1: rule__EnumTypeDeclaration__Group_3__0__Impl : ( 'extends' ) ;
     public final void rule__EnumTypeDeclaration__Group_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3857:1: ( ( 'extends' ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3858:1: ( 'extends' )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3864:1: ( ( 'extends' ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3865:1: ( 'extends' )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3858:1: ( 'extends' )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3859:1: 'extends'
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3865:1: ( 'extends' )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3866:1: 'extends'
             {
              before(grammarAccess.getEnumTypeDeclarationAccess().getExtendsKeyword_3_0()); 
-            match(input,30,FOLLOW_30_in_rule__EnumTypeDeclaration__Group_3__0__Impl7871); 
+            match(input,31,FOLLOW_31_in_rule__EnumTypeDeclaration__Group_3__0__Impl7892); 
              after(grammarAccess.getEnumTypeDeclarationAccess().getExtendsKeyword_3_0()); 
 
             }
@@ -10716,16 +10744,16 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__EnumTypeDeclaration__Group_3__1"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3872:1: rule__EnumTypeDeclaration__Group_3__1 : rule__EnumTypeDeclaration__Group_3__1__Impl ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3879:1: rule__EnumTypeDeclaration__Group_3__1 : rule__EnumTypeDeclaration__Group_3__1__Impl ;
     public final void rule__EnumTypeDeclaration__Group_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3876:1: ( rule__EnumTypeDeclaration__Group_3__1__Impl )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3877:2: rule__EnumTypeDeclaration__Group_3__1__Impl
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3883:1: ( rule__EnumTypeDeclaration__Group_3__1__Impl )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3884:2: rule__EnumTypeDeclaration__Group_3__1__Impl
             {
-            pushFollow(FOLLOW_rule__EnumTypeDeclaration__Group_3__1__Impl_in_rule__EnumTypeDeclaration__Group_3__17902);
+            pushFollow(FOLLOW_rule__EnumTypeDeclaration__Group_3__1__Impl_in_rule__EnumTypeDeclaration__Group_3__17923);
             rule__EnumTypeDeclaration__Group_3__1__Impl();
 
             state._fsp--;
@@ -10749,23 +10777,23 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__EnumTypeDeclaration__Group_3__1__Impl"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3883:1: rule__EnumTypeDeclaration__Group_3__1__Impl : ( ( rule__EnumTypeDeclaration__SuperTypeAssignment_3_1 ) ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3890:1: rule__EnumTypeDeclaration__Group_3__1__Impl : ( ( rule__EnumTypeDeclaration__SuperTypeAssignment_3_1 ) ) ;
     public final void rule__EnumTypeDeclaration__Group_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3887:1: ( ( ( rule__EnumTypeDeclaration__SuperTypeAssignment_3_1 ) ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3888:1: ( ( rule__EnumTypeDeclaration__SuperTypeAssignment_3_1 ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3894:1: ( ( ( rule__EnumTypeDeclaration__SuperTypeAssignment_3_1 ) ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3895:1: ( ( rule__EnumTypeDeclaration__SuperTypeAssignment_3_1 ) )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3888:1: ( ( rule__EnumTypeDeclaration__SuperTypeAssignment_3_1 ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3889:1: ( rule__EnumTypeDeclaration__SuperTypeAssignment_3_1 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3895:1: ( ( rule__EnumTypeDeclaration__SuperTypeAssignment_3_1 ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3896:1: ( rule__EnumTypeDeclaration__SuperTypeAssignment_3_1 )
             {
              before(grammarAccess.getEnumTypeDeclarationAccess().getSuperTypeAssignment_3_1()); 
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3890:1: ( rule__EnumTypeDeclaration__SuperTypeAssignment_3_1 )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3890:2: rule__EnumTypeDeclaration__SuperTypeAssignment_3_1
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3897:1: ( rule__EnumTypeDeclaration__SuperTypeAssignment_3_1 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3897:2: rule__EnumTypeDeclaration__SuperTypeAssignment_3_1
             {
-            pushFollow(FOLLOW_rule__EnumTypeDeclaration__SuperTypeAssignment_3_1_in_rule__EnumTypeDeclaration__Group_3__1__Impl7929);
+            pushFollow(FOLLOW_rule__EnumTypeDeclaration__SuperTypeAssignment_3_1_in_rule__EnumTypeDeclaration__Group_3__1__Impl7950);
             rule__EnumTypeDeclaration__SuperTypeAssignment_3_1();
 
             state._fsp--;
@@ -10796,21 +10824,21 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__EnumTypeLiteral__Group__0"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3904:1: rule__EnumTypeLiteral__Group__0 : rule__EnumTypeLiteral__Group__0__Impl rule__EnumTypeLiteral__Group__1 ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3911:1: rule__EnumTypeLiteral__Group__0 : rule__EnumTypeLiteral__Group__0__Impl rule__EnumTypeLiteral__Group__1 ;
     public final void rule__EnumTypeLiteral__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3908:1: ( rule__EnumTypeLiteral__Group__0__Impl rule__EnumTypeLiteral__Group__1 )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3909:2: rule__EnumTypeLiteral__Group__0__Impl rule__EnumTypeLiteral__Group__1
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3915:1: ( rule__EnumTypeLiteral__Group__0__Impl rule__EnumTypeLiteral__Group__1 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3916:2: rule__EnumTypeLiteral__Group__0__Impl rule__EnumTypeLiteral__Group__1
             {
-            pushFollow(FOLLOW_rule__EnumTypeLiteral__Group__0__Impl_in_rule__EnumTypeLiteral__Group__07963);
+            pushFollow(FOLLOW_rule__EnumTypeLiteral__Group__0__Impl_in_rule__EnumTypeLiteral__Group__07984);
             rule__EnumTypeLiteral__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__EnumTypeLiteral__Group__1_in_rule__EnumTypeLiteral__Group__07966);
+            pushFollow(FOLLOW_rule__EnumTypeLiteral__Group__1_in_rule__EnumTypeLiteral__Group__07987);
             rule__EnumTypeLiteral__Group__1();
 
             state._fsp--;
@@ -10834,20 +10862,20 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__EnumTypeLiteral__Group__0__Impl"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3916:1: rule__EnumTypeLiteral__Group__0__Impl : ( '{' ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3923:1: rule__EnumTypeLiteral__Group__0__Impl : ( '{' ) ;
     public final void rule__EnumTypeLiteral__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3920:1: ( ( '{' ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3921:1: ( '{' )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3927:1: ( ( '{' ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3928:1: ( '{' )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3921:1: ( '{' )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3922:1: '{'
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3928:1: ( '{' )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3929:1: '{'
             {
              before(grammarAccess.getEnumTypeLiteralAccess().getLeftCurlyBracketKeyword_0()); 
-            match(input,19,FOLLOW_19_in_rule__EnumTypeLiteral__Group__0__Impl7994); 
+            match(input,20,FOLLOW_20_in_rule__EnumTypeLiteral__Group__0__Impl8015); 
              after(grammarAccess.getEnumTypeLiteralAccess().getLeftCurlyBracketKeyword_0()); 
 
             }
@@ -10871,21 +10899,21 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__EnumTypeLiteral__Group__1"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3935:1: rule__EnumTypeLiteral__Group__1 : rule__EnumTypeLiteral__Group__1__Impl rule__EnumTypeLiteral__Group__2 ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3942:1: rule__EnumTypeLiteral__Group__1 : rule__EnumTypeLiteral__Group__1__Impl rule__EnumTypeLiteral__Group__2 ;
     public final void rule__EnumTypeLiteral__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3939:1: ( rule__EnumTypeLiteral__Group__1__Impl rule__EnumTypeLiteral__Group__2 )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3940:2: rule__EnumTypeLiteral__Group__1__Impl rule__EnumTypeLiteral__Group__2
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3946:1: ( rule__EnumTypeLiteral__Group__1__Impl rule__EnumTypeLiteral__Group__2 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3947:2: rule__EnumTypeLiteral__Group__1__Impl rule__EnumTypeLiteral__Group__2
             {
-            pushFollow(FOLLOW_rule__EnumTypeLiteral__Group__1__Impl_in_rule__EnumTypeLiteral__Group__18025);
+            pushFollow(FOLLOW_rule__EnumTypeLiteral__Group__1__Impl_in_rule__EnumTypeLiteral__Group__18046);
             rule__EnumTypeLiteral__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__EnumTypeLiteral__Group__2_in_rule__EnumTypeLiteral__Group__18028);
+            pushFollow(FOLLOW_rule__EnumTypeLiteral__Group__2_in_rule__EnumTypeLiteral__Group__18049);
             rule__EnumTypeLiteral__Group__2();
 
             state._fsp--;
@@ -10909,23 +10937,23 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__EnumTypeLiteral__Group__1__Impl"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3947:1: rule__EnumTypeLiteral__Group__1__Impl : ( ( rule__EnumTypeLiteral__MembersAssignment_1 ) ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3954:1: rule__EnumTypeLiteral__Group__1__Impl : ( ( rule__EnumTypeLiteral__MembersAssignment_1 ) ) ;
     public final void rule__EnumTypeLiteral__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3951:1: ( ( ( rule__EnumTypeLiteral__MembersAssignment_1 ) ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3952:1: ( ( rule__EnumTypeLiteral__MembersAssignment_1 ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3958:1: ( ( ( rule__EnumTypeLiteral__MembersAssignment_1 ) ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3959:1: ( ( rule__EnumTypeLiteral__MembersAssignment_1 ) )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3952:1: ( ( rule__EnumTypeLiteral__MembersAssignment_1 ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3953:1: ( rule__EnumTypeLiteral__MembersAssignment_1 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3959:1: ( ( rule__EnumTypeLiteral__MembersAssignment_1 ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3960:1: ( rule__EnumTypeLiteral__MembersAssignment_1 )
             {
              before(grammarAccess.getEnumTypeLiteralAccess().getMembersAssignment_1()); 
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3954:1: ( rule__EnumTypeLiteral__MembersAssignment_1 )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3954:2: rule__EnumTypeLiteral__MembersAssignment_1
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3961:1: ( rule__EnumTypeLiteral__MembersAssignment_1 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3961:2: rule__EnumTypeLiteral__MembersAssignment_1
             {
-            pushFollow(FOLLOW_rule__EnumTypeLiteral__MembersAssignment_1_in_rule__EnumTypeLiteral__Group__1__Impl8055);
+            pushFollow(FOLLOW_rule__EnumTypeLiteral__MembersAssignment_1_in_rule__EnumTypeLiteral__Group__1__Impl8076);
             rule__EnumTypeLiteral__MembersAssignment_1();
 
             state._fsp--;
@@ -10956,21 +10984,21 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__EnumTypeLiteral__Group__2"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3964:1: rule__EnumTypeLiteral__Group__2 : rule__EnumTypeLiteral__Group__2__Impl rule__EnumTypeLiteral__Group__3 ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3971:1: rule__EnumTypeLiteral__Group__2 : rule__EnumTypeLiteral__Group__2__Impl rule__EnumTypeLiteral__Group__3 ;
     public final void rule__EnumTypeLiteral__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3968:1: ( rule__EnumTypeLiteral__Group__2__Impl rule__EnumTypeLiteral__Group__3 )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3969:2: rule__EnumTypeLiteral__Group__2__Impl rule__EnumTypeLiteral__Group__3
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3975:1: ( rule__EnumTypeLiteral__Group__2__Impl rule__EnumTypeLiteral__Group__3 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3976:2: rule__EnumTypeLiteral__Group__2__Impl rule__EnumTypeLiteral__Group__3
             {
-            pushFollow(FOLLOW_rule__EnumTypeLiteral__Group__2__Impl_in_rule__EnumTypeLiteral__Group__28085);
+            pushFollow(FOLLOW_rule__EnumTypeLiteral__Group__2__Impl_in_rule__EnumTypeLiteral__Group__28106);
             rule__EnumTypeLiteral__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__EnumTypeLiteral__Group__3_in_rule__EnumTypeLiteral__Group__28088);
+            pushFollow(FOLLOW_rule__EnumTypeLiteral__Group__3_in_rule__EnumTypeLiteral__Group__28109);
             rule__EnumTypeLiteral__Group__3();
 
             state._fsp--;
@@ -10994,35 +11022,35 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__EnumTypeLiteral__Group__2__Impl"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3976:1: rule__EnumTypeLiteral__Group__2__Impl : ( ( rule__EnumTypeLiteral__Group_2__0 )* ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3983:1: rule__EnumTypeLiteral__Group__2__Impl : ( ( rule__EnumTypeLiteral__Group_2__0 )* ) ;
     public final void rule__EnumTypeLiteral__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3980:1: ( ( ( rule__EnumTypeLiteral__Group_2__0 )* ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3981:1: ( ( rule__EnumTypeLiteral__Group_2__0 )* )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3987:1: ( ( ( rule__EnumTypeLiteral__Group_2__0 )* ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3988:1: ( ( rule__EnumTypeLiteral__Group_2__0 )* )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3981:1: ( ( rule__EnumTypeLiteral__Group_2__0 )* )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3982:1: ( rule__EnumTypeLiteral__Group_2__0 )*
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3988:1: ( ( rule__EnumTypeLiteral__Group_2__0 )* )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3989:1: ( rule__EnumTypeLiteral__Group_2__0 )*
             {
              before(grammarAccess.getEnumTypeLiteralAccess().getGroup_2()); 
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3983:1: ( rule__EnumTypeLiteral__Group_2__0 )*
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3990:1: ( rule__EnumTypeLiteral__Group_2__0 )*
             loop34:
             do {
                 int alt34=2;
                 int LA34_0 = input.LA(1);
 
-                if ( (LA34_0==22) ) {
+                if ( (LA34_0==23) ) {
                     alt34=1;
                 }
 
 
                 switch (alt34) {
             	case 1 :
-            	    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3983:2: rule__EnumTypeLiteral__Group_2__0
+            	    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3990:2: rule__EnumTypeLiteral__Group_2__0
             	    {
-            	    pushFollow(FOLLOW_rule__EnumTypeLiteral__Group_2__0_in_rule__EnumTypeLiteral__Group__2__Impl8115);
+            	    pushFollow(FOLLOW_rule__EnumTypeLiteral__Group_2__0_in_rule__EnumTypeLiteral__Group__2__Impl8136);
             	    rule__EnumTypeLiteral__Group_2__0();
 
             	    state._fsp--;
@@ -11059,16 +11087,16 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__EnumTypeLiteral__Group__3"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3993:1: rule__EnumTypeLiteral__Group__3 : rule__EnumTypeLiteral__Group__3__Impl ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4000:1: rule__EnumTypeLiteral__Group__3 : rule__EnumTypeLiteral__Group__3__Impl ;
     public final void rule__EnumTypeLiteral__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3997:1: ( rule__EnumTypeLiteral__Group__3__Impl )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:3998:2: rule__EnumTypeLiteral__Group__3__Impl
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4004:1: ( rule__EnumTypeLiteral__Group__3__Impl )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4005:2: rule__EnumTypeLiteral__Group__3__Impl
             {
-            pushFollow(FOLLOW_rule__EnumTypeLiteral__Group__3__Impl_in_rule__EnumTypeLiteral__Group__38146);
+            pushFollow(FOLLOW_rule__EnumTypeLiteral__Group__3__Impl_in_rule__EnumTypeLiteral__Group__38167);
             rule__EnumTypeLiteral__Group__3__Impl();
 
             state._fsp--;
@@ -11092,20 +11120,20 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__EnumTypeLiteral__Group__3__Impl"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4004:1: rule__EnumTypeLiteral__Group__3__Impl : ( '}' ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4011:1: rule__EnumTypeLiteral__Group__3__Impl : ( '}' ) ;
     public final void rule__EnumTypeLiteral__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4008:1: ( ( '}' ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4009:1: ( '}' )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4015:1: ( ( '}' ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4016:1: ( '}' )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4009:1: ( '}' )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4010:1: '}'
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4016:1: ( '}' )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4017:1: '}'
             {
              before(grammarAccess.getEnumTypeLiteralAccess().getRightCurlyBracketKeyword_3()); 
-            match(input,20,FOLLOW_20_in_rule__EnumTypeLiteral__Group__3__Impl8174); 
+            match(input,21,FOLLOW_21_in_rule__EnumTypeLiteral__Group__3__Impl8195); 
              after(grammarAccess.getEnumTypeLiteralAccess().getRightCurlyBracketKeyword_3()); 
 
             }
@@ -11129,21 +11157,21 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__EnumTypeLiteral__Group_2__0"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4031:1: rule__EnumTypeLiteral__Group_2__0 : rule__EnumTypeLiteral__Group_2__0__Impl rule__EnumTypeLiteral__Group_2__1 ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4038:1: rule__EnumTypeLiteral__Group_2__0 : rule__EnumTypeLiteral__Group_2__0__Impl rule__EnumTypeLiteral__Group_2__1 ;
     public final void rule__EnumTypeLiteral__Group_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4035:1: ( rule__EnumTypeLiteral__Group_2__0__Impl rule__EnumTypeLiteral__Group_2__1 )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4036:2: rule__EnumTypeLiteral__Group_2__0__Impl rule__EnumTypeLiteral__Group_2__1
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4042:1: ( rule__EnumTypeLiteral__Group_2__0__Impl rule__EnumTypeLiteral__Group_2__1 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4043:2: rule__EnumTypeLiteral__Group_2__0__Impl rule__EnumTypeLiteral__Group_2__1
             {
-            pushFollow(FOLLOW_rule__EnumTypeLiteral__Group_2__0__Impl_in_rule__EnumTypeLiteral__Group_2__08213);
+            pushFollow(FOLLOW_rule__EnumTypeLiteral__Group_2__0__Impl_in_rule__EnumTypeLiteral__Group_2__08234);
             rule__EnumTypeLiteral__Group_2__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__EnumTypeLiteral__Group_2__1_in_rule__EnumTypeLiteral__Group_2__08216);
+            pushFollow(FOLLOW_rule__EnumTypeLiteral__Group_2__1_in_rule__EnumTypeLiteral__Group_2__08237);
             rule__EnumTypeLiteral__Group_2__1();
 
             state._fsp--;
@@ -11167,20 +11195,20 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__EnumTypeLiteral__Group_2__0__Impl"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4043:1: rule__EnumTypeLiteral__Group_2__0__Impl : ( ',' ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4050:1: rule__EnumTypeLiteral__Group_2__0__Impl : ( ',' ) ;
     public final void rule__EnumTypeLiteral__Group_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4047:1: ( ( ',' ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4048:1: ( ',' )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4054:1: ( ( ',' ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4055:1: ( ',' )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4048:1: ( ',' )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4049:1: ','
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4055:1: ( ',' )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4056:1: ','
             {
              before(grammarAccess.getEnumTypeLiteralAccess().getCommaKeyword_2_0()); 
-            match(input,22,FOLLOW_22_in_rule__EnumTypeLiteral__Group_2__0__Impl8244); 
+            match(input,23,FOLLOW_23_in_rule__EnumTypeLiteral__Group_2__0__Impl8265); 
              after(grammarAccess.getEnumTypeLiteralAccess().getCommaKeyword_2_0()); 
 
             }
@@ -11204,16 +11232,16 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__EnumTypeLiteral__Group_2__1"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4062:1: rule__EnumTypeLiteral__Group_2__1 : rule__EnumTypeLiteral__Group_2__1__Impl ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4069:1: rule__EnumTypeLiteral__Group_2__1 : rule__EnumTypeLiteral__Group_2__1__Impl ;
     public final void rule__EnumTypeLiteral__Group_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4066:1: ( rule__EnumTypeLiteral__Group_2__1__Impl )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4067:2: rule__EnumTypeLiteral__Group_2__1__Impl
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4073:1: ( rule__EnumTypeLiteral__Group_2__1__Impl )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4074:2: rule__EnumTypeLiteral__Group_2__1__Impl
             {
-            pushFollow(FOLLOW_rule__EnumTypeLiteral__Group_2__1__Impl_in_rule__EnumTypeLiteral__Group_2__18275);
+            pushFollow(FOLLOW_rule__EnumTypeLiteral__Group_2__1__Impl_in_rule__EnumTypeLiteral__Group_2__18296);
             rule__EnumTypeLiteral__Group_2__1__Impl();
 
             state._fsp--;
@@ -11237,23 +11265,23 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__EnumTypeLiteral__Group_2__1__Impl"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4073:1: rule__EnumTypeLiteral__Group_2__1__Impl : ( ( rule__EnumTypeLiteral__MembersAssignment_2_1 ) ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4080:1: rule__EnumTypeLiteral__Group_2__1__Impl : ( ( rule__EnumTypeLiteral__MembersAssignment_2_1 ) ) ;
     public final void rule__EnumTypeLiteral__Group_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4077:1: ( ( ( rule__EnumTypeLiteral__MembersAssignment_2_1 ) ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4078:1: ( ( rule__EnumTypeLiteral__MembersAssignment_2_1 ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4084:1: ( ( ( rule__EnumTypeLiteral__MembersAssignment_2_1 ) ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4085:1: ( ( rule__EnumTypeLiteral__MembersAssignment_2_1 ) )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4078:1: ( ( rule__EnumTypeLiteral__MembersAssignment_2_1 ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4079:1: ( rule__EnumTypeLiteral__MembersAssignment_2_1 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4085:1: ( ( rule__EnumTypeLiteral__MembersAssignment_2_1 ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4086:1: ( rule__EnumTypeLiteral__MembersAssignment_2_1 )
             {
              before(grammarAccess.getEnumTypeLiteralAccess().getMembersAssignment_2_1()); 
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4080:1: ( rule__EnumTypeLiteral__MembersAssignment_2_1 )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4080:2: rule__EnumTypeLiteral__MembersAssignment_2_1
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4087:1: ( rule__EnumTypeLiteral__MembersAssignment_2_1 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4087:2: rule__EnumTypeLiteral__MembersAssignment_2_1
             {
-            pushFollow(FOLLOW_rule__EnumTypeLiteral__MembersAssignment_2_1_in_rule__EnumTypeLiteral__Group_2__1__Impl8302);
+            pushFollow(FOLLOW_rule__EnumTypeLiteral__MembersAssignment_2_1_in_rule__EnumTypeLiteral__Group_2__1__Impl8323);
             rule__EnumTypeLiteral__MembersAssignment_2_1();
 
             state._fsp--;
@@ -11284,21 +11312,21 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__EnumMember__Group__0"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4094:1: rule__EnumMember__Group__0 : rule__EnumMember__Group__0__Impl rule__EnumMember__Group__1 ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4101:1: rule__EnumMember__Group__0 : rule__EnumMember__Group__0__Impl rule__EnumMember__Group__1 ;
     public final void rule__EnumMember__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4098:1: ( rule__EnumMember__Group__0__Impl rule__EnumMember__Group__1 )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4099:2: rule__EnumMember__Group__0__Impl rule__EnumMember__Group__1
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4105:1: ( rule__EnumMember__Group__0__Impl rule__EnumMember__Group__1 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4106:2: rule__EnumMember__Group__0__Impl rule__EnumMember__Group__1
             {
-            pushFollow(FOLLOW_rule__EnumMember__Group__0__Impl_in_rule__EnumMember__Group__08336);
+            pushFollow(FOLLOW_rule__EnumMember__Group__0__Impl_in_rule__EnumMember__Group__08357);
             rule__EnumMember__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__EnumMember__Group__1_in_rule__EnumMember__Group__08339);
+            pushFollow(FOLLOW_rule__EnumMember__Group__1_in_rule__EnumMember__Group__08360);
             rule__EnumMember__Group__1();
 
             state._fsp--;
@@ -11322,23 +11350,23 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__EnumMember__Group__0__Impl"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4106:1: rule__EnumMember__Group__0__Impl : ( ( rule__EnumMember__NameAssignment_0 ) ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4113:1: rule__EnumMember__Group__0__Impl : ( ( rule__EnumMember__NameAssignment_0 ) ) ;
     public final void rule__EnumMember__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4110:1: ( ( ( rule__EnumMember__NameAssignment_0 ) ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4111:1: ( ( rule__EnumMember__NameAssignment_0 ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4117:1: ( ( ( rule__EnumMember__NameAssignment_0 ) ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4118:1: ( ( rule__EnumMember__NameAssignment_0 ) )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4111:1: ( ( rule__EnumMember__NameAssignment_0 ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4112:1: ( rule__EnumMember__NameAssignment_0 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4118:1: ( ( rule__EnumMember__NameAssignment_0 ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4119:1: ( rule__EnumMember__NameAssignment_0 )
             {
              before(grammarAccess.getEnumMemberAccess().getNameAssignment_0()); 
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4113:1: ( rule__EnumMember__NameAssignment_0 )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4113:2: rule__EnumMember__NameAssignment_0
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4120:1: ( rule__EnumMember__NameAssignment_0 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4120:2: rule__EnumMember__NameAssignment_0
             {
-            pushFollow(FOLLOW_rule__EnumMember__NameAssignment_0_in_rule__EnumMember__Group__0__Impl8366);
+            pushFollow(FOLLOW_rule__EnumMember__NameAssignment_0_in_rule__EnumMember__Group__0__Impl8387);
             rule__EnumMember__NameAssignment_0();
 
             state._fsp--;
@@ -11369,16 +11397,16 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__EnumMember__Group__1"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4123:1: rule__EnumMember__Group__1 : rule__EnumMember__Group__1__Impl ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4130:1: rule__EnumMember__Group__1 : rule__EnumMember__Group__1__Impl ;
     public final void rule__EnumMember__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4127:1: ( rule__EnumMember__Group__1__Impl )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4128:2: rule__EnumMember__Group__1__Impl
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4134:1: ( rule__EnumMember__Group__1__Impl )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4135:2: rule__EnumMember__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__EnumMember__Group__1__Impl_in_rule__EnumMember__Group__18396);
+            pushFollow(FOLLOW_rule__EnumMember__Group__1__Impl_in_rule__EnumMember__Group__18417);
             rule__EnumMember__Group__1__Impl();
 
             state._fsp--;
@@ -11402,31 +11430,31 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__EnumMember__Group__1__Impl"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4134:1: rule__EnumMember__Group__1__Impl : ( ( rule__EnumMember__Group_1__0 )? ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4141:1: rule__EnumMember__Group__1__Impl : ( ( rule__EnumMember__Group_1__0 )? ) ;
     public final void rule__EnumMember__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4138:1: ( ( ( rule__EnumMember__Group_1__0 )? ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4139:1: ( ( rule__EnumMember__Group_1__0 )? )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4145:1: ( ( ( rule__EnumMember__Group_1__0 )? ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4146:1: ( ( rule__EnumMember__Group_1__0 )? )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4139:1: ( ( rule__EnumMember__Group_1__0 )? )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4140:1: ( rule__EnumMember__Group_1__0 )?
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4146:1: ( ( rule__EnumMember__Group_1__0 )? )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4147:1: ( rule__EnumMember__Group_1__0 )?
             {
              before(grammarAccess.getEnumMemberAccess().getGroup_1()); 
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4141:1: ( rule__EnumMember__Group_1__0 )?
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4148:1: ( rule__EnumMember__Group_1__0 )?
             int alt35=2;
             int LA35_0 = input.LA(1);
 
-            if ( (LA35_0==27) ) {
+            if ( (LA35_0==28) ) {
                 alt35=1;
             }
             switch (alt35) {
                 case 1 :
-                    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4141:2: rule__EnumMember__Group_1__0
+                    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4148:2: rule__EnumMember__Group_1__0
                     {
-                    pushFollow(FOLLOW_rule__EnumMember__Group_1__0_in_rule__EnumMember__Group__1__Impl8423);
+                    pushFollow(FOLLOW_rule__EnumMember__Group_1__0_in_rule__EnumMember__Group__1__Impl8444);
                     rule__EnumMember__Group_1__0();
 
                     state._fsp--;
@@ -11460,21 +11488,21 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__EnumMember__Group_1__0"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4155:1: rule__EnumMember__Group_1__0 : rule__EnumMember__Group_1__0__Impl rule__EnumMember__Group_1__1 ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4162:1: rule__EnumMember__Group_1__0 : rule__EnumMember__Group_1__0__Impl rule__EnumMember__Group_1__1 ;
     public final void rule__EnumMember__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4159:1: ( rule__EnumMember__Group_1__0__Impl rule__EnumMember__Group_1__1 )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4160:2: rule__EnumMember__Group_1__0__Impl rule__EnumMember__Group_1__1
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4166:1: ( rule__EnumMember__Group_1__0__Impl rule__EnumMember__Group_1__1 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4167:2: rule__EnumMember__Group_1__0__Impl rule__EnumMember__Group_1__1
             {
-            pushFollow(FOLLOW_rule__EnumMember__Group_1__0__Impl_in_rule__EnumMember__Group_1__08458);
+            pushFollow(FOLLOW_rule__EnumMember__Group_1__0__Impl_in_rule__EnumMember__Group_1__08479);
             rule__EnumMember__Group_1__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__EnumMember__Group_1__1_in_rule__EnumMember__Group_1__08461);
+            pushFollow(FOLLOW_rule__EnumMember__Group_1__1_in_rule__EnumMember__Group_1__08482);
             rule__EnumMember__Group_1__1();
 
             state._fsp--;
@@ -11498,23 +11526,23 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__EnumMember__Group_1__0__Impl"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4167:1: rule__EnumMember__Group_1__0__Impl : ( ( rule__EnumMember__AssignmentAssignment_1_0 ) ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4174:1: rule__EnumMember__Group_1__0__Impl : ( ( rule__EnumMember__AssignmentAssignment_1_0 ) ) ;
     public final void rule__EnumMember__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4171:1: ( ( ( rule__EnumMember__AssignmentAssignment_1_0 ) ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4172:1: ( ( rule__EnumMember__AssignmentAssignment_1_0 ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4178:1: ( ( ( rule__EnumMember__AssignmentAssignment_1_0 ) ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4179:1: ( ( rule__EnumMember__AssignmentAssignment_1_0 ) )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4172:1: ( ( rule__EnumMember__AssignmentAssignment_1_0 ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4173:1: ( rule__EnumMember__AssignmentAssignment_1_0 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4179:1: ( ( rule__EnumMember__AssignmentAssignment_1_0 ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4180:1: ( rule__EnumMember__AssignmentAssignment_1_0 )
             {
              before(grammarAccess.getEnumMemberAccess().getAssignmentAssignment_1_0()); 
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4174:1: ( rule__EnumMember__AssignmentAssignment_1_0 )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4174:2: rule__EnumMember__AssignmentAssignment_1_0
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4181:1: ( rule__EnumMember__AssignmentAssignment_1_0 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4181:2: rule__EnumMember__AssignmentAssignment_1_0
             {
-            pushFollow(FOLLOW_rule__EnumMember__AssignmentAssignment_1_0_in_rule__EnumMember__Group_1__0__Impl8488);
+            pushFollow(FOLLOW_rule__EnumMember__AssignmentAssignment_1_0_in_rule__EnumMember__Group_1__0__Impl8509);
             rule__EnumMember__AssignmentAssignment_1_0();
 
             state._fsp--;
@@ -11545,16 +11573,16 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__EnumMember__Group_1__1"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4184:1: rule__EnumMember__Group_1__1 : rule__EnumMember__Group_1__1__Impl ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4191:1: rule__EnumMember__Group_1__1 : rule__EnumMember__Group_1__1__Impl ;
     public final void rule__EnumMember__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4188:1: ( rule__EnumMember__Group_1__1__Impl )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4189:2: rule__EnumMember__Group_1__1__Impl
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4195:1: ( rule__EnumMember__Group_1__1__Impl )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4196:2: rule__EnumMember__Group_1__1__Impl
             {
-            pushFollow(FOLLOW_rule__EnumMember__Group_1__1__Impl_in_rule__EnumMember__Group_1__18518);
+            pushFollow(FOLLOW_rule__EnumMember__Group_1__1__Impl_in_rule__EnumMember__Group_1__18539);
             rule__EnumMember__Group_1__1__Impl();
 
             state._fsp--;
@@ -11578,23 +11606,23 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__EnumMember__Group_1__1__Impl"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4195:1: rule__EnumMember__Group_1__1__Impl : ( ( rule__EnumMember__ValueAssignment_1_1 ) ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4202:1: rule__EnumMember__Group_1__1__Impl : ( ( rule__EnumMember__ValueAssignment_1_1 ) ) ;
     public final void rule__EnumMember__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4199:1: ( ( ( rule__EnumMember__ValueAssignment_1_1 ) ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4200:1: ( ( rule__EnumMember__ValueAssignment_1_1 ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4206:1: ( ( ( rule__EnumMember__ValueAssignment_1_1 ) ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4207:1: ( ( rule__EnumMember__ValueAssignment_1_1 ) )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4200:1: ( ( rule__EnumMember__ValueAssignment_1_1 ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4201:1: ( rule__EnumMember__ValueAssignment_1_1 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4207:1: ( ( rule__EnumMember__ValueAssignment_1_1 ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4208:1: ( rule__EnumMember__ValueAssignment_1_1 )
             {
              before(grammarAccess.getEnumMemberAccess().getValueAssignment_1_1()); 
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4202:1: ( rule__EnumMember__ValueAssignment_1_1 )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4202:2: rule__EnumMember__ValueAssignment_1_1
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4209:1: ( rule__EnumMember__ValueAssignment_1_1 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4209:2: rule__EnumMember__ValueAssignment_1_1
             {
-            pushFollow(FOLLOW_rule__EnumMember__ValueAssignment_1_1_in_rule__EnumMember__Group_1__1__Impl8545);
+            pushFollow(FOLLOW_rule__EnumMember__ValueAssignment_1_1_in_rule__EnumMember__Group_1__1__Impl8566);
             rule__EnumMember__ValueAssignment_1_1();
 
             state._fsp--;
@@ -11625,21 +11653,21 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ComplexTypeLiteral__Group__0"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4216:1: rule__ComplexTypeLiteral__Group__0 : rule__ComplexTypeLiteral__Group__0__Impl rule__ComplexTypeLiteral__Group__1 ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4223:1: rule__ComplexTypeLiteral__Group__0 : rule__ComplexTypeLiteral__Group__0__Impl rule__ComplexTypeLiteral__Group__1 ;
     public final void rule__ComplexTypeLiteral__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4220:1: ( rule__ComplexTypeLiteral__Group__0__Impl rule__ComplexTypeLiteral__Group__1 )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4221:2: rule__ComplexTypeLiteral__Group__0__Impl rule__ComplexTypeLiteral__Group__1
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4227:1: ( rule__ComplexTypeLiteral__Group__0__Impl rule__ComplexTypeLiteral__Group__1 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4228:2: rule__ComplexTypeLiteral__Group__0__Impl rule__ComplexTypeLiteral__Group__1
             {
-            pushFollow(FOLLOW_rule__ComplexTypeLiteral__Group__0__Impl_in_rule__ComplexTypeLiteral__Group__08579);
+            pushFollow(FOLLOW_rule__ComplexTypeLiteral__Group__0__Impl_in_rule__ComplexTypeLiteral__Group__08600);
             rule__ComplexTypeLiteral__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__ComplexTypeLiteral__Group__1_in_rule__ComplexTypeLiteral__Group__08582);
+            pushFollow(FOLLOW_rule__ComplexTypeLiteral__Group__1_in_rule__ComplexTypeLiteral__Group__08603);
             rule__ComplexTypeLiteral__Group__1();
 
             state._fsp--;
@@ -11663,20 +11691,20 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ComplexTypeLiteral__Group__0__Impl"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4228:1: rule__ComplexTypeLiteral__Group__0__Impl : ( '{' ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4235:1: rule__ComplexTypeLiteral__Group__0__Impl : ( '{' ) ;
     public final void rule__ComplexTypeLiteral__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4232:1: ( ( '{' ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4233:1: ( '{' )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4239:1: ( ( '{' ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4240:1: ( '{' )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4233:1: ( '{' )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4234:1: '{'
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4240:1: ( '{' )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4241:1: '{'
             {
              before(grammarAccess.getComplexTypeLiteralAccess().getLeftCurlyBracketKeyword_0()); 
-            match(input,19,FOLLOW_19_in_rule__ComplexTypeLiteral__Group__0__Impl8610); 
+            match(input,20,FOLLOW_20_in_rule__ComplexTypeLiteral__Group__0__Impl8631); 
              after(grammarAccess.getComplexTypeLiteralAccess().getLeftCurlyBracketKeyword_0()); 
 
             }
@@ -11700,21 +11728,21 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ComplexTypeLiteral__Group__1"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4247:1: rule__ComplexTypeLiteral__Group__1 : rule__ComplexTypeLiteral__Group__1__Impl rule__ComplexTypeLiteral__Group__2 ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4254:1: rule__ComplexTypeLiteral__Group__1 : rule__ComplexTypeLiteral__Group__1__Impl rule__ComplexTypeLiteral__Group__2 ;
     public final void rule__ComplexTypeLiteral__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4251:1: ( rule__ComplexTypeLiteral__Group__1__Impl rule__ComplexTypeLiteral__Group__2 )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4252:2: rule__ComplexTypeLiteral__Group__1__Impl rule__ComplexTypeLiteral__Group__2
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4258:1: ( rule__ComplexTypeLiteral__Group__1__Impl rule__ComplexTypeLiteral__Group__2 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4259:2: rule__ComplexTypeLiteral__Group__1__Impl rule__ComplexTypeLiteral__Group__2
             {
-            pushFollow(FOLLOW_rule__ComplexTypeLiteral__Group__1__Impl_in_rule__ComplexTypeLiteral__Group__18641);
+            pushFollow(FOLLOW_rule__ComplexTypeLiteral__Group__1__Impl_in_rule__ComplexTypeLiteral__Group__18662);
             rule__ComplexTypeLiteral__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__ComplexTypeLiteral__Group__2_in_rule__ComplexTypeLiteral__Group__18644);
+            pushFollow(FOLLOW_rule__ComplexTypeLiteral__Group__2_in_rule__ComplexTypeLiteral__Group__18665);
             rule__ComplexTypeLiteral__Group__2();
 
             state._fsp--;
@@ -11738,23 +11766,23 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ComplexTypeLiteral__Group__1__Impl"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4259:1: rule__ComplexTypeLiteral__Group__1__Impl : ( ( rule__ComplexTypeLiteral__MembersAssignment_1 ) ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4266:1: rule__ComplexTypeLiteral__Group__1__Impl : ( ( rule__ComplexTypeLiteral__MembersAssignment_1 ) ) ;
     public final void rule__ComplexTypeLiteral__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4263:1: ( ( ( rule__ComplexTypeLiteral__MembersAssignment_1 ) ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4264:1: ( ( rule__ComplexTypeLiteral__MembersAssignment_1 ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4270:1: ( ( ( rule__ComplexTypeLiteral__MembersAssignment_1 ) ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4271:1: ( ( rule__ComplexTypeLiteral__MembersAssignment_1 ) )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4264:1: ( ( rule__ComplexTypeLiteral__MembersAssignment_1 ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4265:1: ( rule__ComplexTypeLiteral__MembersAssignment_1 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4271:1: ( ( rule__ComplexTypeLiteral__MembersAssignment_1 ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4272:1: ( rule__ComplexTypeLiteral__MembersAssignment_1 )
             {
              before(grammarAccess.getComplexTypeLiteralAccess().getMembersAssignment_1()); 
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4266:1: ( rule__ComplexTypeLiteral__MembersAssignment_1 )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4266:2: rule__ComplexTypeLiteral__MembersAssignment_1
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4273:1: ( rule__ComplexTypeLiteral__MembersAssignment_1 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4273:2: rule__ComplexTypeLiteral__MembersAssignment_1
             {
-            pushFollow(FOLLOW_rule__ComplexTypeLiteral__MembersAssignment_1_in_rule__ComplexTypeLiteral__Group__1__Impl8671);
+            pushFollow(FOLLOW_rule__ComplexTypeLiteral__MembersAssignment_1_in_rule__ComplexTypeLiteral__Group__1__Impl8692);
             rule__ComplexTypeLiteral__MembersAssignment_1();
 
             state._fsp--;
@@ -11785,21 +11813,21 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ComplexTypeLiteral__Group__2"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4276:1: rule__ComplexTypeLiteral__Group__2 : rule__ComplexTypeLiteral__Group__2__Impl rule__ComplexTypeLiteral__Group__3 ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4283:1: rule__ComplexTypeLiteral__Group__2 : rule__ComplexTypeLiteral__Group__2__Impl rule__ComplexTypeLiteral__Group__3 ;
     public final void rule__ComplexTypeLiteral__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4280:1: ( rule__ComplexTypeLiteral__Group__2__Impl rule__ComplexTypeLiteral__Group__3 )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4281:2: rule__ComplexTypeLiteral__Group__2__Impl rule__ComplexTypeLiteral__Group__3
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4287:1: ( rule__ComplexTypeLiteral__Group__2__Impl rule__ComplexTypeLiteral__Group__3 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4288:2: rule__ComplexTypeLiteral__Group__2__Impl rule__ComplexTypeLiteral__Group__3
             {
-            pushFollow(FOLLOW_rule__ComplexTypeLiteral__Group__2__Impl_in_rule__ComplexTypeLiteral__Group__28701);
+            pushFollow(FOLLOW_rule__ComplexTypeLiteral__Group__2__Impl_in_rule__ComplexTypeLiteral__Group__28722);
             rule__ComplexTypeLiteral__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__ComplexTypeLiteral__Group__3_in_rule__ComplexTypeLiteral__Group__28704);
+            pushFollow(FOLLOW_rule__ComplexTypeLiteral__Group__3_in_rule__ComplexTypeLiteral__Group__28725);
             rule__ComplexTypeLiteral__Group__3();
 
             state._fsp--;
@@ -11823,35 +11851,35 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ComplexTypeLiteral__Group__2__Impl"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4288:1: rule__ComplexTypeLiteral__Group__2__Impl : ( ( rule__ComplexTypeLiteral__Group_2__0 )* ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4295:1: rule__ComplexTypeLiteral__Group__2__Impl : ( ( rule__ComplexTypeLiteral__Group_2__0 )* ) ;
     public final void rule__ComplexTypeLiteral__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4292:1: ( ( ( rule__ComplexTypeLiteral__Group_2__0 )* ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4293:1: ( ( rule__ComplexTypeLiteral__Group_2__0 )* )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4299:1: ( ( ( rule__ComplexTypeLiteral__Group_2__0 )* ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4300:1: ( ( rule__ComplexTypeLiteral__Group_2__0 )* )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4293:1: ( ( rule__ComplexTypeLiteral__Group_2__0 )* )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4294:1: ( rule__ComplexTypeLiteral__Group_2__0 )*
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4300:1: ( ( rule__ComplexTypeLiteral__Group_2__0 )* )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4301:1: ( rule__ComplexTypeLiteral__Group_2__0 )*
             {
              before(grammarAccess.getComplexTypeLiteralAccess().getGroup_2()); 
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4295:1: ( rule__ComplexTypeLiteral__Group_2__0 )*
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4302:1: ( rule__ComplexTypeLiteral__Group_2__0 )*
             loop36:
             do {
                 int alt36=2;
                 int LA36_0 = input.LA(1);
 
-                if ( (LA36_0==22) ) {
+                if ( (LA36_0==23) ) {
                     alt36=1;
                 }
 
 
                 switch (alt36) {
             	case 1 :
-            	    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4295:2: rule__ComplexTypeLiteral__Group_2__0
+            	    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4302:2: rule__ComplexTypeLiteral__Group_2__0
             	    {
-            	    pushFollow(FOLLOW_rule__ComplexTypeLiteral__Group_2__0_in_rule__ComplexTypeLiteral__Group__2__Impl8731);
+            	    pushFollow(FOLLOW_rule__ComplexTypeLiteral__Group_2__0_in_rule__ComplexTypeLiteral__Group__2__Impl8752);
             	    rule__ComplexTypeLiteral__Group_2__0();
 
             	    state._fsp--;
@@ -11888,16 +11916,16 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ComplexTypeLiteral__Group__3"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4305:1: rule__ComplexTypeLiteral__Group__3 : rule__ComplexTypeLiteral__Group__3__Impl ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4312:1: rule__ComplexTypeLiteral__Group__3 : rule__ComplexTypeLiteral__Group__3__Impl ;
     public final void rule__ComplexTypeLiteral__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4309:1: ( rule__ComplexTypeLiteral__Group__3__Impl )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4310:2: rule__ComplexTypeLiteral__Group__3__Impl
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4316:1: ( rule__ComplexTypeLiteral__Group__3__Impl )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4317:2: rule__ComplexTypeLiteral__Group__3__Impl
             {
-            pushFollow(FOLLOW_rule__ComplexTypeLiteral__Group__3__Impl_in_rule__ComplexTypeLiteral__Group__38762);
+            pushFollow(FOLLOW_rule__ComplexTypeLiteral__Group__3__Impl_in_rule__ComplexTypeLiteral__Group__38783);
             rule__ComplexTypeLiteral__Group__3__Impl();
 
             state._fsp--;
@@ -11921,20 +11949,20 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ComplexTypeLiteral__Group__3__Impl"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4316:1: rule__ComplexTypeLiteral__Group__3__Impl : ( '}' ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4323:1: rule__ComplexTypeLiteral__Group__3__Impl : ( '}' ) ;
     public final void rule__ComplexTypeLiteral__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4320:1: ( ( '}' ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4321:1: ( '}' )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4327:1: ( ( '}' ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4328:1: ( '}' )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4321:1: ( '}' )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4322:1: '}'
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4328:1: ( '}' )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4329:1: '}'
             {
              before(grammarAccess.getComplexTypeLiteralAccess().getRightCurlyBracketKeyword_3()); 
-            match(input,20,FOLLOW_20_in_rule__ComplexTypeLiteral__Group__3__Impl8790); 
+            match(input,21,FOLLOW_21_in_rule__ComplexTypeLiteral__Group__3__Impl8811); 
              after(grammarAccess.getComplexTypeLiteralAccess().getRightCurlyBracketKeyword_3()); 
 
             }
@@ -11958,21 +11986,21 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ComplexTypeLiteral__Group_2__0"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4343:1: rule__ComplexTypeLiteral__Group_2__0 : rule__ComplexTypeLiteral__Group_2__0__Impl rule__ComplexTypeLiteral__Group_2__1 ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4350:1: rule__ComplexTypeLiteral__Group_2__0 : rule__ComplexTypeLiteral__Group_2__0__Impl rule__ComplexTypeLiteral__Group_2__1 ;
     public final void rule__ComplexTypeLiteral__Group_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4347:1: ( rule__ComplexTypeLiteral__Group_2__0__Impl rule__ComplexTypeLiteral__Group_2__1 )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4348:2: rule__ComplexTypeLiteral__Group_2__0__Impl rule__ComplexTypeLiteral__Group_2__1
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4354:1: ( rule__ComplexTypeLiteral__Group_2__0__Impl rule__ComplexTypeLiteral__Group_2__1 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4355:2: rule__ComplexTypeLiteral__Group_2__0__Impl rule__ComplexTypeLiteral__Group_2__1
             {
-            pushFollow(FOLLOW_rule__ComplexTypeLiteral__Group_2__0__Impl_in_rule__ComplexTypeLiteral__Group_2__08829);
+            pushFollow(FOLLOW_rule__ComplexTypeLiteral__Group_2__0__Impl_in_rule__ComplexTypeLiteral__Group_2__08850);
             rule__ComplexTypeLiteral__Group_2__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__ComplexTypeLiteral__Group_2__1_in_rule__ComplexTypeLiteral__Group_2__08832);
+            pushFollow(FOLLOW_rule__ComplexTypeLiteral__Group_2__1_in_rule__ComplexTypeLiteral__Group_2__08853);
             rule__ComplexTypeLiteral__Group_2__1();
 
             state._fsp--;
@@ -11996,20 +12024,20 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ComplexTypeLiteral__Group_2__0__Impl"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4355:1: rule__ComplexTypeLiteral__Group_2__0__Impl : ( ',' ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4362:1: rule__ComplexTypeLiteral__Group_2__0__Impl : ( ',' ) ;
     public final void rule__ComplexTypeLiteral__Group_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4359:1: ( ( ',' ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4360:1: ( ',' )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4366:1: ( ( ',' ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4367:1: ( ',' )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4360:1: ( ',' )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4361:1: ','
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4367:1: ( ',' )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4368:1: ','
             {
              before(grammarAccess.getComplexTypeLiteralAccess().getCommaKeyword_2_0()); 
-            match(input,22,FOLLOW_22_in_rule__ComplexTypeLiteral__Group_2__0__Impl8860); 
+            match(input,23,FOLLOW_23_in_rule__ComplexTypeLiteral__Group_2__0__Impl8881); 
              after(grammarAccess.getComplexTypeLiteralAccess().getCommaKeyword_2_0()); 
 
             }
@@ -12033,16 +12061,16 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ComplexTypeLiteral__Group_2__1"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4374:1: rule__ComplexTypeLiteral__Group_2__1 : rule__ComplexTypeLiteral__Group_2__1__Impl ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4381:1: rule__ComplexTypeLiteral__Group_2__1 : rule__ComplexTypeLiteral__Group_2__1__Impl ;
     public final void rule__ComplexTypeLiteral__Group_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4378:1: ( rule__ComplexTypeLiteral__Group_2__1__Impl )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4379:2: rule__ComplexTypeLiteral__Group_2__1__Impl
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4385:1: ( rule__ComplexTypeLiteral__Group_2__1__Impl )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4386:2: rule__ComplexTypeLiteral__Group_2__1__Impl
             {
-            pushFollow(FOLLOW_rule__ComplexTypeLiteral__Group_2__1__Impl_in_rule__ComplexTypeLiteral__Group_2__18891);
+            pushFollow(FOLLOW_rule__ComplexTypeLiteral__Group_2__1__Impl_in_rule__ComplexTypeLiteral__Group_2__18912);
             rule__ComplexTypeLiteral__Group_2__1__Impl();
 
             state._fsp--;
@@ -12066,23 +12094,23 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ComplexTypeLiteral__Group_2__1__Impl"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4385:1: rule__ComplexTypeLiteral__Group_2__1__Impl : ( ( rule__ComplexTypeLiteral__MembersAssignment_2_1 ) ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4392:1: rule__ComplexTypeLiteral__Group_2__1__Impl : ( ( rule__ComplexTypeLiteral__MembersAssignment_2_1 ) ) ;
     public final void rule__ComplexTypeLiteral__Group_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4389:1: ( ( ( rule__ComplexTypeLiteral__MembersAssignment_2_1 ) ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4390:1: ( ( rule__ComplexTypeLiteral__MembersAssignment_2_1 ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4396:1: ( ( ( rule__ComplexTypeLiteral__MembersAssignment_2_1 ) ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4397:1: ( ( rule__ComplexTypeLiteral__MembersAssignment_2_1 ) )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4390:1: ( ( rule__ComplexTypeLiteral__MembersAssignment_2_1 ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4391:1: ( rule__ComplexTypeLiteral__MembersAssignment_2_1 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4397:1: ( ( rule__ComplexTypeLiteral__MembersAssignment_2_1 ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4398:1: ( rule__ComplexTypeLiteral__MembersAssignment_2_1 )
             {
              before(grammarAccess.getComplexTypeLiteralAccess().getMembersAssignment_2_1()); 
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4392:1: ( rule__ComplexTypeLiteral__MembersAssignment_2_1 )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4392:2: rule__ComplexTypeLiteral__MembersAssignment_2_1
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4399:1: ( rule__ComplexTypeLiteral__MembersAssignment_2_1 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4399:2: rule__ComplexTypeLiteral__MembersAssignment_2_1
             {
-            pushFollow(FOLLOW_rule__ComplexTypeLiteral__MembersAssignment_2_1_in_rule__ComplexTypeLiteral__Group_2__1__Impl8918);
+            pushFollow(FOLLOW_rule__ComplexTypeLiteral__MembersAssignment_2_1_in_rule__ComplexTypeLiteral__Group_2__1__Impl8939);
             rule__ComplexTypeLiteral__MembersAssignment_2_1();
 
             state._fsp--;
@@ -12113,21 +12141,21 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__QualifiedName__Group__0"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4406:1: rule__QualifiedName__Group__0 : rule__QualifiedName__Group__0__Impl rule__QualifiedName__Group__1 ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4413:1: rule__QualifiedName__Group__0 : rule__QualifiedName__Group__0__Impl rule__QualifiedName__Group__1 ;
     public final void rule__QualifiedName__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4410:1: ( rule__QualifiedName__Group__0__Impl rule__QualifiedName__Group__1 )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4411:2: rule__QualifiedName__Group__0__Impl rule__QualifiedName__Group__1
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4417:1: ( rule__QualifiedName__Group__0__Impl rule__QualifiedName__Group__1 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4418:2: rule__QualifiedName__Group__0__Impl rule__QualifiedName__Group__1
             {
-            pushFollow(FOLLOW_rule__QualifiedName__Group__0__Impl_in_rule__QualifiedName__Group__08952);
+            pushFollow(FOLLOW_rule__QualifiedName__Group__0__Impl_in_rule__QualifiedName__Group__08973);
             rule__QualifiedName__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__QualifiedName__Group__1_in_rule__QualifiedName__Group__08955);
+            pushFollow(FOLLOW_rule__QualifiedName__Group__1_in_rule__QualifiedName__Group__08976);
             rule__QualifiedName__Group__1();
 
             state._fsp--;
@@ -12151,20 +12179,20 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__QualifiedName__Group__0__Impl"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4418:1: rule__QualifiedName__Group__0__Impl : ( RULE_ID ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4425:1: rule__QualifiedName__Group__0__Impl : ( RULE_ID ) ;
     public final void rule__QualifiedName__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4422:1: ( ( RULE_ID ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4423:1: ( RULE_ID )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4429:1: ( ( RULE_ID ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4430:1: ( RULE_ID )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4423:1: ( RULE_ID )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4424:1: RULE_ID
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4430:1: ( RULE_ID )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4431:1: RULE_ID
             {
              before(grammarAccess.getQualifiedNameAccess().getIDTerminalRuleCall_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__QualifiedName__Group__0__Impl8982); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__QualifiedName__Group__0__Impl9003); 
              after(grammarAccess.getQualifiedNameAccess().getIDTerminalRuleCall_0()); 
 
             }
@@ -12188,16 +12216,16 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__QualifiedName__Group__1"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4435:1: rule__QualifiedName__Group__1 : rule__QualifiedName__Group__1__Impl ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4442:1: rule__QualifiedName__Group__1 : rule__QualifiedName__Group__1__Impl ;
     public final void rule__QualifiedName__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4439:1: ( rule__QualifiedName__Group__1__Impl )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4440:2: rule__QualifiedName__Group__1__Impl
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4446:1: ( rule__QualifiedName__Group__1__Impl )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4447:2: rule__QualifiedName__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__QualifiedName__Group__1__Impl_in_rule__QualifiedName__Group__19011);
+            pushFollow(FOLLOW_rule__QualifiedName__Group__1__Impl_in_rule__QualifiedName__Group__19032);
             rule__QualifiedName__Group__1__Impl();
 
             state._fsp--;
@@ -12221,35 +12249,35 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__QualifiedName__Group__1__Impl"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4446:1: rule__QualifiedName__Group__1__Impl : ( ( rule__QualifiedName__Group_1__0 )* ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4453:1: rule__QualifiedName__Group__1__Impl : ( ( rule__QualifiedName__Group_1__0 )* ) ;
     public final void rule__QualifiedName__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4450:1: ( ( ( rule__QualifiedName__Group_1__0 )* ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4451:1: ( ( rule__QualifiedName__Group_1__0 )* )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4457:1: ( ( ( rule__QualifiedName__Group_1__0 )* ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4458:1: ( ( rule__QualifiedName__Group_1__0 )* )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4451:1: ( ( rule__QualifiedName__Group_1__0 )* )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4452:1: ( rule__QualifiedName__Group_1__0 )*
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4458:1: ( ( rule__QualifiedName__Group_1__0 )* )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4459:1: ( rule__QualifiedName__Group_1__0 )*
             {
              before(grammarAccess.getQualifiedNameAccess().getGroup_1()); 
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4453:1: ( rule__QualifiedName__Group_1__0 )*
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4460:1: ( rule__QualifiedName__Group_1__0 )*
             loop37:
             do {
                 int alt37=2;
                 int LA37_0 = input.LA(1);
 
-                if ( (LA37_0==31) ) {
+                if ( (LA37_0==32) ) {
                     alt37=1;
                 }
 
 
                 switch (alt37) {
             	case 1 :
-            	    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4453:2: rule__QualifiedName__Group_1__0
+            	    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4460:2: rule__QualifiedName__Group_1__0
             	    {
-            	    pushFollow(FOLLOW_rule__QualifiedName__Group_1__0_in_rule__QualifiedName__Group__1__Impl9038);
+            	    pushFollow(FOLLOW_rule__QualifiedName__Group_1__0_in_rule__QualifiedName__Group__1__Impl9059);
             	    rule__QualifiedName__Group_1__0();
 
             	    state._fsp--;
@@ -12286,21 +12314,21 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__QualifiedName__Group_1__0"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4467:1: rule__QualifiedName__Group_1__0 : rule__QualifiedName__Group_1__0__Impl rule__QualifiedName__Group_1__1 ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4474:1: rule__QualifiedName__Group_1__0 : rule__QualifiedName__Group_1__0__Impl rule__QualifiedName__Group_1__1 ;
     public final void rule__QualifiedName__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4471:1: ( rule__QualifiedName__Group_1__0__Impl rule__QualifiedName__Group_1__1 )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4472:2: rule__QualifiedName__Group_1__0__Impl rule__QualifiedName__Group_1__1
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4478:1: ( rule__QualifiedName__Group_1__0__Impl rule__QualifiedName__Group_1__1 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4479:2: rule__QualifiedName__Group_1__0__Impl rule__QualifiedName__Group_1__1
             {
-            pushFollow(FOLLOW_rule__QualifiedName__Group_1__0__Impl_in_rule__QualifiedName__Group_1__09073);
+            pushFollow(FOLLOW_rule__QualifiedName__Group_1__0__Impl_in_rule__QualifiedName__Group_1__09094);
             rule__QualifiedName__Group_1__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__QualifiedName__Group_1__1_in_rule__QualifiedName__Group_1__09076);
+            pushFollow(FOLLOW_rule__QualifiedName__Group_1__1_in_rule__QualifiedName__Group_1__09097);
             rule__QualifiedName__Group_1__1();
 
             state._fsp--;
@@ -12324,20 +12352,20 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__QualifiedName__Group_1__0__Impl"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4479:1: rule__QualifiedName__Group_1__0__Impl : ( '.' ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4486:1: rule__QualifiedName__Group_1__0__Impl : ( '.' ) ;
     public final void rule__QualifiedName__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4483:1: ( ( '.' ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4484:1: ( '.' )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4490:1: ( ( '.' ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4491:1: ( '.' )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4484:1: ( '.' )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4485:1: '.'
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4491:1: ( '.' )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4492:1: '.'
             {
              before(grammarAccess.getQualifiedNameAccess().getFullStopKeyword_1_0()); 
-            match(input,31,FOLLOW_31_in_rule__QualifiedName__Group_1__0__Impl9104); 
+            match(input,32,FOLLOW_32_in_rule__QualifiedName__Group_1__0__Impl9125); 
              after(grammarAccess.getQualifiedNameAccess().getFullStopKeyword_1_0()); 
 
             }
@@ -12361,16 +12389,16 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__QualifiedName__Group_1__1"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4498:1: rule__QualifiedName__Group_1__1 : rule__QualifiedName__Group_1__1__Impl ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4505:1: rule__QualifiedName__Group_1__1 : rule__QualifiedName__Group_1__1__Impl ;
     public final void rule__QualifiedName__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4502:1: ( rule__QualifiedName__Group_1__1__Impl )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4503:2: rule__QualifiedName__Group_1__1__Impl
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4509:1: ( rule__QualifiedName__Group_1__1__Impl )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4510:2: rule__QualifiedName__Group_1__1__Impl
             {
-            pushFollow(FOLLOW_rule__QualifiedName__Group_1__1__Impl_in_rule__QualifiedName__Group_1__19135);
+            pushFollow(FOLLOW_rule__QualifiedName__Group_1__1__Impl_in_rule__QualifiedName__Group_1__19156);
             rule__QualifiedName__Group_1__1__Impl();
 
             state._fsp--;
@@ -12394,20 +12422,20 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__QualifiedName__Group_1__1__Impl"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4509:1: rule__QualifiedName__Group_1__1__Impl : ( RULE_ID ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4516:1: rule__QualifiedName__Group_1__1__Impl : ( RULE_ID ) ;
     public final void rule__QualifiedName__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4513:1: ( ( RULE_ID ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4514:1: ( RULE_ID )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4520:1: ( ( RULE_ID ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4521:1: ( RULE_ID )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4514:1: ( RULE_ID )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4515:1: RULE_ID
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4521:1: ( RULE_ID )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4522:1: RULE_ID
             {
              before(grammarAccess.getQualifiedNameAccess().getIDTerminalRuleCall_1_1()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__QualifiedName__Group_1__1__Impl9162); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__QualifiedName__Group_1__1__Impl9183); 
              after(grammarAccess.getQualifiedNameAccess().getIDTerminalRuleCall_1_1()); 
 
             }
@@ -12431,21 +12459,21 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__SignedNumber__Group__0"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4530:1: rule__SignedNumber__Group__0 : rule__SignedNumber__Group__0__Impl rule__SignedNumber__Group__1 ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4537:1: rule__SignedNumber__Group__0 : rule__SignedNumber__Group__0__Impl rule__SignedNumber__Group__1 ;
     public final void rule__SignedNumber__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4534:1: ( rule__SignedNumber__Group__0__Impl rule__SignedNumber__Group__1 )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4535:2: rule__SignedNumber__Group__0__Impl rule__SignedNumber__Group__1
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4541:1: ( rule__SignedNumber__Group__0__Impl rule__SignedNumber__Group__1 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4542:2: rule__SignedNumber__Group__0__Impl rule__SignedNumber__Group__1
             {
-            pushFollow(FOLLOW_rule__SignedNumber__Group__0__Impl_in_rule__SignedNumber__Group__09195);
+            pushFollow(FOLLOW_rule__SignedNumber__Group__0__Impl_in_rule__SignedNumber__Group__09216);
             rule__SignedNumber__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__SignedNumber__Group__1_in_rule__SignedNumber__Group__09198);
+            pushFollow(FOLLOW_rule__SignedNumber__Group__1_in_rule__SignedNumber__Group__09219);
             rule__SignedNumber__Group__1();
 
             state._fsp--;
@@ -12469,31 +12497,31 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__SignedNumber__Group__0__Impl"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4542:1: rule__SignedNumber__Group__0__Impl : ( ( '-' )? ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4549:1: rule__SignedNumber__Group__0__Impl : ( ( '-' )? ) ;
     public final void rule__SignedNumber__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4546:1: ( ( ( '-' )? ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4547:1: ( ( '-' )? )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4553:1: ( ( ( '-' )? ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4554:1: ( ( '-' )? )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4547:1: ( ( '-' )? )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4548:1: ( '-' )?
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4554:1: ( ( '-' )? )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4555:1: ( '-' )?
             {
              before(grammarAccess.getSignedNumberAccess().getHyphenMinusKeyword_0()); 
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4549:1: ( '-' )?
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4556:1: ( '-' )?
             int alt38=2;
             int LA38_0 = input.LA(1);
 
-            if ( (LA38_0==25) ) {
+            if ( (LA38_0==26) ) {
                 alt38=1;
             }
             switch (alt38) {
                 case 1 :
-                    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4550:2: '-'
+                    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4557:2: '-'
                     {
-                    match(input,25,FOLLOW_25_in_rule__SignedNumber__Group__0__Impl9227); 
+                    match(input,26,FOLLOW_26_in_rule__SignedNumber__Group__0__Impl9248); 
 
                     }
                     break;
@@ -12523,16 +12551,16 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__SignedNumber__Group__1"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4561:1: rule__SignedNumber__Group__1 : rule__SignedNumber__Group__1__Impl ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4568:1: rule__SignedNumber__Group__1 : rule__SignedNumber__Group__1__Impl ;
     public final void rule__SignedNumber__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4565:1: ( rule__SignedNumber__Group__1__Impl )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4566:2: rule__SignedNumber__Group__1__Impl
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4572:1: ( rule__SignedNumber__Group__1__Impl )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4573:2: rule__SignedNumber__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__SignedNumber__Group__1__Impl_in_rule__SignedNumber__Group__19260);
+            pushFollow(FOLLOW_rule__SignedNumber__Group__1__Impl_in_rule__SignedNumber__Group__19281);
             rule__SignedNumber__Group__1__Impl();
 
             state._fsp--;
@@ -12556,20 +12584,20 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__SignedNumber__Group__1__Impl"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4572:1: rule__SignedNumber__Group__1__Impl : ( RULE_NUMBER ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4579:1: rule__SignedNumber__Group__1__Impl : ( RULE_NUMBER ) ;
     public final void rule__SignedNumber__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4576:1: ( ( RULE_NUMBER ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4577:1: ( RULE_NUMBER )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4583:1: ( ( RULE_NUMBER ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4584:1: ( RULE_NUMBER )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4577:1: ( RULE_NUMBER )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4578:1: RULE_NUMBER
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4584:1: ( RULE_NUMBER )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4585:1: RULE_NUMBER
             {
              before(grammarAccess.getSignedNumberAccess().getNUMBERTerminalRuleCall_1()); 
-            match(input,RULE_NUMBER,FOLLOW_RULE_NUMBER_in_rule__SignedNumber__Group__1__Impl9287); 
+            match(input,RULE_NUMBER,FOLLOW_RULE_NUMBER_in_rule__SignedNumber__Group__1__Impl9308); 
              after(grammarAccess.getSignedNumberAccess().getNUMBERTerminalRuleCall_1()); 
 
             }
@@ -12593,20 +12621,20 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Model__PackageNameAssignment_1"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4594:1: rule__Model__PackageNameAssignment_1 : ( ruleQualifiedName ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4601:1: rule__Model__PackageNameAssignment_1 : ( ruleQualifiedName ) ;
     public final void rule__Model__PackageNameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4598:1: ( ( ruleQualifiedName ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4599:1: ( ruleQualifiedName )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4605:1: ( ( ruleQualifiedName ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4606:1: ( ruleQualifiedName )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4599:1: ( ruleQualifiedName )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4600:1: ruleQualifiedName
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4606:1: ( ruleQualifiedName )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4607:1: ruleQualifiedName
             {
              before(grammarAccess.getModelAccess().getPackageNameQualifiedNameParserRuleCall_1_0()); 
-            pushFollow(FOLLOW_ruleQualifiedName_in_rule__Model__PackageNameAssignment_19325);
+            pushFollow(FOLLOW_ruleQualifiedName_in_rule__Model__PackageNameAssignment_19346);
             ruleQualifiedName();
 
             state._fsp--;
@@ -12634,20 +12662,20 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Model__DeclarationsAssignment_2"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4609:1: rule__Model__DeclarationsAssignment_2 : ( ruleDeclaration ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4616:1: rule__Model__DeclarationsAssignment_2 : ( ruleDeclaration ) ;
     public final void rule__Model__DeclarationsAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4613:1: ( ( ruleDeclaration ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4614:1: ( ruleDeclaration )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4620:1: ( ( ruleDeclaration ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4621:1: ( ruleDeclaration )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4614:1: ( ruleDeclaration )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4615:1: ruleDeclaration
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4621:1: ( ruleDeclaration )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4622:1: ruleDeclaration
             {
              before(grammarAccess.getModelAccess().getDeclarationsDeclarationParserRuleCall_2_0()); 
-            pushFollow(FOLLOW_ruleDeclaration_in_rule__Model__DeclarationsAssignment_29356);
+            pushFollow(FOLLOW_ruleDeclaration_in_rule__Model__DeclarationsAssignment_29377);
             ruleDeclaration();
 
             state._fsp--;
@@ -12675,20 +12703,20 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Api__NameAssignment_1"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4624:1: rule__Api__NameAssignment_1 : ( RULE_ID ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4631:1: rule__Api__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__Api__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4628:1: ( ( RULE_ID ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4629:1: ( RULE_ID )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4635:1: ( ( RULE_ID ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4636:1: ( RULE_ID )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4629:1: ( RULE_ID )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4630:1: RULE_ID
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4636:1: ( RULE_ID )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4637:1: RULE_ID
             {
              before(grammarAccess.getApiAccess().getNameIDTerminalRuleCall_1_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Api__NameAssignment_19387); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Api__NameAssignment_19408); 
              after(grammarAccess.getApiAccess().getNameIDTerminalRuleCall_1_0()); 
 
             }
@@ -12712,20 +12740,20 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Api__BaseUrlAssignment_2"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4639:1: rule__Api__BaseUrlAssignment_2 : ( RULE_STRING ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4646:1: rule__Api__BaseUrlAssignment_2 : ( RULE_STRING ) ;
     public final void rule__Api__BaseUrlAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4643:1: ( ( RULE_STRING ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4644:1: ( RULE_STRING )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4650:1: ( ( RULE_STRING ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4651:1: ( RULE_STRING )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4644:1: ( RULE_STRING )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4645:1: RULE_STRING
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4651:1: ( RULE_STRING )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4652:1: RULE_STRING
             {
              before(grammarAccess.getApiAccess().getBaseUrlSTRINGTerminalRuleCall_2_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Api__BaseUrlAssignment_29418); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Api__BaseUrlAssignment_29439); 
              after(grammarAccess.getApiAccess().getBaseUrlSTRINGTerminalRuleCall_2_0()); 
 
             }
@@ -12749,20 +12777,20 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Api__BlocksAssignment_4"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4654:1: rule__Api__BlocksAssignment_4 : ( ruleServiceBlock ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4661:1: rule__Api__BlocksAssignment_4 : ( ruleServiceBlock ) ;
     public final void rule__Api__BlocksAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4658:1: ( ( ruleServiceBlock ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4659:1: ( ruleServiceBlock )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4665:1: ( ( ruleServiceBlock ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4666:1: ( ruleServiceBlock )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4659:1: ( ruleServiceBlock )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4660:1: ruleServiceBlock
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4666:1: ( ruleServiceBlock )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4667:1: ruleServiceBlock
             {
              before(grammarAccess.getApiAccess().getBlocksServiceBlockParserRuleCall_4_0()); 
-            pushFollow(FOLLOW_ruleServiceBlock_in_rule__Api__BlocksAssignment_49449);
+            pushFollow(FOLLOW_ruleServiceBlock_in_rule__Api__BlocksAssignment_49470);
             ruleServiceBlock();
 
             state._fsp--;
@@ -12790,20 +12818,20 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__HeaderBlock__HeadersAssignment_1"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4669:1: rule__HeaderBlock__HeadersAssignment_1 : ( ruleHeader ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4676:1: rule__HeaderBlock__HeadersAssignment_1 : ( ruleHeader ) ;
     public final void rule__HeaderBlock__HeadersAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4673:1: ( ( ruleHeader ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4674:1: ( ruleHeader )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4680:1: ( ( ruleHeader ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4681:1: ( ruleHeader )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4674:1: ( ruleHeader )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4675:1: ruleHeader
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4681:1: ( ruleHeader )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4682:1: ruleHeader
             {
              before(grammarAccess.getHeaderBlockAccess().getHeadersHeaderParserRuleCall_1_0()); 
-            pushFollow(FOLLOW_ruleHeader_in_rule__HeaderBlock__HeadersAssignment_19480);
+            pushFollow(FOLLOW_ruleHeader_in_rule__HeaderBlock__HeadersAssignment_19501);
             ruleHeader();
 
             state._fsp--;
@@ -12831,20 +12859,20 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__HeaderBlock__HeadersAssignment_2_1"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4684:1: rule__HeaderBlock__HeadersAssignment_2_1 : ( ruleHeader ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4691:1: rule__HeaderBlock__HeadersAssignment_2_1 : ( ruleHeader ) ;
     public final void rule__HeaderBlock__HeadersAssignment_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4688:1: ( ( ruleHeader ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4689:1: ( ruleHeader )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4695:1: ( ( ruleHeader ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4696:1: ( ruleHeader )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4689:1: ( ruleHeader )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4690:1: ruleHeader
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4696:1: ( ruleHeader )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4697:1: ruleHeader
             {
              before(grammarAccess.getHeaderBlockAccess().getHeadersHeaderParserRuleCall_2_1_0()); 
-            pushFollow(FOLLOW_ruleHeader_in_rule__HeaderBlock__HeadersAssignment_2_19511);
+            pushFollow(FOLLOW_ruleHeader_in_rule__HeaderBlock__HeadersAssignment_2_19532);
             ruleHeader();
 
             state._fsp--;
@@ -12872,20 +12900,20 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Header__NameAssignment_0"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4699:1: rule__Header__NameAssignment_0 : ( RULE_STRING ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4706:1: rule__Header__NameAssignment_0 : ( RULE_STRING ) ;
     public final void rule__Header__NameAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4703:1: ( ( RULE_STRING ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4704:1: ( RULE_STRING )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4710:1: ( ( RULE_STRING ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4711:1: ( RULE_STRING )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4704:1: ( RULE_STRING )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4705:1: RULE_STRING
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4711:1: ( RULE_STRING )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4712:1: RULE_STRING
             {
              before(grammarAccess.getHeaderAccess().getNameSTRINGTerminalRuleCall_0_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Header__NameAssignment_09542); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Header__NameAssignment_09563); 
              after(grammarAccess.getHeaderAccess().getNameSTRINGTerminalRuleCall_0_0()); 
 
             }
@@ -12909,20 +12937,20 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Header__ValueAssignment_2"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4714:1: rule__Header__ValueAssignment_2 : ( RULE_STRING ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4721:1: rule__Header__ValueAssignment_2 : ( RULE_STRING ) ;
     public final void rule__Header__ValueAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4718:1: ( ( RULE_STRING ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4719:1: ( RULE_STRING )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4725:1: ( ( RULE_STRING ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4726:1: ( RULE_STRING )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4719:1: ( RULE_STRING )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4720:1: RULE_STRING
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4726:1: ( RULE_STRING )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4727:1: RULE_STRING
             {
              before(grammarAccess.getHeaderAccess().getValueSTRINGTerminalRuleCall_2_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Header__ValueAssignment_29573); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Header__ValueAssignment_29594); 
              after(grammarAccess.getHeaderAccess().getValueSTRINGTerminalRuleCall_2_0()); 
 
             }
@@ -12946,20 +12974,20 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__HttpMethod__TypeAssignment_0"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4729:1: rule__HttpMethod__TypeAssignment_0 : ( ruleHttpMethodType ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4736:1: rule__HttpMethod__TypeAssignment_0 : ( ruleHttpMethodType ) ;
     public final void rule__HttpMethod__TypeAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4733:1: ( ( ruleHttpMethodType ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4734:1: ( ruleHttpMethodType )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4740:1: ( ( ruleHttpMethodType ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4741:1: ( ruleHttpMethodType )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4734:1: ( ruleHttpMethodType )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4735:1: ruleHttpMethodType
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4741:1: ( ruleHttpMethodType )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4742:1: ruleHttpMethodType
             {
              before(grammarAccess.getHttpMethodAccess().getTypeHttpMethodTypeEnumRuleCall_0_0()); 
-            pushFollow(FOLLOW_ruleHttpMethodType_in_rule__HttpMethod__TypeAssignment_09604);
+            pushFollow(FOLLOW_ruleHttpMethodType_in_rule__HttpMethod__TypeAssignment_09625);
             ruleHttpMethodType();
 
             state._fsp--;
@@ -12987,20 +13015,20 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__HttpMethod__NameAssignment_1"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4744:1: rule__HttpMethod__NameAssignment_1 : ( RULE_ID ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4751:1: rule__HttpMethod__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__HttpMethod__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4748:1: ( ( RULE_ID ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4749:1: ( RULE_ID )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4755:1: ( ( RULE_ID ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4756:1: ( RULE_ID )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4749:1: ( RULE_ID )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4750:1: RULE_ID
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4756:1: ( RULE_ID )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4757:1: RULE_ID
             {
              before(grammarAccess.getHttpMethodAccess().getNameIDTerminalRuleCall_1_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__HttpMethod__NameAssignment_19635); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__HttpMethod__NameAssignment_19656); 
              after(grammarAccess.getHttpMethodAccess().getNameIDTerminalRuleCall_1_0()); 
 
             }
@@ -13024,20 +13052,20 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__HttpMethod__PathAssignment_2"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4759:1: rule__HttpMethod__PathAssignment_2 : ( rulePath ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4766:1: rule__HttpMethod__PathAssignment_2 : ( rulePath ) ;
     public final void rule__HttpMethod__PathAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4763:1: ( ( rulePath ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4764:1: ( rulePath )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4770:1: ( ( rulePath ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4771:1: ( rulePath )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4764:1: ( rulePath )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4765:1: rulePath
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4771:1: ( rulePath )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4772:1: rulePath
             {
              before(grammarAccess.getHttpMethodAccess().getPathPathParserRuleCall_2_0()); 
-            pushFollow(FOLLOW_rulePath_in_rule__HttpMethod__PathAssignment_29666);
+            pushFollow(FOLLOW_rulePath_in_rule__HttpMethod__PathAssignment_29687);
             rulePath();
 
             state._fsp--;
@@ -13065,20 +13093,20 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__HttpMethod__BlocksAssignment_4"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4774:1: rule__HttpMethod__BlocksAssignment_4 : ( ruleHttpMethodBlock ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4781:1: rule__HttpMethod__BlocksAssignment_4 : ( ruleHttpMethodBlock ) ;
     public final void rule__HttpMethod__BlocksAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4778:1: ( ( ruleHttpMethodBlock ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4779:1: ( ruleHttpMethodBlock )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4785:1: ( ( ruleHttpMethodBlock ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4786:1: ( ruleHttpMethodBlock )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4779:1: ( ruleHttpMethodBlock )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4780:1: ruleHttpMethodBlock
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4786:1: ( ruleHttpMethodBlock )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4787:1: ruleHttpMethodBlock
             {
              before(grammarAccess.getHttpMethodAccess().getBlocksHttpMethodBlockParserRuleCall_4_0()); 
-            pushFollow(FOLLOW_ruleHttpMethodBlock_in_rule__HttpMethod__BlocksAssignment_49697);
+            pushFollow(FOLLOW_ruleHttpMethodBlock_in_rule__HttpMethod__BlocksAssignment_49718);
             ruleHttpMethodBlock();
 
             state._fsp--;
@@ -13106,20 +13134,20 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Path__ParamsAssignment_2_1"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4789:1: rule__Path__ParamsAssignment_2_1 : ( ruleSimpleMemberAssignment ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4796:1: rule__Path__ParamsAssignment_2_1 : ( ruleSimpleMemberAssignment ) ;
     public final void rule__Path__ParamsAssignment_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4793:1: ( ( ruleSimpleMemberAssignment ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4794:1: ( ruleSimpleMemberAssignment )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4800:1: ( ( ruleSimpleMemberAssignment ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4801:1: ( ruleSimpleMemberAssignment )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4794:1: ( ruleSimpleMemberAssignment )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4795:1: ruleSimpleMemberAssignment
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4801:1: ( ruleSimpleMemberAssignment )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4802:1: ruleSimpleMemberAssignment
             {
              before(grammarAccess.getPathAccess().getParamsSimpleMemberAssignmentParserRuleCall_2_1_0()); 
-            pushFollow(FOLLOW_ruleSimpleMemberAssignment_in_rule__Path__ParamsAssignment_2_19728);
+            pushFollow(FOLLOW_ruleSimpleMemberAssignment_in_rule__Path__ParamsAssignment_2_19749);
             ruleSimpleMemberAssignment();
 
             state._fsp--;
@@ -13147,20 +13175,20 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Path__ParamsAssignment_3_1_1"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4804:1: rule__Path__ParamsAssignment_3_1_1 : ( ruleSimpleMemberAssignment ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4811:1: rule__Path__ParamsAssignment_3_1_1 : ( ruleSimpleMemberAssignment ) ;
     public final void rule__Path__ParamsAssignment_3_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4808:1: ( ( ruleSimpleMemberAssignment ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4809:1: ( ruleSimpleMemberAssignment )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4815:1: ( ( ruleSimpleMemberAssignment ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4816:1: ( ruleSimpleMemberAssignment )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4809:1: ( ruleSimpleMemberAssignment )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4810:1: ruleSimpleMemberAssignment
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4816:1: ( ruleSimpleMemberAssignment )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4817:1: ruleSimpleMemberAssignment
             {
              before(grammarAccess.getPathAccess().getParamsSimpleMemberAssignmentParserRuleCall_3_1_1_0()); 
-            pushFollow(FOLLOW_ruleSimpleMemberAssignment_in_rule__Path__ParamsAssignment_3_1_19759);
+            pushFollow(FOLLOW_ruleSimpleMemberAssignment_in_rule__Path__ParamsAssignment_3_1_19780);
             ruleSimpleMemberAssignment();
 
             state._fsp--;
@@ -13188,20 +13216,20 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ParamsBlock__ParamsAssignment_2"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4819:1: rule__ParamsBlock__ParamsAssignment_2 : ( ruleSimpleMemberAssignment ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4826:1: rule__ParamsBlock__ParamsAssignment_2 : ( ruleSimpleMemberAssignment ) ;
     public final void rule__ParamsBlock__ParamsAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4823:1: ( ( ruleSimpleMemberAssignment ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4824:1: ( ruleSimpleMemberAssignment )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4830:1: ( ( ruleSimpleMemberAssignment ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4831:1: ( ruleSimpleMemberAssignment )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4824:1: ( ruleSimpleMemberAssignment )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4825:1: ruleSimpleMemberAssignment
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4831:1: ( ruleSimpleMemberAssignment )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4832:1: ruleSimpleMemberAssignment
             {
              before(grammarAccess.getParamsBlockAccess().getParamsSimpleMemberAssignmentParserRuleCall_2_0()); 
-            pushFollow(FOLLOW_ruleSimpleMemberAssignment_in_rule__ParamsBlock__ParamsAssignment_29790);
+            pushFollow(FOLLOW_ruleSimpleMemberAssignment_in_rule__ParamsBlock__ParamsAssignment_29811);
             ruleSimpleMemberAssignment();
 
             state._fsp--;
@@ -13229,20 +13257,20 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ParamsBlock__ParamsAssignment_3_1"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4834:1: rule__ParamsBlock__ParamsAssignment_3_1 : ( ruleSimpleMemberAssignment ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4841:1: rule__ParamsBlock__ParamsAssignment_3_1 : ( ruleSimpleMemberAssignment ) ;
     public final void rule__ParamsBlock__ParamsAssignment_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4838:1: ( ( ruleSimpleMemberAssignment ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4839:1: ( ruleSimpleMemberAssignment )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4845:1: ( ( ruleSimpleMemberAssignment ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4846:1: ( ruleSimpleMemberAssignment )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4839:1: ( ruleSimpleMemberAssignment )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4840:1: ruleSimpleMemberAssignment
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4846:1: ( ruleSimpleMemberAssignment )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4847:1: ruleSimpleMemberAssignment
             {
              before(grammarAccess.getParamsBlockAccess().getParamsSimpleMemberAssignmentParserRuleCall_3_1_0()); 
-            pushFollow(FOLLOW_ruleSimpleMemberAssignment_in_rule__ParamsBlock__ParamsAssignment_3_19821);
+            pushFollow(FOLLOW_ruleSimpleMemberAssignment_in_rule__ParamsBlock__ParamsAssignment_3_19842);
             ruleSimpleMemberAssignment();
 
             state._fsp--;
@@ -13270,20 +13298,20 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__SimpleMemberAssignment__MemberAssignment_0"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4849:1: rule__SimpleMemberAssignment__MemberAssignment_0 : ( ruleSimpleMember ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4856:1: rule__SimpleMemberAssignment__MemberAssignment_0 : ( ruleSimpleMember ) ;
     public final void rule__SimpleMemberAssignment__MemberAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4853:1: ( ( ruleSimpleMember ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4854:1: ( ruleSimpleMember )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4860:1: ( ( ruleSimpleMember ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4861:1: ( ruleSimpleMember )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4854:1: ( ruleSimpleMember )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4855:1: ruleSimpleMember
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4861:1: ( ruleSimpleMember )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4862:1: ruleSimpleMember
             {
              before(grammarAccess.getSimpleMemberAssignmentAccess().getMemberSimpleMemberParserRuleCall_0_0()); 
-            pushFollow(FOLLOW_ruleSimpleMember_in_rule__SimpleMemberAssignment__MemberAssignment_09852);
+            pushFollow(FOLLOW_ruleSimpleMember_in_rule__SimpleMemberAssignment__MemberAssignment_09873);
             ruleSimpleMember();
 
             state._fsp--;
@@ -13311,20 +13339,20 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__SimpleMemberAssignment__DefaultValueAssignment_1_1"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4864:1: rule__SimpleMemberAssignment__DefaultValueAssignment_1_1 : ( ruleLiteral ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4871:1: rule__SimpleMemberAssignment__DefaultValueAssignment_1_1 : ( ruleLiteral ) ;
     public final void rule__SimpleMemberAssignment__DefaultValueAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4868:1: ( ( ruleLiteral ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4869:1: ( ruleLiteral )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4875:1: ( ( ruleLiteral ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4876:1: ( ruleLiteral )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4869:1: ( ruleLiteral )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4870:1: ruleLiteral
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4876:1: ( ruleLiteral )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4877:1: ruleLiteral
             {
              before(grammarAccess.getSimpleMemberAssignmentAccess().getDefaultValueLiteralParserRuleCall_1_1_0()); 
-            pushFollow(FOLLOW_ruleLiteral_in_rule__SimpleMemberAssignment__DefaultValueAssignment_1_19883);
+            pushFollow(FOLLOW_ruleLiteral_in_rule__SimpleMemberAssignment__DefaultValueAssignment_1_19904);
             ruleLiteral();
 
             state._fsp--;
@@ -13352,20 +13380,20 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Literal__LiteralAssignment_0_1"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4879:1: rule__Literal__LiteralAssignment_0_1 : ( ruleBooleanValue ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4886:1: rule__Literal__LiteralAssignment_0_1 : ( ruleBooleanValue ) ;
     public final void rule__Literal__LiteralAssignment_0_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4883:1: ( ( ruleBooleanValue ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4884:1: ( ruleBooleanValue )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4890:1: ( ( ruleBooleanValue ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4891:1: ( ruleBooleanValue )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4884:1: ( ruleBooleanValue )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4885:1: ruleBooleanValue
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4891:1: ( ruleBooleanValue )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4892:1: ruleBooleanValue
             {
              before(grammarAccess.getLiteralAccess().getLiteralBooleanValueEnumRuleCall_0_1_0()); 
-            pushFollow(FOLLOW_ruleBooleanValue_in_rule__Literal__LiteralAssignment_0_19914);
+            pushFollow(FOLLOW_ruleBooleanValue_in_rule__Literal__LiteralAssignment_0_19935);
             ruleBooleanValue();
 
             state._fsp--;
@@ -13393,20 +13421,20 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Literal__LiteralAssignment_1_1"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4894:1: rule__Literal__LiteralAssignment_1_1 : ( RULE_STRING ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4901:1: rule__Literal__LiteralAssignment_1_1 : ( RULE_STRING ) ;
     public final void rule__Literal__LiteralAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4898:1: ( ( RULE_STRING ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4899:1: ( RULE_STRING )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4905:1: ( ( RULE_STRING ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4906:1: ( RULE_STRING )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4899:1: ( RULE_STRING )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4900:1: RULE_STRING
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4906:1: ( RULE_STRING )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4907:1: RULE_STRING
             {
              before(grammarAccess.getLiteralAccess().getLiteralSTRINGTerminalRuleCall_1_1_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Literal__LiteralAssignment_1_19945); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Literal__LiteralAssignment_1_19966); 
              after(grammarAccess.getLiteralAccess().getLiteralSTRINGTerminalRuleCall_1_1_0()); 
 
             }
@@ -13430,20 +13458,20 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Literal__LiteralAssignment_2_1"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4909:1: rule__Literal__LiteralAssignment_2_1 : ( ruleSignedNumber ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4916:1: rule__Literal__LiteralAssignment_2_1 : ( ruleSignedNumber ) ;
     public final void rule__Literal__LiteralAssignment_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4913:1: ( ( ruleSignedNumber ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4914:1: ( ruleSignedNumber )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4920:1: ( ( ruleSignedNumber ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4921:1: ( ruleSignedNumber )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4914:1: ( ruleSignedNumber )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4915:1: ruleSignedNumber
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4921:1: ( ruleSignedNumber )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4922:1: ruleSignedNumber
             {
              before(grammarAccess.getLiteralAccess().getLiteralSignedNumberParserRuleCall_2_1_0()); 
-            pushFollow(FOLLOW_ruleSignedNumber_in_rule__Literal__LiteralAssignment_2_19976);
+            pushFollow(FOLLOW_ruleSignedNumber_in_rule__Literal__LiteralAssignment_2_19997);
             ruleSignedNumber();
 
             state._fsp--;
@@ -13471,20 +13499,20 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__BodyBlock__TypeAssignment_1"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4924:1: rule__BodyBlock__TypeAssignment_1 : ( ruleBlockType ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4931:1: rule__BodyBlock__TypeAssignment_1 : ( ruleBlockType ) ;
     public final void rule__BodyBlock__TypeAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4928:1: ( ( ruleBlockType ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4929:1: ( ruleBlockType )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4935:1: ( ( ruleBlockType ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4936:1: ( ruleBlockType )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4929:1: ( ruleBlockType )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4930:1: ruleBlockType
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4936:1: ( ruleBlockType )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4937:1: ruleBlockType
             {
              before(grammarAccess.getBodyBlockAccess().getTypeBlockTypeParserRuleCall_1_0()); 
-            pushFollow(FOLLOW_ruleBlockType_in_rule__BodyBlock__TypeAssignment_110007);
+            pushFollow(FOLLOW_ruleBlockType_in_rule__BodyBlock__TypeAssignment_110028);
             ruleBlockType();
 
             state._fsp--;
@@ -13512,24 +13540,24 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ResponseBlock__SuperTypeAssignment_2_1"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4939:1: rule__ResponseBlock__SuperTypeAssignment_2_1 : ( ( RULE_ID ) ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4946:1: rule__ResponseBlock__SuperTypeAssignment_2_1 : ( ( RULE_ID ) ) ;
     public final void rule__ResponseBlock__SuperTypeAssignment_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4943:1: ( ( ( RULE_ID ) ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4944:1: ( ( RULE_ID ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4950:1: ( ( ( RULE_ID ) ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4951:1: ( ( RULE_ID ) )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4944:1: ( ( RULE_ID ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4945:1: ( RULE_ID )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4951:1: ( ( RULE_ID ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4952:1: ( RULE_ID )
             {
              before(grammarAccess.getResponseBlockAccess().getSuperTypeComplexTypeDeclarationCrossReference_2_1_0()); 
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4946:1: ( RULE_ID )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4947:1: RULE_ID
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4953:1: ( RULE_ID )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4954:1: RULE_ID
             {
              before(grammarAccess.getResponseBlockAccess().getSuperTypeComplexTypeDeclarationIDTerminalRuleCall_2_1_0_1()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__ResponseBlock__SuperTypeAssignment_2_110042); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__ResponseBlock__SuperTypeAssignment_2_110063); 
              after(grammarAccess.getResponseBlockAccess().getSuperTypeComplexTypeDeclarationIDTerminalRuleCall_2_1_0_1()); 
 
             }
@@ -13557,20 +13585,20 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ResponseBlock__TypeAssignment_3"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4958:1: rule__ResponseBlock__TypeAssignment_3 : ( ruleBlockType ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4965:1: rule__ResponseBlock__TypeAssignment_3 : ( ruleBlockType ) ;
     public final void rule__ResponseBlock__TypeAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4962:1: ( ( ruleBlockType ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4963:1: ( ruleBlockType )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4969:1: ( ( ruleBlockType ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4970:1: ( ruleBlockType )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4963:1: ( ruleBlockType )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4964:1: ruleBlockType
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4970:1: ( ruleBlockType )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4971:1: ruleBlockType
             {
              before(grammarAccess.getResponseBlockAccess().getTypeBlockTypeParserRuleCall_3_0()); 
-            pushFollow(FOLLOW_ruleBlockType_in_rule__ResponseBlock__TypeAssignment_310077);
+            pushFollow(FOLLOW_ruleBlockType_in_rule__ResponseBlock__TypeAssignment_310098);
             ruleBlockType();
 
             state._fsp--;
@@ -13598,23 +13626,23 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Member__NameAssignment_0"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4973:1: rule__Member__NameAssignment_0 : ( ( rule__Member__NameAlternatives_0_0 ) ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4980:1: rule__Member__NameAssignment_0 : ( ( rule__Member__NameAlternatives_0_0 ) ) ;
     public final void rule__Member__NameAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4977:1: ( ( ( rule__Member__NameAlternatives_0_0 ) ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4978:1: ( ( rule__Member__NameAlternatives_0_0 ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4984:1: ( ( ( rule__Member__NameAlternatives_0_0 ) ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4985:1: ( ( rule__Member__NameAlternatives_0_0 ) )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4978:1: ( ( rule__Member__NameAlternatives_0_0 ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4979:1: ( rule__Member__NameAlternatives_0_0 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4985:1: ( ( rule__Member__NameAlternatives_0_0 ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4986:1: ( rule__Member__NameAlternatives_0_0 )
             {
              before(grammarAccess.getMemberAccess().getNameAlternatives_0_0()); 
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4980:1: ( rule__Member__NameAlternatives_0_0 )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4980:2: rule__Member__NameAlternatives_0_0
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4987:1: ( rule__Member__NameAlternatives_0_0 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4987:2: rule__Member__NameAlternatives_0_0
             {
-            pushFollow(FOLLOW_rule__Member__NameAlternatives_0_0_in_rule__Member__NameAssignment_010108);
+            pushFollow(FOLLOW_rule__Member__NameAlternatives_0_0_in_rule__Member__NameAssignment_010129);
             rule__Member__NameAlternatives_0_0();
 
             state._fsp--;
@@ -13645,20 +13673,20 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Member__TypeAssignment_2"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4989:1: rule__Member__TypeAssignment_2 : ( ruleType ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4996:1: rule__Member__TypeAssignment_2 : ( ruleType ) ;
     public final void rule__Member__TypeAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4993:1: ( ( ruleType ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4994:1: ( ruleType )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5000:1: ( ( ruleType ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5001:1: ( ruleType )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4994:1: ( ruleType )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4995:1: ruleType
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5001:1: ( ruleType )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5002:1: ruleType
             {
              before(grammarAccess.getMemberAccess().getTypeTypeParserRuleCall_2_0()); 
-            pushFollow(FOLLOW_ruleType_in_rule__Member__TypeAssignment_210141);
+            pushFollow(FOLLOW_ruleType_in_rule__Member__TypeAssignment_210162);
             ruleType();
 
             state._fsp--;
@@ -13686,23 +13714,23 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__SimpleMember__NameAssignment_0"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5004:1: rule__SimpleMember__NameAssignment_0 : ( ( rule__SimpleMember__NameAlternatives_0_0 ) ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5011:1: rule__SimpleMember__NameAssignment_0 : ( ( rule__SimpleMember__NameAlternatives_0_0 ) ) ;
     public final void rule__SimpleMember__NameAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5008:1: ( ( ( rule__SimpleMember__NameAlternatives_0_0 ) ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5009:1: ( ( rule__SimpleMember__NameAlternatives_0_0 ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5015:1: ( ( ( rule__SimpleMember__NameAlternatives_0_0 ) ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5016:1: ( ( rule__SimpleMember__NameAlternatives_0_0 ) )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5009:1: ( ( rule__SimpleMember__NameAlternatives_0_0 ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5010:1: ( rule__SimpleMember__NameAlternatives_0_0 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5016:1: ( ( rule__SimpleMember__NameAlternatives_0_0 ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5017:1: ( rule__SimpleMember__NameAlternatives_0_0 )
             {
              before(grammarAccess.getSimpleMemberAccess().getNameAlternatives_0_0()); 
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5011:1: ( rule__SimpleMember__NameAlternatives_0_0 )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5011:2: rule__SimpleMember__NameAlternatives_0_0
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5018:1: ( rule__SimpleMember__NameAlternatives_0_0 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5018:2: rule__SimpleMember__NameAlternatives_0_0
             {
-            pushFollow(FOLLOW_rule__SimpleMember__NameAlternatives_0_0_in_rule__SimpleMember__NameAssignment_010172);
+            pushFollow(FOLLOW_rule__SimpleMember__NameAlternatives_0_0_in_rule__SimpleMember__NameAssignment_010193);
             rule__SimpleMember__NameAlternatives_0_0();
 
             state._fsp--;
@@ -13733,20 +13761,20 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__SimpleMember__TypeAssignment_2"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5020:1: rule__SimpleMember__TypeAssignment_2 : ( ruleIntrinsicType ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5027:1: rule__SimpleMember__TypeAssignment_2 : ( ruleIntrinsicType ) ;
     public final void rule__SimpleMember__TypeAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5024:1: ( ( ruleIntrinsicType ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5025:1: ( ruleIntrinsicType )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5031:1: ( ( ruleIntrinsicType ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5032:1: ( ruleIntrinsicType )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5025:1: ( ruleIntrinsicType )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5026:1: ruleIntrinsicType
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5032:1: ( ruleIntrinsicType )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5033:1: ruleIntrinsicType
             {
              before(grammarAccess.getSimpleMemberAccess().getTypeIntrinsicTypeParserRuleCall_2_0()); 
-            pushFollow(FOLLOW_ruleIntrinsicType_in_rule__SimpleMember__TypeAssignment_210205);
+            pushFollow(FOLLOW_ruleIntrinsicType_in_rule__SimpleMember__TypeAssignment_210226);
             ruleIntrinsicType();
 
             state._fsp--;
@@ -13774,23 +13802,23 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ArrayType__ElementTypeAssignment_0"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5035:1: rule__ArrayType__ElementTypeAssignment_0 : ( ( rule__ArrayType__ElementTypeAlternatives_0_0 ) ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5042:1: rule__ArrayType__ElementTypeAssignment_0 : ( ( rule__ArrayType__ElementTypeAlternatives_0_0 ) ) ;
     public final void rule__ArrayType__ElementTypeAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5039:1: ( ( ( rule__ArrayType__ElementTypeAlternatives_0_0 ) ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5040:1: ( ( rule__ArrayType__ElementTypeAlternatives_0_0 ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5046:1: ( ( ( rule__ArrayType__ElementTypeAlternatives_0_0 ) ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5047:1: ( ( rule__ArrayType__ElementTypeAlternatives_0_0 ) )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5040:1: ( ( rule__ArrayType__ElementTypeAlternatives_0_0 ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5041:1: ( rule__ArrayType__ElementTypeAlternatives_0_0 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5047:1: ( ( rule__ArrayType__ElementTypeAlternatives_0_0 ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5048:1: ( rule__ArrayType__ElementTypeAlternatives_0_0 )
             {
              before(grammarAccess.getArrayTypeAccess().getElementTypeAlternatives_0_0()); 
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5042:1: ( rule__ArrayType__ElementTypeAlternatives_0_0 )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5042:2: rule__ArrayType__ElementTypeAlternatives_0_0
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5049:1: ( rule__ArrayType__ElementTypeAlternatives_0_0 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5049:2: rule__ArrayType__ElementTypeAlternatives_0_0
             {
-            pushFollow(FOLLOW_rule__ArrayType__ElementTypeAlternatives_0_0_in_rule__ArrayType__ElementTypeAssignment_010236);
+            pushFollow(FOLLOW_rule__ArrayType__ElementTypeAlternatives_0_0_in_rule__ArrayType__ElementTypeAssignment_010257);
             rule__ArrayType__ElementTypeAlternatives_0_0();
 
             state._fsp--;
@@ -13821,24 +13849,24 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ArrayType__IdAssignment_1"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5051:1: rule__ArrayType__IdAssignment_1 : ( ( '[]' ) ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5058:1: rule__ArrayType__IdAssignment_1 : ( ( '[]' ) ) ;
     public final void rule__ArrayType__IdAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5055:1: ( ( ( '[]' ) ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5056:1: ( ( '[]' ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5062:1: ( ( ( '[]' ) ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5063:1: ( ( '[]' ) )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5056:1: ( ( '[]' ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5057:1: ( '[]' )
-            {
-             before(grammarAccess.getArrayTypeAccess().getIdLeftSquareBracketRightSquareBracketKeyword_1_0()); 
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5058:1: ( '[]' )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5059:1: '[]'
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5063:1: ( ( '[]' ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5064:1: ( '[]' )
             {
              before(grammarAccess.getArrayTypeAccess().getIdLeftSquareBracketRightSquareBracketKeyword_1_0()); 
-            match(input,32,FOLLOW_32_in_rule__ArrayType__IdAssignment_110274); 
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5065:1: ( '[]' )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5066:1: '[]'
+            {
+             before(grammarAccess.getArrayTypeAccess().getIdLeftSquareBracketRightSquareBracketKeyword_1_0()); 
+            match(input,33,FOLLOW_33_in_rule__ArrayType__IdAssignment_110295); 
              after(grammarAccess.getArrayTypeAccess().getIdLeftSquareBracketRightSquareBracketKeyword_1_0()); 
 
             }
@@ -13866,24 +13894,24 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__UserType__DeclarationAssignment"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5074:1: rule__UserType__DeclarationAssignment : ( ( RULE_ID ) ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5081:1: rule__UserType__DeclarationAssignment : ( ( RULE_ID ) ) ;
     public final void rule__UserType__DeclarationAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5078:1: ( ( ( RULE_ID ) ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5079:1: ( ( RULE_ID ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5085:1: ( ( ( RULE_ID ) ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5086:1: ( ( RULE_ID ) )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5079:1: ( ( RULE_ID ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5080:1: ( RULE_ID )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5086:1: ( ( RULE_ID ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5087:1: ( RULE_ID )
             {
              before(grammarAccess.getUserTypeAccess().getDeclarationUserTypeDeclarationCrossReference_0()); 
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5081:1: ( RULE_ID )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5082:1: RULE_ID
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5088:1: ( RULE_ID )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5089:1: RULE_ID
             {
              before(grammarAccess.getUserTypeAccess().getDeclarationUserTypeDeclarationIDTerminalRuleCall_0_1()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__UserType__DeclarationAssignment10317); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__UserType__DeclarationAssignment10338); 
              after(grammarAccess.getUserTypeAccess().getDeclarationUserTypeDeclarationIDTerminalRuleCall_0_1()); 
 
             }
@@ -13911,24 +13939,24 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ComplexTypeDeclaration__KeywordAssignment_0"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5093:1: rule__ComplexTypeDeclaration__KeywordAssignment_0 : ( ( 'entity' ) ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5100:1: rule__ComplexTypeDeclaration__KeywordAssignment_0 : ( ( 'entity' ) ) ;
     public final void rule__ComplexTypeDeclaration__KeywordAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5097:1: ( ( ( 'entity' ) ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5098:1: ( ( 'entity' ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5104:1: ( ( ( 'entity' ) ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5105:1: ( ( 'entity' ) )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5098:1: ( ( 'entity' ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5099:1: ( 'entity' )
-            {
-             before(grammarAccess.getComplexTypeDeclarationAccess().getKeywordEntityKeyword_0_0()); 
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5100:1: ( 'entity' )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5101:1: 'entity'
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5105:1: ( ( 'entity' ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5106:1: ( 'entity' )
             {
              before(grammarAccess.getComplexTypeDeclarationAccess().getKeywordEntityKeyword_0_0()); 
-            match(input,33,FOLLOW_33_in_rule__ComplexTypeDeclaration__KeywordAssignment_010357); 
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5107:1: ( 'entity' )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5108:1: 'entity'
+            {
+             before(grammarAccess.getComplexTypeDeclarationAccess().getKeywordEntityKeyword_0_0()); 
+            match(input,34,FOLLOW_34_in_rule__ComplexTypeDeclaration__KeywordAssignment_010378); 
              after(grammarAccess.getComplexTypeDeclarationAccess().getKeywordEntityKeyword_0_0()); 
 
             }
@@ -13956,24 +13984,24 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ComplexTypeDeclaration__NogenAssignment_1"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5116:1: rule__ComplexTypeDeclaration__NogenAssignment_1 : ( ( 'nogen' ) ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5123:1: rule__ComplexTypeDeclaration__NogenAssignment_1 : ( ( 'nogen' ) ) ;
     public final void rule__ComplexTypeDeclaration__NogenAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5120:1: ( ( ( 'nogen' ) ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5121:1: ( ( 'nogen' ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5127:1: ( ( ( 'nogen' ) ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5128:1: ( ( 'nogen' ) )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5121:1: ( ( 'nogen' ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5122:1: ( 'nogen' )
-            {
-             before(grammarAccess.getComplexTypeDeclarationAccess().getNogenNogenKeyword_1_0()); 
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5123:1: ( 'nogen' )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5124:1: 'nogen'
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5128:1: ( ( 'nogen' ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5129:1: ( 'nogen' )
             {
              before(grammarAccess.getComplexTypeDeclarationAccess().getNogenNogenKeyword_1_0()); 
-            match(input,34,FOLLOW_34_in_rule__ComplexTypeDeclaration__NogenAssignment_110401); 
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5130:1: ( 'nogen' )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5131:1: 'nogen'
+            {
+             before(grammarAccess.getComplexTypeDeclarationAccess().getNogenNogenKeyword_1_0()); 
+            match(input,35,FOLLOW_35_in_rule__ComplexTypeDeclaration__NogenAssignment_110422); 
              after(grammarAccess.getComplexTypeDeclarationAccess().getNogenNogenKeyword_1_0()); 
 
             }
@@ -14001,20 +14029,20 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ComplexTypeDeclaration__NameAssignment_2"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5139:1: rule__ComplexTypeDeclaration__NameAssignment_2 : ( RULE_ID ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5146:1: rule__ComplexTypeDeclaration__NameAssignment_2 : ( RULE_ID ) ;
     public final void rule__ComplexTypeDeclaration__NameAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5143:1: ( ( RULE_ID ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5144:1: ( RULE_ID )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5150:1: ( ( RULE_ID ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5151:1: ( RULE_ID )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5144:1: ( RULE_ID )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5145:1: RULE_ID
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5151:1: ( RULE_ID )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5152:1: RULE_ID
             {
              before(grammarAccess.getComplexTypeDeclarationAccess().getNameIDTerminalRuleCall_2_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__ComplexTypeDeclaration__NameAssignment_210440); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__ComplexTypeDeclaration__NameAssignment_210461); 
              after(grammarAccess.getComplexTypeDeclarationAccess().getNameIDTerminalRuleCall_2_0()); 
 
             }
@@ -14038,20 +14066,20 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ComplexTypeDeclaration__LiteralAssignment_3"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5154:1: rule__ComplexTypeDeclaration__LiteralAssignment_3 : ( ruleComplexTypeLiteral ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5161:1: rule__ComplexTypeDeclaration__LiteralAssignment_3 : ( ruleComplexTypeLiteral ) ;
     public final void rule__ComplexTypeDeclaration__LiteralAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5158:1: ( ( ruleComplexTypeLiteral ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5159:1: ( ruleComplexTypeLiteral )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5165:1: ( ( ruleComplexTypeLiteral ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5166:1: ( ruleComplexTypeLiteral )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5159:1: ( ruleComplexTypeLiteral )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5160:1: ruleComplexTypeLiteral
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5166:1: ( ruleComplexTypeLiteral )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5167:1: ruleComplexTypeLiteral
             {
              before(grammarAccess.getComplexTypeDeclarationAccess().getLiteralComplexTypeLiteralParserRuleCall_3_0()); 
-            pushFollow(FOLLOW_ruleComplexTypeLiteral_in_rule__ComplexTypeDeclaration__LiteralAssignment_310471);
+            pushFollow(FOLLOW_ruleComplexTypeLiteral_in_rule__ComplexTypeDeclaration__LiteralAssignment_310492);
             ruleComplexTypeLiteral();
 
             state._fsp--;
@@ -14079,24 +14107,24 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__EnumTypeDeclaration__KeywordAssignment_0"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5169:1: rule__EnumTypeDeclaration__KeywordAssignment_0 : ( ( 'enum' ) ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5176:1: rule__EnumTypeDeclaration__KeywordAssignment_0 : ( ( 'enum' ) ) ;
     public final void rule__EnumTypeDeclaration__KeywordAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5173:1: ( ( ( 'enum' ) ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5174:1: ( ( 'enum' ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5180:1: ( ( ( 'enum' ) ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5181:1: ( ( 'enum' ) )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5174:1: ( ( 'enum' ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5175:1: ( 'enum' )
-            {
-             before(grammarAccess.getEnumTypeDeclarationAccess().getKeywordEnumKeyword_0_0()); 
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5176:1: ( 'enum' )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5177:1: 'enum'
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5181:1: ( ( 'enum' ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5182:1: ( 'enum' )
             {
              before(grammarAccess.getEnumTypeDeclarationAccess().getKeywordEnumKeyword_0_0()); 
-            match(input,35,FOLLOW_35_in_rule__EnumTypeDeclaration__KeywordAssignment_010507); 
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5183:1: ( 'enum' )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5184:1: 'enum'
+            {
+             before(grammarAccess.getEnumTypeDeclarationAccess().getKeywordEnumKeyword_0_0()); 
+            match(input,36,FOLLOW_36_in_rule__EnumTypeDeclaration__KeywordAssignment_010528); 
              after(grammarAccess.getEnumTypeDeclarationAccess().getKeywordEnumKeyword_0_0()); 
 
             }
@@ -14124,24 +14152,24 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__EnumTypeDeclaration__NogenAssignment_1"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5192:1: rule__EnumTypeDeclaration__NogenAssignment_1 : ( ( 'nogen' ) ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5199:1: rule__EnumTypeDeclaration__NogenAssignment_1 : ( ( 'nogen' ) ) ;
     public final void rule__EnumTypeDeclaration__NogenAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5196:1: ( ( ( 'nogen' ) ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5197:1: ( ( 'nogen' ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5203:1: ( ( ( 'nogen' ) ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5204:1: ( ( 'nogen' ) )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5197:1: ( ( 'nogen' ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5198:1: ( 'nogen' )
-            {
-             before(grammarAccess.getEnumTypeDeclarationAccess().getNogenNogenKeyword_1_0()); 
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5199:1: ( 'nogen' )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5200:1: 'nogen'
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5204:1: ( ( 'nogen' ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5205:1: ( 'nogen' )
             {
              before(grammarAccess.getEnumTypeDeclarationAccess().getNogenNogenKeyword_1_0()); 
-            match(input,34,FOLLOW_34_in_rule__EnumTypeDeclaration__NogenAssignment_110551); 
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5206:1: ( 'nogen' )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5207:1: 'nogen'
+            {
+             before(grammarAccess.getEnumTypeDeclarationAccess().getNogenNogenKeyword_1_0()); 
+            match(input,35,FOLLOW_35_in_rule__EnumTypeDeclaration__NogenAssignment_110572); 
              after(grammarAccess.getEnumTypeDeclarationAccess().getNogenNogenKeyword_1_0()); 
 
             }
@@ -14169,20 +14197,20 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__EnumTypeDeclaration__NameAssignment_2"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5215:1: rule__EnumTypeDeclaration__NameAssignment_2 : ( RULE_ID ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5222:1: rule__EnumTypeDeclaration__NameAssignment_2 : ( RULE_ID ) ;
     public final void rule__EnumTypeDeclaration__NameAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5219:1: ( ( RULE_ID ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5220:1: ( RULE_ID )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5226:1: ( ( RULE_ID ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5227:1: ( RULE_ID )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5220:1: ( RULE_ID )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5221:1: RULE_ID
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5227:1: ( RULE_ID )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5228:1: RULE_ID
             {
              before(grammarAccess.getEnumTypeDeclarationAccess().getNameIDTerminalRuleCall_2_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__EnumTypeDeclaration__NameAssignment_210590); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__EnumTypeDeclaration__NameAssignment_210611); 
              after(grammarAccess.getEnumTypeDeclarationAccess().getNameIDTerminalRuleCall_2_0()); 
 
             }
@@ -14206,20 +14234,20 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__EnumTypeDeclaration__SuperTypeAssignment_3_1"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5230:1: rule__EnumTypeDeclaration__SuperTypeAssignment_3_1 : ( ruleIntegerType ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5237:1: rule__EnumTypeDeclaration__SuperTypeAssignment_3_1 : ( ruleIntegerType ) ;
     public final void rule__EnumTypeDeclaration__SuperTypeAssignment_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5234:1: ( ( ruleIntegerType ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5235:1: ( ruleIntegerType )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5241:1: ( ( ruleIntegerType ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5242:1: ( ruleIntegerType )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5235:1: ( ruleIntegerType )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5236:1: ruleIntegerType
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5242:1: ( ruleIntegerType )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5243:1: ruleIntegerType
             {
              before(grammarAccess.getEnumTypeDeclarationAccess().getSuperTypeIntegerTypeParserRuleCall_3_1_0()); 
-            pushFollow(FOLLOW_ruleIntegerType_in_rule__EnumTypeDeclaration__SuperTypeAssignment_3_110621);
+            pushFollow(FOLLOW_ruleIntegerType_in_rule__EnumTypeDeclaration__SuperTypeAssignment_3_110642);
             ruleIntegerType();
 
             state._fsp--;
@@ -14247,20 +14275,20 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__EnumTypeDeclaration__LiteralAssignment_4"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5245:1: rule__EnumTypeDeclaration__LiteralAssignment_4 : ( ruleEnumTypeLiteral ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5252:1: rule__EnumTypeDeclaration__LiteralAssignment_4 : ( ruleEnumTypeLiteral ) ;
     public final void rule__EnumTypeDeclaration__LiteralAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5249:1: ( ( ruleEnumTypeLiteral ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5250:1: ( ruleEnumTypeLiteral )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5256:1: ( ( ruleEnumTypeLiteral ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5257:1: ( ruleEnumTypeLiteral )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5250:1: ( ruleEnumTypeLiteral )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5251:1: ruleEnumTypeLiteral
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5257:1: ( ruleEnumTypeLiteral )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5258:1: ruleEnumTypeLiteral
             {
              before(grammarAccess.getEnumTypeDeclarationAccess().getLiteralEnumTypeLiteralParserRuleCall_4_0()); 
-            pushFollow(FOLLOW_ruleEnumTypeLiteral_in_rule__EnumTypeDeclaration__LiteralAssignment_410652);
+            pushFollow(FOLLOW_ruleEnumTypeLiteral_in_rule__EnumTypeDeclaration__LiteralAssignment_410673);
             ruleEnumTypeLiteral();
 
             state._fsp--;
@@ -14288,20 +14316,20 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__EnumTypeLiteral__MembersAssignment_1"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5260:1: rule__EnumTypeLiteral__MembersAssignment_1 : ( ruleEnumMember ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5267:1: rule__EnumTypeLiteral__MembersAssignment_1 : ( ruleEnumMember ) ;
     public final void rule__EnumTypeLiteral__MembersAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5264:1: ( ( ruleEnumMember ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5265:1: ( ruleEnumMember )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5271:1: ( ( ruleEnumMember ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5272:1: ( ruleEnumMember )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5265:1: ( ruleEnumMember )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5266:1: ruleEnumMember
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5272:1: ( ruleEnumMember )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5273:1: ruleEnumMember
             {
              before(grammarAccess.getEnumTypeLiteralAccess().getMembersEnumMemberParserRuleCall_1_0()); 
-            pushFollow(FOLLOW_ruleEnumMember_in_rule__EnumTypeLiteral__MembersAssignment_110683);
+            pushFollow(FOLLOW_ruleEnumMember_in_rule__EnumTypeLiteral__MembersAssignment_110704);
             ruleEnumMember();
 
             state._fsp--;
@@ -14329,20 +14357,20 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__EnumTypeLiteral__MembersAssignment_2_1"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5275:1: rule__EnumTypeLiteral__MembersAssignment_2_1 : ( ruleEnumMember ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5282:1: rule__EnumTypeLiteral__MembersAssignment_2_1 : ( ruleEnumMember ) ;
     public final void rule__EnumTypeLiteral__MembersAssignment_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5279:1: ( ( ruleEnumMember ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5280:1: ( ruleEnumMember )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5286:1: ( ( ruleEnumMember ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5287:1: ( ruleEnumMember )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5280:1: ( ruleEnumMember )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5281:1: ruleEnumMember
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5287:1: ( ruleEnumMember )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5288:1: ruleEnumMember
             {
              before(grammarAccess.getEnumTypeLiteralAccess().getMembersEnumMemberParserRuleCall_2_1_0()); 
-            pushFollow(FOLLOW_ruleEnumMember_in_rule__EnumTypeLiteral__MembersAssignment_2_110714);
+            pushFollow(FOLLOW_ruleEnumMember_in_rule__EnumTypeLiteral__MembersAssignment_2_110735);
             ruleEnumMember();
 
             state._fsp--;
@@ -14370,20 +14398,20 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__EnumMember__NameAssignment_0"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5290:1: rule__EnumMember__NameAssignment_0 : ( RULE_ID ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5297:1: rule__EnumMember__NameAssignment_0 : ( RULE_ID ) ;
     public final void rule__EnumMember__NameAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5294:1: ( ( RULE_ID ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5295:1: ( RULE_ID )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5301:1: ( ( RULE_ID ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5302:1: ( RULE_ID )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5295:1: ( RULE_ID )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5296:1: RULE_ID
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5302:1: ( RULE_ID )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5303:1: RULE_ID
             {
              before(grammarAccess.getEnumMemberAccess().getNameIDTerminalRuleCall_0_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__EnumMember__NameAssignment_010745); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__EnumMember__NameAssignment_010766); 
              after(grammarAccess.getEnumMemberAccess().getNameIDTerminalRuleCall_0_0()); 
 
             }
@@ -14407,24 +14435,24 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__EnumMember__AssignmentAssignment_1_0"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5305:1: rule__EnumMember__AssignmentAssignment_1_0 : ( ( '=' ) ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5312:1: rule__EnumMember__AssignmentAssignment_1_0 : ( ( '=' ) ) ;
     public final void rule__EnumMember__AssignmentAssignment_1_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5309:1: ( ( ( '=' ) ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5310:1: ( ( '=' ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5316:1: ( ( ( '=' ) ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5317:1: ( ( '=' ) )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5310:1: ( ( '=' ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5311:1: ( '=' )
-            {
-             before(grammarAccess.getEnumMemberAccess().getAssignmentEqualsSignKeyword_1_0_0()); 
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5312:1: ( '=' )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5313:1: '='
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5317:1: ( ( '=' ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5318:1: ( '=' )
             {
              before(grammarAccess.getEnumMemberAccess().getAssignmentEqualsSignKeyword_1_0_0()); 
-            match(input,27,FOLLOW_27_in_rule__EnumMember__AssignmentAssignment_1_010781); 
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5319:1: ( '=' )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5320:1: '='
+            {
+             before(grammarAccess.getEnumMemberAccess().getAssignmentEqualsSignKeyword_1_0_0()); 
+            match(input,28,FOLLOW_28_in_rule__EnumMember__AssignmentAssignment_1_010802); 
              after(grammarAccess.getEnumMemberAccess().getAssignmentEqualsSignKeyword_1_0_0()); 
 
             }
@@ -14452,20 +14480,20 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__EnumMember__ValueAssignment_1_1"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5328:1: rule__EnumMember__ValueAssignment_1_1 : ( RULE_NUMBER ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5335:1: rule__EnumMember__ValueAssignment_1_1 : ( RULE_NUMBER ) ;
     public final void rule__EnumMember__ValueAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5332:1: ( ( RULE_NUMBER ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5333:1: ( RULE_NUMBER )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5339:1: ( ( RULE_NUMBER ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5340:1: ( RULE_NUMBER )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5333:1: ( RULE_NUMBER )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5334:1: RULE_NUMBER
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5340:1: ( RULE_NUMBER )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5341:1: RULE_NUMBER
             {
              before(grammarAccess.getEnumMemberAccess().getValueNUMBERTerminalRuleCall_1_1_0()); 
-            match(input,RULE_NUMBER,FOLLOW_RULE_NUMBER_in_rule__EnumMember__ValueAssignment_1_110820); 
+            match(input,RULE_NUMBER,FOLLOW_RULE_NUMBER_in_rule__EnumMember__ValueAssignment_1_110841); 
              after(grammarAccess.getEnumMemberAccess().getValueNUMBERTerminalRuleCall_1_1_0()); 
 
             }
@@ -14489,20 +14517,20 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ComplexTypeLiteral__MembersAssignment_1"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5343:1: rule__ComplexTypeLiteral__MembersAssignment_1 : ( ruleMember ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5350:1: rule__ComplexTypeLiteral__MembersAssignment_1 : ( ruleMember ) ;
     public final void rule__ComplexTypeLiteral__MembersAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5347:1: ( ( ruleMember ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5348:1: ( ruleMember )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5354:1: ( ( ruleMember ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5355:1: ( ruleMember )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5348:1: ( ruleMember )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5349:1: ruleMember
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5355:1: ( ruleMember )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5356:1: ruleMember
             {
              before(grammarAccess.getComplexTypeLiteralAccess().getMembersMemberParserRuleCall_1_0()); 
-            pushFollow(FOLLOW_ruleMember_in_rule__ComplexTypeLiteral__MembersAssignment_110851);
+            pushFollow(FOLLOW_ruleMember_in_rule__ComplexTypeLiteral__MembersAssignment_110872);
             ruleMember();
 
             state._fsp--;
@@ -14530,20 +14558,20 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ComplexTypeLiteral__MembersAssignment_2_1"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5358:1: rule__ComplexTypeLiteral__MembersAssignment_2_1 : ( ruleMember ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5365:1: rule__ComplexTypeLiteral__MembersAssignment_2_1 : ( ruleMember ) ;
     public final void rule__ComplexTypeLiteral__MembersAssignment_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5362:1: ( ( ruleMember ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5363:1: ( ruleMember )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5369:1: ( ( ruleMember ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5370:1: ( ruleMember )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5363:1: ( ruleMember )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5364:1: ruleMember
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5370:1: ( ruleMember )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5371:1: ruleMember
             {
              before(grammarAccess.getComplexTypeLiteralAccess().getMembersMemberParserRuleCall_2_1_0()); 
-            pushFollow(FOLLOW_ruleMember_in_rule__ComplexTypeLiteral__MembersAssignment_2_110882);
+            pushFollow(FOLLOW_ruleMember_in_rule__ComplexTypeLiteral__MembersAssignment_2_110903);
             ruleMember();
 
             state._fsp--;
@@ -14571,24 +14599,24 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__StringType__IdAssignment"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5373:1: rule__StringType__IdAssignment : ( ( 'string' ) ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5380:1: rule__StringType__IdAssignment : ( ( 'string' ) ) ;
     public final void rule__StringType__IdAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5377:1: ( ( ( 'string' ) ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5378:1: ( ( 'string' ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5384:1: ( ( ( 'string' ) ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5385:1: ( ( 'string' ) )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5378:1: ( ( 'string' ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5379:1: ( 'string' )
-            {
-             before(grammarAccess.getStringTypeAccess().getIdStringKeyword_0()); 
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5380:1: ( 'string' )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5381:1: 'string'
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5385:1: ( ( 'string' ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5386:1: ( 'string' )
             {
              before(grammarAccess.getStringTypeAccess().getIdStringKeyword_0()); 
-            match(input,36,FOLLOW_36_in_rule__StringType__IdAssignment10918); 
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5387:1: ( 'string' )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5388:1: 'string'
+            {
+             before(grammarAccess.getStringTypeAccess().getIdStringKeyword_0()); 
+            match(input,37,FOLLOW_37_in_rule__StringType__IdAssignment10939); 
              after(grammarAccess.getStringTypeAccess().getIdStringKeyword_0()); 
 
             }
@@ -14616,24 +14644,24 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__BooleanType__IdAssignment"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5396:1: rule__BooleanType__IdAssignment : ( ( 'boolean' ) ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5403:1: rule__BooleanType__IdAssignment : ( ( 'boolean' ) ) ;
     public final void rule__BooleanType__IdAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5400:1: ( ( ( 'boolean' ) ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5401:1: ( ( 'boolean' ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5407:1: ( ( ( 'boolean' ) ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5408:1: ( ( 'boolean' ) )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5401:1: ( ( 'boolean' ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5402:1: ( 'boolean' )
-            {
-             before(grammarAccess.getBooleanTypeAccess().getIdBooleanKeyword_0()); 
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5403:1: ( 'boolean' )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5404:1: 'boolean'
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5408:1: ( ( 'boolean' ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5409:1: ( 'boolean' )
             {
              before(grammarAccess.getBooleanTypeAccess().getIdBooleanKeyword_0()); 
-            match(input,37,FOLLOW_37_in_rule__BooleanType__IdAssignment10962); 
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5410:1: ( 'boolean' )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5411:1: 'boolean'
+            {
+             before(grammarAccess.getBooleanTypeAccess().getIdBooleanKeyword_0()); 
+            match(input,38,FOLLOW_38_in_rule__BooleanType__IdAssignment10983); 
              after(grammarAccess.getBooleanTypeAccess().getIdBooleanKeyword_0()); 
 
             }
@@ -14661,24 +14689,24 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__IntegerType__IdAssignment"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5419:1: rule__IntegerType__IdAssignment : ( ( 'int' ) ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5426:1: rule__IntegerType__IdAssignment : ( ( 'int' ) ) ;
     public final void rule__IntegerType__IdAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5423:1: ( ( ( 'int' ) ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5424:1: ( ( 'int' ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5430:1: ( ( ( 'int' ) ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5431:1: ( ( 'int' ) )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5424:1: ( ( 'int' ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5425:1: ( 'int' )
-            {
-             before(grammarAccess.getIntegerTypeAccess().getIdIntKeyword_0()); 
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5426:1: ( 'int' )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5427:1: 'int'
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5431:1: ( ( 'int' ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5432:1: ( 'int' )
             {
              before(grammarAccess.getIntegerTypeAccess().getIdIntKeyword_0()); 
-            match(input,38,FOLLOW_38_in_rule__IntegerType__IdAssignment11006); 
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5433:1: ( 'int' )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5434:1: 'int'
+            {
+             before(grammarAccess.getIntegerTypeAccess().getIdIntKeyword_0()); 
+            match(input,39,FOLLOW_39_in_rule__IntegerType__IdAssignment11027); 
              after(grammarAccess.getIntegerTypeAccess().getIdIntKeyword_0()); 
 
             }
@@ -14706,24 +14734,24 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__LongType__IdAssignment"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5442:1: rule__LongType__IdAssignment : ( ( 'long' ) ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5449:1: rule__LongType__IdAssignment : ( ( 'long' ) ) ;
     public final void rule__LongType__IdAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5446:1: ( ( ( 'long' ) ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5447:1: ( ( 'long' ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5453:1: ( ( ( 'long' ) ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5454:1: ( ( 'long' ) )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5447:1: ( ( 'long' ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5448:1: ( 'long' )
-            {
-             before(grammarAccess.getLongTypeAccess().getIdLongKeyword_0()); 
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5449:1: ( 'long' )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5450:1: 'long'
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5454:1: ( ( 'long' ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5455:1: ( 'long' )
             {
              before(grammarAccess.getLongTypeAccess().getIdLongKeyword_0()); 
-            match(input,39,FOLLOW_39_in_rule__LongType__IdAssignment11050); 
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5456:1: ( 'long' )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5457:1: 'long'
+            {
+             before(grammarAccess.getLongTypeAccess().getIdLongKeyword_0()); 
+            match(input,40,FOLLOW_40_in_rule__LongType__IdAssignment11071); 
              after(grammarAccess.getLongTypeAccess().getIdLongKeyword_0()); 
 
             }
@@ -14751,24 +14779,24 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__DoubleType__IdAssignment"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5465:1: rule__DoubleType__IdAssignment : ( ( 'double' ) ) ;
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5472:1: rule__DoubleType__IdAssignment : ( ( 'double' ) ) ;
     public final void rule__DoubleType__IdAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5469:1: ( ( ( 'double' ) ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5470:1: ( ( 'double' ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5476:1: ( ( ( 'double' ) ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5477:1: ( ( 'double' ) )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5470:1: ( ( 'double' ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5471:1: ( 'double' )
-            {
-             before(grammarAccess.getDoubleTypeAccess().getIdDoubleKeyword_0()); 
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5472:1: ( 'double' )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5473:1: 'double'
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5477:1: ( ( 'double' ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5478:1: ( 'double' )
             {
              before(grammarAccess.getDoubleTypeAccess().getIdDoubleKeyword_0()); 
-            match(input,40,FOLLOW_40_in_rule__DoubleType__IdAssignment11094); 
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5479:1: ( 'double' )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:5480:1: 'double'
+            {
+             before(grammarAccess.getDoubleTypeAccess().getIdDoubleKeyword_0()); 
+            match(input,41,FOLLOW_41_in_rule__DoubleType__IdAssignment11115); 
              after(grammarAccess.getDoubleTypeAccess().getIdDoubleKeyword_0()); 
 
             }
@@ -14801,23 +14829,23 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
     static final String DFA10_eotS =
         "\12\uffff";
     static final String DFA10_eofS =
-        "\1\uffff\1\7\5\11\3\uffff";
+        "\1\uffff\1\10\5\11\3\uffff";
     static final String DFA10_minS =
-        "\1\4\6\24\3\uffff";
+        "\1\4\6\25\3\uffff";
     static final String DFA10_maxS =
-        "\1\50\6\40\3\uffff";
+        "\1\51\6\41\3\uffff";
     static final String DFA10_acceptS =
-        "\7\uffff\1\1\1\3\1\2";
+        "\7\uffff\1\3\1\1\1\2";
     static final String DFA10_specialS =
         "\12\uffff}>";
     static final String[] DFA10_transitionS = {
-            "\1\1\37\uffff\1\2\1\3\1\4\1\5\1\6",
-            "\3\7\3\uffff\1\7\1\uffff\2\7\2\uffff\1\10",
-            "\3\11\3\uffff\1\11\1\uffff\2\11\2\uffff\1\10",
-            "\3\11\3\uffff\1\11\1\uffff\2\11\2\uffff\1\10",
-            "\3\11\3\uffff\1\11\1\uffff\2\11\2\uffff\1\10",
-            "\3\11\3\uffff\1\11\1\uffff\2\11\2\uffff\1\10",
-            "\3\11\3\uffff\1\11\1\uffff\2\11\2\uffff\1\10",
+            "\1\1\40\uffff\1\2\1\3\1\4\1\5\1\6",
+            "\3\10\3\uffff\1\10\1\uffff\2\10\2\uffff\1\7",
+            "\3\11\3\uffff\1\11\1\uffff\2\11\2\uffff\1\7",
+            "\3\11\3\uffff\1\11\1\uffff\2\11\2\uffff\1\7",
+            "\3\11\3\uffff\1\11\1\uffff\2\11\2\uffff\1\7",
+            "\3\11\3\uffff\1\11\1\uffff\2\11\2\uffff\1\7",
+            "\3\11\3\uffff\1\11\1\uffff\2\11\2\uffff\1\7",
             "",
             "",
             ""
@@ -15007,313 +15035,314 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
     public static final BitSet FOLLOW_12_in_rule__HttpMethodType__Alternatives3134 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_13_in_rule__HttpMethodType__Alternatives3155 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_14_in_rule__HttpMethodType__Alternatives3176 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_15_in_rule__BooleanValue__Alternatives3212 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_15_in_rule__HttpMethodType__Alternatives3197 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_16_in_rule__BooleanValue__Alternatives3233 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Model__Group__0__Impl_in_rule__Model__Group__03266 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Model__Group__1_in_rule__Model__Group__03269 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_17_in_rule__Model__Group__0__Impl3297 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Model__Group__1__Impl_in_rule__Model__Group__13328 = new BitSet(new long[]{0x0000000A00040000L});
-    public static final BitSet FOLLOW_rule__Model__Group__2_in_rule__Model__Group__13331 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Model__PackageNameAssignment_1_in_rule__Model__Group__1__Impl3358 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Model__Group__2__Impl_in_rule__Model__Group__23388 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Model__DeclarationsAssignment_2_in_rule__Model__Group__2__Impl3415 = new BitSet(new long[]{0x0000000A00040002L});
-    public static final BitSet FOLLOW_rule__Api__Group__0__Impl_in_rule__Api__Group__03452 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Api__Group__1_in_rule__Api__Group__03455 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_18_in_rule__Api__Group__0__Impl3483 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Api__Group__1__Impl_in_rule__Api__Group__13514 = new BitSet(new long[]{0x0000000000080020L});
-    public static final BitSet FOLLOW_rule__Api__Group__2_in_rule__Api__Group__13517 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Api__NameAssignment_1_in_rule__Api__Group__1__Impl3544 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Api__Group__2__Impl_in_rule__Api__Group__23574 = new BitSet(new long[]{0x0000000000080020L});
-    public static final BitSet FOLLOW_rule__Api__Group__3_in_rule__Api__Group__23577 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Api__BaseUrlAssignment_2_in_rule__Api__Group__2__Impl3604 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Api__Group__3__Impl_in_rule__Api__Group__33635 = new BitSet(new long[]{0x0000000004307800L});
-    public static final BitSet FOLLOW_rule__Api__Group__4_in_rule__Api__Group__33638 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_19_in_rule__Api__Group__3__Impl3666 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Api__Group__4__Impl_in_rule__Api__Group__43697 = new BitSet(new long[]{0x0000000004307800L});
-    public static final BitSet FOLLOW_rule__Api__Group__5_in_rule__Api__Group__43700 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Api__BlocksAssignment_4_in_rule__Api__Group__4__Impl3727 = new BitSet(new long[]{0x0000000004207802L});
-    public static final BitSet FOLLOW_rule__Api__Group__5__Impl_in_rule__Api__Group__53758 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_20_in_rule__Api__Group__5__Impl3786 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__HeaderBlock__Group__0__Impl_in_rule__HeaderBlock__Group__03829 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__HeaderBlock__Group__1_in_rule__HeaderBlock__Group__03832 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_21_in_rule__HeaderBlock__Group__0__Impl3860 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__HeaderBlock__Group__1__Impl_in_rule__HeaderBlock__Group__13891 = new BitSet(new long[]{0x0000000000400000L});
-    public static final BitSet FOLLOW_rule__HeaderBlock__Group__2_in_rule__HeaderBlock__Group__13894 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__HeaderBlock__HeadersAssignment_1_in_rule__HeaderBlock__Group__1__Impl3921 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__HeaderBlock__Group__2__Impl_in_rule__HeaderBlock__Group__23951 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__HeaderBlock__Group_2__0_in_rule__HeaderBlock__Group__2__Impl3978 = new BitSet(new long[]{0x0000000000400002L});
-    public static final BitSet FOLLOW_rule__HeaderBlock__Group_2__0__Impl_in_rule__HeaderBlock__Group_2__04015 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__HeaderBlock__Group_2__1_in_rule__HeaderBlock__Group_2__04018 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_22_in_rule__HeaderBlock__Group_2__0__Impl4046 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__HeaderBlock__Group_2__1__Impl_in_rule__HeaderBlock__Group_2__14077 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__HeaderBlock__HeadersAssignment_2_1_in_rule__HeaderBlock__Group_2__1__Impl4104 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Header__Group__0__Impl_in_rule__Header__Group__04138 = new BitSet(new long[]{0x0000000000800000L});
-    public static final BitSet FOLLOW_rule__Header__Group__1_in_rule__Header__Group__04141 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Header__NameAssignment_0_in_rule__Header__Group__0__Impl4168 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Header__Group__1__Impl_in_rule__Header__Group__14198 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__Header__Group__2_in_rule__Header__Group__14201 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_23_in_rule__Header__Group__1__Impl4229 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Header__Group__2__Impl_in_rule__Header__Group__24260 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Header__ValueAssignment_2_in_rule__Header__Group__2__Impl4287 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__HttpMethod__Group__0__Impl_in_rule__HttpMethod__Group__04323 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__HttpMethod__Group__1_in_rule__HttpMethod__Group__04326 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__HttpMethod__TypeAssignment_0_in_rule__HttpMethod__Group__0__Impl4353 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__HttpMethod__Group__1__Impl_in_rule__HttpMethod__Group__14383 = new BitSet(new long[]{0x0000000001080000L});
-    public static final BitSet FOLLOW_rule__HttpMethod__Group__2_in_rule__HttpMethod__Group__14386 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__HttpMethod__NameAssignment_1_in_rule__HttpMethod__Group__1__Impl4413 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__HttpMethod__Group__2__Impl_in_rule__HttpMethod__Group__24443 = new BitSet(new long[]{0x0000000001080000L});
-    public static final BitSet FOLLOW_rule__HttpMethod__Group__3_in_rule__HttpMethod__Group__24446 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__HttpMethod__PathAssignment_2_in_rule__HttpMethod__Group__2__Impl4473 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__HttpMethod__Group__3__Impl_in_rule__HttpMethod__Group__34504 = new BitSet(new long[]{0x0000000034300000L});
-    public static final BitSet FOLLOW_rule__HttpMethod__Group__4_in_rule__HttpMethod__Group__34507 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_19_in_rule__HttpMethod__Group__3__Impl4535 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__HttpMethod__Group__4__Impl_in_rule__HttpMethod__Group__44566 = new BitSet(new long[]{0x0000000034300000L});
-    public static final BitSet FOLLOW_rule__HttpMethod__Group__5_in_rule__HttpMethod__Group__44569 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__HttpMethod__BlocksAssignment_4_in_rule__HttpMethod__Group__4__Impl4596 = new BitSet(new long[]{0x0000000034200002L});
-    public static final BitSet FOLLOW_rule__HttpMethod__Group__5__Impl_in_rule__HttpMethod__Group__54627 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_20_in_rule__HttpMethod__Group__5__Impl4655 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Path__Group__0__Impl_in_rule__Path__Group__04698 = new BitSet(new long[]{0x0000000001000000L});
-    public static final BitSet FOLLOW_rule__Path__Group__1_in_rule__Path__Group__04701 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Path__Group__1__Impl_in_rule__Path__Group__14759 = new BitSet(new long[]{0x0000000000000030L});
-    public static final BitSet FOLLOW_rule__Path__Group__2_in_rule__Path__Group__14762 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_24_in_rule__Path__Group__1__Impl4790 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Path__Group__2__Impl_in_rule__Path__Group__24821 = new BitSet(new long[]{0x0000000001000000L});
-    public static final BitSet FOLLOW_rule__Path__Group__3_in_rule__Path__Group__24824 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Path__Alternatives_2_in_rule__Path__Group__2__Impl4851 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Path__Group__3__Impl_in_rule__Path__Group__34881 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Path__Group_3__0_in_rule__Path__Group__3__Impl4908 = new BitSet(new long[]{0x0000000001000002L});
-    public static final BitSet FOLLOW_rule__Path__Group_3__0__Impl_in_rule__Path__Group_3__04947 = new BitSet(new long[]{0x0000000000000030L});
-    public static final BitSet FOLLOW_rule__Path__Group_3__1_in_rule__Path__Group_3__04950 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_24_in_rule__Path__Group_3__0__Impl4978 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Path__Group_3__1__Impl_in_rule__Path__Group_3__15009 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Path__Alternatives_3_1_in_rule__Path__Group_3__1__Impl5036 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ArbitraryPathSegment__Group__0__Impl_in_rule__ArbitraryPathSegment__Group__05070 = new BitSet(new long[]{0x0000000002000000L});
-    public static final BitSet FOLLOW_rule__ArbitraryPathSegment__Group__1_in_rule__ArbitraryPathSegment__Group__05073 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleQualifiedName_in_rule__ArbitraryPathSegment__Group__0__Impl5100 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ArbitraryPathSegment__Group__1__Impl_in_rule__ArbitraryPathSegment__Group__15129 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ArbitraryPathSegment__Group_1__0_in_rule__ArbitraryPathSegment__Group__1__Impl5156 = new BitSet(new long[]{0x0000000002000002L});
-    public static final BitSet FOLLOW_rule__ArbitraryPathSegment__Group_1__0__Impl_in_rule__ArbitraryPathSegment__Group_1__05191 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__ArbitraryPathSegment__Group_1__1_in_rule__ArbitraryPathSegment__Group_1__05194 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_25_in_rule__ArbitraryPathSegment__Group_1__0__Impl5222 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ArbitraryPathSegment__Group_1__1__Impl_in_rule__ArbitraryPathSegment__Group_1__15253 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleQualifiedName_in_rule__ArbitraryPathSegment__Group_1__1__Impl5280 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ParamsBlock__Group__0__Impl_in_rule__ParamsBlock__Group__05313 = new BitSet(new long[]{0x0000000004000000L});
-    public static final BitSet FOLLOW_rule__ParamsBlock__Group__1_in_rule__ParamsBlock__Group__05316 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ParamsBlock__Group__1__Impl_in_rule__ParamsBlock__Group__15374 = new BitSet(new long[]{0x0000000000000030L});
-    public static final BitSet FOLLOW_rule__ParamsBlock__Group__2_in_rule__ParamsBlock__Group__15377 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_26_in_rule__ParamsBlock__Group__1__Impl5405 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ParamsBlock__Group__2__Impl_in_rule__ParamsBlock__Group__25436 = new BitSet(new long[]{0x0000000000400000L});
-    public static final BitSet FOLLOW_rule__ParamsBlock__Group__3_in_rule__ParamsBlock__Group__25439 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ParamsBlock__ParamsAssignment_2_in_rule__ParamsBlock__Group__2__Impl5466 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ParamsBlock__Group__3__Impl_in_rule__ParamsBlock__Group__35496 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ParamsBlock__Group_3__0_in_rule__ParamsBlock__Group__3__Impl5523 = new BitSet(new long[]{0x0000000000400002L});
-    public static final BitSet FOLLOW_rule__ParamsBlock__Group_3__0__Impl_in_rule__ParamsBlock__Group_3__05562 = new BitSet(new long[]{0x0000000000000030L});
-    public static final BitSet FOLLOW_rule__ParamsBlock__Group_3__1_in_rule__ParamsBlock__Group_3__05565 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_22_in_rule__ParamsBlock__Group_3__0__Impl5593 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ParamsBlock__Group_3__1__Impl_in_rule__ParamsBlock__Group_3__15624 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ParamsBlock__ParamsAssignment_3_1_in_rule__ParamsBlock__Group_3__1__Impl5651 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SimpleMemberAssignment__Group__0__Impl_in_rule__SimpleMemberAssignment__Group__05685 = new BitSet(new long[]{0x0000000008000000L});
-    public static final BitSet FOLLOW_rule__SimpleMemberAssignment__Group__1_in_rule__SimpleMemberAssignment__Group__05688 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SimpleMemberAssignment__MemberAssignment_0_in_rule__SimpleMemberAssignment__Group__0__Impl5715 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SimpleMemberAssignment__Group__1__Impl_in_rule__SimpleMemberAssignment__Group__15745 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SimpleMemberAssignment__Group_1__0_in_rule__SimpleMemberAssignment__Group__1__Impl5772 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SimpleMemberAssignment__Group_1__0__Impl_in_rule__SimpleMemberAssignment__Group_1__05807 = new BitSet(new long[]{0x0000000002018060L});
-    public static final BitSet FOLLOW_rule__SimpleMemberAssignment__Group_1__1_in_rule__SimpleMemberAssignment__Group_1__05810 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_27_in_rule__SimpleMemberAssignment__Group_1__0__Impl5838 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SimpleMemberAssignment__Group_1__1__Impl_in_rule__SimpleMemberAssignment__Group_1__15869 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SimpleMemberAssignment__DefaultValueAssignment_1_1_in_rule__SimpleMemberAssignment__Group_1__1__Impl5896 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Literal__Group_0__0__Impl_in_rule__Literal__Group_0__05930 = new BitSet(new long[]{0x0000000000018000L});
-    public static final BitSet FOLLOW_rule__Literal__Group_0__1_in_rule__Literal__Group_0__05933 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Literal__Group_0__1__Impl_in_rule__Literal__Group_0__15991 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Literal__LiteralAssignment_0_1_in_rule__Literal__Group_0__1__Impl6018 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Literal__Group_1__0__Impl_in_rule__Literal__Group_1__06052 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__Literal__Group_1__1_in_rule__Literal__Group_1__06055 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Literal__Group_1__1__Impl_in_rule__Literal__Group_1__16113 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Literal__LiteralAssignment_1_1_in_rule__Literal__Group_1__1__Impl6140 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Literal__Group_2__0__Impl_in_rule__Literal__Group_2__06174 = new BitSet(new long[]{0x0000000002018060L});
-    public static final BitSet FOLLOW_rule__Literal__Group_2__1_in_rule__Literal__Group_2__06177 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Literal__Group_2__1__Impl_in_rule__Literal__Group_2__16235 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Literal__LiteralAssignment_2_1_in_rule__Literal__Group_2__1__Impl6262 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BodyBlock__Group__0__Impl_in_rule__BodyBlock__Group__06296 = new BitSet(new long[]{0x000001F000080010L});
-    public static final BitSet FOLLOW_rule__BodyBlock__Group__1_in_rule__BodyBlock__Group__06299 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_28_in_rule__BodyBlock__Group__0__Impl6327 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BodyBlock__Group__1__Impl_in_rule__BodyBlock__Group__16358 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BodyBlock__TypeAssignment_1_in_rule__BodyBlock__Group__1__Impl6385 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ResponseBlock__Group__0__Impl_in_rule__ResponseBlock__Group__06419 = new BitSet(new long[]{0x0000000034200000L});
-    public static final BitSet FOLLOW_rule__ResponseBlock__Group__1_in_rule__ResponseBlock__Group__06422 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ResponseBlock__Group__1__Impl_in_rule__ResponseBlock__Group__16480 = new BitSet(new long[]{0x000001F040080010L});
-    public static final BitSet FOLLOW_rule__ResponseBlock__Group__2_in_rule__ResponseBlock__Group__16483 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_29_in_rule__ResponseBlock__Group__1__Impl6511 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ResponseBlock__Group__2__Impl_in_rule__ResponseBlock__Group__26542 = new BitSet(new long[]{0x000001F040080010L});
-    public static final BitSet FOLLOW_rule__ResponseBlock__Group__3_in_rule__ResponseBlock__Group__26545 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ResponseBlock__Group_2__0_in_rule__ResponseBlock__Group__2__Impl6572 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ResponseBlock__Group__3__Impl_in_rule__ResponseBlock__Group__36603 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ResponseBlock__TypeAssignment_3_in_rule__ResponseBlock__Group__3__Impl6630 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ResponseBlock__Group_2__0__Impl_in_rule__ResponseBlock__Group_2__06669 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__ResponseBlock__Group_2__1_in_rule__ResponseBlock__Group_2__06672 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_30_in_rule__ResponseBlock__Group_2__0__Impl6700 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ResponseBlock__Group_2__1__Impl_in_rule__ResponseBlock__Group_2__16731 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ResponseBlock__SuperTypeAssignment_2_1_in_rule__ResponseBlock__Group_2__1__Impl6758 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Member__Group__0__Impl_in_rule__Member__Group__06792 = new BitSet(new long[]{0x0000000000800000L});
-    public static final BitSet FOLLOW_rule__Member__Group__1_in_rule__Member__Group__06795 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Member__NameAssignment_0_in_rule__Member__Group__0__Impl6822 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Member__Group__1__Impl_in_rule__Member__Group__16852 = new BitSet(new long[]{0x000001F000000010L});
-    public static final BitSet FOLLOW_rule__Member__Group__2_in_rule__Member__Group__16855 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_23_in_rule__Member__Group__1__Impl6883 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Member__Group__2__Impl_in_rule__Member__Group__26914 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Member__TypeAssignment_2_in_rule__Member__Group__2__Impl6941 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SimpleMember__Group__0__Impl_in_rule__SimpleMember__Group__06977 = new BitSet(new long[]{0x0000000000800000L});
-    public static final BitSet FOLLOW_rule__SimpleMember__Group__1_in_rule__SimpleMember__Group__06980 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SimpleMember__NameAssignment_0_in_rule__SimpleMember__Group__0__Impl7007 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SimpleMember__Group__1__Impl_in_rule__SimpleMember__Group__17037 = new BitSet(new long[]{0x000001F000000000L});
-    public static final BitSet FOLLOW_rule__SimpleMember__Group__2_in_rule__SimpleMember__Group__17040 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_23_in_rule__SimpleMember__Group__1__Impl7068 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SimpleMember__Group__2__Impl_in_rule__SimpleMember__Group__27099 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SimpleMember__TypeAssignment_2_in_rule__SimpleMember__Group__2__Impl7126 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ArrayType__Group__0__Impl_in_rule__ArrayType__Group__07162 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_rule__ArrayType__Group__1_in_rule__ArrayType__Group__07165 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ArrayType__ElementTypeAssignment_0_in_rule__ArrayType__Group__0__Impl7192 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ArrayType__Group__1__Impl_in_rule__ArrayType__Group__17222 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ArrayType__IdAssignment_1_in_rule__ArrayType__Group__1__Impl7249 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ComplexTypeDeclaration__Group__0__Impl_in_rule__ComplexTypeDeclaration__Group__07283 = new BitSet(new long[]{0x0000000400000010L});
-    public static final BitSet FOLLOW_rule__ComplexTypeDeclaration__Group__1_in_rule__ComplexTypeDeclaration__Group__07286 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ComplexTypeDeclaration__KeywordAssignment_0_in_rule__ComplexTypeDeclaration__Group__0__Impl7313 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ComplexTypeDeclaration__Group__1__Impl_in_rule__ComplexTypeDeclaration__Group__17343 = new BitSet(new long[]{0x0000000400000010L});
-    public static final BitSet FOLLOW_rule__ComplexTypeDeclaration__Group__2_in_rule__ComplexTypeDeclaration__Group__17346 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ComplexTypeDeclaration__NogenAssignment_1_in_rule__ComplexTypeDeclaration__Group__1__Impl7373 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ComplexTypeDeclaration__Group__2__Impl_in_rule__ComplexTypeDeclaration__Group__27404 = new BitSet(new long[]{0x000001F000080010L});
-    public static final BitSet FOLLOW_rule__ComplexTypeDeclaration__Group__3_in_rule__ComplexTypeDeclaration__Group__27407 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ComplexTypeDeclaration__NameAssignment_2_in_rule__ComplexTypeDeclaration__Group__2__Impl7434 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ComplexTypeDeclaration__Group__3__Impl_in_rule__ComplexTypeDeclaration__Group__37464 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ComplexTypeDeclaration__LiteralAssignment_3_in_rule__ComplexTypeDeclaration__Group__3__Impl7491 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__EnumTypeDeclaration__Group__0__Impl_in_rule__EnumTypeDeclaration__Group__07530 = new BitSet(new long[]{0x0000000400000010L});
-    public static final BitSet FOLLOW_rule__EnumTypeDeclaration__Group__1_in_rule__EnumTypeDeclaration__Group__07533 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__EnumTypeDeclaration__KeywordAssignment_0_in_rule__EnumTypeDeclaration__Group__0__Impl7560 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__EnumTypeDeclaration__Group__1__Impl_in_rule__EnumTypeDeclaration__Group__17590 = new BitSet(new long[]{0x0000000400000010L});
-    public static final BitSet FOLLOW_rule__EnumTypeDeclaration__Group__2_in_rule__EnumTypeDeclaration__Group__17593 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__EnumTypeDeclaration__NogenAssignment_1_in_rule__EnumTypeDeclaration__Group__1__Impl7620 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__EnumTypeDeclaration__Group__2__Impl_in_rule__EnumTypeDeclaration__Group__27651 = new BitSet(new long[]{0x0000000040080000L});
-    public static final BitSet FOLLOW_rule__EnumTypeDeclaration__Group__3_in_rule__EnumTypeDeclaration__Group__27654 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__EnumTypeDeclaration__NameAssignment_2_in_rule__EnumTypeDeclaration__Group__2__Impl7681 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__EnumTypeDeclaration__Group__3__Impl_in_rule__EnumTypeDeclaration__Group__37711 = new BitSet(new long[]{0x0000000040080000L});
-    public static final BitSet FOLLOW_rule__EnumTypeDeclaration__Group__4_in_rule__EnumTypeDeclaration__Group__37714 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__EnumTypeDeclaration__Group_3__0_in_rule__EnumTypeDeclaration__Group__3__Impl7741 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__EnumTypeDeclaration__Group__4__Impl_in_rule__EnumTypeDeclaration__Group__47772 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__EnumTypeDeclaration__LiteralAssignment_4_in_rule__EnumTypeDeclaration__Group__4__Impl7799 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__EnumTypeDeclaration__Group_3__0__Impl_in_rule__EnumTypeDeclaration__Group_3__07840 = new BitSet(new long[]{0x0000004000000000L});
-    public static final BitSet FOLLOW_rule__EnumTypeDeclaration__Group_3__1_in_rule__EnumTypeDeclaration__Group_3__07843 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_30_in_rule__EnumTypeDeclaration__Group_3__0__Impl7871 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__EnumTypeDeclaration__Group_3__1__Impl_in_rule__EnumTypeDeclaration__Group_3__17902 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__EnumTypeDeclaration__SuperTypeAssignment_3_1_in_rule__EnumTypeDeclaration__Group_3__1__Impl7929 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__EnumTypeLiteral__Group__0__Impl_in_rule__EnumTypeLiteral__Group__07963 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__EnumTypeLiteral__Group__1_in_rule__EnumTypeLiteral__Group__07966 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_19_in_rule__EnumTypeLiteral__Group__0__Impl7994 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__EnumTypeLiteral__Group__1__Impl_in_rule__EnumTypeLiteral__Group__18025 = new BitSet(new long[]{0x0000000000500000L});
-    public static final BitSet FOLLOW_rule__EnumTypeLiteral__Group__2_in_rule__EnumTypeLiteral__Group__18028 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__EnumTypeLiteral__MembersAssignment_1_in_rule__EnumTypeLiteral__Group__1__Impl8055 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__EnumTypeLiteral__Group__2__Impl_in_rule__EnumTypeLiteral__Group__28085 = new BitSet(new long[]{0x0000000000500000L});
-    public static final BitSet FOLLOW_rule__EnumTypeLiteral__Group__3_in_rule__EnumTypeLiteral__Group__28088 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__EnumTypeLiteral__Group_2__0_in_rule__EnumTypeLiteral__Group__2__Impl8115 = new BitSet(new long[]{0x0000000000400002L});
-    public static final BitSet FOLLOW_rule__EnumTypeLiteral__Group__3__Impl_in_rule__EnumTypeLiteral__Group__38146 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_20_in_rule__EnumTypeLiteral__Group__3__Impl8174 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__EnumTypeLiteral__Group_2__0__Impl_in_rule__EnumTypeLiteral__Group_2__08213 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__EnumTypeLiteral__Group_2__1_in_rule__EnumTypeLiteral__Group_2__08216 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_22_in_rule__EnumTypeLiteral__Group_2__0__Impl8244 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__EnumTypeLiteral__Group_2__1__Impl_in_rule__EnumTypeLiteral__Group_2__18275 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__EnumTypeLiteral__MembersAssignment_2_1_in_rule__EnumTypeLiteral__Group_2__1__Impl8302 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__EnumMember__Group__0__Impl_in_rule__EnumMember__Group__08336 = new BitSet(new long[]{0x0000000008000000L});
-    public static final BitSet FOLLOW_rule__EnumMember__Group__1_in_rule__EnumMember__Group__08339 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__EnumMember__NameAssignment_0_in_rule__EnumMember__Group__0__Impl8366 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__EnumMember__Group__1__Impl_in_rule__EnumMember__Group__18396 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__EnumMember__Group_1__0_in_rule__EnumMember__Group__1__Impl8423 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__EnumMember__Group_1__0__Impl_in_rule__EnumMember__Group_1__08458 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_rule__EnumMember__Group_1__1_in_rule__EnumMember__Group_1__08461 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__EnumMember__AssignmentAssignment_1_0_in_rule__EnumMember__Group_1__0__Impl8488 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__EnumMember__Group_1__1__Impl_in_rule__EnumMember__Group_1__18518 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__EnumMember__ValueAssignment_1_1_in_rule__EnumMember__Group_1__1__Impl8545 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ComplexTypeLiteral__Group__0__Impl_in_rule__ComplexTypeLiteral__Group__08579 = new BitSet(new long[]{0x0000000000000030L});
-    public static final BitSet FOLLOW_rule__ComplexTypeLiteral__Group__1_in_rule__ComplexTypeLiteral__Group__08582 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_19_in_rule__ComplexTypeLiteral__Group__0__Impl8610 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ComplexTypeLiteral__Group__1__Impl_in_rule__ComplexTypeLiteral__Group__18641 = new BitSet(new long[]{0x0000000000500000L});
-    public static final BitSet FOLLOW_rule__ComplexTypeLiteral__Group__2_in_rule__ComplexTypeLiteral__Group__18644 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ComplexTypeLiteral__MembersAssignment_1_in_rule__ComplexTypeLiteral__Group__1__Impl8671 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ComplexTypeLiteral__Group__2__Impl_in_rule__ComplexTypeLiteral__Group__28701 = new BitSet(new long[]{0x0000000000500000L});
-    public static final BitSet FOLLOW_rule__ComplexTypeLiteral__Group__3_in_rule__ComplexTypeLiteral__Group__28704 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ComplexTypeLiteral__Group_2__0_in_rule__ComplexTypeLiteral__Group__2__Impl8731 = new BitSet(new long[]{0x0000000000400002L});
-    public static final BitSet FOLLOW_rule__ComplexTypeLiteral__Group__3__Impl_in_rule__ComplexTypeLiteral__Group__38762 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_20_in_rule__ComplexTypeLiteral__Group__3__Impl8790 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ComplexTypeLiteral__Group_2__0__Impl_in_rule__ComplexTypeLiteral__Group_2__08829 = new BitSet(new long[]{0x0000000000000030L});
-    public static final BitSet FOLLOW_rule__ComplexTypeLiteral__Group_2__1_in_rule__ComplexTypeLiteral__Group_2__08832 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_22_in_rule__ComplexTypeLiteral__Group_2__0__Impl8860 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ComplexTypeLiteral__Group_2__1__Impl_in_rule__ComplexTypeLiteral__Group_2__18891 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ComplexTypeLiteral__MembersAssignment_2_1_in_rule__ComplexTypeLiteral__Group_2__1__Impl8918 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__QualifiedName__Group__0__Impl_in_rule__QualifiedName__Group__08952 = new BitSet(new long[]{0x0000000080000000L});
-    public static final BitSet FOLLOW_rule__QualifiedName__Group__1_in_rule__QualifiedName__Group__08955 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__QualifiedName__Group__0__Impl8982 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__QualifiedName__Group__1__Impl_in_rule__QualifiedName__Group__19011 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__QualifiedName__Group_1__0_in_rule__QualifiedName__Group__1__Impl9038 = new BitSet(new long[]{0x0000000080000002L});
-    public static final BitSet FOLLOW_rule__QualifiedName__Group_1__0__Impl_in_rule__QualifiedName__Group_1__09073 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__QualifiedName__Group_1__1_in_rule__QualifiedName__Group_1__09076 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_31_in_rule__QualifiedName__Group_1__0__Impl9104 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__QualifiedName__Group_1__1__Impl_in_rule__QualifiedName__Group_1__19135 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__QualifiedName__Group_1__1__Impl9162 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SignedNumber__Group__0__Impl_in_rule__SignedNumber__Group__09195 = new BitSet(new long[]{0x0000000002018060L});
-    public static final BitSet FOLLOW_rule__SignedNumber__Group__1_in_rule__SignedNumber__Group__09198 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_25_in_rule__SignedNumber__Group__0__Impl9227 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SignedNumber__Group__1__Impl_in_rule__SignedNumber__Group__19260 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_NUMBER_in_rule__SignedNumber__Group__1__Impl9287 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleQualifiedName_in_rule__Model__PackageNameAssignment_19325 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDeclaration_in_rule__Model__DeclarationsAssignment_29356 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Api__NameAssignment_19387 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__Api__BaseUrlAssignment_29418 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleServiceBlock_in_rule__Api__BlocksAssignment_49449 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleHeader_in_rule__HeaderBlock__HeadersAssignment_19480 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleHeader_in_rule__HeaderBlock__HeadersAssignment_2_19511 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__Header__NameAssignment_09542 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__Header__ValueAssignment_29573 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleHttpMethodType_in_rule__HttpMethod__TypeAssignment_09604 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__HttpMethod__NameAssignment_19635 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePath_in_rule__HttpMethod__PathAssignment_29666 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleHttpMethodBlock_in_rule__HttpMethod__BlocksAssignment_49697 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSimpleMemberAssignment_in_rule__Path__ParamsAssignment_2_19728 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSimpleMemberAssignment_in_rule__Path__ParamsAssignment_3_1_19759 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSimpleMemberAssignment_in_rule__ParamsBlock__ParamsAssignment_29790 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSimpleMemberAssignment_in_rule__ParamsBlock__ParamsAssignment_3_19821 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSimpleMember_in_rule__SimpleMemberAssignment__MemberAssignment_09852 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleLiteral_in_rule__SimpleMemberAssignment__DefaultValueAssignment_1_19883 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBooleanValue_in_rule__Literal__LiteralAssignment_0_19914 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__Literal__LiteralAssignment_1_19945 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSignedNumber_in_rule__Literal__LiteralAssignment_2_19976 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBlockType_in_rule__BodyBlock__TypeAssignment_110007 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__ResponseBlock__SuperTypeAssignment_2_110042 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBlockType_in_rule__ResponseBlock__TypeAssignment_310077 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Member__NameAlternatives_0_0_in_rule__Member__NameAssignment_010108 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleType_in_rule__Member__TypeAssignment_210141 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SimpleMember__NameAlternatives_0_0_in_rule__SimpleMember__NameAssignment_010172 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleIntrinsicType_in_rule__SimpleMember__TypeAssignment_210205 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ArrayType__ElementTypeAlternatives_0_0_in_rule__ArrayType__ElementTypeAssignment_010236 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_32_in_rule__ArrayType__IdAssignment_110274 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__UserType__DeclarationAssignment10317 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_33_in_rule__ComplexTypeDeclaration__KeywordAssignment_010357 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_34_in_rule__ComplexTypeDeclaration__NogenAssignment_110401 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__ComplexTypeDeclaration__NameAssignment_210440 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleComplexTypeLiteral_in_rule__ComplexTypeDeclaration__LiteralAssignment_310471 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_35_in_rule__EnumTypeDeclaration__KeywordAssignment_010507 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_34_in_rule__EnumTypeDeclaration__NogenAssignment_110551 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__EnumTypeDeclaration__NameAssignment_210590 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleIntegerType_in_rule__EnumTypeDeclaration__SuperTypeAssignment_3_110621 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEnumTypeLiteral_in_rule__EnumTypeDeclaration__LiteralAssignment_410652 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEnumMember_in_rule__EnumTypeLiteral__MembersAssignment_110683 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEnumMember_in_rule__EnumTypeLiteral__MembersAssignment_2_110714 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__EnumMember__NameAssignment_010745 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_27_in_rule__EnumMember__AssignmentAssignment_1_010781 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_NUMBER_in_rule__EnumMember__ValueAssignment_1_110820 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleMember_in_rule__ComplexTypeLiteral__MembersAssignment_110851 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleMember_in_rule__ComplexTypeLiteral__MembersAssignment_2_110882 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_36_in_rule__StringType__IdAssignment10918 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_37_in_rule__BooleanType__IdAssignment10962 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_38_in_rule__IntegerType__IdAssignment11006 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_39_in_rule__LongType__IdAssignment11050 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_40_in_rule__DoubleType__IdAssignment11094 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_17_in_rule__BooleanValue__Alternatives3254 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Model__Group__0__Impl_in_rule__Model__Group__03287 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Model__Group__1_in_rule__Model__Group__03290 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_18_in_rule__Model__Group__0__Impl3318 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Model__Group__1__Impl_in_rule__Model__Group__13349 = new BitSet(new long[]{0x0000001400080000L});
+    public static final BitSet FOLLOW_rule__Model__Group__2_in_rule__Model__Group__13352 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Model__PackageNameAssignment_1_in_rule__Model__Group__1__Impl3379 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Model__Group__2__Impl_in_rule__Model__Group__23409 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Model__DeclarationsAssignment_2_in_rule__Model__Group__2__Impl3436 = new BitSet(new long[]{0x0000001400080002L});
+    public static final BitSet FOLLOW_rule__Api__Group__0__Impl_in_rule__Api__Group__03473 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Api__Group__1_in_rule__Api__Group__03476 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_19_in_rule__Api__Group__0__Impl3504 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Api__Group__1__Impl_in_rule__Api__Group__13535 = new BitSet(new long[]{0x0000000000100020L});
+    public static final BitSet FOLLOW_rule__Api__Group__2_in_rule__Api__Group__13538 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Api__NameAssignment_1_in_rule__Api__Group__1__Impl3565 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Api__Group__2__Impl_in_rule__Api__Group__23595 = new BitSet(new long[]{0x0000000000100020L});
+    public static final BitSet FOLLOW_rule__Api__Group__3_in_rule__Api__Group__23598 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Api__BaseUrlAssignment_2_in_rule__Api__Group__2__Impl3625 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Api__Group__3__Impl_in_rule__Api__Group__33656 = new BitSet(new long[]{0x000000000860F800L});
+    public static final BitSet FOLLOW_rule__Api__Group__4_in_rule__Api__Group__33659 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_20_in_rule__Api__Group__3__Impl3687 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Api__Group__4__Impl_in_rule__Api__Group__43718 = new BitSet(new long[]{0x000000000860F800L});
+    public static final BitSet FOLLOW_rule__Api__Group__5_in_rule__Api__Group__43721 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Api__BlocksAssignment_4_in_rule__Api__Group__4__Impl3748 = new BitSet(new long[]{0x000000000840F802L});
+    public static final BitSet FOLLOW_rule__Api__Group__5__Impl_in_rule__Api__Group__53779 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_21_in_rule__Api__Group__5__Impl3807 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__HeaderBlock__Group__0__Impl_in_rule__HeaderBlock__Group__03850 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__HeaderBlock__Group__1_in_rule__HeaderBlock__Group__03853 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_22_in_rule__HeaderBlock__Group__0__Impl3881 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__HeaderBlock__Group__1__Impl_in_rule__HeaderBlock__Group__13912 = new BitSet(new long[]{0x0000000000800000L});
+    public static final BitSet FOLLOW_rule__HeaderBlock__Group__2_in_rule__HeaderBlock__Group__13915 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__HeaderBlock__HeadersAssignment_1_in_rule__HeaderBlock__Group__1__Impl3942 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__HeaderBlock__Group__2__Impl_in_rule__HeaderBlock__Group__23972 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__HeaderBlock__Group_2__0_in_rule__HeaderBlock__Group__2__Impl3999 = new BitSet(new long[]{0x0000000000800002L});
+    public static final BitSet FOLLOW_rule__HeaderBlock__Group_2__0__Impl_in_rule__HeaderBlock__Group_2__04036 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__HeaderBlock__Group_2__1_in_rule__HeaderBlock__Group_2__04039 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_23_in_rule__HeaderBlock__Group_2__0__Impl4067 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__HeaderBlock__Group_2__1__Impl_in_rule__HeaderBlock__Group_2__14098 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__HeaderBlock__HeadersAssignment_2_1_in_rule__HeaderBlock__Group_2__1__Impl4125 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Header__Group__0__Impl_in_rule__Header__Group__04159 = new BitSet(new long[]{0x0000000001000000L});
+    public static final BitSet FOLLOW_rule__Header__Group__1_in_rule__Header__Group__04162 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Header__NameAssignment_0_in_rule__Header__Group__0__Impl4189 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Header__Group__1__Impl_in_rule__Header__Group__14219 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__Header__Group__2_in_rule__Header__Group__14222 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_24_in_rule__Header__Group__1__Impl4250 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Header__Group__2__Impl_in_rule__Header__Group__24281 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Header__ValueAssignment_2_in_rule__Header__Group__2__Impl4308 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__HttpMethod__Group__0__Impl_in_rule__HttpMethod__Group__04344 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__HttpMethod__Group__1_in_rule__HttpMethod__Group__04347 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__HttpMethod__TypeAssignment_0_in_rule__HttpMethod__Group__0__Impl4374 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__HttpMethod__Group__1__Impl_in_rule__HttpMethod__Group__14404 = new BitSet(new long[]{0x0000000002100000L});
+    public static final BitSet FOLLOW_rule__HttpMethod__Group__2_in_rule__HttpMethod__Group__14407 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__HttpMethod__NameAssignment_1_in_rule__HttpMethod__Group__1__Impl4434 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__HttpMethod__Group__2__Impl_in_rule__HttpMethod__Group__24464 = new BitSet(new long[]{0x0000000002100000L});
+    public static final BitSet FOLLOW_rule__HttpMethod__Group__3_in_rule__HttpMethod__Group__24467 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__HttpMethod__PathAssignment_2_in_rule__HttpMethod__Group__2__Impl4494 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__HttpMethod__Group__3__Impl_in_rule__HttpMethod__Group__34525 = new BitSet(new long[]{0x0000000068600000L});
+    public static final BitSet FOLLOW_rule__HttpMethod__Group__4_in_rule__HttpMethod__Group__34528 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_20_in_rule__HttpMethod__Group__3__Impl4556 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__HttpMethod__Group__4__Impl_in_rule__HttpMethod__Group__44587 = new BitSet(new long[]{0x0000000068600000L});
+    public static final BitSet FOLLOW_rule__HttpMethod__Group__5_in_rule__HttpMethod__Group__44590 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__HttpMethod__BlocksAssignment_4_in_rule__HttpMethod__Group__4__Impl4617 = new BitSet(new long[]{0x0000000068400002L});
+    public static final BitSet FOLLOW_rule__HttpMethod__Group__5__Impl_in_rule__HttpMethod__Group__54648 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_21_in_rule__HttpMethod__Group__5__Impl4676 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Path__Group__0__Impl_in_rule__Path__Group__04719 = new BitSet(new long[]{0x0000000002000000L});
+    public static final BitSet FOLLOW_rule__Path__Group__1_in_rule__Path__Group__04722 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Path__Group__1__Impl_in_rule__Path__Group__14780 = new BitSet(new long[]{0x0000000000000030L});
+    public static final BitSet FOLLOW_rule__Path__Group__2_in_rule__Path__Group__14783 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_25_in_rule__Path__Group__1__Impl4811 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Path__Group__2__Impl_in_rule__Path__Group__24842 = new BitSet(new long[]{0x0000000002000000L});
+    public static final BitSet FOLLOW_rule__Path__Group__3_in_rule__Path__Group__24845 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Path__Alternatives_2_in_rule__Path__Group__2__Impl4872 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Path__Group__3__Impl_in_rule__Path__Group__34902 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Path__Group_3__0_in_rule__Path__Group__3__Impl4929 = new BitSet(new long[]{0x0000000002000002L});
+    public static final BitSet FOLLOW_rule__Path__Group_3__0__Impl_in_rule__Path__Group_3__04968 = new BitSet(new long[]{0x0000000000000030L});
+    public static final BitSet FOLLOW_rule__Path__Group_3__1_in_rule__Path__Group_3__04971 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_25_in_rule__Path__Group_3__0__Impl4999 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Path__Group_3__1__Impl_in_rule__Path__Group_3__15030 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Path__Alternatives_3_1_in_rule__Path__Group_3__1__Impl5057 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ArbitraryPathSegment__Group__0__Impl_in_rule__ArbitraryPathSegment__Group__05091 = new BitSet(new long[]{0x0000000004000000L});
+    public static final BitSet FOLLOW_rule__ArbitraryPathSegment__Group__1_in_rule__ArbitraryPathSegment__Group__05094 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleQualifiedName_in_rule__ArbitraryPathSegment__Group__0__Impl5121 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ArbitraryPathSegment__Group__1__Impl_in_rule__ArbitraryPathSegment__Group__15150 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ArbitraryPathSegment__Group_1__0_in_rule__ArbitraryPathSegment__Group__1__Impl5177 = new BitSet(new long[]{0x0000000004000002L});
+    public static final BitSet FOLLOW_rule__ArbitraryPathSegment__Group_1__0__Impl_in_rule__ArbitraryPathSegment__Group_1__05212 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__ArbitraryPathSegment__Group_1__1_in_rule__ArbitraryPathSegment__Group_1__05215 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_26_in_rule__ArbitraryPathSegment__Group_1__0__Impl5243 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ArbitraryPathSegment__Group_1__1__Impl_in_rule__ArbitraryPathSegment__Group_1__15274 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleQualifiedName_in_rule__ArbitraryPathSegment__Group_1__1__Impl5301 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ParamsBlock__Group__0__Impl_in_rule__ParamsBlock__Group__05334 = new BitSet(new long[]{0x0000000008000000L});
+    public static final BitSet FOLLOW_rule__ParamsBlock__Group__1_in_rule__ParamsBlock__Group__05337 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ParamsBlock__Group__1__Impl_in_rule__ParamsBlock__Group__15395 = new BitSet(new long[]{0x0000000000000030L});
+    public static final BitSet FOLLOW_rule__ParamsBlock__Group__2_in_rule__ParamsBlock__Group__15398 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_27_in_rule__ParamsBlock__Group__1__Impl5426 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ParamsBlock__Group__2__Impl_in_rule__ParamsBlock__Group__25457 = new BitSet(new long[]{0x0000000000800000L});
+    public static final BitSet FOLLOW_rule__ParamsBlock__Group__3_in_rule__ParamsBlock__Group__25460 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ParamsBlock__ParamsAssignment_2_in_rule__ParamsBlock__Group__2__Impl5487 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ParamsBlock__Group__3__Impl_in_rule__ParamsBlock__Group__35517 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ParamsBlock__Group_3__0_in_rule__ParamsBlock__Group__3__Impl5544 = new BitSet(new long[]{0x0000000000800002L});
+    public static final BitSet FOLLOW_rule__ParamsBlock__Group_3__0__Impl_in_rule__ParamsBlock__Group_3__05583 = new BitSet(new long[]{0x0000000000000030L});
+    public static final BitSet FOLLOW_rule__ParamsBlock__Group_3__1_in_rule__ParamsBlock__Group_3__05586 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_23_in_rule__ParamsBlock__Group_3__0__Impl5614 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ParamsBlock__Group_3__1__Impl_in_rule__ParamsBlock__Group_3__15645 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ParamsBlock__ParamsAssignment_3_1_in_rule__ParamsBlock__Group_3__1__Impl5672 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SimpleMemberAssignment__Group__0__Impl_in_rule__SimpleMemberAssignment__Group__05706 = new BitSet(new long[]{0x0000000010000000L});
+    public static final BitSet FOLLOW_rule__SimpleMemberAssignment__Group__1_in_rule__SimpleMemberAssignment__Group__05709 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SimpleMemberAssignment__MemberAssignment_0_in_rule__SimpleMemberAssignment__Group__0__Impl5736 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SimpleMemberAssignment__Group__1__Impl_in_rule__SimpleMemberAssignment__Group__15766 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SimpleMemberAssignment__Group_1__0_in_rule__SimpleMemberAssignment__Group__1__Impl5793 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SimpleMemberAssignment__Group_1__0__Impl_in_rule__SimpleMemberAssignment__Group_1__05828 = new BitSet(new long[]{0x0000000004030060L});
+    public static final BitSet FOLLOW_rule__SimpleMemberAssignment__Group_1__1_in_rule__SimpleMemberAssignment__Group_1__05831 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_28_in_rule__SimpleMemberAssignment__Group_1__0__Impl5859 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SimpleMemberAssignment__Group_1__1__Impl_in_rule__SimpleMemberAssignment__Group_1__15890 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SimpleMemberAssignment__DefaultValueAssignment_1_1_in_rule__SimpleMemberAssignment__Group_1__1__Impl5917 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Literal__Group_0__0__Impl_in_rule__Literal__Group_0__05951 = new BitSet(new long[]{0x0000000000030000L});
+    public static final BitSet FOLLOW_rule__Literal__Group_0__1_in_rule__Literal__Group_0__05954 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Literal__Group_0__1__Impl_in_rule__Literal__Group_0__16012 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Literal__LiteralAssignment_0_1_in_rule__Literal__Group_0__1__Impl6039 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Literal__Group_1__0__Impl_in_rule__Literal__Group_1__06073 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__Literal__Group_1__1_in_rule__Literal__Group_1__06076 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Literal__Group_1__1__Impl_in_rule__Literal__Group_1__16134 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Literal__LiteralAssignment_1_1_in_rule__Literal__Group_1__1__Impl6161 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Literal__Group_2__0__Impl_in_rule__Literal__Group_2__06195 = new BitSet(new long[]{0x0000000004030060L});
+    public static final BitSet FOLLOW_rule__Literal__Group_2__1_in_rule__Literal__Group_2__06198 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Literal__Group_2__1__Impl_in_rule__Literal__Group_2__16256 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Literal__LiteralAssignment_2_1_in_rule__Literal__Group_2__1__Impl6283 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BodyBlock__Group__0__Impl_in_rule__BodyBlock__Group__06317 = new BitSet(new long[]{0x000003E000100010L});
+    public static final BitSet FOLLOW_rule__BodyBlock__Group__1_in_rule__BodyBlock__Group__06320 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_29_in_rule__BodyBlock__Group__0__Impl6348 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BodyBlock__Group__1__Impl_in_rule__BodyBlock__Group__16379 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BodyBlock__TypeAssignment_1_in_rule__BodyBlock__Group__1__Impl6406 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ResponseBlock__Group__0__Impl_in_rule__ResponseBlock__Group__06440 = new BitSet(new long[]{0x0000000068400000L});
+    public static final BitSet FOLLOW_rule__ResponseBlock__Group__1_in_rule__ResponseBlock__Group__06443 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ResponseBlock__Group__1__Impl_in_rule__ResponseBlock__Group__16501 = new BitSet(new long[]{0x000003E080100010L});
+    public static final BitSet FOLLOW_rule__ResponseBlock__Group__2_in_rule__ResponseBlock__Group__16504 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_30_in_rule__ResponseBlock__Group__1__Impl6532 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ResponseBlock__Group__2__Impl_in_rule__ResponseBlock__Group__26563 = new BitSet(new long[]{0x000003E080100010L});
+    public static final BitSet FOLLOW_rule__ResponseBlock__Group__3_in_rule__ResponseBlock__Group__26566 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ResponseBlock__Group_2__0_in_rule__ResponseBlock__Group__2__Impl6593 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ResponseBlock__Group__3__Impl_in_rule__ResponseBlock__Group__36624 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ResponseBlock__TypeAssignment_3_in_rule__ResponseBlock__Group__3__Impl6651 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ResponseBlock__Group_2__0__Impl_in_rule__ResponseBlock__Group_2__06690 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__ResponseBlock__Group_2__1_in_rule__ResponseBlock__Group_2__06693 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_31_in_rule__ResponseBlock__Group_2__0__Impl6721 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ResponseBlock__Group_2__1__Impl_in_rule__ResponseBlock__Group_2__16752 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ResponseBlock__SuperTypeAssignment_2_1_in_rule__ResponseBlock__Group_2__1__Impl6779 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Member__Group__0__Impl_in_rule__Member__Group__06813 = new BitSet(new long[]{0x0000000001000000L});
+    public static final BitSet FOLLOW_rule__Member__Group__1_in_rule__Member__Group__06816 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Member__NameAssignment_0_in_rule__Member__Group__0__Impl6843 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Member__Group__1__Impl_in_rule__Member__Group__16873 = new BitSet(new long[]{0x000003E000000010L});
+    public static final BitSet FOLLOW_rule__Member__Group__2_in_rule__Member__Group__16876 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_24_in_rule__Member__Group__1__Impl6904 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Member__Group__2__Impl_in_rule__Member__Group__26935 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Member__TypeAssignment_2_in_rule__Member__Group__2__Impl6962 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SimpleMember__Group__0__Impl_in_rule__SimpleMember__Group__06998 = new BitSet(new long[]{0x0000000001000000L});
+    public static final BitSet FOLLOW_rule__SimpleMember__Group__1_in_rule__SimpleMember__Group__07001 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SimpleMember__NameAssignment_0_in_rule__SimpleMember__Group__0__Impl7028 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SimpleMember__Group__1__Impl_in_rule__SimpleMember__Group__17058 = new BitSet(new long[]{0x000003E000000000L});
+    public static final BitSet FOLLOW_rule__SimpleMember__Group__2_in_rule__SimpleMember__Group__17061 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_24_in_rule__SimpleMember__Group__1__Impl7089 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SimpleMember__Group__2__Impl_in_rule__SimpleMember__Group__27120 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SimpleMember__TypeAssignment_2_in_rule__SimpleMember__Group__2__Impl7147 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ArrayType__Group__0__Impl_in_rule__ArrayType__Group__07183 = new BitSet(new long[]{0x0000000200000000L});
+    public static final BitSet FOLLOW_rule__ArrayType__Group__1_in_rule__ArrayType__Group__07186 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ArrayType__ElementTypeAssignment_0_in_rule__ArrayType__Group__0__Impl7213 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ArrayType__Group__1__Impl_in_rule__ArrayType__Group__17243 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ArrayType__IdAssignment_1_in_rule__ArrayType__Group__1__Impl7270 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ComplexTypeDeclaration__Group__0__Impl_in_rule__ComplexTypeDeclaration__Group__07304 = new BitSet(new long[]{0x0000000800000010L});
+    public static final BitSet FOLLOW_rule__ComplexTypeDeclaration__Group__1_in_rule__ComplexTypeDeclaration__Group__07307 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ComplexTypeDeclaration__KeywordAssignment_0_in_rule__ComplexTypeDeclaration__Group__0__Impl7334 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ComplexTypeDeclaration__Group__1__Impl_in_rule__ComplexTypeDeclaration__Group__17364 = new BitSet(new long[]{0x0000000800000010L});
+    public static final BitSet FOLLOW_rule__ComplexTypeDeclaration__Group__2_in_rule__ComplexTypeDeclaration__Group__17367 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ComplexTypeDeclaration__NogenAssignment_1_in_rule__ComplexTypeDeclaration__Group__1__Impl7394 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ComplexTypeDeclaration__Group__2__Impl_in_rule__ComplexTypeDeclaration__Group__27425 = new BitSet(new long[]{0x000003E000100010L});
+    public static final BitSet FOLLOW_rule__ComplexTypeDeclaration__Group__3_in_rule__ComplexTypeDeclaration__Group__27428 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ComplexTypeDeclaration__NameAssignment_2_in_rule__ComplexTypeDeclaration__Group__2__Impl7455 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ComplexTypeDeclaration__Group__3__Impl_in_rule__ComplexTypeDeclaration__Group__37485 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ComplexTypeDeclaration__LiteralAssignment_3_in_rule__ComplexTypeDeclaration__Group__3__Impl7512 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__EnumTypeDeclaration__Group__0__Impl_in_rule__EnumTypeDeclaration__Group__07551 = new BitSet(new long[]{0x0000000800000010L});
+    public static final BitSet FOLLOW_rule__EnumTypeDeclaration__Group__1_in_rule__EnumTypeDeclaration__Group__07554 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__EnumTypeDeclaration__KeywordAssignment_0_in_rule__EnumTypeDeclaration__Group__0__Impl7581 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__EnumTypeDeclaration__Group__1__Impl_in_rule__EnumTypeDeclaration__Group__17611 = new BitSet(new long[]{0x0000000800000010L});
+    public static final BitSet FOLLOW_rule__EnumTypeDeclaration__Group__2_in_rule__EnumTypeDeclaration__Group__17614 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__EnumTypeDeclaration__NogenAssignment_1_in_rule__EnumTypeDeclaration__Group__1__Impl7641 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__EnumTypeDeclaration__Group__2__Impl_in_rule__EnumTypeDeclaration__Group__27672 = new BitSet(new long[]{0x0000000080100000L});
+    public static final BitSet FOLLOW_rule__EnumTypeDeclaration__Group__3_in_rule__EnumTypeDeclaration__Group__27675 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__EnumTypeDeclaration__NameAssignment_2_in_rule__EnumTypeDeclaration__Group__2__Impl7702 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__EnumTypeDeclaration__Group__3__Impl_in_rule__EnumTypeDeclaration__Group__37732 = new BitSet(new long[]{0x0000000080100000L});
+    public static final BitSet FOLLOW_rule__EnumTypeDeclaration__Group__4_in_rule__EnumTypeDeclaration__Group__37735 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__EnumTypeDeclaration__Group_3__0_in_rule__EnumTypeDeclaration__Group__3__Impl7762 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__EnumTypeDeclaration__Group__4__Impl_in_rule__EnumTypeDeclaration__Group__47793 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__EnumTypeDeclaration__LiteralAssignment_4_in_rule__EnumTypeDeclaration__Group__4__Impl7820 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__EnumTypeDeclaration__Group_3__0__Impl_in_rule__EnumTypeDeclaration__Group_3__07861 = new BitSet(new long[]{0x0000008000000000L});
+    public static final BitSet FOLLOW_rule__EnumTypeDeclaration__Group_3__1_in_rule__EnumTypeDeclaration__Group_3__07864 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_31_in_rule__EnumTypeDeclaration__Group_3__0__Impl7892 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__EnumTypeDeclaration__Group_3__1__Impl_in_rule__EnumTypeDeclaration__Group_3__17923 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__EnumTypeDeclaration__SuperTypeAssignment_3_1_in_rule__EnumTypeDeclaration__Group_3__1__Impl7950 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__EnumTypeLiteral__Group__0__Impl_in_rule__EnumTypeLiteral__Group__07984 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__EnumTypeLiteral__Group__1_in_rule__EnumTypeLiteral__Group__07987 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_20_in_rule__EnumTypeLiteral__Group__0__Impl8015 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__EnumTypeLiteral__Group__1__Impl_in_rule__EnumTypeLiteral__Group__18046 = new BitSet(new long[]{0x0000000000A00000L});
+    public static final BitSet FOLLOW_rule__EnumTypeLiteral__Group__2_in_rule__EnumTypeLiteral__Group__18049 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__EnumTypeLiteral__MembersAssignment_1_in_rule__EnumTypeLiteral__Group__1__Impl8076 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__EnumTypeLiteral__Group__2__Impl_in_rule__EnumTypeLiteral__Group__28106 = new BitSet(new long[]{0x0000000000A00000L});
+    public static final BitSet FOLLOW_rule__EnumTypeLiteral__Group__3_in_rule__EnumTypeLiteral__Group__28109 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__EnumTypeLiteral__Group_2__0_in_rule__EnumTypeLiteral__Group__2__Impl8136 = new BitSet(new long[]{0x0000000000800002L});
+    public static final BitSet FOLLOW_rule__EnumTypeLiteral__Group__3__Impl_in_rule__EnumTypeLiteral__Group__38167 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_21_in_rule__EnumTypeLiteral__Group__3__Impl8195 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__EnumTypeLiteral__Group_2__0__Impl_in_rule__EnumTypeLiteral__Group_2__08234 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__EnumTypeLiteral__Group_2__1_in_rule__EnumTypeLiteral__Group_2__08237 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_23_in_rule__EnumTypeLiteral__Group_2__0__Impl8265 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__EnumTypeLiteral__Group_2__1__Impl_in_rule__EnumTypeLiteral__Group_2__18296 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__EnumTypeLiteral__MembersAssignment_2_1_in_rule__EnumTypeLiteral__Group_2__1__Impl8323 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__EnumMember__Group__0__Impl_in_rule__EnumMember__Group__08357 = new BitSet(new long[]{0x0000000010000000L});
+    public static final BitSet FOLLOW_rule__EnumMember__Group__1_in_rule__EnumMember__Group__08360 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__EnumMember__NameAssignment_0_in_rule__EnumMember__Group__0__Impl8387 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__EnumMember__Group__1__Impl_in_rule__EnumMember__Group__18417 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__EnumMember__Group_1__0_in_rule__EnumMember__Group__1__Impl8444 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__EnumMember__Group_1__0__Impl_in_rule__EnumMember__Group_1__08479 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_rule__EnumMember__Group_1__1_in_rule__EnumMember__Group_1__08482 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__EnumMember__AssignmentAssignment_1_0_in_rule__EnumMember__Group_1__0__Impl8509 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__EnumMember__Group_1__1__Impl_in_rule__EnumMember__Group_1__18539 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__EnumMember__ValueAssignment_1_1_in_rule__EnumMember__Group_1__1__Impl8566 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ComplexTypeLiteral__Group__0__Impl_in_rule__ComplexTypeLiteral__Group__08600 = new BitSet(new long[]{0x0000000000000030L});
+    public static final BitSet FOLLOW_rule__ComplexTypeLiteral__Group__1_in_rule__ComplexTypeLiteral__Group__08603 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_20_in_rule__ComplexTypeLiteral__Group__0__Impl8631 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ComplexTypeLiteral__Group__1__Impl_in_rule__ComplexTypeLiteral__Group__18662 = new BitSet(new long[]{0x0000000000A00000L});
+    public static final BitSet FOLLOW_rule__ComplexTypeLiteral__Group__2_in_rule__ComplexTypeLiteral__Group__18665 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ComplexTypeLiteral__MembersAssignment_1_in_rule__ComplexTypeLiteral__Group__1__Impl8692 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ComplexTypeLiteral__Group__2__Impl_in_rule__ComplexTypeLiteral__Group__28722 = new BitSet(new long[]{0x0000000000A00000L});
+    public static final BitSet FOLLOW_rule__ComplexTypeLiteral__Group__3_in_rule__ComplexTypeLiteral__Group__28725 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ComplexTypeLiteral__Group_2__0_in_rule__ComplexTypeLiteral__Group__2__Impl8752 = new BitSet(new long[]{0x0000000000800002L});
+    public static final BitSet FOLLOW_rule__ComplexTypeLiteral__Group__3__Impl_in_rule__ComplexTypeLiteral__Group__38783 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_21_in_rule__ComplexTypeLiteral__Group__3__Impl8811 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ComplexTypeLiteral__Group_2__0__Impl_in_rule__ComplexTypeLiteral__Group_2__08850 = new BitSet(new long[]{0x0000000000000030L});
+    public static final BitSet FOLLOW_rule__ComplexTypeLiteral__Group_2__1_in_rule__ComplexTypeLiteral__Group_2__08853 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_23_in_rule__ComplexTypeLiteral__Group_2__0__Impl8881 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ComplexTypeLiteral__Group_2__1__Impl_in_rule__ComplexTypeLiteral__Group_2__18912 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ComplexTypeLiteral__MembersAssignment_2_1_in_rule__ComplexTypeLiteral__Group_2__1__Impl8939 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__QualifiedName__Group__0__Impl_in_rule__QualifiedName__Group__08973 = new BitSet(new long[]{0x0000000100000000L});
+    public static final BitSet FOLLOW_rule__QualifiedName__Group__1_in_rule__QualifiedName__Group__08976 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__QualifiedName__Group__0__Impl9003 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__QualifiedName__Group__1__Impl_in_rule__QualifiedName__Group__19032 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__QualifiedName__Group_1__0_in_rule__QualifiedName__Group__1__Impl9059 = new BitSet(new long[]{0x0000000100000002L});
+    public static final BitSet FOLLOW_rule__QualifiedName__Group_1__0__Impl_in_rule__QualifiedName__Group_1__09094 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__QualifiedName__Group_1__1_in_rule__QualifiedName__Group_1__09097 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_32_in_rule__QualifiedName__Group_1__0__Impl9125 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__QualifiedName__Group_1__1__Impl_in_rule__QualifiedName__Group_1__19156 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__QualifiedName__Group_1__1__Impl9183 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SignedNumber__Group__0__Impl_in_rule__SignedNumber__Group__09216 = new BitSet(new long[]{0x0000000004030060L});
+    public static final BitSet FOLLOW_rule__SignedNumber__Group__1_in_rule__SignedNumber__Group__09219 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_26_in_rule__SignedNumber__Group__0__Impl9248 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SignedNumber__Group__1__Impl_in_rule__SignedNumber__Group__19281 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_NUMBER_in_rule__SignedNumber__Group__1__Impl9308 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleQualifiedName_in_rule__Model__PackageNameAssignment_19346 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleDeclaration_in_rule__Model__DeclarationsAssignment_29377 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Api__NameAssignment_19408 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__Api__BaseUrlAssignment_29439 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleServiceBlock_in_rule__Api__BlocksAssignment_49470 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleHeader_in_rule__HeaderBlock__HeadersAssignment_19501 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleHeader_in_rule__HeaderBlock__HeadersAssignment_2_19532 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__Header__NameAssignment_09563 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__Header__ValueAssignment_29594 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleHttpMethodType_in_rule__HttpMethod__TypeAssignment_09625 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__HttpMethod__NameAssignment_19656 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePath_in_rule__HttpMethod__PathAssignment_29687 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleHttpMethodBlock_in_rule__HttpMethod__BlocksAssignment_49718 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSimpleMemberAssignment_in_rule__Path__ParamsAssignment_2_19749 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSimpleMemberAssignment_in_rule__Path__ParamsAssignment_3_1_19780 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSimpleMemberAssignment_in_rule__ParamsBlock__ParamsAssignment_29811 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSimpleMemberAssignment_in_rule__ParamsBlock__ParamsAssignment_3_19842 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSimpleMember_in_rule__SimpleMemberAssignment__MemberAssignment_09873 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleLiteral_in_rule__SimpleMemberAssignment__DefaultValueAssignment_1_19904 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBooleanValue_in_rule__Literal__LiteralAssignment_0_19935 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__Literal__LiteralAssignment_1_19966 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSignedNumber_in_rule__Literal__LiteralAssignment_2_19997 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBlockType_in_rule__BodyBlock__TypeAssignment_110028 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__ResponseBlock__SuperTypeAssignment_2_110063 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBlockType_in_rule__ResponseBlock__TypeAssignment_310098 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Member__NameAlternatives_0_0_in_rule__Member__NameAssignment_010129 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleType_in_rule__Member__TypeAssignment_210162 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SimpleMember__NameAlternatives_0_0_in_rule__SimpleMember__NameAssignment_010193 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleIntrinsicType_in_rule__SimpleMember__TypeAssignment_210226 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ArrayType__ElementTypeAlternatives_0_0_in_rule__ArrayType__ElementTypeAssignment_010257 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_33_in_rule__ArrayType__IdAssignment_110295 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__UserType__DeclarationAssignment10338 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_34_in_rule__ComplexTypeDeclaration__KeywordAssignment_010378 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_35_in_rule__ComplexTypeDeclaration__NogenAssignment_110422 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__ComplexTypeDeclaration__NameAssignment_210461 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleComplexTypeLiteral_in_rule__ComplexTypeDeclaration__LiteralAssignment_310492 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_36_in_rule__EnumTypeDeclaration__KeywordAssignment_010528 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_35_in_rule__EnumTypeDeclaration__NogenAssignment_110572 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__EnumTypeDeclaration__NameAssignment_210611 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleIntegerType_in_rule__EnumTypeDeclaration__SuperTypeAssignment_3_110642 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEnumTypeLiteral_in_rule__EnumTypeDeclaration__LiteralAssignment_410673 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEnumMember_in_rule__EnumTypeLiteral__MembersAssignment_110704 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEnumMember_in_rule__EnumTypeLiteral__MembersAssignment_2_110735 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__EnumMember__NameAssignment_010766 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_28_in_rule__EnumMember__AssignmentAssignment_1_010802 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_NUMBER_in_rule__EnumMember__ValueAssignment_1_110841 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleMember_in_rule__ComplexTypeLiteral__MembersAssignment_110872 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleMember_in_rule__ComplexTypeLiteral__MembersAssignment_2_110903 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_37_in_rule__StringType__IdAssignment10939 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_38_in_rule__BooleanType__IdAssignment10983 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_39_in_rule__IntegerType__IdAssignment11027 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_40_in_rule__LongType__IdAssignment11071 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_41_in_rule__DoubleType__IdAssignment11115 = new BitSet(new long[]{0x0000000000000002L});
 
 }

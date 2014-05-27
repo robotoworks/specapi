@@ -12,6 +12,7 @@
       <genEnumLiterals ecoreEnumLiteral="SpecApiLang.ecore#//HttpMethodType/put"/>
       <genEnumLiterals ecoreEnumLiteral="SpecApiLang.ecore#//HttpMethodType/post"/>
       <genEnumLiterals ecoreEnumLiteral="SpecApiLang.ecore#//HttpMethodType/delete"/>
+      <genEnumLiterals ecoreEnumLiteral="SpecApiLang.ecore#//HttpMethodType/patch"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="SpecApiLang.ecore#//BooleanValue">
       <genEnumLiterals ecoreEnumLiteral="SpecApiLang.ecore#//BooleanValue/true"/>

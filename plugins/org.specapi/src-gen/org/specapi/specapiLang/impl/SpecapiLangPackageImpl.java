@@ -1489,6 +1489,7 @@ public class SpecapiLangPackageImpl extends EPackageImpl implements SpecapiLangP
     addEEnumLiteral(httpMethodTypeEEnum, HttpMethodType.PUT);
     addEEnumLiteral(httpMethodTypeEEnum, HttpMethodType.POST);
     addEEnumLiteral(httpMethodTypeEEnum, HttpMethodType.DELETE);
+    addEEnumLiteral(httpMethodTypeEEnum, HttpMethodType.PATCH);
 
     initEEnum(booleanValueEEnum, BooleanValue.class, "BooleanValue");
     addEEnumLiteral(booleanValueEEnum, BooleanValue.TRUE);
