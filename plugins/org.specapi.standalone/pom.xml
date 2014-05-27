@@ -17,9 +17,14 @@
 	</properties>
 	<dependencies>
 		<dependency>
-			<groupId>org.eclipse.xtend</groupId>
-			<artifactId>org.eclipse.xtend.standalone</artifactId>
-			<version>2.4.2</version>
+			<groupId>org.eclipse.xtext</groupId>
+			<artifactId>org.eclipse.xtext</artifactId>
+			<version>2.6.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.xtext</groupId>
+			<artifactId>org.eclipse.xtext.common.types</artifactId>
+			<version>2.6.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.specapi</groupId>
@@ -28,36 +33,32 @@
 		</dependency>
 	</dependencies>
 	<build>
-
 		<plugins>
 			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-shade-plugin</artifactId>
-				<version>2.1</version>
+			  <groupId>org.codehaus.mojo</groupId>
+			  <artifactId>appassembler-maven-plugin</artifactId>
+			  <version>1.8</version>
 				<executions>
 					<execution>
 						<phase>package</phase>
 						<goals>
-							<goal>shade</goal>
+							<goal>assemble</goal>
 						</goals>
-						<configuration>
-							<transformers>
-								<transformer
-									implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-									<mainClass>org.specapi.standalone.CompilerMain
-									</mainClass>
-								</transformer>
-							</transformers>
-							<filters>
-								<filter>
-									<includes>
-										<include>org.specapi:org.specapi</include>
-									</includes>
-								</filter>
-							</filters>
-						</configuration>
 					</execution>
 				</executions>
+			  <configuration>
+			      <repositoryLayout>flat</repositoryLayout>
+			      <projectArtifactFirstInClassPath>true</projectArtifactFirstInClassPath>
+			      <binFolder>bin</binFolder>
+			      <repositoryName>bin/libs</repositoryName>
+			      <useWildcardClassPath>true</useWildcardClassPath>
+			    <programs>
+			      <program>
+			        <mainClass>org.specapi.standalone.CompilerMain</mainClass>
+			        <id>specapi</id>
+			      </program>
+			    </programs>
+			  </configuration>
 			</plugin>
 		</plugins>
 	</build>

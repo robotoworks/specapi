@@ -1,8 +1,8 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: Simple
+Bundle-Name: Simple Plugin
 Bundle-SymbolicName: org.specapi.plugins.simple
-Bundle-Version: 1.0.0.qualifier
+Bundle-Version: 0.1.0.qualifier
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Import-Package: org.eclipse.xtext.generator
 Require-Bundle: org.eclipse.xtend.lib,

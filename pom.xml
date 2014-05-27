@@ -33,6 +33,10 @@
 		<module>plugins/org.specapi.ui</module>
 		<module>plugins/org.specapi.standalone</module>
 	<!--  	<module>tests/org.specapi.tests</module>-->
+	<!-- SpecAPI Generator Plugins-->
+	<module>plugins/org.specapi.plugins.simple</module>
+	<module>plugins/org.specapi.plugins.docs</module>
+	<module>plugins/org.specapi.plugins.swagger</module>
 	</modules>
 
 	<repositories>

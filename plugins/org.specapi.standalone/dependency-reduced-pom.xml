@@ -38,6 +38,32 @@
           </execution>
         </executions>
       </plugin>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>appassembler-maven-plugin</artifactId>
+        <version>1.8</version>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <goals>
+              <goal>assemble</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <generateRepository>false</generateRepository>
+          <useAllProjectDependencies>false</useAllProjectDependencies>
+          <repositoryLayout>flat</repositoryLayout>
+          <projectArtifactFirstInClassPath>true</projectArtifactFirstInClassPath>
+          <repositoryName />
+          <programs>
+            <program>
+              <mainClass>org.specapi.standalone.CompilerMain</mainClass>
+              <id>specapi</id>
+            </program>
+          </programs>
+        </configuration>
+      </plugin>
     </plugins>
   </build>
   <dependencies>

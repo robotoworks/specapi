@@ -35,7 +35,9 @@ public class CompilerMain {
 		
 		ArrayList<File> pluginRoots = new ArrayList<File>();
 		
-		File defaultPluginRoot = new File(CompilerMain.class.getProtectionDomain().getCodeSource().getLocation().getPath());
+		String mainPath = CompilerMain.class.getProtectionDomain().getCodeSource().getLocation().getPath();
+		mainPath = mainPath.substring(0, mainPath.lastIndexOf("/"));
+		File defaultPluginRoot = new File(mainPath, "../plugins");
 		pluginRoots.add(defaultPluginRoot);
 		
 		System.out.println("[plugins path] " + defaultPluginRoot.getAbsolutePath());

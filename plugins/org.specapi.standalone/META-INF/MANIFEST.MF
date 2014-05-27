@@ -4,7 +4,9 @@ Bundle-Name: SpecAPI Standalone
 Bundle-SymbolicName: org.specapi.standalone
 Bundle-Version: 0.1.0.qualifier
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Require-Bundle: org.eclipse.emf.common;bundle-version="2.9.2",
+Require-Bundle: org.eclipse.xtext,
+ org.eclipse.emf.common;bundle-version="2.9.2",
  org.eclipse.emf.ecore;bundle-version="2.9.2",
  org.eclipse.xtext.util;bundle-version="2.5.3",
- org.specapi;bundle-version="0.1.0"
+ org.specapi;bundle-version="0.1.0",
+ org.eclipse.xtext.generator;bundle-version="2.5.3"

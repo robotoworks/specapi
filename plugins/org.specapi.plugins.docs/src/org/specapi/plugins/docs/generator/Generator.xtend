@@ -43,7 +43,6 @@ class Generator implements IGenerator {
 	}	
 	
 	def generate(Api api, Model model, IFileSystemAccess fsa, HttpMethod method) {
-	    System.out.println(method.name)
 	    var generator = new MethodGenerator(api, model, method)
 	    injector.injectMembers(generator)
 		fsa.generateFile("method_" + method.name + ".html", Plugin.OUTPUT_CONFIG, generator.generate);		

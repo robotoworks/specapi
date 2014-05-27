@@ -1,83 +1,39 @@
 #!/bin/bash
 
 WORKING_DIR=$PWD
-MECH_VERSION=0.1.0
+VERSION=0.1.0
 TARGET=target
 SITE_PATH=$WORKING_DIR/target/ide/eclipse
-DOC_PATH=$WORKING_DIR/target/doc
-APIDOCS_PATH=$WORKING_DIR/target/doc/apidocs
-LIB_PATH=$WORKING_DIR/target/lib
 BIN_PATH=$WORKING_DIR/target/bin
+BIN_PATH_PLUGINS=$WORKING_DIR/target/bin/plugins
 
 rm -r $TARGET
 mkdir $TARGET
 
-buildMechanoid() {
+buildSpecApi() {
 	echo "Building SpecApi..."
 	mvn clean install
 	
 	mkdir -p $SITE_PATH
 	cp -r $WORKING_DIR/releng/org.specapi.updatesite/target/repository/** $SITE_PATH
 	
-	mkdir -p $LIB_PATH
-	cp $WORKING_DIR/libs/mechanoid/target/mechanoid-$MECH_VERSION-SNAPSHOT.jar $LIB_PATH/mechanoid.jar
-	cp $WORKING_DIR/libs/mechanoid/target/mechanoid-$MECH_VERSION-SNAPSHOT-sources.jar $LIB_PATH/mechanoid-sources.jar
-	cp $WORKING_DIR/plugins/org.specapi.standalone/target/org.specapi.standalone-$MECH_VERSION-SNAPSHOT.jar $LIB_PATH/mechanoid.runner.jar
-}
+	mkdir -p $BIN_PATH
+	cp -r $WORKING_DIR/plugins/org.specapi.standalone/target/appassembler/bin/libs $BIN_PATH/libs
+    cp $WORKING_DIR/plugins/org.specapi.standalone/target/appassembler/bin/specapi $BIN_PATH/specapi
+    cp $WORKING_DIR/plugins/org.specapi.standalone/target/appassembler/bin/specapi.bat $BIN_PATH/specapi.bat
 
-buildJavadoc() {
-	echo "Building Javadoc..."
-	mvn -f $WORKING_DIR/libs/mechanoid/pom.xml javadoc:javadoc
-
-	mkdir -p $APIDOCS_PATH
-	cp -r $WORKING_DIR/libs/mechanoid/target/apidocs/** $APIDOCS_PATH
-}
-
-buildUserdoc() {
-	echo "Building user docs..."
-	make -C $WORKING_DIR/docs html
-	
-	mkdir -p $APIDOCS_PATH
-	cp -r $WORKING_DIR/docs/build/html/** $DOC_PATH
+    #Copy SpecAPI Standalone Plugins
+    mkdir -p $BIN_PATH_PLUGINS
+    cp $WORKING_DIR/plugins/org.specapi.plugins.simple/target/org.specapi.plugins.simple-$VERSION-SNAPSHOT.jar $BIN_PATH_PLUGINS/org.specapi.plugins.simple.jar
+    cp $WORKING_DIR/plugins/org.specapi.plugins.docs/target/org.specapi.plugins.docs-$VERSION-SNAPSHOT.jar $BIN_PATH_PLUGINS/org.specapi.plugins.docs.jar
+    cp $WORKING_DIR/plugins/org.specapi.plugins.swagger/target/org.specapi.plugins.swagger-$VERSION-SNAPSHOT.jar $BIN_PATH_PLUGINS/org.specapi.plugins.swagger.jar
 }
 
 build() {
-    echo "Deploy Mode: $1"
-
-    if [ "$1" == "all" ]; then
-        buildMechanoid
-        buildJavadoc
-        buildUserdoc
-        exit 1
-    elif [ "$1" == "product" ]; then
-        buildMechanoid
-        exit 1
-    elif [ "$1" == "javadoc" ]; then
-        buildJavadoc
-        exit 1
-    elif [ "$1" == "userdoc" ]; then
-        buildUserdoc
-        exit 1
-    elif [ "$1" == "alldocs" ]; then
-        buildJavadoc
-        buildUserdoc
-        exit 1
-    else
-        echo "Invalid Build Option: $1"
-        exit 0
-    fi
+    buildSpecApi
 }
 
-usage() {
-    echo "Usage:$0 (product|javadoc|userdoc|alldocs|all)"
-}
-
-if [ "$#" -eq "0" ]; then
-    usage
-    exit 1
-else
-    build $1
-fi
+build
 
 
 
