@@ -56,6 +56,7 @@ public class Compiler {
 
 		if(!file.exists()) {
 			System.out.println("[input] invalid input source, the file or directory could not be found");
+			return;
 		}
 		
 		ArrayList<String> resourcePaths = new ArrayList<String>();

@@ -21,7 +21,9 @@ buildSpecApi() {
 	cp -r $WORKING_DIR/plugins/org.specapi.standalone/target/appassembler/bin/libs $BIN_PATH/libs
     cp $WORKING_DIR/plugins/org.specapi.standalone/target/appassembler/bin/specapi $BIN_PATH/specapi
     cp $WORKING_DIR/plugins/org.specapi.standalone/target/appassembler/bin/specapi.bat $BIN_PATH/specapi.bat
-
+ 	
+ 	chmod u+x $BIN_PATH/specapi
+ 
     #Copy SpecAPI Standalone Plugins
     mkdir -p $BIN_PATH_PLUGINS
     cp $WORKING_DIR/plugins/org.specapi.plugins.simple/target/org.specapi.plugins.simple-$VERSION-SNAPSHOT.jar $BIN_PATH_PLUGINS/org.specapi.plugins.simple.jar
