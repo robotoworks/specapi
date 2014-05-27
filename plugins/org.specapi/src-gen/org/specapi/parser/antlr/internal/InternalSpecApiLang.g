@@ -1488,24 +1488,9 @@ ruleComplexTypeDeclaration returns [EObject current=null]
 )
 )(
 (
-		lv_nogen_1_0=	'nogen' 
-    {
-        newLeafNode(lv_nogen_1_0, grammarAccess.getComplexTypeDeclarationAccess().getNogenNogenKeyword_1_0());
-    }
- 
-	    {
-	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getComplexTypeDeclarationRule());
-	        }
-       		setWithLastConsumed($current, "nogen", true, "nogen");
-	    }
-
-)
-)?(
-(
-		lv_name_2_0=RULE_ID
+		lv_name_1_0=RULE_ID
 		{
-			newLeafNode(lv_name_2_0, grammarAccess.getComplexTypeDeclarationAccess().getNameIDTerminalRuleCall_2_0()); 
+			newLeafNode(lv_name_1_0, grammarAccess.getComplexTypeDeclarationAccess().getNameIDTerminalRuleCall_1_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -1514,7 +1499,7 @@ ruleComplexTypeDeclaration returns [EObject current=null]
        		setWithLastConsumed(
        			$current, 
        			"name",
-        		lv_name_2_0, 
+        		lv_name_1_0, 
         		"ID");
 	    }
 
@@ -1522,16 +1507,16 @@ ruleComplexTypeDeclaration returns [EObject current=null]
 )(
 (
 		{ 
-	        newCompositeNode(grammarAccess.getComplexTypeDeclarationAccess().getLiteralComplexTypeLiteralParserRuleCall_3_0()); 
+	        newCompositeNode(grammarAccess.getComplexTypeDeclarationAccess().getLiteralComplexTypeLiteralParserRuleCall_2_0()); 
 	    }
-		lv_literal_3_0=ruleComplexTypeLiteral		{
+		lv_literal_2_0=ruleComplexTypeLiteral		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getComplexTypeDeclarationRule());
 	        }
        		set(
        			$current, 
        			"literal",
-        		lv_literal_3_0, 
+        		lv_literal_2_0, 
         		"ComplexTypeLiteral");
 	        afterParserOrEnumRuleCall();
 	    }
@@ -1575,24 +1560,9 @@ ruleEnumTypeDeclaration returns [EObject current=null]
 )
 )(
 (
-		lv_nogen_1_0=	'nogen' 
-    {
-        newLeafNode(lv_nogen_1_0, grammarAccess.getEnumTypeDeclarationAccess().getNogenNogenKeyword_1_0());
-    }
- 
-	    {
-	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getEnumTypeDeclarationRule());
-	        }
-       		setWithLastConsumed($current, "nogen", true, "nogen");
-	    }
-
-)
-)?(
-(
-		lv_name_2_0=RULE_ID
+		lv_name_1_0=RULE_ID
 		{
-			newLeafNode(lv_name_2_0, grammarAccess.getEnumTypeDeclarationAccess().getNameIDTerminalRuleCall_2_0()); 
+			newLeafNode(lv_name_1_0, grammarAccess.getEnumTypeDeclarationAccess().getNameIDTerminalRuleCall_1_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -1601,28 +1571,28 @@ ruleEnumTypeDeclaration returns [EObject current=null]
        		setWithLastConsumed(
        			$current, 
        			"name",
-        		lv_name_2_0, 
+        		lv_name_1_0, 
         		"ID");
 	    }
 
 )
-)(	otherlv_3='extends' 
+)(	otherlv_2='extends' 
     {
-    	newLeafNode(otherlv_3, grammarAccess.getEnumTypeDeclarationAccess().getExtendsKeyword_3_0());
+    	newLeafNode(otherlv_2, grammarAccess.getEnumTypeDeclarationAccess().getExtendsKeyword_2_0());
     }
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getEnumTypeDeclarationAccess().getSuperTypeIntegerTypeParserRuleCall_3_1_0()); 
+	        newCompositeNode(grammarAccess.getEnumTypeDeclarationAccess().getSuperTypeIntegerTypeParserRuleCall_2_1_0()); 
 	    }
-		lv_superType_4_0=ruleIntegerType		{
+		lv_superType_3_0=ruleIntegerType		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getEnumTypeDeclarationRule());
 	        }
        		set(
        			$current, 
        			"superType",
-        		lv_superType_4_0, 
+        		lv_superType_3_0, 
         		"IntegerType");
 	        afterParserOrEnumRuleCall();
 	    }
@@ -1631,16 +1601,16 @@ ruleEnumTypeDeclaration returns [EObject current=null]
 ))?(
 (
 		{ 
-	        newCompositeNode(grammarAccess.getEnumTypeDeclarationAccess().getLiteralEnumTypeLiteralParserRuleCall_4_0()); 
+	        newCompositeNode(grammarAccess.getEnumTypeDeclarationAccess().getLiteralEnumTypeLiteralParserRuleCall_3_0()); 
 	    }
-		lv_literal_5_0=ruleEnumTypeLiteral		{
+		lv_literal_4_0=ruleEnumTypeLiteral		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getEnumTypeDeclarationRule());
 	        }
        		set(
        			$current, 
        			"literal",
-        		lv_literal_5_0, 
+        		lv_literal_4_0, 
         		"EnumTypeLiteral");
 	        afterParserOrEnumRuleCall();
 	    }

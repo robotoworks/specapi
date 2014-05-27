@@ -78,7 +78,7 @@ public class SpecApiLangParser extends AbstractContentAssistParser {
 					put(grammarAccess.getArrayTypeAccess().getGroup(), "rule__ArrayType__Group__0");
 					put(grammarAccess.getComplexTypeDeclarationAccess().getGroup(), "rule__ComplexTypeDeclaration__Group__0");
 					put(grammarAccess.getEnumTypeDeclarationAccess().getGroup(), "rule__EnumTypeDeclaration__Group__0");
-					put(grammarAccess.getEnumTypeDeclarationAccess().getGroup_3(), "rule__EnumTypeDeclaration__Group_3__0");
+					put(grammarAccess.getEnumTypeDeclarationAccess().getGroup_2(), "rule__EnumTypeDeclaration__Group_2__0");
 					put(grammarAccess.getEnumTypeLiteralAccess().getGroup(), "rule__EnumTypeLiteral__Group__0");
 					put(grammarAccess.getEnumTypeLiteralAccess().getGroup_2(), "rule__EnumTypeLiteral__Group_2__0");
 					put(grammarAccess.getEnumMemberAccess().getGroup(), "rule__EnumMember__Group__0");
@@ -121,14 +121,12 @@ public class SpecApiLangParser extends AbstractContentAssistParser {
 					put(grammarAccess.getArrayTypeAccess().getIdAssignment_1(), "rule__ArrayType__IdAssignment_1");
 					put(grammarAccess.getUserTypeAccess().getDeclarationAssignment(), "rule__UserType__DeclarationAssignment");
 					put(grammarAccess.getComplexTypeDeclarationAccess().getKeywordAssignment_0(), "rule__ComplexTypeDeclaration__KeywordAssignment_0");
-					put(grammarAccess.getComplexTypeDeclarationAccess().getNogenAssignment_1(), "rule__ComplexTypeDeclaration__NogenAssignment_1");
-					put(grammarAccess.getComplexTypeDeclarationAccess().getNameAssignment_2(), "rule__ComplexTypeDeclaration__NameAssignment_2");
-					put(grammarAccess.getComplexTypeDeclarationAccess().getLiteralAssignment_3(), "rule__ComplexTypeDeclaration__LiteralAssignment_3");
+					put(grammarAccess.getComplexTypeDeclarationAccess().getNameAssignment_1(), "rule__ComplexTypeDeclaration__NameAssignment_1");
+					put(grammarAccess.getComplexTypeDeclarationAccess().getLiteralAssignment_2(), "rule__ComplexTypeDeclaration__LiteralAssignment_2");
 					put(grammarAccess.getEnumTypeDeclarationAccess().getKeywordAssignment_0(), "rule__EnumTypeDeclaration__KeywordAssignment_0");
-					put(grammarAccess.getEnumTypeDeclarationAccess().getNogenAssignment_1(), "rule__EnumTypeDeclaration__NogenAssignment_1");
-					put(grammarAccess.getEnumTypeDeclarationAccess().getNameAssignment_2(), "rule__EnumTypeDeclaration__NameAssignment_2");
-					put(grammarAccess.getEnumTypeDeclarationAccess().getSuperTypeAssignment_3_1(), "rule__EnumTypeDeclaration__SuperTypeAssignment_3_1");
-					put(grammarAccess.getEnumTypeDeclarationAccess().getLiteralAssignment_4(), "rule__EnumTypeDeclaration__LiteralAssignment_4");
+					put(grammarAccess.getEnumTypeDeclarationAccess().getNameAssignment_1(), "rule__EnumTypeDeclaration__NameAssignment_1");
+					put(grammarAccess.getEnumTypeDeclarationAccess().getSuperTypeAssignment_2_1(), "rule__EnumTypeDeclaration__SuperTypeAssignment_2_1");
+					put(grammarAccess.getEnumTypeDeclarationAccess().getLiteralAssignment_3(), "rule__EnumTypeDeclaration__LiteralAssignment_3");
 					put(grammarAccess.getEnumTypeLiteralAccess().getMembersAssignment_1(), "rule__EnumTypeLiteral__MembersAssignment_1");
 					put(grammarAccess.getEnumTypeLiteralAccess().getMembersAssignment_2_1(), "rule__EnumTypeLiteral__MembersAssignment_2_1");
 					put(grammarAccess.getEnumMemberAccess().getNameAssignment_0(), "rule__EnumMember__NameAssignment_0");

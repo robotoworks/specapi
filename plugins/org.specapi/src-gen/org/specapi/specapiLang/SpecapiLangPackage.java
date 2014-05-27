@@ -709,22 +709,13 @@ public interface SpecapiLangPackage extends EPackage
   int USER_TYPE_DECLARATION__KEYWORD = DECLARATION_FEATURE_COUNT + 0;
 
   /**
-   * The feature id for the '<em><b>Nogen</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int USER_TYPE_DECLARATION__NOGEN = DECLARATION_FEATURE_COUNT + 1;
-
-  /**
    * The number of structural features of the '<em>User Type Declaration</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int USER_TYPE_DECLARATION_FEATURE_COUNT = DECLARATION_FEATURE_COUNT + 2;
+  int USER_TYPE_DECLARATION_FEATURE_COUNT = DECLARATION_FEATURE_COUNT + 1;
 
   /**
    * The meta object id for the '{@link org.specapi.specapiLang.impl.ComplexTypeDeclarationImpl <em>Complex Type Declaration</em>}' class.
@@ -753,15 +744,6 @@ public interface SpecapiLangPackage extends EPackage
    * @ordered
    */
   int COMPLEX_TYPE_DECLARATION__KEYWORD = USER_TYPE_DECLARATION__KEYWORD;
-
-  /**
-   * The feature id for the '<em><b>Nogen</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int COMPLEX_TYPE_DECLARATION__NOGEN = USER_TYPE_DECLARATION__NOGEN;
 
   /**
    * The feature id for the '<em><b>Literal</b></em>' containment reference.
@@ -808,15 +790,6 @@ public interface SpecapiLangPackage extends EPackage
    * @ordered
    */
   int ENUM_TYPE_DECLARATION__KEYWORD = USER_TYPE_DECLARATION__KEYWORD;
-
-  /**
-   * The feature id for the '<em><b>Nogen</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ENUM_TYPE_DECLARATION__NOGEN = USER_TYPE_DECLARATION__NOGEN;
 
   /**
    * The feature id for the '<em><b>Super Type</b></em>' containment reference.
@@ -1756,17 +1729,6 @@ public interface SpecapiLangPackage extends EPackage
   EAttribute getUserTypeDeclaration_Keyword();
 
   /**
-   * Returns the meta object for the attribute '{@link org.specapi.specapiLang.UserTypeDeclaration#isNogen <em>Nogen</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Nogen</em>'.
-   * @see org.specapi.specapiLang.UserTypeDeclaration#isNogen()
-   * @see #getUserTypeDeclaration()
-   * @generated
-   */
-  EAttribute getUserTypeDeclaration_Nogen();
-
-  /**
    * Returns the meta object for class '{@link org.specapi.specapiLang.ComplexTypeDeclaration <em>Complex Type Declaration</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2516,14 +2478,6 @@ public interface SpecapiLangPackage extends EPackage
      * @generated
      */
     EAttribute USER_TYPE_DECLARATION__KEYWORD = eINSTANCE.getUserTypeDeclaration_Keyword();
-
-    /**
-     * The meta object literal for the '<em><b>Nogen</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute USER_TYPE_DECLARATION__NOGEN = eINSTANCE.getUserTypeDeclaration_Nogen();
 
     /**
      * The meta object literal for the '{@link org.specapi.specapiLang.impl.ComplexTypeDeclarationImpl <em>Complex Type Declaration</em>}' class.

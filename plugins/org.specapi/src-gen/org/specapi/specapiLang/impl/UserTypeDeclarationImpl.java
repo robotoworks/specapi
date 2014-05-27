@@ -19,7 +19,6 @@ import org.specapi.specapiLang.UserTypeDeclaration;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.specapi.specapiLang.impl.UserTypeDeclarationImpl#getKeyword <em>Keyword</em>}</li>
- *   <li>{@link org.specapi.specapiLang.impl.UserTypeDeclarationImpl#isNogen <em>Nogen</em>}</li>
  * </ul>
  * </p>
  *
@@ -46,26 +45,6 @@ public class UserTypeDeclarationImpl extends DeclarationImpl implements UserType
    * @ordered
    */
   protected String keyword = KEYWORD_EDEFAULT;
-
-  /**
-   * The default value of the '{@link #isNogen() <em>Nogen</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #isNogen()
-   * @generated
-   * @ordered
-   */
-  protected static final boolean NOGEN_EDEFAULT = false;
-
-  /**
-   * The cached value of the '{@link #isNogen() <em>Nogen</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #isNogen()
-   * @generated
-   * @ordered
-   */
-  protected boolean nogen = NOGEN_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -116,29 +95,6 @@ public class UserTypeDeclarationImpl extends DeclarationImpl implements UserType
    * <!-- end-user-doc -->
    * @generated
    */
-  public boolean isNogen()
-  {
-    return nogen;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setNogen(boolean newNogen)
-  {
-    boolean oldNogen = nogen;
-    nogen = newNogen;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, SpecapiLangPackage.USER_TYPE_DECLARATION__NOGEN, oldNogen, nogen));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
@@ -146,8 +102,6 @@ public class UserTypeDeclarationImpl extends DeclarationImpl implements UserType
     {
       case SpecapiLangPackage.USER_TYPE_DECLARATION__KEYWORD:
         return getKeyword();
-      case SpecapiLangPackage.USER_TYPE_DECLARATION__NOGEN:
-        return isNogen();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -164,9 +118,6 @@ public class UserTypeDeclarationImpl extends DeclarationImpl implements UserType
     {
       case SpecapiLangPackage.USER_TYPE_DECLARATION__KEYWORD:
         setKeyword((String)newValue);
-        return;
-      case SpecapiLangPackage.USER_TYPE_DECLARATION__NOGEN:
-        setNogen((Boolean)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -185,9 +136,6 @@ public class UserTypeDeclarationImpl extends DeclarationImpl implements UserType
       case SpecapiLangPackage.USER_TYPE_DECLARATION__KEYWORD:
         setKeyword(KEYWORD_EDEFAULT);
         return;
-      case SpecapiLangPackage.USER_TYPE_DECLARATION__NOGEN:
-        setNogen(NOGEN_EDEFAULT);
-        return;
     }
     super.eUnset(featureID);
   }
@@ -204,8 +152,6 @@ public class UserTypeDeclarationImpl extends DeclarationImpl implements UserType
     {
       case SpecapiLangPackage.USER_TYPE_DECLARATION__KEYWORD:
         return KEYWORD_EDEFAULT == null ? keyword != null : !KEYWORD_EDEFAULT.equals(keyword);
-      case SpecapiLangPackage.USER_TYPE_DECLARATION__NOGEN:
-        return nogen != NOGEN_EDEFAULT;
     }
     return super.eIsSet(featureID);
   }
@@ -223,8 +169,6 @@ public class UserTypeDeclarationImpl extends DeclarationImpl implements UserType
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (keyword: ");
     result.append(keyword);
-    result.append(", nogen: ");
-    result.append(nogen);
     result.append(')');
     return result.toString();
   }

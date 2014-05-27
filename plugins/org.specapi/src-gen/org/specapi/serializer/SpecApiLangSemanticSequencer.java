@@ -304,7 +304,7 @@ public class SpecApiLangSemanticSequencer extends AbstractDelegatingSemanticSequ
 	
 	/**
 	 * Constraint:
-	 *     (keyword='entity' nogen?='nogen'? name=ID literal=ComplexTypeLiteral?)
+	 *     (keyword='entity' name=ID literal=ComplexTypeLiteral?)
 	 */
 	protected void sequence_ComplexTypeDeclaration(EObject context, ComplexTypeDeclaration semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -347,7 +347,7 @@ public class SpecApiLangSemanticSequencer extends AbstractDelegatingSemanticSequ
 	
 	/**
 	 * Constraint:
-	 *     (keyword='enum' nogen?='nogen'? name=ID superType=IntegerType? literal=EnumTypeLiteral?)
+	 *     (keyword='enum' name=ID superType=IntegerType? literal=EnumTypeLiteral?)
 	 */
 	protected void sequence_EnumTypeDeclaration(EObject context, EnumTypeDeclaration semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

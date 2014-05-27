@@ -803,18 +803,16 @@ public class SpecApiLangGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Assignment cKeywordAssignment_0 = (Assignment)cGroup.eContents().get(0);
 		private final Keyword cKeywordEntityKeyword_0_0 = (Keyword)cKeywordAssignment_0.eContents().get(0);
-		private final Assignment cNogenAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final Keyword cNogenNogenKeyword_1_0 = (Keyword)cNogenAssignment_1.eContents().get(0);
-		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cNameIDTerminalRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
-		private final Assignment cLiteralAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cLiteralComplexTypeLiteralParserRuleCall_3_0 = (RuleCall)cLiteralAssignment_3.eContents().get(0);
+		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final Assignment cLiteralAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cLiteralComplexTypeLiteralParserRuleCall_2_0 = (RuleCall)cLiteralAssignment_2.eContents().get(0);
 		
 		//ComplexTypeDeclaration:
-		//	keyword="entity" nogen?="nogen"? name=ID literal=ComplexTypeLiteral?;
+		//	keyword="entity" name=ID literal=ComplexTypeLiteral?;
 		public ParserRule getRule() { return rule; }
 
-		//keyword="entity" nogen?="nogen"? name=ID literal=ComplexTypeLiteral?
+		//keyword="entity" name=ID literal=ComplexTypeLiteral?
 		public Group getGroup() { return cGroup; }
 
 		//keyword="entity"
@@ -823,23 +821,17 @@ public class SpecApiLangGrammarAccess extends AbstractGrammarElementFinder {
 		//"entity"
 		public Keyword getKeywordEntityKeyword_0_0() { return cKeywordEntityKeyword_0_0; }
 
-		//nogen?="nogen"?
-		public Assignment getNogenAssignment_1() { return cNogenAssignment_1; }
-
-		//"nogen"
-		public Keyword getNogenNogenKeyword_1_0() { return cNogenNogenKeyword_1_0; }
-
 		//name=ID
-		public Assignment getNameAssignment_2() { return cNameAssignment_2; }
+		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
 
 		//ID
-		public RuleCall getNameIDTerminalRuleCall_2_0() { return cNameIDTerminalRuleCall_2_0; }
+		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
 		//literal=ComplexTypeLiteral?
-		public Assignment getLiteralAssignment_3() { return cLiteralAssignment_3; }
+		public Assignment getLiteralAssignment_2() { return cLiteralAssignment_2; }
 
 		//ComplexTypeLiteral
-		public RuleCall getLiteralComplexTypeLiteralParserRuleCall_3_0() { return cLiteralComplexTypeLiteralParserRuleCall_3_0; }
+		public RuleCall getLiteralComplexTypeLiteralParserRuleCall_2_0() { return cLiteralComplexTypeLiteralParserRuleCall_2_0; }
 	}
 
 	public class EnumTypeDeclarationElements extends AbstractParserRuleElementFinder {
@@ -847,22 +839,20 @@ public class SpecApiLangGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Assignment cKeywordAssignment_0 = (Assignment)cGroup.eContents().get(0);
 		private final Keyword cKeywordEnumKeyword_0_0 = (Keyword)cKeywordAssignment_0.eContents().get(0);
-		private final Assignment cNogenAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final Keyword cNogenNogenKeyword_1_0 = (Keyword)cNogenAssignment_1.eContents().get(0);
-		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cNameIDTerminalRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
-		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
-		private final Keyword cExtendsKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
-		private final Assignment cSuperTypeAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
-		private final RuleCall cSuperTypeIntegerTypeParserRuleCall_3_1_0 = (RuleCall)cSuperTypeAssignment_3_1.eContents().get(0);
-		private final Assignment cLiteralAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cLiteralEnumTypeLiteralParserRuleCall_4_0 = (RuleCall)cLiteralAssignment_4.eContents().get(0);
+		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
+		private final Keyword cExtendsKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
+		private final Assignment cSuperTypeAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
+		private final RuleCall cSuperTypeIntegerTypeParserRuleCall_2_1_0 = (RuleCall)cSuperTypeAssignment_2_1.eContents().get(0);
+		private final Assignment cLiteralAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLiteralEnumTypeLiteralParserRuleCall_3_0 = (RuleCall)cLiteralAssignment_3.eContents().get(0);
 		
 		//EnumTypeDeclaration:
-		//	keyword="enum" nogen?="nogen"? name=ID ("extends" superType=IntegerType)? literal=EnumTypeLiteral?;
+		//	keyword="enum" name=ID ("extends" superType=IntegerType)? literal=EnumTypeLiteral?;
 		public ParserRule getRule() { return rule; }
 
-		//keyword="enum" nogen?="nogen"? name=ID ("extends" superType=IntegerType)? literal=EnumTypeLiteral?
+		//keyword="enum" name=ID ("extends" superType=IntegerType)? literal=EnumTypeLiteral?
 		public Group getGroup() { return cGroup; }
 
 		//keyword="enum"
@@ -871,35 +861,29 @@ public class SpecApiLangGrammarAccess extends AbstractGrammarElementFinder {
 		//"enum"
 		public Keyword getKeywordEnumKeyword_0_0() { return cKeywordEnumKeyword_0_0; }
 
-		//nogen?="nogen"?
-		public Assignment getNogenAssignment_1() { return cNogenAssignment_1; }
-
-		//"nogen"
-		public Keyword getNogenNogenKeyword_1_0() { return cNogenNogenKeyword_1_0; }
-
 		//name=ID
-		public Assignment getNameAssignment_2() { return cNameAssignment_2; }
+		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
 
 		//ID
-		public RuleCall getNameIDTerminalRuleCall_2_0() { return cNameIDTerminalRuleCall_2_0; }
+		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
 		//("extends" superType=IntegerType)?
-		public Group getGroup_3() { return cGroup_3; }
+		public Group getGroup_2() { return cGroup_2; }
 
 		//"extends"
-		public Keyword getExtendsKeyword_3_0() { return cExtendsKeyword_3_0; }
+		public Keyword getExtendsKeyword_2_0() { return cExtendsKeyword_2_0; }
 
 		//superType=IntegerType
-		public Assignment getSuperTypeAssignment_3_1() { return cSuperTypeAssignment_3_1; }
+		public Assignment getSuperTypeAssignment_2_1() { return cSuperTypeAssignment_2_1; }
 
 		//IntegerType
-		public RuleCall getSuperTypeIntegerTypeParserRuleCall_3_1_0() { return cSuperTypeIntegerTypeParserRuleCall_3_1_0; }
+		public RuleCall getSuperTypeIntegerTypeParserRuleCall_2_1_0() { return cSuperTypeIntegerTypeParserRuleCall_2_1_0; }
 
 		//literal=EnumTypeLiteral?
-		public Assignment getLiteralAssignment_4() { return cLiteralAssignment_4; }
+		public Assignment getLiteralAssignment_3() { return cLiteralAssignment_3; }
 
 		//EnumTypeLiteral
-		public RuleCall getLiteralEnumTypeLiteralParserRuleCall_4_0() { return cLiteralEnumTypeLiteralParserRuleCall_4_0; }
+		public RuleCall getLiteralEnumTypeLiteralParserRuleCall_3_0() { return cLiteralEnumTypeLiteralParserRuleCall_3_0; }
 	}
 
 	public class EnumTypeLiteralElements extends AbstractParserRuleElementFinder {
@@ -1598,7 +1582,7 @@ public class SpecApiLangGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//ComplexTypeDeclaration:
-	//	keyword="entity" nogen?="nogen"? name=ID literal=ComplexTypeLiteral?;
+	//	keyword="entity" name=ID literal=ComplexTypeLiteral?;
 	public ComplexTypeDeclarationElements getComplexTypeDeclarationAccess() {
 		return (pComplexTypeDeclaration != null) ? pComplexTypeDeclaration : (pComplexTypeDeclaration = new ComplexTypeDeclarationElements());
 	}
@@ -1608,7 +1592,7 @@ public class SpecApiLangGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//EnumTypeDeclaration:
-	//	keyword="enum" nogen?="nogen"? name=ID ("extends" superType=IntegerType)? literal=EnumTypeLiteral?;
+	//	keyword="enum" name=ID ("extends" superType=IntegerType)? literal=EnumTypeLiteral?;
 	public EnumTypeDeclarationElements getEnumTypeDeclarationAccess() {
 		return (pEnumTypeDeclaration != null) ? pEnumTypeDeclaration : (pEnumTypeDeclaration = new EnumTypeDeclarationElements());
 	}

@@ -110,11 +110,11 @@ UserTypeDeclaration:
 ;
 
 ComplexTypeDeclaration:
-	keyword='entity' (nogen?='nogen')? name=ID (literal=ComplexTypeLiteral)?
+	keyword='entity' name=ID (literal=ComplexTypeLiteral)?
 ;
 
 EnumTypeDeclaration:
-	keyword='enum' (nogen?='nogen')? name=ID ('extends' superType=IntegerType)? (literal=EnumTypeLiteral)?
+	keyword='enum' name=ID ('extends' superType=IntegerType)? (literal=EnumTypeLiteral)?
 ;
 
 EnumTypeLiteral:

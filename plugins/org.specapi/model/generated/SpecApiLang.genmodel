@@ -81,7 +81,6 @@
     </genClasses>
     <genClasses ecoreClass="SpecApiLang.ecore#//UserTypeDeclaration">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpecApiLang.ecore#//UserTypeDeclaration/keyword"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpecApiLang.ecore#//UserTypeDeclaration/nogen"/>
     </genClasses>
     <genClasses ecoreClass="SpecApiLang.ecore#//ComplexTypeDeclaration">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpecApiLang.ecore#//ComplexTypeDeclaration/literal"/>
