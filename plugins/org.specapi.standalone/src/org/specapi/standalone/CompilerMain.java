@@ -1,9 +1,11 @@
-package org.specapi;
+package org.specapi.standalone;
 
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
+
+import org.specapi.SpecApiLangStandaloneSetup;
 
 import com.google.inject.Injector;
 

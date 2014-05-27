@@ -1,4 +1,4 @@
-package org.specapi;
+package org.specapi.standalone;
 
 import java.io.File;
 import java.io.IOException;
@@ -17,6 +17,8 @@ import org.eclipse.xtext.resource.XtextResourceSet;
 import org.eclipse.xtext.validation.CheckMode;
 import org.eclipse.xtext.validation.IResourceValidator;
 import org.eclipse.xtext.validation.Issue;
+import org.specapi.SpecApiLangStandaloneSetup;
+import org.specapi.StandaloneFileSystemAccess;
 import org.specapi.plugins.IPlugin;
 import org.specapi.plugins.Plugin;
 import org.specapi.plugins.PluginLoader;
