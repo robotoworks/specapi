@@ -1,6 +1,8 @@
 package org.specapi.standalone;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -21,7 +23,9 @@ import org.specapi.SpecApiLangStandaloneSetup;
 import org.specapi.StandaloneFileSystemAccess;
 import org.specapi.plugins.IPlugin;
 import org.specapi.plugins.Plugin;
+import org.specapi.plugins.PluginConfigParser;
 import org.specapi.plugins.PluginLoader;
+import org.specapi.plugins.UserPluginConfig;
 
 import com.google.common.collect.Lists;
 import com.google.inject.Injector;
@@ -33,10 +37,13 @@ public class Compiler {
 	private XtextResourceSet mResourceSet;
 	private String mExtension;
 	private ArrayList<Plugin> mPlugins;
+	private UserPluginConfig mTargetConfig;
+	private PluginConfigParser mConfigParser;
 
 	public Compiler(SpecApiLangStandaloneSetup setup, List<File> pluginRoots, String extension) {
 		mExtension = extension;
 		mInjector = setup.createInjectorAndDoEMFRegistration();
+		mConfigParser = mInjector.getInstance(PluginConfigParser.class);
 		mPlugins = mInjector.getInstance(PluginLoader.class).loadPlugins(pluginRoots);
 		
 		mFileSystemAccess = mInjector.getInstance(StandaloneFileSystemAccess.class);
@@ -57,6 +64,13 @@ public class Compiler {
 		if(!file.exists()) {
 			System.out.println("[input] invalid input source, the file or directory could not be found");
 			return;
+		}
+		
+		try {
+			mTargetConfig = loadTargetConfig(file);
+		} catch (FileNotFoundException e1) {
+			e1.printStackTrace();
+			System.out.println("[failed] could not find config " + PluginLoader.PLUGIN_TARGET_CONFIG_FILENAME);
 		}
 		
 		ArrayList<String> resourcePaths = new ArrayList<String>();
@@ -85,6 +99,18 @@ public class Compiler {
 
 	}
 
+	private UserPluginConfig loadTargetConfig(File file) throws FileNotFoundException {
+		File configFile = null;
+		
+		if(file.isDirectory()) {
+			configFile = new File(file, PluginLoader.PLUGIN_TARGET_CONFIG_FILENAME);
+		} else {
+			configFile = new File(file.getParentFile(), PluginLoader.PLUGIN_TARGET_CONFIG_FILENAME);
+		}
+		
+		return mConfigParser.parseUserConfigFromStream(new FileInputStream(configFile));
+	}
+
 	private List<Issue> validate() {
 		List<Issue> issues = Lists.newArrayList();
 		for (Resource resource : mResourceSet.getResources()) {
@@ -105,7 +131,7 @@ public class Compiler {
 	protected void generate() {
 		for(Resource resource : mResourceSet.getResources()) {
 			for(IPlugin plugin : mPlugins) {
-				if(plugin.getGenerator() != null) {
+				if(plugin.getGenerator() != null && mTargetConfig.targetsPlugin(plugin.getConfig().getPluginClassName())) {
 					IGenerator generator = plugin.getGenerator();
 					mInjector.injectMembers(generator);
 					generator.doGenerate(resource, mFileSystemAccess);
@@ -116,7 +142,7 @@ public class Compiler {
 	
 	protected void copyResources() throws IOException {
 		for(IPlugin plugin : mPlugins) {
-			if(!plugin.getConfig().getOutputConfigurations().isEmpty()) {
+			if(!plugin.getConfig().getOutputConfigurations().isEmpty() && mTargetConfig.targetsPlugin(plugin.getConfig().getPluginClassName())) {
 				File outputFolder = new File(System.getProperty("user.dir"), plugin.getConfig().getOutputConfigurations().iterator().next().getOutputDirectory());
 			    plugin.copyResources(outputFolder);
 			}

@@ -128,7 +128,8 @@ public class CommentParserTests {
        var doc = commentParser.parseDocComments(api)
        
        // assert
-       assertNull(doc);
+       assertEquals(null,doc.content);
+       assertEquals(0,doc.params.size);
     }
 
     @Test
@@ -148,7 +149,8 @@ public class CommentParserTests {
        var doc = commentParser.parseDocComments(api)
      
        // assert
-       assertNull(doc);
+       assertEquals(null,doc.content);
+       assertEquals(0,doc.params.size);
     }
     
     @Test

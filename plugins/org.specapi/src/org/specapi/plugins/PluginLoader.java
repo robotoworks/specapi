@@ -7,11 +7,20 @@ import java.net.URLClassLoader;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.google.inject.Inject;
+
 
 public class PluginLoader {
 
 	public static final String PLUGIN_CONFIG_FILENAME = "specapiplugin.config";
+	public static final String PLUGIN_TARGET_CONFIG_FILENAME = "specapi.config";
 
+	@Inject PluginConfigParser pluginConfigParser;
+	
+	public PluginConfigParser getPluginConfigParser() {
+		return pluginConfigParser;
+	}
+	
 	public ArrayList<Plugin> loadPlugins(List<File> files) {
 		ArrayList<Plugin> plugins = new ArrayList<Plugin>();
 		
@@ -35,8 +44,8 @@ public class PluginLoader {
 		Object instance;
 		try {
 			loader = new URLClassLoader (new URL[]{file.toURI().toURL()}, getClass().getClassLoader());
-			PluginConfig config = PluginConfig.fromStream(loader.getResourceAsStream(PLUGIN_CONFIG_FILENAME));
-			Class classToLoad = Class.forName (config.getPluginClassName(), true, loader);
+			PluginConfig config = pluginConfigParser.parsePluginConfigFromStream(loader.getResourceAsStream(PLUGIN_CONFIG_FILENAME));
+			Class<?> classToLoad = Class.forName (config.getPluginClassName(), true, loader);
 			instance = classToLoad.newInstance ();
 			
 			return new JarFilePlugin((ISpecApiPlugin) instance, config, file);

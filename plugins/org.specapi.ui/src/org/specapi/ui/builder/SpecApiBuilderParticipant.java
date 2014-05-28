@@ -13,7 +13,9 @@ import org.eclipse.xtext.builder.BuilderParticipant;
 import org.eclipse.xtext.generator.OutputConfiguration;
 import org.specapi.plugins.IPlugin;
 import org.specapi.plugins.Plugin;
+import org.specapi.plugins.PluginConfigParser;
 import org.specapi.plugins.PluginLoader;
+import org.specapi.plugins.UserPluginConfig;
 import org.specapi.ui.ProjectUtil;
 import org.specapi.ui.generator.EclipseSpecApiGenerator;
 
@@ -23,22 +25,27 @@ import com.google.inject.Inject;
 public class SpecApiBuilderParticipant extends BuilderParticipant {
 	
 	@Inject PluginLoader pluginLoader;
+	@Inject PluginConfigParser pluginConfigParser;
 	private ArrayList<Plugin> mPlugins;
+	private UserPluginConfig mTargetConfig;
 	
 	@Override
 	public void build(IBuildContext context, IProgressMonitor monitor)
 			throws CoreException {
 		
 		EclipseSpecApiGenerator generator = (EclipseSpecApiGenerator) getGenerator();
-		// TODO: load this from some config setting in preferences where the
-		// user can specify where the plugins are
-		mPlugins = pluginLoader.loadPlugins(null);
 		
-		generator.setPlugins(mPlugins);
-		
-		// Copy resources
 		if(ProjectUtil.isGeneratorTargetProject(context.getBuiltProject())) {
+			mPlugins = pluginLoader.loadPlugins(null);
+			mTargetConfig = ProjectUtil.loadTargetConfig(context.getBuiltProject(), pluginConfigParser);
+			generator.setPlugins(mPlugins);
+			generator.setUserConfig(mTargetConfig);
 			copyPluginResources(context, monitor);
+		} else {
+			mPlugins = null;
+			mTargetConfig = null;
+			generator.setPlugins(null);
+			generator.setUserConfig(null);			
 		}
 		
 		super.build(context, monitor);
@@ -47,10 +54,12 @@ public class SpecApiBuilderParticipant extends BuilderParticipant {
 	private void copyPluginResources(IBuildContext context, IProgressMonitor monitor) {
 		if(mPlugins != null) {
 			for(IPlugin plugin : mPlugins) {
-				try {
-					plugin.copyResources(context.getBuiltProject().getLocation().toFile());
-				} catch (IOException e) {
-					e.printStackTrace();
+				if(mTargetConfig != null && mTargetConfig.targetsPlugin(plugin.getConfig().getPluginClassName())) {
+					try {
+						plugin.copyResources(context.getBuiltProject().getLocation().toFile());
+					} catch (IOException e) {
+						e.printStackTrace();
+					}
 				}
 			}
 		}
@@ -62,10 +71,14 @@ public class SpecApiBuilderParticipant extends BuilderParticipant {
 		
 		Set<OutputConfiguration> configurations = getOutputConfigurationProvider().getOutputConfigurations(context.getBuiltProject());
 		
-		if(mPlugins != null) {
-			for(IPlugin plugin : mPlugins) {
-				for(OutputConfiguration config : plugin.getConfig().getOutputConfigurations()) {
-					configurations.add(config);
+		if(ProjectUtil.isGeneratorTargetProject(context.getBuiltProject())) {
+			if(mPlugins != null) {
+				for(IPlugin plugin : mPlugins) {
+					if(mTargetConfig != null && mTargetConfig.targetsPlugin(plugin.getConfig().getPluginClassName())) {
+						for(OutputConfiguration config : plugin.getConfig().getOutputConfigurations()) {
+							configurations.add(config);
+						}
+					}
 				}
 			}
 		}

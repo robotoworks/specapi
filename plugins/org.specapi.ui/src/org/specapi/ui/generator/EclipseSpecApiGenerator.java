@@ -7,6 +7,7 @@ import org.eclipse.xtext.generator.IFileSystemAccess;
 import org.eclipse.xtext.generator.IGenerator;
 import org.specapi.plugins.IPlugin;
 import org.specapi.plugins.Plugin;
+import org.specapi.plugins.UserPluginConfig;
 
 import com.google.inject.Inject;
 import com.google.inject.Injector;
@@ -14,6 +15,7 @@ import com.google.inject.Injector;
 public class EclipseSpecApiGenerator implements IGenerator {
 
 	private ArrayList<Plugin> plugins;
+	private UserPluginConfig userConfig;
 
 	@Inject Injector mInjector;
 	
@@ -21,12 +23,20 @@ public class EclipseSpecApiGenerator implements IGenerator {
 		this.plugins = plugins;
 	}
 	
+	public void setUserConfig(UserPluginConfig userConfig) {
+		this.userConfig = userConfig;
+	}
+	
 	@Override
 	public void doGenerate(Resource input, IFileSystemAccess fsa) {
-		for(IPlugin plugin : plugins) {
-			IGenerator generator = plugin.getGenerator();
-			mInjector.injectMembers(generator);
-			generator.doGenerate(input, fsa);
+		if(plugins != null && userConfig != null) {
+			for(IPlugin plugin : plugins) {
+				if(userConfig.targetsPlugin(plugin.getConfig().getPluginClassName())) {
+					IGenerator generator = plugin.getGenerator();
+					mInjector.injectMembers(generator);
+					generator.doGenerate(input, fsa);
+				}
+			}
 		}
 	}
 }

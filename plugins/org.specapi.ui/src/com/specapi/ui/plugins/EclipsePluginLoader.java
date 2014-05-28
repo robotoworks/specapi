@@ -24,7 +24,7 @@ public class EclipsePluginLoader extends PluginLoader {
 		
 		for(IProject project : projects) {
 
-				PluginConfig pluginConfig = ProjectUtil.loadConfig(project);
+				PluginConfig pluginConfig = ProjectUtil.loadConfig(project, getPluginConfigParser());
 								
 				if(pluginConfig != null) {
 					
@@ -50,7 +50,7 @@ public class EclipsePluginLoader extends PluginLoader {
 		Object instance;
 		try {
 			loader = new URLClassLoader (new URL[]{file.toURI().toURL()}, getClass().getClassLoader());
-			Class classToLoad = Class.forName (config.getPluginClassName(), true, loader);
+			Class<?> classToLoad = Class.forName (config.getPluginClassName(), true, loader);
 			instance = classToLoad.newInstance ();
 			
 			return new EclipseSpecApiPlugin((ISpecApiPlugin) instance, config, project);
