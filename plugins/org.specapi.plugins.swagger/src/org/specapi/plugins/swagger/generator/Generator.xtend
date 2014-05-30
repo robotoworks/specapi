@@ -231,7 +231,6 @@ class Generator implements IGenerator {
         </form>
       </div>
     </div>
-    
     <div id="message-bar" class="swagger-ui-wrap">&nbsp;</div>
     <div id="swagger-ui-container" class="swagger-ui-wrap"></div>
     </body>

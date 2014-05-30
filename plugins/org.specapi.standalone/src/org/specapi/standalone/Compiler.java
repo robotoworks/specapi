@@ -22,6 +22,7 @@ import org.eclipse.xtext.validation.Issue;
 import org.specapi.SpecApiLangStandaloneSetup;
 import org.specapi.StandaloneFileSystemAccess;
 import org.specapi.plugins.IPlugin;
+import org.specapi.plugins.OutputConfigurationMerger;
 import org.specapi.plugins.Plugin;
 import org.specapi.plugins.PluginConfigParser;
 import org.specapi.plugins.PluginLoader;
@@ -39,6 +40,8 @@ public class Compiler {
 	private ArrayList<Plugin> mPlugins;
 	private UserPluginConfig mTargetConfig;
 	private PluginConfigParser mConfigParser;
+	private OutputConfigurationMerger mOutputConfigMerger;
+	private Map<String, OutputConfiguration> mOutputConfigurations;
 
 	public Compiler(SpecApiLangStandaloneSetup setup, List<File> pluginRoots, String extension) {
 		mExtension = extension;
@@ -47,15 +50,13 @@ public class Compiler {
 		mPlugins = mInjector.getInstance(PluginLoader.class).loadPlugins(pluginRoots);
 		
 		mFileSystemAccess = mInjector.getInstance(StandaloneFileSystemAccess.class);
+		mOutputConfigMerger = mInjector.getInstance(OutputConfigurationMerger.class);
 		
 		mResourceSet = mInjector.getInstance(XtextResourceSet.class);
 		mResourceSet.addLoadOption(XtextResource.OPTION_RESOLVE_ALL, Boolean.TRUE);
 	}
 
 	public void compile(String source, boolean recurse) {
-		
-		Map<String, OutputConfiguration> outputConfigurations = createOutputConfigurations();
-		mFileSystemAccess.setOutputConfigurations(outputConfigurations);
 		
 		File file = new File(System.getProperty("user.dir"), source);
 		
@@ -71,7 +72,11 @@ public class Compiler {
 		} catch (FileNotFoundException e1) {
 			e1.printStackTrace();
 			System.out.println("[failed] could not find config " + PluginLoader.PLUGIN_TARGET_CONFIG_FILENAME);
+			return;
 		}
+
+		mOutputConfigurations = createOutputConfigurations();
+		mFileSystemAccess.setOutputConfigurations(mOutputConfigurations);
 		
 		ArrayList<String> resourcePaths = new ArrayList<String>();
 		
@@ -142,8 +147,9 @@ public class Compiler {
 	
 	protected void copyResources() throws IOException {
 		for(IPlugin plugin : mPlugins) {
-			if(!plugin.getConfig().getOutputConfigurations().isEmpty() && mTargetConfig.targetsPlugin(plugin.getConfig().getPluginClassName())) {
-				File outputFolder = new File(System.getProperty("user.dir"), plugin.getConfig().getOutputConfigurations().iterator().next().getOutputDirectory());
+			if(mTargetConfig.targetsPlugin(plugin.getConfig().getPluginClassName())) {
+				OutputConfiguration outConfiguration = mOutputConfigurations.get(plugin.getConfig().getOutputConfigurations().get(0).getName());
+				File outputFolder = new File(System.getProperty("user.dir"), outConfiguration.getOutputDirectory());
 			    plugin.copyResources(outputFolder);
 			}
 		}
@@ -181,8 +187,10 @@ public class Compiler {
 		Map<String, OutputConfiguration> outputConfigurations = new HashMap<String, OutputConfiguration>();
 		
 		for(IPlugin plugin : mPlugins) {
-			for(OutputConfiguration outConfig : plugin.getConfig().getOutputConfigurations()) {
-				outputConfigurations.put(outConfig.getName(), outConfig);
+			if(mTargetConfig.targetsPlugin(plugin.getConfig().getPluginClassName())) {
+				for(OutputConfiguration outConfig : mOutputConfigMerger.merge(mTargetConfig, plugin.getConfig())) {
+					outputConfigurations.put(outConfig.getName(), outConfig);
+				}
 			}
 		}
 		return outputConfigurations;

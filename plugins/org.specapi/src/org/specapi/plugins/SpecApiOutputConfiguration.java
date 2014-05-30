@@ -8,9 +8,25 @@ public class SpecApiOutputConfiguration extends OutputConfiguration {
 	private boolean cleanUpDerivedResourcesIsSet;
 	private boolean createOutputDirectoryIsSet;
 	private boolean outputDirectoryIsSet;
+	private boolean overrideExistingResourcesIsSet;
+	private String name;
+	
+	public SpecApiOutputConfiguration() {
+		super(null);
+	}
+	
+	@Override
+	public String getName() {
+		return name;
+	}
+	
+	public void setName(String name) {
+		this.name = name;
+	}
 	
 	public SpecApiOutputConfiguration(String name) {
 		super(name);
+		this.name = name;
 	}
 	
 	public boolean isCanClearOutputDirectorySet() {
@@ -27,6 +43,10 @@ public class SpecApiOutputConfiguration extends OutputConfiguration {
 	
 	public boolean isOutputDirectorySet() {
 		return outputDirectoryIsSet;
+	}
+	
+	public boolean isOverrideExistingResourcesSet() {
+		return overrideExistingResourcesIsSet;
 	}
 	
 	@Override
@@ -51,5 +71,27 @@ public class SpecApiOutputConfiguration extends OutputConfiguration {
 	public void setOutputDirectory(String outputDirectory) {
 		super.setOutputDirectory(outputDirectory);
 		outputDirectoryIsSet = true;
+	}
+	
+	@Override
+	public void setOverrideExistingResources(boolean overrideExistingResources) {
+		super.setOverrideExistingResources(overrideExistingResources);
+		overrideExistingResourcesIsSet = true;
+	}
+	
+	public SpecApiOutputConfiguration copy() {
+		SpecApiOutputConfiguration copy = new SpecApiOutputConfiguration(getName());
+		copy.setDescription(getDescription());
+		copy.setOutputDirectory(getOutputDirectory());
+		copy.setCanClearOutputDirectory(isCanClearOutputDirectory());
+		copy.setCleanUpDerivedResources(isCleanUpDerivedResources());
+		copy.setCreateOutputDirectory(isCreateOutputDirectory());
+		copy.setKeepLocalHistory(isKeepLocalHistory());
+		copy.setOverrideExistingResources(isOverrideExistingResources());
+		copy.setSetDerivedProperty(isSetDerivedProperty());
+		copy.setHideSyntheticLocalVariables(isHideSyntheticLocalVariables());
+		copy.setInstallDslAsPrimarySource(isInstallDslAsPrimarySource());
+
+		return copy;
 	}
 }

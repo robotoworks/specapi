@@ -70,7 +70,7 @@ public class PluginConfigParserTests {
 		assertEquals(false, config.outputConfigurations.get(1).keepLocalHistory)
 	}
 	
-	    @Test
+	@Test
     def parseUserConfig() {
 		var configStream = new ByteArrayInputStream('''
 		{

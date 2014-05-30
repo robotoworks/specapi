@@ -7,11 +7,15 @@ import java.util.ArrayList;
 import java.util.Map;
 import java.util.Set;
 
+import org.eclipse.core.resources.IResourceChangeEvent;
+import org.eclipse.core.resources.IResourceChangeListener;
+import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.xtext.builder.BuilderParticipant;
 import org.eclipse.xtext.generator.OutputConfiguration;
 import org.specapi.plugins.IPlugin;
+import org.specapi.plugins.OutputConfigurationMerger;
 import org.specapi.plugins.Plugin;
 import org.specapi.plugins.PluginConfigParser;
 import org.specapi.plugins.PluginLoader;
@@ -28,6 +32,7 @@ public class SpecApiBuilderParticipant extends BuilderParticipant {
 	@Inject PluginConfigParser pluginConfigParser;
 	private ArrayList<Plugin> mPlugins;
 	private UserPluginConfig mTargetConfig;
+	@Inject OutputConfigurationMerger mOutputConfigMerger;
 	
 	@Override
 	public void build(IBuildContext context, IProgressMonitor monitor)
@@ -36,8 +41,10 @@ public class SpecApiBuilderParticipant extends BuilderParticipant {
 		EclipseSpecApiGenerator generator = (EclipseSpecApiGenerator) getGenerator();
 		
 		if(ProjectUtil.isGeneratorTargetProject(context.getBuiltProject())) {
+			// TODO: Replace null with the plugin path ie:- /a/b/c/plugins or wherever it is
 			mPlugins = pluginLoader.loadPlugins(null);
 			mTargetConfig = ProjectUtil.loadTargetConfig(context.getBuiltProject(), pluginConfigParser);
+			
 			generator.setPlugins(mPlugins);
 			generator.setUserConfig(mTargetConfig);
 			copyPluginResources(context, monitor);
@@ -75,7 +82,7 @@ public class SpecApiBuilderParticipant extends BuilderParticipant {
 			if(mPlugins != null) {
 				for(IPlugin plugin : mPlugins) {
 					if(mTargetConfig != null && mTargetConfig.targetsPlugin(plugin.getConfig().getPluginClassName())) {
-						for(OutputConfiguration config : plugin.getConfig().getOutputConfigurations()) {
+						for(OutputConfiguration config : mOutputConfigMerger.merge(mTargetConfig, plugin.getConfig())) {
 							configurations.add(config);
 						}
 					}

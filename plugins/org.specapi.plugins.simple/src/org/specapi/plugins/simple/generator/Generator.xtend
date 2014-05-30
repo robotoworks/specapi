@@ -15,12 +15,19 @@ class Generator implements IGenerator {
         val model = input.contents.head as Model
         val api = model.declarations.filter(typeof(Api)).head
 		
-		fsa.generateFile("methods.txt", Plugin::OUTPUT_CONFIG, generateMethodList(api))
+		fsa.generateFile("methods.html", Plugin::OUTPUT_CONFIG, generateMethodList(api))
 	}
 	
 	def generateMethodList(Api api) '''
-		«FOR method : api.blocks.filter(typeof(HttpMethod))»
-		«method.name»
-		«ENDFOR»
+		<html>
+		<head>«api.name» «api.baseUrl»</head>
+		<body>
+			<ul>
+			«FOR method : api.blocks.filter(typeof(HttpMethod))»
+			<li>«method.type.getName().toUpperCase» «method.name»</li>
+			«ENDFOR»
+			</ul>
+		<body>
+		<html>
 	'''	
 }

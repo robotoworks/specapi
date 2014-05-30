@@ -7,7 +7,6 @@ import java.util.Enumeration;
 import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
 
-import org.eclipse.xtext.generator.OutputConfiguration;
 import org.specapi.util.Files;
 
 public class JarFilePlugin extends Plugin {

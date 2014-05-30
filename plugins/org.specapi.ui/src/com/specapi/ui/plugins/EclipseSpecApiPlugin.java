@@ -2,14 +2,8 @@ package com.specapi.ui.plugins;
 
 import java.io.File;
 import java.io.IOException;
-import java.net.URISyntaxException;
 
-import org.eclipse.core.commands.ExecutionException;
-import org.eclipse.core.resources.IFolder;
 import org.eclipse.core.resources.IProject;
-import org.eclipse.core.runtime.IPath;
-import org.eclipse.core.runtime.Path;
-import org.eclipse.ui.ide.undo.CopyResourcesOperation;
 import org.eclipse.xtext.generator.OutputConfiguration;
 import org.specapi.plugins.ISpecApiPlugin;
 import org.specapi.plugins.Plugin;

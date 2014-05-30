@@ -3,7 +3,6 @@ package org.specapi.plugins
 import com.google.common.base.Strings
 import java.io.InputStream
 import java.io.InputStreamReader
-import org.eclipse.xtext.generator.OutputConfiguration
 import org.specapi.json.JsonReader
 
 class PluginConfigParser {
@@ -48,47 +47,31 @@ class PluginConfigParser {
 			reader.beginObject();
 			
 			
-			var String configName = null;
-			var String configDescription = null;
-			var String configOutDir = null;
-			var configOverrideExisting = true;
-			var configCreateOutputDir = true;
-			var configCleanUpDerived = true;
-			var configSetDerived = true;
-			var configKeepLocalHistory = true;
+			var SpecApiOutputConfiguration outputConfig = new SpecApiOutputConfiguration();
 			
 			while(reader.hasNext()) {
 				var prop = reader.nextName();
 				
 				if(prop.equals("name")) {
-					configName = reader.nextString();
+					outputConfig.setName(config.getPluginClassName() + ":" + reader.nextString());
 				} else if(prop.equals("description")) {
-					configDescription = reader.nextString();
+					outputConfig.setDescription(reader.nextString());
 				} else if(prop.equals("output_directory")) {
-					configOutDir = reader.nextString();
+					outputConfig.setOutputDirectory(reader.nextString());
 				} else if(prop.equals("override_existing_resources")) {
-					configOverrideExisting = reader.nextBoolean();
+					outputConfig.setOverrideExistingResources(reader.nextBoolean());
 				} else if(prop.equals("create_output_directory")) {
-					configCreateOutputDir = reader.nextBoolean();
+					outputConfig.setCreateOutputDirectory(reader.nextBoolean());
 				} else if(prop.equals("clean_up_derived_resources")) {
-					configCleanUpDerived = reader.nextBoolean();
+					outputConfig.setCleanUpDerivedResources(reader.nextBoolean());
 				} else if(prop.equals("set_derived_resources")) {
-					configSetDerived = reader.nextBoolean();
+					outputConfig.setSetDerivedProperty(reader.nextBoolean());
 				} else if (prop.equals("keep_local_history")) {
-					configKeepLocalHistory = reader.nextBoolean();
+					outputConfig.setKeepLocalHistory(reader.nextBoolean());
 				}
 			}
 			
-			if(!Strings.isNullOrEmpty(configName)) {
-				var outputConfig = new OutputConfiguration(config.getPluginClassName() + ":" + configName);
-				outputConfig.setDescription(configDescription);
-				outputConfig.setOutputDirectory(configOutDir);
-				outputConfig.setOverrideExistingResources(configOverrideExisting);
-				outputConfig.setCreateOutputDirectory(configCreateOutputDir);
-				outputConfig.setCleanUpDerivedResources(configCleanUpDerived);
-				outputConfig.setSetDerivedProperty(configSetDerived);
-				outputConfig.setKeepLocalHistory(configKeepLocalHistory);
-				
+			if(!Strings.isNullOrEmpty(outputConfig.name)) {
 				config.getOutputConfigurations().add(outputConfig);
 			}
 			
