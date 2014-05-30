@@ -65,7 +65,7 @@ public class SpecapiLangFactoryImpl extends EFactoryImpl implements SpecapiLangF
   {
     switch (eClass.getClassifierID())
     {
-      case SpecapiLangPackage.MODEL: return createModel();
+      case SpecapiLangPackage.SPEC_API_DOCUMENT: return createSpecApiDocument();
       case SpecapiLangPackage.DECLARATION: return createDeclaration();
       case SpecapiLangPackage.API: return createApi();
       case SpecapiLangPackage.SERVICE_BLOCK: return createServiceBlock();
@@ -149,10 +149,10 @@ public class SpecapiLangFactoryImpl extends EFactoryImpl implements SpecapiLangF
    * <!-- end-user-doc -->
    * @generated
    */
-  public Model createModel()
+  public SpecApiDocument createSpecApiDocument()
   {
-    ModelImpl model = new ModelImpl();
-    return model;
+    SpecApiDocumentImpl specApiDocument = new SpecApiDocumentImpl();
+    return specApiDocument;
   }
 
   /**

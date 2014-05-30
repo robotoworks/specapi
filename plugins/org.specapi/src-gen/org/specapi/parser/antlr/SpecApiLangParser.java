@@ -25,7 +25,7 @@ public class SpecApiLangParser extends org.eclipse.xtext.parser.antlr.AbstractAn
 	
 	@Override 
 	protected String getDefaultRuleName() {
-		return "Model";
+		return "SpecApiDocument";
 	}
 	
 	public SpecApiLangGrammarAccess getGrammarAccess() {

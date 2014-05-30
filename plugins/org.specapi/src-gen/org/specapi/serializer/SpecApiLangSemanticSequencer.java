@@ -31,13 +31,13 @@ import org.specapi.specapiLang.HttpMethod;
 import org.specapi.specapiLang.IntegerType;
 import org.specapi.specapiLang.LongType;
 import org.specapi.specapiLang.Member;
-import org.specapi.specapiLang.Model;
 import org.specapi.specapiLang.NumericLiteral;
 import org.specapi.specapiLang.ParamsBlock;
 import org.specapi.specapiLang.Path;
 import org.specapi.specapiLang.ResponseBlock;
 import org.specapi.specapiLang.SimpleMember;
 import org.specapi.specapiLang.SimpleMemberAssignment;
+import org.specapi.specapiLang.SpecApiDocument;
 import org.specapi.specapiLang.SpecapiLangPackage;
 import org.specapi.specapiLang.StringLiteral;
 import org.specapi.specapiLang.StringType;
@@ -180,12 +180,6 @@ public class SpecApiLangSemanticSequencer extends AbstractDelegatingSemanticSequ
 					return; 
 				}
 				else break;
-			case SpecapiLangPackage.MODEL:
-				if(context == grammarAccess.getModelRule()) {
-					sequence_Model(context, (Model) semanticObject); 
-					return; 
-				}
-				else break;
 			case SpecapiLangPackage.NUMERIC_LITERAL:
 				if(context == grammarAccess.getLiteralRule()) {
 					sequence_Literal(context, (NumericLiteral) semanticObject); 
@@ -222,6 +216,12 @@ public class SpecApiLangSemanticSequencer extends AbstractDelegatingSemanticSequ
 			case SpecapiLangPackage.SIMPLE_MEMBER_ASSIGNMENT:
 				if(context == grammarAccess.getSimpleMemberAssignmentRule()) {
 					sequence_SimpleMemberAssignment(context, (SimpleMemberAssignment) semanticObject); 
+					return; 
+				}
+				else break;
+			case SpecapiLangPackage.SPEC_API_DOCUMENT:
+				if(context == grammarAccess.getSpecApiDocumentRule()) {
+					sequence_SpecApiDocument(context, (SpecApiDocument) semanticObject); 
 					return; 
 				}
 				else break;
@@ -491,15 +491,6 @@ public class SpecApiLangSemanticSequencer extends AbstractDelegatingSemanticSequ
 	
 	/**
 	 * Constraint:
-	 *     (packageName=QualifiedName declarations+=Declaration*)
-	 */
-	protected void sequence_Model(EObject context, Model semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Constraint:
 	 *     (params+=SimpleMemberAssignment params+=SimpleMemberAssignment*)
 	 */
 	protected void sequence_ParamsBlock(EObject context, ParamsBlock semanticObject) {
@@ -539,6 +530,15 @@ public class SpecApiLangSemanticSequencer extends AbstractDelegatingSemanticSequ
 	 *     ((name=ID | name=STRING) type=IntrinsicType)
 	 */
 	protected void sequence_SimpleMember(EObject context, SimpleMember semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (packageName=QualifiedName declarations+=Declaration*)
+	 */
+	protected void sequence_SpecApiDocument(EObject context, SpecApiDocument semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	

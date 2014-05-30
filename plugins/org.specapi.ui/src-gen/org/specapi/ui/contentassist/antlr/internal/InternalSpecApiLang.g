@@ -56,25 +56,25 @@ import org.specapi.services.SpecApiLangGrammarAccess;
 
 
 
-// Entry rule entryRuleModel
-entryRuleModel 
+// Entry rule entryRuleSpecApiDocument
+entryRuleSpecApiDocument 
 :
-{ before(grammarAccess.getModelRule()); }
-	 ruleModel
-{ after(grammarAccess.getModelRule()); } 
+{ before(grammarAccess.getSpecApiDocumentRule()); }
+	 ruleSpecApiDocument
+{ after(grammarAccess.getSpecApiDocumentRule()); } 
 	 EOF 
 ;
 
-// Rule Model
-ruleModel
+// Rule SpecApiDocument
+ruleSpecApiDocument
     @init {
 		int stackSize = keepStackSize();
     }
 	:
 (
-{ before(grammarAccess.getModelAccess().getGroup()); }
-(rule__Model__Group__0)
-{ after(grammarAccess.getModelAccess().getGroup()); }
+{ before(grammarAccess.getSpecApiDocumentAccess().getGroup()); }
+(rule__SpecApiDocument__Group__0)
+{ after(grammarAccess.getSpecApiDocumentAccess().getGroup()); }
 )
 
 ;
@@ -1524,29 +1524,29 @@ finally {
 
 
 
-rule__Model__Group__0
+rule__SpecApiDocument__Group__0
     @init {
 		int stackSize = keepStackSize();
     }
 :
-	rule__Model__Group__0__Impl
-	rule__Model__Group__1
+	rule__SpecApiDocument__Group__0__Impl
+	rule__SpecApiDocument__Group__1
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__Model__Group__0__Impl
+rule__SpecApiDocument__Group__0__Impl
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getModelAccess().getPackageKeyword_0()); }
+{ before(grammarAccess.getSpecApiDocumentAccess().getPackageKeyword_0()); }
 
 	'package' 
 
-{ after(grammarAccess.getModelAccess().getPackageKeyword_0()); }
+{ after(grammarAccess.getSpecApiDocumentAccess().getPackageKeyword_0()); }
 )
 
 ;
@@ -1555,27 +1555,27 @@ finally {
 }
 
 
-rule__Model__Group__1
+rule__SpecApiDocument__Group__1
     @init {
 		int stackSize = keepStackSize();
     }
 :
-	rule__Model__Group__1__Impl
-	rule__Model__Group__2
+	rule__SpecApiDocument__Group__1__Impl
+	rule__SpecApiDocument__Group__2
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__Model__Group__1__Impl
+rule__SpecApiDocument__Group__1__Impl
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getModelAccess().getPackageNameAssignment_1()); }
-(rule__Model__PackageNameAssignment_1)
-{ after(grammarAccess.getModelAccess().getPackageNameAssignment_1()); }
+{ before(grammarAccess.getSpecApiDocumentAccess().getPackageNameAssignment_1()); }
+(rule__SpecApiDocument__PackageNameAssignment_1)
+{ after(grammarAccess.getSpecApiDocumentAccess().getPackageNameAssignment_1()); }
 )
 
 ;
@@ -1584,26 +1584,26 @@ finally {
 }
 
 
-rule__Model__Group__2
+rule__SpecApiDocument__Group__2
     @init {
 		int stackSize = keepStackSize();
     }
 :
-	rule__Model__Group__2__Impl
+	rule__SpecApiDocument__Group__2__Impl
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__Model__Group__2__Impl
+rule__SpecApiDocument__Group__2__Impl
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getModelAccess().getDeclarationsAssignment_2()); }
-(rule__Model__DeclarationsAssignment_2)*
-{ after(grammarAccess.getModelAccess().getDeclarationsAssignment_2()); }
+{ before(grammarAccess.getSpecApiDocumentAccess().getDeclarationsAssignment_2()); }
+(rule__SpecApiDocument__DeclarationsAssignment_2)*
+{ after(grammarAccess.getSpecApiDocumentAccess().getDeclarationsAssignment_2()); }
 )
 
 ;
@@ -4536,14 +4536,14 @@ finally {
 
 
 
-rule__Model__PackageNameAssignment_1
+rule__SpecApiDocument__PackageNameAssignment_1
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getModelAccess().getPackageNameQualifiedNameParserRuleCall_1_0()); }
-	ruleQualifiedName{ after(grammarAccess.getModelAccess().getPackageNameQualifiedNameParserRuleCall_1_0()); }
+{ before(grammarAccess.getSpecApiDocumentAccess().getPackageNameQualifiedNameParserRuleCall_1_0()); }
+	ruleQualifiedName{ after(grammarAccess.getSpecApiDocumentAccess().getPackageNameQualifiedNameParserRuleCall_1_0()); }
 )
 
 ;
@@ -4551,14 +4551,14 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__Model__DeclarationsAssignment_2
+rule__SpecApiDocument__DeclarationsAssignment_2
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getModelAccess().getDeclarationsDeclarationParserRuleCall_2_0()); }
-	ruleDeclaration{ after(grammarAccess.getModelAccess().getDeclarationsDeclarationParserRuleCall_2_0()); }
+{ before(grammarAccess.getSpecApiDocumentAccess().getDeclarationsDeclarationParserRuleCall_2_0()); }
+	ruleDeclaration{ after(grammarAccess.getSpecApiDocumentAccess().getDeclarationsDeclarationParserRuleCall_2_0()); }
 )
 
 ;

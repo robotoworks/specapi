@@ -3,7 +3,7 @@ package org.specapi.plugins.docs.generator
 import com.google.inject.Inject
 import org.specapi.ModelUtil
 import org.specapi.specapiLang.HttpMethod
-import org.specapi.specapiLang.Model
+import org.specapi.specapiLang.SpecApiDocument
 import org.specapi.specapiLang.Api
 import org.specapi.specapiLang.UserTypeDeclaration
 import org.specapi.generator.DocCommentParser
@@ -12,7 +12,7 @@ class DocIndexGenerator extends HtmlPageGenerator {
 	@Inject extension ModelUtil modelUtil
     @Inject DocCommentParser commentParser
     
-    new(Api api, Model model) {
+    new(Api api, SpecApiDocument model) {
         super(api, model)
     }
     
@@ -41,7 +41,7 @@ class DocIndexGenerator extends HtmlPageGenerator {
         </div>
     '''
 	
-	def generateMethods(Api api, Model model) '''
+	def generateMethods(Api api, SpecApiDocument model) '''
 		«FOR method:api.blocks.filter(typeof(HttpMethod))»
 		<tr>
 		  <td><span class="label «method.cssLabelClass»">«method.type.literal.toUpperCase»</span> <a href="method_«method.name».html">«method.pathAsString»</a></td>

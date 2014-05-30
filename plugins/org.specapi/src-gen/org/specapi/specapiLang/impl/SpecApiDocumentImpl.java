@@ -19,24 +19,24 @@ import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.specapi.specapiLang.Declaration;
-import org.specapi.specapiLang.Model;
+import org.specapi.specapiLang.SpecApiDocument;
 import org.specapi.specapiLang.SpecapiLangPackage;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Model</b></em>'.
+ * An implementation of the model object '<em><b>Spec Api Document</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.specapi.specapiLang.impl.ModelImpl#getPackageName <em>Package Name</em>}</li>
- *   <li>{@link org.specapi.specapiLang.impl.ModelImpl#getDeclarations <em>Declarations</em>}</li>
+ *   <li>{@link org.specapi.specapiLang.impl.SpecApiDocumentImpl#getPackageName <em>Package Name</em>}</li>
+ *   <li>{@link org.specapi.specapiLang.impl.SpecApiDocumentImpl#getDeclarations <em>Declarations</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class ModelImpl extends MinimalEObjectImpl.Container implements Model
+public class SpecApiDocumentImpl extends MinimalEObjectImpl.Container implements SpecApiDocument
 {
   /**
    * The default value of the '{@link #getPackageName() <em>Package Name</em>}' attribute.
@@ -73,7 +73,7 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
    * <!-- end-user-doc -->
    * @generated
    */
-  protected ModelImpl()
+  protected SpecApiDocumentImpl()
   {
     super();
   }
@@ -86,7 +86,7 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   @Override
   protected EClass eStaticClass()
   {
-    return SpecapiLangPackage.Literals.MODEL;
+    return SpecapiLangPackage.Literals.SPEC_API_DOCUMENT;
   }
 
   /**
@@ -109,7 +109,7 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
     String oldPackageName = packageName;
     packageName = newPackageName;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, SpecapiLangPackage.MODEL__PACKAGE_NAME, oldPackageName, packageName));
+      eNotify(new ENotificationImpl(this, Notification.SET, SpecapiLangPackage.SPEC_API_DOCUMENT__PACKAGE_NAME, oldPackageName, packageName));
   }
 
   /**
@@ -121,7 +121,7 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     if (declarations == null)
     {
-      declarations = new EObjectContainmentEList<Declaration>(Declaration.class, this, SpecapiLangPackage.MODEL__DECLARATIONS);
+      declarations = new EObjectContainmentEList<Declaration>(Declaration.class, this, SpecapiLangPackage.SPEC_API_DOCUMENT__DECLARATIONS);
     }
     return declarations;
   }
@@ -136,7 +136,7 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
-      case SpecapiLangPackage.MODEL__DECLARATIONS:
+      case SpecapiLangPackage.SPEC_API_DOCUMENT__DECLARATIONS:
         return ((InternalEList<?>)getDeclarations()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -152,9 +152,9 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
-      case SpecapiLangPackage.MODEL__PACKAGE_NAME:
+      case SpecapiLangPackage.SPEC_API_DOCUMENT__PACKAGE_NAME:
         return getPackageName();
-      case SpecapiLangPackage.MODEL__DECLARATIONS:
+      case SpecapiLangPackage.SPEC_API_DOCUMENT__DECLARATIONS:
         return getDeclarations();
     }
     return super.eGet(featureID, resolve, coreType);
@@ -171,10 +171,10 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
-      case SpecapiLangPackage.MODEL__PACKAGE_NAME:
+      case SpecapiLangPackage.SPEC_API_DOCUMENT__PACKAGE_NAME:
         setPackageName((String)newValue);
         return;
-      case SpecapiLangPackage.MODEL__DECLARATIONS:
+      case SpecapiLangPackage.SPEC_API_DOCUMENT__DECLARATIONS:
         getDeclarations().clear();
         getDeclarations().addAll((Collection<? extends Declaration>)newValue);
         return;
@@ -192,10 +192,10 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
-      case SpecapiLangPackage.MODEL__PACKAGE_NAME:
+      case SpecapiLangPackage.SPEC_API_DOCUMENT__PACKAGE_NAME:
         setPackageName(PACKAGE_NAME_EDEFAULT);
         return;
-      case SpecapiLangPackage.MODEL__DECLARATIONS:
+      case SpecapiLangPackage.SPEC_API_DOCUMENT__DECLARATIONS:
         getDeclarations().clear();
         return;
     }
@@ -212,9 +212,9 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
-      case SpecapiLangPackage.MODEL__PACKAGE_NAME:
+      case SpecapiLangPackage.SPEC_API_DOCUMENT__PACKAGE_NAME:
         return PACKAGE_NAME_EDEFAULT == null ? packageName != null : !PACKAGE_NAME_EDEFAULT.equals(packageName);
-      case SpecapiLangPackage.MODEL__DECLARATIONS:
+      case SpecapiLangPackage.SPEC_API_DOCUMENT__DECLARATIONS:
         return declarations != null && !declarations.isEmpty();
     }
     return super.eIsSet(featureID);
@@ -237,4 +237,4 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
     return result.toString();
   }
 
-} //ModelImpl
+} //SpecApiDocumentImpl

@@ -75,9 +75,9 @@ public class SpecapiLangAdapterFactory extends AdapterFactoryImpl
     new SpecapiLangSwitch<Adapter>()
     {
       @Override
-      public Adapter caseModel(Model object)
+      public Adapter caseSpecApiDocument(SpecApiDocument object)
       {
-        return createModelAdapter();
+        return createSpecApiDocumentAdapter();
       }
       @Override
       public Adapter caseDeclaration(Declaration object)
@@ -277,16 +277,16 @@ public class SpecapiLangAdapterFactory extends AdapterFactoryImpl
 
 
   /**
-   * Creates a new adapter for an object of class '{@link org.specapi.specapiLang.Model <em>Model</em>}'.
+   * Creates a new adapter for an object of class '{@link org.specapi.specapiLang.SpecApiDocument <em>Spec Api Document</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.specapi.specapiLang.Model
+   * @see org.specapi.specapiLang.SpecApiDocument
    * @generated
    */
-  public Adapter createModelAdapter()
+  public Adapter createSpecApiDocumentAdapter()
   {
     return null;
   }

@@ -15,12 +15,12 @@ import org.specapi.specapiLang.ArrayType
 import org.specapi.specapiLang.HttpMethod
 import org.specapi.specapiLang.IntrinsicType
 import org.specapi.specapiLang.Member
-import org.specapi.specapiLang.Model
 import org.specapi.specapiLang.Type
 import org.specapi.specapiLang.UserType
 import org.specapi.specapiLang.UserTypeDeclaration
 
 import static extension org.specapi.util.SpecApiStringExtensions.*
+import org.specapi.specapiLang.SpecApiDocument
 
 class Generator implements IGenerator {
     
@@ -29,7 +29,7 @@ class Generator implements IGenerator {
     
     override doGenerate(Resource input, IFileSystemAccess fsa) {
         
-        val model = input.contents.head as Model
+        val model = input.contents.head as SpecApiDocument
         val api = model.declarations.filter(typeof(Api)).head
         
         if(api != null) {
@@ -57,7 +57,7 @@ class Generator implements IGenerator {
       //  fsa.generateFile("hello.txt", Plugin::OUTPUT_CONFIG, "hi")
     }
     
-    def generateResourceListing(Api api, Model model) '''
+    def generateResourceListing(Api api, SpecApiDocument model) '''
     «var docs = commentParser.parseDocComments(api, #{"@swaglist"->1})»
     {
       "swaggerVersion": "1.2",
@@ -72,7 +72,7 @@ class Generator implements IGenerator {
     }
     '''
     
-    def generateOperationListing(Api api, Model model, Iterable<HttpMethod> methods, String path) '''
+    def generateOperationListing(Api api, SpecApiDocument model, Iterable<HttpMethod> methods, String path) '''
     {
       "swaggerVersion": "1.2",
       "basePath": "«api.baseUrl»",
@@ -142,7 +142,7 @@ class Generator implements IGenerator {
         return methods.exists[it.body != null && it.body.type instanceof ComplexTypeLiteral]
     }
     
-    def boolean hasUserTypes(Model model) {
+    def boolean hasUserTypes(SpecApiDocument model) {
         return model.declarations.exists[it instanceof UserTypeDeclaration]
     }
     
@@ -297,7 +297,7 @@ class Generator implements IGenerator {
     «ENDFOR»
     '''
     
-    def generateModelForEntities(Model model) '''
+    def generateModelForEntities(SpecApiDocument model) '''
     «FOR entity : model.declarations.filter(typeof(ComplexTypeDeclaration)) SEPARATOR ","»
         "«entity.name»": {
             "id": "«entity.name»",

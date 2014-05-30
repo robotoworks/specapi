@@ -6,13 +6,13 @@ import org.eclipse.xtext.generator.IFileSystemAccess
 import org.specapi.specapiLang.Api
 import org.specapi.specapiLang.HttpMethod
 import org.specapi.plugins.simple.Plugin
-import org.specapi.specapiLang.Model
+import org.specapi.specapiLang.SpecApiDocument
 
 class Generator implements IGenerator {
 	
 	override doGenerate(Resource input, IFileSystemAccess fsa) {
 		
-        val model = input.contents.head as Model
+        val model = input.contents.head as SpecApiDocument
         val api = model.declarations.filter(typeof(Api)).head
 		
 		fsa.generateFile("methods.html", Plugin::OUTPUT_CONFIG, generateMethodList(api))

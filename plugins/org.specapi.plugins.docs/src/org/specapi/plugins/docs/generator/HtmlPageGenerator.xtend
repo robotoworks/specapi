@@ -1,18 +1,19 @@
 package org.specapi.plugins.docs.generator
 
 import org.specapi.specapiLang.HttpMethod
-import org.specapi.specapiLang.Model
 import org.specapi.specapiLang.Api
 import org.specapi.specapiLang.ComplexTypeDeclaration
 import org.specapi.specapiLang.EnumTypeDeclaration
 import org.specapi.specapiLang.UserTypeDeclaration
 import static extension org.specapi.util.SpecApiStringExtensions.*
+import org.specapi.specapiLang.SpecApiDocument
+
 abstract class HtmlPageGenerator {
 	
     @Property Api api
-    @Property Model model
+    @Property SpecApiDocument model
     
-    new (Api api, Model model) {
+    new (Api api, SpecApiDocument model) {
         this.api = api
         this.model = model
     }

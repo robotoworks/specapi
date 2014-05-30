@@ -2,7 +2,7 @@ package org.specapi.tests
 
 import com.google.inject.Inject
 import org.specapi.SpecApiLangInjectorProvider
-import org.specapi.specapiLang.Model
+import org.specapi.specapiLang.SpecApiDocument
 import org.specapi.specapiLang.Api
 import org.eclipse.xtext.junit4.InjectWith
 import org.eclipse.xtext.junit4.XtextRunner
@@ -16,7 +16,7 @@ import org.specapi.generator.DocCommentParser
 @InjectWith(typeof(SpecApiLangInjectorProvider))
 public class CommentParserTests {
     
-    @Inject ParseHelper<Model> parseHelper
+    @Inject ParseHelper<SpecApiDocument> parseHelper
     @Inject DocCommentParser commentParser
     
     @Test

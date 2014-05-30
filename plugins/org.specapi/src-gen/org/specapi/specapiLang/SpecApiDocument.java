@@ -8,22 +8,22 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Model</b></em>'.
+ * A representation of the model object '<em><b>Spec Api Document</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.specapi.specapiLang.Model#getPackageName <em>Package Name</em>}</li>
- *   <li>{@link org.specapi.specapiLang.Model#getDeclarations <em>Declarations</em>}</li>
+ *   <li>{@link org.specapi.specapiLang.SpecApiDocument#getPackageName <em>Package Name</em>}</li>
+ *   <li>{@link org.specapi.specapiLang.SpecApiDocument#getDeclarations <em>Declarations</em>}</li>
  * </ul>
  * </p>
  *
- * @see org.specapi.specapiLang.SpecapiLangPackage#getModel()
+ * @see org.specapi.specapiLang.SpecapiLangPackage#getSpecApiDocument()
  * @model
  * @generated
  */
-public interface Model extends EObject
+public interface SpecApiDocument extends EObject
 {
   /**
    * Returns the value of the '<em><b>Package Name</b></em>' attribute.
@@ -35,14 +35,14 @@ public interface Model extends EObject
    * <!-- end-user-doc -->
    * @return the value of the '<em>Package Name</em>' attribute.
    * @see #setPackageName(String)
-   * @see org.specapi.specapiLang.SpecapiLangPackage#getModel_PackageName()
+   * @see org.specapi.specapiLang.SpecapiLangPackage#getSpecApiDocument_PackageName()
    * @model
    * @generated
    */
   String getPackageName();
 
   /**
-   * Sets the value of the '{@link org.specapi.specapiLang.Model#getPackageName <em>Package Name</em>}' attribute.
+   * Sets the value of the '{@link org.specapi.specapiLang.SpecApiDocument#getPackageName <em>Package Name</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Package Name</em>' attribute.
@@ -61,10 +61,10 @@ public interface Model extends EObject
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Declarations</em>' containment reference list.
-   * @see org.specapi.specapiLang.SpecapiLangPackage#getModel_Declarations()
+   * @see org.specapi.specapiLang.SpecapiLangPackage#getSpecApiDocument_Declarations()
    * @model containment="true"
    * @generated
    */
   EList<Declaration> getDeclarations();
 
-} // Model
+} // SpecApiDocument

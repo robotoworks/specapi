@@ -53,7 +53,7 @@ public class SpecApiLangParser extends AbstractContentAssistParser {
 					put(grammarAccess.getNumericTypeAccess().getAlternatives(), "rule__NumericType__Alternatives");
 					put(grammarAccess.getHttpMethodTypeAccess().getAlternatives(), "rule__HttpMethodType__Alternatives");
 					put(grammarAccess.getBooleanValueAccess().getAlternatives(), "rule__BooleanValue__Alternatives");
-					put(grammarAccess.getModelAccess().getGroup(), "rule__Model__Group__0");
+					put(grammarAccess.getSpecApiDocumentAccess().getGroup(), "rule__SpecApiDocument__Group__0");
 					put(grammarAccess.getApiAccess().getGroup(), "rule__Api__Group__0");
 					put(grammarAccess.getHeaderBlockAccess().getGroup(), "rule__HeaderBlock__Group__0");
 					put(grammarAccess.getHeaderBlockAccess().getGroup_2(), "rule__HeaderBlock__Group_2__0");
@@ -88,8 +88,8 @@ public class SpecApiLangParser extends AbstractContentAssistParser {
 					put(grammarAccess.getQualifiedNameAccess().getGroup(), "rule__QualifiedName__Group__0");
 					put(grammarAccess.getQualifiedNameAccess().getGroup_1(), "rule__QualifiedName__Group_1__0");
 					put(grammarAccess.getSignedNumberAccess().getGroup(), "rule__SignedNumber__Group__0");
-					put(grammarAccess.getModelAccess().getPackageNameAssignment_1(), "rule__Model__PackageNameAssignment_1");
-					put(grammarAccess.getModelAccess().getDeclarationsAssignment_2(), "rule__Model__DeclarationsAssignment_2");
+					put(grammarAccess.getSpecApiDocumentAccess().getPackageNameAssignment_1(), "rule__SpecApiDocument__PackageNameAssignment_1");
+					put(grammarAccess.getSpecApiDocumentAccess().getDeclarationsAssignment_2(), "rule__SpecApiDocument__DeclarationsAssignment_2");
 					put(grammarAccess.getApiAccess().getNameAssignment_1(), "rule__Api__NameAssignment_1");
 					put(grammarAccess.getApiAccess().getBaseUrlAssignment_2(), "rule__Api__BaseUrlAssignment_2");
 					put(grammarAccess.getApiAccess().getBlocksAssignment_4(), "rule__Api__BlocksAssignment_4");
@@ -149,7 +149,7 @@ public class SpecApiLangParser extends AbstractContentAssistParser {
 	protected Collection<FollowElement> getFollowElements(AbstractInternalContentAssistParser parser) {
 		try {
 			org.specapi.ui.contentassist.antlr.internal.InternalSpecApiLangParser typedParser = (org.specapi.ui.contentassist.antlr.internal.InternalSpecApiLangParser) parser;
-			typedParser.entryRuleModel();
+			typedParser.entryRuleSpecApiDocument();
 			return typedParser.getFollowElements();
 		} catch(RecognitionException ex) {
 			throw new RuntimeException(ex);

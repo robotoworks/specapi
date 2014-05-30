@@ -45,7 +45,7 @@ import org.specapi.services.SpecApiLangGrammarAccess;
     
     @Override
     protected String getFirstRuleName() {
-    	return "Model";	
+    	return "SpecApiDocument";	
    	}
    	
    	@Override
@@ -64,32 +64,32 @@ import org.specapi.services.SpecApiLangGrammarAccess;
 
 
 
-// Entry rule entryRuleModel
-entryRuleModel returns [EObject current=null] 
+// Entry rule entryRuleSpecApiDocument
+entryRuleSpecApiDocument returns [EObject current=null] 
 	:
-	{ newCompositeNode(grammarAccess.getModelRule()); }
-	 iv_ruleModel=ruleModel 
-	 { $current=$iv_ruleModel.current; } 
+	{ newCompositeNode(grammarAccess.getSpecApiDocumentRule()); }
+	 iv_ruleSpecApiDocument=ruleSpecApiDocument 
+	 { $current=$iv_ruleSpecApiDocument.current; } 
 	 EOF 
 ;
 
-// Rule Model
-ruleModel returns [EObject current=null] 
+// Rule SpecApiDocument
+ruleSpecApiDocument returns [EObject current=null] 
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
 (	otherlv_0='package' 
     {
-    	newLeafNode(otherlv_0, grammarAccess.getModelAccess().getPackageKeyword_0());
+    	newLeafNode(otherlv_0, grammarAccess.getSpecApiDocumentAccess().getPackageKeyword_0());
     }
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getModelAccess().getPackageNameQualifiedNameParserRuleCall_1_0()); 
+	        newCompositeNode(grammarAccess.getSpecApiDocumentAccess().getPackageNameQualifiedNameParserRuleCall_1_0()); 
 	    }
 		lv_packageName_1_0=ruleQualifiedName		{
 	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getModelRule());
+	            $current = createModelElementForParent(grammarAccess.getSpecApiDocumentRule());
 	        }
        		set(
        			$current, 
@@ -103,11 +103,11 @@ ruleModel returns [EObject current=null]
 )(
 (
 		{ 
-	        newCompositeNode(grammarAccess.getModelAccess().getDeclarationsDeclarationParserRuleCall_2_0()); 
+	        newCompositeNode(grammarAccess.getSpecApiDocumentAccess().getDeclarationsDeclarationParserRuleCall_2_0()); 
 	    }
 		lv_declarations_2_0=ruleDeclaration		{
 	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getModelRule());
+	            $current = createModelElementForParent(grammarAccess.getSpecApiDocumentRule());
 	        }
        		add(
        			$current, 

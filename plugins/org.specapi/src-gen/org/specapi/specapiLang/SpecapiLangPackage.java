@@ -58,14 +58,14 @@ public interface SpecapiLangPackage extends EPackage
   SpecapiLangPackage eINSTANCE = org.specapi.specapiLang.impl.SpecapiLangPackageImpl.init();
 
   /**
-   * The meta object id for the '{@link org.specapi.specapiLang.impl.ModelImpl <em>Model</em>}' class.
+   * The meta object id for the '{@link org.specapi.specapiLang.impl.SpecApiDocumentImpl <em>Spec Api Document</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see org.specapi.specapiLang.impl.ModelImpl
-   * @see org.specapi.specapiLang.impl.SpecapiLangPackageImpl#getModel()
+   * @see org.specapi.specapiLang.impl.SpecApiDocumentImpl
+   * @see org.specapi.specapiLang.impl.SpecapiLangPackageImpl#getSpecApiDocument()
    * @generated
    */
-  int MODEL = 0;
+  int SPEC_API_DOCUMENT = 0;
 
   /**
    * The feature id for the '<em><b>Package Name</b></em>' attribute.
@@ -74,7 +74,7 @@ public interface SpecapiLangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MODEL__PACKAGE_NAME = 0;
+  int SPEC_API_DOCUMENT__PACKAGE_NAME = 0;
 
   /**
    * The feature id for the '<em><b>Declarations</b></em>' containment reference list.
@@ -83,16 +83,16 @@ public interface SpecapiLangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MODEL__DECLARATIONS = 1;
+  int SPEC_API_DOCUMENT__DECLARATIONS = 1;
 
   /**
-   * The number of structural features of the '<em>Model</em>' class.
+   * The number of structural features of the '<em>Spec Api Document</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int MODEL_FEATURE_COUNT = 2;
+  int SPEC_API_DOCUMENT_FEATURE_COUNT = 2;
 
   /**
    * The meta object id for the '{@link org.specapi.specapiLang.impl.DeclarationImpl <em>Declaration</em>}' class.
@@ -1222,36 +1222,36 @@ public interface SpecapiLangPackage extends EPackage
 
 
   /**
-   * Returns the meta object for class '{@link org.specapi.specapiLang.Model <em>Model</em>}'.
+   * Returns the meta object for class '{@link org.specapi.specapiLang.SpecApiDocument <em>Spec Api Document</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Model</em>'.
-   * @see org.specapi.specapiLang.Model
+   * @return the meta object for class '<em>Spec Api Document</em>'.
+   * @see org.specapi.specapiLang.SpecApiDocument
    * @generated
    */
-  EClass getModel();
+  EClass getSpecApiDocument();
 
   /**
-   * Returns the meta object for the attribute '{@link org.specapi.specapiLang.Model#getPackageName <em>Package Name</em>}'.
+   * Returns the meta object for the attribute '{@link org.specapi.specapiLang.SpecApiDocument#getPackageName <em>Package Name</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Package Name</em>'.
-   * @see org.specapi.specapiLang.Model#getPackageName()
-   * @see #getModel()
+   * @see org.specapi.specapiLang.SpecApiDocument#getPackageName()
+   * @see #getSpecApiDocument()
    * @generated
    */
-  EAttribute getModel_PackageName();
+  EAttribute getSpecApiDocument_PackageName();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.specapi.specapiLang.Model#getDeclarations <em>Declarations</em>}'.
+   * Returns the meta object for the containment reference list '{@link org.specapi.specapiLang.SpecApiDocument#getDeclarations <em>Declarations</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference list '<em>Declarations</em>'.
-   * @see org.specapi.specapiLang.Model#getDeclarations()
-   * @see #getModel()
+   * @see org.specapi.specapiLang.SpecApiDocument#getDeclarations()
+   * @see #getSpecApiDocument()
    * @generated
    */
-  EReference getModel_Declarations();
+  EReference getSpecApiDocument_Declarations();
 
   /**
    * Returns the meta object for class '{@link org.specapi.specapiLang.Declaration <em>Declaration</em>}'.
@@ -2054,14 +2054,14 @@ public interface SpecapiLangPackage extends EPackage
   interface Literals
   {
     /**
-     * The meta object literal for the '{@link org.specapi.specapiLang.impl.ModelImpl <em>Model</em>}' class.
+     * The meta object literal for the '{@link org.specapi.specapiLang.impl.SpecApiDocumentImpl <em>Spec Api Document</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see org.specapi.specapiLang.impl.ModelImpl
-     * @see org.specapi.specapiLang.impl.SpecapiLangPackageImpl#getModel()
+     * @see org.specapi.specapiLang.impl.SpecApiDocumentImpl
+     * @see org.specapi.specapiLang.impl.SpecapiLangPackageImpl#getSpecApiDocument()
      * @generated
      */
-    EClass MODEL = eINSTANCE.getModel();
+    EClass SPEC_API_DOCUMENT = eINSTANCE.getSpecApiDocument();
 
     /**
      * The meta object literal for the '<em><b>Package Name</b></em>' attribute feature.
@@ -2069,7 +2069,7 @@ public interface SpecapiLangPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute MODEL__PACKAGE_NAME = eINSTANCE.getModel_PackageName();
+    EAttribute SPEC_API_DOCUMENT__PACKAGE_NAME = eINSTANCE.getSpecApiDocument_PackageName();
 
     /**
      * The meta object literal for the '<em><b>Declarations</b></em>' containment reference list feature.
@@ -2077,7 +2077,7 @@ public interface SpecapiLangPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference MODEL__DECLARATIONS = eINSTANCE.getModel_Declarations();
+    EReference SPEC_API_DOCUMENT__DECLARATIONS = eINSTANCE.getSpecApiDocument_Declarations();
 
     /**
      * The meta object literal for the '{@link org.specapi.specapiLang.impl.DeclarationImpl <em>Declaration</em>}' class.

@@ -10,7 +10,7 @@ import org.specapi.specapiLang.ComplexTypeLiteral
 import org.specapi.specapiLang.ArrayType
 import org.specapi.specapiLang.HttpMethod
 import org.specapi.specapiLang.Member
-import org.specapi.specapiLang.Model
+import org.specapi.specapiLang.SpecApiDocument
 import org.specapi.specapiLang.ResponseBlock
 import org.specapi.specapiLang.Type
 import org.specapi.specapiLang.UserTypeDeclaration
@@ -30,7 +30,7 @@ class MethodGenerator extends HtmlPageGenerator {
     
     @Property BodyBlock body
     
-    new(Api api, Model model, HttpMethod method) {
+    new(Api api, SpecApiDocument model, HttpMethod method) {
         super(api, model)
         this.method = method
     }
@@ -93,12 +93,12 @@ class MethodGenerator extends HtmlPageGenerator {
     «ENDIF»
 	'''
 
-    def generateBody(Api api, Model model, BodyBlock body) '''
+    def generateBody(Api api, SpecApiDocument model, BodyBlock body) '''
     «body.type.generateResponse»
     '''
     
     	
-	def generateResponse(Api api, Model model, ResponseBlock response) '''
+	def generateResponse(Api api, SpecApiDocument model, ResponseBlock response) '''
     «response.type.generateResponse»
 	'''
 	
@@ -118,7 +118,7 @@ class MethodGenerator extends HtmlPageGenerator {
     <a href="#">«type.signature»</a>
 	'''
 	
-	def generateParams(Api api, Model model, HttpMethod method, DocComments comments) '''
+	def generateParams(Api api, SpecApiDocument model, HttpMethod method, DocComments comments) '''
 		«FOR p:method.path?.params»
 		<tr>
 		  <td>«p.member.name»</td>

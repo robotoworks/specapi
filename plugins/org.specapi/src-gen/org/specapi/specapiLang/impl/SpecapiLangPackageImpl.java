@@ -34,7 +34,6 @@ import org.specapi.specapiLang.IntrinsicType;
 import org.specapi.specapiLang.Literal;
 import org.specapi.specapiLang.LongType;
 import org.specapi.specapiLang.Member;
-import org.specapi.specapiLang.Model;
 import org.specapi.specapiLang.NumericLiteral;
 import org.specapi.specapiLang.NumericType;
 import org.specapi.specapiLang.ParamsBlock;
@@ -43,6 +42,7 @@ import org.specapi.specapiLang.ResponseBlock;
 import org.specapi.specapiLang.ServiceBlock;
 import org.specapi.specapiLang.SimpleMember;
 import org.specapi.specapiLang.SimpleMemberAssignment;
+import org.specapi.specapiLang.SpecApiDocument;
 import org.specapi.specapiLang.SpecapiLangFactory;
 import org.specapi.specapiLang.SpecapiLangPackage;
 import org.specapi.specapiLang.StringLiteral;
@@ -64,7 +64,7 @@ public class SpecapiLangPackageImpl extends EPackageImpl implements SpecapiLangP
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass modelEClass = null;
+  private EClass specApiDocumentEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -393,9 +393,9 @@ public class SpecapiLangPackageImpl extends EPackageImpl implements SpecapiLangP
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getModel()
+  public EClass getSpecApiDocument()
   {
-    return modelEClass;
+    return specApiDocumentEClass;
   }
 
   /**
@@ -403,9 +403,9 @@ public class SpecapiLangPackageImpl extends EPackageImpl implements SpecapiLangP
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getModel_PackageName()
+  public EAttribute getSpecApiDocument_PackageName()
   {
-    return (EAttribute)modelEClass.getEStructuralFeatures().get(0);
+    return (EAttribute)specApiDocumentEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -413,9 +413,9 @@ public class SpecapiLangPackageImpl extends EPackageImpl implements SpecapiLangP
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getModel_Declarations()
+  public EReference getSpecApiDocument_Declarations()
   {
-    return (EReference)modelEClass.getEStructuralFeatures().get(1);
+    return (EReference)specApiDocumentEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -1188,9 +1188,9 @@ public class SpecapiLangPackageImpl extends EPackageImpl implements SpecapiLangP
     isCreated = true;
 
     // Create classes and their features
-    modelEClass = createEClass(MODEL);
-    createEAttribute(modelEClass, MODEL__PACKAGE_NAME);
-    createEReference(modelEClass, MODEL__DECLARATIONS);
+    specApiDocumentEClass = createEClass(SPEC_API_DOCUMENT);
+    createEAttribute(specApiDocumentEClass, SPEC_API_DOCUMENT__PACKAGE_NAME);
+    createEReference(specApiDocumentEClass, SPEC_API_DOCUMENT__DECLARATIONS);
 
     declarationEClass = createEClass(DECLARATION);
     createEAttribute(declarationEClass, DECLARATION__NAME);
@@ -1360,9 +1360,9 @@ public class SpecapiLangPackageImpl extends EPackageImpl implements SpecapiLangP
     numericLiteralEClass.getESuperTypes().add(this.getLiteral());
 
     // Initialize classes and features; add operations and parameters
-    initEClass(modelEClass, Model.class, "Model", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getModel_PackageName(), ecorePackage.getEString(), "packageName", null, 0, 1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getModel_Declarations(), this.getDeclaration(), null, "declarations", null, 0, -1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(specApiDocumentEClass, SpecApiDocument.class, "SpecApiDocument", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getSpecApiDocument_PackageName(), ecorePackage.getEString(), "packageName", null, 0, 1, SpecApiDocument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getSpecApiDocument_Declarations(), this.getDeclaration(), null, "declarations", null, 0, -1, SpecApiDocument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(declarationEClass, Declaration.class, "Declaration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getDeclaration_Name(), ecorePackage.getEString(), "name", null, 0, 1, Declaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

@@ -18,9 +18,9 @@
       <genEnumLiterals ecoreEnumLiteral="SpecApiLang.ecore#//BooleanValue/true"/>
       <genEnumLiterals ecoreEnumLiteral="SpecApiLang.ecore#//BooleanValue/false"/>
     </genEnums>
-    <genClasses ecoreClass="SpecApiLang.ecore#//Model">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpecApiLang.ecore#//Model/packageName"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpecApiLang.ecore#//Model/declarations"/>
+    <genClasses ecoreClass="SpecApiLang.ecore#//SpecApiDocument">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpecApiLang.ecore#//SpecApiDocument/packageName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpecApiLang.ecore#//SpecApiDocument/declarations"/>
     </genClasses>
     <genClasses ecoreClass="SpecApiLang.ecore#//Declaration">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpecApiLang.ecore#//Declaration/name"/>

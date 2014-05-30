@@ -15,7 +15,7 @@ import org.specapi.specapiLang.Header
 import org.specapi.specapiLang.HeaderBlock
 import org.specapi.specapiLang.HttpMethod
 import org.specapi.specapiLang.Member
-import org.specapi.specapiLang.Model
+import org.specapi.specapiLang.SpecApiDocument
 import org.specapi.specapiLang.Type
 
 /**
@@ -34,7 +34,7 @@ class SpecApiLangLabelProvider extends DefaultEObjectLabelProvider {
 
 	// Labels and icons can be computed like this:
 	
-    def image(Model ele) {
+    def image(SpecApiDocument ele) {
         return "package.gif";
     }
     

@@ -91,7 +91,7 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
         
         @Override
         protected String getFirstRuleName() {
-        	return "Model";	
+        	return "SpecApiDocument";	
        	}
        	
        	@Override
@@ -101,26 +101,26 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
 
 
 
-    // $ANTLR start "entryRuleModel"
-    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:68:1: entryRuleModel returns [EObject current=null] : iv_ruleModel= ruleModel EOF ;
-    public final EObject entryRuleModel() throws RecognitionException {
+    // $ANTLR start "entryRuleSpecApiDocument"
+    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:68:1: entryRuleSpecApiDocument returns [EObject current=null] : iv_ruleSpecApiDocument= ruleSpecApiDocument EOF ;
+    public final EObject entryRuleSpecApiDocument() throws RecognitionException {
         EObject current = null;
 
-        EObject iv_ruleModel = null;
+        EObject iv_ruleSpecApiDocument = null;
 
 
         try {
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:69:2: (iv_ruleModel= ruleModel EOF )
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:70:2: iv_ruleModel= ruleModel EOF
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:69:2: (iv_ruleSpecApiDocument= ruleSpecApiDocument EOF )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:70:2: iv_ruleSpecApiDocument= ruleSpecApiDocument EOF
             {
-             newCompositeNode(grammarAccess.getModelRule()); 
-            pushFollow(FOLLOW_ruleModel_in_entryRuleModel75);
-            iv_ruleModel=ruleModel();
+             newCompositeNode(grammarAccess.getSpecApiDocumentRule()); 
+            pushFollow(FOLLOW_ruleSpecApiDocument_in_entryRuleSpecApiDocument75);
+            iv_ruleSpecApiDocument=ruleSpecApiDocument();
 
             state._fsp--;
 
-             current =iv_ruleModel; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleModel85); 
+             current =iv_ruleSpecApiDocument; 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleSpecApiDocument85); 
 
             }
 
@@ -134,12 +134,12 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "entryRuleModel"
+    // $ANTLR end "entryRuleSpecApiDocument"
 
 
-    // $ANTLR start "ruleModel"
-    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:77:1: ruleModel returns [EObject current=null] : (otherlv_0= 'package' ( (lv_packageName_1_0= ruleQualifiedName ) ) ( (lv_declarations_2_0= ruleDeclaration ) )* ) ;
-    public final EObject ruleModel() throws RecognitionException {
+    // $ANTLR start "ruleSpecApiDocument"
+    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:77:1: ruleSpecApiDocument returns [EObject current=null] : (otherlv_0= 'package' ( (lv_packageName_1_0= ruleQualifiedName ) ) ( (lv_declarations_2_0= ruleDeclaration ) )* ) ;
+    public final EObject ruleSpecApiDocument() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_0=null;
@@ -157,9 +157,9 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
             // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:81:1: (otherlv_0= 'package' ( (lv_packageName_1_0= ruleQualifiedName ) ) ( (lv_declarations_2_0= ruleDeclaration ) )* )
             // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:81:3: otherlv_0= 'package' ( (lv_packageName_1_0= ruleQualifiedName ) ) ( (lv_declarations_2_0= ruleDeclaration ) )*
             {
-            otherlv_0=(Token)match(input,11,FOLLOW_11_in_ruleModel122); 
+            otherlv_0=(Token)match(input,11,FOLLOW_11_in_ruleSpecApiDocument122); 
 
-                	newLeafNode(otherlv_0, grammarAccess.getModelAccess().getPackageKeyword_0());
+                	newLeafNode(otherlv_0, grammarAccess.getSpecApiDocumentAccess().getPackageKeyword_0());
                 
             // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:85:1: ( (lv_packageName_1_0= ruleQualifiedName ) )
             // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:86:1: (lv_packageName_1_0= ruleQualifiedName )
@@ -168,16 +168,16 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
             // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:87:3: lv_packageName_1_0= ruleQualifiedName
             {
              
-            	        newCompositeNode(grammarAccess.getModelAccess().getPackageNameQualifiedNameParserRuleCall_1_0()); 
+            	        newCompositeNode(grammarAccess.getSpecApiDocumentAccess().getPackageNameQualifiedNameParserRuleCall_1_0()); 
             	    
-            pushFollow(FOLLOW_ruleQualifiedName_in_ruleModel143);
+            pushFollow(FOLLOW_ruleQualifiedName_in_ruleSpecApiDocument143);
             lv_packageName_1_0=ruleQualifiedName();
 
             state._fsp--;
 
 
             	        if (current==null) {
-            	            current = createModelElementForParent(grammarAccess.getModelRule());
+            	            current = createModelElementForParent(grammarAccess.getSpecApiDocumentRule());
             	        }
                    		set(
                    			current, 
@@ -211,16 +211,16 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
             	    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:105:3: lv_declarations_2_0= ruleDeclaration
             	    {
             	     
-            	    	        newCompositeNode(grammarAccess.getModelAccess().getDeclarationsDeclarationParserRuleCall_2_0()); 
+            	    	        newCompositeNode(grammarAccess.getSpecApiDocumentAccess().getDeclarationsDeclarationParserRuleCall_2_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleDeclaration_in_ruleModel164);
+            	    pushFollow(FOLLOW_ruleDeclaration_in_ruleSpecApiDocument164);
             	    lv_declarations_2_0=ruleDeclaration();
 
             	    state._fsp--;
 
 
             	    	        if (current==null) {
-            	    	            current = createModelElementForParent(grammarAccess.getModelRule());
+            	    	            current = createModelElementForParent(grammarAccess.getSpecApiDocumentRule());
             	    	        }
             	           		add(
             	           			current, 
@@ -258,7 +258,7 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "ruleModel"
+    // $ANTLR end "ruleSpecApiDocument"
 
 
     // $ANTLR start "entryRuleDeclaration"
@@ -5962,11 +5962,11 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
     }
  
 
-    public static final BitSet FOLLOW_ruleModel_in_entryRuleModel75 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleModel85 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_11_in_ruleModel122 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleModel143 = new BitSet(new long[]{0x000000000C001002L});
-    public static final BitSet FOLLOW_ruleDeclaration_in_ruleModel164 = new BitSet(new long[]{0x000000000C001002L});
+    public static final BitSet FOLLOW_ruleSpecApiDocument_in_entryRuleSpecApiDocument75 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleSpecApiDocument85 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_11_in_ruleSpecApiDocument122 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleSpecApiDocument143 = new BitSet(new long[]{0x000000000C001002L});
+    public static final BitSet FOLLOW_ruleDeclaration_in_ruleSpecApiDocument164 = new BitSet(new long[]{0x000000000C001002L});
     public static final BitSet FOLLOW_ruleDeclaration_in_entryRuleDeclaration201 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleDeclaration211 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleUserTypeDeclaration_in_ruleDeclaration258 = new BitSet(new long[]{0x0000000000000002L});

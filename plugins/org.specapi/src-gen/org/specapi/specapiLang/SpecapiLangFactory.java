@@ -23,13 +23,13 @@ public interface SpecapiLangFactory extends EFactory
   SpecapiLangFactory eINSTANCE = org.specapi.specapiLang.impl.SpecapiLangFactoryImpl.init();
 
   /**
-   * Returns a new object of class '<em>Model</em>'.
+   * Returns a new object of class '<em>Spec Api Document</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Model</em>'.
+   * @return a new object of class '<em>Spec Api Document</em>'.
    * @generated
    */
-  Model createModel();
+  SpecApiDocument createSpecApiDocument();
 
   /**
    * Returns a new object of class '<em>Declaration</em>'.

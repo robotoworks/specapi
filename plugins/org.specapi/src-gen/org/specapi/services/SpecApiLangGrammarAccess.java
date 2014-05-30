@@ -17,8 +17,8 @@ import org.eclipse.xtext.service.AbstractElementFinder.*;
 public class SpecApiLangGrammarAccess extends AbstractGrammarElementFinder {
 	
 	
-	public class ModelElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Model");
+	public class SpecApiDocumentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "SpecApiDocument");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cPackageKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cPackageNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -26,7 +26,7 @@ public class SpecApiLangGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cDeclarationsAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cDeclarationsDeclarationParserRuleCall_2_0 = (RuleCall)cDeclarationsAssignment_2.eContents().get(0);
 		
-		//Model:
+		//SpecApiDocument:
 		//	"package" packageName=QualifiedName declarations+=Declaration*;
 		public ParserRule getRule() { return rule; }
 
@@ -1271,7 +1271,7 @@ public class SpecApiLangGrammarAccess extends AbstractGrammarElementFinder {
 		public Keyword getFalseFalseKeyword_1_0() { return cFalseFalseKeyword_1_0; }
 	}
 	
-	private ModelElements pModel;
+	private SpecApiDocumentElements pSpecApiDocument;
 	private DeclarationElements pDeclaration;
 	private ApiElements pApi;
 	private ServiceBlockElements pServiceBlock;
@@ -1347,14 +1347,14 @@ public class SpecApiLangGrammarAccess extends AbstractGrammarElementFinder {
 	
 
 	
-	//Model:
+	//SpecApiDocument:
 	//	"package" packageName=QualifiedName declarations+=Declaration*;
-	public ModelElements getModelAccess() {
-		return (pModel != null) ? pModel : (pModel = new ModelElements());
+	public SpecApiDocumentElements getSpecApiDocumentAccess() {
+		return (pSpecApiDocument != null) ? pSpecApiDocument : (pSpecApiDocument = new SpecApiDocumentElements());
 	}
 	
-	public ParserRule getModelRule() {
-		return getModelAccess().getRule();
+	public ParserRule getSpecApiDocumentRule() {
+		return getSpecApiDocumentAccess().getRule();
 	}
 
 	//Declaration:
