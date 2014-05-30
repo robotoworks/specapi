@@ -14,8 +14,8 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
+import org.specapi.specapiLang.Member;
 import org.specapi.specapiLang.ParamsBlock;
-import org.specapi.specapiLang.SimpleMemberAssignment;
 import org.specapi.specapiLang.SpecapiLangPackage;
 
 /**
@@ -41,7 +41,7 @@ public class ParamsBlockImpl extends ServiceBlockImpl implements ParamsBlock
    * @generated
    * @ordered
    */
-  protected EList<SimpleMemberAssignment> params;
+  protected EList<Member> params;
 
   /**
    * <!-- begin-user-doc -->
@@ -69,11 +69,11 @@ public class ParamsBlockImpl extends ServiceBlockImpl implements ParamsBlock
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<SimpleMemberAssignment> getParams()
+  public EList<Member> getParams()
   {
     if (params == null)
     {
-      params = new EObjectContainmentEList<SimpleMemberAssignment>(SimpleMemberAssignment.class, this, SpecapiLangPackage.PARAMS_BLOCK__PARAMS);
+      params = new EObjectContainmentEList<Member>(Member.class, this, SpecapiLangPackage.PARAMS_BLOCK__PARAMS);
     }
     return params;
   }
@@ -123,7 +123,7 @@ public class ParamsBlockImpl extends ServiceBlockImpl implements ParamsBlock
     {
       case SpecapiLangPackage.PARAMS_BLOCK__PARAMS:
         getParams().clear();
-        getParams().addAll((Collection<? extends SimpleMemberAssignment>)newValue);
+        getParams().addAll((Collection<? extends Member>)newValue);
         return;
     }
     super.eSet(featureID, newValue);

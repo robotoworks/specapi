@@ -90,10 +90,10 @@ class Generator implements IGenerator {
               "parameters": [
                 «FOR param : method.path.params SEPARATOR ","»
                 {
-                  "name": "«param.member.name»",
-                  "description": "«comments?.params.get(param.member.name)?.content»",
+                  "name": "«param.name»",
+                  "description": "«comments?.params.get(param.name)?.content»",
                   "required": true,
-                  "type": "«param.member.type.boxedTypeSignature.toLowerCase»",
+                  "type": "«param.type.boxedTypeSignature.toLowerCase»",
                   "paramType": "path"
                 }
                 «ENDFOR»
@@ -101,10 +101,10 @@ class Generator implements IGenerator {
                 «IF method.path.params.size > 0»,«ENDIF»
                 «FOR param : method.paramsBlock.params SEPARATOR ","»
                 {
-                  "name": "«param.member.name»",
-                  "description": "«comments?.params.get(param.member.name)?.content»",
+                  "name": "«param.name»",
+                  "description": "«comments?.params.get(param.name)?.content»",
                   "required": false,
-                  "type": "«param.member.type.boxedTypeSignature.toLowerCase»",
+                  "type": "«param.type.boxedTypeSignature.toLowerCase»",
                   "paramType": "query"
                 }
                 «ENDFOR»
@@ -206,8 +206,8 @@ class Generator implements IGenerator {
       });
       
     «IF api.headerBlock != null»
-    «FOR header : api.headerBlock.headers»
-    window.authorizations.add("«header.name»", new ApiKeyAuthorization("«header.name»", "«header.value»", "header"));
+    «FOR header : api.headerBlock.headers.filter[it.defaultValue != null]»
+    window.authorizations.add("«header.name»", new ApiKeyAuthorization("«header.name»", "«header.defaultValue»", "header"));
     «ENDFOR»
     «ENDIF»
       

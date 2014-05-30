@@ -121,15 +121,15 @@ class MethodGenerator extends HtmlPageGenerator {
 	def generateParams(Api api, SpecApiDocument model, HttpMethod method, DocComments comments) '''
 		«FOR p:method.path?.params»
 		<tr>
-		  <td>«p.member.name»</td>
-		  <td>«comments?.params?.get(p.member.name)?.content»</td>
+		  <td>«p.name»</td>
+		  <td>«comments?.params?.get(p.name)?.content»</td>
 		</tr>
 		«ENDFOR»
 		«IF method.paramsBlock != null»
 		«FOR p:method.paramsBlock?.params»
 		<tr>
-		  <td>«p.member.name»</td>
-		  <td>«comments?.params?.get(p.member.name)?.content»</td>
+		  <td>«p.name»</td>
+		  <td>«comments?.params?.get(p.name)?.content»</td>
 		</tr>
 		«ENDFOR»
 		«ENDIF»

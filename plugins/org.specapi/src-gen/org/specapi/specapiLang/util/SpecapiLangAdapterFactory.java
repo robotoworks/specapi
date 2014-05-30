@@ -100,11 +100,6 @@ public class SpecapiLangAdapterFactory extends AdapterFactoryImpl
         return createHeaderBlockAdapter();
       }
       @Override
-      public Adapter caseHeader(Header object)
-      {
-        return createHeaderAdapter();
-      }
-      @Override
       public Adapter caseHttpMethod(HttpMethod object)
       {
         return createHttpMethodAdapter();
@@ -123,11 +118,6 @@ public class SpecapiLangAdapterFactory extends AdapterFactoryImpl
       public Adapter caseParamsBlock(ParamsBlock object)
       {
         return createParamsBlockAdapter();
-      }
-      @Override
-      public Adapter caseSimpleMemberAssignment(SimpleMemberAssignment object)
-      {
-        return createSimpleMemberAssignmentAdapter();
       }
       @Override
       public Adapter caseLiteral(Literal object)
@@ -153,11 +143,6 @@ public class SpecapiLangAdapterFactory extends AdapterFactoryImpl
       public Adapter caseMember(Member object)
       {
         return createMemberAdapter();
-      }
-      @Override
-      public Adapter caseSimpleMember(SimpleMember object)
-      {
-        return createSimpleMemberAdapter();
       }
       @Override
       public Adapter caseType(Type object)
@@ -352,21 +337,6 @@ public class SpecapiLangAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.specapi.specapiLang.Header <em>Header</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.specapi.specapiLang.Header
-   * @generated
-   */
-  public Adapter createHeaderAdapter()
-  {
-    return null;
-  }
-
-  /**
    * Creates a new adapter for an object of class '{@link org.specapi.specapiLang.HttpMethod <em>Http Method</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -422,21 +392,6 @@ public class SpecapiLangAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createParamsBlockAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.specapi.specapiLang.SimpleMemberAssignment <em>Simple Member Assignment</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.specapi.specapiLang.SimpleMemberAssignment
-   * @generated
-   */
-  public Adapter createSimpleMemberAssignmentAdapter()
   {
     return null;
   }
@@ -512,21 +467,6 @@ public class SpecapiLangAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createMemberAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.specapi.specapiLang.SimpleMember <em>Simple Member</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.specapi.specapiLang.SimpleMember
-   * @generated
-   */
-  public Adapter createSimpleMemberAdapter()
   {
     return null;
   }

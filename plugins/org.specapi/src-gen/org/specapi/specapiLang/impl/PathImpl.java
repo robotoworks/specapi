@@ -16,8 +16,8 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
+import org.specapi.specapiLang.Member;
 import org.specapi.specapiLang.Path;
-import org.specapi.specapiLang.SimpleMemberAssignment;
 import org.specapi.specapiLang.SpecapiLangPackage;
 
 /**
@@ -43,7 +43,7 @@ public class PathImpl extends MinimalEObjectImpl.Container implements Path
    * @generated
    * @ordered
    */
-  protected EList<SimpleMemberAssignment> params;
+  protected EList<Member> params;
 
   /**
    * <!-- begin-user-doc -->
@@ -71,11 +71,11 @@ public class PathImpl extends MinimalEObjectImpl.Container implements Path
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<SimpleMemberAssignment> getParams()
+  public EList<Member> getParams()
   {
     if (params == null)
     {
-      params = new EObjectContainmentEList<SimpleMemberAssignment>(SimpleMemberAssignment.class, this, SpecapiLangPackage.PATH__PARAMS);
+      params = new EObjectContainmentEList<Member>(Member.class, this, SpecapiLangPackage.PATH__PARAMS);
     }
     return params;
   }
@@ -125,7 +125,7 @@ public class PathImpl extends MinimalEObjectImpl.Container implements Path
     {
       case SpecapiLangPackage.PATH__PARAMS:
         getParams().clear();
-        getParams().addAll((Collection<? extends SimpleMemberAssignment>)newValue);
+        getParams().addAll((Collection<? extends Member>)newValue);
         return;
     }
     super.eSet(featureID, newValue);

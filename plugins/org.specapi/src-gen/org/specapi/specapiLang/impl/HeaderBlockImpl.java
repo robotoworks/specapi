@@ -14,8 +14,8 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
-import org.specapi.specapiLang.Header;
 import org.specapi.specapiLang.HeaderBlock;
+import org.specapi.specapiLang.Member;
 import org.specapi.specapiLang.SpecapiLangPackage;
 
 /**
@@ -41,7 +41,7 @@ public class HeaderBlockImpl extends ServiceBlockImpl implements HeaderBlock
    * @generated
    * @ordered
    */
-  protected EList<Header> headers;
+  protected EList<Member> headers;
 
   /**
    * <!-- begin-user-doc -->
@@ -69,11 +69,11 @@ public class HeaderBlockImpl extends ServiceBlockImpl implements HeaderBlock
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<Header> getHeaders()
+  public EList<Member> getHeaders()
   {
     if (headers == null)
     {
-      headers = new EObjectContainmentEList<Header>(Header.class, this, SpecapiLangPackage.HEADER_BLOCK__HEADERS);
+      headers = new EObjectContainmentEList<Member>(Member.class, this, SpecapiLangPackage.HEADER_BLOCK__HEADERS);
     }
     return headers;
   }
@@ -123,7 +123,7 @@ public class HeaderBlockImpl extends ServiceBlockImpl implements HeaderBlock
     {
       case SpecapiLangPackage.HEADER_BLOCK__HEADERS:
         getHeaders().clear();
-        getHeaders().addAll((Collection<? extends Header>)newValue);
+        getHeaders().addAll((Collection<? extends Member>)newValue);
         return;
     }
     super.eSet(featureID, newValue);

@@ -118,7 +118,7 @@ public class ModelUtil {
 		reservedWords.add("while");
 	}
 
-	public String getBoxedTypeSignature(IntrinsicType type) {
+	public String getBoxedTypeSignature(Type type) {
 		if(type instanceof StringType) {
 			return "String";
 		} else if (type instanceof BooleanType) {
@@ -142,9 +142,9 @@ public class ModelUtil {
 		} else if(type instanceof ArrayType){
 			ArrayType genType = (ArrayType) type;
 			if(genType.getElementType() instanceof UserType){
-				return "List<" + ((UserType)genType.getElementType()).getDeclaration().getName() + ">";				
+				return ((UserType)genType.getElementType()).getDeclaration().getName() + "[]";				
 			} else {
-				return "List<" + getBoxedTypeSignature((IntrinsicType)genType.getElementType()) + ">";							
+				return getBoxedTypeSignature((IntrinsicType)genType.getElementType()) + "[]";							
 			}
 		}
 		

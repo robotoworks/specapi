@@ -68,15 +68,6 @@ public interface SpecapiLangFactory extends EFactory
   HeaderBlock createHeaderBlock();
 
   /**
-   * Returns a new object of class '<em>Header</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Header</em>'.
-   * @generated
-   */
-  Header createHeader();
-
-  /**
    * Returns a new object of class '<em>Http Method</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -111,15 +102,6 @@ public interface SpecapiLangFactory extends EFactory
    * @generated
    */
   ParamsBlock createParamsBlock();
-
-  /**
-   * Returns a new object of class '<em>Simple Member Assignment</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Simple Member Assignment</em>'.
-   * @generated
-   */
-  SimpleMemberAssignment createSimpleMemberAssignment();
 
   /**
    * Returns a new object of class '<em>Literal</em>'.
@@ -165,15 +147,6 @@ public interface SpecapiLangFactory extends EFactory
    * @generated
    */
   Member createMember();
-
-  /**
-   * Returns a new object of class '<em>Simple Member</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Simple Member</em>'.
-   * @generated
-   */
-  SimpleMember createSimpleMember();
 
   /**
    * Returns a new object of class '<em>Type</em>'.

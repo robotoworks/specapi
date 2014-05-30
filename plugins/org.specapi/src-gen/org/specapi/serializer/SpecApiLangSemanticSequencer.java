@@ -25,7 +25,6 @@ import org.specapi.specapiLang.DoubleType;
 import org.specapi.specapiLang.EnumMember;
 import org.specapi.specapiLang.EnumTypeDeclaration;
 import org.specapi.specapiLang.EnumTypeLiteral;
-import org.specapi.specapiLang.Header;
 import org.specapi.specapiLang.HeaderBlock;
 import org.specapi.specapiLang.HttpMethod;
 import org.specapi.specapiLang.IntegerType;
@@ -35,8 +34,6 @@ import org.specapi.specapiLang.NumericLiteral;
 import org.specapi.specapiLang.ParamsBlock;
 import org.specapi.specapiLang.Path;
 import org.specapi.specapiLang.ResponseBlock;
-import org.specapi.specapiLang.SimpleMember;
-import org.specapi.specapiLang.SimpleMemberAssignment;
 import org.specapi.specapiLang.SpecApiDocument;
 import org.specapi.specapiLang.SpecapiLangPackage;
 import org.specapi.specapiLang.StringLiteral;
@@ -133,12 +130,6 @@ public class SpecApiLangSemanticSequencer extends AbstractDelegatingSemanticSequ
 					return; 
 				}
 				else break;
-			case SpecapiLangPackage.HEADER:
-				if(context == grammarAccess.getHeaderRule()) {
-					sequence_Header(context, (Header) semanticObject); 
-					return; 
-				}
-				else break;
 			case SpecapiLangPackage.HEADER_BLOCK:
 				if(context == grammarAccess.getHeaderBlockRule() ||
 				   context == grammarAccess.getHttpMethodBlockRule() ||
@@ -204,18 +195,6 @@ public class SpecApiLangSemanticSequencer extends AbstractDelegatingSemanticSequ
 				if(context == grammarAccess.getHttpMethodBlockRule() ||
 				   context == grammarAccess.getResponseBlockRule()) {
 					sequence_ResponseBlock(context, (ResponseBlock) semanticObject); 
-					return; 
-				}
-				else break;
-			case SpecapiLangPackage.SIMPLE_MEMBER:
-				if(context == grammarAccess.getSimpleMemberRule()) {
-					sequence_SimpleMember(context, (SimpleMember) semanticObject); 
-					return; 
-				}
-				else break;
-			case SpecapiLangPackage.SIMPLE_MEMBER_ASSIGNMENT:
-				if(context == grammarAccess.getSimpleMemberAssignmentRule()) {
-					sequence_SimpleMemberAssignment(context, (SimpleMemberAssignment) semanticObject); 
 					return; 
 				}
 				else break;
@@ -365,29 +344,10 @@ public class SpecApiLangSemanticSequencer extends AbstractDelegatingSemanticSequ
 	
 	/**
 	 * Constraint:
-	 *     (headers+=Header headers+=Header*)
+	 *     (headers+=Member headers+=Member*)
 	 */
 	protected void sequence_HeaderBlock(EObject context, HeaderBlock semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Constraint:
-	 *     (name=STRING value=STRING)
-	 */
-	protected void sequence_Header(EObject context, Header semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, SpecapiLangPackage.Literals.HEADER__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, SpecapiLangPackage.Literals.HEADER__NAME));
-			if(transientValues.isValueTransient(semanticObject, SpecapiLangPackage.Literals.HEADER__VALUE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, SpecapiLangPackage.Literals.HEADER__VALUE));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getHeaderAccess().getNameSTRINGTerminalRuleCall_0_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getHeaderAccess().getValueSTRINGTerminalRuleCall_2_0(), semanticObject.getValue());
-		feeder.finish();
 	}
 	
 	
@@ -482,7 +442,7 @@ public class SpecApiLangSemanticSequencer extends AbstractDelegatingSemanticSequ
 	
 	/**
 	 * Constraint:
-	 *     ((name=ID | name=STRING) type=Type)
+	 *     ((name=ID | name=STRING) type=Type defaultValue=Literal?)
 	 */
 	protected void sequence_Member(EObject context, Member semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -491,7 +451,7 @@ public class SpecApiLangSemanticSequencer extends AbstractDelegatingSemanticSequ
 	
 	/**
 	 * Constraint:
-	 *     (params+=SimpleMemberAssignment params+=SimpleMemberAssignment*)
+	 *     (params+=Member params+=Member*)
 	 */
 	protected void sequence_ParamsBlock(EObject context, ParamsBlock semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -500,7 +460,7 @@ public class SpecApiLangSemanticSequencer extends AbstractDelegatingSemanticSequ
 	
 	/**
 	 * Constraint:
-	 *     (params+=SimpleMemberAssignment? params+=SimpleMemberAssignment*)
+	 *     (params+=Member? params+=Member*)
 	 */
 	protected void sequence_Path(EObject context, Path semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -512,24 +472,6 @@ public class SpecApiLangSemanticSequencer extends AbstractDelegatingSemanticSequ
 	 *     (superType=[ComplexTypeDeclaration|ID]? type=BlockType?)
 	 */
 	protected void sequence_ResponseBlock(EObject context, ResponseBlock semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Constraint:
-	 *     (member=SimpleMember defaultValue=Literal?)
-	 */
-	protected void sequence_SimpleMemberAssignment(EObject context, SimpleMemberAssignment semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Constraint:
-	 *     ((name=ID | name=STRING) type=IntrinsicType)
-	 */
-	protected void sequence_SimpleMember(EObject context, SimpleMember semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	

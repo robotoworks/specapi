@@ -110,13 +110,6 @@ public class SpecapiLangSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case SpecapiLangPackage.HEADER:
-      {
-        Header header = (Header)theEObject;
-        T result = caseHeader(header);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
       case SpecapiLangPackage.HTTP_METHOD:
       {
         HttpMethod httpMethod = (HttpMethod)theEObject;
@@ -145,13 +138,6 @@ public class SpecapiLangSwitch<T> extends Switch<T>
         T result = caseParamsBlock(paramsBlock);
         if (result == null) result = caseServiceBlock(paramsBlock);
         if (result == null) result = caseHttpMethodBlock(paramsBlock);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case SpecapiLangPackage.SIMPLE_MEMBER_ASSIGNMENT:
-      {
-        SimpleMemberAssignment simpleMemberAssignment = (SimpleMemberAssignment)theEObject;
-        T result = caseSimpleMemberAssignment(simpleMemberAssignment);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -189,13 +175,6 @@ public class SpecapiLangSwitch<T> extends Switch<T>
       {
         Member member = (Member)theEObject;
         T result = caseMember(member);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case SpecapiLangPackage.SIMPLE_MEMBER:
-      {
-        SimpleMember simpleMember = (SimpleMember)theEObject;
-        T result = caseSimpleMember(simpleMember);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -454,22 +433,6 @@ public class SpecapiLangSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Header</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Header</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseHeader(Header object)
-  {
-    return null;
-  }
-
-  /**
    * Returns the result of interpreting the object as an instance of '<em>Http Method</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -529,22 +492,6 @@ public class SpecapiLangSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseParamsBlock(ParamsBlock object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Simple Member Assignment</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Simple Member Assignment</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseSimpleMemberAssignment(SimpleMemberAssignment object)
   {
     return null;
   }
@@ -625,22 +572,6 @@ public class SpecapiLangSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseMember(Member object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Simple Member</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Simple Member</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseSimpleMember(SimpleMember object)
   {
     return null;
   }

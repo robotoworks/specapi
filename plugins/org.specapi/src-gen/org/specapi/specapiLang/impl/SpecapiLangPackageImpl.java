@@ -24,7 +24,6 @@ import org.specapi.specapiLang.DoubleType;
 import org.specapi.specapiLang.EnumMember;
 import org.specapi.specapiLang.EnumTypeDeclaration;
 import org.specapi.specapiLang.EnumTypeLiteral;
-import org.specapi.specapiLang.Header;
 import org.specapi.specapiLang.HeaderBlock;
 import org.specapi.specapiLang.HttpMethod;
 import org.specapi.specapiLang.HttpMethodBlock;
@@ -40,8 +39,6 @@ import org.specapi.specapiLang.ParamsBlock;
 import org.specapi.specapiLang.Path;
 import org.specapi.specapiLang.ResponseBlock;
 import org.specapi.specapiLang.ServiceBlock;
-import org.specapi.specapiLang.SimpleMember;
-import org.specapi.specapiLang.SimpleMemberAssignment;
 import org.specapi.specapiLang.SpecApiDocument;
 import org.specapi.specapiLang.SpecapiLangFactory;
 import org.specapi.specapiLang.SpecapiLangPackage;
@@ -99,13 +96,6 @@ public class SpecapiLangPackageImpl extends EPackageImpl implements SpecapiLangP
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass headerEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   private EClass httpMethodEClass = null;
 
   /**
@@ -128,13 +118,6 @@ public class SpecapiLangPackageImpl extends EPackageImpl implements SpecapiLangP
    * @generated
    */
   private EClass paramsBlockEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass simpleMemberAssignmentEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -170,13 +153,6 @@ public class SpecapiLangPackageImpl extends EPackageImpl implements SpecapiLangP
    * @generated
    */
   private EClass memberEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass simpleMemberEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -503,36 +479,6 @@ public class SpecapiLangPackageImpl extends EPackageImpl implements SpecapiLangP
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getHeader()
-  {
-    return headerEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getHeader_Name()
-  {
-    return (EAttribute)headerEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getHeader_Value()
-  {
-    return (EAttribute)headerEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EClass getHttpMethod()
   {
     return httpMethodEClass;
@@ -626,36 +572,6 @@ public class SpecapiLangPackageImpl extends EPackageImpl implements SpecapiLangP
   public EReference getParamsBlock_Params()
   {
     return (EReference)paramsBlockEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getSimpleMemberAssignment()
-  {
-    return simpleMemberAssignmentEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getSimpleMemberAssignment_Member()
-  {
-    return (EReference)simpleMemberAssignmentEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getSimpleMemberAssignment_DefaultValue()
-  {
-    return (EReference)simpleMemberAssignmentEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -763,29 +679,9 @@ public class SpecapiLangPackageImpl extends EPackageImpl implements SpecapiLangP
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getSimpleMember()
+  public EReference getMember_DefaultValue()
   {
-    return simpleMemberEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getSimpleMember_Name()
-  {
-    return (EAttribute)simpleMemberEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getSimpleMember_Type()
-  {
-    return (EReference)simpleMemberEClass.getEStructuralFeatures().get(1);
+    return (EReference)memberEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -1204,10 +1100,6 @@ public class SpecapiLangPackageImpl extends EPackageImpl implements SpecapiLangP
     headerBlockEClass = createEClass(HEADER_BLOCK);
     createEReference(headerBlockEClass, HEADER_BLOCK__HEADERS);
 
-    headerEClass = createEClass(HEADER);
-    createEAttribute(headerEClass, HEADER__NAME);
-    createEAttribute(headerEClass, HEADER__VALUE);
-
     httpMethodEClass = createEClass(HTTP_METHOD);
     createEAttribute(httpMethodEClass, HTTP_METHOD__TYPE);
     createEAttribute(httpMethodEClass, HTTP_METHOD__NAME);
@@ -1221,10 +1113,6 @@ public class SpecapiLangPackageImpl extends EPackageImpl implements SpecapiLangP
 
     paramsBlockEClass = createEClass(PARAMS_BLOCK);
     createEReference(paramsBlockEClass, PARAMS_BLOCK__PARAMS);
-
-    simpleMemberAssignmentEClass = createEClass(SIMPLE_MEMBER_ASSIGNMENT);
-    createEReference(simpleMemberAssignmentEClass, SIMPLE_MEMBER_ASSIGNMENT__MEMBER);
-    createEReference(simpleMemberAssignmentEClass, SIMPLE_MEMBER_ASSIGNMENT__DEFAULT_VALUE);
 
     literalEClass = createEClass(LITERAL);
 
@@ -1240,10 +1128,7 @@ public class SpecapiLangPackageImpl extends EPackageImpl implements SpecapiLangP
     memberEClass = createEClass(MEMBER);
     createEAttribute(memberEClass, MEMBER__NAME);
     createEReference(memberEClass, MEMBER__TYPE);
-
-    simpleMemberEClass = createEClass(SIMPLE_MEMBER);
-    createEAttribute(simpleMemberEClass, SIMPLE_MEMBER__NAME);
-    createEReference(simpleMemberEClass, SIMPLE_MEMBER__TYPE);
+    createEReference(memberEClass, MEMBER__DEFAULT_VALUE);
 
     typeEClass = createEClass(TYPE);
 
@@ -1374,11 +1259,7 @@ public class SpecapiLangPackageImpl extends EPackageImpl implements SpecapiLangP
     initEClass(serviceBlockEClass, ServiceBlock.class, "ServiceBlock", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(headerBlockEClass, HeaderBlock.class, "HeaderBlock", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getHeaderBlock_Headers(), this.getHeader(), null, "headers", null, 0, -1, HeaderBlock.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(headerEClass, Header.class, "Header", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getHeader_Name(), ecorePackage.getEString(), "name", null, 0, 1, Header.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getHeader_Value(), ecorePackage.getEString(), "value", null, 0, 1, Header.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getHeaderBlock_Headers(), this.getMember(), null, "headers", null, 0, -1, HeaderBlock.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(httpMethodEClass, HttpMethod.class, "HttpMethod", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getHttpMethod_Type(), this.getHttpMethodType(), "type", null, 0, 1, HttpMethod.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1389,14 +1270,10 @@ public class SpecapiLangPackageImpl extends EPackageImpl implements SpecapiLangP
     initEClass(httpMethodBlockEClass, HttpMethodBlock.class, "HttpMethodBlock", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(pathEClass, Path.class, "Path", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getPath_Params(), this.getSimpleMemberAssignment(), null, "params", null, 0, -1, Path.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getPath_Params(), this.getMember(), null, "params", null, 0, -1, Path.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(paramsBlockEClass, ParamsBlock.class, "ParamsBlock", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getParamsBlock_Params(), this.getSimpleMemberAssignment(), null, "params", null, 0, -1, ParamsBlock.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(simpleMemberAssignmentEClass, SimpleMemberAssignment.class, "SimpleMemberAssignment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getSimpleMemberAssignment_Member(), this.getSimpleMember(), null, "member", null, 0, 1, SimpleMemberAssignment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getSimpleMemberAssignment_DefaultValue(), this.getLiteral(), null, "defaultValue", null, 0, 1, SimpleMemberAssignment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getParamsBlock_Params(), this.getMember(), null, "params", null, 0, -1, ParamsBlock.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(literalEClass, Literal.class, "Literal", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -1412,10 +1289,7 @@ public class SpecapiLangPackageImpl extends EPackageImpl implements SpecapiLangP
     initEClass(memberEClass, Member.class, "Member", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getMember_Name(), ecorePackage.getEString(), "name", null, 0, 1, Member.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getMember_Type(), this.getType(), null, "type", null, 0, 1, Member.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(simpleMemberEClass, SimpleMember.class, "SimpleMember", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getSimpleMember_Name(), ecorePackage.getEString(), "name", null, 0, 1, SimpleMember.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getSimpleMember_Type(), this.getIntrinsicType(), null, "type", null, 0, 1, SimpleMember.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getMember_DefaultValue(), this.getLiteral(), null, "defaultValue", null, 0, 1, Member.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(typeEClass, Type.class, "Type", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

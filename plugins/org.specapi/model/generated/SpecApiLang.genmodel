@@ -33,10 +33,6 @@
     <genClasses ecoreClass="SpecApiLang.ecore#//HeaderBlock">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpecApiLang.ecore#//HeaderBlock/headers"/>
     </genClasses>
-    <genClasses ecoreClass="SpecApiLang.ecore#//Header">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpecApiLang.ecore#//Header/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpecApiLang.ecore#//Header/value"/>
-    </genClasses>
     <genClasses ecoreClass="SpecApiLang.ecore#//HttpMethod">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpecApiLang.ecore#//HttpMethod/type"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpecApiLang.ecore#//HttpMethod/name"/>
@@ -50,10 +46,6 @@
     <genClasses ecoreClass="SpecApiLang.ecore#//ParamsBlock">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpecApiLang.ecore#//ParamsBlock/params"/>
     </genClasses>
-    <genClasses ecoreClass="SpecApiLang.ecore#//SimpleMemberAssignment">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpecApiLang.ecore#//SimpleMemberAssignment/member"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpecApiLang.ecore#//SimpleMemberAssignment/defaultValue"/>
-    </genClasses>
     <genClasses ecoreClass="SpecApiLang.ecore#//Literal"/>
     <genClasses ecoreClass="SpecApiLang.ecore#//BodyBlock">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpecApiLang.ecore#//BodyBlock/type"/>
@@ -66,10 +58,7 @@
     <genClasses ecoreClass="SpecApiLang.ecore#//Member">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpecApiLang.ecore#//Member/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpecApiLang.ecore#//Member/type"/>
-    </genClasses>
-    <genClasses ecoreClass="SpecApiLang.ecore#//SimpleMember">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpecApiLang.ecore#//SimpleMember/name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpecApiLang.ecore#//SimpleMember/type"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpecApiLang.ecore#//Member/defaultValue"/>
     </genClasses>
     <genClasses ecoreClass="SpecApiLang.ecore#//Type"/>
     <genClasses ecoreClass="SpecApiLang.ecore#//ArrayType">

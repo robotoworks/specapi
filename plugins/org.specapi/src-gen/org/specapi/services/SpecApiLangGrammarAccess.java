@@ -144,73 +144,45 @@ public class SpecApiLangGrammarAccess extends AbstractGrammarElementFinder {
 	public class HeaderBlockElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "HeaderBlock");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cHeadersKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cHeadersAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cHeadersHeaderParserRuleCall_1_0 = (RuleCall)cHeadersAssignment_1.eContents().get(0);
-		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
-		private final Keyword cCommaKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
-		private final Assignment cHeadersAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
-		private final RuleCall cHeadersHeaderParserRuleCall_2_1_0 = (RuleCall)cHeadersAssignment_2_1.eContents().get(0);
+		private final Action cHeaderBlockAction_0 = (Action)cGroup.eContents().get(0);
+		private final Keyword cHeadersKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cHeadersAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cHeadersMemberParserRuleCall_2_0 = (RuleCall)cHeadersAssignment_2.eContents().get(0);
+		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
+		private final Keyword cCommaKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final Assignment cHeadersAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
+		private final RuleCall cHeadersMemberParserRuleCall_3_1_0 = (RuleCall)cHeadersAssignment_3_1.eContents().get(0);
 		
 		//HeaderBlock:
-		//	"headers" headers+=Header ("," headers+=Header)*;
+		//	{HeaderBlock} "headers" headers+=Member ("," headers+=Member)*;
 		public ParserRule getRule() { return rule; }
 
-		//"headers" headers+=Header ("," headers+=Header)*
+		//{HeaderBlock} "headers" headers+=Member ("," headers+=Member)*
 		public Group getGroup() { return cGroup; }
+
+		//{HeaderBlock}
+		public Action getHeaderBlockAction_0() { return cHeaderBlockAction_0; }
 
 		//"headers"
-		public Keyword getHeadersKeyword_0() { return cHeadersKeyword_0; }
+		public Keyword getHeadersKeyword_1() { return cHeadersKeyword_1; }
 
-		//headers+=Header
-		public Assignment getHeadersAssignment_1() { return cHeadersAssignment_1; }
+		//headers+=Member
+		public Assignment getHeadersAssignment_2() { return cHeadersAssignment_2; }
 
-		//Header
-		public RuleCall getHeadersHeaderParserRuleCall_1_0() { return cHeadersHeaderParserRuleCall_1_0; }
+		//Member
+		public RuleCall getHeadersMemberParserRuleCall_2_0() { return cHeadersMemberParserRuleCall_2_0; }
 
-		//("," headers+=Header)*
-		public Group getGroup_2() { return cGroup_2; }
+		//("," headers+=Member)*
+		public Group getGroup_3() { return cGroup_3; }
 
 		//","
-		public Keyword getCommaKeyword_2_0() { return cCommaKeyword_2_0; }
+		public Keyword getCommaKeyword_3_0() { return cCommaKeyword_3_0; }
 
-		//headers+=Header
-		public Assignment getHeadersAssignment_2_1() { return cHeadersAssignment_2_1; }
+		//headers+=Member
+		public Assignment getHeadersAssignment_3_1() { return cHeadersAssignment_3_1; }
 
-		//Header
-		public RuleCall getHeadersHeaderParserRuleCall_2_1_0() { return cHeadersHeaderParserRuleCall_2_1_0; }
-	}
-
-	public class HeaderElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Header");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final RuleCall cNameSTRINGTerminalRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
-		private final Keyword cColonKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cValueAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cValueSTRINGTerminalRuleCall_2_0 = (RuleCall)cValueAssignment_2.eContents().get(0);
-		
-		//Header:
-		//	name=STRING ":" value=STRING;
-		public ParserRule getRule() { return rule; }
-
-		//name=STRING ":" value=STRING
-		public Group getGroup() { return cGroup; }
-
-		//name=STRING
-		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
-
-		//STRING
-		public RuleCall getNameSTRINGTerminalRuleCall_0_0() { return cNameSTRINGTerminalRuleCall_0_0; }
-
-		//":"
-		public Keyword getColonKeyword_1() { return cColonKeyword_1; }
-
-		//value=STRING
-		public Assignment getValueAssignment_2() { return cValueAssignment_2; }
-
-		//STRING
-		public RuleCall getValueSTRINGTerminalRuleCall_2_0() { return cValueSTRINGTerminalRuleCall_2_0; }
+		//Member
+		public RuleCall getHeadersMemberParserRuleCall_3_1_0() { return cHeadersMemberParserRuleCall_3_1_0; }
 	}
 
 	public class HttpMethodElements extends AbstractParserRuleElementFinder {
@@ -301,21 +273,19 @@ public class SpecApiLangGrammarAccess extends AbstractGrammarElementFinder {
 		private final Alternatives cAlternatives_2 = (Alternatives)cGroup.eContents().get(2);
 		private final RuleCall cArbitraryPathSegmentParserRuleCall_2_0 = (RuleCall)cAlternatives_2.eContents().get(0);
 		private final Assignment cParamsAssignment_2_1 = (Assignment)cAlternatives_2.eContents().get(1);
-		private final RuleCall cParamsSimpleMemberAssignmentParserRuleCall_2_1_0 = (RuleCall)cParamsAssignment_2_1.eContents().get(0);
+		private final RuleCall cParamsMemberParserRuleCall_2_1_0 = (RuleCall)cParamsAssignment_2_1.eContents().get(0);
 		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
 		private final Keyword cSolidusKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
 		private final Alternatives cAlternatives_3_1 = (Alternatives)cGroup_3.eContents().get(1);
 		private final RuleCall cArbitraryPathSegmentParserRuleCall_3_1_0 = (RuleCall)cAlternatives_3_1.eContents().get(0);
 		private final Assignment cParamsAssignment_3_1_1 = (Assignment)cAlternatives_3_1.eContents().get(1);
-		private final RuleCall cParamsSimpleMemberAssignmentParserRuleCall_3_1_1_0 = (RuleCall)cParamsAssignment_3_1_1.eContents().get(0);
+		private final RuleCall cParamsMemberParserRuleCall_3_1_1_0 = (RuleCall)cParamsAssignment_3_1_1.eContents().get(0);
 		
 		//Path:
-		//	{Path} "/" (ArbitraryPathSegment | params+=SimpleMemberAssignment) ("/" (ArbitraryPathSegment |
-		//	params+=SimpleMemberAssignment))*;
+		//	{Path} "/" (ArbitraryPathSegment | params+=Member) ("/" (ArbitraryPathSegment | params+=Member))*;
 		public ParserRule getRule() { return rule; }
 
-		//{Path} "/" (ArbitraryPathSegment | params+=SimpleMemberAssignment) ("/" (ArbitraryPathSegment |
-		//params+=SimpleMemberAssignment))*
+		//{Path} "/" (ArbitraryPathSegment | params+=Member) ("/" (ArbitraryPathSegment | params+=Member))*
 		public Group getGroup() { return cGroup; }
 
 		//{Path}
@@ -324,35 +294,35 @@ public class SpecApiLangGrammarAccess extends AbstractGrammarElementFinder {
 		//"/"
 		public Keyword getSolidusKeyword_1() { return cSolidusKeyword_1; }
 
-		//ArbitraryPathSegment | params+=SimpleMemberAssignment
+		//ArbitraryPathSegment | params+=Member
 		public Alternatives getAlternatives_2() { return cAlternatives_2; }
 
 		//ArbitraryPathSegment
 		public RuleCall getArbitraryPathSegmentParserRuleCall_2_0() { return cArbitraryPathSegmentParserRuleCall_2_0; }
 
-		//params+=SimpleMemberAssignment
+		//params+=Member
 		public Assignment getParamsAssignment_2_1() { return cParamsAssignment_2_1; }
 
-		//SimpleMemberAssignment
-		public RuleCall getParamsSimpleMemberAssignmentParserRuleCall_2_1_0() { return cParamsSimpleMemberAssignmentParserRuleCall_2_1_0; }
+		//Member
+		public RuleCall getParamsMemberParserRuleCall_2_1_0() { return cParamsMemberParserRuleCall_2_1_0; }
 
-		//("/" (ArbitraryPathSegment | params+=SimpleMemberAssignment))*
+		//("/" (ArbitraryPathSegment | params+=Member))*
 		public Group getGroup_3() { return cGroup_3; }
 
 		//"/"
 		public Keyword getSolidusKeyword_3_0() { return cSolidusKeyword_3_0; }
 
-		//ArbitraryPathSegment | params+=SimpleMemberAssignment
+		//ArbitraryPathSegment | params+=Member
 		public Alternatives getAlternatives_3_1() { return cAlternatives_3_1; }
 
 		//ArbitraryPathSegment
 		public RuleCall getArbitraryPathSegmentParserRuleCall_3_1_0() { return cArbitraryPathSegmentParserRuleCall_3_1_0; }
 
-		//params+=SimpleMemberAssignment
+		//params+=Member
 		public Assignment getParamsAssignment_3_1_1() { return cParamsAssignment_3_1_1; }
 
-		//SimpleMemberAssignment
-		public RuleCall getParamsSimpleMemberAssignmentParserRuleCall_3_1_1_0() { return cParamsSimpleMemberAssignmentParserRuleCall_3_1_1_0; }
+		//Member
+		public RuleCall getParamsMemberParserRuleCall_3_1_1_0() { return cParamsMemberParserRuleCall_3_1_1_0; }
 	}
 
 	public class ArbitraryPathSegmentElements extends AbstractParserRuleElementFinder {
@@ -389,17 +359,17 @@ public class SpecApiLangGrammarAccess extends AbstractGrammarElementFinder {
 		private final Action cParamsBlockAction_0 = (Action)cGroup.eContents().get(0);
 		private final Keyword cParamsKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cParamsAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cParamsSimpleMemberAssignmentParserRuleCall_2_0 = (RuleCall)cParamsAssignment_2.eContents().get(0);
+		private final RuleCall cParamsMemberParserRuleCall_2_0 = (RuleCall)cParamsAssignment_2.eContents().get(0);
 		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
 		private final Keyword cCommaKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
 		private final Assignment cParamsAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
-		private final RuleCall cParamsSimpleMemberAssignmentParserRuleCall_3_1_0 = (RuleCall)cParamsAssignment_3_1.eContents().get(0);
+		private final RuleCall cParamsMemberParserRuleCall_3_1_0 = (RuleCall)cParamsAssignment_3_1.eContents().get(0);
 		
 		//ParamsBlock:
-		//	{ParamsBlock} "params" params+=SimpleMemberAssignment ("," params+=SimpleMemberAssignment)*;
+		//	{ParamsBlock} "params" params+=Member ("," params+=Member)*;
 		public ParserRule getRule() { return rule; }
 
-		//{ParamsBlock} "params" params+=SimpleMemberAssignment ("," params+=SimpleMemberAssignment)*
+		//{ParamsBlock} "params" params+=Member ("," params+=Member)*
 		public Group getGroup() { return cGroup; }
 
 		//{ParamsBlock}
@@ -408,59 +378,23 @@ public class SpecApiLangGrammarAccess extends AbstractGrammarElementFinder {
 		//"params"
 		public Keyword getParamsKeyword_1() { return cParamsKeyword_1; }
 
-		//params+=SimpleMemberAssignment
+		//params+=Member
 		public Assignment getParamsAssignment_2() { return cParamsAssignment_2; }
 
-		//SimpleMemberAssignment
-		public RuleCall getParamsSimpleMemberAssignmentParserRuleCall_2_0() { return cParamsSimpleMemberAssignmentParserRuleCall_2_0; }
+		//Member
+		public RuleCall getParamsMemberParserRuleCall_2_0() { return cParamsMemberParserRuleCall_2_0; }
 
-		//("," params+=SimpleMemberAssignment)*
+		//("," params+=Member)*
 		public Group getGroup_3() { return cGroup_3; }
 
 		//","
 		public Keyword getCommaKeyword_3_0() { return cCommaKeyword_3_0; }
 
-		//params+=SimpleMemberAssignment
+		//params+=Member
 		public Assignment getParamsAssignment_3_1() { return cParamsAssignment_3_1; }
 
-		//SimpleMemberAssignment
-		public RuleCall getParamsSimpleMemberAssignmentParserRuleCall_3_1_0() { return cParamsSimpleMemberAssignmentParserRuleCall_3_1_0; }
-	}
-
-	public class SimpleMemberAssignmentElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "SimpleMemberAssignment");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cMemberAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final RuleCall cMemberSimpleMemberParserRuleCall_0_0 = (RuleCall)cMemberAssignment_0.eContents().get(0);
-		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
-		private final Keyword cEqualsSignKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
-		private final Assignment cDefaultValueAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
-		private final RuleCall cDefaultValueLiteralParserRuleCall_1_1_0 = (RuleCall)cDefaultValueAssignment_1_1.eContents().get(0);
-		
-		//SimpleMemberAssignment:
-		//	member=SimpleMember ("=" defaultValue=Literal)?;
-		public ParserRule getRule() { return rule; }
-
-		//member=SimpleMember ("=" defaultValue=Literal)?
-		public Group getGroup() { return cGroup; }
-
-		//member=SimpleMember
-		public Assignment getMemberAssignment_0() { return cMemberAssignment_0; }
-
-		//SimpleMember
-		public RuleCall getMemberSimpleMemberParserRuleCall_0_0() { return cMemberSimpleMemberParserRuleCall_0_0; }
-
-		//("=" defaultValue=Literal)?
-		public Group getGroup_1() { return cGroup_1; }
-
-		//"="
-		public Keyword getEqualsSignKeyword_1_0() { return cEqualsSignKeyword_1_0; }
-
-		//defaultValue=Literal
-		public Assignment getDefaultValueAssignment_1_1() { return cDefaultValueAssignment_1_1; }
-
-		//Literal
-		public RuleCall getDefaultValueLiteralParserRuleCall_1_1_0() { return cDefaultValueLiteralParserRuleCall_1_1_0; }
+		//Member
+		public RuleCall getParamsMemberParserRuleCall_3_1_0() { return cParamsMemberParserRuleCall_3_1_0; }
 	}
 
 	public class LiteralElements extends AbstractParserRuleElementFinder {
@@ -625,12 +559,16 @@ public class SpecApiLangGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cColonKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cTypeAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cTypeTypeParserRuleCall_2_0 = (RuleCall)cTypeAssignment_2.eContents().get(0);
+		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
+		private final Keyword cEqualsSignKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final Assignment cDefaultValueAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
+		private final RuleCall cDefaultValueLiteralParserRuleCall_3_1_0 = (RuleCall)cDefaultValueAssignment_3_1.eContents().get(0);
 		
 		//Member:
-		//	name=(ID | STRING) ":" type=Type;
+		//	name=(ID | STRING) ":" type=Type ("=" defaultValue=Literal)?;
 		public ParserRule getRule() { return rule; }
 
-		//name=(ID | STRING) ":" type=Type
+		//name=(ID | STRING) ":" type=Type ("=" defaultValue=Literal)?
 		public Group getGroup() { return cGroup; }
 
 		//name=(ID | STRING)
@@ -653,46 +591,18 @@ public class SpecApiLangGrammarAccess extends AbstractGrammarElementFinder {
 
 		//Type
 		public RuleCall getTypeTypeParserRuleCall_2_0() { return cTypeTypeParserRuleCall_2_0; }
-	}
 
-	public class SimpleMemberElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "SimpleMember");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final Alternatives cNameAlternatives_0_0 = (Alternatives)cNameAssignment_0.eContents().get(0);
-		private final RuleCall cNameIDTerminalRuleCall_0_0_0 = (RuleCall)cNameAlternatives_0_0.eContents().get(0);
-		private final RuleCall cNameSTRINGTerminalRuleCall_0_0_1 = (RuleCall)cNameAlternatives_0_0.eContents().get(1);
-		private final Keyword cColonKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cTypeAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cTypeIntrinsicTypeParserRuleCall_2_0 = (RuleCall)cTypeAssignment_2.eContents().get(0);
-		
-		//SimpleMember:
-		//	name=(ID | STRING) ":" type=IntrinsicType;
-		public ParserRule getRule() { return rule; }
+		//("=" defaultValue=Literal)?
+		public Group getGroup_3() { return cGroup_3; }
 
-		//name=(ID | STRING) ":" type=IntrinsicType
-		public Group getGroup() { return cGroup; }
+		//"="
+		public Keyword getEqualsSignKeyword_3_0() { return cEqualsSignKeyword_3_0; }
 
-		//name=(ID | STRING)
-		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
+		//defaultValue=Literal
+		public Assignment getDefaultValueAssignment_3_1() { return cDefaultValueAssignment_3_1; }
 
-		//ID | STRING
-		public Alternatives getNameAlternatives_0_0() { return cNameAlternatives_0_0; }
-
-		//ID
-		public RuleCall getNameIDTerminalRuleCall_0_0_0() { return cNameIDTerminalRuleCall_0_0_0; }
-
-		//STRING
-		public RuleCall getNameSTRINGTerminalRuleCall_0_0_1() { return cNameSTRINGTerminalRuleCall_0_0_1; }
-
-		//":"
-		public Keyword getColonKeyword_1() { return cColonKeyword_1; }
-
-		//type=IntrinsicType
-		public Assignment getTypeAssignment_2() { return cTypeAssignment_2; }
-
-		//IntrinsicType
-		public RuleCall getTypeIntrinsicTypeParserRuleCall_2_0() { return cTypeIntrinsicTypeParserRuleCall_2_0; }
+		//Literal
+		public RuleCall getDefaultValueLiteralParserRuleCall_3_1_0() { return cDefaultValueLiteralParserRuleCall_3_1_0; }
 	}
 
 	public class TypeElements extends AbstractParserRuleElementFinder {
@@ -1276,20 +1186,17 @@ public class SpecApiLangGrammarAccess extends AbstractGrammarElementFinder {
 	private ApiElements pApi;
 	private ServiceBlockElements pServiceBlock;
 	private HeaderBlockElements pHeaderBlock;
-	private HeaderElements pHeader;
 	private HttpMethodElements pHttpMethod;
 	private HttpMethodBlockElements pHttpMethodBlock;
 	private HttpMethodTypeElements unknownRuleHttpMethodType;
 	private PathElements pPath;
 	private ArbitraryPathSegmentElements pArbitraryPathSegment;
 	private ParamsBlockElements pParamsBlock;
-	private SimpleMemberAssignmentElements pSimpleMemberAssignment;
 	private LiteralElements pLiteral;
 	private BodyBlockElements pBodyBlock;
 	private ResponseBlockElements pResponseBlock;
 	private BlockTypeElements pBlockType;
 	private MemberElements pMember;
-	private SimpleMemberElements pSimpleMember;
 	private TypeElements pType;
 	private ArrayTypeElements pArrayType;
 	private UserTypeElements pUserType;
@@ -1388,23 +1295,13 @@ public class SpecApiLangGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//HeaderBlock:
-	//	"headers" headers+=Header ("," headers+=Header)*;
+	//	{HeaderBlock} "headers" headers+=Member ("," headers+=Member)*;
 	public HeaderBlockElements getHeaderBlockAccess() {
 		return (pHeaderBlock != null) ? pHeaderBlock : (pHeaderBlock = new HeaderBlockElements());
 	}
 	
 	public ParserRule getHeaderBlockRule() {
 		return getHeaderBlockAccess().getRule();
-	}
-
-	//Header:
-	//	name=STRING ":" value=STRING;
-	public HeaderElements getHeaderAccess() {
-		return (pHeader != null) ? pHeader : (pHeader = new HeaderElements());
-	}
-	
-	public ParserRule getHeaderRule() {
-		return getHeaderAccess().getRule();
 	}
 
 	//HttpMethod:
@@ -1438,8 +1335,7 @@ public class SpecApiLangGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Path:
-	//	{Path} "/" (ArbitraryPathSegment | params+=SimpleMemberAssignment) ("/" (ArbitraryPathSegment |
-	//	params+=SimpleMemberAssignment))*;
+	//	{Path} "/" (ArbitraryPathSegment | params+=Member) ("/" (ArbitraryPathSegment | params+=Member))*;
 	public PathElements getPathAccess() {
 		return (pPath != null) ? pPath : (pPath = new PathElements());
 	}
@@ -1459,23 +1355,13 @@ public class SpecApiLangGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//ParamsBlock:
-	//	{ParamsBlock} "params" params+=SimpleMemberAssignment ("," params+=SimpleMemberAssignment)*;
+	//	{ParamsBlock} "params" params+=Member ("," params+=Member)*;
 	public ParamsBlockElements getParamsBlockAccess() {
 		return (pParamsBlock != null) ? pParamsBlock : (pParamsBlock = new ParamsBlockElements());
 	}
 	
 	public ParserRule getParamsBlockRule() {
 		return getParamsBlockAccess().getRule();
-	}
-
-	//SimpleMemberAssignment:
-	//	member=SimpleMember ("=" defaultValue=Literal)?;
-	public SimpleMemberAssignmentElements getSimpleMemberAssignmentAccess() {
-		return (pSimpleMemberAssignment != null) ? pSimpleMemberAssignment : (pSimpleMemberAssignment = new SimpleMemberAssignmentElements());
-	}
-	
-	public ParserRule getSimpleMemberAssignmentRule() {
-		return getSimpleMemberAssignmentAccess().getRule();
 	}
 
 	//Literal:
@@ -1519,23 +1405,13 @@ public class SpecApiLangGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Member:
-	//	name=(ID | STRING) ":" type=Type;
+	//	name=(ID | STRING) ":" type=Type ("=" defaultValue=Literal)?;
 	public MemberElements getMemberAccess() {
 		return (pMember != null) ? pMember : (pMember = new MemberElements());
 	}
 	
 	public ParserRule getMemberRule() {
 		return getMemberAccess().getRule();
-	}
-
-	//SimpleMember:
-	//	name=(ID | STRING) ":" type=IntrinsicType;
-	public SimpleMemberElements getSimpleMemberAccess() {
-		return (pSimpleMember != null) ? pSimpleMember : (pSimpleMember = new SimpleMemberElements());
-	}
-	
-	public ParserRule getSimpleMemberRule() {
-		return getSimpleMemberAccess().getRule();
 	}
 
 	//Type:

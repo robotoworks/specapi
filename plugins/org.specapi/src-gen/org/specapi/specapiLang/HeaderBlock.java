@@ -24,7 +24,7 @@ public interface HeaderBlock extends ServiceBlock, HttpMethodBlock
 {
   /**
    * Returns the value of the '<em><b>Headers</b></em>' containment reference list.
-   * The list contents are of type {@link org.specapi.specapiLang.Header}.
+   * The list contents are of type {@link org.specapi.specapiLang.Member}.
    * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Headers</em>' containment reference list isn't clear,
@@ -36,6 +36,6 @@ public interface HeaderBlock extends ServiceBlock, HttpMethodBlock
    * @model containment="true"
    * @generated
    */
-  EList<Header> getHeaders();
+  EList<Member> getHeaders();
 
 } // HeaderBlock

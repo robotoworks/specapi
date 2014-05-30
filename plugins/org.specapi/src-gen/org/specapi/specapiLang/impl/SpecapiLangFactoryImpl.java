@@ -70,18 +70,15 @@ public class SpecapiLangFactoryImpl extends EFactoryImpl implements SpecapiLangF
       case SpecapiLangPackage.API: return createApi();
       case SpecapiLangPackage.SERVICE_BLOCK: return createServiceBlock();
       case SpecapiLangPackage.HEADER_BLOCK: return createHeaderBlock();
-      case SpecapiLangPackage.HEADER: return createHeader();
       case SpecapiLangPackage.HTTP_METHOD: return createHttpMethod();
       case SpecapiLangPackage.HTTP_METHOD_BLOCK: return createHttpMethodBlock();
       case SpecapiLangPackage.PATH: return createPath();
       case SpecapiLangPackage.PARAMS_BLOCK: return createParamsBlock();
-      case SpecapiLangPackage.SIMPLE_MEMBER_ASSIGNMENT: return createSimpleMemberAssignment();
       case SpecapiLangPackage.LITERAL: return createLiteral();
       case SpecapiLangPackage.BODY_BLOCK: return createBodyBlock();
       case SpecapiLangPackage.RESPONSE_BLOCK: return createResponseBlock();
       case SpecapiLangPackage.BLOCK_TYPE: return createBlockType();
       case SpecapiLangPackage.MEMBER: return createMember();
-      case SpecapiLangPackage.SIMPLE_MEMBER: return createSimpleMember();
       case SpecapiLangPackage.TYPE: return createType();
       case SpecapiLangPackage.ARRAY_TYPE: return createArrayType();
       case SpecapiLangPackage.USER_TYPE: return createUserType();
@@ -204,17 +201,6 @@ public class SpecapiLangFactoryImpl extends EFactoryImpl implements SpecapiLangF
    * <!-- end-user-doc -->
    * @generated
    */
-  public Header createHeader()
-  {
-    HeaderImpl header = new HeaderImpl();
-    return header;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public HttpMethod createHttpMethod()
   {
     HttpMethodImpl httpMethod = new HttpMethodImpl();
@@ -252,17 +238,6 @@ public class SpecapiLangFactoryImpl extends EFactoryImpl implements SpecapiLangF
   {
     ParamsBlockImpl paramsBlock = new ParamsBlockImpl();
     return paramsBlock;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public SimpleMemberAssignment createSimpleMemberAssignment()
-  {
-    SimpleMemberAssignmentImpl simpleMemberAssignment = new SimpleMemberAssignmentImpl();
-    return simpleMemberAssignment;
   }
 
   /**
@@ -318,17 +293,6 @@ public class SpecapiLangFactoryImpl extends EFactoryImpl implements SpecapiLangF
   {
     MemberImpl member = new MemberImpl();
     return member;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public SimpleMember createSimpleMember()
-  {
-    SimpleMemberImpl simpleMember = new SimpleMemberImpl();
-    return simpleMember;
   }
 
   /**

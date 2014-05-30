@@ -11,7 +11,6 @@ import org.specapi.specapiLang.Api
 import org.specapi.specapiLang.ComplexTypeDeclaration
 import org.specapi.specapiLang.EnumMember
 import org.specapi.specapiLang.EnumTypeDeclaration
-import org.specapi.specapiLang.Header
 import org.specapi.specapiLang.HeaderBlock
 import org.specapi.specapiLang.HttpMethod
 import org.specapi.specapiLang.Member
@@ -83,8 +82,4 @@ class SpecApiLangLabelProvider extends DefaultEObjectLabelProvider {
     def text (HeaderBlock ele) {
         return "headers";
     }
-    
-    def text (Header ele) {
-        return ele.getName() + " : " + ele.getValue();
-    }  
 }

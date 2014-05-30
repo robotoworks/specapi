@@ -11,6 +11,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
+import org.specapi.specapiLang.Literal;
 import org.specapi.specapiLang.Member;
 import org.specapi.specapiLang.SpecapiLangPackage;
 import org.specapi.specapiLang.Type;
@@ -24,6 +25,7 @@ import org.specapi.specapiLang.Type;
  * <ul>
  *   <li>{@link org.specapi.specapiLang.impl.MemberImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.specapi.specapiLang.impl.MemberImpl#getType <em>Type</em>}</li>
+ *   <li>{@link org.specapi.specapiLang.impl.MemberImpl#getDefaultValue <em>Default Value</em>}</li>
  * </ul>
  * </p>
  *
@@ -60,6 +62,16 @@ public class MemberImpl extends MinimalEObjectImpl.Container implements Member
    * @ordered
    */
   protected Type type;
+
+  /**
+   * The cached value of the '{@link #getDefaultValue() <em>Default Value</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getDefaultValue()
+   * @generated
+   * @ordered
+   */
+  protected Literal defaultValue;
 
   /**
    * <!-- begin-user-doc -->
@@ -158,6 +170,54 @@ public class MemberImpl extends MinimalEObjectImpl.Container implements Member
    * <!-- end-user-doc -->
    * @generated
    */
+  public Literal getDefaultValue()
+  {
+    return defaultValue;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetDefaultValue(Literal newDefaultValue, NotificationChain msgs)
+  {
+    Literal oldDefaultValue = defaultValue;
+    defaultValue = newDefaultValue;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SpecapiLangPackage.MEMBER__DEFAULT_VALUE, oldDefaultValue, newDefaultValue);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setDefaultValue(Literal newDefaultValue)
+  {
+    if (newDefaultValue != defaultValue)
+    {
+      NotificationChain msgs = null;
+      if (defaultValue != null)
+        msgs = ((InternalEObject)defaultValue).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SpecapiLangPackage.MEMBER__DEFAULT_VALUE, null, msgs);
+      if (newDefaultValue != null)
+        msgs = ((InternalEObject)newDefaultValue).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SpecapiLangPackage.MEMBER__DEFAULT_VALUE, null, msgs);
+      msgs = basicSetDefaultValue(newDefaultValue, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, SpecapiLangPackage.MEMBER__DEFAULT_VALUE, newDefaultValue, newDefaultValue));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
@@ -165,6 +225,8 @@ public class MemberImpl extends MinimalEObjectImpl.Container implements Member
     {
       case SpecapiLangPackage.MEMBER__TYPE:
         return basicSetType(null, msgs);
+      case SpecapiLangPackage.MEMBER__DEFAULT_VALUE:
+        return basicSetDefaultValue(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -183,6 +245,8 @@ public class MemberImpl extends MinimalEObjectImpl.Container implements Member
         return getName();
       case SpecapiLangPackage.MEMBER__TYPE:
         return getType();
+      case SpecapiLangPackage.MEMBER__DEFAULT_VALUE:
+        return getDefaultValue();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -202,6 +266,9 @@ public class MemberImpl extends MinimalEObjectImpl.Container implements Member
         return;
       case SpecapiLangPackage.MEMBER__TYPE:
         setType((Type)newValue);
+        return;
+      case SpecapiLangPackage.MEMBER__DEFAULT_VALUE:
+        setDefaultValue((Literal)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -223,6 +290,9 @@ public class MemberImpl extends MinimalEObjectImpl.Container implements Member
       case SpecapiLangPackage.MEMBER__TYPE:
         setType((Type)null);
         return;
+      case SpecapiLangPackage.MEMBER__DEFAULT_VALUE:
+        setDefaultValue((Literal)null);
+        return;
     }
     super.eUnset(featureID);
   }
@@ -241,6 +311,8 @@ public class MemberImpl extends MinimalEObjectImpl.Container implements Member
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case SpecapiLangPackage.MEMBER__TYPE:
         return type != null;
+      case SpecapiLangPackage.MEMBER__DEFAULT_VALUE:
+        return defaultValue != null;
     }
     return super.eIsSet(featureID);
   }

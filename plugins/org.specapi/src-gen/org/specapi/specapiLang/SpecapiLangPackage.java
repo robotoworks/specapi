@@ -216,43 +216,6 @@ public interface SpecapiLangPackage extends EPackage
   int HEADER_BLOCK_FEATURE_COUNT = SERVICE_BLOCK_FEATURE_COUNT + 1;
 
   /**
-   * The meta object id for the '{@link org.specapi.specapiLang.impl.HeaderImpl <em>Header</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.specapi.specapiLang.impl.HeaderImpl
-   * @see org.specapi.specapiLang.impl.SpecapiLangPackageImpl#getHeader()
-   * @generated
-   */
-  int HEADER = 5;
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int HEADER__NAME = 0;
-
-  /**
-   * The feature id for the '<em><b>Value</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int HEADER__VALUE = 1;
-
-  /**
-   * The number of structural features of the '<em>Header</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int HEADER_FEATURE_COUNT = 2;
-
-  /**
    * The meta object id for the '{@link org.specapi.specapiLang.impl.HttpMethodImpl <em>Http Method</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -260,7 +223,7 @@ public interface SpecapiLangPackage extends EPackage
    * @see org.specapi.specapiLang.impl.SpecapiLangPackageImpl#getHttpMethod()
    * @generated
    */
-  int HTTP_METHOD = 6;
+  int HTTP_METHOD = 5;
 
   /**
    * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -315,7 +278,7 @@ public interface SpecapiLangPackage extends EPackage
    * @see org.specapi.specapiLang.impl.SpecapiLangPackageImpl#getHttpMethodBlock()
    * @generated
    */
-  int HTTP_METHOD_BLOCK = 7;
+  int HTTP_METHOD_BLOCK = 6;
 
   /**
    * The number of structural features of the '<em>Http Method Block</em>' class.
@@ -334,7 +297,7 @@ public interface SpecapiLangPackage extends EPackage
    * @see org.specapi.specapiLang.impl.SpecapiLangPackageImpl#getPath()
    * @generated
    */
-  int PATH = 8;
+  int PATH = 7;
 
   /**
    * The feature id for the '<em><b>Params</b></em>' containment reference list.
@@ -362,7 +325,7 @@ public interface SpecapiLangPackage extends EPackage
    * @see org.specapi.specapiLang.impl.SpecapiLangPackageImpl#getParamsBlock()
    * @generated
    */
-  int PARAMS_BLOCK = 9;
+  int PARAMS_BLOCK = 8;
 
   /**
    * The feature id for the '<em><b>Params</b></em>' containment reference list.
@@ -383,43 +346,6 @@ public interface SpecapiLangPackage extends EPackage
   int PARAMS_BLOCK_FEATURE_COUNT = SERVICE_BLOCK_FEATURE_COUNT + 1;
 
   /**
-   * The meta object id for the '{@link org.specapi.specapiLang.impl.SimpleMemberAssignmentImpl <em>Simple Member Assignment</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.specapi.specapiLang.impl.SimpleMemberAssignmentImpl
-   * @see org.specapi.specapiLang.impl.SpecapiLangPackageImpl#getSimpleMemberAssignment()
-   * @generated
-   */
-  int SIMPLE_MEMBER_ASSIGNMENT = 10;
-
-  /**
-   * The feature id for the '<em><b>Member</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SIMPLE_MEMBER_ASSIGNMENT__MEMBER = 0;
-
-  /**
-   * The feature id for the '<em><b>Default Value</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SIMPLE_MEMBER_ASSIGNMENT__DEFAULT_VALUE = 1;
-
-  /**
-   * The number of structural features of the '<em>Simple Member Assignment</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SIMPLE_MEMBER_ASSIGNMENT_FEATURE_COUNT = 2;
-
-  /**
    * The meta object id for the '{@link org.specapi.specapiLang.impl.LiteralImpl <em>Literal</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -427,7 +353,7 @@ public interface SpecapiLangPackage extends EPackage
    * @see org.specapi.specapiLang.impl.SpecapiLangPackageImpl#getLiteral()
    * @generated
    */
-  int LITERAL = 11;
+  int LITERAL = 9;
 
   /**
    * The number of structural features of the '<em>Literal</em>' class.
@@ -446,7 +372,7 @@ public interface SpecapiLangPackage extends EPackage
    * @see org.specapi.specapiLang.impl.SpecapiLangPackageImpl#getBodyBlock()
    * @generated
    */
-  int BODY_BLOCK = 12;
+  int BODY_BLOCK = 10;
 
   /**
    * The feature id for the '<em><b>Type</b></em>' containment reference.
@@ -474,7 +400,7 @@ public interface SpecapiLangPackage extends EPackage
    * @see org.specapi.specapiLang.impl.SpecapiLangPackageImpl#getResponseBlock()
    * @generated
    */
-  int RESPONSE_BLOCK = 13;
+  int RESPONSE_BLOCK = 11;
 
   /**
    * The feature id for the '<em><b>Super Type</b></em>' reference.
@@ -511,7 +437,7 @@ public interface SpecapiLangPackage extends EPackage
    * @see org.specapi.specapiLang.impl.SpecapiLangPackageImpl#getBlockType()
    * @generated
    */
-  int BLOCK_TYPE = 14;
+  int BLOCK_TYPE = 12;
 
   /**
    * The number of structural features of the '<em>Block Type</em>' class.
@@ -530,7 +456,7 @@ public interface SpecapiLangPackage extends EPackage
    * @see org.specapi.specapiLang.impl.SpecapiLangPackageImpl#getMember()
    * @generated
    */
-  int MEMBER = 15;
+  int MEMBER = 13;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -551,50 +477,22 @@ public interface SpecapiLangPackage extends EPackage
   int MEMBER__TYPE = 1;
 
   /**
+   * The feature id for the '<em><b>Default Value</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MEMBER__DEFAULT_VALUE = 2;
+
+  /**
    * The number of structural features of the '<em>Member</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int MEMBER_FEATURE_COUNT = 2;
-
-  /**
-   * The meta object id for the '{@link org.specapi.specapiLang.impl.SimpleMemberImpl <em>Simple Member</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.specapi.specapiLang.impl.SimpleMemberImpl
-   * @see org.specapi.specapiLang.impl.SpecapiLangPackageImpl#getSimpleMember()
-   * @generated
-   */
-  int SIMPLE_MEMBER = 16;
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SIMPLE_MEMBER__NAME = 0;
-
-  /**
-   * The feature id for the '<em><b>Type</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SIMPLE_MEMBER__TYPE = 1;
-
-  /**
-   * The number of structural features of the '<em>Simple Member</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SIMPLE_MEMBER_FEATURE_COUNT = 2;
+  int MEMBER_FEATURE_COUNT = 3;
 
   /**
    * The meta object id for the '{@link org.specapi.specapiLang.impl.TypeImpl <em>Type</em>}' class.
@@ -604,7 +502,7 @@ public interface SpecapiLangPackage extends EPackage
    * @see org.specapi.specapiLang.impl.SpecapiLangPackageImpl#getType()
    * @generated
    */
-  int TYPE = 17;
+  int TYPE = 14;
 
   /**
    * The number of structural features of the '<em>Type</em>' class.
@@ -623,7 +521,7 @@ public interface SpecapiLangPackage extends EPackage
    * @see org.specapi.specapiLang.impl.SpecapiLangPackageImpl#getArrayType()
    * @generated
    */
-  int ARRAY_TYPE = 18;
+  int ARRAY_TYPE = 15;
 
   /**
    * The feature id for the '<em><b>Element Type</b></em>' containment reference.
@@ -660,7 +558,7 @@ public interface SpecapiLangPackage extends EPackage
    * @see org.specapi.specapiLang.impl.SpecapiLangPackageImpl#getUserType()
    * @generated
    */
-  int USER_TYPE = 19;
+  int USER_TYPE = 16;
 
   /**
    * The feature id for the '<em><b>Declaration</b></em>' reference.
@@ -688,7 +586,7 @@ public interface SpecapiLangPackage extends EPackage
    * @see org.specapi.specapiLang.impl.SpecapiLangPackageImpl#getUserTypeDeclaration()
    * @generated
    */
-  int USER_TYPE_DECLARATION = 20;
+  int USER_TYPE_DECLARATION = 17;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -725,7 +623,7 @@ public interface SpecapiLangPackage extends EPackage
    * @see org.specapi.specapiLang.impl.SpecapiLangPackageImpl#getComplexTypeDeclaration()
    * @generated
    */
-  int COMPLEX_TYPE_DECLARATION = 21;
+  int COMPLEX_TYPE_DECLARATION = 18;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -771,7 +669,7 @@ public interface SpecapiLangPackage extends EPackage
    * @see org.specapi.specapiLang.impl.SpecapiLangPackageImpl#getEnumTypeDeclaration()
    * @generated
    */
-  int ENUM_TYPE_DECLARATION = 22;
+  int ENUM_TYPE_DECLARATION = 19;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -826,7 +724,7 @@ public interface SpecapiLangPackage extends EPackage
    * @see org.specapi.specapiLang.impl.SpecapiLangPackageImpl#getEnumTypeLiteral()
    * @generated
    */
-  int ENUM_TYPE_LITERAL = 23;
+  int ENUM_TYPE_LITERAL = 20;
 
   /**
    * The feature id for the '<em><b>Members</b></em>' containment reference list.
@@ -854,7 +752,7 @@ public interface SpecapiLangPackage extends EPackage
    * @see org.specapi.specapiLang.impl.SpecapiLangPackageImpl#getEnumMember()
    * @generated
    */
-  int ENUM_MEMBER = 24;
+  int ENUM_MEMBER = 21;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -900,7 +798,7 @@ public interface SpecapiLangPackage extends EPackage
    * @see org.specapi.specapiLang.impl.SpecapiLangPackageImpl#getComplexTypeLiteral()
    * @generated
    */
-  int COMPLEX_TYPE_LITERAL = 25;
+  int COMPLEX_TYPE_LITERAL = 22;
 
   /**
    * The feature id for the '<em><b>Members</b></em>' containment reference list.
@@ -928,7 +826,7 @@ public interface SpecapiLangPackage extends EPackage
    * @see org.specapi.specapiLang.impl.SpecapiLangPackageImpl#getIntrinsicType()
    * @generated
    */
-  int INTRINSIC_TYPE = 26;
+  int INTRINSIC_TYPE = 23;
 
   /**
    * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -956,7 +854,7 @@ public interface SpecapiLangPackage extends EPackage
    * @see org.specapi.specapiLang.impl.SpecapiLangPackageImpl#getStringType()
    * @generated
    */
-  int STRING_TYPE = 27;
+  int STRING_TYPE = 24;
 
   /**
    * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -984,7 +882,7 @@ public interface SpecapiLangPackage extends EPackage
    * @see org.specapi.specapiLang.impl.SpecapiLangPackageImpl#getBooleanType()
    * @generated
    */
-  int BOOLEAN_TYPE = 28;
+  int BOOLEAN_TYPE = 25;
 
   /**
    * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1012,7 +910,7 @@ public interface SpecapiLangPackage extends EPackage
    * @see org.specapi.specapiLang.impl.SpecapiLangPackageImpl#getNumericType()
    * @generated
    */
-  int NUMERIC_TYPE = 29;
+  int NUMERIC_TYPE = 26;
 
   /**
    * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1040,7 +938,7 @@ public interface SpecapiLangPackage extends EPackage
    * @see org.specapi.specapiLang.impl.SpecapiLangPackageImpl#getIntegerType()
    * @generated
    */
-  int INTEGER_TYPE = 30;
+  int INTEGER_TYPE = 27;
 
   /**
    * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1068,7 +966,7 @@ public interface SpecapiLangPackage extends EPackage
    * @see org.specapi.specapiLang.impl.SpecapiLangPackageImpl#getLongType()
    * @generated
    */
-  int LONG_TYPE = 31;
+  int LONG_TYPE = 28;
 
   /**
    * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1096,7 +994,7 @@ public interface SpecapiLangPackage extends EPackage
    * @see org.specapi.specapiLang.impl.SpecapiLangPackageImpl#getDoubleType()
    * @generated
    */
-  int DOUBLE_TYPE = 32;
+  int DOUBLE_TYPE = 29;
 
   /**
    * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1124,7 +1022,7 @@ public interface SpecapiLangPackage extends EPackage
    * @see org.specapi.specapiLang.impl.SpecapiLangPackageImpl#getBooleanLiteral()
    * @generated
    */
-  int BOOLEAN_LITERAL = 33;
+  int BOOLEAN_LITERAL = 30;
 
   /**
    * The feature id for the '<em><b>Literal</b></em>' attribute.
@@ -1152,7 +1050,7 @@ public interface SpecapiLangPackage extends EPackage
    * @see org.specapi.specapiLang.impl.SpecapiLangPackageImpl#getStringLiteral()
    * @generated
    */
-  int STRING_LITERAL = 34;
+  int STRING_LITERAL = 31;
 
   /**
    * The feature id for the '<em><b>Literal</b></em>' attribute.
@@ -1180,7 +1078,7 @@ public interface SpecapiLangPackage extends EPackage
    * @see org.specapi.specapiLang.impl.SpecapiLangPackageImpl#getNumericLiteral()
    * @generated
    */
-  int NUMERIC_LITERAL = 35;
+  int NUMERIC_LITERAL = 32;
 
   /**
    * The feature id for the '<em><b>Literal</b></em>' attribute.
@@ -1208,7 +1106,7 @@ public interface SpecapiLangPackage extends EPackage
    * @see org.specapi.specapiLang.impl.SpecapiLangPackageImpl#getHttpMethodType()
    * @generated
    */
-  int HTTP_METHOD_TYPE = 36;
+  int HTTP_METHOD_TYPE = 33;
 
   /**
    * The meta object id for the '{@link org.specapi.specapiLang.BooleanValue <em>Boolean Value</em>}' enum.
@@ -1218,7 +1116,7 @@ public interface SpecapiLangPackage extends EPackage
    * @see org.specapi.specapiLang.impl.SpecapiLangPackageImpl#getBooleanValue()
    * @generated
    */
-  int BOOLEAN_VALUE = 37;
+  int BOOLEAN_VALUE = 34;
 
 
   /**
@@ -1338,38 +1236,6 @@ public interface SpecapiLangPackage extends EPackage
   EReference getHeaderBlock_Headers();
 
   /**
-   * Returns the meta object for class '{@link org.specapi.specapiLang.Header <em>Header</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Header</em>'.
-   * @see org.specapi.specapiLang.Header
-   * @generated
-   */
-  EClass getHeader();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.specapi.specapiLang.Header#getName <em>Name</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Name</em>'.
-   * @see org.specapi.specapiLang.Header#getName()
-   * @see #getHeader()
-   * @generated
-   */
-  EAttribute getHeader_Name();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.specapi.specapiLang.Header#getValue <em>Value</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Value</em>'.
-   * @see org.specapi.specapiLang.Header#getValue()
-   * @see #getHeader()
-   * @generated
-   */
-  EAttribute getHeader_Value();
-
-  /**
    * Returns the meta object for class '{@link org.specapi.specapiLang.HttpMethod <em>Http Method</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1474,38 +1340,6 @@ public interface SpecapiLangPackage extends EPackage
    * @generated
    */
   EReference getParamsBlock_Params();
-
-  /**
-   * Returns the meta object for class '{@link org.specapi.specapiLang.SimpleMemberAssignment <em>Simple Member Assignment</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Simple Member Assignment</em>'.
-   * @see org.specapi.specapiLang.SimpleMemberAssignment
-   * @generated
-   */
-  EClass getSimpleMemberAssignment();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.specapi.specapiLang.SimpleMemberAssignment#getMember <em>Member</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Member</em>'.
-   * @see org.specapi.specapiLang.SimpleMemberAssignment#getMember()
-   * @see #getSimpleMemberAssignment()
-   * @generated
-   */
-  EReference getSimpleMemberAssignment_Member();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.specapi.specapiLang.SimpleMemberAssignment#getDefaultValue <em>Default Value</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Default Value</em>'.
-   * @see org.specapi.specapiLang.SimpleMemberAssignment#getDefaultValue()
-   * @see #getSimpleMemberAssignment()
-   * @generated
-   */
-  EReference getSimpleMemberAssignment_DefaultValue();
 
   /**
    * Returns the meta object for class '{@link org.specapi.specapiLang.Literal <em>Literal</em>}'.
@@ -1613,36 +1447,15 @@ public interface SpecapiLangPackage extends EPackage
   EReference getMember_Type();
 
   /**
-   * Returns the meta object for class '{@link org.specapi.specapiLang.SimpleMember <em>Simple Member</em>}'.
+   * Returns the meta object for the containment reference '{@link org.specapi.specapiLang.Member#getDefaultValue <em>Default Value</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Simple Member</em>'.
-   * @see org.specapi.specapiLang.SimpleMember
+   * @return the meta object for the containment reference '<em>Default Value</em>'.
+   * @see org.specapi.specapiLang.Member#getDefaultValue()
+   * @see #getMember()
    * @generated
    */
-  EClass getSimpleMember();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.specapi.specapiLang.SimpleMember#getName <em>Name</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Name</em>'.
-   * @see org.specapi.specapiLang.SimpleMember#getName()
-   * @see #getSimpleMember()
-   * @generated
-   */
-  EAttribute getSimpleMember_Name();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.specapi.specapiLang.SimpleMember#getType <em>Type</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Type</em>'.
-   * @see org.specapi.specapiLang.SimpleMember#getType()
-   * @see #getSimpleMember()
-   * @generated
-   */
-  EReference getSimpleMember_Type();
+  EReference getMember_DefaultValue();
 
   /**
    * Returns the meta object for class '{@link org.specapi.specapiLang.Type <em>Type</em>}'.
@@ -2152,32 +1965,6 @@ public interface SpecapiLangPackage extends EPackage
     EReference HEADER_BLOCK__HEADERS = eINSTANCE.getHeaderBlock_Headers();
 
     /**
-     * The meta object literal for the '{@link org.specapi.specapiLang.impl.HeaderImpl <em>Header</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.specapi.specapiLang.impl.HeaderImpl
-     * @see org.specapi.specapiLang.impl.SpecapiLangPackageImpl#getHeader()
-     * @generated
-     */
-    EClass HEADER = eINSTANCE.getHeader();
-
-    /**
-     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute HEADER__NAME = eINSTANCE.getHeader_Name();
-
-    /**
-     * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute HEADER__VALUE = eINSTANCE.getHeader_Value();
-
-    /**
      * The meta object literal for the '{@link org.specapi.specapiLang.impl.HttpMethodImpl <em>Http Method</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -2264,32 +2051,6 @@ public interface SpecapiLangPackage extends EPackage
      * @generated
      */
     EReference PARAMS_BLOCK__PARAMS = eINSTANCE.getParamsBlock_Params();
-
-    /**
-     * The meta object literal for the '{@link org.specapi.specapiLang.impl.SimpleMemberAssignmentImpl <em>Simple Member Assignment</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.specapi.specapiLang.impl.SimpleMemberAssignmentImpl
-     * @see org.specapi.specapiLang.impl.SpecapiLangPackageImpl#getSimpleMemberAssignment()
-     * @generated
-     */
-    EClass SIMPLE_MEMBER_ASSIGNMENT = eINSTANCE.getSimpleMemberAssignment();
-
-    /**
-     * The meta object literal for the '<em><b>Member</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference SIMPLE_MEMBER_ASSIGNMENT__MEMBER = eINSTANCE.getSimpleMemberAssignment_Member();
-
-    /**
-     * The meta object literal for the '<em><b>Default Value</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference SIMPLE_MEMBER_ASSIGNMENT__DEFAULT_VALUE = eINSTANCE.getSimpleMemberAssignment_DefaultValue();
 
     /**
      * The meta object literal for the '{@link org.specapi.specapiLang.impl.LiteralImpl <em>Literal</em>}' class.
@@ -2382,30 +2143,12 @@ public interface SpecapiLangPackage extends EPackage
     EReference MEMBER__TYPE = eINSTANCE.getMember_Type();
 
     /**
-     * The meta object literal for the '{@link org.specapi.specapiLang.impl.SimpleMemberImpl <em>Simple Member</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.specapi.specapiLang.impl.SimpleMemberImpl
-     * @see org.specapi.specapiLang.impl.SpecapiLangPackageImpl#getSimpleMember()
-     * @generated
-     */
-    EClass SIMPLE_MEMBER = eINSTANCE.getSimpleMember();
-
-    /**
-     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Default Value</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute SIMPLE_MEMBER__NAME = eINSTANCE.getSimpleMember_Name();
-
-    /**
-     * The meta object literal for the '<em><b>Type</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference SIMPLE_MEMBER__TYPE = eINSTANCE.getSimpleMember_Type();
+    EReference MEMBER__DEFAULT_VALUE = eINSTANCE.getMember_DefaultValue();
 
     /**
      * The meta object literal for the '{@link org.specapi.specapiLang.impl.TypeImpl <em>Type</em>}' class.

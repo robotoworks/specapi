@@ -192,10 +192,10 @@ public class InternalSpecApiLangLexer extends Lexer {
         try {
             int _type = T__17;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:17:7: ( ':' )
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:17:9: ':'
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:17:7: ( '/' )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:17:9: '/'
             {
-            match(':'); 
+            match('/'); 
 
             }
 
@@ -212,10 +212,10 @@ public class InternalSpecApiLangLexer extends Lexer {
         try {
             int _type = T__18;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:18:7: ( '/' )
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:18:9: '/'
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:18:7: ( '-' )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:18:9: '-'
             {
-            match('/'); 
+            match('-'); 
 
             }
 
@@ -232,10 +232,11 @@ public class InternalSpecApiLangLexer extends Lexer {
         try {
             int _type = T__19;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:19:7: ( '-' )
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:19:9: '-'
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:19:7: ( 'params' )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:19:9: 'params'
             {
-            match('-'); 
+            match("params"); 
+
 
             }
 
@@ -252,10 +253,10 @@ public class InternalSpecApiLangLexer extends Lexer {
         try {
             int _type = T__20;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:20:7: ( 'params' )
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:20:9: 'params'
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:20:7: ( 'body' )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:20:9: 'body'
             {
-            match("params"); 
+            match("body"); 
 
 
             }
@@ -273,10 +274,11 @@ public class InternalSpecApiLangLexer extends Lexer {
         try {
             int _type = T__21;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:21:7: ( '=' )
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:21:9: '='
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:21:7: ( 'response' )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:21:9: 'response'
             {
-            match('='); 
+            match("response"); 
+
 
             }
 
@@ -293,10 +295,10 @@ public class InternalSpecApiLangLexer extends Lexer {
         try {
             int _type = T__22;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:22:7: ( 'body' )
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:22:9: 'body'
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:22:7: ( 'extends' )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:22:9: 'extends'
             {
-            match("body"); 
+            match("extends"); 
 
 
             }
@@ -314,11 +316,10 @@ public class InternalSpecApiLangLexer extends Lexer {
         try {
             int _type = T__23;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:23:7: ( 'response' )
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:23:9: 'response'
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:23:7: ( ':' )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:23:9: ':'
             {
-            match("response"); 
-
+            match(':'); 
 
             }
 
@@ -335,11 +336,10 @@ public class InternalSpecApiLangLexer extends Lexer {
         try {
             int _type = T__24;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:24:7: ( 'extends' )
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:24:9: 'extends'
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:24:7: ( '=' )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:24:9: '='
             {
-            match("extends"); 
-
+            match('='); 
 
             }
 
@@ -691,10 +691,10 @@ public class InternalSpecApiLangLexer extends Lexer {
         try {
             int _type = RULE_NUMBER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2247:13: ( ( '0' .. '9' )* ( '.' ( '0' .. '9' )+ )? )
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2247:15: ( '0' .. '9' )* ( '.' ( '0' .. '9' )+ )?
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2074:13: ( ( '0' .. '9' )* ( '.' ( '0' .. '9' )+ )? )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2074:15: ( '0' .. '9' )* ( '.' ( '0' .. '9' )+ )?
             {
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2247:15: ( '0' .. '9' )*
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2074:15: ( '0' .. '9' )*
             loop1:
             do {
                 int alt1=2;
@@ -707,7 +707,7 @@ public class InternalSpecApiLangLexer extends Lexer {
 
                 switch (alt1) {
             	case 1 :
-            	    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2247:16: '0' .. '9'
+            	    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2074:16: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -719,7 +719,7 @@ public class InternalSpecApiLangLexer extends Lexer {
                 }
             } while (true);
 
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2247:27: ( '.' ( '0' .. '9' )+ )?
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2074:27: ( '.' ( '0' .. '9' )+ )?
             int alt3=2;
             int LA3_0 = input.LA(1);
 
@@ -728,10 +728,10 @@ public class InternalSpecApiLangLexer extends Lexer {
             }
             switch (alt3) {
                 case 1 :
-                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2247:28: '.' ( '0' .. '9' )+
+                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2074:28: '.' ( '0' .. '9' )+
                     {
                     match('.'); 
-                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2247:32: ( '0' .. '9' )+
+                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2074:32: ( '0' .. '9' )+
                     int cnt2=0;
                     loop2:
                     do {
@@ -745,7 +745,7 @@ public class InternalSpecApiLangLexer extends Lexer {
 
                         switch (alt2) {
                     	case 1 :
-                    	    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2247:33: '0' .. '9'
+                    	    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2074:33: '0' .. '9'
                     	    {
                     	    matchRange('0','9'); 
 
@@ -783,10 +783,10 @@ public class InternalSpecApiLangLexer extends Lexer {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2249:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2249:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2076:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2076:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2249:11: ( '^' )?
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2076:11: ( '^' )?
             int alt4=2;
             int LA4_0 = input.LA(1);
 
@@ -795,7 +795,7 @@ public class InternalSpecApiLangLexer extends Lexer {
             }
             switch (alt4) {
                 case 1 :
-                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2249:11: '^'
+                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2076:11: '^'
                     {
                     match('^'); 
 
@@ -813,7 +813,7 @@ public class InternalSpecApiLangLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2249:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2076:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop5:
             do {
                 int alt5=2;
@@ -862,10 +862,10 @@ public class InternalSpecApiLangLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2251:13: ( ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2251:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2078:13: ( ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2078:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2251:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2078:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt8=2;
             int LA8_0 = input.LA(1);
 
@@ -883,10 +883,10 @@ public class InternalSpecApiLangLexer extends Lexer {
             }
             switch (alt8) {
                 case 1 :
-                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2251:16: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2078:16: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2251:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2078:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop6:
                     do {
                         int alt6=3;
@@ -902,7 +902,7 @@ public class InternalSpecApiLangLexer extends Lexer {
 
                         switch (alt6) {
                     	case 1 :
-                    	    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2251:21: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
+                    	    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2078:21: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
                     	    {
                     	    match('\\'); 
                     	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||(input.LA(1)>='t' && input.LA(1)<='u') ) {
@@ -918,7 +918,7 @@ public class InternalSpecApiLangLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2251:66: ~ ( ( '\\\\' | '\"' ) )
+                    	    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2078:66: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -943,10 +943,10 @@ public class InternalSpecApiLangLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2251:86: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2078:86: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2251:91: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2078:91: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop7:
                     do {
                         int alt7=3;
@@ -962,7 +962,7 @@ public class InternalSpecApiLangLexer extends Lexer {
 
                         switch (alt7) {
                     	case 1 :
-                    	    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2251:92: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
+                    	    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2078:92: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
                     	    {
                     	    match('\\'); 
                     	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||(input.LA(1)>='t' && input.LA(1)<='u') ) {
@@ -978,7 +978,7 @@ public class InternalSpecApiLangLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2251:137: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2078:137: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -1021,12 +1021,12 @@ public class InternalSpecApiLangLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2253:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2253:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2080:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2080:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2253:24: ( options {greedy=false; } : . )*
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2080:24: ( options {greedy=false; } : . )*
             loop9:
             do {
                 int alt9=2;
@@ -1051,7 +1051,7 @@ public class InternalSpecApiLangLexer extends Lexer {
 
                 switch (alt9) {
             	case 1 :
-            	    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2253:52: .
+            	    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2080:52: .
             	    {
             	    matchAny(); 
 
@@ -1081,12 +1081,12 @@ public class InternalSpecApiLangLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2255:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2255:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2082:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2082:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2255:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2082:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop10:
             do {
                 int alt10=2;
@@ -1099,7 +1099,7 @@ public class InternalSpecApiLangLexer extends Lexer {
 
                 switch (alt10) {
             	case 1 :
-            	    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2255:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2082:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -1119,7 +1119,7 @@ public class InternalSpecApiLangLexer extends Lexer {
                 }
             } while (true);
 
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2255:40: ( ( '\\r' )? '\\n' )?
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2082:40: ( ( '\\r' )? '\\n' )?
             int alt12=2;
             int LA12_0 = input.LA(1);
 
@@ -1128,9 +1128,9 @@ public class InternalSpecApiLangLexer extends Lexer {
             }
             switch (alt12) {
                 case 1 :
-                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2255:41: ( '\\r' )? '\\n'
+                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2082:41: ( '\\r' )? '\\n'
                     {
-                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2255:41: ( '\\r' )?
+                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2082:41: ( '\\r' )?
                     int alt11=2;
                     int LA11_0 = input.LA(1);
 
@@ -1139,7 +1139,7 @@ public class InternalSpecApiLangLexer extends Lexer {
                     }
                     switch (alt11) {
                         case 1 :
-                            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2255:41: '\\r'
+                            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2082:41: '\\r'
                             {
                             match('\r'); 
 
@@ -1171,10 +1171,10 @@ public class InternalSpecApiLangLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2257:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2257:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2084:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2084:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2257:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2084:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt13=0;
             loop13:
             do {
@@ -1228,8 +1228,8 @@ public class InternalSpecApiLangLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2259:16: ( . )
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2259:18: .
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2086:16: ( . )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2086:18: .
             {
             matchAny(); 
 
@@ -1515,11 +1515,11 @@ public class InternalSpecApiLangLexer extends Lexer {
 
     protected DFA14 dfa14 = new DFA14(this);
     static final String DFA14_eotS =
-        "\1\30\2\42\2\uffff\1\42\2\uffff\1\53\2\uffff\3\42\1\36\4\42\1\70"+
-        "\3\42\2\uffff\1\36\1\uffff\2\36\2\uffff\3\42\1\uffff\1\42\2\uffff"+
-        "\1\42\7\uffff\4\42\1\uffff\5\42\1\uffff\3\42\2\uffff\3\42\1\126"+
-        "\1\42\1\130\10\42\1\141\3\42\1\145\5\42\1\uffff\1\153\1\uffff\1"+
-        "\42\1\155\4\42\1\162\1\42\1\uffff\1\164\2\42\1\uffff\1\167\3\42"+
+        "\1\30\2\42\2\uffff\1\42\1\uffff\1\52\1\uffff\3\42\2\uffff\1\36\4"+
+        "\42\1\70\3\42\2\uffff\1\36\1\uffff\2\36\2\uffff\3\42\1\uffff\1\42"+
+        "\2\uffff\1\42\5\uffff\4\42\3\uffff\5\42\1\uffff\3\42\2\uffff\3\42"+
+        "\1\126\1\42\1\130\10\42\1\141\3\42\1\145\5\42\1\uffff\1\153\1\uffff"+
+        "\1\42\1\155\4\42\1\162\1\42\1\uffff\1\164\2\42\1\uffff\1\167\3\42"+
         "\1\173\1\uffff\1\42\1\uffff\4\42\1\uffff\1\42\1\uffff\2\42\1\uffff"+
         "\1\u0084\1\42\1\u0086\1\uffff\4\42\1\u008b\1\u008c\1\u008d\1\u008e"+
         "\1\uffff\1\u008f\1\uffff\1\u0090\1\u0091\1\42\1\u0093\7\uffff\1"+
@@ -1527,59 +1527,59 @@ public class InternalSpecApiLangLexer extends Lexer {
     static final String DFA14_eofS =
         "\u0095\uffff";
     static final String DFA14_minS =
-        "\1\0\1\141\1\160\2\uffff\1\145\2\uffff\1\52\2\uffff\1\157\1\145"+
-        "\1\156\1\135\1\164\1\156\1\157\1\145\1\60\1\145\1\162\1\141\2\uffff"+
-        "\1\101\1\uffff\2\0\2\uffff\1\143\1\164\1\163\1\uffff\1\151\2\uffff"+
-        "\1\141\7\uffff\1\144\1\163\2\164\1\uffff\1\162\1\164\1\156\1\165"+
-        "\1\154\1\uffff\1\164\1\165\1\154\2\uffff\1\153\1\141\1\143\1\60"+
-        "\1\164\1\60\1\144\1\171\1\154\1\160\1\145\1\151\1\155\1\151\1\60"+
-        "\1\147\1\142\1\145\1\60\1\145\1\163\1\141\1\155\1\150\1\uffff\1"+
-        "\60\1\uffff\1\145\1\60\1\145\1\157\1\156\1\164\1\60\1\156\1\uffff"+
-        "\1\60\1\154\1\164\1\uffff\1\60\1\145\1\147\1\163\1\60\1\uffff\1"+
-        "\162\1\uffff\1\141\1\156\1\144\1\171\1\uffff\1\147\1\uffff\2\145"+
-        "\1\uffff\1\60\1\145\1\60\1\uffff\1\163\1\156\2\163\4\60\1\uffff"+
-        "\1\60\1\uffff\2\60\1\145\1\60\7\uffff\1\60\2\uffff";
+        "\1\0\1\141\1\160\2\uffff\1\145\1\uffff\1\52\1\uffff\1\157\1\145"+
+        "\1\156\2\uffff\1\135\1\164\1\156\1\157\1\145\1\60\1\145\1\162\1"+
+        "\141\2\uffff\1\101\1\uffff\2\0\2\uffff\1\143\1\164\1\163\1\uffff"+
+        "\1\151\2\uffff\1\141\5\uffff\1\144\1\163\2\164\3\uffff\1\162\1\164"+
+        "\1\156\1\165\1\154\1\uffff\1\164\1\165\1\154\2\uffff\1\153\1\141"+
+        "\1\143\1\60\1\164\1\60\1\144\1\171\1\154\1\160\1\145\1\151\1\155"+
+        "\1\151\1\60\1\147\1\142\1\145\1\60\1\145\1\163\1\141\1\155\1\150"+
+        "\1\uffff\1\60\1\uffff\1\145\1\60\1\145\1\157\1\156\1\164\1\60\1"+
+        "\156\1\uffff\1\60\1\154\1\164\1\uffff\1\60\1\145\1\147\1\163\1\60"+
+        "\1\uffff\1\162\1\uffff\1\141\1\156\1\144\1\171\1\uffff\1\147\1\uffff"+
+        "\2\145\1\uffff\1\60\1\145\1\60\1\uffff\1\163\1\156\2\163\4\60\1"+
+        "\uffff\1\60\1\uffff\2\60\1\145\1\60\7\uffff\1\60\2\uffff";
     static final String DFA14_maxS =
-        "\1\uffff\1\165\1\160\2\uffff\1\145\2\uffff\1\57\2\uffff\1\157\1"+
-        "\145\1\170\1\135\1\164\1\156\2\157\1\71\1\145\1\162\1\141\2\uffff"+
-        "\1\172\1\uffff\2\uffff\2\uffff\2\164\1\163\1\uffff\1\151\2\uffff"+
-        "\1\141\7\uffff\1\157\1\163\1\164\1\165\1\uffff\1\162\1\164\1\156"+
-        "\1\165\1\154\1\uffff\1\164\1\165\1\154\2\uffff\1\153\1\141\1\143"+
-        "\1\172\1\164\1\172\1\144\1\171\1\154\1\160\1\145\1\151\1\155\1\151"+
-        "\1\172\1\147\1\142\1\145\1\172\1\145\1\163\1\141\1\155\1\150\1\uffff"+
-        "\1\172\1\uffff\1\145\1\172\1\145\1\157\1\156\1\164\1\172\1\156\1"+
-        "\uffff\1\172\1\154\1\164\1\uffff\1\172\1\145\1\147\1\163\1\172\1"+
-        "\uffff\1\162\1\uffff\1\141\1\156\1\144\1\171\1\uffff\1\147\1\uffff"+
-        "\2\145\1\uffff\1\172\1\145\1\172\1\uffff\1\163\1\156\2\163\4\172"+
-        "\1\uffff\1\172\1\uffff\2\172\1\145\1\172\7\uffff\1\172\2\uffff";
+        "\1\uffff\1\165\1\160\2\uffff\1\145\1\uffff\1\57\1\uffff\1\157\1"+
+        "\145\1\170\2\uffff\1\135\1\164\1\156\2\157\1\71\1\145\1\162\1\141"+
+        "\2\uffff\1\172\1\uffff\2\uffff\2\uffff\2\164\1\163\1\uffff\1\151"+
+        "\2\uffff\1\141\5\uffff\1\157\1\163\1\164\1\165\3\uffff\1\162\1\164"+
+        "\1\156\1\165\1\154\1\uffff\1\164\1\165\1\154\2\uffff\1\153\1\141"+
+        "\1\143\1\172\1\164\1\172\1\144\1\171\1\154\1\160\1\145\1\151\1\155"+
+        "\1\151\1\172\1\147\1\142\1\145\1\172\1\145\1\163\1\141\1\155\1\150"+
+        "\1\uffff\1\172\1\uffff\1\145\1\172\1\145\1\157\1\156\1\164\1\172"+
+        "\1\156\1\uffff\1\172\1\154\1\164\1\uffff\1\172\1\145\1\147\1\163"+
+        "\1\172\1\uffff\1\162\1\uffff\1\141\1\156\1\144\1\171\1\uffff\1\147"+
+        "\1\uffff\2\145\1\uffff\1\172\1\145\1\172\1\uffff\1\163\1\156\2\163"+
+        "\4\172\1\uffff\1\172\1\uffff\2\172\1\145\1\172\7\uffff\1\172\2\uffff";
     static final String DFA14_acceptS =
-        "\3\uffff\1\3\1\4\1\uffff\1\6\1\7\1\uffff\1\11\1\13\14\uffff\2\37"+
-        "\1\uffff\1\40\2\uffff\1\44\1\45\3\uffff\1\40\1\uffff\1\3\1\4\1\uffff"+
-        "\1\6\1\7\1\42\1\43\1\10\1\11\1\13\4\uffff\1\17\5\uffff\1\27\3\uffff"+
-        "\1\41\1\44\30\uffff\1\31\1\uffff\1\2\10\uffff\1\24\3\uffff\1\30"+
-        "\5\uffff\1\32\1\uffff\1\14\4\uffff\1\21\1\uffff\1\25\2\uffff\1\35"+
-        "\3\uffff\1\34\10\uffff\1\36\1\uffff\1\12\4\uffff\1\20\1\22\1\26"+
-        "\1\33\1\1\1\5\1\23\1\uffff\1\16\1\15";
+        "\3\uffff\1\3\1\4\1\uffff\1\6\1\uffff\1\10\3\uffff\1\15\1\16\11\uffff"+
+        "\2\37\1\uffff\1\40\2\uffff\1\44\1\45\3\uffff\1\40\1\uffff\1\3\1"+
+        "\4\1\uffff\1\6\1\42\1\43\1\7\1\10\4\uffff\1\15\1\16\1\17\5\uffff"+
+        "\1\27\3\uffff\1\41\1\44\30\uffff\1\31\1\uffff\1\2\10\uffff\1\24"+
+        "\3\uffff\1\30\5\uffff\1\32\1\uffff\1\12\4\uffff\1\21\1\uffff\1\25"+
+        "\2\uffff\1\35\3\uffff\1\34\10\uffff\1\36\1\uffff\1\11\4\uffff\1"+
+        "\20\1\22\1\26\1\33\1\1\1\5\1\23\1\uffff\1\14\1\13";
     static final String DFA14_specialS =
-        "\1\2\32\uffff\1\1\1\0\170\uffff}>";
+        "\1\1\32\uffff\1\2\1\0\170\uffff}>";
     static final String[] DFA14_transitionS = {
             "\11\36\2\35\2\36\1\35\22\36\1\35\1\36\1\33\4\36\1\34\4\36\1"+
-            "\6\1\11\1\23\1\10\12\27\1\7\2\36\1\12\3\36\32\32\1\16\2\36\1"+
-            "\31\1\32\1\36\1\2\1\13\1\32\1\22\1\15\1\26\1\24\1\5\1\20\2\32"+
-            "\1\21\3\32\1\1\1\32\1\14\1\17\1\25\6\32\1\3\1\36\1\4\uff82\36",
+            "\6\1\10\1\23\1\7\12\27\1\14\2\36\1\15\3\36\32\32\1\16\2\36\1"+
+            "\31\1\32\1\36\1\2\1\11\1\32\1\22\1\13\1\26\1\24\1\5\1\20\2\32"+
+            "\1\21\3\32\1\1\1\32\1\12\1\17\1\25\6\32\1\3\1\36\1\4\uff82\36",
             "\1\37\15\uffff\1\41\5\uffff\1\40",
             "\1\43",
             "",
             "",
             "\1\46",
             "",
+            "\1\50\4\uffff\1\51",
             "",
-            "\1\51\4\uffff\1\52",
+            "\1\54",
+            "\1\55",
+            "\1\57\11\uffff\1\56",
             "",
             "",
-            "\1\56",
-            "\1\57",
-            "\1\61\11\uffff\1\60",
             "\1\62",
             "\1\63",
             "\1\64",
@@ -1610,12 +1610,12 @@ public class InternalSpecApiLangLexer extends Lexer {
             "",
             "",
             "",
-            "",
-            "",
             "\1\105\12\uffff\1\106",
             "\1\107",
             "\1\110",
             "\1\111\1\112",
+            "",
+            "",
             "",
             "\1\113",
             "\1\114",
@@ -1764,16 +1764,6 @@ public class InternalSpecApiLangLexer extends Lexer {
                         if ( s>=0 ) return s;
                         break;
                     case 1 : 
-                        int LA14_27 = input.LA(1);
-
-                        s = -1;
-                        if ( ((LA14_27>='\u0000' && LA14_27<='\uFFFF')) ) {s = 60;}
-
-                        else s = 30;
-
-                        if ( s>=0 ) return s;
-                        break;
-                    case 2 : 
                         int LA14_0 = input.LA(1);
 
                         s = -1;
@@ -1789,19 +1779,19 @@ public class InternalSpecApiLangLexer extends Lexer {
 
                         else if ( (LA14_0==',') ) {s = 6;}
 
-                        else if ( (LA14_0==':') ) {s = 7;}
+                        else if ( (LA14_0=='/') ) {s = 7;}
 
-                        else if ( (LA14_0=='/') ) {s = 8;}
+                        else if ( (LA14_0=='-') ) {s = 8;}
 
-                        else if ( (LA14_0=='-') ) {s = 9;}
+                        else if ( (LA14_0=='b') ) {s = 9;}
 
-                        else if ( (LA14_0=='=') ) {s = 10;}
+                        else if ( (LA14_0=='r') ) {s = 10;}
 
-                        else if ( (LA14_0=='b') ) {s = 11;}
+                        else if ( (LA14_0=='e') ) {s = 11;}
 
-                        else if ( (LA14_0=='r') ) {s = 12;}
+                        else if ( (LA14_0==':') ) {s = 12;}
 
-                        else if ( (LA14_0=='e') ) {s = 13;}
+                        else if ( (LA14_0=='=') ) {s = 13;}
 
                         else if ( (LA14_0=='[') ) {s = 14;}
 
@@ -1836,6 +1826,16 @@ public class InternalSpecApiLangLexer extends Lexer {
                         else if ( ((LA14_0>='\u0000' && LA14_0<='\b')||(LA14_0>='\u000B' && LA14_0<='\f')||(LA14_0>='\u000E' && LA14_0<='\u001F')||LA14_0=='!'||(LA14_0>='#' && LA14_0<='&')||(LA14_0>='(' && LA14_0<='+')||(LA14_0>=';' && LA14_0<='<')||(LA14_0>='>' && LA14_0<='@')||(LA14_0>='\\' && LA14_0<=']')||LA14_0=='`'||LA14_0=='|'||(LA14_0>='~' && LA14_0<='\uFFFF')) ) {s = 30;}
 
                         else s = 24;
+
+                        if ( s>=0 ) return s;
+                        break;
+                    case 2 : 
+                        int LA14_27 = input.LA(1);
+
+                        s = -1;
+                        if ( ((LA14_27>='\u0000' && LA14_27<='\uFFFF')) ) {s = 60;}
+
+                        else s = 30;
 
                         if ( s>=0 ) return s;
                         break;

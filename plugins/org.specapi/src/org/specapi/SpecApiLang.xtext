@@ -23,11 +23,8 @@ ServiceBlock:
 ;
 
 HeaderBlock:
-	'headers' headers+=Header (',' headers+=Header)*
-;
-
-Header:
-	name=STRING ':' value=STRING
+	{HeaderBlock}
+	'headers' headers+=Member (',' headers+=Member)*
 ;
 
 HttpMethod:
@@ -46,7 +43,7 @@ enum HttpMethodType:
 
 Path:
 	{Path}
-	'/' (ArbitraryPathSegment|params+=SimpleMemberAssignment) ('/' (ArbitraryPathSegment|params+=SimpleMemberAssignment))*
+	'/' (ArbitraryPathSegment|params+=Member) ('/' (ArbitraryPathSegment|params+=Member))*
 ;
 
 ArbitraryPathSegment:
@@ -55,11 +52,7 @@ ArbitraryPathSegment:
 
 ParamsBlock:
 	{ParamsBlock}
-	'params' params+=SimpleMemberAssignment (',' params+=SimpleMemberAssignment)*
-;
-
-SimpleMemberAssignment:
-	member=SimpleMember ("=" defaultValue=Literal)?
+	'params' params+=Member (',' params+=Member)*
 ;
 
 Literal:
@@ -82,11 +75,7 @@ BlockType:
 ;
 
 Member:
-	name=(ID|STRING) ':' type=Type
-;
-
-SimpleMember:
-	name=(ID|STRING) ':' type=IntrinsicType
+	name=(ID|STRING) ':' type=Type ("=" defaultValue=Literal)?
 ;
 
 Type:

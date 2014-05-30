@@ -24,7 +24,7 @@ public interface ParamsBlock extends ServiceBlock, HttpMethodBlock
 {
   /**
    * Returns the value of the '<em><b>Params</b></em>' containment reference list.
-   * The list contents are of type {@link org.specapi.specapiLang.SimpleMemberAssignment}.
+   * The list contents are of type {@link org.specapi.specapiLang.Member}.
    * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Params</em>' containment reference list isn't clear,
@@ -36,6 +36,6 @@ public interface ParamsBlock extends ServiceBlock, HttpMethodBlock
    * @model containment="true"
    * @generated
    */
-  EList<SimpleMemberAssignment> getParams();
+  EList<Member> getParams();
 
 } // ParamsBlock
