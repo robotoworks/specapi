@@ -13,7 +13,7 @@ Declaration:
 ;
 
 Api:
-	'api' name=ID baseUrl=STRING? '{'
+	'api' name=ID baseUrl=URL? '{'
 		blocks+=ServiceBlock*
 	'}'
 ;
@@ -43,7 +43,7 @@ enum HttpMethodType:
 
 Path:
 	{Path}
-	'/' (ArbitraryPathSegment|params+=Member) ('/' (ArbitraryPathSegment|params+=Member))*
+	(ANY_PATH_SEGMENT|'/'params+=Member) (ANY_PATH_SEGMENT|'/'params+=Member)*
 ;
 
 ArbitraryPathSegment:
@@ -165,6 +165,11 @@ terminal STRING	:
 			'"' ( '\\' ('b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\') | !('\\'|'"') )* '"' |
 			"'" ( '\\' ('b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\') | !('\\'|"'") )* "'"
 		; 
+		
+terminal ANY_PATH_SEGMENT:'/'!('/'|'{'|' ')*;
+
+terminal URL: ('http'|'https')':''//'!(' '|'{')*;
+
 terminal ML_COMMENT	: '/*' -> '*/';
 terminal SL_COMMENT 	: '//' !('\n'|'\r')* ('\r'? '\n')?;
 

@@ -233,7 +233,7 @@ public class SpecApiLangSemanticSequencer extends AbstractDelegatingSemanticSequ
 	
 	/**
 	 * Constraint:
-	 *     (name=ID baseUrl=STRING? blocks+=ServiceBlock*)
+	 *     (name=ID baseUrl=URL? blocks+=ServiceBlock*)
 	 */
 	protected void sequence_Api(EObject context, Api semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

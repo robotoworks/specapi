@@ -7,7 +7,6 @@ import org.eclipse.xtext.IGrammarAccess;
 import org.eclipse.xtext.RuleCall;
 import org.eclipse.xtext.nodemodel.INode;
 import org.eclipse.xtext.serializer.analysis.GrammarAlias.AbstractElementAlias;
-import org.eclipse.xtext.serializer.analysis.GrammarAlias.GroupAlias;
 import org.eclipse.xtext.serializer.analysis.GrammarAlias.TokenAlias;
 import org.eclipse.xtext.serializer.analysis.ISyntacticSequencerPDAProvider.ISynNavigable;
 import org.eclipse.xtext.serializer.analysis.ISyntacticSequencerPDAProvider.ISynTransition;
@@ -18,32 +17,28 @@ import org.specapi.services.SpecApiLangGrammarAccess;
 public class SpecApiLangSyntacticSequencer extends AbstractSyntacticSequencer {
 
 	protected SpecApiLangGrammarAccess grammarAccess;
-	protected AbstractElementAlias match_Path___ArbitraryPathSegmentParserRuleCall_3_1_0_SolidusKeyword_3_0__a;
-	protected AbstractElementAlias match_Path___SolidusKeyword_3_0_ArbitraryPathSegmentParserRuleCall_3_1_0__a;
+	protected AbstractElementAlias match_Path_ANY_PATH_SEGMENTTerminalRuleCall_2_0_a;
 	
 	@Inject
 	protected void init(IGrammarAccess access) {
 		grammarAccess = (SpecApiLangGrammarAccess) access;
-		match_Path___ArbitraryPathSegmentParserRuleCall_3_1_0_SolidusKeyword_3_0__a = new GroupAlias(true, true, new TokenAlias(false, false, grammarAccess.getPathAccess().getArbitraryPathSegmentParserRuleCall_3_1_0()), new TokenAlias(false, false, grammarAccess.getPathAccess().getSolidusKeyword_3_0()));
-		match_Path___SolidusKeyword_3_0_ArbitraryPathSegmentParserRuleCall_3_1_0__a = new GroupAlias(true, true, new TokenAlias(false, false, grammarAccess.getPathAccess().getSolidusKeyword_3_0()), new TokenAlias(false, false, grammarAccess.getPathAccess().getArbitraryPathSegmentParserRuleCall_3_1_0()));
+		match_Path_ANY_PATH_SEGMENTTerminalRuleCall_2_0_a = new TokenAlias(true, true, grammarAccess.getPathAccess().getANY_PATH_SEGMENTTerminalRuleCall_2_0());
 	}
 	
 	@Override
 	protected String getUnassignedRuleCallToken(EObject semanticObject, RuleCall ruleCall, INode node) {
-		if(ruleCall.getRule() == grammarAccess.getArbitraryPathSegmentRule())
-			return getArbitraryPathSegmentToken(semanticObject, ruleCall, node);
+		if(ruleCall.getRule() == grammarAccess.getANY_PATH_SEGMENTRule())
+			return getANY_PATH_SEGMENTToken(semanticObject, ruleCall, node);
 		return "";
 	}
 	
 	/**
-	 * ArbitraryPathSegment:
-	 * 	QualifiedName ("-" QualifiedName)*
-	 * ;
+	 * terminal ANY_PATH_SEGMENT:'/'!('/'|'{'|' ')*;
 	 */
-	protected String getArbitraryPathSegmentToken(EObject semanticObject, RuleCall ruleCall, INode node) {
+	protected String getANY_PATH_SEGMENTToken(EObject semanticObject, RuleCall ruleCall, INode node) {
 		if (node != null)
 			return getTokenText(node);
-		return "";
+		return "/";
 	}
 	
 	@Override
@@ -52,27 +47,17 @@ public class SpecApiLangSyntacticSequencer extends AbstractSyntacticSequencer {
 		List<INode> transitionNodes = collectNodes(fromNode, toNode);
 		for (AbstractElementAlias syntax : transition.getAmbiguousSyntaxes()) {
 			List<INode> syntaxNodes = getNodesFor(transitionNodes, syntax);
-			if(match_Path___ArbitraryPathSegmentParserRuleCall_3_1_0_SolidusKeyword_3_0__a.equals(syntax))
-				emit_Path___ArbitraryPathSegmentParserRuleCall_3_1_0_SolidusKeyword_3_0__a(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_Path___SolidusKeyword_3_0_ArbitraryPathSegmentParserRuleCall_3_1_0__a.equals(syntax))
-				emit_Path___SolidusKeyword_3_0_ArbitraryPathSegmentParserRuleCall_3_1_0__a(semanticObject, getLastNavigableState(), syntaxNodes);
+			if(match_Path_ANY_PATH_SEGMENTTerminalRuleCall_2_0_a.equals(syntax))
+				emit_Path_ANY_PATH_SEGMENTTerminalRuleCall_2_0_a(semanticObject, getLastNavigableState(), syntaxNodes);
 			else acceptNodes(getLastNavigableState(), syntaxNodes);
 		}
 	}
 
 	/**
 	 * Syntax:
-	 *     (ArbitraryPathSegment '/')*
+	 *     ANY_PATH_SEGMENT*
 	 */
-	protected void emit_Path___ArbitraryPathSegmentParserRuleCall_3_1_0_SolidusKeyword_3_0__a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * Syntax:
-	 *     ('/' ArbitraryPathSegment)*
-	 */
-	protected void emit_Path___SolidusKeyword_3_0_ArbitraryPathSegmentParserRuleCall_3_1_0__a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_Path_ANY_PATH_SEGMENTTerminalRuleCall_2_0_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	

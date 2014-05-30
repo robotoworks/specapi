@@ -76,17 +76,17 @@ public class SpecApiLangGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
 		private final Assignment cBaseUrlAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cBaseUrlSTRINGTerminalRuleCall_2_0 = (RuleCall)cBaseUrlAssignment_2.eContents().get(0);
+		private final RuleCall cBaseUrlURLTerminalRuleCall_2_0 = (RuleCall)cBaseUrlAssignment_2.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		private final Assignment cBlocksAssignment_4 = (Assignment)cGroup.eContents().get(4);
 		private final RuleCall cBlocksServiceBlockParserRuleCall_4_0 = (RuleCall)cBlocksAssignment_4.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
 		//Api:
-		//	"api" name=ID baseUrl=STRING? "{" blocks+=ServiceBlock* "}";
+		//	"api" name=ID baseUrl=URL? "{" blocks+=ServiceBlock* "}";
 		public ParserRule getRule() { return rule; }
 
-		//"api" name=ID baseUrl=STRING? "{" blocks+=ServiceBlock* "}"
+		//"api" name=ID baseUrl=URL? "{" blocks+=ServiceBlock* "}"
 		public Group getGroup() { return cGroup; }
 
 		//"api"
@@ -98,11 +98,11 @@ public class SpecApiLangGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//baseUrl=STRING?
+		//baseUrl=URL?
 		public Assignment getBaseUrlAssignment_2() { return cBaseUrlAssignment_2; }
 
-		//STRING
-		public RuleCall getBaseUrlSTRINGTerminalRuleCall_2_0() { return cBaseUrlSTRINGTerminalRuleCall_2_0; }
+		//URL
+		public RuleCall getBaseUrlURLTerminalRuleCall_2_0() { return cBaseUrlURLTerminalRuleCall_2_0; }
 
 		//"{"
 		public Keyword getLeftCurlyBracketKeyword_3() { return cLeftCurlyBracketKeyword_3; }
@@ -269,60 +269,64 @@ public class SpecApiLangGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Path");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cPathAction_0 = (Action)cGroup.eContents().get(0);
-		private final Keyword cSolidusKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Alternatives cAlternatives_1 = (Alternatives)cGroup.eContents().get(1);
+		private final RuleCall cANY_PATH_SEGMENTTerminalRuleCall_1_0 = (RuleCall)cAlternatives_1.eContents().get(0);
+		private final Group cGroup_1_1 = (Group)cAlternatives_1.eContents().get(1);
+		private final Keyword cSolidusKeyword_1_1_0 = (Keyword)cGroup_1_1.eContents().get(0);
+		private final Assignment cParamsAssignment_1_1_1 = (Assignment)cGroup_1_1.eContents().get(1);
+		private final RuleCall cParamsMemberParserRuleCall_1_1_1_0 = (RuleCall)cParamsAssignment_1_1_1.eContents().get(0);
 		private final Alternatives cAlternatives_2 = (Alternatives)cGroup.eContents().get(2);
-		private final RuleCall cArbitraryPathSegmentParserRuleCall_2_0 = (RuleCall)cAlternatives_2.eContents().get(0);
-		private final Assignment cParamsAssignment_2_1 = (Assignment)cAlternatives_2.eContents().get(1);
-		private final RuleCall cParamsMemberParserRuleCall_2_1_0 = (RuleCall)cParamsAssignment_2_1.eContents().get(0);
-		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
-		private final Keyword cSolidusKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
-		private final Alternatives cAlternatives_3_1 = (Alternatives)cGroup_3.eContents().get(1);
-		private final RuleCall cArbitraryPathSegmentParserRuleCall_3_1_0 = (RuleCall)cAlternatives_3_1.eContents().get(0);
-		private final Assignment cParamsAssignment_3_1_1 = (Assignment)cAlternatives_3_1.eContents().get(1);
-		private final RuleCall cParamsMemberParserRuleCall_3_1_1_0 = (RuleCall)cParamsAssignment_3_1_1.eContents().get(0);
+		private final RuleCall cANY_PATH_SEGMENTTerminalRuleCall_2_0 = (RuleCall)cAlternatives_2.eContents().get(0);
+		private final Group cGroup_2_1 = (Group)cAlternatives_2.eContents().get(1);
+		private final Keyword cSolidusKeyword_2_1_0 = (Keyword)cGroup_2_1.eContents().get(0);
+		private final Assignment cParamsAssignment_2_1_1 = (Assignment)cGroup_2_1.eContents().get(1);
+		private final RuleCall cParamsMemberParserRuleCall_2_1_1_0 = (RuleCall)cParamsAssignment_2_1_1.eContents().get(0);
 		
 		//Path:
-		//	{Path} "/" (ArbitraryPathSegment | params+=Member) ("/" (ArbitraryPathSegment | params+=Member))*;
+		//	{Path} (ANY_PATH_SEGMENT | "/" params+=Member) (ANY_PATH_SEGMENT | "/" params+=Member)*;
 		public ParserRule getRule() { return rule; }
 
-		//{Path} "/" (ArbitraryPathSegment | params+=Member) ("/" (ArbitraryPathSegment | params+=Member))*
+		//{Path} (ANY_PATH_SEGMENT | "/" params+=Member) (ANY_PATH_SEGMENT | "/" params+=Member)*
 		public Group getGroup() { return cGroup; }
 
 		//{Path}
 		public Action getPathAction_0() { return cPathAction_0; }
 
-		//"/"
-		public Keyword getSolidusKeyword_1() { return cSolidusKeyword_1; }
+		//ANY_PATH_SEGMENT | "/" params+=Member
+		public Alternatives getAlternatives_1() { return cAlternatives_1; }
 
-		//ArbitraryPathSegment | params+=Member
+		//ANY_PATH_SEGMENT
+		public RuleCall getANY_PATH_SEGMENTTerminalRuleCall_1_0() { return cANY_PATH_SEGMENTTerminalRuleCall_1_0; }
+
+		//"/" params+=Member
+		public Group getGroup_1_1() { return cGroup_1_1; }
+
+		//"/"
+		public Keyword getSolidusKeyword_1_1_0() { return cSolidusKeyword_1_1_0; }
+
+		//params+=Member
+		public Assignment getParamsAssignment_1_1_1() { return cParamsAssignment_1_1_1; }
+
+		//Member
+		public RuleCall getParamsMemberParserRuleCall_1_1_1_0() { return cParamsMemberParserRuleCall_1_1_1_0; }
+
+		//(ANY_PATH_SEGMENT | "/" params+=Member)*
 		public Alternatives getAlternatives_2() { return cAlternatives_2; }
 
-		//ArbitraryPathSegment
-		public RuleCall getArbitraryPathSegmentParserRuleCall_2_0() { return cArbitraryPathSegmentParserRuleCall_2_0; }
+		//ANY_PATH_SEGMENT
+		public RuleCall getANY_PATH_SEGMENTTerminalRuleCall_2_0() { return cANY_PATH_SEGMENTTerminalRuleCall_2_0; }
 
-		//params+=Member
-		public Assignment getParamsAssignment_2_1() { return cParamsAssignment_2_1; }
-
-		//Member
-		public RuleCall getParamsMemberParserRuleCall_2_1_0() { return cParamsMemberParserRuleCall_2_1_0; }
-
-		//("/" (ArbitraryPathSegment | params+=Member))*
-		public Group getGroup_3() { return cGroup_3; }
+		//"/" params+=Member
+		public Group getGroup_2_1() { return cGroup_2_1; }
 
 		//"/"
-		public Keyword getSolidusKeyword_3_0() { return cSolidusKeyword_3_0; }
-
-		//ArbitraryPathSegment | params+=Member
-		public Alternatives getAlternatives_3_1() { return cAlternatives_3_1; }
-
-		//ArbitraryPathSegment
-		public RuleCall getArbitraryPathSegmentParserRuleCall_3_1_0() { return cArbitraryPathSegmentParserRuleCall_3_1_0; }
+		public Keyword getSolidusKeyword_2_1_0() { return cSolidusKeyword_2_1_0; }
 
 		//params+=Member
-		public Assignment getParamsAssignment_3_1_1() { return cParamsAssignment_3_1_1; }
+		public Assignment getParamsAssignment_2_1_1() { return cParamsAssignment_2_1_1; }
 
 		//Member
-		public RuleCall getParamsMemberParserRuleCall_3_1_1_0() { return cParamsMemberParserRuleCall_3_1_1_0; }
+		public RuleCall getParamsMemberParserRuleCall_2_1_1_0() { return cParamsMemberParserRuleCall_2_1_1_0; }
 	}
 
 	public class ArbitraryPathSegmentElements extends AbstractParserRuleElementFinder {
@@ -1219,6 +1223,8 @@ public class SpecApiLangGrammarAccess extends AbstractGrammarElementFinder {
 	private TerminalRule tNUMBER;
 	private TerminalRule tID;
 	private TerminalRule tSTRING;
+	private TerminalRule tANY_PATH_SEGMENT;
+	private TerminalRule tURL;
 	private TerminalRule tML_COMMENT;
 	private TerminalRule tSL_COMMENT;
 	private TerminalRule tWS;
@@ -1275,7 +1281,7 @@ public class SpecApiLangGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Api:
-	//	"api" name=ID baseUrl=STRING? "{" blocks+=ServiceBlock* "}";
+	//	"api" name=ID baseUrl=URL? "{" blocks+=ServiceBlock* "}";
 	public ApiElements getApiAccess() {
 		return (pApi != null) ? pApi : (pApi = new ApiElements());
 	}
@@ -1335,7 +1341,7 @@ public class SpecApiLangGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Path:
-	//	{Path} "/" (ArbitraryPathSegment | params+=Member) ("/" (ArbitraryPathSegment | params+=Member))*;
+	//	{Path} (ANY_PATH_SEGMENT | "/" params+=Member) (ANY_PATH_SEGMENT | "/" params+=Member)*;
 	public PathElements getPathAccess() {
 		return (pPath != null) ? pPath : (pPath = new PathElements());
 	}
@@ -1624,6 +1630,18 @@ public class SpecApiLangGrammarAccess extends AbstractGrammarElementFinder {
 	//	"n" | "f" | "r" | "u" | "\"" | "\'" | "\\") | !("\\" | "\'"))* "\'";
 	public TerminalRule getSTRINGRule() {
 		return (tSTRING != null) ? tSTRING : (tSTRING = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "STRING"));
+	} 
+
+	//terminal ANY_PATH_SEGMENT:
+	//	"/" !("/" | "{" | " ")*;
+	public TerminalRule getANY_PATH_SEGMENTRule() {
+		return (tANY_PATH_SEGMENT != null) ? tANY_PATH_SEGMENT : (tANY_PATH_SEGMENT = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "ANY_PATH_SEGMENT"));
+	} 
+
+	//terminal URL:
+	//	("http" | "https") ":" "//" !(" " | "{")*;
+	public TerminalRule getURLRule() {
+		return (tURL != null) ? tURL : (tURL = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "URL"));
 	} 
 
 	//terminal ML_COMMENT:
