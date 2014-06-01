@@ -43,8 +43,9 @@ enum HttpMethodType:
 
 Path:
 	{Path}
-	(ANY_PATH_SEGMENT|'/'params+=Member) (ANY_PATH_SEGMENT|'/'params+=Member)*
+	'/' (ArbitraryPathSegment|params+=Member) ('/' (ArbitraryPathSegment|params+=Member))*
 ;
+
 
 ArbitraryPathSegment:
 	QualifiedName ("-" QualifiedName)*
@@ -67,7 +68,7 @@ BodyBlock:
 
 ResponseBlock:
 	{ResponseBlock}
-	'response' ('extends' superType=[ComplexTypeDeclaration])? (type=BlockType)?
+	'response' ('mixin' superType=[ComplexTypeDeclaration])? (type=BlockType)?
 ;
 
 BlockType:
@@ -159,14 +160,12 @@ SignedNumber returns ecore::EBigDecimal:
 
 terminal NUMBER returns ecore::EBigDecimal:
 	('0'..'9')* ('.' ('0'..'9')+)?;
-	
+
 terminal ID  		: '^'?('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
 terminal STRING	: 
 			'"' ( '\\' ('b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\') | !('\\'|'"') )* '"' |
 			"'" ( '\\' ('b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\') | !('\\'|"'") )* "'"
 		; 
-		
-terminal ANY_PATH_SEGMENT:'/'!('/'|'{'|' ')*;
 
 terminal URL: ('http'|'https')':''//'!(' '|'{')*;
 

@@ -30,7 +30,9 @@ public class EclipseSpecApiPlugin extends Plugin {
 			
 			File targetFolder = new File(outputFolder, outputConfig.getOutputDirectory());
 			
-			Files.copyFolder(sourceFolder, targetFolder);
+			if(sourceFolder.exists()) {
+				Files.copyFolder(sourceFolder, targetFolder);
+			}
 		}
 	}
 }

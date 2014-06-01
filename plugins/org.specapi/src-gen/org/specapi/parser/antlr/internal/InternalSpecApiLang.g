@@ -554,19 +554,23 @@ rulePath returns [EObject current=null]
             grammarAccess.getPathAccess().getPathAction_0(),
             $current);
     }
-)(this_ANY_PATH_SEGMENT_1=RULE_ANY_PATH_SEGMENT
+)	otherlv_1='/' 
+    {
+    	newLeafNode(otherlv_1, grammarAccess.getPathAccess().getSolidusKeyword_1());
+    }
+(
     { 
-    newLeafNode(this_ANY_PATH_SEGMENT_1, grammarAccess.getPathAccess().getANY_PATH_SEGMENTTerminalRuleCall_1_0()); 
+        newCompositeNode(grammarAccess.getPathAccess().getArbitraryPathSegmentParserRuleCall_2_0()); 
+    }
+ruleArbitraryPathSegment
+    { 
+        afterParserOrEnumRuleCall();
     }
 
-    |(	otherlv_2='/' 
-    {
-    	newLeafNode(otherlv_2, grammarAccess.getPathAccess().getSolidusKeyword_1_1_0());
-    }
-(
+    |(
 (
 		{ 
-	        newCompositeNode(grammarAccess.getPathAccess().getParamsMemberParserRuleCall_1_1_1_0()); 
+	        newCompositeNode(grammarAccess.getPathAccess().getParamsMemberParserRuleCall_2_1_0()); 
 	    }
 		lv_params_3_0=ruleMember		{
 	        if ($current==null) {
@@ -581,19 +585,23 @@ rulePath returns [EObject current=null]
 	    }
 
 )
-)))(this_ANY_PATH_SEGMENT_4=RULE_ANY_PATH_SEGMENT
+))(	otherlv_4='/' 
+    {
+    	newLeafNode(otherlv_4, grammarAccess.getPathAccess().getSolidusKeyword_3_0());
+    }
+(
     { 
-    newLeafNode(this_ANY_PATH_SEGMENT_4, grammarAccess.getPathAccess().getANY_PATH_SEGMENTTerminalRuleCall_2_0()); 
+        newCompositeNode(grammarAccess.getPathAccess().getArbitraryPathSegmentParserRuleCall_3_1_0()); 
+    }
+ruleArbitraryPathSegment
+    { 
+        afterParserOrEnumRuleCall();
     }
 
-    |(	otherlv_5='/' 
-    {
-    	newLeafNode(otherlv_5, grammarAccess.getPathAccess().getSolidusKeyword_2_1_0());
-    }
-(
+    |(
 (
 		{ 
-	        newCompositeNode(grammarAccess.getPathAccess().getParamsMemberParserRuleCall_2_1_1_0()); 
+	        newCompositeNode(grammarAccess.getPathAccess().getParamsMemberParserRuleCall_3_1_1_0()); 
 	    }
 		lv_params_6_0=ruleMember		{
 	        if ($current==null) {
@@ -612,6 +620,53 @@ rulePath returns [EObject current=null]
 ;
 
 
+
+
+
+// Entry rule entryRuleArbitraryPathSegment
+entryRuleArbitraryPathSegment returns [String current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getArbitraryPathSegmentRule()); } 
+	 iv_ruleArbitraryPathSegment=ruleArbitraryPathSegment 
+	 { $current=$iv_ruleArbitraryPathSegment.current.getText(); }  
+	 EOF 
+;
+
+// Rule ArbitraryPathSegment
+ruleArbitraryPathSegment returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(
+    { 
+        newCompositeNode(grammarAccess.getArbitraryPathSegmentAccess().getQualifiedNameParserRuleCall_0()); 
+    }
+    this_QualifiedName_0=ruleQualifiedName    {
+		$current.merge(this_QualifiedName_0);
+    }
+
+    { 
+        afterParserOrEnumRuleCall();
+    }
+(
+	kw='-' 
+    {
+        $current.merge(kw);
+        newLeafNode(kw, grammarAccess.getArbitraryPathSegmentAccess().getHyphenMinusKeyword_1_0()); 
+    }
+
+    { 
+        newCompositeNode(grammarAccess.getArbitraryPathSegmentAccess().getQualifiedNameParserRuleCall_1_1()); 
+    }
+    this_QualifiedName_2=ruleQualifiedName    {
+		$current.merge(this_QualifiedName_2);
+    }
+
+    { 
+        afterParserOrEnumRuleCall();
+    }
+)*)
+    ;
 
 
 
@@ -850,9 +905,9 @@ ruleResponseBlock returns [EObject current=null]
     {
     	newLeafNode(otherlv_1, grammarAccess.getResponseBlockAccess().getResponseKeyword_1());
     }
-(	otherlv_2='extends' 
+(	otherlv_2='mixin' 
     {
-    	newLeafNode(otherlv_2, grammarAccess.getResponseBlockAccess().getExtendsKeyword_2_0());
+    	newLeafNode(otherlv_2, grammarAccess.getResponseBlockAccess().getMixinKeyword_2_0());
     }
 (
 (
@@ -2021,8 +2076,6 @@ RULE_NUMBER : ('0'..'9')* ('.' ('0'..'9')+)?;
 RULE_ID : '^'? ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
 
 RULE_STRING : ('"' ('\\' ('b'|'t'|'n'|'f'|'r'|'u'|'"'|'\''|'\\')|~(('\\'|'"')))* '"'|'\'' ('\\' ('b'|'t'|'n'|'f'|'r'|'u'|'"'|'\''|'\\')|~(('\\'|'\'')))* '\'');
-
-RULE_ANY_PATH_SEGMENT : '/' ~(('/'|'{'|' '))*;
 
 RULE_URL : ('http'|'https') ':' '//' ~((' '|'{'))*;
 
