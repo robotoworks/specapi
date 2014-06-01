@@ -1,0 +1,210 @@
+package com.specapi.github
+
+api GithubAPI https://api.github.com {
+    /*
+     * List repositories for the authenticated user. Note that this 
+     * does not include repositories owned by organizations which the 
+     * user can access. You can list user organizations and list organization 
+     * repositories separately.
+     * 
+     * @param type Can be one of all, owner, public, private, member. Default: all
+     * @param sort Can be one of created, updated, pushed, full_name. Default: full_name
+     * @param direction Can be one of asc or desc. Default: when using full_name: asc; otherwise desc
+     */
+    get listRepositories /user/repos {
+        params type:string, sort:string, direction:string
+        response Repository[]
+    }
+    
+    /*
+     * List public repositories for the specified user.
+     * 
+     * @param type Can be one of all, owner, public, private, member. Default: all
+     * @param sort Can be one of created, updated, pushed, full_name. Default: full_name
+     * @param direction Can be one of asc or desc. Default: when using full_name: asc; otherwise desc
+     */    
+    get listUserRepositories /users/user:string/repos {
+        params type:string, sort:string, direction:string
+        response Repository[]
+    }
+    
+    /*
+     * List repositories for the specified org.
+     * 
+     * @param type Can be one of all, public, private, forks, sources, member. Default: all
+     */ 
+    get listOrganizationRepositories /orgs/org:string/repos {
+        params type:string, sort:string, direction:string
+        response Repository[]
+    }
+    
+    /*
+     * This provides a dump of every public repository, in the order that they were created.
+     * Note: Pagination is powered exclusively by the since parameter. Use the Link header 
+     * to get the URL for the next page of repositories.
+     * 
+     * @param since The integer ID of the last Repository that you’ve seen.
+     */
+    get listAllPublicRepositories /repositories {
+        params since:string
+        response Repository[]
+    }
+    
+    /*
+     * Create a new repository for the authenticated user.
+     */
+    post createRepository /user/repos {
+        body CreateRepositoryInput
+        response Repository
+    }
+    
+    post createOrganizationRepository /orgs/org:string/repos {
+        body CreateRepositoryInput
+        response Repository  
+    }
+}
+
+entity Repository {
+    id:long,
+    name:string,
+    full_name:string,
+    owner:RepositoryOwner,
+    private:boolean,
+    html_url:string,
+    description:string,
+    fork: boolean,
+    url: string,
+    forks_url:string,
+    keys_url:string,
+    collaborators_url:string,
+    teams_url:string,
+    hooks_url:string,
+    issue_events_url:string,
+    events_url:string,
+    assignees_url:string,
+    branches_url:string,
+    tags_url:string,
+    blobs_url:string,
+    git_tags_url:string,
+    git_refs_url:string,
+    trees_url:string,
+    statuses_url:string,
+    languages_url:string,
+    stargazers_url:string,
+    contributors_url:string,
+    subscribers_url:string,
+    subscription_url:string,
+    commits_url:string,
+    git_commits_url:string,
+    comments_url:string,
+    issue_comment_url:string,
+    contents_url:string,
+    compare_url:string,
+    merges_url:string,
+    archive_url:string,
+    downloads_url:string,
+    issues_url:string,
+    pulls_url:string,
+    milestones_url:string,
+    notifications_url:string,
+    labels_url:string,
+    releases_url:string,
+    created_at:string,
+    updated_at:string,
+    pushed_at:string,
+    git_url:string,
+    ssh_url:string,
+    clone_url:string,
+    svn_url:string,
+    homepage:string,
+    size: int,
+    stargazers_count: int,
+    watchers_count: int,
+    language:string,
+    has_issues: boolean,
+    has_downloads: boolean,
+    has_wiki: boolean,
+    forks_count: int,
+    mirror_url: string,
+    open_issues_count: int,
+    forks: int,
+    open_issues: int,
+    watchers: int,
+    default_branch:string,
+    permissions: RepositoryPermissions
+}
+
+entity RepositoryOwner {
+    login:string,
+    id: long,
+    avatar_url:string,
+    gravatar_id:string,
+    url:string,
+    html_url:string,
+    followers_url:string,
+    following_url:string,
+    gists_url:string,
+    starred_url:string,
+    subscriptions_url:string,
+    organizations_url:string,
+    repos_url:string,
+    events_url:string,
+    received_events_url:string,
+    type:string,
+    site_admin: boolean   
+}
+
+entity RepositoryPermissions {
+    admin: boolean,
+    push: boolean,
+    pull: boolean    
+}
+
+entity CreateRepositoryInput {
+    /* Required. The name of the repository */
+    name: string,
+    /* A short description of the repository */
+    description:string,
+    /* A URL with more information about the repository */
+    homepage:string,
+    /* Either true to create a private repository, or false 
+     * to create a public one. Creating private repositories 
+     * requires a paid GitHub account. Default: false
+     */
+    private:boolean,
+    /* Either true to enable issues for this repository, 
+     * false to disable them. Default: true
+     */
+    has_issues:boolean,
+    /* Either true to enable the wiki for this repository, 
+     * false to disable it. Default: true
+     */
+    has_wiki:boolean,
+    /* Either true to enable downloads for this repository, 
+     * false to disable them. Default: true
+     */
+    has_downloads:boolean,
+    /*
+     * The id of the team that will be granted access to this 
+     * repository. This is only valid when creating a repository 
+     * in an organization.
+     */
+    team_id:long,
+    /* Pass true to create an initial commit with empty README. 
+     * Default: false
+     */
+    auto_init:boolean,
+    /* Desired language or platform .gitignore template to 
+     * apply. Use the name of the template without the 
+     * extension. For example, “Haskell”. Ignored if the 
+     * auto_init parameter is not provided.
+     */
+    gitigore_template:string,
+    /*
+     * Desired LICENSE template to apply. Use the name of 
+     * the template without the extension. For example, 
+     * “mit” or “mozilla”. Ignored if the auto_init parameter 
+     * is not provided.
+     */
+    license_template:string    
+}

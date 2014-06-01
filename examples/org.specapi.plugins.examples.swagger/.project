@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>org.specapi.plugins.examples.swagger</name>
+	<comment></comment>
+	<projects>
+		<project>specs</project>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.eclipse.xtext.ui.shared.xtextBuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.xtext.ui.shared.xtextNature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>specs</name>
+			<type>2</type>
+			<locationURI>SPECS</locationURI>
+		</link>
+	</linkedResources>
+	<variableList>
+		<variable>
+			<name>SPECS</name>
+			<value>file:/Users/ian.warwick/Documents/sdev/proj/specapi/specs</value>
+		</variable>
+	</variableList>
+</projectDescription>

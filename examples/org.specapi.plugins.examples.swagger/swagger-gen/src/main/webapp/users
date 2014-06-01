@@ -1,0 +1,365 @@
+{
+  "swaggerVersion": "1.2",
+  "basePath": "https://api.github.com",
+  "apis": [
+    {
+      "path": "/users/{user}/repos",
+      "operations": [
+        {
+          "method": "get",
+          "summary": "List public repositories for the specified user.",
+          "type": "Repository",
+          "nickname": "listUserRepositories",
+          "parameters": [
+            {
+              "name": "user",
+              "description": "",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            }
+            ,
+            {
+              "name": "type",
+              "description": "Can be one of all, owner, public, private, member. Default: all",
+              "required": false,
+              "type": "string",
+              "paramType": "query"
+            },
+            {
+              "name": "sort",
+              "description": "Can be one of created, updated, pushed, full_name. Default: full_name",
+              "required": false,
+              "type": "string",
+              "paramType": "query"
+            },
+            {
+              "name": "direction",
+              "description": "Can be one of asc or desc. Default: when using full_name: asc; otherwise desc",
+              "required": false,
+              "type": "string",
+              "paramType": "query"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "models": {
+      "Repository": {
+          "id": "Repository",
+          "properties": {
+              "id": {
+                  "type": "long"
+              },
+              "name": {
+                  "type": "string"
+              },
+              "full_name": {
+                  "type": "string"
+              },
+              "owner": {
+                  "$ref": "RepositoryOwner"
+              }    ,
+              "private": {
+                  "type": "boolean"
+              },
+              "html_url": {
+                  "type": "string"
+              },
+              "description": {
+                  "type": "string"
+              },
+              "fork": {
+                  "type": "boolean"
+              },
+              "url": {
+                  "type": "string"
+              },
+              "forks_url": {
+                  "type": "string"
+              },
+              "keys_url": {
+                  "type": "string"
+              },
+              "collaborators_url": {
+                  "type": "string"
+              },
+              "teams_url": {
+                  "type": "string"
+              },
+              "hooks_url": {
+                  "type": "string"
+              },
+              "issue_events_url": {
+                  "type": "string"
+              },
+              "events_url": {
+                  "type": "string"
+              },
+              "assignees_url": {
+                  "type": "string"
+              },
+              "branches_url": {
+                  "type": "string"
+              },
+              "tags_url": {
+                  "type": "string"
+              },
+              "blobs_url": {
+                  "type": "string"
+              },
+              "git_tags_url": {
+                  "type": "string"
+              },
+              "git_refs_url": {
+                  "type": "string"
+              },
+              "trees_url": {
+                  "type": "string"
+              },
+              "statuses_url": {
+                  "type": "string"
+              },
+              "languages_url": {
+                  "type": "string"
+              },
+              "stargazers_url": {
+                  "type": "string"
+              },
+              "contributors_url": {
+                  "type": "string"
+              },
+              "subscribers_url": {
+                  "type": "string"
+              },
+              "subscription_url": {
+                  "type": "string"
+              },
+              "commits_url": {
+                  "type": "string"
+              },
+              "git_commits_url": {
+                  "type": "string"
+              },
+              "comments_url": {
+                  "type": "string"
+              },
+              "issue_comment_url": {
+                  "type": "string"
+              },
+              "contents_url": {
+                  "type": "string"
+              },
+              "compare_url": {
+                  "type": "string"
+              },
+              "merges_url": {
+                  "type": "string"
+              },
+              "archive_url": {
+                  "type": "string"
+              },
+              "downloads_url": {
+                  "type": "string"
+              },
+              "issues_url": {
+                  "type": "string"
+              },
+              "pulls_url": {
+                  "type": "string"
+              },
+              "milestones_url": {
+                  "type": "string"
+              },
+              "notifications_url": {
+                  "type": "string"
+              },
+              "labels_url": {
+                  "type": "string"
+              },
+              "releases_url": {
+                  "type": "string"
+              },
+              "created_at": {
+                  "type": "string"
+              },
+              "updated_at": {
+                  "type": "string"
+              },
+              "pushed_at": {
+                  "type": "string"
+              },
+              "git_url": {
+                  "type": "string"
+              },
+              "ssh_url": {
+                  "type": "string"
+              },
+              "clone_url": {
+                  "type": "string"
+              },
+              "svn_url": {
+                  "type": "string"
+              },
+              "homepage": {
+                  "type": "string"
+              },
+              "size": {
+                  "type": "int"
+              },
+              "stargazers_count": {
+                  "type": "int"
+              },
+              "watchers_count": {
+                  "type": "int"
+              },
+              "language": {
+                  "type": "string"
+              },
+              "has_issues": {
+                  "type": "boolean"
+              },
+              "has_downloads": {
+                  "type": "boolean"
+              },
+              "has_wiki": {
+                  "type": "boolean"
+              },
+              "forks_count": {
+                  "type": "int"
+              },
+              "mirror_url": {
+                  "type": "string"
+              },
+              "open_issues_count": {
+                  "type": "int"
+              },
+              "forks": {
+                  "type": "int"
+              },
+              "open_issues": {
+                  "type": "int"
+              },
+              "watchers": {
+                  "type": "int"
+              },
+              "default_branch": {
+                  "type": "string"
+              },
+              "permissions": {
+                  "$ref": "RepositoryPermissions"
+              }    
+          }
+      },
+      "RepositoryOwner": {
+          "id": "RepositoryOwner",
+          "properties": {
+              "login": {
+                  "type": "string"
+              },
+              "id": {
+                  "type": "long"
+              },
+              "avatar_url": {
+                  "type": "string"
+              },
+              "gravatar_id": {
+                  "type": "string"
+              },
+              "url": {
+                  "type": "string"
+              },
+              "html_url": {
+                  "type": "string"
+              },
+              "followers_url": {
+                  "type": "string"
+              },
+              "following_url": {
+                  "type": "string"
+              },
+              "gists_url": {
+                  "type": "string"
+              },
+              "starred_url": {
+                  "type": "string"
+              },
+              "subscriptions_url": {
+                  "type": "string"
+              },
+              "organizations_url": {
+                  "type": "string"
+              },
+              "repos_url": {
+                  "type": "string"
+              },
+              "events_url": {
+                  "type": "string"
+              },
+              "received_events_url": {
+                  "type": "string"
+              },
+              "type": {
+                  "type": "string"
+              },
+              "site_admin": {
+                  "type": "boolean"
+              }
+          }
+      },
+      "RepositoryPermissions": {
+          "id": "RepositoryPermissions",
+          "properties": {
+              "admin": {
+                  "type": "boolean"
+              },
+              "push": {
+                  "type": "boolean"
+              },
+              "pull": {
+                  "type": "boolean"
+              }
+          }
+      },
+      "CreateRepositoryInput": {
+          "id": "CreateRepositoryInput",
+          "properties": {
+              "name": {
+                  "type": "string"
+              },
+              "description": {
+                  "type": "string"
+              },
+              "homepage": {
+                  "type": "string"
+              },
+              "private": {
+                  "type": "boolean"
+              },
+              "has_issues": {
+                  "type": "boolean"
+              },
+              "has_wiki": {
+                  "type": "boolean"
+              },
+              "has_downloads": {
+                  "type": "boolean"
+              },
+              "team_id": {
+                  "type": "long"
+              },
+              "auto_init": {
+                  "type": "boolean"
+              },
+              "gitigore_template": {
+                  "type": "string"
+              },
+              "license_template": {
+                  "type": "string"
+              }
+          }
+      }
+      
+  }
+}

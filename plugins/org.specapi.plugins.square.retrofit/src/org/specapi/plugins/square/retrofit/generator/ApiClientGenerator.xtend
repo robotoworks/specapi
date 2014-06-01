@@ -53,6 +53,7 @@ class ApiClientGenerator {
         
         if(query != null) {
             imports.add("retrofit.http.QueryMap")
+            imports.add("java.util.Map")
             params.add("@QueryMap Map<String, String> options");
         }
         

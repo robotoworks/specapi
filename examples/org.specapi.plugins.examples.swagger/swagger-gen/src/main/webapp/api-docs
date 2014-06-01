@@ -1,0 +1,21 @@
+{
+  "swaggerVersion": "1.2",
+  "apis": [
+  {
+    "path": "http://localhost:8000/user",
+    "description": ""
+  },
+  {
+    "path": "http://localhost:8000/users",
+    "description": ""
+  },
+  {
+    "path": "http://localhost:8000/orgs",
+    "description": ""
+  },
+  {
+    "path": "http://localhost:8000/repositories",
+    "description": ""
+  }
+  ]
+}
