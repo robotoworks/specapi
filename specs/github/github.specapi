@@ -58,9 +58,15 @@ api GithubAPI https://api.github.com {
         response Repository
     }
     
+    /*
+     * Create a new repository in this organization. 
+     * The authenticated user must be a member of the specified organization.
+     */
     post createOrganizationRepository /orgs/org:string/repos {
         body CreateRepositoryInput
-        response Repository  
+        response Repository
+        response 422 ErrorResponse
+        response 400 ErrorResponse
     }
 }
 
@@ -207,4 +213,17 @@ entity CreateRepositoryInput {
      * is not provided.
      */
     license_template:string    
+}
+
+entity ErrorResponse {
+    message:string,
+    documentation_url:string,
+    errors:Error[]
+}
+
+entity Error {
+    resource:string,
+    code:string,
+    field:string,
+    message:string
 }

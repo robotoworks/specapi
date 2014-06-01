@@ -403,13 +403,22 @@ public interface SpecapiLangPackage extends EPackage
   int RESPONSE_BLOCK = 11;
 
   /**
+   * The feature id for the '<em><b>Code</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RESPONSE_BLOCK__CODE = HTTP_METHOD_BLOCK_FEATURE_COUNT + 0;
+
+  /**
    * The feature id for the '<em><b>Super Type</b></em>' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int RESPONSE_BLOCK__SUPER_TYPE = HTTP_METHOD_BLOCK_FEATURE_COUNT + 0;
+  int RESPONSE_BLOCK__SUPER_TYPE = HTTP_METHOD_BLOCK_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Type</b></em>' containment reference.
@@ -418,7 +427,7 @@ public interface SpecapiLangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int RESPONSE_BLOCK__TYPE = HTTP_METHOD_BLOCK_FEATURE_COUNT + 1;
+  int RESPONSE_BLOCK__TYPE = HTTP_METHOD_BLOCK_FEATURE_COUNT + 2;
 
   /**
    * The number of structural features of the '<em>Response Block</em>' class.
@@ -427,7 +436,7 @@ public interface SpecapiLangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int RESPONSE_BLOCK_FEATURE_COUNT = HTTP_METHOD_BLOCK_FEATURE_COUNT + 2;
+  int RESPONSE_BLOCK_FEATURE_COUNT = HTTP_METHOD_BLOCK_FEATURE_COUNT + 3;
 
   /**
    * The meta object id for the '{@link org.specapi.specapiLang.impl.BlockTypeImpl <em>Block Type</em>}' class.
@@ -1383,6 +1392,17 @@ public interface SpecapiLangPackage extends EPackage
   EClass getResponseBlock();
 
   /**
+   * Returns the meta object for the attribute '{@link org.specapi.specapiLang.ResponseBlock#getCode <em>Code</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Code</em>'.
+   * @see org.specapi.specapiLang.ResponseBlock#getCode()
+   * @see #getResponseBlock()
+   * @generated
+   */
+  EAttribute getResponseBlock_Code();
+
+  /**
    * Returns the meta object for the reference '{@link org.specapi.specapiLang.ResponseBlock#getSuperType <em>Super Type</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2089,6 +2109,14 @@ public interface SpecapiLangPackage extends EPackage
      * @generated
      */
     EClass RESPONSE_BLOCK = eINSTANCE.getResponseBlock();
+
+    /**
+     * The meta object literal for the '<em><b>Code</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute RESPONSE_BLOCK__CODE = eINSTANCE.getResponseBlock_Code();
 
     /**
      * The meta object literal for the '<em><b>Super Type</b></em>' reference feature.

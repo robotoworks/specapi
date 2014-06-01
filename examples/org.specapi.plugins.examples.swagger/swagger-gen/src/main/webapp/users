@@ -359,6 +359,40 @@
                   "type": "string"
               }
           }
+      },
+      "ErrorResponse": {
+          "id": "ErrorResponse",
+          "properties": {
+              "message": {
+                  "type": "string"
+              },
+              "documentation_url": {
+                  "type": "string"
+              },
+              "errors": {
+                  "type": "array",
+                  "items": {
+                      "$ref": "Error"
+                  }
+              }
+          }
+      },
+      "Error": {
+          "id": "Error",
+          "properties": {
+              "resource": {
+                  "type": "string"
+              },
+              "code": {
+                  "type": "string"
+              },
+              "field": {
+                  "type": "string"
+              },
+              "message": {
+                  "type": "string"
+              }
+          }
       }
       
   }

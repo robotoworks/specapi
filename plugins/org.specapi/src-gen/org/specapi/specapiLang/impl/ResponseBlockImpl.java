@@ -22,6 +22,7 @@ import org.specapi.specapiLang.SpecapiLangPackage;
  * <p>
  * The following features are implemented:
  * <ul>
+ *   <li>{@link org.specapi.specapiLang.impl.ResponseBlockImpl#getCode <em>Code</em>}</li>
  *   <li>{@link org.specapi.specapiLang.impl.ResponseBlockImpl#getSuperType <em>Super Type</em>}</li>
  *   <li>{@link org.specapi.specapiLang.impl.ResponseBlockImpl#getType <em>Type</em>}</li>
  * </ul>
@@ -31,6 +32,26 @@ import org.specapi.specapiLang.SpecapiLangPackage;
  */
 public class ResponseBlockImpl extends HttpMethodBlockImpl implements ResponseBlock
 {
+  /**
+   * The default value of the '{@link #getCode() <em>Code</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getCode()
+   * @generated
+   * @ordered
+   */
+  protected static final int CODE_EDEFAULT = 0;
+
+  /**
+   * The cached value of the '{@link #getCode() <em>Code</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getCode()
+   * @generated
+   * @ordered
+   */
+  protected int code = CODE_EDEFAULT;
+
   /**
    * The cached value of the '{@link #getSuperType() <em>Super Type</em>}' reference.
    * <!-- begin-user-doc -->
@@ -70,6 +91,29 @@ public class ResponseBlockImpl extends HttpMethodBlockImpl implements ResponseBl
   protected EClass eStaticClass()
   {
     return SpecapiLangPackage.Literals.RESPONSE_BLOCK;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public int getCode()
+  {
+    return code;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setCode(int newCode)
+  {
+    int oldCode = code;
+    code = newCode;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, SpecapiLangPackage.RESPONSE_BLOCK__CODE, oldCode, code));
   }
 
   /**
@@ -189,6 +233,8 @@ public class ResponseBlockImpl extends HttpMethodBlockImpl implements ResponseBl
   {
     switch (featureID)
     {
+      case SpecapiLangPackage.RESPONSE_BLOCK__CODE:
+        return getCode();
       case SpecapiLangPackage.RESPONSE_BLOCK__SUPER_TYPE:
         if (resolve) return getSuperType();
         return basicGetSuperType();
@@ -208,6 +254,9 @@ public class ResponseBlockImpl extends HttpMethodBlockImpl implements ResponseBl
   {
     switch (featureID)
     {
+      case SpecapiLangPackage.RESPONSE_BLOCK__CODE:
+        setCode((Integer)newValue);
+        return;
       case SpecapiLangPackage.RESPONSE_BLOCK__SUPER_TYPE:
         setSuperType((ComplexTypeDeclaration)newValue);
         return;
@@ -228,6 +277,9 @@ public class ResponseBlockImpl extends HttpMethodBlockImpl implements ResponseBl
   {
     switch (featureID)
     {
+      case SpecapiLangPackage.RESPONSE_BLOCK__CODE:
+        setCode(CODE_EDEFAULT);
+        return;
       case SpecapiLangPackage.RESPONSE_BLOCK__SUPER_TYPE:
         setSuperType((ComplexTypeDeclaration)null);
         return;
@@ -248,12 +300,31 @@ public class ResponseBlockImpl extends HttpMethodBlockImpl implements ResponseBl
   {
     switch (featureID)
     {
+      case SpecapiLangPackage.RESPONSE_BLOCK__CODE:
+        return code != CODE_EDEFAULT;
       case SpecapiLangPackage.RESPONSE_BLOCK__SUPER_TYPE:
         return superType != null;
       case SpecapiLangPackage.RESPONSE_BLOCK__TYPE:
         return type != null;
     }
     return super.eIsSet(featureID);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String toString()
+  {
+    if (eIsProxy()) return super.toString();
+
+    StringBuffer result = new StringBuffer(super.toString());
+    result.append(" (code: ");
+    result.append(code);
+    result.append(')');
+    return result.toString();
   }
 
 } //ResponseBlockImpl

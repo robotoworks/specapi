@@ -49,7 +49,7 @@
       "operations": [
         {
           "method": "post",
-          "summary": "",
+          "summary": "Create a new repository in this organization. The authenticated user must be a member of the specified organization.",
           "type": "Repository",
           "nickname": "createOrganizationRepository",
           "parameters": [
@@ -383,6 +383,40 @@
                   "type": "string"
               },
               "license_template": {
+                  "type": "string"
+              }
+          }
+      },
+      "ErrorResponse": {
+          "id": "ErrorResponse",
+          "properties": {
+              "message": {
+                  "type": "string"
+              },
+              "documentation_url": {
+                  "type": "string"
+              },
+              "errors": {
+                  "type": "array",
+                  "items": {
+                      "$ref": "Error"
+                  }
+              }
+          }
+      },
+      "Error": {
+          "id": "Error",
+          "properties": {
+              "resource": {
+                  "type": "string"
+              },
+              "code": {
+                  "type": "string"
+              },
+              "field": {
+                  "type": "string"
+              },
+              "message": {
                   "type": "string"
               }
           }

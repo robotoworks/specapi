@@ -11,6 +11,7 @@ package org.specapi.specapiLang;
  * <p>
  * The following features are supported:
  * <ul>
+ *   <li>{@link org.specapi.specapiLang.ResponseBlock#getCode <em>Code</em>}</li>
  *   <li>{@link org.specapi.specapiLang.ResponseBlock#getSuperType <em>Super Type</em>}</li>
  *   <li>{@link org.specapi.specapiLang.ResponseBlock#getType <em>Type</em>}</li>
  * </ul>
@@ -22,6 +23,32 @@ package org.specapi.specapiLang;
  */
 public interface ResponseBlock extends HttpMethodBlock
 {
+  /**
+   * Returns the value of the '<em><b>Code</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Code</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Code</em>' attribute.
+   * @see #setCode(int)
+   * @see org.specapi.specapiLang.SpecapiLangPackage#getResponseBlock_Code()
+   * @model
+   * @generated
+   */
+  int getCode();
+
+  /**
+   * Sets the value of the '{@link org.specapi.specapiLang.ResponseBlock#getCode <em>Code</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Code</em>' attribute.
+   * @see #getCode()
+   * @generated
+   */
+  void setCode(int value);
+
   /**
    * Returns the value of the '<em><b>Super Type</b></em>' reference.
    * <!-- begin-user-doc -->

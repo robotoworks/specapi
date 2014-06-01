@@ -905,9 +905,27 @@ ruleResponseBlock returns [EObject current=null]
     {
     	newLeafNode(otherlv_1, grammarAccess.getResponseBlockAccess().getResponseKeyword_1());
     }
-(	otherlv_2='mixin' 
+(
+(
+		lv_code_2_0=RULE_INTEGER
+		{
+			newLeafNode(lv_code_2_0, grammarAccess.getResponseBlockAccess().getCodeINTEGERTerminalRuleCall_2_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getResponseBlockRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"code",
+        		lv_code_2_0, 
+        		"INTEGER");
+	    }
+
+)
+)?(	otherlv_3='mixin' 
     {
-    	newLeafNode(otherlv_2, grammarAccess.getResponseBlockAccess().getMixinKeyword_2_0());
+    	newLeafNode(otherlv_3, grammarAccess.getResponseBlockAccess().getMixinKeyword_3_0());
     }
 (
 (
@@ -916,25 +934,25 @@ ruleResponseBlock returns [EObject current=null]
 	            $current = createModelElement(grammarAccess.getResponseBlockRule());
 	        }
         }
-	otherlv_3=RULE_ID
+	otherlv_4=RULE_ID
 	{
-		newLeafNode(otherlv_3, grammarAccess.getResponseBlockAccess().getSuperTypeComplexTypeDeclarationCrossReference_2_1_0()); 
+		newLeafNode(otherlv_4, grammarAccess.getResponseBlockAccess().getSuperTypeComplexTypeDeclarationCrossReference_3_1_0()); 
 	}
 
 )
 ))?(
 (
 		{ 
-	        newCompositeNode(grammarAccess.getResponseBlockAccess().getTypeBlockTypeParserRuleCall_3_0()); 
+	        newCompositeNode(grammarAccess.getResponseBlockAccess().getTypeBlockTypeParserRuleCall_4_0()); 
 	    }
-		lv_type_4_0=ruleBlockType		{
+		lv_type_5_0=ruleBlockType		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getResponseBlockRule());
 	        }
        		set(
        			$current, 
        			"type",
-        		lv_type_4_0, 
+        		lv_type_5_0, 
         		"BlockType");
 	        afterParserOrEnumRuleCall();
 	    }
@@ -2071,7 +2089,9 @@ ruleBooleanValue returns [Enumerator current=null]
 
 
 
-RULE_NUMBER : ('0'..'9')* ('.' ('0'..'9')+)?;
+RULE_NUMBER : RULE_INTEGER '.' RULE_INTEGER;
+
+RULE_INTEGER : ('0'..'9')*;
 
 RULE_ID : '^'? ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
 

@@ -469,7 +469,7 @@ public class SpecApiLangSemanticSequencer extends AbstractDelegatingSemanticSequ
 	
 	/**
 	 * Constraint:
-	 *     (superType=[ComplexTypeDeclaration|ID]? type=BlockType?)
+	 *     (code=INTEGER? superType=[ComplexTypeDeclaration|ID]? type=BlockType?)
 	 */
 	protected void sequence_ResponseBlock(EObject context, ResponseBlock semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
