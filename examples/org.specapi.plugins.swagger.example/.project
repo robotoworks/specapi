@@ -3,7 +3,6 @@
 	<name>org.specapi.plugins.swagger.example</name>
 	<comment></comment>
 	<projects>
-		<project>specs</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
@@ -19,7 +18,7 @@
 		<link>
 			<name>specs</name>
 			<type>2</type>
-			<locationURI>SPECS</locationURI>
+			<locationURI>SPECS/github</locationURI>
 		</link>
 	</linkedResources>
 	<variableList>
