@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>org.specapi.plugins.examples.swagger</name>
+	<name>org.specapi.plugins.swagger.example</name>
 	<comment></comment>
 	<projects>
 		<project>specs</project>
