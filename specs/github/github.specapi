@@ -65,8 +65,8 @@ api GithubAPI https://api.github.com {
     post createOrganizationRepository /orgs/org:string/repos {
         body CreateRepositoryInput
         response Repository
-        response 422 ErrorResponse
-        response 400 ErrorResponse
+        response 422 ErrorMessage
+        response 400 ErrorMessage
     }
 }
 
@@ -215,7 +215,7 @@ entity CreateRepositoryInput {
     license_template:string    
 }
 
-entity ErrorResponse {
+entity ErrorMessage {
     message:string,
     documentation_url:string,
     errors:Error[]

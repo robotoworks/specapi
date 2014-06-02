@@ -387,8 +387,8 @@
               }
           }
       },
-      "ErrorResponse": {
-          "id": "ErrorResponse",
+      "ErrorMessage": {
+          "id": "ErrorMessage",
           "properties": {
               "message": {
                   "type": "string"
