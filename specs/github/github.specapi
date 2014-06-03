@@ -65,8 +65,8 @@ api GithubAPI https://api.github.com {
     post createOrganizationRepository /orgs/org:string/repos {
         body CreateRepositoryInput
         response Repository
-        response 422 ErrorMessage
         response 400 ErrorMessage
+        response 422 ErrorMessage
     }
 }
 

@@ -7,3 +7,17 @@ project.
 
 The plugin does nothing more than print out all the methods defined in the first
 Api specification of a SpecAPI document.
+
+Configuration
+-------------
+The following configuration configures the target project for this plugin.
+
+```javascript
+{
+    "targets":[
+        {
+            "plugin":"org.specapi.plugins.simple.Plugin"
+        }
+    ]
+}
+```
