@@ -1,7 +1,7 @@
 SpecAPI
 =======
 
-A Web API specification language powered by the awesome xText framework, with a primary focus on code generation from a platform agnostic specification.
+A Web API specification language powered by the awesome xText framework.
 
 You can define your Web API like this using SpecAPI
 
@@ -35,7 +35,29 @@ SpecAPI aims to provide a concise grammar in the domain of HTTP, its a work in p
 
 Contributing
 ------------
-To Do
+To get started you need to install the Eclipse IDE and the xText Plugin.
+
+In Eclipse create a new workspace and import the projects:-
+
+* org.specapi
+* org.specapi.sdk
+* org.specapi.standalone
+* org.specapi.tests
+* org.specapi.ui
+* org.specapi.updatesite
+
+Then create a new Run/Debug Configuration to launch the a new Eclipse instance which will allow you to debug and test SpecAPI:
+
+Run Configurations > Eclipse Application > New
+
+In the new running Eclipse instance, you can then add the SpecAPI plugin and example projects:-
+
+* org.specapi.plugins.simple
+* org.specapi.plugins.simple.example
+* org.specapi.plugins.docs
+* org.specapi.plugins.docs.example
+
+These projects demonstrate how to author SpecAPI plugins, the example projects are companions to each plugin project that should provide the end user with a working example of what your plugin can do, also a Readme.md file should be provided in the root of the example project
 
 License
 =======

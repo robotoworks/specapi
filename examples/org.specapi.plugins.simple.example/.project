@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>org.specapi.plugins.simple.example</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.eclipse.xtext.ui.shared.xtextBuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.xtext.ui.shared.xtextNature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>specs</name>
+			<type>2</type>
+			<locationURI>SPECS/github</locationURI>
+		</link>
+	</linkedResources>
+	<variableList>
+		<variable>
+			<name>SPECS</name>
+			<value>$%7BPARENT-2-PROJECT_LOC%7D/specs</value>
+		</variable>
+	</variableList>
+</projectDescription>
