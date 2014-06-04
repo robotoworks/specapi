@@ -1,4 +1,4 @@
-![Logo](/gfx/specAPI.png)
+![Logo](/gfx/specAPI-small.png)
 
 A Web API specification language powered by the awesome xText framework.
 
