@@ -48,7 +48,7 @@ In Eclipse create a new workspace and import the projects:-
 
 Then create a new Run/Debug Configuration to launch the a new Eclipse instance which will allow you to debug and test SpecAPI:
 
-Run Configurations > Eclipse Application > New
+```Run Configurations > Eclipse Application > New```
 
 In the new running Eclipse instance, you can then add the SpecAPI plugin and example projects:-
 
