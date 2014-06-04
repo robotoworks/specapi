@@ -1425,11 +1425,11 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
             if ( (LA10_0==RULE_ID) ) {
                 int LA10_1 = input.LA(2);
 
-                if ( (LA10_1==25) ) {
-                    alt10=2;
-                }
-                else if ( (LA10_1==EOF||LA10_1==15||(LA10_1>=19 && LA10_1<=20)||LA10_1==36) ) {
+                if ( (LA10_1==EOF||LA10_1==15||(LA10_1>=19 && LA10_1<=20)||LA10_1==36) ) {
                     alt10=1;
+                }
+                else if ( (LA10_1==25) ) {
+                    alt10=2;
                 }
                 else {
                     NoViableAltException nvae =
@@ -1531,11 +1531,11 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
             	    if ( (LA11_0==RULE_ID) ) {
             	        int LA11_1 = input.LA(2);
 
-            	        if ( (LA11_1==EOF||LA11_1==15||(LA11_1>=19 && LA11_1<=20)||LA11_1==36) ) {
-            	            alt11=1;
-            	        }
-            	        else if ( (LA11_1==25) ) {
+            	        if ( (LA11_1==25) ) {
             	            alt11=2;
+            	        }
+            	        else if ( (LA11_1==EOF||LA11_1==15||(LA11_1>=19 && LA11_1<=20)||LA11_1==36) ) {
+            	            alt11=1;
             	        }
             	        else {
             	            NoViableAltException nvae =
@@ -2359,25 +2359,26 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleResponseBlock"
-    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:894:1: ruleResponseBlock returns [EObject current=null] : ( () otherlv_1= 'response' ( (lv_code_2_0= RULE_INTEGER ) )? (otherlv_3= 'mixin' ( (otherlv_4= RULE_ID ) ) )? ( (lv_type_5_0= ruleBlockType ) )? ) ;
+    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:894:1: ruleResponseBlock returns [EObject current=null] : ( () otherlv_1= 'response' ( (lv_code_2_0= RULE_INTEGER ) )? ( (lv_message_3_0= RULE_STRING ) )? (otherlv_4= 'mixin' ( (otherlv_5= RULE_ID ) ) )? ( (lv_type_6_0= ruleBlockType ) )? ) ;
     public final EObject ruleResponseBlock() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_1=null;
         Token lv_code_2_0=null;
-        Token otherlv_3=null;
+        Token lv_message_3_0=null;
         Token otherlv_4=null;
-        EObject lv_type_5_0 = null;
+        Token otherlv_5=null;
+        EObject lv_type_6_0 = null;
 
 
          enterRule(); 
             
         try {
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:897:28: ( ( () otherlv_1= 'response' ( (lv_code_2_0= RULE_INTEGER ) )? (otherlv_3= 'mixin' ( (otherlv_4= RULE_ID ) ) )? ( (lv_type_5_0= ruleBlockType ) )? ) )
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:898:1: ( () otherlv_1= 'response' ( (lv_code_2_0= RULE_INTEGER ) )? (otherlv_3= 'mixin' ( (otherlv_4= RULE_ID ) ) )? ( (lv_type_5_0= ruleBlockType ) )? )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:897:28: ( ( () otherlv_1= 'response' ( (lv_code_2_0= RULE_INTEGER ) )? ( (lv_message_3_0= RULE_STRING ) )? (otherlv_4= 'mixin' ( (otherlv_5= RULE_ID ) ) )? ( (lv_type_6_0= ruleBlockType ) )? ) )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:898:1: ( () otherlv_1= 'response' ( (lv_code_2_0= RULE_INTEGER ) )? ( (lv_message_3_0= RULE_STRING ) )? (otherlv_4= 'mixin' ( (otherlv_5= RULE_ID ) ) )? ( (lv_type_6_0= ruleBlockType ) )? )
             {
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:898:1: ( () otherlv_1= 'response' ( (lv_code_2_0= RULE_INTEGER ) )? (otherlv_3= 'mixin' ( (otherlv_4= RULE_ID ) ) )? ( (lv_type_5_0= ruleBlockType ) )? )
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:898:2: () otherlv_1= 'response' ( (lv_code_2_0= RULE_INTEGER ) )? (otherlv_3= 'mixin' ( (otherlv_4= RULE_ID ) ) )? ( (lv_type_5_0= ruleBlockType ) )?
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:898:1: ( () otherlv_1= 'response' ( (lv_code_2_0= RULE_INTEGER ) )? ( (lv_message_3_0= RULE_STRING ) )? (otherlv_4= 'mixin' ( (otherlv_5= RULE_ID ) ) )? ( (lv_type_6_0= ruleBlockType ) )? )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:898:2: () otherlv_1= 'response' ( (lv_code_2_0= RULE_INTEGER ) )? ( (lv_message_3_0= RULE_STRING ) )? (otherlv_4= 'mixin' ( (otherlv_5= RULE_ID ) ) )? ( (lv_type_6_0= ruleBlockType ) )?
             {
             // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:898:2: ()
             // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:899:5: 
@@ -2431,35 +2432,72 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:926:3: (otherlv_3= 'mixin' ( (otherlv_4= RULE_ID ) ) )?
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:926:3: ( (lv_message_3_0= RULE_STRING ) )?
             int alt17=2;
             int LA17_0 = input.LA(1);
 
-            if ( (LA17_0==24) ) {
+            if ( (LA17_0==RULE_STRING) ) {
                 alt17=1;
             }
             switch (alt17) {
                 case 1 :
-                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:926:5: otherlv_3= 'mixin' ( (otherlv_4= RULE_ID ) )
+                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:927:1: (lv_message_3_0= RULE_STRING )
                     {
-                    otherlv_3=(Token)match(input,24,FOLLOW_24_in_ruleResponseBlock2011); 
+                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:927:1: (lv_message_3_0= RULE_STRING )
+                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:928:3: lv_message_3_0= RULE_STRING
+                    {
+                    lv_message_3_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleResponseBlock2015); 
 
-                        	newLeafNode(otherlv_3, grammarAccess.getResponseBlockAccess().getMixinKeyword_3_0());
-                        
-                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:930:1: ( (otherlv_4= RULE_ID ) )
-                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:931:1: (otherlv_4= RULE_ID )
+                    			newLeafNode(lv_message_3_0, grammarAccess.getResponseBlockAccess().getMessageSTRINGTerminalRuleCall_3_0()); 
+                    		
+
+                    	        if (current==null) {
+                    	            current = createModelElement(grammarAccess.getResponseBlockRule());
+                    	        }
+                           		setWithLastConsumed(
+                           			current, 
+                           			"message",
+                            		lv_message_3_0, 
+                            		"STRING");
+                    	    
+
+                    }
+
+
+                    }
+                    break;
+
+            }
+
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:944:3: (otherlv_4= 'mixin' ( (otherlv_5= RULE_ID ) ) )?
+            int alt18=2;
+            int LA18_0 = input.LA(1);
+
+            if ( (LA18_0==24) ) {
+                alt18=1;
+            }
+            switch (alt18) {
+                case 1 :
+                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:944:5: otherlv_4= 'mixin' ( (otherlv_5= RULE_ID ) )
                     {
-                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:931:1: (otherlv_4= RULE_ID )
-                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:932:3: otherlv_4= RULE_ID
+                    otherlv_4=(Token)match(input,24,FOLLOW_24_in_ruleResponseBlock2034); 
+
+                        	newLeafNode(otherlv_4, grammarAccess.getResponseBlockAccess().getMixinKeyword_4_0());
+                        
+                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:948:1: ( (otherlv_5= RULE_ID ) )
+                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:949:1: (otherlv_5= RULE_ID )
+                    {
+                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:949:1: (otherlv_5= RULE_ID )
+                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:950:3: otherlv_5= RULE_ID
                     {
 
                     			if (current==null) {
                     	            current = createModelElement(grammarAccess.getResponseBlockRule());
                     	        }
                             
-                    otherlv_4=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleResponseBlock2031); 
+                    otherlv_5=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleResponseBlock2054); 
 
-                    		newLeafNode(otherlv_4, grammarAccess.getResponseBlockAccess().getSuperTypeComplexTypeDeclarationCrossReference_3_1_0()); 
+                    		newLeafNode(otherlv_5, grammarAccess.getResponseBlockAccess().getSuperTypeComplexTypeDeclarationCrossReference_4_1_0()); 
                     	
 
                     }
@@ -2473,25 +2511,25 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:943:4: ( (lv_type_5_0= ruleBlockType ) )?
-            int alt18=2;
-            int LA18_0 = input.LA(1);
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:961:4: ( (lv_type_6_0= ruleBlockType ) )?
+            int alt19=2;
+            int LA19_0 = input.LA(1);
 
-            if ( (LA18_0==RULE_ID||LA18_0==15||(LA18_0>=31 && LA18_0<=35)) ) {
-                alt18=1;
+            if ( (LA19_0==RULE_ID||LA19_0==15||(LA19_0>=31 && LA19_0<=35)) ) {
+                alt19=1;
             }
-            switch (alt18) {
+            switch (alt19) {
                 case 1 :
-                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:944:1: (lv_type_5_0= ruleBlockType )
+                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:962:1: (lv_type_6_0= ruleBlockType )
                     {
-                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:944:1: (lv_type_5_0= ruleBlockType )
-                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:945:3: lv_type_5_0= ruleBlockType
+                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:962:1: (lv_type_6_0= ruleBlockType )
+                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:963:3: lv_type_6_0= ruleBlockType
                     {
                      
-                    	        newCompositeNode(grammarAccess.getResponseBlockAccess().getTypeBlockTypeParserRuleCall_4_0()); 
+                    	        newCompositeNode(grammarAccess.getResponseBlockAccess().getTypeBlockTypeParserRuleCall_5_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleBlockType_in_ruleResponseBlock2054);
-                    lv_type_5_0=ruleBlockType();
+                    pushFollow(FOLLOW_ruleBlockType_in_ruleResponseBlock2077);
+                    lv_type_6_0=ruleBlockType();
 
                     state._fsp--;
 
@@ -2502,7 +2540,7 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
                            		set(
                            			current, 
                            			"type",
-                            		lv_type_5_0, 
+                            		lv_type_6_0, 
                             		"BlockType");
                     	        afterParserOrEnumRuleCall();
                     	    
@@ -2536,7 +2574,7 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleBlockType"
-    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:969:1: entryRuleBlockType returns [EObject current=null] : iv_ruleBlockType= ruleBlockType EOF ;
+    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:987:1: entryRuleBlockType returns [EObject current=null] : iv_ruleBlockType= ruleBlockType EOF ;
     public final EObject entryRuleBlockType() throws RecognitionException {
         EObject current = null;
 
@@ -2544,17 +2582,17 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:970:2: (iv_ruleBlockType= ruleBlockType EOF )
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:971:2: iv_ruleBlockType= ruleBlockType EOF
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:988:2: (iv_ruleBlockType= ruleBlockType EOF )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:989:2: iv_ruleBlockType= ruleBlockType EOF
             {
              newCompositeNode(grammarAccess.getBlockTypeRule()); 
-            pushFollow(FOLLOW_ruleBlockType_in_entryRuleBlockType2091);
+            pushFollow(FOLLOW_ruleBlockType_in_entryRuleBlockType2114);
             iv_ruleBlockType=ruleBlockType();
 
             state._fsp--;
 
              current =iv_ruleBlockType; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleBlockType2101); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleBlockType2124); 
 
             }
 
@@ -2572,7 +2610,7 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleBlockType"
-    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:978:1: ruleBlockType returns [EObject current=null] : (this_Type_0= ruleType | this_ComplexTypeLiteral_1= ruleComplexTypeLiteral ) ;
+    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:996:1: ruleBlockType returns [EObject current=null] : (this_Type_0= ruleType | this_ComplexTypeLiteral_1= ruleComplexTypeLiteral ) ;
     public final EObject ruleBlockType() throws RecognitionException {
         EObject current = null;
 
@@ -2584,33 +2622,33 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:981:28: ( (this_Type_0= ruleType | this_ComplexTypeLiteral_1= ruleComplexTypeLiteral ) )
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:982:1: (this_Type_0= ruleType | this_ComplexTypeLiteral_1= ruleComplexTypeLiteral )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:999:28: ( (this_Type_0= ruleType | this_ComplexTypeLiteral_1= ruleComplexTypeLiteral ) )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1000:1: (this_Type_0= ruleType | this_ComplexTypeLiteral_1= ruleComplexTypeLiteral )
             {
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:982:1: (this_Type_0= ruleType | this_ComplexTypeLiteral_1= ruleComplexTypeLiteral )
-            int alt19=2;
-            int LA19_0 = input.LA(1);
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1000:1: (this_Type_0= ruleType | this_ComplexTypeLiteral_1= ruleComplexTypeLiteral )
+            int alt20=2;
+            int LA20_0 = input.LA(1);
 
-            if ( (LA19_0==RULE_ID||(LA19_0>=31 && LA19_0<=35)) ) {
-                alt19=1;
+            if ( (LA20_0==RULE_ID||(LA20_0>=31 && LA20_0<=35)) ) {
+                alt20=1;
             }
-            else if ( (LA19_0==15) ) {
-                alt19=2;
+            else if ( (LA20_0==15) ) {
+                alt20=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 19, 0, input);
+                    new NoViableAltException("", 20, 0, input);
 
                 throw nvae;
             }
-            switch (alt19) {
+            switch (alt20) {
                 case 1 :
-                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:983:5: this_Type_0= ruleType
+                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1001:5: this_Type_0= ruleType
                     {
                      
                             newCompositeNode(grammarAccess.getBlockTypeAccess().getTypeParserRuleCall_0()); 
                         
-                    pushFollow(FOLLOW_ruleType_in_ruleBlockType2148);
+                    pushFollow(FOLLOW_ruleType_in_ruleBlockType2171);
                     this_Type_0=ruleType();
 
                     state._fsp--;
@@ -2623,12 +2661,12 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:993:5: this_ComplexTypeLiteral_1= ruleComplexTypeLiteral
+                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1011:5: this_ComplexTypeLiteral_1= ruleComplexTypeLiteral
                     {
                      
                             newCompositeNode(grammarAccess.getBlockTypeAccess().getComplexTypeLiteralParserRuleCall_1()); 
                         
-                    pushFollow(FOLLOW_ruleComplexTypeLiteral_in_ruleBlockType2175);
+                    pushFollow(FOLLOW_ruleComplexTypeLiteral_in_ruleBlockType2198);
                     this_ComplexTypeLiteral_1=ruleComplexTypeLiteral();
 
                     state._fsp--;
@@ -2661,7 +2699,7 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleMember"
-    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1009:1: entryRuleMember returns [EObject current=null] : iv_ruleMember= ruleMember EOF ;
+    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1027:1: entryRuleMember returns [EObject current=null] : iv_ruleMember= ruleMember EOF ;
     public final EObject entryRuleMember() throws RecognitionException {
         EObject current = null;
 
@@ -2669,17 +2707,17 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1010:2: (iv_ruleMember= ruleMember EOF )
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1011:2: iv_ruleMember= ruleMember EOF
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1028:2: (iv_ruleMember= ruleMember EOF )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1029:2: iv_ruleMember= ruleMember EOF
             {
              newCompositeNode(grammarAccess.getMemberRule()); 
-            pushFollow(FOLLOW_ruleMember_in_entryRuleMember2210);
+            pushFollow(FOLLOW_ruleMember_in_entryRuleMember2233);
             iv_ruleMember=ruleMember();
 
             state._fsp--;
 
              current =iv_ruleMember; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleMember2220); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleMember2243); 
 
             }
 
@@ -2697,7 +2735,7 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMember"
-    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1018:1: ruleMember returns [EObject current=null] : ( ( ( (lv_name_0_1= RULE_ID | lv_name_0_2= RULE_STRING ) ) ) otherlv_1= ':' ( (lv_type_2_0= ruleType ) ) (otherlv_3= '=' ( (lv_defaultValue_4_0= ruleLiteral ) ) )? ) ;
+    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1036:1: ruleMember returns [EObject current=null] : ( ( ( (lv_name_0_1= RULE_ID | lv_name_0_2= RULE_STRING ) ) ) otherlv_1= ':' ( (lv_type_2_0= ruleType ) ) (otherlv_3= '=' ( (lv_defaultValue_4_0= ruleLiteral ) ) )? ) ;
     public final EObject ruleMember() throws RecognitionException {
         EObject current = null;
 
@@ -2713,39 +2751,39 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1021:28: ( ( ( ( (lv_name_0_1= RULE_ID | lv_name_0_2= RULE_STRING ) ) ) otherlv_1= ':' ( (lv_type_2_0= ruleType ) ) (otherlv_3= '=' ( (lv_defaultValue_4_0= ruleLiteral ) ) )? ) )
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1022:1: ( ( ( (lv_name_0_1= RULE_ID | lv_name_0_2= RULE_STRING ) ) ) otherlv_1= ':' ( (lv_type_2_0= ruleType ) ) (otherlv_3= '=' ( (lv_defaultValue_4_0= ruleLiteral ) ) )? )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1039:28: ( ( ( ( (lv_name_0_1= RULE_ID | lv_name_0_2= RULE_STRING ) ) ) otherlv_1= ':' ( (lv_type_2_0= ruleType ) ) (otherlv_3= '=' ( (lv_defaultValue_4_0= ruleLiteral ) ) )? ) )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1040:1: ( ( ( (lv_name_0_1= RULE_ID | lv_name_0_2= RULE_STRING ) ) ) otherlv_1= ':' ( (lv_type_2_0= ruleType ) ) (otherlv_3= '=' ( (lv_defaultValue_4_0= ruleLiteral ) ) )? )
             {
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1022:1: ( ( ( (lv_name_0_1= RULE_ID | lv_name_0_2= RULE_STRING ) ) ) otherlv_1= ':' ( (lv_type_2_0= ruleType ) ) (otherlv_3= '=' ( (lv_defaultValue_4_0= ruleLiteral ) ) )? )
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1022:2: ( ( (lv_name_0_1= RULE_ID | lv_name_0_2= RULE_STRING ) ) ) otherlv_1= ':' ( (lv_type_2_0= ruleType ) ) (otherlv_3= '=' ( (lv_defaultValue_4_0= ruleLiteral ) ) )?
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1040:1: ( ( ( (lv_name_0_1= RULE_ID | lv_name_0_2= RULE_STRING ) ) ) otherlv_1= ':' ( (lv_type_2_0= ruleType ) ) (otherlv_3= '=' ( (lv_defaultValue_4_0= ruleLiteral ) ) )? )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1040:2: ( ( (lv_name_0_1= RULE_ID | lv_name_0_2= RULE_STRING ) ) ) otherlv_1= ':' ( (lv_type_2_0= ruleType ) ) (otherlv_3= '=' ( (lv_defaultValue_4_0= ruleLiteral ) ) )?
             {
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1022:2: ( ( (lv_name_0_1= RULE_ID | lv_name_0_2= RULE_STRING ) ) )
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1023:1: ( (lv_name_0_1= RULE_ID | lv_name_0_2= RULE_STRING ) )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1040:2: ( ( (lv_name_0_1= RULE_ID | lv_name_0_2= RULE_STRING ) ) )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1041:1: ( (lv_name_0_1= RULE_ID | lv_name_0_2= RULE_STRING ) )
             {
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1023:1: ( (lv_name_0_1= RULE_ID | lv_name_0_2= RULE_STRING ) )
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1024:1: (lv_name_0_1= RULE_ID | lv_name_0_2= RULE_STRING )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1041:1: ( (lv_name_0_1= RULE_ID | lv_name_0_2= RULE_STRING ) )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1042:1: (lv_name_0_1= RULE_ID | lv_name_0_2= RULE_STRING )
             {
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1024:1: (lv_name_0_1= RULE_ID | lv_name_0_2= RULE_STRING )
-            int alt20=2;
-            int LA20_0 = input.LA(1);
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1042:1: (lv_name_0_1= RULE_ID | lv_name_0_2= RULE_STRING )
+            int alt21=2;
+            int LA21_0 = input.LA(1);
 
-            if ( (LA20_0==RULE_ID) ) {
-                alt20=1;
+            if ( (LA21_0==RULE_ID) ) {
+                alt21=1;
             }
-            else if ( (LA20_0==RULE_STRING) ) {
-                alt20=2;
+            else if ( (LA21_0==RULE_STRING) ) {
+                alt21=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 20, 0, input);
+                    new NoViableAltException("", 21, 0, input);
 
                 throw nvae;
             }
-            switch (alt20) {
+            switch (alt21) {
                 case 1 :
-                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1025:3: lv_name_0_1= RULE_ID
+                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1043:3: lv_name_0_1= RULE_ID
                     {
-                    lv_name_0_1=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleMember2264); 
+                    lv_name_0_1=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleMember2287); 
 
                     			newLeafNode(lv_name_0_1, grammarAccess.getMemberAccess().getNameIDTerminalRuleCall_0_0_0()); 
                     		
@@ -2763,9 +2801,9 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1040:8: lv_name_0_2= RULE_STRING
+                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1058:8: lv_name_0_2= RULE_STRING
                     {
-                    lv_name_0_2=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleMember2284); 
+                    lv_name_0_2=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleMember2307); 
 
                     			newLeafNode(lv_name_0_2, grammarAccess.getMemberAccess().getNameSTRINGTerminalRuleCall_0_0_1()); 
                     		
@@ -2791,20 +2829,20 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,25,FOLLOW_25_in_ruleMember2304); 
+            otherlv_1=(Token)match(input,25,FOLLOW_25_in_ruleMember2327); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getMemberAccess().getColonKeyword_1());
                 
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1062:1: ( (lv_type_2_0= ruleType ) )
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1063:1: (lv_type_2_0= ruleType )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1080:1: ( (lv_type_2_0= ruleType ) )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1081:1: (lv_type_2_0= ruleType )
             {
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1063:1: (lv_type_2_0= ruleType )
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1064:3: lv_type_2_0= ruleType
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1081:1: (lv_type_2_0= ruleType )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1082:3: lv_type_2_0= ruleType
             {
              
             	        newCompositeNode(grammarAccess.getMemberAccess().getTypeTypeParserRuleCall_2_0()); 
             	    
-            pushFollow(FOLLOW_ruleType_in_ruleMember2325);
+            pushFollow(FOLLOW_ruleType_in_ruleMember2348);
             lv_type_2_0=ruleType();
 
             state._fsp--;
@@ -2826,31 +2864,31 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1080:2: (otherlv_3= '=' ( (lv_defaultValue_4_0= ruleLiteral ) ) )?
-            int alt21=2;
-            int LA21_0 = input.LA(1);
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1098:2: (otherlv_3= '=' ( (lv_defaultValue_4_0= ruleLiteral ) ) )?
+            int alt22=2;
+            int LA22_0 = input.LA(1);
 
-            if ( (LA21_0==26) ) {
-                alt21=1;
+            if ( (LA22_0==26) ) {
+                alt22=1;
             }
-            switch (alt21) {
+            switch (alt22) {
                 case 1 :
-                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1080:4: otherlv_3= '=' ( (lv_defaultValue_4_0= ruleLiteral ) )
+                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1098:4: otherlv_3= '=' ( (lv_defaultValue_4_0= ruleLiteral ) )
                     {
-                    otherlv_3=(Token)match(input,26,FOLLOW_26_in_ruleMember2338); 
+                    otherlv_3=(Token)match(input,26,FOLLOW_26_in_ruleMember2361); 
 
                         	newLeafNode(otherlv_3, grammarAccess.getMemberAccess().getEqualsSignKeyword_3_0());
                         
-                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1084:1: ( (lv_defaultValue_4_0= ruleLiteral ) )
-                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1085:1: (lv_defaultValue_4_0= ruleLiteral )
+                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1102:1: ( (lv_defaultValue_4_0= ruleLiteral ) )
+                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1103:1: (lv_defaultValue_4_0= ruleLiteral )
                     {
-                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1085:1: (lv_defaultValue_4_0= ruleLiteral )
-                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1086:3: lv_defaultValue_4_0= ruleLiteral
+                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1103:1: (lv_defaultValue_4_0= ruleLiteral )
+                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1104:3: lv_defaultValue_4_0= ruleLiteral
                     {
                      
                     	        newCompositeNode(grammarAccess.getMemberAccess().getDefaultValueLiteralParserRuleCall_3_1_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleLiteral_in_ruleMember2359);
+                    pushFollow(FOLLOW_ruleLiteral_in_ruleMember2382);
                     lv_defaultValue_4_0=ruleLiteral();
 
                     state._fsp--;
@@ -2899,7 +2937,7 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleType"
-    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1110:1: entryRuleType returns [EObject current=null] : iv_ruleType= ruleType EOF ;
+    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1128:1: entryRuleType returns [EObject current=null] : iv_ruleType= ruleType EOF ;
     public final EObject entryRuleType() throws RecognitionException {
         EObject current = null;
 
@@ -2907,17 +2945,17 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1111:2: (iv_ruleType= ruleType EOF )
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1112:2: iv_ruleType= ruleType EOF
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1129:2: (iv_ruleType= ruleType EOF )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1130:2: iv_ruleType= ruleType EOF
             {
              newCompositeNode(grammarAccess.getTypeRule()); 
-            pushFollow(FOLLOW_ruleType_in_entryRuleType2397);
+            pushFollow(FOLLOW_ruleType_in_entryRuleType2420);
             iv_ruleType=ruleType();
 
             state._fsp--;
 
              current =iv_ruleType; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleType2407); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleType2430); 
 
             }
 
@@ -2935,7 +2973,7 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleType"
-    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1119:1: ruleType returns [EObject current=null] : (this_UserType_0= ruleUserType | this_IntrinsicType_1= ruleIntrinsicType | this_ArrayType_2= ruleArrayType ) ;
+    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1137:1: ruleType returns [EObject current=null] : (this_UserType_0= ruleUserType | this_IntrinsicType_1= ruleIntrinsicType | this_ArrayType_2= ruleArrayType ) ;
     public final EObject ruleType() throws RecognitionException {
         EObject current = null;
 
@@ -2949,20 +2987,20 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1122:28: ( (this_UserType_0= ruleUserType | this_IntrinsicType_1= ruleIntrinsicType | this_ArrayType_2= ruleArrayType ) )
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1123:1: (this_UserType_0= ruleUserType | this_IntrinsicType_1= ruleIntrinsicType | this_ArrayType_2= ruleArrayType )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1140:28: ( (this_UserType_0= ruleUserType | this_IntrinsicType_1= ruleIntrinsicType | this_ArrayType_2= ruleArrayType ) )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1141:1: (this_UserType_0= ruleUserType | this_IntrinsicType_1= ruleIntrinsicType | this_ArrayType_2= ruleArrayType )
             {
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1123:1: (this_UserType_0= ruleUserType | this_IntrinsicType_1= ruleIntrinsicType | this_ArrayType_2= ruleArrayType )
-            int alt22=3;
-            alt22 = dfa22.predict(input);
-            switch (alt22) {
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1141:1: (this_UserType_0= ruleUserType | this_IntrinsicType_1= ruleIntrinsicType | this_ArrayType_2= ruleArrayType )
+            int alt23=3;
+            alt23 = dfa23.predict(input);
+            switch (alt23) {
                 case 1 :
-                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1124:5: this_UserType_0= ruleUserType
+                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1142:5: this_UserType_0= ruleUserType
                     {
                      
                             newCompositeNode(grammarAccess.getTypeAccess().getUserTypeParserRuleCall_0()); 
                         
-                    pushFollow(FOLLOW_ruleUserType_in_ruleType2454);
+                    pushFollow(FOLLOW_ruleUserType_in_ruleType2477);
                     this_UserType_0=ruleUserType();
 
                     state._fsp--;
@@ -2975,12 +3013,12 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1134:5: this_IntrinsicType_1= ruleIntrinsicType
+                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1152:5: this_IntrinsicType_1= ruleIntrinsicType
                     {
                      
                             newCompositeNode(grammarAccess.getTypeAccess().getIntrinsicTypeParserRuleCall_1()); 
                         
-                    pushFollow(FOLLOW_ruleIntrinsicType_in_ruleType2481);
+                    pushFollow(FOLLOW_ruleIntrinsicType_in_ruleType2504);
                     this_IntrinsicType_1=ruleIntrinsicType();
 
                     state._fsp--;
@@ -2993,12 +3031,12 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1144:5: this_ArrayType_2= ruleArrayType
+                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1162:5: this_ArrayType_2= ruleArrayType
                     {
                      
                             newCompositeNode(grammarAccess.getTypeAccess().getArrayTypeParserRuleCall_2()); 
                         
-                    pushFollow(FOLLOW_ruleArrayType_in_ruleType2508);
+                    pushFollow(FOLLOW_ruleArrayType_in_ruleType2531);
                     this_ArrayType_2=ruleArrayType();
 
                     state._fsp--;
@@ -3031,7 +3069,7 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleArrayType"
-    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1160:1: entryRuleArrayType returns [EObject current=null] : iv_ruleArrayType= ruleArrayType EOF ;
+    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1178:1: entryRuleArrayType returns [EObject current=null] : iv_ruleArrayType= ruleArrayType EOF ;
     public final EObject entryRuleArrayType() throws RecognitionException {
         EObject current = null;
 
@@ -3039,17 +3077,17 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1161:2: (iv_ruleArrayType= ruleArrayType EOF )
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1162:2: iv_ruleArrayType= ruleArrayType EOF
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1179:2: (iv_ruleArrayType= ruleArrayType EOF )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1180:2: iv_ruleArrayType= ruleArrayType EOF
             {
              newCompositeNode(grammarAccess.getArrayTypeRule()); 
-            pushFollow(FOLLOW_ruleArrayType_in_entryRuleArrayType2543);
+            pushFollow(FOLLOW_ruleArrayType_in_entryRuleArrayType2566);
             iv_ruleArrayType=ruleArrayType();
 
             state._fsp--;
 
              current =iv_ruleArrayType; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleArrayType2553); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleArrayType2576); 
 
             }
 
@@ -3067,7 +3105,7 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleArrayType"
-    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1169:1: ruleArrayType returns [EObject current=null] : ( ( ( (lv_elementType_0_1= ruleUserType | lv_elementType_0_2= ruleIntrinsicType ) ) ) ( (lv_id_1_0= '[]' ) ) ) ;
+    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1187:1: ruleArrayType returns [EObject current=null] : ( ( ( (lv_elementType_0_1= ruleUserType | lv_elementType_0_2= ruleIntrinsicType ) ) ) ( (lv_id_1_0= '[]' ) ) ) ;
     public final EObject ruleArrayType() throws RecognitionException {
         EObject current = null;
 
@@ -3080,42 +3118,42 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1172:28: ( ( ( ( (lv_elementType_0_1= ruleUserType | lv_elementType_0_2= ruleIntrinsicType ) ) ) ( (lv_id_1_0= '[]' ) ) ) )
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1173:1: ( ( ( (lv_elementType_0_1= ruleUserType | lv_elementType_0_2= ruleIntrinsicType ) ) ) ( (lv_id_1_0= '[]' ) ) )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1190:28: ( ( ( ( (lv_elementType_0_1= ruleUserType | lv_elementType_0_2= ruleIntrinsicType ) ) ) ( (lv_id_1_0= '[]' ) ) ) )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1191:1: ( ( ( (lv_elementType_0_1= ruleUserType | lv_elementType_0_2= ruleIntrinsicType ) ) ) ( (lv_id_1_0= '[]' ) ) )
             {
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1173:1: ( ( ( (lv_elementType_0_1= ruleUserType | lv_elementType_0_2= ruleIntrinsicType ) ) ) ( (lv_id_1_0= '[]' ) ) )
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1173:2: ( ( (lv_elementType_0_1= ruleUserType | lv_elementType_0_2= ruleIntrinsicType ) ) ) ( (lv_id_1_0= '[]' ) )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1191:1: ( ( ( (lv_elementType_0_1= ruleUserType | lv_elementType_0_2= ruleIntrinsicType ) ) ) ( (lv_id_1_0= '[]' ) ) )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1191:2: ( ( (lv_elementType_0_1= ruleUserType | lv_elementType_0_2= ruleIntrinsicType ) ) ) ( (lv_id_1_0= '[]' ) )
             {
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1173:2: ( ( (lv_elementType_0_1= ruleUserType | lv_elementType_0_2= ruleIntrinsicType ) ) )
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1174:1: ( (lv_elementType_0_1= ruleUserType | lv_elementType_0_2= ruleIntrinsicType ) )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1191:2: ( ( (lv_elementType_0_1= ruleUserType | lv_elementType_0_2= ruleIntrinsicType ) ) )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1192:1: ( (lv_elementType_0_1= ruleUserType | lv_elementType_0_2= ruleIntrinsicType ) )
             {
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1174:1: ( (lv_elementType_0_1= ruleUserType | lv_elementType_0_2= ruleIntrinsicType ) )
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1175:1: (lv_elementType_0_1= ruleUserType | lv_elementType_0_2= ruleIntrinsicType )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1192:1: ( (lv_elementType_0_1= ruleUserType | lv_elementType_0_2= ruleIntrinsicType ) )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1193:1: (lv_elementType_0_1= ruleUserType | lv_elementType_0_2= ruleIntrinsicType )
             {
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1175:1: (lv_elementType_0_1= ruleUserType | lv_elementType_0_2= ruleIntrinsicType )
-            int alt23=2;
-            int LA23_0 = input.LA(1);
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1193:1: (lv_elementType_0_1= ruleUserType | lv_elementType_0_2= ruleIntrinsicType )
+            int alt24=2;
+            int LA24_0 = input.LA(1);
 
-            if ( (LA23_0==RULE_ID) ) {
-                alt23=1;
+            if ( (LA24_0==RULE_ID) ) {
+                alt24=1;
             }
-            else if ( ((LA23_0>=31 && LA23_0<=35)) ) {
-                alt23=2;
+            else if ( ((LA24_0>=31 && LA24_0<=35)) ) {
+                alt24=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 23, 0, input);
+                    new NoViableAltException("", 24, 0, input);
 
                 throw nvae;
             }
-            switch (alt23) {
+            switch (alt24) {
                 case 1 :
-                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1176:3: lv_elementType_0_1= ruleUserType
+                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1194:3: lv_elementType_0_1= ruleUserType
                     {
                      
                     	        newCompositeNode(grammarAccess.getArrayTypeAccess().getElementTypeUserTypeParserRuleCall_0_0_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleUserType_in_ruleArrayType2601);
+                    pushFollow(FOLLOW_ruleUserType_in_ruleArrayType2624);
                     lv_elementType_0_1=ruleUserType();
 
                     state._fsp--;
@@ -3135,12 +3173,12 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1191:8: lv_elementType_0_2= ruleIntrinsicType
+                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1209:8: lv_elementType_0_2= ruleIntrinsicType
                     {
                      
                     	        newCompositeNode(grammarAccess.getArrayTypeAccess().getElementTypeIntrinsicTypeParserRuleCall_0_0_1()); 
                     	    
-                    pushFollow(FOLLOW_ruleIntrinsicType_in_ruleArrayType2620);
+                    pushFollow(FOLLOW_ruleIntrinsicType_in_ruleArrayType2643);
                     lv_elementType_0_2=ruleIntrinsicType();
 
                     state._fsp--;
@@ -3168,13 +3206,13 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1209:2: ( (lv_id_1_0= '[]' ) )
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1210:1: (lv_id_1_0= '[]' )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1227:2: ( (lv_id_1_0= '[]' ) )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1228:1: (lv_id_1_0= '[]' )
             {
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1210:1: (lv_id_1_0= '[]' )
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1211:3: lv_id_1_0= '[]'
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1228:1: (lv_id_1_0= '[]' )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1229:3: lv_id_1_0= '[]'
             {
-            lv_id_1_0=(Token)match(input,27,FOLLOW_27_in_ruleArrayType2641); 
+            lv_id_1_0=(Token)match(input,27,FOLLOW_27_in_ruleArrayType2664); 
 
                     newLeafNode(lv_id_1_0, grammarAccess.getArrayTypeAccess().getIdLeftSquareBracketRightSquareBracketKeyword_1_0());
                 
@@ -3211,7 +3249,7 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleUserType"
-    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1232:1: entryRuleUserType returns [EObject current=null] : iv_ruleUserType= ruleUserType EOF ;
+    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1250:1: entryRuleUserType returns [EObject current=null] : iv_ruleUserType= ruleUserType EOF ;
     public final EObject entryRuleUserType() throws RecognitionException {
         EObject current = null;
 
@@ -3219,17 +3257,17 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1233:2: (iv_ruleUserType= ruleUserType EOF )
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1234:2: iv_ruleUserType= ruleUserType EOF
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1251:2: (iv_ruleUserType= ruleUserType EOF )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1252:2: iv_ruleUserType= ruleUserType EOF
             {
              newCompositeNode(grammarAccess.getUserTypeRule()); 
-            pushFollow(FOLLOW_ruleUserType_in_entryRuleUserType2690);
+            pushFollow(FOLLOW_ruleUserType_in_entryRuleUserType2713);
             iv_ruleUserType=ruleUserType();
 
             state._fsp--;
 
              current =iv_ruleUserType; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleUserType2700); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleUserType2723); 
 
             }
 
@@ -3247,7 +3285,7 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleUserType"
-    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1241:1: ruleUserType returns [EObject current=null] : ( (otherlv_0= RULE_ID ) ) ;
+    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1259:1: ruleUserType returns [EObject current=null] : ( (otherlv_0= RULE_ID ) ) ;
     public final EObject ruleUserType() throws RecognitionException {
         EObject current = null;
 
@@ -3256,21 +3294,21 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1244:28: ( ( (otherlv_0= RULE_ID ) ) )
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1245:1: ( (otherlv_0= RULE_ID ) )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1262:28: ( ( (otherlv_0= RULE_ID ) ) )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1263:1: ( (otherlv_0= RULE_ID ) )
             {
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1245:1: ( (otherlv_0= RULE_ID ) )
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1246:1: (otherlv_0= RULE_ID )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1263:1: ( (otherlv_0= RULE_ID ) )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1264:1: (otherlv_0= RULE_ID )
             {
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1246:1: (otherlv_0= RULE_ID )
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1247:3: otherlv_0= RULE_ID
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1264:1: (otherlv_0= RULE_ID )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1265:3: otherlv_0= RULE_ID
             {
 
             			if (current==null) {
             	            current = createModelElement(grammarAccess.getUserTypeRule());
             	        }
                     
-            otherlv_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleUserType2744); 
+            otherlv_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleUserType2767); 
 
             		newLeafNode(otherlv_0, grammarAccess.getUserTypeAccess().getDeclarationUserTypeDeclarationCrossReference_0()); 
             	
@@ -3298,7 +3336,7 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleUserTypeDeclaration"
-    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1266:1: entryRuleUserTypeDeclaration returns [EObject current=null] : iv_ruleUserTypeDeclaration= ruleUserTypeDeclaration EOF ;
+    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1284:1: entryRuleUserTypeDeclaration returns [EObject current=null] : iv_ruleUserTypeDeclaration= ruleUserTypeDeclaration EOF ;
     public final EObject entryRuleUserTypeDeclaration() throws RecognitionException {
         EObject current = null;
 
@@ -3306,17 +3344,17 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1267:2: (iv_ruleUserTypeDeclaration= ruleUserTypeDeclaration EOF )
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1268:2: iv_ruleUserTypeDeclaration= ruleUserTypeDeclaration EOF
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1285:2: (iv_ruleUserTypeDeclaration= ruleUserTypeDeclaration EOF )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1286:2: iv_ruleUserTypeDeclaration= ruleUserTypeDeclaration EOF
             {
              newCompositeNode(grammarAccess.getUserTypeDeclarationRule()); 
-            pushFollow(FOLLOW_ruleUserTypeDeclaration_in_entryRuleUserTypeDeclaration2779);
+            pushFollow(FOLLOW_ruleUserTypeDeclaration_in_entryRuleUserTypeDeclaration2802);
             iv_ruleUserTypeDeclaration=ruleUserTypeDeclaration();
 
             state._fsp--;
 
              current =iv_ruleUserTypeDeclaration; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleUserTypeDeclaration2789); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleUserTypeDeclaration2812); 
 
             }
 
@@ -3334,7 +3372,7 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleUserTypeDeclaration"
-    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1275:1: ruleUserTypeDeclaration returns [EObject current=null] : (this_ComplexTypeDeclaration_0= ruleComplexTypeDeclaration | this_EnumTypeDeclaration_1= ruleEnumTypeDeclaration ) ;
+    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1293:1: ruleUserTypeDeclaration returns [EObject current=null] : (this_ComplexTypeDeclaration_0= ruleComplexTypeDeclaration | this_EnumTypeDeclaration_1= ruleEnumTypeDeclaration ) ;
     public final EObject ruleUserTypeDeclaration() throws RecognitionException {
         EObject current = null;
 
@@ -3346,33 +3384,33 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1278:28: ( (this_ComplexTypeDeclaration_0= ruleComplexTypeDeclaration | this_EnumTypeDeclaration_1= ruleEnumTypeDeclaration ) )
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1279:1: (this_ComplexTypeDeclaration_0= ruleComplexTypeDeclaration | this_EnumTypeDeclaration_1= ruleEnumTypeDeclaration )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1296:28: ( (this_ComplexTypeDeclaration_0= ruleComplexTypeDeclaration | this_EnumTypeDeclaration_1= ruleEnumTypeDeclaration ) )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1297:1: (this_ComplexTypeDeclaration_0= ruleComplexTypeDeclaration | this_EnumTypeDeclaration_1= ruleEnumTypeDeclaration )
             {
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1279:1: (this_ComplexTypeDeclaration_0= ruleComplexTypeDeclaration | this_EnumTypeDeclaration_1= ruleEnumTypeDeclaration )
-            int alt24=2;
-            int LA24_0 = input.LA(1);
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1297:1: (this_ComplexTypeDeclaration_0= ruleComplexTypeDeclaration | this_EnumTypeDeclaration_1= ruleEnumTypeDeclaration )
+            int alt25=2;
+            int LA25_0 = input.LA(1);
 
-            if ( (LA24_0==28) ) {
-                alt24=1;
+            if ( (LA25_0==28) ) {
+                alt25=1;
             }
-            else if ( (LA24_0==29) ) {
-                alt24=2;
+            else if ( (LA25_0==29) ) {
+                alt25=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 24, 0, input);
+                    new NoViableAltException("", 25, 0, input);
 
                 throw nvae;
             }
-            switch (alt24) {
+            switch (alt25) {
                 case 1 :
-                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1280:5: this_ComplexTypeDeclaration_0= ruleComplexTypeDeclaration
+                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1298:5: this_ComplexTypeDeclaration_0= ruleComplexTypeDeclaration
                     {
                      
                             newCompositeNode(grammarAccess.getUserTypeDeclarationAccess().getComplexTypeDeclarationParserRuleCall_0()); 
                         
-                    pushFollow(FOLLOW_ruleComplexTypeDeclaration_in_ruleUserTypeDeclaration2836);
+                    pushFollow(FOLLOW_ruleComplexTypeDeclaration_in_ruleUserTypeDeclaration2859);
                     this_ComplexTypeDeclaration_0=ruleComplexTypeDeclaration();
 
                     state._fsp--;
@@ -3385,12 +3423,12 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1290:5: this_EnumTypeDeclaration_1= ruleEnumTypeDeclaration
+                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1308:5: this_EnumTypeDeclaration_1= ruleEnumTypeDeclaration
                     {
                      
                             newCompositeNode(grammarAccess.getUserTypeDeclarationAccess().getEnumTypeDeclarationParserRuleCall_1()); 
                         
-                    pushFollow(FOLLOW_ruleEnumTypeDeclaration_in_ruleUserTypeDeclaration2863);
+                    pushFollow(FOLLOW_ruleEnumTypeDeclaration_in_ruleUserTypeDeclaration2886);
                     this_EnumTypeDeclaration_1=ruleEnumTypeDeclaration();
 
                     state._fsp--;
@@ -3423,7 +3461,7 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleComplexTypeDeclaration"
-    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1306:1: entryRuleComplexTypeDeclaration returns [EObject current=null] : iv_ruleComplexTypeDeclaration= ruleComplexTypeDeclaration EOF ;
+    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1324:1: entryRuleComplexTypeDeclaration returns [EObject current=null] : iv_ruleComplexTypeDeclaration= ruleComplexTypeDeclaration EOF ;
     public final EObject entryRuleComplexTypeDeclaration() throws RecognitionException {
         EObject current = null;
 
@@ -3431,17 +3469,17 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1307:2: (iv_ruleComplexTypeDeclaration= ruleComplexTypeDeclaration EOF )
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1308:2: iv_ruleComplexTypeDeclaration= ruleComplexTypeDeclaration EOF
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1325:2: (iv_ruleComplexTypeDeclaration= ruleComplexTypeDeclaration EOF )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1326:2: iv_ruleComplexTypeDeclaration= ruleComplexTypeDeclaration EOF
             {
              newCompositeNode(grammarAccess.getComplexTypeDeclarationRule()); 
-            pushFollow(FOLLOW_ruleComplexTypeDeclaration_in_entryRuleComplexTypeDeclaration2898);
+            pushFollow(FOLLOW_ruleComplexTypeDeclaration_in_entryRuleComplexTypeDeclaration2921);
             iv_ruleComplexTypeDeclaration=ruleComplexTypeDeclaration();
 
             state._fsp--;
 
              current =iv_ruleComplexTypeDeclaration; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleComplexTypeDeclaration2908); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleComplexTypeDeclaration2931); 
 
             }
 
@@ -3459,7 +3497,7 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleComplexTypeDeclaration"
-    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1315:1: ruleComplexTypeDeclaration returns [EObject current=null] : ( ( (lv_keyword_0_0= 'entity' ) ) ( (lv_name_1_0= RULE_ID ) ) ( (lv_literal_2_0= ruleComplexTypeLiteral ) )? ) ;
+    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1333:1: ruleComplexTypeDeclaration returns [EObject current=null] : ( ( (lv_keyword_0_0= 'entity' ) ) ( (lv_name_1_0= RULE_ID ) ) ( (lv_literal_2_0= ruleComplexTypeLiteral ) )? ) ;
     public final EObject ruleComplexTypeDeclaration() throws RecognitionException {
         EObject current = null;
 
@@ -3471,19 +3509,19 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1318:28: ( ( ( (lv_keyword_0_0= 'entity' ) ) ( (lv_name_1_0= RULE_ID ) ) ( (lv_literal_2_0= ruleComplexTypeLiteral ) )? ) )
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1319:1: ( ( (lv_keyword_0_0= 'entity' ) ) ( (lv_name_1_0= RULE_ID ) ) ( (lv_literal_2_0= ruleComplexTypeLiteral ) )? )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1336:28: ( ( ( (lv_keyword_0_0= 'entity' ) ) ( (lv_name_1_0= RULE_ID ) ) ( (lv_literal_2_0= ruleComplexTypeLiteral ) )? ) )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1337:1: ( ( (lv_keyword_0_0= 'entity' ) ) ( (lv_name_1_0= RULE_ID ) ) ( (lv_literal_2_0= ruleComplexTypeLiteral ) )? )
             {
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1319:1: ( ( (lv_keyword_0_0= 'entity' ) ) ( (lv_name_1_0= RULE_ID ) ) ( (lv_literal_2_0= ruleComplexTypeLiteral ) )? )
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1319:2: ( (lv_keyword_0_0= 'entity' ) ) ( (lv_name_1_0= RULE_ID ) ) ( (lv_literal_2_0= ruleComplexTypeLiteral ) )?
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1337:1: ( ( (lv_keyword_0_0= 'entity' ) ) ( (lv_name_1_0= RULE_ID ) ) ( (lv_literal_2_0= ruleComplexTypeLiteral ) )? )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1337:2: ( (lv_keyword_0_0= 'entity' ) ) ( (lv_name_1_0= RULE_ID ) ) ( (lv_literal_2_0= ruleComplexTypeLiteral ) )?
             {
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1319:2: ( (lv_keyword_0_0= 'entity' ) )
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1320:1: (lv_keyword_0_0= 'entity' )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1337:2: ( (lv_keyword_0_0= 'entity' ) )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1338:1: (lv_keyword_0_0= 'entity' )
             {
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1320:1: (lv_keyword_0_0= 'entity' )
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1321:3: lv_keyword_0_0= 'entity'
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1338:1: (lv_keyword_0_0= 'entity' )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1339:3: lv_keyword_0_0= 'entity'
             {
-            lv_keyword_0_0=(Token)match(input,28,FOLLOW_28_in_ruleComplexTypeDeclaration2951); 
+            lv_keyword_0_0=(Token)match(input,28,FOLLOW_28_in_ruleComplexTypeDeclaration2974); 
 
                     newLeafNode(lv_keyword_0_0, grammarAccess.getComplexTypeDeclarationAccess().getKeywordEntityKeyword_0_0());
                 
@@ -3499,13 +3537,13 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1334:2: ( (lv_name_1_0= RULE_ID ) )
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1335:1: (lv_name_1_0= RULE_ID )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1352:2: ( (lv_name_1_0= RULE_ID ) )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1353:1: (lv_name_1_0= RULE_ID )
             {
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1335:1: (lv_name_1_0= RULE_ID )
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1336:3: lv_name_1_0= RULE_ID
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1353:1: (lv_name_1_0= RULE_ID )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1354:3: lv_name_1_0= RULE_ID
             {
-            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleComplexTypeDeclaration2981); 
+            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleComplexTypeDeclaration3004); 
 
             			newLeafNode(lv_name_1_0, grammarAccess.getComplexTypeDeclarationAccess().getNameIDTerminalRuleCall_1_0()); 
             		
@@ -3525,24 +3563,24 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1352:2: ( (lv_literal_2_0= ruleComplexTypeLiteral ) )?
-            int alt25=2;
-            int LA25_0 = input.LA(1);
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1370:2: ( (lv_literal_2_0= ruleComplexTypeLiteral ) )?
+            int alt26=2;
+            int LA26_0 = input.LA(1);
 
-            if ( (LA25_0==15) ) {
-                alt25=1;
+            if ( (LA26_0==15) ) {
+                alt26=1;
             }
-            switch (alt25) {
+            switch (alt26) {
                 case 1 :
-                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1353:1: (lv_literal_2_0= ruleComplexTypeLiteral )
+                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1371:1: (lv_literal_2_0= ruleComplexTypeLiteral )
                     {
-                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1353:1: (lv_literal_2_0= ruleComplexTypeLiteral )
-                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1354:3: lv_literal_2_0= ruleComplexTypeLiteral
+                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1371:1: (lv_literal_2_0= ruleComplexTypeLiteral )
+                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1372:3: lv_literal_2_0= ruleComplexTypeLiteral
                     {
                      
                     	        newCompositeNode(grammarAccess.getComplexTypeDeclarationAccess().getLiteralComplexTypeLiteralParserRuleCall_2_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleComplexTypeLiteral_in_ruleComplexTypeDeclaration3007);
+                    pushFollow(FOLLOW_ruleComplexTypeLiteral_in_ruleComplexTypeDeclaration3030);
                     lv_literal_2_0=ruleComplexTypeLiteral();
 
                     state._fsp--;
@@ -3588,7 +3626,7 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleEnumTypeDeclaration"
-    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1378:1: entryRuleEnumTypeDeclaration returns [EObject current=null] : iv_ruleEnumTypeDeclaration= ruleEnumTypeDeclaration EOF ;
+    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1396:1: entryRuleEnumTypeDeclaration returns [EObject current=null] : iv_ruleEnumTypeDeclaration= ruleEnumTypeDeclaration EOF ;
     public final EObject entryRuleEnumTypeDeclaration() throws RecognitionException {
         EObject current = null;
 
@@ -3596,17 +3634,17 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1379:2: (iv_ruleEnumTypeDeclaration= ruleEnumTypeDeclaration EOF )
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1380:2: iv_ruleEnumTypeDeclaration= ruleEnumTypeDeclaration EOF
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1397:2: (iv_ruleEnumTypeDeclaration= ruleEnumTypeDeclaration EOF )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1398:2: iv_ruleEnumTypeDeclaration= ruleEnumTypeDeclaration EOF
             {
              newCompositeNode(grammarAccess.getEnumTypeDeclarationRule()); 
-            pushFollow(FOLLOW_ruleEnumTypeDeclaration_in_entryRuleEnumTypeDeclaration3044);
+            pushFollow(FOLLOW_ruleEnumTypeDeclaration_in_entryRuleEnumTypeDeclaration3067);
             iv_ruleEnumTypeDeclaration=ruleEnumTypeDeclaration();
 
             state._fsp--;
 
              current =iv_ruleEnumTypeDeclaration; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleEnumTypeDeclaration3054); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleEnumTypeDeclaration3077); 
 
             }
 
@@ -3624,7 +3662,7 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleEnumTypeDeclaration"
-    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1387:1: ruleEnumTypeDeclaration returns [EObject current=null] : ( ( (lv_keyword_0_0= 'enum' ) ) ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'extends' ( (lv_superType_3_0= ruleIntegerType ) ) )? ( (lv_literal_4_0= ruleEnumTypeLiteral ) )? ) ;
+    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1405:1: ruleEnumTypeDeclaration returns [EObject current=null] : ( ( (lv_keyword_0_0= 'enum' ) ) ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'extends' ( (lv_superType_3_0= ruleIntegerType ) ) )? ( (lv_literal_4_0= ruleEnumTypeLiteral ) )? ) ;
     public final EObject ruleEnumTypeDeclaration() throws RecognitionException {
         EObject current = null;
 
@@ -3639,19 +3677,19 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1390:28: ( ( ( (lv_keyword_0_0= 'enum' ) ) ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'extends' ( (lv_superType_3_0= ruleIntegerType ) ) )? ( (lv_literal_4_0= ruleEnumTypeLiteral ) )? ) )
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1391:1: ( ( (lv_keyword_0_0= 'enum' ) ) ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'extends' ( (lv_superType_3_0= ruleIntegerType ) ) )? ( (lv_literal_4_0= ruleEnumTypeLiteral ) )? )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1408:28: ( ( ( (lv_keyword_0_0= 'enum' ) ) ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'extends' ( (lv_superType_3_0= ruleIntegerType ) ) )? ( (lv_literal_4_0= ruleEnumTypeLiteral ) )? ) )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1409:1: ( ( (lv_keyword_0_0= 'enum' ) ) ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'extends' ( (lv_superType_3_0= ruleIntegerType ) ) )? ( (lv_literal_4_0= ruleEnumTypeLiteral ) )? )
             {
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1391:1: ( ( (lv_keyword_0_0= 'enum' ) ) ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'extends' ( (lv_superType_3_0= ruleIntegerType ) ) )? ( (lv_literal_4_0= ruleEnumTypeLiteral ) )? )
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1391:2: ( (lv_keyword_0_0= 'enum' ) ) ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'extends' ( (lv_superType_3_0= ruleIntegerType ) ) )? ( (lv_literal_4_0= ruleEnumTypeLiteral ) )?
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1409:1: ( ( (lv_keyword_0_0= 'enum' ) ) ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'extends' ( (lv_superType_3_0= ruleIntegerType ) ) )? ( (lv_literal_4_0= ruleEnumTypeLiteral ) )? )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1409:2: ( (lv_keyword_0_0= 'enum' ) ) ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'extends' ( (lv_superType_3_0= ruleIntegerType ) ) )? ( (lv_literal_4_0= ruleEnumTypeLiteral ) )?
             {
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1391:2: ( (lv_keyword_0_0= 'enum' ) )
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1392:1: (lv_keyword_0_0= 'enum' )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1409:2: ( (lv_keyword_0_0= 'enum' ) )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1410:1: (lv_keyword_0_0= 'enum' )
             {
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1392:1: (lv_keyword_0_0= 'enum' )
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1393:3: lv_keyword_0_0= 'enum'
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1410:1: (lv_keyword_0_0= 'enum' )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1411:3: lv_keyword_0_0= 'enum'
             {
-            lv_keyword_0_0=(Token)match(input,29,FOLLOW_29_in_ruleEnumTypeDeclaration3097); 
+            lv_keyword_0_0=(Token)match(input,29,FOLLOW_29_in_ruleEnumTypeDeclaration3120); 
 
                     newLeafNode(lv_keyword_0_0, grammarAccess.getEnumTypeDeclarationAccess().getKeywordEnumKeyword_0_0());
                 
@@ -3667,13 +3705,13 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1406:2: ( (lv_name_1_0= RULE_ID ) )
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1407:1: (lv_name_1_0= RULE_ID )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1424:2: ( (lv_name_1_0= RULE_ID ) )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1425:1: (lv_name_1_0= RULE_ID )
             {
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1407:1: (lv_name_1_0= RULE_ID )
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1408:3: lv_name_1_0= RULE_ID
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1425:1: (lv_name_1_0= RULE_ID )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1426:3: lv_name_1_0= RULE_ID
             {
-            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleEnumTypeDeclaration3127); 
+            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleEnumTypeDeclaration3150); 
 
             			newLeafNode(lv_name_1_0, grammarAccess.getEnumTypeDeclarationAccess().getNameIDTerminalRuleCall_1_0()); 
             		
@@ -3693,31 +3731,31 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1424:2: (otherlv_2= 'extends' ( (lv_superType_3_0= ruleIntegerType ) ) )?
-            int alt26=2;
-            int LA26_0 = input.LA(1);
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1442:2: (otherlv_2= 'extends' ( (lv_superType_3_0= ruleIntegerType ) ) )?
+            int alt27=2;
+            int LA27_0 = input.LA(1);
 
-            if ( (LA26_0==30) ) {
-                alt26=1;
+            if ( (LA27_0==30) ) {
+                alt27=1;
             }
-            switch (alt26) {
+            switch (alt27) {
                 case 1 :
-                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1424:4: otherlv_2= 'extends' ( (lv_superType_3_0= ruleIntegerType ) )
+                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1442:4: otherlv_2= 'extends' ( (lv_superType_3_0= ruleIntegerType ) )
                     {
-                    otherlv_2=(Token)match(input,30,FOLLOW_30_in_ruleEnumTypeDeclaration3145); 
+                    otherlv_2=(Token)match(input,30,FOLLOW_30_in_ruleEnumTypeDeclaration3168); 
 
                         	newLeafNode(otherlv_2, grammarAccess.getEnumTypeDeclarationAccess().getExtendsKeyword_2_0());
                         
-                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1428:1: ( (lv_superType_3_0= ruleIntegerType ) )
-                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1429:1: (lv_superType_3_0= ruleIntegerType )
+                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1446:1: ( (lv_superType_3_0= ruleIntegerType ) )
+                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1447:1: (lv_superType_3_0= ruleIntegerType )
                     {
-                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1429:1: (lv_superType_3_0= ruleIntegerType )
-                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1430:3: lv_superType_3_0= ruleIntegerType
+                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1447:1: (lv_superType_3_0= ruleIntegerType )
+                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1448:3: lv_superType_3_0= ruleIntegerType
                     {
                      
                     	        newCompositeNode(grammarAccess.getEnumTypeDeclarationAccess().getSuperTypeIntegerTypeParserRuleCall_2_1_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleIntegerType_in_ruleEnumTypeDeclaration3166);
+                    pushFollow(FOLLOW_ruleIntegerType_in_ruleEnumTypeDeclaration3189);
                     lv_superType_3_0=ruleIntegerType();
 
                     state._fsp--;
@@ -3745,24 +3783,24 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1446:4: ( (lv_literal_4_0= ruleEnumTypeLiteral ) )?
-            int alt27=2;
-            int LA27_0 = input.LA(1);
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1464:4: ( (lv_literal_4_0= ruleEnumTypeLiteral ) )?
+            int alt28=2;
+            int LA28_0 = input.LA(1);
 
-            if ( (LA27_0==15) ) {
-                alt27=1;
+            if ( (LA28_0==15) ) {
+                alt28=1;
             }
-            switch (alt27) {
+            switch (alt28) {
                 case 1 :
-                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1447:1: (lv_literal_4_0= ruleEnumTypeLiteral )
+                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1465:1: (lv_literal_4_0= ruleEnumTypeLiteral )
                     {
-                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1447:1: (lv_literal_4_0= ruleEnumTypeLiteral )
-                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1448:3: lv_literal_4_0= ruleEnumTypeLiteral
+                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1465:1: (lv_literal_4_0= ruleEnumTypeLiteral )
+                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1466:3: lv_literal_4_0= ruleEnumTypeLiteral
                     {
                      
                     	        newCompositeNode(grammarAccess.getEnumTypeDeclarationAccess().getLiteralEnumTypeLiteralParserRuleCall_3_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleEnumTypeLiteral_in_ruleEnumTypeDeclaration3189);
+                    pushFollow(FOLLOW_ruleEnumTypeLiteral_in_ruleEnumTypeDeclaration3212);
                     lv_literal_4_0=ruleEnumTypeLiteral();
 
                     state._fsp--;
@@ -3808,7 +3846,7 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleEnumTypeLiteral"
-    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1472:1: entryRuleEnumTypeLiteral returns [EObject current=null] : iv_ruleEnumTypeLiteral= ruleEnumTypeLiteral EOF ;
+    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1490:1: entryRuleEnumTypeLiteral returns [EObject current=null] : iv_ruleEnumTypeLiteral= ruleEnumTypeLiteral EOF ;
     public final EObject entryRuleEnumTypeLiteral() throws RecognitionException {
         EObject current = null;
 
@@ -3816,17 +3854,17 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1473:2: (iv_ruleEnumTypeLiteral= ruleEnumTypeLiteral EOF )
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1474:2: iv_ruleEnumTypeLiteral= ruleEnumTypeLiteral EOF
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1491:2: (iv_ruleEnumTypeLiteral= ruleEnumTypeLiteral EOF )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1492:2: iv_ruleEnumTypeLiteral= ruleEnumTypeLiteral EOF
             {
              newCompositeNode(grammarAccess.getEnumTypeLiteralRule()); 
-            pushFollow(FOLLOW_ruleEnumTypeLiteral_in_entryRuleEnumTypeLiteral3226);
+            pushFollow(FOLLOW_ruleEnumTypeLiteral_in_entryRuleEnumTypeLiteral3249);
             iv_ruleEnumTypeLiteral=ruleEnumTypeLiteral();
 
             state._fsp--;
 
              current =iv_ruleEnumTypeLiteral; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleEnumTypeLiteral3236); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleEnumTypeLiteral3259); 
 
             }
 
@@ -3844,7 +3882,7 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleEnumTypeLiteral"
-    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1481:1: ruleEnumTypeLiteral returns [EObject current=null] : (otherlv_0= '{' ( (lv_members_1_0= ruleEnumMember ) ) (otherlv_2= ',' ( (lv_members_3_0= ruleEnumMember ) ) )* otherlv_4= '}' ) ;
+    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1499:1: ruleEnumTypeLiteral returns [EObject current=null] : (otherlv_0= '{' ( (lv_members_1_0= ruleEnumMember ) ) (otherlv_2= ',' ( (lv_members_3_0= ruleEnumMember ) ) )* otherlv_4= '}' ) ;
     public final EObject ruleEnumTypeLiteral() throws RecognitionException {
         EObject current = null;
 
@@ -3859,26 +3897,26 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1484:28: ( (otherlv_0= '{' ( (lv_members_1_0= ruleEnumMember ) ) (otherlv_2= ',' ( (lv_members_3_0= ruleEnumMember ) ) )* otherlv_4= '}' ) )
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1485:1: (otherlv_0= '{' ( (lv_members_1_0= ruleEnumMember ) ) (otherlv_2= ',' ( (lv_members_3_0= ruleEnumMember ) ) )* otherlv_4= '}' )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1502:28: ( (otherlv_0= '{' ( (lv_members_1_0= ruleEnumMember ) ) (otherlv_2= ',' ( (lv_members_3_0= ruleEnumMember ) ) )* otherlv_4= '}' ) )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1503:1: (otherlv_0= '{' ( (lv_members_1_0= ruleEnumMember ) ) (otherlv_2= ',' ( (lv_members_3_0= ruleEnumMember ) ) )* otherlv_4= '}' )
             {
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1485:1: (otherlv_0= '{' ( (lv_members_1_0= ruleEnumMember ) ) (otherlv_2= ',' ( (lv_members_3_0= ruleEnumMember ) ) )* otherlv_4= '}' )
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1485:3: otherlv_0= '{' ( (lv_members_1_0= ruleEnumMember ) ) (otherlv_2= ',' ( (lv_members_3_0= ruleEnumMember ) ) )* otherlv_4= '}'
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1503:1: (otherlv_0= '{' ( (lv_members_1_0= ruleEnumMember ) ) (otherlv_2= ',' ( (lv_members_3_0= ruleEnumMember ) ) )* otherlv_4= '}' )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1503:3: otherlv_0= '{' ( (lv_members_1_0= ruleEnumMember ) ) (otherlv_2= ',' ( (lv_members_3_0= ruleEnumMember ) ) )* otherlv_4= '}'
             {
-            otherlv_0=(Token)match(input,15,FOLLOW_15_in_ruleEnumTypeLiteral3273); 
+            otherlv_0=(Token)match(input,15,FOLLOW_15_in_ruleEnumTypeLiteral3296); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getEnumTypeLiteralAccess().getLeftCurlyBracketKeyword_0());
                 
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1489:1: ( (lv_members_1_0= ruleEnumMember ) )
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1490:1: (lv_members_1_0= ruleEnumMember )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1507:1: ( (lv_members_1_0= ruleEnumMember ) )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1508:1: (lv_members_1_0= ruleEnumMember )
             {
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1490:1: (lv_members_1_0= ruleEnumMember )
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1491:3: lv_members_1_0= ruleEnumMember
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1508:1: (lv_members_1_0= ruleEnumMember )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1509:3: lv_members_1_0= ruleEnumMember
             {
              
             	        newCompositeNode(grammarAccess.getEnumTypeLiteralAccess().getMembersEnumMemberParserRuleCall_1_0()); 
             	    
-            pushFollow(FOLLOW_ruleEnumMember_in_ruleEnumTypeLiteral3294);
+            pushFollow(FOLLOW_ruleEnumMember_in_ruleEnumTypeLiteral3317);
             lv_members_1_0=ruleEnumMember();
 
             state._fsp--;
@@ -3900,35 +3938,35 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1507:2: (otherlv_2= ',' ( (lv_members_3_0= ruleEnumMember ) ) )*
-            loop28:
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1525:2: (otherlv_2= ',' ( (lv_members_3_0= ruleEnumMember ) ) )*
+            loop29:
             do {
-                int alt28=2;
-                int LA28_0 = input.LA(1);
+                int alt29=2;
+                int LA29_0 = input.LA(1);
 
-                if ( (LA28_0==18) ) {
-                    alt28=1;
+                if ( (LA29_0==18) ) {
+                    alt29=1;
                 }
 
 
-                switch (alt28) {
+                switch (alt29) {
             	case 1 :
-            	    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1507:4: otherlv_2= ',' ( (lv_members_3_0= ruleEnumMember ) )
+            	    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1525:4: otherlv_2= ',' ( (lv_members_3_0= ruleEnumMember ) )
             	    {
-            	    otherlv_2=(Token)match(input,18,FOLLOW_18_in_ruleEnumTypeLiteral3307); 
+            	    otherlv_2=(Token)match(input,18,FOLLOW_18_in_ruleEnumTypeLiteral3330); 
 
             	        	newLeafNode(otherlv_2, grammarAccess.getEnumTypeLiteralAccess().getCommaKeyword_2_0());
             	        
-            	    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1511:1: ( (lv_members_3_0= ruleEnumMember ) )
-            	    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1512:1: (lv_members_3_0= ruleEnumMember )
+            	    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1529:1: ( (lv_members_3_0= ruleEnumMember ) )
+            	    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1530:1: (lv_members_3_0= ruleEnumMember )
             	    {
-            	    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1512:1: (lv_members_3_0= ruleEnumMember )
-            	    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1513:3: lv_members_3_0= ruleEnumMember
+            	    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1530:1: (lv_members_3_0= ruleEnumMember )
+            	    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1531:3: lv_members_3_0= ruleEnumMember
             	    {
             	     
             	    	        newCompositeNode(grammarAccess.getEnumTypeLiteralAccess().getMembersEnumMemberParserRuleCall_2_1_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleEnumMember_in_ruleEnumTypeLiteral3328);
+            	    pushFollow(FOLLOW_ruleEnumMember_in_ruleEnumTypeLiteral3351);
             	    lv_members_3_0=ruleEnumMember();
 
             	    state._fsp--;
@@ -3955,11 +3993,11 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop28;
+            	    break loop29;
                 }
             } while (true);
 
-            otherlv_4=(Token)match(input,16,FOLLOW_16_in_ruleEnumTypeLiteral3342); 
+            otherlv_4=(Token)match(input,16,FOLLOW_16_in_ruleEnumTypeLiteral3365); 
 
                 	newLeafNode(otherlv_4, grammarAccess.getEnumTypeLiteralAccess().getRightCurlyBracketKeyword_3());
                 
@@ -3984,7 +4022,7 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleEnumMember"
-    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1541:1: entryRuleEnumMember returns [EObject current=null] : iv_ruleEnumMember= ruleEnumMember EOF ;
+    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1559:1: entryRuleEnumMember returns [EObject current=null] : iv_ruleEnumMember= ruleEnumMember EOF ;
     public final EObject entryRuleEnumMember() throws RecognitionException {
         EObject current = null;
 
@@ -3992,17 +4030,17 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1542:2: (iv_ruleEnumMember= ruleEnumMember EOF )
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1543:2: iv_ruleEnumMember= ruleEnumMember EOF
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1560:2: (iv_ruleEnumMember= ruleEnumMember EOF )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1561:2: iv_ruleEnumMember= ruleEnumMember EOF
             {
              newCompositeNode(grammarAccess.getEnumMemberRule()); 
-            pushFollow(FOLLOW_ruleEnumMember_in_entryRuleEnumMember3378);
+            pushFollow(FOLLOW_ruleEnumMember_in_entryRuleEnumMember3401);
             iv_ruleEnumMember=ruleEnumMember();
 
             state._fsp--;
 
              current =iv_ruleEnumMember; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleEnumMember3388); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleEnumMember3411); 
 
             }
 
@@ -4020,7 +4058,7 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleEnumMember"
-    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1550:1: ruleEnumMember returns [EObject current=null] : ( ( (lv_name_0_0= RULE_ID ) ) ( ( (lv_assignment_1_0= '=' ) ) ( (lv_value_2_0= RULE_NUMBER ) ) )? ) ;
+    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1568:1: ruleEnumMember returns [EObject current=null] : ( ( (lv_name_0_0= RULE_ID ) ) ( ( (lv_assignment_1_0= '=' ) ) ( (lv_value_2_0= RULE_NUMBER ) ) )? ) ;
     public final EObject ruleEnumMember() throws RecognitionException {
         EObject current = null;
 
@@ -4031,19 +4069,19 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1553:28: ( ( ( (lv_name_0_0= RULE_ID ) ) ( ( (lv_assignment_1_0= '=' ) ) ( (lv_value_2_0= RULE_NUMBER ) ) )? ) )
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1554:1: ( ( (lv_name_0_0= RULE_ID ) ) ( ( (lv_assignment_1_0= '=' ) ) ( (lv_value_2_0= RULE_NUMBER ) ) )? )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1571:28: ( ( ( (lv_name_0_0= RULE_ID ) ) ( ( (lv_assignment_1_0= '=' ) ) ( (lv_value_2_0= RULE_NUMBER ) ) )? ) )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1572:1: ( ( (lv_name_0_0= RULE_ID ) ) ( ( (lv_assignment_1_0= '=' ) ) ( (lv_value_2_0= RULE_NUMBER ) ) )? )
             {
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1554:1: ( ( (lv_name_0_0= RULE_ID ) ) ( ( (lv_assignment_1_0= '=' ) ) ( (lv_value_2_0= RULE_NUMBER ) ) )? )
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1554:2: ( (lv_name_0_0= RULE_ID ) ) ( ( (lv_assignment_1_0= '=' ) ) ( (lv_value_2_0= RULE_NUMBER ) ) )?
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1572:1: ( ( (lv_name_0_0= RULE_ID ) ) ( ( (lv_assignment_1_0= '=' ) ) ( (lv_value_2_0= RULE_NUMBER ) ) )? )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1572:2: ( (lv_name_0_0= RULE_ID ) ) ( ( (lv_assignment_1_0= '=' ) ) ( (lv_value_2_0= RULE_NUMBER ) ) )?
             {
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1554:2: ( (lv_name_0_0= RULE_ID ) )
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1555:1: (lv_name_0_0= RULE_ID )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1572:2: ( (lv_name_0_0= RULE_ID ) )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1573:1: (lv_name_0_0= RULE_ID )
             {
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1555:1: (lv_name_0_0= RULE_ID )
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1556:3: lv_name_0_0= RULE_ID
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1573:1: (lv_name_0_0= RULE_ID )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1574:3: lv_name_0_0= RULE_ID
             {
-            lv_name_0_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleEnumMember3430); 
+            lv_name_0_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleEnumMember3453); 
 
             			newLeafNode(lv_name_0_0, grammarAccess.getEnumMemberAccess().getNameIDTerminalRuleCall_0_0()); 
             		
@@ -4063,24 +4101,24 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1572:2: ( ( (lv_assignment_1_0= '=' ) ) ( (lv_value_2_0= RULE_NUMBER ) ) )?
-            int alt29=2;
-            int LA29_0 = input.LA(1);
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1590:2: ( ( (lv_assignment_1_0= '=' ) ) ( (lv_value_2_0= RULE_NUMBER ) ) )?
+            int alt30=2;
+            int LA30_0 = input.LA(1);
 
-            if ( (LA29_0==26) ) {
-                alt29=1;
+            if ( (LA30_0==26) ) {
+                alt30=1;
             }
-            switch (alt29) {
+            switch (alt30) {
                 case 1 :
-                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1572:3: ( (lv_assignment_1_0= '=' ) ) ( (lv_value_2_0= RULE_NUMBER ) )
+                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1590:3: ( (lv_assignment_1_0= '=' ) ) ( (lv_value_2_0= RULE_NUMBER ) )
                     {
-                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1572:3: ( (lv_assignment_1_0= '=' ) )
-                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1573:1: (lv_assignment_1_0= '=' )
+                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1590:3: ( (lv_assignment_1_0= '=' ) )
+                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1591:1: (lv_assignment_1_0= '=' )
                     {
-                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1573:1: (lv_assignment_1_0= '=' )
-                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1574:3: lv_assignment_1_0= '='
+                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1591:1: (lv_assignment_1_0= '=' )
+                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1592:3: lv_assignment_1_0= '='
                     {
-                    lv_assignment_1_0=(Token)match(input,26,FOLLOW_26_in_ruleEnumMember3454); 
+                    lv_assignment_1_0=(Token)match(input,26,FOLLOW_26_in_ruleEnumMember3477); 
 
                             newLeafNode(lv_assignment_1_0, grammarAccess.getEnumMemberAccess().getAssignmentEqualsSignKeyword_1_0_0());
                         
@@ -4096,13 +4134,13 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1587:2: ( (lv_value_2_0= RULE_NUMBER ) )
-                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1588:1: (lv_value_2_0= RULE_NUMBER )
+                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1605:2: ( (lv_value_2_0= RULE_NUMBER ) )
+                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1606:1: (lv_value_2_0= RULE_NUMBER )
                     {
-                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1588:1: (lv_value_2_0= RULE_NUMBER )
-                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1589:3: lv_value_2_0= RULE_NUMBER
+                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1606:1: (lv_value_2_0= RULE_NUMBER )
+                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1607:3: lv_value_2_0= RULE_NUMBER
                     {
-                    lv_value_2_0=(Token)match(input,RULE_NUMBER,FOLLOW_RULE_NUMBER_in_ruleEnumMember3484); 
+                    lv_value_2_0=(Token)match(input,RULE_NUMBER,FOLLOW_RULE_NUMBER_in_ruleEnumMember3507); 
 
                     			newLeafNode(lv_value_2_0, grammarAccess.getEnumMemberAccess().getValueNUMBERTerminalRuleCall_1_1_0()); 
                     		
@@ -4149,7 +4187,7 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleComplexTypeLiteral"
-    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1613:1: entryRuleComplexTypeLiteral returns [EObject current=null] : iv_ruleComplexTypeLiteral= ruleComplexTypeLiteral EOF ;
+    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1631:1: entryRuleComplexTypeLiteral returns [EObject current=null] : iv_ruleComplexTypeLiteral= ruleComplexTypeLiteral EOF ;
     public final EObject entryRuleComplexTypeLiteral() throws RecognitionException {
         EObject current = null;
 
@@ -4157,17 +4195,17 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1614:2: (iv_ruleComplexTypeLiteral= ruleComplexTypeLiteral EOF )
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1615:2: iv_ruleComplexTypeLiteral= ruleComplexTypeLiteral EOF
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1632:2: (iv_ruleComplexTypeLiteral= ruleComplexTypeLiteral EOF )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1633:2: iv_ruleComplexTypeLiteral= ruleComplexTypeLiteral EOF
             {
              newCompositeNode(grammarAccess.getComplexTypeLiteralRule()); 
-            pushFollow(FOLLOW_ruleComplexTypeLiteral_in_entryRuleComplexTypeLiteral3527);
+            pushFollow(FOLLOW_ruleComplexTypeLiteral_in_entryRuleComplexTypeLiteral3550);
             iv_ruleComplexTypeLiteral=ruleComplexTypeLiteral();
 
             state._fsp--;
 
              current =iv_ruleComplexTypeLiteral; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleComplexTypeLiteral3537); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleComplexTypeLiteral3560); 
 
             }
 
@@ -4185,7 +4223,7 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleComplexTypeLiteral"
-    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1622:1: ruleComplexTypeLiteral returns [EObject current=null] : (otherlv_0= '{' ( (lv_members_1_0= ruleMember ) ) (otherlv_2= ',' ( (lv_members_3_0= ruleMember ) ) )* otherlv_4= '}' ) ;
+    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1640:1: ruleComplexTypeLiteral returns [EObject current=null] : (otherlv_0= '{' ( (lv_members_1_0= ruleMember ) ) (otherlv_2= ',' ( (lv_members_3_0= ruleMember ) ) )* otherlv_4= '}' ) ;
     public final EObject ruleComplexTypeLiteral() throws RecognitionException {
         EObject current = null;
 
@@ -4200,26 +4238,26 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1625:28: ( (otherlv_0= '{' ( (lv_members_1_0= ruleMember ) ) (otherlv_2= ',' ( (lv_members_3_0= ruleMember ) ) )* otherlv_4= '}' ) )
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1626:1: (otherlv_0= '{' ( (lv_members_1_0= ruleMember ) ) (otherlv_2= ',' ( (lv_members_3_0= ruleMember ) ) )* otherlv_4= '}' )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1643:28: ( (otherlv_0= '{' ( (lv_members_1_0= ruleMember ) ) (otherlv_2= ',' ( (lv_members_3_0= ruleMember ) ) )* otherlv_4= '}' ) )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1644:1: (otherlv_0= '{' ( (lv_members_1_0= ruleMember ) ) (otherlv_2= ',' ( (lv_members_3_0= ruleMember ) ) )* otherlv_4= '}' )
             {
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1626:1: (otherlv_0= '{' ( (lv_members_1_0= ruleMember ) ) (otherlv_2= ',' ( (lv_members_3_0= ruleMember ) ) )* otherlv_4= '}' )
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1626:3: otherlv_0= '{' ( (lv_members_1_0= ruleMember ) ) (otherlv_2= ',' ( (lv_members_3_0= ruleMember ) ) )* otherlv_4= '}'
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1644:1: (otherlv_0= '{' ( (lv_members_1_0= ruleMember ) ) (otherlv_2= ',' ( (lv_members_3_0= ruleMember ) ) )* otherlv_4= '}' )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1644:3: otherlv_0= '{' ( (lv_members_1_0= ruleMember ) ) (otherlv_2= ',' ( (lv_members_3_0= ruleMember ) ) )* otherlv_4= '}'
             {
-            otherlv_0=(Token)match(input,15,FOLLOW_15_in_ruleComplexTypeLiteral3574); 
+            otherlv_0=(Token)match(input,15,FOLLOW_15_in_ruleComplexTypeLiteral3597); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getComplexTypeLiteralAccess().getLeftCurlyBracketKeyword_0());
                 
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1630:1: ( (lv_members_1_0= ruleMember ) )
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1631:1: (lv_members_1_0= ruleMember )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1648:1: ( (lv_members_1_0= ruleMember ) )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1649:1: (lv_members_1_0= ruleMember )
             {
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1631:1: (lv_members_1_0= ruleMember )
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1632:3: lv_members_1_0= ruleMember
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1649:1: (lv_members_1_0= ruleMember )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1650:3: lv_members_1_0= ruleMember
             {
              
             	        newCompositeNode(grammarAccess.getComplexTypeLiteralAccess().getMembersMemberParserRuleCall_1_0()); 
             	    
-            pushFollow(FOLLOW_ruleMember_in_ruleComplexTypeLiteral3595);
+            pushFollow(FOLLOW_ruleMember_in_ruleComplexTypeLiteral3618);
             lv_members_1_0=ruleMember();
 
             state._fsp--;
@@ -4241,35 +4279,35 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1648:2: (otherlv_2= ',' ( (lv_members_3_0= ruleMember ) ) )*
-            loop30:
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1666:2: (otherlv_2= ',' ( (lv_members_3_0= ruleMember ) ) )*
+            loop31:
             do {
-                int alt30=2;
-                int LA30_0 = input.LA(1);
+                int alt31=2;
+                int LA31_0 = input.LA(1);
 
-                if ( (LA30_0==18) ) {
-                    alt30=1;
+                if ( (LA31_0==18) ) {
+                    alt31=1;
                 }
 
 
-                switch (alt30) {
+                switch (alt31) {
             	case 1 :
-            	    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1648:4: otherlv_2= ',' ( (lv_members_3_0= ruleMember ) )
+            	    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1666:4: otherlv_2= ',' ( (lv_members_3_0= ruleMember ) )
             	    {
-            	    otherlv_2=(Token)match(input,18,FOLLOW_18_in_ruleComplexTypeLiteral3608); 
+            	    otherlv_2=(Token)match(input,18,FOLLOW_18_in_ruleComplexTypeLiteral3631); 
 
             	        	newLeafNode(otherlv_2, grammarAccess.getComplexTypeLiteralAccess().getCommaKeyword_2_0());
             	        
-            	    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1652:1: ( (lv_members_3_0= ruleMember ) )
-            	    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1653:1: (lv_members_3_0= ruleMember )
+            	    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1670:1: ( (lv_members_3_0= ruleMember ) )
+            	    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1671:1: (lv_members_3_0= ruleMember )
             	    {
-            	    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1653:1: (lv_members_3_0= ruleMember )
-            	    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1654:3: lv_members_3_0= ruleMember
+            	    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1671:1: (lv_members_3_0= ruleMember )
+            	    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1672:3: lv_members_3_0= ruleMember
             	    {
             	     
             	    	        newCompositeNode(grammarAccess.getComplexTypeLiteralAccess().getMembersMemberParserRuleCall_2_1_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleMember_in_ruleComplexTypeLiteral3629);
+            	    pushFollow(FOLLOW_ruleMember_in_ruleComplexTypeLiteral3652);
             	    lv_members_3_0=ruleMember();
 
             	    state._fsp--;
@@ -4296,11 +4334,11 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop30;
+            	    break loop31;
                 }
             } while (true);
 
-            otherlv_4=(Token)match(input,16,FOLLOW_16_in_ruleComplexTypeLiteral3643); 
+            otherlv_4=(Token)match(input,16,FOLLOW_16_in_ruleComplexTypeLiteral3666); 
 
                 	newLeafNode(otherlv_4, grammarAccess.getComplexTypeLiteralAccess().getRightCurlyBracketKeyword_3());
                 
@@ -4325,7 +4363,7 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleIntrinsicType"
-    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1682:1: entryRuleIntrinsicType returns [EObject current=null] : iv_ruleIntrinsicType= ruleIntrinsicType EOF ;
+    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1700:1: entryRuleIntrinsicType returns [EObject current=null] : iv_ruleIntrinsicType= ruleIntrinsicType EOF ;
     public final EObject entryRuleIntrinsicType() throws RecognitionException {
         EObject current = null;
 
@@ -4333,17 +4371,17 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1683:2: (iv_ruleIntrinsicType= ruleIntrinsicType EOF )
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1684:2: iv_ruleIntrinsicType= ruleIntrinsicType EOF
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1701:2: (iv_ruleIntrinsicType= ruleIntrinsicType EOF )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1702:2: iv_ruleIntrinsicType= ruleIntrinsicType EOF
             {
              newCompositeNode(grammarAccess.getIntrinsicTypeRule()); 
-            pushFollow(FOLLOW_ruleIntrinsicType_in_entryRuleIntrinsicType3679);
+            pushFollow(FOLLOW_ruleIntrinsicType_in_entryRuleIntrinsicType3702);
             iv_ruleIntrinsicType=ruleIntrinsicType();
 
             state._fsp--;
 
              current =iv_ruleIntrinsicType; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleIntrinsicType3689); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleIntrinsicType3712); 
 
             }
 
@@ -4361,7 +4399,7 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleIntrinsicType"
-    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1691:1: ruleIntrinsicType returns [EObject current=null] : (this_StringType_0= ruleStringType | this_BooleanType_1= ruleBooleanType | this_NumericType_2= ruleNumericType ) ;
+    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1709:1: ruleIntrinsicType returns [EObject current=null] : (this_StringType_0= ruleStringType | this_BooleanType_1= ruleBooleanType | this_NumericType_2= ruleNumericType ) ;
     public final EObject ruleIntrinsicType() throws RecognitionException {
         EObject current = null;
 
@@ -4375,44 +4413,44 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1694:28: ( (this_StringType_0= ruleStringType | this_BooleanType_1= ruleBooleanType | this_NumericType_2= ruleNumericType ) )
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1695:1: (this_StringType_0= ruleStringType | this_BooleanType_1= ruleBooleanType | this_NumericType_2= ruleNumericType )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1712:28: ( (this_StringType_0= ruleStringType | this_BooleanType_1= ruleBooleanType | this_NumericType_2= ruleNumericType ) )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1713:1: (this_StringType_0= ruleStringType | this_BooleanType_1= ruleBooleanType | this_NumericType_2= ruleNumericType )
             {
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1695:1: (this_StringType_0= ruleStringType | this_BooleanType_1= ruleBooleanType | this_NumericType_2= ruleNumericType )
-            int alt31=3;
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1713:1: (this_StringType_0= ruleStringType | this_BooleanType_1= ruleBooleanType | this_NumericType_2= ruleNumericType )
+            int alt32=3;
             switch ( input.LA(1) ) {
             case 31:
                 {
-                alt31=1;
+                alt32=1;
                 }
                 break;
             case 32:
                 {
-                alt31=2;
+                alt32=2;
                 }
                 break;
             case 33:
             case 34:
             case 35:
                 {
-                alt31=3;
+                alt32=3;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 31, 0, input);
+                    new NoViableAltException("", 32, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt31) {
+            switch (alt32) {
                 case 1 :
-                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1696:5: this_StringType_0= ruleStringType
+                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1714:5: this_StringType_0= ruleStringType
                     {
                      
                             newCompositeNode(grammarAccess.getIntrinsicTypeAccess().getStringTypeParserRuleCall_0()); 
                         
-                    pushFollow(FOLLOW_ruleStringType_in_ruleIntrinsicType3736);
+                    pushFollow(FOLLOW_ruleStringType_in_ruleIntrinsicType3759);
                     this_StringType_0=ruleStringType();
 
                     state._fsp--;
@@ -4425,12 +4463,12 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1706:5: this_BooleanType_1= ruleBooleanType
+                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1724:5: this_BooleanType_1= ruleBooleanType
                     {
                      
                             newCompositeNode(grammarAccess.getIntrinsicTypeAccess().getBooleanTypeParserRuleCall_1()); 
                         
-                    pushFollow(FOLLOW_ruleBooleanType_in_ruleIntrinsicType3763);
+                    pushFollow(FOLLOW_ruleBooleanType_in_ruleIntrinsicType3786);
                     this_BooleanType_1=ruleBooleanType();
 
                     state._fsp--;
@@ -4443,12 +4481,12 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1716:5: this_NumericType_2= ruleNumericType
+                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1734:5: this_NumericType_2= ruleNumericType
                     {
                      
                             newCompositeNode(grammarAccess.getIntrinsicTypeAccess().getNumericTypeParserRuleCall_2()); 
                         
-                    pushFollow(FOLLOW_ruleNumericType_in_ruleIntrinsicType3790);
+                    pushFollow(FOLLOW_ruleNumericType_in_ruleIntrinsicType3813);
                     this_NumericType_2=ruleNumericType();
 
                     state._fsp--;
@@ -4481,7 +4519,7 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleStringType"
-    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1732:1: entryRuleStringType returns [EObject current=null] : iv_ruleStringType= ruleStringType EOF ;
+    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1750:1: entryRuleStringType returns [EObject current=null] : iv_ruleStringType= ruleStringType EOF ;
     public final EObject entryRuleStringType() throws RecognitionException {
         EObject current = null;
 
@@ -4489,17 +4527,17 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1733:2: (iv_ruleStringType= ruleStringType EOF )
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1734:2: iv_ruleStringType= ruleStringType EOF
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1751:2: (iv_ruleStringType= ruleStringType EOF )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1752:2: iv_ruleStringType= ruleStringType EOF
             {
              newCompositeNode(grammarAccess.getStringTypeRule()); 
-            pushFollow(FOLLOW_ruleStringType_in_entryRuleStringType3825);
+            pushFollow(FOLLOW_ruleStringType_in_entryRuleStringType3848);
             iv_ruleStringType=ruleStringType();
 
             state._fsp--;
 
              current =iv_ruleStringType; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleStringType3835); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleStringType3858); 
 
             }
 
@@ -4517,7 +4555,7 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleStringType"
-    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1741:1: ruleStringType returns [EObject current=null] : ( (lv_id_0_0= 'string' ) ) ;
+    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1759:1: ruleStringType returns [EObject current=null] : ( (lv_id_0_0= 'string' ) ) ;
     public final EObject ruleStringType() throws RecognitionException {
         EObject current = null;
 
@@ -4526,16 +4564,16 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1744:28: ( ( (lv_id_0_0= 'string' ) ) )
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1745:1: ( (lv_id_0_0= 'string' ) )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1762:28: ( ( (lv_id_0_0= 'string' ) ) )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1763:1: ( (lv_id_0_0= 'string' ) )
             {
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1745:1: ( (lv_id_0_0= 'string' ) )
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1746:1: (lv_id_0_0= 'string' )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1763:1: ( (lv_id_0_0= 'string' ) )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1764:1: (lv_id_0_0= 'string' )
             {
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1746:1: (lv_id_0_0= 'string' )
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1747:3: lv_id_0_0= 'string'
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1764:1: (lv_id_0_0= 'string' )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1765:3: lv_id_0_0= 'string'
             {
-            lv_id_0_0=(Token)match(input,31,FOLLOW_31_in_ruleStringType3877); 
+            lv_id_0_0=(Token)match(input,31,FOLLOW_31_in_ruleStringType3900); 
 
                     newLeafNode(lv_id_0_0, grammarAccess.getStringTypeAccess().getIdStringKeyword_0());
                 
@@ -4569,7 +4607,7 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleBooleanType"
-    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1768:1: entryRuleBooleanType returns [EObject current=null] : iv_ruleBooleanType= ruleBooleanType EOF ;
+    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1786:1: entryRuleBooleanType returns [EObject current=null] : iv_ruleBooleanType= ruleBooleanType EOF ;
     public final EObject entryRuleBooleanType() throws RecognitionException {
         EObject current = null;
 
@@ -4577,17 +4615,17 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1769:2: (iv_ruleBooleanType= ruleBooleanType EOF )
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1770:2: iv_ruleBooleanType= ruleBooleanType EOF
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1787:2: (iv_ruleBooleanType= ruleBooleanType EOF )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1788:2: iv_ruleBooleanType= ruleBooleanType EOF
             {
              newCompositeNode(grammarAccess.getBooleanTypeRule()); 
-            pushFollow(FOLLOW_ruleBooleanType_in_entryRuleBooleanType3925);
+            pushFollow(FOLLOW_ruleBooleanType_in_entryRuleBooleanType3948);
             iv_ruleBooleanType=ruleBooleanType();
 
             state._fsp--;
 
              current =iv_ruleBooleanType; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleBooleanType3935); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleBooleanType3958); 
 
             }
 
@@ -4605,7 +4643,7 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleBooleanType"
-    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1777:1: ruleBooleanType returns [EObject current=null] : ( (lv_id_0_0= 'boolean' ) ) ;
+    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1795:1: ruleBooleanType returns [EObject current=null] : ( (lv_id_0_0= 'boolean' ) ) ;
     public final EObject ruleBooleanType() throws RecognitionException {
         EObject current = null;
 
@@ -4614,16 +4652,16 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1780:28: ( ( (lv_id_0_0= 'boolean' ) ) )
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1781:1: ( (lv_id_0_0= 'boolean' ) )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1798:28: ( ( (lv_id_0_0= 'boolean' ) ) )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1799:1: ( (lv_id_0_0= 'boolean' ) )
             {
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1781:1: ( (lv_id_0_0= 'boolean' ) )
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1782:1: (lv_id_0_0= 'boolean' )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1799:1: ( (lv_id_0_0= 'boolean' ) )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1800:1: (lv_id_0_0= 'boolean' )
             {
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1782:1: (lv_id_0_0= 'boolean' )
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1783:3: lv_id_0_0= 'boolean'
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1800:1: (lv_id_0_0= 'boolean' )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1801:3: lv_id_0_0= 'boolean'
             {
-            lv_id_0_0=(Token)match(input,32,FOLLOW_32_in_ruleBooleanType3977); 
+            lv_id_0_0=(Token)match(input,32,FOLLOW_32_in_ruleBooleanType4000); 
 
                     newLeafNode(lv_id_0_0, grammarAccess.getBooleanTypeAccess().getIdBooleanKeyword_0());
                 
@@ -4657,7 +4695,7 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleNumericType"
-    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1804:1: entryRuleNumericType returns [EObject current=null] : iv_ruleNumericType= ruleNumericType EOF ;
+    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1822:1: entryRuleNumericType returns [EObject current=null] : iv_ruleNumericType= ruleNumericType EOF ;
     public final EObject entryRuleNumericType() throws RecognitionException {
         EObject current = null;
 
@@ -4665,17 +4703,17 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1805:2: (iv_ruleNumericType= ruleNumericType EOF )
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1806:2: iv_ruleNumericType= ruleNumericType EOF
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1823:2: (iv_ruleNumericType= ruleNumericType EOF )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1824:2: iv_ruleNumericType= ruleNumericType EOF
             {
              newCompositeNode(grammarAccess.getNumericTypeRule()); 
-            pushFollow(FOLLOW_ruleNumericType_in_entryRuleNumericType4025);
+            pushFollow(FOLLOW_ruleNumericType_in_entryRuleNumericType4048);
             iv_ruleNumericType=ruleNumericType();
 
             state._fsp--;
 
              current =iv_ruleNumericType; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleNumericType4035); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleNumericType4058); 
 
             }
 
@@ -4693,7 +4731,7 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleNumericType"
-    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1813:1: ruleNumericType returns [EObject current=null] : (this_IntegerType_0= ruleIntegerType | this_LongType_1= ruleLongType | this_DoubleType_2= ruleDoubleType ) ;
+    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1831:1: ruleNumericType returns [EObject current=null] : (this_IntegerType_0= ruleIntegerType | this_LongType_1= ruleLongType | this_DoubleType_2= ruleDoubleType ) ;
     public final EObject ruleNumericType() throws RecognitionException {
         EObject current = null;
 
@@ -4707,42 +4745,42 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1816:28: ( (this_IntegerType_0= ruleIntegerType | this_LongType_1= ruleLongType | this_DoubleType_2= ruleDoubleType ) )
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1817:1: (this_IntegerType_0= ruleIntegerType | this_LongType_1= ruleLongType | this_DoubleType_2= ruleDoubleType )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1834:28: ( (this_IntegerType_0= ruleIntegerType | this_LongType_1= ruleLongType | this_DoubleType_2= ruleDoubleType ) )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1835:1: (this_IntegerType_0= ruleIntegerType | this_LongType_1= ruleLongType | this_DoubleType_2= ruleDoubleType )
             {
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1817:1: (this_IntegerType_0= ruleIntegerType | this_LongType_1= ruleLongType | this_DoubleType_2= ruleDoubleType )
-            int alt32=3;
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1835:1: (this_IntegerType_0= ruleIntegerType | this_LongType_1= ruleLongType | this_DoubleType_2= ruleDoubleType )
+            int alt33=3;
             switch ( input.LA(1) ) {
             case 33:
                 {
-                alt32=1;
+                alt33=1;
                 }
                 break;
             case 34:
                 {
-                alt32=2;
+                alt33=2;
                 }
                 break;
             case 35:
                 {
-                alt32=3;
+                alt33=3;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 32, 0, input);
+                    new NoViableAltException("", 33, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt32) {
+            switch (alt33) {
                 case 1 :
-                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1818:5: this_IntegerType_0= ruleIntegerType
+                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1836:5: this_IntegerType_0= ruleIntegerType
                     {
                      
                             newCompositeNode(grammarAccess.getNumericTypeAccess().getIntegerTypeParserRuleCall_0()); 
                         
-                    pushFollow(FOLLOW_ruleIntegerType_in_ruleNumericType4082);
+                    pushFollow(FOLLOW_ruleIntegerType_in_ruleNumericType4105);
                     this_IntegerType_0=ruleIntegerType();
 
                     state._fsp--;
@@ -4755,12 +4793,12 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1828:5: this_LongType_1= ruleLongType
+                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1846:5: this_LongType_1= ruleLongType
                     {
                      
                             newCompositeNode(grammarAccess.getNumericTypeAccess().getLongTypeParserRuleCall_1()); 
                         
-                    pushFollow(FOLLOW_ruleLongType_in_ruleNumericType4109);
+                    pushFollow(FOLLOW_ruleLongType_in_ruleNumericType4132);
                     this_LongType_1=ruleLongType();
 
                     state._fsp--;
@@ -4773,12 +4811,12 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1838:5: this_DoubleType_2= ruleDoubleType
+                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1856:5: this_DoubleType_2= ruleDoubleType
                     {
                      
                             newCompositeNode(grammarAccess.getNumericTypeAccess().getDoubleTypeParserRuleCall_2()); 
                         
-                    pushFollow(FOLLOW_ruleDoubleType_in_ruleNumericType4136);
+                    pushFollow(FOLLOW_ruleDoubleType_in_ruleNumericType4159);
                     this_DoubleType_2=ruleDoubleType();
 
                     state._fsp--;
@@ -4811,7 +4849,7 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleIntegerType"
-    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1854:1: entryRuleIntegerType returns [EObject current=null] : iv_ruleIntegerType= ruleIntegerType EOF ;
+    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1872:1: entryRuleIntegerType returns [EObject current=null] : iv_ruleIntegerType= ruleIntegerType EOF ;
     public final EObject entryRuleIntegerType() throws RecognitionException {
         EObject current = null;
 
@@ -4819,17 +4857,17 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1855:2: (iv_ruleIntegerType= ruleIntegerType EOF )
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1856:2: iv_ruleIntegerType= ruleIntegerType EOF
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1873:2: (iv_ruleIntegerType= ruleIntegerType EOF )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1874:2: iv_ruleIntegerType= ruleIntegerType EOF
             {
              newCompositeNode(grammarAccess.getIntegerTypeRule()); 
-            pushFollow(FOLLOW_ruleIntegerType_in_entryRuleIntegerType4171);
+            pushFollow(FOLLOW_ruleIntegerType_in_entryRuleIntegerType4194);
             iv_ruleIntegerType=ruleIntegerType();
 
             state._fsp--;
 
              current =iv_ruleIntegerType; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleIntegerType4181); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleIntegerType4204); 
 
             }
 
@@ -4847,7 +4885,7 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleIntegerType"
-    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1863:1: ruleIntegerType returns [EObject current=null] : ( (lv_id_0_0= 'int' ) ) ;
+    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1881:1: ruleIntegerType returns [EObject current=null] : ( (lv_id_0_0= 'int' ) ) ;
     public final EObject ruleIntegerType() throws RecognitionException {
         EObject current = null;
 
@@ -4856,16 +4894,16 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1866:28: ( ( (lv_id_0_0= 'int' ) ) )
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1867:1: ( (lv_id_0_0= 'int' ) )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1884:28: ( ( (lv_id_0_0= 'int' ) ) )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1885:1: ( (lv_id_0_0= 'int' ) )
             {
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1867:1: ( (lv_id_0_0= 'int' ) )
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1868:1: (lv_id_0_0= 'int' )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1885:1: ( (lv_id_0_0= 'int' ) )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1886:1: (lv_id_0_0= 'int' )
             {
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1868:1: (lv_id_0_0= 'int' )
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1869:3: lv_id_0_0= 'int'
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1886:1: (lv_id_0_0= 'int' )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1887:3: lv_id_0_0= 'int'
             {
-            lv_id_0_0=(Token)match(input,33,FOLLOW_33_in_ruleIntegerType4223); 
+            lv_id_0_0=(Token)match(input,33,FOLLOW_33_in_ruleIntegerType4246); 
 
                     newLeafNode(lv_id_0_0, grammarAccess.getIntegerTypeAccess().getIdIntKeyword_0());
                 
@@ -4899,7 +4937,7 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleLongType"
-    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1890:1: entryRuleLongType returns [EObject current=null] : iv_ruleLongType= ruleLongType EOF ;
+    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1908:1: entryRuleLongType returns [EObject current=null] : iv_ruleLongType= ruleLongType EOF ;
     public final EObject entryRuleLongType() throws RecognitionException {
         EObject current = null;
 
@@ -4907,17 +4945,17 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1891:2: (iv_ruleLongType= ruleLongType EOF )
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1892:2: iv_ruleLongType= ruleLongType EOF
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1909:2: (iv_ruleLongType= ruleLongType EOF )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1910:2: iv_ruleLongType= ruleLongType EOF
             {
              newCompositeNode(grammarAccess.getLongTypeRule()); 
-            pushFollow(FOLLOW_ruleLongType_in_entryRuleLongType4271);
+            pushFollow(FOLLOW_ruleLongType_in_entryRuleLongType4294);
             iv_ruleLongType=ruleLongType();
 
             state._fsp--;
 
              current =iv_ruleLongType; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleLongType4281); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleLongType4304); 
 
             }
 
@@ -4935,7 +4973,7 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleLongType"
-    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1899:1: ruleLongType returns [EObject current=null] : ( (lv_id_0_0= 'long' ) ) ;
+    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1917:1: ruleLongType returns [EObject current=null] : ( (lv_id_0_0= 'long' ) ) ;
     public final EObject ruleLongType() throws RecognitionException {
         EObject current = null;
 
@@ -4944,16 +4982,16 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1902:28: ( ( (lv_id_0_0= 'long' ) ) )
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1903:1: ( (lv_id_0_0= 'long' ) )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1920:28: ( ( (lv_id_0_0= 'long' ) ) )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1921:1: ( (lv_id_0_0= 'long' ) )
             {
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1903:1: ( (lv_id_0_0= 'long' ) )
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1904:1: (lv_id_0_0= 'long' )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1921:1: ( (lv_id_0_0= 'long' ) )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1922:1: (lv_id_0_0= 'long' )
             {
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1904:1: (lv_id_0_0= 'long' )
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1905:3: lv_id_0_0= 'long'
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1922:1: (lv_id_0_0= 'long' )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1923:3: lv_id_0_0= 'long'
             {
-            lv_id_0_0=(Token)match(input,34,FOLLOW_34_in_ruleLongType4323); 
+            lv_id_0_0=(Token)match(input,34,FOLLOW_34_in_ruleLongType4346); 
 
                     newLeafNode(lv_id_0_0, grammarAccess.getLongTypeAccess().getIdLongKeyword_0());
                 
@@ -4987,7 +5025,7 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleDoubleType"
-    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1926:1: entryRuleDoubleType returns [EObject current=null] : iv_ruleDoubleType= ruleDoubleType EOF ;
+    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1944:1: entryRuleDoubleType returns [EObject current=null] : iv_ruleDoubleType= ruleDoubleType EOF ;
     public final EObject entryRuleDoubleType() throws RecognitionException {
         EObject current = null;
 
@@ -4995,17 +5033,17 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1927:2: (iv_ruleDoubleType= ruleDoubleType EOF )
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1928:2: iv_ruleDoubleType= ruleDoubleType EOF
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1945:2: (iv_ruleDoubleType= ruleDoubleType EOF )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1946:2: iv_ruleDoubleType= ruleDoubleType EOF
             {
              newCompositeNode(grammarAccess.getDoubleTypeRule()); 
-            pushFollow(FOLLOW_ruleDoubleType_in_entryRuleDoubleType4371);
+            pushFollow(FOLLOW_ruleDoubleType_in_entryRuleDoubleType4394);
             iv_ruleDoubleType=ruleDoubleType();
 
             state._fsp--;
 
              current =iv_ruleDoubleType; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleDoubleType4381); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleDoubleType4404); 
 
             }
 
@@ -5023,7 +5061,7 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleDoubleType"
-    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1935:1: ruleDoubleType returns [EObject current=null] : ( (lv_id_0_0= 'double' ) ) ;
+    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1953:1: ruleDoubleType returns [EObject current=null] : ( (lv_id_0_0= 'double' ) ) ;
     public final EObject ruleDoubleType() throws RecognitionException {
         EObject current = null;
 
@@ -5032,16 +5070,16 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1938:28: ( ( (lv_id_0_0= 'double' ) ) )
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1939:1: ( (lv_id_0_0= 'double' ) )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1956:28: ( ( (lv_id_0_0= 'double' ) ) )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1957:1: ( (lv_id_0_0= 'double' ) )
             {
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1939:1: ( (lv_id_0_0= 'double' ) )
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1940:1: (lv_id_0_0= 'double' )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1957:1: ( (lv_id_0_0= 'double' ) )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1958:1: (lv_id_0_0= 'double' )
             {
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1940:1: (lv_id_0_0= 'double' )
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1941:3: lv_id_0_0= 'double'
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1958:1: (lv_id_0_0= 'double' )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1959:3: lv_id_0_0= 'double'
             {
-            lv_id_0_0=(Token)match(input,35,FOLLOW_35_in_ruleDoubleType4423); 
+            lv_id_0_0=(Token)match(input,35,FOLLOW_35_in_ruleDoubleType4446); 
 
                     newLeafNode(lv_id_0_0, grammarAccess.getDoubleTypeAccess().getIdDoubleKeyword_0());
                 
@@ -5075,7 +5113,7 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleQualifiedName"
-    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1962:1: entryRuleQualifiedName returns [String current=null] : iv_ruleQualifiedName= ruleQualifiedName EOF ;
+    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1980:1: entryRuleQualifiedName returns [String current=null] : iv_ruleQualifiedName= ruleQualifiedName EOF ;
     public final String entryRuleQualifiedName() throws RecognitionException {
         String current = null;
 
@@ -5083,17 +5121,17 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1963:2: (iv_ruleQualifiedName= ruleQualifiedName EOF )
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1964:2: iv_ruleQualifiedName= ruleQualifiedName EOF
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1981:2: (iv_ruleQualifiedName= ruleQualifiedName EOF )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1982:2: iv_ruleQualifiedName= ruleQualifiedName EOF
             {
              newCompositeNode(grammarAccess.getQualifiedNameRule()); 
-            pushFollow(FOLLOW_ruleQualifiedName_in_entryRuleQualifiedName4472);
+            pushFollow(FOLLOW_ruleQualifiedName_in_entryRuleQualifiedName4495);
             iv_ruleQualifiedName=ruleQualifiedName();
 
             state._fsp--;
 
              current =iv_ruleQualifiedName.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleQualifiedName4483); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleQualifiedName4506); 
 
             }
 
@@ -5111,7 +5149,7 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleQualifiedName"
-    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1971:1: ruleQualifiedName returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* ) ;
+    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1989:1: ruleQualifiedName returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* ) ;
     public final AntlrDatatypeRuleToken ruleQualifiedName() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -5122,40 +5160,40 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1974:28: ( (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* ) )
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1975:1: (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1992:28: ( (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* ) )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1993:1: (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* )
             {
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1975:1: (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* )
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1975:6: this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )*
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1993:1: (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1993:6: this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )*
             {
-            this_ID_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleQualifiedName4523); 
+            this_ID_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleQualifiedName4546); 
 
             		current.merge(this_ID_0);
                 
              
                 newLeafNode(this_ID_0, grammarAccess.getQualifiedNameAccess().getIDTerminalRuleCall_0()); 
                 
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1982:1: (kw= '.' this_ID_2= RULE_ID )*
-            loop33:
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2000:1: (kw= '.' this_ID_2= RULE_ID )*
+            loop34:
             do {
-                int alt33=2;
-                int LA33_0 = input.LA(1);
+                int alt34=2;
+                int LA34_0 = input.LA(1);
 
-                if ( (LA33_0==36) ) {
-                    alt33=1;
+                if ( (LA34_0==36) ) {
+                    alt34=1;
                 }
 
 
-                switch (alt33) {
+                switch (alt34) {
             	case 1 :
-            	    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:1983:2: kw= '.' this_ID_2= RULE_ID
+            	    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2001:2: kw= '.' this_ID_2= RULE_ID
             	    {
-            	    kw=(Token)match(input,36,FOLLOW_36_in_ruleQualifiedName4542); 
+            	    kw=(Token)match(input,36,FOLLOW_36_in_ruleQualifiedName4565); 
 
             	            current.merge(kw);
             	            newLeafNode(kw, grammarAccess.getQualifiedNameAccess().getFullStopKeyword_1_0()); 
             	        
-            	    this_ID_2=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleQualifiedName4557); 
+            	    this_ID_2=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleQualifiedName4580); 
 
             	    		current.merge(this_ID_2);
             	        
@@ -5167,7 +5205,7 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop33;
+            	    break loop34;
                 }
             } while (true);
 
@@ -5192,7 +5230,7 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleSignedNumber"
-    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2003:1: entryRuleSignedNumber returns [String current=null] : iv_ruleSignedNumber= ruleSignedNumber EOF ;
+    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2021:1: entryRuleSignedNumber returns [String current=null] : iv_ruleSignedNumber= ruleSignedNumber EOF ;
     public final String entryRuleSignedNumber() throws RecognitionException {
         String current = null;
 
@@ -5200,17 +5238,17 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2004:2: (iv_ruleSignedNumber= ruleSignedNumber EOF )
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2005:2: iv_ruleSignedNumber= ruleSignedNumber EOF
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2022:2: (iv_ruleSignedNumber= ruleSignedNumber EOF )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2023:2: iv_ruleSignedNumber= ruleSignedNumber EOF
             {
              newCompositeNode(grammarAccess.getSignedNumberRule()); 
-            pushFollow(FOLLOW_ruleSignedNumber_in_entryRuleSignedNumber4605);
+            pushFollow(FOLLOW_ruleSignedNumber_in_entryRuleSignedNumber4628);
             iv_ruleSignedNumber=ruleSignedNumber();
 
             state._fsp--;
 
              current =iv_ruleSignedNumber.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleSignedNumber4616); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleSignedNumber4639); 
 
             }
 
@@ -5228,7 +5266,7 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSignedNumber"
-    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2012:1: ruleSignedNumber returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (kw= '-' )? this_NUMBER_1= RULE_NUMBER ) ;
+    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2030:1: ruleSignedNumber returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (kw= '-' )? this_NUMBER_1= RULE_NUMBER ) ;
     public final AntlrDatatypeRuleToken ruleSignedNumber() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -5238,24 +5276,24 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2015:28: ( ( (kw= '-' )? this_NUMBER_1= RULE_NUMBER ) )
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2016:1: ( (kw= '-' )? this_NUMBER_1= RULE_NUMBER )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2033:28: ( ( (kw= '-' )? this_NUMBER_1= RULE_NUMBER ) )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2034:1: ( (kw= '-' )? this_NUMBER_1= RULE_NUMBER )
             {
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2016:1: ( (kw= '-' )? this_NUMBER_1= RULE_NUMBER )
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2016:2: (kw= '-' )? this_NUMBER_1= RULE_NUMBER
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2034:1: ( (kw= '-' )? this_NUMBER_1= RULE_NUMBER )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2034:2: (kw= '-' )? this_NUMBER_1= RULE_NUMBER
             {
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2016:2: (kw= '-' )?
-            int alt34=2;
-            int LA34_0 = input.LA(1);
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2034:2: (kw= '-' )?
+            int alt35=2;
+            int LA35_0 = input.LA(1);
 
-            if ( (LA34_0==20) ) {
-                alt34=1;
+            if ( (LA35_0==20) ) {
+                alt35=1;
             }
-            switch (alt34) {
+            switch (alt35) {
                 case 1 :
-                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2017:2: kw= '-'
+                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2035:2: kw= '-'
                     {
-                    kw=(Token)match(input,20,FOLLOW_20_in_ruleSignedNumber4655); 
+                    kw=(Token)match(input,20,FOLLOW_20_in_ruleSignedNumber4678); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getSignedNumberAccess().getHyphenMinusKeyword_0()); 
@@ -5266,7 +5304,7 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
 
             }
 
-            this_NUMBER_1=(Token)match(input,RULE_NUMBER,FOLLOW_RULE_NUMBER_in_ruleSignedNumber4672); 
+            this_NUMBER_1=(Token)match(input,RULE_NUMBER,FOLLOW_RULE_NUMBER_in_ruleSignedNumber4695); 
 
             		current.merge(this_NUMBER_1);
                 
@@ -5294,7 +5332,7 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleHttpMethodType"
-    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2037:1: ruleHttpMethodType returns [Enumerator current=null] : ( (enumLiteral_0= 'get' ) | (enumLiteral_1= 'put' ) | (enumLiteral_2= 'post' ) | (enumLiteral_3= 'delete' ) | (enumLiteral_4= 'patch' ) ) ;
+    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2055:1: ruleHttpMethodType returns [Enumerator current=null] : ( (enumLiteral_0= 'get' ) | (enumLiteral_1= 'put' ) | (enumLiteral_2= 'post' ) | (enumLiteral_3= 'delete' ) | (enumLiteral_4= 'patch' ) ) ;
     public final Enumerator ruleHttpMethodType() throws RecognitionException {
         Enumerator current = null;
 
@@ -5306,52 +5344,52 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2039:28: ( ( (enumLiteral_0= 'get' ) | (enumLiteral_1= 'put' ) | (enumLiteral_2= 'post' ) | (enumLiteral_3= 'delete' ) | (enumLiteral_4= 'patch' ) ) )
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2040:1: ( (enumLiteral_0= 'get' ) | (enumLiteral_1= 'put' ) | (enumLiteral_2= 'post' ) | (enumLiteral_3= 'delete' ) | (enumLiteral_4= 'patch' ) )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2057:28: ( ( (enumLiteral_0= 'get' ) | (enumLiteral_1= 'put' ) | (enumLiteral_2= 'post' ) | (enumLiteral_3= 'delete' ) | (enumLiteral_4= 'patch' ) ) )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2058:1: ( (enumLiteral_0= 'get' ) | (enumLiteral_1= 'put' ) | (enumLiteral_2= 'post' ) | (enumLiteral_3= 'delete' ) | (enumLiteral_4= 'patch' ) )
             {
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2040:1: ( (enumLiteral_0= 'get' ) | (enumLiteral_1= 'put' ) | (enumLiteral_2= 'post' ) | (enumLiteral_3= 'delete' ) | (enumLiteral_4= 'patch' ) )
-            int alt35=5;
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2058:1: ( (enumLiteral_0= 'get' ) | (enumLiteral_1= 'put' ) | (enumLiteral_2= 'post' ) | (enumLiteral_3= 'delete' ) | (enumLiteral_4= 'patch' ) )
+            int alt36=5;
             switch ( input.LA(1) ) {
             case 37:
                 {
-                alt35=1;
+                alt36=1;
                 }
                 break;
             case 38:
                 {
-                alt35=2;
+                alt36=2;
                 }
                 break;
             case 39:
                 {
-                alt35=3;
+                alt36=3;
                 }
                 break;
             case 40:
                 {
-                alt35=4;
+                alt36=4;
                 }
                 break;
             case 41:
                 {
-                alt35=5;
+                alt36=5;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 35, 0, input);
+                    new NoViableAltException("", 36, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt35) {
+            switch (alt36) {
                 case 1 :
-                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2040:2: (enumLiteral_0= 'get' )
+                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2058:2: (enumLiteral_0= 'get' )
                     {
-                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2040:2: (enumLiteral_0= 'get' )
-                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2040:4: enumLiteral_0= 'get'
+                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2058:2: (enumLiteral_0= 'get' )
+                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2058:4: enumLiteral_0= 'get'
                     {
-                    enumLiteral_0=(Token)match(input,37,FOLLOW_37_in_ruleHttpMethodType4731); 
+                    enumLiteral_0=(Token)match(input,37,FOLLOW_37_in_ruleHttpMethodType4754); 
 
                             current = grammarAccess.getHttpMethodTypeAccess().getGetEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_0, grammarAccess.getHttpMethodTypeAccess().getGetEnumLiteralDeclaration_0()); 
@@ -5363,12 +5401,12 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2046:6: (enumLiteral_1= 'put' )
+                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2064:6: (enumLiteral_1= 'put' )
                     {
-                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2046:6: (enumLiteral_1= 'put' )
-                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2046:8: enumLiteral_1= 'put'
+                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2064:6: (enumLiteral_1= 'put' )
+                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2064:8: enumLiteral_1= 'put'
                     {
-                    enumLiteral_1=(Token)match(input,38,FOLLOW_38_in_ruleHttpMethodType4748); 
+                    enumLiteral_1=(Token)match(input,38,FOLLOW_38_in_ruleHttpMethodType4771); 
 
                             current = grammarAccess.getHttpMethodTypeAccess().getPutEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_1, grammarAccess.getHttpMethodTypeAccess().getPutEnumLiteralDeclaration_1()); 
@@ -5380,12 +5418,12 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2052:6: (enumLiteral_2= 'post' )
+                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2070:6: (enumLiteral_2= 'post' )
                     {
-                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2052:6: (enumLiteral_2= 'post' )
-                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2052:8: enumLiteral_2= 'post'
+                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2070:6: (enumLiteral_2= 'post' )
+                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2070:8: enumLiteral_2= 'post'
                     {
-                    enumLiteral_2=(Token)match(input,39,FOLLOW_39_in_ruleHttpMethodType4765); 
+                    enumLiteral_2=(Token)match(input,39,FOLLOW_39_in_ruleHttpMethodType4788); 
 
                             current = grammarAccess.getHttpMethodTypeAccess().getPostEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_2, grammarAccess.getHttpMethodTypeAccess().getPostEnumLiteralDeclaration_2()); 
@@ -5397,12 +5435,12 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2058:6: (enumLiteral_3= 'delete' )
+                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2076:6: (enumLiteral_3= 'delete' )
                     {
-                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2058:6: (enumLiteral_3= 'delete' )
-                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2058:8: enumLiteral_3= 'delete'
+                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2076:6: (enumLiteral_3= 'delete' )
+                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2076:8: enumLiteral_3= 'delete'
                     {
-                    enumLiteral_3=(Token)match(input,40,FOLLOW_40_in_ruleHttpMethodType4782); 
+                    enumLiteral_3=(Token)match(input,40,FOLLOW_40_in_ruleHttpMethodType4805); 
 
                             current = grammarAccess.getHttpMethodTypeAccess().getDeleteEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_3, grammarAccess.getHttpMethodTypeAccess().getDeleteEnumLiteralDeclaration_3()); 
@@ -5414,12 +5452,12 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2064:6: (enumLiteral_4= 'patch' )
+                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2082:6: (enumLiteral_4= 'patch' )
                     {
-                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2064:6: (enumLiteral_4= 'patch' )
-                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2064:8: enumLiteral_4= 'patch'
+                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2082:6: (enumLiteral_4= 'patch' )
+                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2082:8: enumLiteral_4= 'patch'
                     {
-                    enumLiteral_4=(Token)match(input,41,FOLLOW_41_in_ruleHttpMethodType4799); 
+                    enumLiteral_4=(Token)match(input,41,FOLLOW_41_in_ruleHttpMethodType4822); 
 
                             current = grammarAccess.getHttpMethodTypeAccess().getPatchEnumLiteralDeclaration_4().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_4, grammarAccess.getHttpMethodTypeAccess().getPatchEnumLiteralDeclaration_4()); 
@@ -5451,7 +5489,7 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleBooleanValue"
-    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2074:1: ruleBooleanValue returns [Enumerator current=null] : ( (enumLiteral_0= 'true' ) | (enumLiteral_1= 'false' ) ) ;
+    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2092:1: ruleBooleanValue returns [Enumerator current=null] : ( (enumLiteral_0= 'true' ) | (enumLiteral_1= 'false' ) ) ;
     public final Enumerator ruleBooleanValue() throws RecognitionException {
         Enumerator current = null;
 
@@ -5460,33 +5498,33 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2076:28: ( ( (enumLiteral_0= 'true' ) | (enumLiteral_1= 'false' ) ) )
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2077:1: ( (enumLiteral_0= 'true' ) | (enumLiteral_1= 'false' ) )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2094:28: ( ( (enumLiteral_0= 'true' ) | (enumLiteral_1= 'false' ) ) )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2095:1: ( (enumLiteral_0= 'true' ) | (enumLiteral_1= 'false' ) )
             {
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2077:1: ( (enumLiteral_0= 'true' ) | (enumLiteral_1= 'false' ) )
-            int alt36=2;
-            int LA36_0 = input.LA(1);
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2095:1: ( (enumLiteral_0= 'true' ) | (enumLiteral_1= 'false' ) )
+            int alt37=2;
+            int LA37_0 = input.LA(1);
 
-            if ( (LA36_0==42) ) {
-                alt36=1;
+            if ( (LA37_0==42) ) {
+                alt37=1;
             }
-            else if ( (LA36_0==43) ) {
-                alt36=2;
+            else if ( (LA37_0==43) ) {
+                alt37=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 36, 0, input);
+                    new NoViableAltException("", 37, 0, input);
 
                 throw nvae;
             }
-            switch (alt36) {
+            switch (alt37) {
                 case 1 :
-                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2077:2: (enumLiteral_0= 'true' )
+                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2095:2: (enumLiteral_0= 'true' )
                     {
-                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2077:2: (enumLiteral_0= 'true' )
-                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2077:4: enumLiteral_0= 'true'
+                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2095:2: (enumLiteral_0= 'true' )
+                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2095:4: enumLiteral_0= 'true'
                     {
-                    enumLiteral_0=(Token)match(input,42,FOLLOW_42_in_ruleBooleanValue4844); 
+                    enumLiteral_0=(Token)match(input,42,FOLLOW_42_in_ruleBooleanValue4867); 
 
                             current = grammarAccess.getBooleanValueAccess().getTrueEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_0, grammarAccess.getBooleanValueAccess().getTrueEnumLiteralDeclaration_0()); 
@@ -5498,12 +5536,12 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2083:6: (enumLiteral_1= 'false' )
+                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2101:6: (enumLiteral_1= 'false' )
                     {
-                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2083:6: (enumLiteral_1= 'false' )
-                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2083:8: enumLiteral_1= 'false'
+                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2101:6: (enumLiteral_1= 'false' )
+                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:2101:8: enumLiteral_1= 'false'
                     {
-                    enumLiteral_1=(Token)match(input,43,FOLLOW_43_in_ruleBooleanValue4861); 
+                    enumLiteral_1=(Token)match(input,43,FOLLOW_43_in_ruleBooleanValue4884); 
 
                             current = grammarAccess.getBooleanValueAccess().getFalseEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_1, grammarAccess.getBooleanValueAccess().getFalseEnumLiteralDeclaration_1()); 
@@ -5536,20 +5574,20 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
     // Delegated rules
 
 
-    protected DFA22 dfa22 = new DFA22(this);
-    static final String DFA22_eotS =
+    protected DFA23 dfa23 = new DFA23(this);
+    static final String DFA23_eotS =
         "\12\uffff";
-    static final String DFA22_eofS =
+    static final String DFA23_eofS =
         "\1\uffff\1\10\5\11\3\uffff";
-    static final String DFA22_minS =
+    static final String DFA23_minS =
         "\1\4\6\17\3\uffff";
-    static final String DFA22_maxS =
+    static final String DFA23_maxS =
         "\1\43\6\51\3\uffff";
-    static final String DFA22_acceptS =
+    static final String DFA23_acceptS =
         "\7\uffff\1\3\1\1\1\2";
-    static final String DFA22_specialS =
+    static final String DFA23_specialS =
         "\12\uffff}>";
-    static final String[] DFA22_transitionS = {
+    static final String[] DFA23_transitionS = {
             "\1\1\32\uffff\1\2\1\3\1\4\1\5\1\6",
             "\5\10\1\uffff\3\10\2\uffff\1\10\1\7\11\uffff\5\10",
             "\5\11\1\uffff\3\11\2\uffff\1\11\1\7\11\uffff\5\11",
@@ -5562,37 +5600,37 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
             ""
     };
 
-    static final short[] DFA22_eot = DFA.unpackEncodedString(DFA22_eotS);
-    static final short[] DFA22_eof = DFA.unpackEncodedString(DFA22_eofS);
-    static final char[] DFA22_min = DFA.unpackEncodedStringToUnsignedChars(DFA22_minS);
-    static final char[] DFA22_max = DFA.unpackEncodedStringToUnsignedChars(DFA22_maxS);
-    static final short[] DFA22_accept = DFA.unpackEncodedString(DFA22_acceptS);
-    static final short[] DFA22_special = DFA.unpackEncodedString(DFA22_specialS);
-    static final short[][] DFA22_transition;
+    static final short[] DFA23_eot = DFA.unpackEncodedString(DFA23_eotS);
+    static final short[] DFA23_eof = DFA.unpackEncodedString(DFA23_eofS);
+    static final char[] DFA23_min = DFA.unpackEncodedStringToUnsignedChars(DFA23_minS);
+    static final char[] DFA23_max = DFA.unpackEncodedStringToUnsignedChars(DFA23_maxS);
+    static final short[] DFA23_accept = DFA.unpackEncodedString(DFA23_acceptS);
+    static final short[] DFA23_special = DFA.unpackEncodedString(DFA23_specialS);
+    static final short[][] DFA23_transition;
 
     static {
-        int numStates = DFA22_transitionS.length;
-        DFA22_transition = new short[numStates][];
+        int numStates = DFA23_transitionS.length;
+        DFA23_transition = new short[numStates][];
         for (int i=0; i<numStates; i++) {
-            DFA22_transition[i] = DFA.unpackEncodedString(DFA22_transitionS[i]);
+            DFA23_transition[i] = DFA.unpackEncodedString(DFA23_transitionS[i]);
         }
     }
 
-    class DFA22 extends DFA {
+    class DFA23 extends DFA {
 
-        public DFA22(BaseRecognizer recognizer) {
+        public DFA23(BaseRecognizer recognizer) {
             this.recognizer = recognizer;
-            this.decisionNumber = 22;
-            this.eot = DFA22_eot;
-            this.eof = DFA22_eof;
-            this.min = DFA22_min;
-            this.max = DFA22_max;
-            this.accept = DFA22_accept;
-            this.special = DFA22_special;
-            this.transition = DFA22_transition;
+            this.decisionNumber = 23;
+            this.eot = DFA23_eot;
+            this.eof = DFA23_eof;
+            this.min = DFA23_min;
+            this.max = DFA23_max;
+            this.accept = DFA23_accept;
+            this.special = DFA23_special;
+            this.transition = DFA23_transition;
         }
         public String getDescription() {
-            return "1123:1: (this_UserType_0= ruleUserType | this_IntrinsicType_1= ruleIntrinsicType | this_ArrayType_2= ruleArrayType )";
+            return "1141:1: (this_UserType_0= ruleUserType | this_IntrinsicType_1= ruleIntrinsicType | this_ArrayType_2= ruleArrayType )";
         }
     }
  
@@ -5669,111 +5707,112 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_ruleBlockType_in_ruleBodyBlock1883 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleResponseBlock_in_entryRuleResponseBlock1919 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleResponseBlock1929 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_23_in_ruleResponseBlock1975 = new BitSet(new long[]{0x0000000F81008092L});
-    public static final BitSet FOLLOW_RULE_INTEGER_in_ruleResponseBlock1992 = new BitSet(new long[]{0x0000000F81008012L});
-    public static final BitSet FOLLOW_24_in_ruleResponseBlock2011 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleResponseBlock2031 = new BitSet(new long[]{0x0000000F80008012L});
-    public static final BitSet FOLLOW_ruleBlockType_in_ruleResponseBlock2054 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBlockType_in_entryRuleBlockType2091 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleBlockType2101 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleType_in_ruleBlockType2148 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleComplexTypeLiteral_in_ruleBlockType2175 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleMember_in_entryRuleMember2210 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleMember2220 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleMember2264 = new BitSet(new long[]{0x0000000002000000L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleMember2284 = new BitSet(new long[]{0x0000000002000000L});
-    public static final BitSet FOLLOW_25_in_ruleMember2304 = new BitSet(new long[]{0x0000000F80000010L});
-    public static final BitSet FOLLOW_ruleType_in_ruleMember2325 = new BitSet(new long[]{0x0000000004000002L});
-    public static final BitSet FOLLOW_26_in_ruleMember2338 = new BitSet(new long[]{0x00000C0000100140L});
-    public static final BitSet FOLLOW_ruleLiteral_in_ruleMember2359 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleType_in_entryRuleType2397 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleType2407 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleUserType_in_ruleType2454 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleIntrinsicType_in_ruleType2481 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleArrayType_in_ruleType2508 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleArrayType_in_entryRuleArrayType2543 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleArrayType2553 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleUserType_in_ruleArrayType2601 = new BitSet(new long[]{0x0000000008000000L});
-    public static final BitSet FOLLOW_ruleIntrinsicType_in_ruleArrayType2620 = new BitSet(new long[]{0x0000000008000000L});
-    public static final BitSet FOLLOW_27_in_ruleArrayType2641 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleUserType_in_entryRuleUserType2690 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleUserType2700 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleUserType2744 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleUserTypeDeclaration_in_entryRuleUserTypeDeclaration2779 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleUserTypeDeclaration2789 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleComplexTypeDeclaration_in_ruleUserTypeDeclaration2836 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEnumTypeDeclaration_in_ruleUserTypeDeclaration2863 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleComplexTypeDeclaration_in_entryRuleComplexTypeDeclaration2898 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleComplexTypeDeclaration2908 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_28_in_ruleComplexTypeDeclaration2951 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleComplexTypeDeclaration2981 = new BitSet(new long[]{0x0000000F80008012L});
-    public static final BitSet FOLLOW_ruleComplexTypeLiteral_in_ruleComplexTypeDeclaration3007 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEnumTypeDeclaration_in_entryRuleEnumTypeDeclaration3044 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleEnumTypeDeclaration3054 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_29_in_ruleEnumTypeDeclaration3097 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleEnumTypeDeclaration3127 = new BitSet(new long[]{0x0000000040008002L});
-    public static final BitSet FOLLOW_30_in_ruleEnumTypeDeclaration3145 = new BitSet(new long[]{0x0000000200000000L});
-    public static final BitSet FOLLOW_ruleIntegerType_in_ruleEnumTypeDeclaration3166 = new BitSet(new long[]{0x0000000000008002L});
-    public static final BitSet FOLLOW_ruleEnumTypeLiteral_in_ruleEnumTypeDeclaration3189 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEnumTypeLiteral_in_entryRuleEnumTypeLiteral3226 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleEnumTypeLiteral3236 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_15_in_ruleEnumTypeLiteral3273 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_ruleEnumMember_in_ruleEnumTypeLiteral3294 = new BitSet(new long[]{0x0000000000050000L});
-    public static final BitSet FOLLOW_18_in_ruleEnumTypeLiteral3307 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_ruleEnumMember_in_ruleEnumTypeLiteral3328 = new BitSet(new long[]{0x0000000000050000L});
-    public static final BitSet FOLLOW_16_in_ruleEnumTypeLiteral3342 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEnumMember_in_entryRuleEnumMember3378 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleEnumMember3388 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleEnumMember3430 = new BitSet(new long[]{0x0000000004000002L});
-    public static final BitSet FOLLOW_26_in_ruleEnumMember3454 = new BitSet(new long[]{0x0000000000000100L});
-    public static final BitSet FOLLOW_RULE_NUMBER_in_ruleEnumMember3484 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleComplexTypeLiteral_in_entryRuleComplexTypeLiteral3527 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleComplexTypeLiteral3537 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_15_in_ruleComplexTypeLiteral3574 = new BitSet(new long[]{0x0000000000000050L});
-    public static final BitSet FOLLOW_ruleMember_in_ruleComplexTypeLiteral3595 = new BitSet(new long[]{0x0000000000050000L});
-    public static final BitSet FOLLOW_18_in_ruleComplexTypeLiteral3608 = new BitSet(new long[]{0x0000000000000050L});
-    public static final BitSet FOLLOW_ruleMember_in_ruleComplexTypeLiteral3629 = new BitSet(new long[]{0x0000000000050000L});
-    public static final BitSet FOLLOW_16_in_ruleComplexTypeLiteral3643 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleIntrinsicType_in_entryRuleIntrinsicType3679 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleIntrinsicType3689 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleStringType_in_ruleIntrinsicType3736 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBooleanType_in_ruleIntrinsicType3763 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleNumericType_in_ruleIntrinsicType3790 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleStringType_in_entryRuleStringType3825 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleStringType3835 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_31_in_ruleStringType3877 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBooleanType_in_entryRuleBooleanType3925 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleBooleanType3935 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_32_in_ruleBooleanType3977 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleNumericType_in_entryRuleNumericType4025 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleNumericType4035 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleIntegerType_in_ruleNumericType4082 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleLongType_in_ruleNumericType4109 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDoubleType_in_ruleNumericType4136 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleIntegerType_in_entryRuleIntegerType4171 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleIntegerType4181 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_33_in_ruleIntegerType4223 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleLongType_in_entryRuleLongType4271 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleLongType4281 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_34_in_ruleLongType4323 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDoubleType_in_entryRuleDoubleType4371 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleDoubleType4381 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_35_in_ruleDoubleType4423 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleQualifiedName_in_entryRuleQualifiedName4472 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleQualifiedName4483 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleQualifiedName4523 = new BitSet(new long[]{0x0000001000000002L});
-    public static final BitSet FOLLOW_36_in_ruleQualifiedName4542 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleQualifiedName4557 = new BitSet(new long[]{0x0000001000000002L});
-    public static final BitSet FOLLOW_ruleSignedNumber_in_entryRuleSignedNumber4605 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleSignedNumber4616 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_20_in_ruleSignedNumber4655 = new BitSet(new long[]{0x0000000000000100L});
-    public static final BitSet FOLLOW_RULE_NUMBER_in_ruleSignedNumber4672 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_37_in_ruleHttpMethodType4731 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_38_in_ruleHttpMethodType4748 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_39_in_ruleHttpMethodType4765 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_40_in_ruleHttpMethodType4782 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_41_in_ruleHttpMethodType4799 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_42_in_ruleBooleanValue4844 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_43_in_ruleBooleanValue4861 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_23_in_ruleResponseBlock1975 = new BitSet(new long[]{0x0000000F810080D2L});
+    public static final BitSet FOLLOW_RULE_INTEGER_in_ruleResponseBlock1992 = new BitSet(new long[]{0x0000000F81008052L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleResponseBlock2015 = new BitSet(new long[]{0x0000000F81008012L});
+    public static final BitSet FOLLOW_24_in_ruleResponseBlock2034 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleResponseBlock2054 = new BitSet(new long[]{0x0000000F80008012L});
+    public static final BitSet FOLLOW_ruleBlockType_in_ruleResponseBlock2077 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBlockType_in_entryRuleBlockType2114 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleBlockType2124 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleType_in_ruleBlockType2171 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleComplexTypeLiteral_in_ruleBlockType2198 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleMember_in_entryRuleMember2233 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleMember2243 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleMember2287 = new BitSet(new long[]{0x0000000002000000L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleMember2307 = new BitSet(new long[]{0x0000000002000000L});
+    public static final BitSet FOLLOW_25_in_ruleMember2327 = new BitSet(new long[]{0x0000000F80000010L});
+    public static final BitSet FOLLOW_ruleType_in_ruleMember2348 = new BitSet(new long[]{0x0000000004000002L});
+    public static final BitSet FOLLOW_26_in_ruleMember2361 = new BitSet(new long[]{0x00000C0000100140L});
+    public static final BitSet FOLLOW_ruleLiteral_in_ruleMember2382 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleType_in_entryRuleType2420 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleType2430 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleUserType_in_ruleType2477 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleIntrinsicType_in_ruleType2504 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleArrayType_in_ruleType2531 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleArrayType_in_entryRuleArrayType2566 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleArrayType2576 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleUserType_in_ruleArrayType2624 = new BitSet(new long[]{0x0000000008000000L});
+    public static final BitSet FOLLOW_ruleIntrinsicType_in_ruleArrayType2643 = new BitSet(new long[]{0x0000000008000000L});
+    public static final BitSet FOLLOW_27_in_ruleArrayType2664 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleUserType_in_entryRuleUserType2713 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleUserType2723 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleUserType2767 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleUserTypeDeclaration_in_entryRuleUserTypeDeclaration2802 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleUserTypeDeclaration2812 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleComplexTypeDeclaration_in_ruleUserTypeDeclaration2859 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEnumTypeDeclaration_in_ruleUserTypeDeclaration2886 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleComplexTypeDeclaration_in_entryRuleComplexTypeDeclaration2921 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleComplexTypeDeclaration2931 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_28_in_ruleComplexTypeDeclaration2974 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleComplexTypeDeclaration3004 = new BitSet(new long[]{0x0000000F80008012L});
+    public static final BitSet FOLLOW_ruleComplexTypeLiteral_in_ruleComplexTypeDeclaration3030 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEnumTypeDeclaration_in_entryRuleEnumTypeDeclaration3067 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleEnumTypeDeclaration3077 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_29_in_ruleEnumTypeDeclaration3120 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleEnumTypeDeclaration3150 = new BitSet(new long[]{0x0000000040008002L});
+    public static final BitSet FOLLOW_30_in_ruleEnumTypeDeclaration3168 = new BitSet(new long[]{0x0000000200000000L});
+    public static final BitSet FOLLOW_ruleIntegerType_in_ruleEnumTypeDeclaration3189 = new BitSet(new long[]{0x0000000000008002L});
+    public static final BitSet FOLLOW_ruleEnumTypeLiteral_in_ruleEnumTypeDeclaration3212 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEnumTypeLiteral_in_entryRuleEnumTypeLiteral3249 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleEnumTypeLiteral3259 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_15_in_ruleEnumTypeLiteral3296 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_ruleEnumMember_in_ruleEnumTypeLiteral3317 = new BitSet(new long[]{0x0000000000050000L});
+    public static final BitSet FOLLOW_18_in_ruleEnumTypeLiteral3330 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_ruleEnumMember_in_ruleEnumTypeLiteral3351 = new BitSet(new long[]{0x0000000000050000L});
+    public static final BitSet FOLLOW_16_in_ruleEnumTypeLiteral3365 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEnumMember_in_entryRuleEnumMember3401 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleEnumMember3411 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleEnumMember3453 = new BitSet(new long[]{0x0000000004000002L});
+    public static final BitSet FOLLOW_26_in_ruleEnumMember3477 = new BitSet(new long[]{0x0000000000000100L});
+    public static final BitSet FOLLOW_RULE_NUMBER_in_ruleEnumMember3507 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleComplexTypeLiteral_in_entryRuleComplexTypeLiteral3550 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleComplexTypeLiteral3560 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_15_in_ruleComplexTypeLiteral3597 = new BitSet(new long[]{0x0000000000000050L});
+    public static final BitSet FOLLOW_ruleMember_in_ruleComplexTypeLiteral3618 = new BitSet(new long[]{0x0000000000050000L});
+    public static final BitSet FOLLOW_18_in_ruleComplexTypeLiteral3631 = new BitSet(new long[]{0x0000000000000050L});
+    public static final BitSet FOLLOW_ruleMember_in_ruleComplexTypeLiteral3652 = new BitSet(new long[]{0x0000000000050000L});
+    public static final BitSet FOLLOW_16_in_ruleComplexTypeLiteral3666 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleIntrinsicType_in_entryRuleIntrinsicType3702 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleIntrinsicType3712 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleStringType_in_ruleIntrinsicType3759 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBooleanType_in_ruleIntrinsicType3786 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNumericType_in_ruleIntrinsicType3813 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleStringType_in_entryRuleStringType3848 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleStringType3858 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_31_in_ruleStringType3900 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBooleanType_in_entryRuleBooleanType3948 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleBooleanType3958 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_32_in_ruleBooleanType4000 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNumericType_in_entryRuleNumericType4048 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleNumericType4058 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleIntegerType_in_ruleNumericType4105 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleLongType_in_ruleNumericType4132 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleDoubleType_in_ruleNumericType4159 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleIntegerType_in_entryRuleIntegerType4194 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleIntegerType4204 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_33_in_ruleIntegerType4246 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleLongType_in_entryRuleLongType4294 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleLongType4304 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_34_in_ruleLongType4346 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleDoubleType_in_entryRuleDoubleType4394 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleDoubleType4404 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_35_in_ruleDoubleType4446 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleQualifiedName_in_entryRuleQualifiedName4495 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleQualifiedName4506 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleQualifiedName4546 = new BitSet(new long[]{0x0000001000000002L});
+    public static final BitSet FOLLOW_36_in_ruleQualifiedName4565 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleQualifiedName4580 = new BitSet(new long[]{0x0000001000000002L});
+    public static final BitSet FOLLOW_ruleSignedNumber_in_entryRuleSignedNumber4628 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleSignedNumber4639 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_20_in_ruleSignedNumber4678 = new BitSet(new long[]{0x0000000000000100L});
+    public static final BitSet FOLLOW_RULE_NUMBER_in_ruleSignedNumber4695 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_37_in_ruleHttpMethodType4754 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_38_in_ruleHttpMethodType4771 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_39_in_ruleHttpMethodType4788 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_40_in_ruleHttpMethodType4805 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_41_in_ruleHttpMethodType4822 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_42_in_ruleBooleanValue4867 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_43_in_ruleBooleanValue4884 = new BitSet(new long[]{0x0000000000000002L});
 
 }

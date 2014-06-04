@@ -7,9 +7,6 @@ import java.util.ArrayList;
 import java.util.Map;
 import java.util.Set;
 
-import org.eclipse.core.resources.IResourceChangeEvent;
-import org.eclipse.core.resources.IResourceChangeListener;
-import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.xtext.builder.BuilderParticipant;

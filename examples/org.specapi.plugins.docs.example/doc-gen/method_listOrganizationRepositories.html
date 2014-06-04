@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
+<html class="no-js" lang="en" >
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GithubAPI /orgs/:org/repos</title>
+
+  <!-- If you are using CSS version, only link these 2 files, you may add app.css to use for your overrides if you like. -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/foundation.css">
+
+  <!-- If you are using the gem version, you need this only -->
+  <link rel="stylesheet" href="css/app.css">
+
+  <script src="js/vendor/modernizr.js"></script>
+
+</head>
+<body>
+<div class="off-canvas-wrap" data-offcanvas>
+  <div class="inner-wrap">
+    <nav class="tab-bar">
+      <section class="left-small">
+        <a class="left-off-canvas-toggle menu-icon"><span></span></a>
+      </section>
+    
+      <section class="middle tab-bar-section">
+        <h1 class="title">GithubAPI</h1>
+      </section>
+    </nav>
+    <aside class="left-off-canvas-menu show-for-small-only">
+      <ul class="off-canvas-list">
+        <li><label>Methods</label></li>
+        <li ><a href="method_listRepositories.html">List Repositories</a></li>
+        <li ><a href="method_listUserRepositories.html">List User Repositories</a></li>
+        <li class="active"><a href="method_listOrganizationRepositories.html">List Organization Repositories</a></li>
+        <li ><a href="method_listAllPublicRepositories.html">List All Public Repositories</a></li>
+        <li ><a href="method_createRepository.html">Create Repository</a></li>
+        <li ><a href="method_createOrganizationRepository.html">Create Organization Repository</a></li>
+        <li><label>Entities</label></li>
+        <li ><a href="Repository.html">Repository</a></li>
+        <li ><a href="RepositoryOwner.html">RepositoryOwner</a></li>
+        <li ><a href="RepositoryPermissions.html">RepositoryPermissions</a></li>
+        <li ><a href="CreateRepositoryInput.html">CreateRepositoryInput</a></li>
+        <li ><a href="ErrorMessage.html">ErrorMessage</a></li>
+        <li ><a href="Error.html">Error</a></li>
+        <li><label>Enums</label></li>
+     </ul>
+    </aside>
+    <section class="main-section">
+      <div class="row">
+        <div class="large-12 columns">
+        <h2>List Organization Repositories</h2>
+        <p><span class="label label-info">GET</span> <b>/orgs/:org/repos</b></p>
+        <p>List repositories for the specified org.</p>
+        <p><b>Resource URL</b><p>
+        <p>https://api.github.com/orgs/:org/repos</p>
+        <div class="table-responsive">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Parameter</th>
+                <th>Comments</th>
+              </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td>org</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>type</td>
+              <td>Can be one of all, public, private, forks, sources, member. Default: all</td>
+            </tr>
+            <tr>
+              <td>sort</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>direction</td>
+              <td></td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+        <h3>Response</h3>
+        <p></p>
+        <h4>200 OK</h4>
+        <pre class="prettyprint lang-js">
+        <a href="#">Repository[]</a>
+        </pre>
+        </div>
+      </div>
+    </section>
+    <a class="exit-off-canvas"></a>
+  </div>
+</div>
+<script src="js/vendor/jquery.js"></script>
+<script src="js/foundation.min.js"></script>
+<script>
+    $(document).foundation();
+</script>
+</body>
+</html>

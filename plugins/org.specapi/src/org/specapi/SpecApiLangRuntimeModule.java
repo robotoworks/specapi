@@ -12,8 +12,8 @@ import org.specapi.plugins.PluginLoader;
  */
 public class SpecApiLangRuntimeModule extends org.specapi.AbstractSpecApiLangRuntimeModule {
 	
-	public Class<? extends org.specapi.ModelUtil> bindModelUtil() {
-		return org.specapi.ModelUtil.class;
+	public Class<? extends org.specapi.SpecApiModelUtils> bindSpecApiModelUtils() {
+		return org.specapi.SpecApiModelUtils.class;
 	}
 	
 	public Class<? extends OutputConfigurationProvider> bindOutputConfigurationProvider() {

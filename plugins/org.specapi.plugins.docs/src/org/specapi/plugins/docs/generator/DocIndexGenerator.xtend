@@ -1,7 +1,7 @@
 package org.specapi.plugins.docs.generator
 
 import com.google.inject.Inject
-import org.specapi.ModelUtil
+import org.specapi.SpecApiModelUtils
 import org.specapi.specapiLang.HttpMethod
 import org.specapi.specapiLang.SpecApiDocument
 import org.specapi.specapiLang.Api
@@ -9,7 +9,7 @@ import org.specapi.specapiLang.UserTypeDeclaration
 import org.specapi.generator.DocCommentParser
 
 class DocIndexGenerator extends HtmlPageGenerator {
-	@Inject extension ModelUtil modelUtil
+	@Inject extension SpecApiModelUtils modelUtil
     @Inject DocCommentParser commentParser
     
     new(Api api, SpecApiDocument model) {

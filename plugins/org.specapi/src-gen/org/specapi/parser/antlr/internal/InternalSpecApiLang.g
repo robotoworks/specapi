@@ -923,9 +923,27 @@ ruleResponseBlock returns [EObject current=null]
 	    }
 
 )
-)?(	otherlv_3='mixin' 
+)?(
+(
+		lv_message_3_0=RULE_STRING
+		{
+			newLeafNode(lv_message_3_0, grammarAccess.getResponseBlockAccess().getMessageSTRINGTerminalRuleCall_3_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getResponseBlockRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"message",
+        		lv_message_3_0, 
+        		"STRING");
+	    }
+
+)
+)?(	otherlv_4='mixin' 
     {
-    	newLeafNode(otherlv_3, grammarAccess.getResponseBlockAccess().getMixinKeyword_3_0());
+    	newLeafNode(otherlv_4, grammarAccess.getResponseBlockAccess().getMixinKeyword_4_0());
     }
 (
 (
@@ -934,25 +952,25 @@ ruleResponseBlock returns [EObject current=null]
 	            $current = createModelElement(grammarAccess.getResponseBlockRule());
 	        }
         }
-	otherlv_4=RULE_ID
+	otherlv_5=RULE_ID
 	{
-		newLeafNode(otherlv_4, grammarAccess.getResponseBlockAccess().getSuperTypeComplexTypeDeclarationCrossReference_3_1_0()); 
+		newLeafNode(otherlv_5, grammarAccess.getResponseBlockAccess().getSuperTypeComplexTypeDeclarationCrossReference_4_1_0()); 
 	}
 
 )
 ))?(
 (
 		{ 
-	        newCompositeNode(grammarAccess.getResponseBlockAccess().getTypeBlockTypeParserRuleCall_4_0()); 
+	        newCompositeNode(grammarAccess.getResponseBlockAccess().getTypeBlockTypeParserRuleCall_5_0()); 
 	    }
-		lv_type_5_0=ruleBlockType		{
+		lv_type_6_0=ruleBlockType		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getResponseBlockRule());
 	        }
        		set(
        			$current, 
        			"type",
-        		lv_type_5_0, 
+        		lv_type_6_0, 
         		"BlockType");
 	        afterParserOrEnumRuleCall();
 	    }

@@ -7,13 +7,12 @@ import org.eclipse.xtext.junit4.XtextRunner
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.specapi.SpecApiLangInjectorProvider
+import org.specapi.plugins.OutputConfigurationMerger
+import org.specapi.plugins.PluginConfig
 import org.specapi.plugins.PluginConfigParser
 import org.specapi.plugins.UserPluginConfig
 
 import static org.junit.Assert.*
-import org.eclipse.xtext.generator.OutputConfiguration
-import org.specapi.plugins.PluginConfig
-import org.specapi.plugins.OutputConfigurationMerger
 
 @RunWith(typeof(XtextRunner))
 @InjectWith(typeof(SpecApiLangInjectorProvider))

@@ -3,7 +3,7 @@ package org.specapi.plugins.square.retrofit.generator
 import org.specapi.specapiLang.SpecApiDocument
 import org.specapi.specapiLang.UserTypeDeclaration
 import com.google.inject.Inject
-import org.specapi.ModelUtil
+import org.specapi.SpecApiModelUtils
 import java.util.HashSet
 import com.google.common.collect.Sets
 import org.specapi.specapiLang.ComplexTypeDeclaration
@@ -12,7 +12,7 @@ import org.specapi.specapiLang.ArrayType
 
 class ApiEntityGenerator {
     
-     @Inject extension ModelUtil modelUtil
+     @Inject extension SpecApiModelUtils modelUtil
     
     var HashSet<String> imports = Sets.newHashSet()
        

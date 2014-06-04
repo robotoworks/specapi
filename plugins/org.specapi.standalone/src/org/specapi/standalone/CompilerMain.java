@@ -7,8 +7,6 @@ import java.util.Iterator;
 
 import org.specapi.SpecApiLangStandaloneSetup;
 
-import com.google.inject.Injector;
-
 public class CompilerMain {
 	
 	public static void main(String[] args) {

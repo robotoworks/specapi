@@ -68,7 +68,7 @@ public class SpecApiLangParser extends AbstractContentAssistParser {
 					put(grammarAccess.getLiteralAccess().getGroup_2(), "rule__Literal__Group_2__0");
 					put(grammarAccess.getBodyBlockAccess().getGroup(), "rule__BodyBlock__Group__0");
 					put(grammarAccess.getResponseBlockAccess().getGroup(), "rule__ResponseBlock__Group__0");
-					put(grammarAccess.getResponseBlockAccess().getGroup_3(), "rule__ResponseBlock__Group_3__0");
+					put(grammarAccess.getResponseBlockAccess().getGroup_4(), "rule__ResponseBlock__Group_4__0");
 					put(grammarAccess.getMemberAccess().getGroup(), "rule__Member__Group__0");
 					put(grammarAccess.getMemberAccess().getGroup_3(), "rule__Member__Group_3__0");
 					put(grammarAccess.getArrayTypeAccess().getGroup(), "rule__ArrayType__Group__0");
@@ -104,8 +104,9 @@ public class SpecApiLangParser extends AbstractContentAssistParser {
 					put(grammarAccess.getLiteralAccess().getLiteralAssignment_2_1(), "rule__Literal__LiteralAssignment_2_1");
 					put(grammarAccess.getBodyBlockAccess().getTypeAssignment_1(), "rule__BodyBlock__TypeAssignment_1");
 					put(grammarAccess.getResponseBlockAccess().getCodeAssignment_2(), "rule__ResponseBlock__CodeAssignment_2");
-					put(grammarAccess.getResponseBlockAccess().getSuperTypeAssignment_3_1(), "rule__ResponseBlock__SuperTypeAssignment_3_1");
-					put(grammarAccess.getResponseBlockAccess().getTypeAssignment_4(), "rule__ResponseBlock__TypeAssignment_4");
+					put(grammarAccess.getResponseBlockAccess().getMessageAssignment_3(), "rule__ResponseBlock__MessageAssignment_3");
+					put(grammarAccess.getResponseBlockAccess().getSuperTypeAssignment_4_1(), "rule__ResponseBlock__SuperTypeAssignment_4_1");
+					put(grammarAccess.getResponseBlockAccess().getTypeAssignment_5(), "rule__ResponseBlock__TypeAssignment_5");
 					put(grammarAccess.getMemberAccess().getNameAssignment_0(), "rule__Member__NameAssignment_0");
 					put(grammarAccess.getMemberAccess().getTypeAssignment_2(), "rule__Member__TypeAssignment_2");
 					put(grammarAccess.getMemberAccess().getDefaultValueAssignment_3_1(), "rule__Member__DefaultValueAssignment_3_1");

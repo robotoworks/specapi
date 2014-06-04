@@ -23,6 +23,7 @@ import org.specapi.specapiLang.SpecapiLangPackage;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.specapi.specapiLang.impl.ResponseBlockImpl#getCode <em>Code</em>}</li>
+ *   <li>{@link org.specapi.specapiLang.impl.ResponseBlockImpl#getMessage <em>Message</em>}</li>
  *   <li>{@link org.specapi.specapiLang.impl.ResponseBlockImpl#getSuperType <em>Super Type</em>}</li>
  *   <li>{@link org.specapi.specapiLang.impl.ResponseBlockImpl#getType <em>Type</em>}</li>
  * </ul>
@@ -51,6 +52,26 @@ public class ResponseBlockImpl extends HttpMethodBlockImpl implements ResponseBl
    * @ordered
    */
   protected int code = CODE_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getMessage() <em>Message</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getMessage()
+   * @generated
+   * @ordered
+   */
+  protected static final String MESSAGE_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getMessage() <em>Message</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getMessage()
+   * @generated
+   * @ordered
+   */
+  protected String message = MESSAGE_EDEFAULT;
 
   /**
    * The cached value of the '{@link #getSuperType() <em>Super Type</em>}' reference.
@@ -114,6 +135,29 @@ public class ResponseBlockImpl extends HttpMethodBlockImpl implements ResponseBl
     code = newCode;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, SpecapiLangPackage.RESPONSE_BLOCK__CODE, oldCode, code));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getMessage()
+  {
+    return message;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setMessage(String newMessage)
+  {
+    String oldMessage = message;
+    message = newMessage;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, SpecapiLangPackage.RESPONSE_BLOCK__MESSAGE, oldMessage, message));
   }
 
   /**
@@ -235,6 +279,8 @@ public class ResponseBlockImpl extends HttpMethodBlockImpl implements ResponseBl
     {
       case SpecapiLangPackage.RESPONSE_BLOCK__CODE:
         return getCode();
+      case SpecapiLangPackage.RESPONSE_BLOCK__MESSAGE:
+        return getMessage();
       case SpecapiLangPackage.RESPONSE_BLOCK__SUPER_TYPE:
         if (resolve) return getSuperType();
         return basicGetSuperType();
@@ -256,6 +302,9 @@ public class ResponseBlockImpl extends HttpMethodBlockImpl implements ResponseBl
     {
       case SpecapiLangPackage.RESPONSE_BLOCK__CODE:
         setCode((Integer)newValue);
+        return;
+      case SpecapiLangPackage.RESPONSE_BLOCK__MESSAGE:
+        setMessage((String)newValue);
         return;
       case SpecapiLangPackage.RESPONSE_BLOCK__SUPER_TYPE:
         setSuperType((ComplexTypeDeclaration)newValue);
@@ -280,6 +329,9 @@ public class ResponseBlockImpl extends HttpMethodBlockImpl implements ResponseBl
       case SpecapiLangPackage.RESPONSE_BLOCK__CODE:
         setCode(CODE_EDEFAULT);
         return;
+      case SpecapiLangPackage.RESPONSE_BLOCK__MESSAGE:
+        setMessage(MESSAGE_EDEFAULT);
+        return;
       case SpecapiLangPackage.RESPONSE_BLOCK__SUPER_TYPE:
         setSuperType((ComplexTypeDeclaration)null);
         return;
@@ -302,6 +354,8 @@ public class ResponseBlockImpl extends HttpMethodBlockImpl implements ResponseBl
     {
       case SpecapiLangPackage.RESPONSE_BLOCK__CODE:
         return code != CODE_EDEFAULT;
+      case SpecapiLangPackage.RESPONSE_BLOCK__MESSAGE:
+        return MESSAGE_EDEFAULT == null ? message != null : !MESSAGE_EDEFAULT.equals(message);
       case SpecapiLangPackage.RESPONSE_BLOCK__SUPER_TYPE:
         return superType != null;
       case SpecapiLangPackage.RESPONSE_BLOCK__TYPE:
@@ -323,6 +377,8 @@ public class ResponseBlockImpl extends HttpMethodBlockImpl implements ResponseBl
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (code: ");
     result.append(code);
+    result.append(", message: ");
+    result.append(message);
     result.append(')');
     return result.toString();
   }

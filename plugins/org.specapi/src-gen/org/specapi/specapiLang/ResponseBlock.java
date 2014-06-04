@@ -12,6 +12,7 @@ package org.specapi.specapiLang;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.specapi.specapiLang.ResponseBlock#getCode <em>Code</em>}</li>
+ *   <li>{@link org.specapi.specapiLang.ResponseBlock#getMessage <em>Message</em>}</li>
  *   <li>{@link org.specapi.specapiLang.ResponseBlock#getSuperType <em>Super Type</em>}</li>
  *   <li>{@link org.specapi.specapiLang.ResponseBlock#getType <em>Type</em>}</li>
  * </ul>
@@ -48,6 +49,32 @@ public interface ResponseBlock extends HttpMethodBlock
    * @generated
    */
   void setCode(int value);
+
+  /**
+   * Returns the value of the '<em><b>Message</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Message</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Message</em>' attribute.
+   * @see #setMessage(String)
+   * @see org.specapi.specapiLang.SpecapiLangPackage#getResponseBlock_Message()
+   * @model
+   * @generated
+   */
+  String getMessage();
+
+  /**
+   * Sets the value of the '{@link org.specapi.specapiLang.ResponseBlock#getMessage <em>Message</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Message</em>' attribute.
+   * @see #getMessage()
+   * @generated
+   */
+  void setMessage(String value);
 
   /**
    * Returns the value of the '<em><b>Super Type</b></em>' reference.

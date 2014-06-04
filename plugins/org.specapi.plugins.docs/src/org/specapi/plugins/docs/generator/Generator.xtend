@@ -5,17 +5,17 @@ import com.google.inject.Injector
 import org.eclipse.emf.ecore.resource.Resource
 import org.eclipse.xtext.generator.IFileSystemAccess
 import org.eclipse.xtext.generator.IGenerator
-import org.specapi.ModelUtil
 import org.specapi.plugins.docs.Plugin
 import org.specapi.specapiLang.Api
 import org.specapi.specapiLang.ComplexTypeDeclaration
 import org.specapi.specapiLang.EnumTypeDeclaration
 import org.specapi.specapiLang.HttpMethod
 import org.specapi.specapiLang.SpecApiDocument
+import org.specapi.SpecApiModelUtils
 
 class Generator implements IGenerator {
 	
-	@Inject extension ModelUtil modelUtil
+	@Inject extension SpecApiModelUtils modelUtil
 	@Inject Injector injector;
 	
 	override doGenerate(Resource resource, IFileSystemAccess fsa) {

@@ -5,7 +5,7 @@ import org.specapi.specapiLang.Api
 import static extension org.specapi.util.SpecApiStringExtensions.*
 import org.specapi.specapiLang.HttpMethod
 import com.google.inject.Inject
-import org.specapi.ModelUtil
+import org.specapi.SpecApiModelUtils
 import org.specapi.specapiLang.ComplexTypeLiteral
 import org.specapi.specapiLang.Type
 import com.google.common.collect.Sets
@@ -15,7 +15,7 @@ import com.google.common.collect.Lists
 
 class ApiClientGenerator {
 
-    @Inject extension ModelUtil modelUtil
+    @Inject extension SpecApiModelUtils modelUtil
     
     var HashSet<String> imports = Sets.newHashSet()
     	 

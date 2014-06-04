@@ -4,7 +4,7 @@ import javax.inject.Inject
 import org.eclipse.emf.ecore.resource.Resource
 import org.eclipse.xtext.generator.IFileSystemAccess
 import org.eclipse.xtext.generator.IGenerator
-import org.specapi.ModelUtil
+import org.specapi.SpecApiModelUtils
 import org.specapi.generator.DocCommentParser
 import org.specapi.plugins.swagger.Plugin
 import org.specapi.specapiLang.Api
@@ -25,7 +25,7 @@ import org.specapi.specapiLang.SpecApiDocument
 class Generator implements IGenerator {
     
     @Inject DocCommentParser commentParser
-    @Inject extension ModelUtil model
+    @Inject extension SpecApiModelUtils model
     
     override doGenerate(Resource input, IFileSystemAccess fsa) {
         
@@ -248,7 +248,7 @@ class Generator implements IGenerator {
             if(type instanceof ComplexTypeLiteral) {
                 return method.name.pascalize + "Response"
             } else {
-                return (type as Type).innerSignature
+                return (type as Type).signature
             }
         }
     }
@@ -264,7 +264,7 @@ class Generator implements IGenerator {
             if(type instanceof ComplexTypeLiteral) {
                 return method.name.pascalize + "Body"
             } else {
-                return (type as Type).innerSignature
+                return (type as Type).signature
             }
         }
     }
@@ -325,7 +325,7 @@ class Generator implements IGenerator {
             "type": "array",
             "items": {
                 «IF type.elementType instanceof IntrinsicType»
-                "type": "«type.innerSignature»"
+                "type": "«type.signature»"
                 «ELSE»
                 "$ref": "«type.innerSignature»"
                 «ENDIF»

@@ -52,6 +52,7 @@
     </genClasses>
     <genClasses ecoreClass="SpecApiLang.ecore#//ResponseBlock">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpecApiLang.ecore#//ResponseBlock/code"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpecApiLang.ecore#//ResponseBlock/message"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SpecApiLang.ecore#//ResponseBlock/superType"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpecApiLang.ecore#//ResponseBlock/type"/>
     </genClasses>

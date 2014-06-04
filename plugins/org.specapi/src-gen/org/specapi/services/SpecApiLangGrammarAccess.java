@@ -488,19 +488,22 @@ public class SpecApiLangGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cResponseKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cCodeAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cCodeINTEGERTerminalRuleCall_2_0 = (RuleCall)cCodeAssignment_2.eContents().get(0);
-		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
-		private final Keyword cMixinKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
-		private final Assignment cSuperTypeAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
-		private final CrossReference cSuperTypeComplexTypeDeclarationCrossReference_3_1_0 = (CrossReference)cSuperTypeAssignment_3_1.eContents().get(0);
-		private final RuleCall cSuperTypeComplexTypeDeclarationIDTerminalRuleCall_3_1_0_1 = (RuleCall)cSuperTypeComplexTypeDeclarationCrossReference_3_1_0.eContents().get(1);
-		private final Assignment cTypeAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cTypeBlockTypeParserRuleCall_4_0 = (RuleCall)cTypeAssignment_4.eContents().get(0);
+		private final Assignment cMessageAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cMessageSTRINGTerminalRuleCall_3_0 = (RuleCall)cMessageAssignment_3.eContents().get(0);
+		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
+		private final Keyword cMixinKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
+		private final Assignment cSuperTypeAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
+		private final CrossReference cSuperTypeComplexTypeDeclarationCrossReference_4_1_0 = (CrossReference)cSuperTypeAssignment_4_1.eContents().get(0);
+		private final RuleCall cSuperTypeComplexTypeDeclarationIDTerminalRuleCall_4_1_0_1 = (RuleCall)cSuperTypeComplexTypeDeclarationCrossReference_4_1_0.eContents().get(1);
+		private final Assignment cTypeAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cTypeBlockTypeParserRuleCall_5_0 = (RuleCall)cTypeAssignment_5.eContents().get(0);
 		
 		//ResponseBlock:
-		//	{ResponseBlock} "response" code=INTEGER? ("mixin" superType=[ComplexTypeDeclaration])? type=BlockType?;
+		//	{ResponseBlock} "response" code=INTEGER? message=STRING? ("mixin" superType=[ComplexTypeDeclaration])?
+		//	type=BlockType?;
 		public ParserRule getRule() { return rule; }
 
-		//{ResponseBlock} "response" code=INTEGER? ("mixin" superType=[ComplexTypeDeclaration])? type=BlockType?
+		//{ResponseBlock} "response" code=INTEGER? message=STRING? ("mixin" superType=[ComplexTypeDeclaration])? type=BlockType?
 		public Group getGroup() { return cGroup; }
 
 		//{ResponseBlock}
@@ -515,26 +518,32 @@ public class SpecApiLangGrammarAccess extends AbstractGrammarElementFinder {
 		//INTEGER
 		public RuleCall getCodeINTEGERTerminalRuleCall_2_0() { return cCodeINTEGERTerminalRuleCall_2_0; }
 
+		//message=STRING?
+		public Assignment getMessageAssignment_3() { return cMessageAssignment_3; }
+
+		//STRING
+		public RuleCall getMessageSTRINGTerminalRuleCall_3_0() { return cMessageSTRINGTerminalRuleCall_3_0; }
+
 		//("mixin" superType=[ComplexTypeDeclaration])?
-		public Group getGroup_3() { return cGroup_3; }
+		public Group getGroup_4() { return cGroup_4; }
 
 		//"mixin"
-		public Keyword getMixinKeyword_3_0() { return cMixinKeyword_3_0; }
+		public Keyword getMixinKeyword_4_0() { return cMixinKeyword_4_0; }
 
 		//superType=[ComplexTypeDeclaration]
-		public Assignment getSuperTypeAssignment_3_1() { return cSuperTypeAssignment_3_1; }
+		public Assignment getSuperTypeAssignment_4_1() { return cSuperTypeAssignment_4_1; }
 
 		//[ComplexTypeDeclaration]
-		public CrossReference getSuperTypeComplexTypeDeclarationCrossReference_3_1_0() { return cSuperTypeComplexTypeDeclarationCrossReference_3_1_0; }
+		public CrossReference getSuperTypeComplexTypeDeclarationCrossReference_4_1_0() { return cSuperTypeComplexTypeDeclarationCrossReference_4_1_0; }
 
 		//ID
-		public RuleCall getSuperTypeComplexTypeDeclarationIDTerminalRuleCall_3_1_0_1() { return cSuperTypeComplexTypeDeclarationIDTerminalRuleCall_3_1_0_1; }
+		public RuleCall getSuperTypeComplexTypeDeclarationIDTerminalRuleCall_4_1_0_1() { return cSuperTypeComplexTypeDeclarationIDTerminalRuleCall_4_1_0_1; }
 
 		//type=BlockType?
-		public Assignment getTypeAssignment_4() { return cTypeAssignment_4; }
+		public Assignment getTypeAssignment_5() { return cTypeAssignment_5; }
 
 		//BlockType
-		public RuleCall getTypeBlockTypeParserRuleCall_4_0() { return cTypeBlockTypeParserRuleCall_4_0; }
+		public RuleCall getTypeBlockTypeParserRuleCall_5_0() { return cTypeBlockTypeParserRuleCall_5_0; }
 	}
 
 	public class BlockTypeElements extends AbstractParserRuleElementFinder {
@@ -1395,7 +1404,8 @@ public class SpecApiLangGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//ResponseBlock:
-	//	{ResponseBlock} "response" code=INTEGER? ("mixin" superType=[ComplexTypeDeclaration])? type=BlockType?;
+	//	{ResponseBlock} "response" code=INTEGER? message=STRING? ("mixin" superType=[ComplexTypeDeclaration])?
+	//	type=BlockType?;
 	public ResponseBlockElements getResponseBlockAccess() {
 		return (pResponseBlock != null) ? pResponseBlock : (pResponseBlock = new ResponseBlockElements());
 	}

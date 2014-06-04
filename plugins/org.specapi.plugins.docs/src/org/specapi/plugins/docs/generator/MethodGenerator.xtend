@@ -1,32 +1,32 @@
 package org.specapi.plugins.docs.generator
 
 import com.google.inject.Inject
-import org.specapi.ModelUtil
+import org.specapi.SpecApiModelUtils
 import org.specapi.generator.DocCommentParser
 import org.specapi.generator.DocComments
 import org.specapi.specapiLang.Api
 import org.specapi.specapiLang.BodyBlock
 import org.specapi.specapiLang.ComplexTypeLiteral
-import org.specapi.specapiLang.ArrayType
 import org.specapi.specapiLang.HttpMethod
 import org.specapi.specapiLang.Member
-import org.specapi.specapiLang.SpecApiDocument
 import org.specapi.specapiLang.ResponseBlock
+import org.specapi.specapiLang.SpecApiDocument
 import org.specapi.specapiLang.Type
 import org.specapi.specapiLang.UserTypeDeclaration
 
 import static extension org.specapi.util.SpecApiStringExtensions.*
+import java.util.List
 
 class MethodGenerator extends HtmlPageGenerator {
 	
-	@Extension @Inject ModelUtil modelUtil
+	@Extension @Inject SpecApiModelUtils modelUtil
     @Inject DocCommentParser commentParser
     
     @Property HttpMethod method
     
     @Property DocComments comments
     
-    @Property ResponseBlock response
+    @Property List<ResponseBlock> responses
     
     @Property BodyBlock body
     
@@ -36,7 +36,7 @@ class MethodGenerator extends HtmlPageGenerator {
     }
     
 	override generate() {
-        this.response = method.responseBlock
+        this.responses = method.responseBlocks
         this.body = method.body
 		super.generate()
 	}
@@ -75,13 +75,15 @@ class MethodGenerator extends HtmlPageGenerator {
       </table>
     </div>
     «ENDIF»
-    «IF response != null»
+    «IF responses.size > 0»
     <h3>Response</h3>
+    «FOR response : responses»
     <p>«comments?.response?.content»</p>
-    <h4>Signature</h4>
+    <h4>«response.responseLine»</h4>
     <pre class="prettyprint lang-js">
-«generateResponse(api, model, response)»
+    «generateResponse(api, model, response)»
     </pre>
+    «ENDFOR»
     «ENDIF»
     «IF body != null»
     <h3>Body</h3>
@@ -105,13 +107,13 @@ class MethodGenerator extends HtmlPageGenerator {
 	def dispatch generateResponse(ComplexTypeLiteral type) '''
 	{
      «FOR member:type.members»
-     "«member.name»" : «member.generateResponseMember»
+	 "«member.name»" : «member.generateResponseMember»
      «ENDFOR»
 	}
 	'''
 	
 	def generateResponseMember(Member member) '''
-    <a href="#">«member.type.innerSignature»</a>«IF member.type instanceof ArrayType»[]«ENDIF»
+    <a href="#">«member.type.signature»</a>
 	'''
 	
 	def dispatch generateResponse(Type type) '''

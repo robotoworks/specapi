@@ -6,7 +6,7 @@ package org.specapi.ui.labeling
 import com.google.inject.Inject
 import org.eclipse.emf.edit.ui.provider.AdapterFactoryLabelProvider
 import org.eclipse.xtext.ui.label.DefaultEObjectLabelProvider
-import org.specapi.ModelUtil
+import org.specapi.SpecApiModelUtils
 import org.specapi.specapiLang.Api
 import org.specapi.specapiLang.ComplexTypeDeclaration
 import org.specapi.specapiLang.EnumMember
@@ -24,7 +24,7 @@ import org.specapi.specapiLang.Type
  */
 class SpecApiLangLabelProvider extends DefaultEObjectLabelProvider {
 
-	@Inject extension ModelUtil modelUtil
+	@Inject extension SpecApiModelUtils modelUtil
 	
 	@Inject
 	new(AdapterFactoryLabelProvider delegate) {
