@@ -32,8 +32,8 @@ Under the hood SpecAPI is powered by an outstanding Language Development Environ
 
 SpecAPI aims to provide a concise grammar in the domain of HTTP, its a work in progress, and definetly in need of contributors to anyone who is interested, wether that be providing code generators or helping shape the grammar.
 
-Contributing
-------------
+Contribute
+----------
 To get started you need to install the Eclipse IDE and the xText Plugin.
 
 In Eclipse create a new workspace and import the projects:-
