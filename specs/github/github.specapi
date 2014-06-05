@@ -15,7 +15,7 @@ api GithubAPI https://api.github.com {
         params type:string, sort:string, direction:string
         response Repository[]
     }
-    
+
     /*
      * List public repositories for the specified user.
      * 
@@ -43,7 +43,7 @@ api GithubAPI https://api.github.com {
      * Note: Pagination is powered exclusively by the since parameter. Use the Link header 
      * to get the URL for the next page of repositories.
      * 
-     * @param since The integer ID of the last Repository that you’ve seen.
+     * @param since The integer ID of the last Repository that you've seen.
      */
     get listAllPublicRepositories /repositories {
         params since:string

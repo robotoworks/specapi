@@ -21,34 +21,34 @@ class DocIndexGenerator extends HtmlPageGenerator {
     }
     
     override generateContent() '''
-        «var serviceComments = commentParser.parseDocComments(api)»
-        <p>«serviceComments?.content»</p>
-        <div class="page-header">
-            <h1>Resources</h1>
-        </div>          
-        <div class="table-responsive">
-            <table class="table table-striped">
-                <thead>
-                    <tr>
-                        <th>Resource</th>
-                        <th>Comments</th>
-                    </tr>
-                </thead>
-                <tbody>
-                «generateMethods(api, model)»
-                </tbody>
-            </table>
-        </div>
+    «var serviceComments = commentParser.parseDocComments(api)»
+    <p>«serviceComments?.content»</p>
+    <div class="page-header">
+    <h1>Resources</h1>
+    </div>          
+    <div class="table-responsive">
+    <table class="table">
+    <thead>
+    <tr>
+    <th class="col-sm-4">Resource</th>
+    <th class="col-sm-6">Comments</th>
+    </tr>
+    </thead>
+    <tbody>
+    «generateMethods(api, model)»
+    </tbody>
+    </table>
+    </div>
     '''
 	
 	def generateMethods(Api api, SpecApiDocument model) '''
-		«FOR method:api.blocks.filter(typeof(HttpMethod))»
-		<tr>
-		  <td><span class="label «method.cssLabelClass»">«method.type.literal.toUpperCase»</span> <a href="method_«method.name».html">«method.pathAsString»</a></td>
-		  «var comments = commentParser.parseDocComments(method)»
-		  <td>«comments?.content»</td>
-		</tr>
-		«ENDFOR»
+	«FOR method:api.blocks.filter(typeof(HttpMethod))»
+	<tr>
+	<td><span class="label «method.cssLabelClass»">«method.type.literal.toUpperCase»</span> <a href="method_«method.name».html">«method.pathAsString»</a></td>
+	«var comments = commentParser.parseDocComments(method)»
+	<td>«comments?.content»</td>
+	</tr>
+	«ENDFOR»
 	'''
     
     override isMethodLinkActive(HttpMethod method) {

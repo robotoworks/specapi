@@ -21,6 +21,10 @@ import org.specapi.specapiLang.UserTypeDeclaration
 
 import static extension org.specapi.util.SpecApiStringExtensions.*
 import org.specapi.specapiLang.SpecApiDocument
+import org.specapi.specapiLang.StringLiteral
+import org.specapi.specapiLang.Literal
+import org.specapi.specapiLang.BooleanLiteral
+import org.specapi.specapiLang.NumericLiteral
 
 class Generator implements IGenerator {
     
@@ -207,7 +211,7 @@ class Generator implements IGenerator {
       
     «IF api.headerBlock != null»
     «FOR header : api.headerBlock.headers.filter[it.defaultValue != null]»
-    window.authorizations.add("«header.name»", new ApiKeyAuthorization("«header.name»", "«header.defaultValue»", "header"));
+    window.authorizations.add("«header.name»", new ApiKeyAuthorization("«header.name»", "«header.defaultValue.generateLiteralValue»", "header"));
     «ENDFOR»
     «ENDIF»
       
@@ -236,6 +240,14 @@ class Generator implements IGenerator {
     </body>
     </html>
     '''
+    
+    def getGenerateLiteralValue(Literal literal) {
+        switch(literal) {
+            StringLiteral: literal.literal
+            BooleanLiteral: literal.literal
+            NumericLiteral: literal.literal
+        }
+    }
     
     def String getSwaggerResponseTypeName(HttpMethod method) {
         var response = method.responseBlock
