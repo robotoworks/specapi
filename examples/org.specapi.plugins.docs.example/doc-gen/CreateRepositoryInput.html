@@ -40,7 +40,7 @@
 <li ><a href="Repository.html">Repository</a></li>
 <li ><a href="RepositoryOwner.html">RepositoryOwner</a></li>
 <li ><a href="RepositoryPermissions.html">RepositoryPermissions</a></li>
-<li ><a href="CreateRepositoryInput.html">CreateRepositoryInput</a></li>
+<li class="active"><a href="CreateRepositoryInput.html">CreateRepositoryInput</a></li>
 <li ><a href="ErrorMessage.html">ErrorMessage</a></li>
 <li ><a href="Error.html">Error</a></li>
 <li class="nav-header">Enums</li>
@@ -49,46 +49,21 @@
 </div>
 </div>
 <div class="col-xs-12 col-sm-9">
-<p></p>
-<div class="page-header">
-<h1>Resources</h1>
-</div>          
-<div class="table-responsive">
-<table class="table">
-<thead>
-<tr>
-<th class="col-sm-4">Resource</th>
-<th class="col-sm-6">Comments</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><span class="label label-info">GET</span> <a href="method_listRepositories.html">/user/repos</a></td>
-<td>List repositories for the authenticated user. Note that this does not include repositories owned by organizations which the user can access. You can list user organizations and list organization repositories separately.</td>
-</tr>
-<tr>
-<td><span class="label label-info">GET</span> <a href="method_listUserRepositories.html">/users/:user/repos</a></td>
-<td>List public repositories for the specified user.</td>
-</tr>
-<tr>
-<td><span class="label label-info">GET</span> <a href="method_listOrganizationRepositories.html">/orgs/:org/repos</a></td>
-<td>List repositories for the specified org.</td>
-</tr>
-<tr>
-<td><span class="label label-info">GET</span> <a href="method_listAllPublicRepositories.html">/repositories</a></td>
-<td>This provides a dump of every public repository, in the order that they were created. Note: Pagination is powered exclusively by the since parameter. Use the Link header to get the URL for the next page of repositories.</td>
-</tr>
-<tr>
-<td><span class="label label-warning">POST</span> <a href="method_createRepository.html">/user/repos</a></td>
-<td>Create a new repository for the authenticated user.</td>
-</tr>
-<tr>
-<td><span class="label label-warning">POST</span> <a href="method_createOrganizationRepository.html">/orgs/:org/repos</a></td>
-<td>Create a new repository in this organization. The authenticated user must be a member of the specified organization.</td>
-</tr>
-</tbody>
-</table>
-</div>
+<h1>CreateRepositoryInput</h1>
+<pre><code class="javascript"><a href="CreateRepositoryInput.html">CreateRepositoryInput</a> {
+    "name" : string
+    "description" : string
+    "homepage" : string
+    "private" : boolean
+    "has_issues" : boolean
+    "has_wiki" : boolean
+    "has_downloads" : boolean
+    "team_id" : long
+    "auto_init" : boolean
+    "gitigore_template" : string
+    "license_template" : string
+}
+</code></pre>
 </div>
 </div>
 </div>

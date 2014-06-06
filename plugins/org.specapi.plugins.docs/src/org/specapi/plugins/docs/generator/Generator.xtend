@@ -12,6 +12,7 @@ import org.specapi.specapiLang.EnumTypeDeclaration
 import org.specapi.specapiLang.HttpMethod
 import org.specapi.specapiLang.SpecApiDocument
 import org.specapi.SpecApiModelUtils
+import org.specapi.specapiLang.UserTypeDeclaration
 
 class Generator implements IGenerator {
 	
@@ -21,11 +22,12 @@ class Generator implements IGenerator {
 	override doGenerate(Resource resource, IFileSystemAccess fsa) {
 		
 		val model = resource.contents.head as SpecApiDocument
-		
-		model.declarations.forEach[generate(model, fsa)]
+		val api = model.declarations.filter(typeof(Api)).head
+		api.generate(model, fsa)
+		model.declarations.filter(typeof(UserTypeDeclaration)).forEach[generateUserType(api, model, fsa)]
 	}
 	
-	def dispatch generate(Api api, SpecApiDocument model, IFileSystemAccess fsa) {
+	def generate(Api api, SpecApiDocument model, IFileSystemAccess fsa) {
 	    var generator = new DocIndexGenerator(api, model)
 	    injector.injectMembers(generator)
 		fsa.generateFile("index.html", Plugin.OUTPUT_CONFIG, generator.generate);
@@ -33,13 +35,16 @@ class Generator implements IGenerator {
 		api.blocks.filter(typeof(HttpMethod)).forEach[method|generate(api, model, fsa, method)]
 	}
 	
-	def dispatch generate(ComplexTypeDeclaration complexType, SpecApiDocument model, IFileSystemAccess fsa) {
-		//throw new UnsupportedOperationException("TODO: auto-generated method stub")
-
+	def dispatch generateUserType(ComplexTypeDeclaration complexType, Api api, SpecApiDocument model, IFileSystemAccess fsa) {
+	    var generator = new TypeGenerator(api, model, complexType)
+	    injector.injectMembers(generator)
+        fsa.generateFile(complexType.name + ".html", Plugin.OUTPUT_CONFIG, generator.generate);
 	}
 	
-	def dispatch generate(EnumTypeDeclaration enumType, SpecApiDocument model, IFileSystemAccess fsa) {
-		//throw new UnsupportedOperationException("TODO: auto-generated method stub")
+	def dispatch generateUserType(EnumTypeDeclaration enumType, Api api, SpecApiDocument model, IFileSystemAccess fsa) {
+        var generator = new EnumTypeGenerator(api, model, enumType)
+        injector.injectMembers(generator)
+        fsa.generateFile(enumType.name + ".html", Plugin.OUTPUT_CONFIG, generator.generate);
 	}	
 	
 	def generate(Api api, SpecApiDocument model, IFileSystemAccess fsa, HttpMethod method) {

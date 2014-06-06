@@ -44,6 +44,7 @@
 <li ><a href="ErrorMessage.html">ErrorMessage</a></li>
 <li ><a href="Error.html">Error</a></li>
 <li class="nav-header">Enums</li>
+<li ><a href="ErrorCode.html">ErrorCode</a></li>
 </ul>
 </div>
 </div>
@@ -58,7 +59,7 @@
 </div>
 <div id="collapseRequestBody" class="panel-collapse collapse">
 <div class="panel-body">
-<pre><code class="javascript">{
+<pre><code class="javascript"><a href="CreateRepositoryInput.html">CreateRepositoryInput</a> {
     "name" : string
     "description" : string
     "homepage" : string
@@ -75,19 +76,19 @@
 </div>
 </div>
 </div>
-<p></p>
 <div class="panel-group" id="accordion">
 <div class="panel panel-success">
-<div class="panel-heading" data-toggle="collapse" data-target="#collapse1">
+<div class="panel-heading" data-toggle="collapse" data-target="#collapseResponse0">
 <h4 class="panel-title"">200 OK</h4>
 </div>
-<div id="collapse1" class="panel-collapse collapse">
+<div id="collapseResponse0" class="panel-collapse collapse">
+<div class="panel-body-heading">an entity describing the newly created repository</div>
 <div class="panel-body">
-<pre><code class="javascript">{
+<pre><code class="javascript"><a href="Repository.html">Repository</a> {
     "id" : long
     "name" : string
     "full_name" : string
-    "owner" : <a href="#">RepositoryOwner</a>
+    "owner" : <a href="RepositoryOwner.html">RepositoryOwner</a>
     "private" : boolean
     "html_url" : string
     "description" : string
@@ -150,7 +151,37 @@
     "open_issues" : int
     "watchers" : int
     "default_branch" : string
-    "permissions" : <a href="#">RepositoryPermissions</a>
+    "permissions" : <a href="RepositoryPermissions.html">RepositoryPermissions</a>
+}
+</code></pre>
+</div>
+</div>
+</div>
+<div class="panel panel-danger">
+<div class="panel-heading" data-toggle="collapse" data-target="#collapseResponse400">
+<h4 class="panel-title"">400 Bad Request</h4>
+</div>
+<div id="collapseResponse400" class="panel-collapse collapse">
+<div class="panel-body">
+<pre><code class="javascript"><a href="ErrorMessage.html">ErrorMessage</a> {
+    "message" : string
+    "documentation_url" : string
+    "errors" : <a href="Error.html">Error[]</a>
+}
+</code></pre>
+</div>
+</div>
+</div>
+<div class="panel panel-danger">
+<div class="panel-heading" data-toggle="collapse" data-target="#collapseResponse422">
+<h4 class="panel-title"">422 Unprocessable Entity</h4>
+</div>
+<div id="collapseResponse422" class="panel-collapse collapse">
+<div class="panel-body">
+<pre><code class="javascript"><a href="ErrorMessage.html">ErrorMessage</a> {
+    "message" : string
+    "documentation_url" : string
+    "errors" : <a href="Error.html">Error[]</a>
 }
 </code></pre>
 </div>

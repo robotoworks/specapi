@@ -1,17 +1,31 @@
 package org.specapi.plugins.docs.generator
 
-import org.specapi.specapiLang.HttpMethod
+import com.google.inject.Inject
+import org.specapi.SpecApiModelUtils
+import org.specapi.generator.DocCommentParser
 import org.specapi.specapiLang.Api
+import org.specapi.specapiLang.ArrayType
 import org.specapi.specapiLang.ComplexTypeDeclaration
+import org.specapi.specapiLang.ComplexTypeLiteral
 import org.specapi.specapiLang.EnumTypeDeclaration
-import org.specapi.specapiLang.UserTypeDeclaration
-import static extension org.specapi.util.SpecApiStringExtensions.*
+import org.specapi.specapiLang.HttpMethod
+import org.specapi.specapiLang.IntrinsicType
+import org.specapi.specapiLang.Member
 import org.specapi.specapiLang.SpecApiDocument
+import org.specapi.specapiLang.UserType
+import org.specapi.specapiLang.UserTypeDeclaration
+
+import static org.specapi.specapiLang.HttpMethodType.*
+
+import static extension org.specapi.util.SpecApiStringExtensions.*
+import org.specapi.specapiLang.Type
 
 abstract class HtmlPageGenerator {
 	
     @Property Api api
     @Property SpecApiDocument model
+    @Extension @Inject SpecApiModelUtils modelUtil
+    @Inject DocCommentParser commentParser
     
     new (Api api, SpecApiDocument model) {
         this.api = api
@@ -123,4 +137,53 @@ abstract class HtmlPageGenerator {
             "label-warning"
         }
     }
+    
+    def dispatch generateSignature(ComplexTypeLiteral type) '''
+    {
+        «FOR member:type.members»
+        "«member.name»" : «member.generateMemberSignature»
+        «ENDFOR»
+    }
+    '''
+    
+    def generateMemberSignature(Member member) '''
+    «IF member.type instanceof UserType»
+    <a href="«(member.type as UserType).declaration.name».html">«member.type.signature»</a>
+    «ELSEIF member.type instanceof ArrayType && (member.type as ArrayType).elementType instanceof UserType»
+    <a href="«((member.type as ArrayType).elementType as UserType).declaration.name».html">«member.type.signature»</a>
+    «ELSE»
+    «member.type.signature»
+    «ENDIF»
+    '''
+    
+    def dispatch generateSignature(IntrinsicType type) '''
+    «type.signature»
+    '''
+    
+    def dispatch generateSignature(UserType type) {
+        type.declaration.generateUserTypeSignature
+    }
+    
+    
+    def dispatch generateSignature(ArrayType type) '''
+    «IF type.elementType instanceof UserType»
+    [
+        «(type.elementType as UserType).declaration.generateUserTypeSignature»
+    ]
+    «ELSE»
+    «type.signature»
+    «ENDIF»
+    '''
+    
+    def dispatch generateUserTypeSignature(ComplexTypeDeclaration type) '''
+    <a href="«type.name».html">«type.name»</a> {
+        «FOR member:type.literal.members»
+        "«member.name»" : «member.generateMemberSignature»
+        «ENDFOR»       
+    }
+    '''
+    
+    def dispatch generateUserTypeSignature(EnumTypeDeclaration type) '''
+    
+    '''
 }

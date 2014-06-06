@@ -19,6 +19,7 @@ api GithubAPI https://api.github.com {
     /*
      * List public repositories for the specified user.
      * 
+     * @param user the unique user name
      * @param type Can be one of all, owner, public, private, member. Default: all
      * @param sort Can be one of created, updated, pushed, full_name. Default: full_name
      * @param direction Can be one of asc or desc. Default: when using full_name: asc; otherwise desc
@@ -31,7 +32,9 @@ api GithubAPI https://api.github.com {
     /*
      * List repositories for the specified org.
      * 
+     * @param org the unique organisation name
      * @param type Can be one of all, public, private, forks, sources, member. Default: all
+     * @response an array of repository entities
      */ 
     get listOrganizationRepositories /orgs/org:string/repos {
         params type:string, sort:string, direction:string
@@ -44,6 +47,7 @@ api GithubAPI https://api.github.com {
      * to get the URL for the next page of repositories.
      * 
      * @param since The integer ID of the last Repository that you've seen.
+     * @response an array of repository entities
      */
     get listAllPublicRepositories /repositories {
         params since:string
@@ -52,15 +56,22 @@ api GithubAPI https://api.github.com {
     
     /*
      * Create a new repository for the authenticated user.
+     * 
+     * @response an entity describing the newly created repository
      */
     post createRepository /user/repos {
         body CreateRepositoryInput
         response Repository
+        response 400 ErrorMessage
+        response 422 ErrorMessage
     }
     
     /*
      * Create a new repository in this organization. 
      * The authenticated user must be a member of the specified organization.
+     * 
+     * @param org the unique organisation name
+     * @response an entity describing the newly created repository
      */
     post createOrganizationRepository /orgs/org:string/repos {
         body CreateRepositoryInput
@@ -223,7 +234,14 @@ entity ErrorMessage {
 
 entity Error {
     resource:string,
-    code:string,
+    code:ErrorCode,
     field:string,
     message:string
+}
+
+enum ErrorCode {
+    missing,
+    missing_field,
+    invalid,
+    already_exists
 }

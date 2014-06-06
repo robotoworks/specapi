@@ -7,7 +7,7 @@ body {
   overflow-x: hidden; /* Prevent scroll on narrow devices */
 }
 body {
-  padding-top: 50px;
+  padding-top: 51px;
 }
 footer {
   padding: 30px 0;
@@ -58,21 +58,52 @@ footer {
   }
 }
 
-#sidebar {
-    padding-left: 0px;
+@media screen and (min-width: 767px) {
+  #sidebar {
+      padding-left: 0px;
+  }
 }
+
 .sidebar-nav {
     background-color:#fafafa;
 }
 
-.nav-header {
-    padding: 10px 15px;
+.nav > .nav-header {
+    padding: 8px 15px;
+    background-color: #343434;
+    color: #bababa;
+    border-bottom:1px solid #565656;
+    border-top:1px solid #565656;
+    font-weight: bold;
+}
+
+.nav > li {
+  background-color: #232323;
+  border-bottom:1px solid #000;
+}
+
+.nav > li.active {
+   background-color:#454545;
+}
+
+.sidebar-nav > .nav > li > a {
+  color: #bababa;
+    padding: 8px 15px;
+}
+
+.sidebar-nav > .nav > li > a:hover {
+  background-color: #343434;
 }
 
 pre {
     border:0px;
     background-color:#fff;
     padding:0px;
+}
+
+.panel-body-heading {
+    padding: 10px;
+    background-color: #f9f9f9;
 }
 
 .panel-heading .panel-title:after {

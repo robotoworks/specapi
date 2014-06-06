@@ -44,6 +44,7 @@
 <li ><a href="ErrorMessage.html">ErrorMessage</a></li>
 <li ><a href="Error.html">Error</a></li>
 <li class="nav-header">Enums</li>
+<li ><a href="ErrorCode.html">ErrorCode</a></li>
 </ul>
 </div>
 </div>
@@ -51,10 +52,15 @@
 <h1>List Repositories</h1>
 <p><span class="label label-info">GET</span> <b>https://api.github.com/user/repos</b></p>
 <p>List repositories for the authenticated user. Note that this does not include repositories owned by organizations which the user can access. You can list user organizations and list organization repositories separately.</p>
+<div class="panel panel-default">
+<div class="panel-heading" data-toggle="collapse" data-target="#collapseParams">
+<h4 class="panel-title"">Parameters</h4>
+</div>
+<div id="collapseParams" class="panel-collapse collapse in">
 <table class="table">
 <thead>
 <tr>
-<th class="col-sm-3">Parameter</th>
+<th class="col-sm-3">Name</th>
 <th class="col-sm-9">Comments</th>
 </tr>
 </thead>
@@ -73,15 +79,86 @@
 </tr>
 </tbody>
 </table>
-<p></p>
+</div>
+</div>
 <div class="panel-group" id="accordion">
 <div class="panel panel-success">
-<div class="panel-heading" data-toggle="collapse" data-target="#collapse1">
+<div class="panel-heading" data-toggle="collapse" data-target="#collapseResponse0">
 <h4 class="panel-title"">200 OK</h4>
 </div>
-<div id="collapse1" class="panel-collapse collapse">
+<div id="collapseResponse0" class="panel-collapse collapse">
 <div class="panel-body">
-<pre><code class="javascript">    
+<pre><code class="javascript">[
+    <a href="Repository.html">Repository</a> {
+        "id" : long
+        "name" : string
+        "full_name" : string
+        "owner" : <a href="RepositoryOwner.html">RepositoryOwner</a>
+        "private" : boolean
+        "html_url" : string
+        "description" : string
+        "fork" : boolean
+        "url" : string
+        "forks_url" : string
+        "keys_url" : string
+        "collaborators_url" : string
+        "teams_url" : string
+        "hooks_url" : string
+        "issue_events_url" : string
+        "events_url" : string
+        "assignees_url" : string
+        "branches_url" : string
+        "tags_url" : string
+        "blobs_url" : string
+        "git_tags_url" : string
+        "git_refs_url" : string
+        "trees_url" : string
+        "statuses_url" : string
+        "languages_url" : string
+        "stargazers_url" : string
+        "contributors_url" : string
+        "subscribers_url" : string
+        "subscription_url" : string
+        "commits_url" : string
+        "git_commits_url" : string
+        "comments_url" : string
+        "issue_comment_url" : string
+        "contents_url" : string
+        "compare_url" : string
+        "merges_url" : string
+        "archive_url" : string
+        "downloads_url" : string
+        "issues_url" : string
+        "pulls_url" : string
+        "milestones_url" : string
+        "notifications_url" : string
+        "labels_url" : string
+        "releases_url" : string
+        "created_at" : string
+        "updated_at" : string
+        "pushed_at" : string
+        "git_url" : string
+        "ssh_url" : string
+        "clone_url" : string
+        "svn_url" : string
+        "homepage" : string
+        "size" : int
+        "stargazers_count" : int
+        "watchers_count" : int
+        "language" : string
+        "has_issues" : boolean
+        "has_downloads" : boolean
+        "has_wiki" : boolean
+        "forks_count" : int
+        "mirror_url" : string
+        "open_issues_count" : int
+        "forks" : int
+        "open_issues" : int
+        "watchers" : int
+        "default_branch" : string
+        "permissions" : <a href="RepositoryPermissions.html">RepositoryPermissions</a>
+    }
+]
 </code></pre>
 </div>
 </div>

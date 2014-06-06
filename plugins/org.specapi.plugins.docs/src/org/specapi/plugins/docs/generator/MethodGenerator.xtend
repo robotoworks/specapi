@@ -1,26 +1,18 @@
 package org.specapi.plugins.docs.generator
 
 import com.google.inject.Inject
+import java.util.List
 import org.specapi.SpecApiModelUtils
 import org.specapi.generator.DocCommentParser
 import org.specapi.generator.DocComments
 import org.specapi.specapiLang.Api
 import org.specapi.specapiLang.BodyBlock
-import org.specapi.specapiLang.ComplexTypeLiteral
 import org.specapi.specapiLang.HttpMethod
-import org.specapi.specapiLang.Member
 import org.specapi.specapiLang.ResponseBlock
 import org.specapi.specapiLang.SpecApiDocument
-import org.specapi.specapiLang.Type
 import org.specapi.specapiLang.UserTypeDeclaration
 
 import static extension org.specapi.util.SpecApiStringExtensions.*
-import java.util.List
-import org.specapi.specapiLang.ComplexTypeDeclaration
-import org.specapi.specapiLang.UserType
-import org.specapi.specapiLang.IntrinsicType
-import org.specapi.specapiLang.EnumTypeDeclaration
-import org.specapi.specapiLang.ArrayType
 
 class MethodGenerator extends HtmlPageGenerator {
 	
@@ -64,10 +56,15 @@ class MethodGenerator extends HtmlPageGenerator {
     <p><span class="label «method.cssLabelClass»">«method.type.literal.toUpperCase»</span> <b>«api.baseUrl + method.pathAsString»</b></p>
     <p>«comments?.content»</p>
     «IF hasParams»
+    <div class="panel panel-default">
+    <div class="panel-heading" data-toggle="collapse" data-target="#collapseParams">
+    <h4 class="panel-title"">Parameters</h4>
+    </div>
+    <div id="collapseParams" class="panel-collapse collapse in">
     <table class="table">
     <thead>
     <tr>
-    <th class="col-sm-3">Parameter</th>
+    <th class="col-sm-3">Name</th>
     <th class="col-sm-9">Comments</th>
     </tr>
     </thead>
@@ -75,6 +72,8 @@ class MethodGenerator extends HtmlPageGenerator {
     «generateParams(api, model, method, comments)»
     </tbody>
     </table>
+    </div>
+    </div>
     «ENDIF»
     «IF body != null»
     <p>«comments?.body?.content»</p>
@@ -90,15 +89,16 @@ class MethodGenerator extends HtmlPageGenerator {
     </div>
     «ENDIF»
     «IF responses.size > 0»
-    <p>«comments?.response?.content»</p>
     <div class="panel-group" id="accordion">
-    «var panelIndex=0»
     «FOR response : responses»
     <div class="panel panel-«response.getPanelCssClass»">
-    <div class="panel-heading" data-toggle="collapse" data-target="#collapse«panelIndex = panelIndex + 1»">
+    <div class="panel-heading" data-toggle="collapse" data-target="#collapseResponse«response.code»">
     <h4 class="panel-title"">«response.responseLine»</h4>
     </div>
-    <div id="collapse«panelIndex»" class="panel-collapse collapse">
+    <div id="collapseResponse«response.code»" class="panel-collapse collapse">
+    «IF (response.code == 0 || response.code == 200) && commentsHaveContentForResponse(comments)»
+    <div class="panel-body-heading">«comments?.response?.content»</div>
+    «ENDIF»
     <div class="panel-body">
     <pre><code class="javascript">«generateResponse(api, model, response)»</code></pre>
     </div>
@@ -108,6 +108,13 @@ class MethodGenerator extends HtmlPageGenerator {
     </div>
     «ENDIF»
 	'''
+    
+    def commentsHaveContentForResponse(DocComments comments) {
+        return comments != null && 
+        comments.response != null &&
+        comments.response.content != null &&
+        comments.response.content.length > 0
+    }
     
     def getPanelCssClass(ResponseBlock block) {
         switch(block.code) {
@@ -126,47 +133,6 @@ class MethodGenerator extends HtmlPageGenerator {
 	def generateResponse(Api api, SpecApiDocument model, ResponseBlock response) '''
     «response.type.generateSignature»
 	'''
-	
-	def dispatch generateSignature(ComplexTypeLiteral type) '''
-    {
-        «FOR member:type.members»
-        "«member.name»" : «member.generateMemberSignature»
-        «ENDFOR»
-    }
-	'''
-	
-	def generateMemberSignature(Member member) '''
-    «IF member.type instanceof UserType || member.type instanceof ArrayType»
-    <a href="#">«member.type.signature»</a>
-    «ELSE»
-    «member.type.signature»
-    «ENDIF»
-	'''
-	
-	def dispatch generateSignature(IntrinsicType type) '''
-    <a href="#">«type.signature»</a>
-	'''
-	
-	def dispatch generateSignature(UserType type) {
-	    type.declaration.generateUserTypeSignature
-	}
-	
-    
-    def dispatch generateSignature(ArrayType type) '''
-    
-    '''
-    
-    def dispatch generateUserTypeSignature(ComplexTypeDeclaration type) '''
-    {
-        «FOR member:type.literal.members»
-        "«member.name»" : «member.generateMemberSignature»
-        «ENDFOR»       
-    }
-    '''
-    
-    def dispatch generateUserTypeSignature(EnumTypeDeclaration type) '''
-    
-    '''
 	
 	def generateParams(Api api, SpecApiDocument model, HttpMethod method, DocComments comments) '''
 	«FOR p:method.path?.params»
