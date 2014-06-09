@@ -33,7 +33,12 @@ abstract class HtmlPageGenerator {
     }
     
     def generate()'''
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
     «generateHead»
+    </head>
+    <body>
     «generateTopNav»
     <div class="container-fluid">
     <div class="row row-offcanvas row-offcanvas-left">
@@ -48,14 +53,13 @@ abstract class HtmlPageGenerator {
     </div>
     </div>
     «generateFoot»
+    </body>
+    </html>
     '''
     
     abstract def String generateTitle()
 
 	def generateHead() '''
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -64,8 +68,7 @@ abstract class HtmlPageGenerator {
     <link href="specapi.css" rel="stylesheet">
     <link rel="stylesheet" href="highlight/styles/tomorrow.css">
     <script src="highlight/highlight.pack.js"></script>
-    </head>
-    <body>
+    <script src="js/json2.js"></script>
 	'''
 	
 	def generateTopNav() '''
@@ -119,13 +122,7 @@ abstract class HtmlPageGenerator {
     <script>
     hljs.configure({tabReplace: '<span class="indent"> </span>'});
     hljs.initHighlightingOnLoad();</script>
-    </body>
-    </html>
     '''	
-    
-	def toFileName(UserTypeDeclaration type) {
-		return type.name
-	}
 	
     def getCssLabelClass(HttpMethod method) {
         switch(method.type) {
@@ -137,6 +134,10 @@ abstract class HtmlPageGenerator {
             "label-warning"
         }
     }
+
+	def toFileName(UserTypeDeclaration type) {
+		return type.name
+	}
     
     def dispatch generateSignature(ComplexTypeLiteral type) '''
     {

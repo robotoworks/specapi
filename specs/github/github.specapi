@@ -14,6 +14,7 @@ api GithubAPI https://api.github.com {
     get listRepositories /user/repos {
         params type:string, sort:string, direction:string
         response Repository[]
+        response 401 ErrorMessage
     }
 
     /*
@@ -34,6 +35,8 @@ api GithubAPI https://api.github.com {
      * 
      * @param org the unique organisation name
      * @param type Can be one of all, public, private, forks, sources, member. Default: all
+     * @param sort Can be one of created, updated, pushed, full_name. Default: full_name
+     * @param direction Can be one of asc or desc. Default: when using full_name: asc; otherwise desc
      * @response an array of repository entities
      */ 
     get listOrganizationRepositories /orgs/org:string/repos {

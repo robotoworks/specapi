@@ -2,10 +2,6 @@
  * Style tweaks
  * --------------------------------------------------
  */
-html,
-body {
-  overflow-x: hidden; /* Prevent scroll on narrow devices */
-}
 body {
   padding-top: 51px;
 }
@@ -116,4 +112,25 @@ pre {
 .panel-heading .panel-title.collapsed:after {
     /* symbol for "collapsed" panels */
     content: "\e080";    /* adjust as needed, taken from bootstrap.css */
+}
+
+.btn-pull-down-handle {
+    border-radius:0px;
+}
+
+.console {
+    background-color:#efefef;
+    border-bottom: 1px solid #cdcdcd;
+    border-left: 1px solid #cdcdcd;
+    border-right: 1px solid #cdcdcd;
+}
+
+#go_button {
+    padding-left:24px;
+    padding-right:24px;
+}
+
+#consoleHeading {
+    padding-top:12px;
+    padding-bottom:12px;
 }

@@ -9,6 +9,7 @@
 <link href="specapi.css" rel="stylesheet">
 <link rel="stylesheet" href="highlight/styles/tomorrow.css">
 <script src="highlight/highlight.pack.js"></script>
+<script src="js/json2.js"></script>
 </head>
 <body>
 <div class="navbar navbar-fixed-top navbar-inverse" role="navigation">
@@ -49,15 +50,54 @@
 </div>
 </div>
 <div class="col-xs-12 col-sm-9">
-<h1>Create Repository</h1>
+<div id="testConsole" class="console container-fluid collapse">
+<div id="consoleHeading" class="clearfix">
+<button type="button" class="close" data-toggle="collapse" data-target="#testConsole">&times;</button>
+<p class="pull-left"><span class="label label-warning">POST</span> <b>https://api.github.com/user/repos</b></p>
+</div>
+<form role="form">
+<div class="form-group">
+<label for="f_request">Request</label>
+<pre id="f_request" class="container-fluid">{
+  "name" : "string", 
+  "description" : "string", 
+  "homepage" : "string", 
+  "private" : "boolean", 
+  "has_issues" : "boolean", 
+  "has_wiki" : "boolean", 
+  "has_downloads" : "boolean", 
+  "team_id" : "long", 
+  "auto_init" : "boolean", 
+  "gitigore_template" : "string", 
+  "license_template" : "string"
+}
+</pre>
+</div>
+<div class="form-group">
+<label for="f_response pull-left">Response</label> <label id="response_status"></label>
+<pre id="f_response" class="container-fluid clearfix"></pre>
+</div>
+<div class="form-group">
+<button type="button" id="go_button" data-loading-text="Loading..." class="btn btn-primary">
+  Go
+</button>
+</div>
+</form>
+</div>
+<div class="content-heading clearfix">
+<button id="console_button" type="button" class="btn btn-secondary pull-right btn-pull-down-handle" data-toggle="collapse" data-target="#testConsole">
+  API Console
+</button>
+<h1 class="pull-left">Create Repository</h1>
+</div>
 <p><span class="label label-warning">POST</span> <b>https://api.github.com/user/repos</b></p>
 <p>Create a new repository for the authenticated user.</p>
 <p></p>
 <div class="panel panel-default">
-<div class="panel-heading" data-toggle="collapse" data-target="#collapseRequestBody">
+<div class="panel-heading" data-toggle="collapse" data-target="#requestBody">
 <h4 class="panel-title"">Request</h4>
 </div>
-<div id="collapseRequestBody" class="panel-collapse collapse">
+<div id="requestBody" class="panel-collapse collapse">
 <div class="panel-body">
 <pre><code class="javascript"><a href="CreateRepositoryInput.html">CreateRepositoryInput</a> {
     "name" : string
@@ -78,10 +118,10 @@
 </div>
 <div class="panel-group" id="accordion">
 <div class="panel panel-success">
-<div class="panel-heading" data-toggle="collapse" data-target="#collapseResponse0">
+<div class="panel-heading" data-toggle="collapse" data-target="#response0">
 <h4 class="panel-title"">200 OK</h4>
 </div>
-<div id="collapseResponse0" class="panel-collapse collapse">
+<div id="response0" class="panel-collapse collapse">
 <div class="panel-body-heading">an entity describing the newly created repository</div>
 <div class="panel-body">
 <pre><code class="javascript"><a href="Repository.html">Repository</a> {
@@ -158,10 +198,10 @@
 </div>
 </div>
 <div class="panel panel-danger">
-<div class="panel-heading" data-toggle="collapse" data-target="#collapseResponse400">
+<div class="panel-heading" data-toggle="collapse" data-target="#response400">
 <h4 class="panel-title"">400 Bad Request</h4>
 </div>
-<div id="collapseResponse400" class="panel-collapse collapse">
+<div id="response400" class="panel-collapse collapse">
 <div class="panel-body">
 <pre><code class="javascript"><a href="ErrorMessage.html">ErrorMessage</a> {
     "message" : string
@@ -173,10 +213,10 @@
 </div>
 </div>
 <div class="panel panel-danger">
-<div class="panel-heading" data-toggle="collapse" data-target="#collapseResponse422">
+<div class="panel-heading" data-toggle="collapse" data-target="#response422">
 <h4 class="panel-title"">422 Unprocessable Entity</h4>
 </div>
-<div id="collapseResponse422" class="panel-collapse collapse">
+<div id="response422" class="panel-collapse collapse">
 <div class="panel-body">
 <pre><code class="javascript"><a href="ErrorMessage.html">ErrorMessage</a> {
     "message" : string
@@ -203,5 +243,48 @@ $(document).ready(function () {
 <script>
 hljs.configure({tabReplace: '<span class="indent"> </span>'});
 hljs.initHighlightingOnLoad();</script>
+<script src="ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+var requestEditor = ace.edit("f_request");
+requestEditor.setTheme("ace/theme/twilight");
+requestEditor.setOptions({ maxLines: Infinity });
+requestEditor.getSession().setMode("ace/mode/javascript");
+    var responseEditor = ace.edit("f_response");
+    responseEditor.setTheme("ace/theme/twilight");
+    responseEditor.setOptions({ maxLines: Infinity });
+    responseEditor.getSession().setMode("ace/mode/javascript");
+    responseEditor.getSession().setUseWorker(false);
+    
+  $('#go_button').click(function () {
+    var btn = $(this);
+    var responseStatusLabel = $("#response_status");
+    var baseUrl = "https://api.github.com";
+    var url = baseUrl + "/user/repos";
+    var params = {};
+    var paramsSet = false;
+
+         
+    console.log(url);
+
+    btn.button('loading');
+    $.ajax(url)
+    .done(function(data, textStatus, jqXHR ) {
+      btn.button('reset');
+      responseStatusLabel.text(jqXHR.status + " " + jqXHR.statusText);
+      responseStatusLabel.css("color", "green");
+      responseEditor.getSession().setValue(jqXHR.responseText);
+    })
+    .fail(function(jqXHR, textStatus, errorThrown ) {
+      btn.button('reset');
+      if(jqXHR.status == 0 ) {
+        responseStatusLabel.text("No Connection");
+      } else {
+        responseStatusLabel.text(jqXHR.status + " " + jqXHR.statusText);
+      }
+      responseStatusLabel.css("color", "red");
+      responseEditor.getSession().setValue(jqXHR.responseText);
+    });
+  });
+</script>
 </body>
 </html>
