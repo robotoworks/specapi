@@ -20,25 +20,25 @@ class ApiClientGenerator {
     var HashSet<String> imports = Sets.newHashSet()
     	 
 	def generate(SpecApiDocument doc, Api api) '''
-    package Çdoc.packageNameÈ;
+    package Â«doc.packageNameÂ»;
     
-    Çval body = generateBody(doc, api)È
-    Çimports.generateImportsÈ
+    Â«val body = generateBody(doc, api)Â»
+    Â«imports.generateImportsÂ»
     import retrofit.http.Path;
     
-    ÇbodyÈ
+    Â«bodyÂ»
 	'''
     
     def generateBody(SpecApiDocument doc, Api api) '''
-    public interface Çapi.name.pascalizeÈ {
-        public static final String API_URL = "Çapi.baseUrlÈ";
+    public interface Â«api.name.pascalizeÂ» {
+        public static final String API_URL = "Â«api.baseUrlÂ»";
         
-        ÇFOR method : api.blocks.filter(typeof(HttpMethod))È
-        ÇaddImport("retrofit.http." + method.type.literal.toUpperCase)È
-        @Çmethod.type.literal.toUpperCaseÈ("Çmethod.getPathAsFormatString("{", "}")È")
-        Çmethod.generateResponseType(doc, api, method.responseBlock?.type)È Çmethod.nameÈ(Çmethod.generateArgumentsÈ);
+        Â«FOR method : api.blocks.filter(typeof(HttpMethod))Â»
+        Â«addImport("retrofit.http." + method.type.literal.toUpperCase)Â»
+        @Â«method.type.literal.toUpperCaseÂ»("Â«method.getPathAsFormatString("{", "}")Â»")
+        Â«method.generateResponseType(doc, api, method.responseBlock?.type)Â» Â«method.nameÂ»(Â«method.generateArgumentsÂ»);
         
-        ÇENDFORÈ
+        Â«ENDFORÂ»
     }
     '''
     
@@ -62,15 +62,15 @@ class ApiClientGenerator {
     }
     
     def dispatch generateResponseType(HttpMethod method, SpecApiDocument document, Api api, ComplexTypeLiteral type) 
-        '''Çmethod.name.pascalizeÈResult'''
+        '''Â«method.name.pascalizeÂ»Result'''
     def dispatch generateResponseType(HttpMethod method, SpecApiDocument document, Api api, Type type) 
-        '''ÇGenerator.toJavaTypeSignature(type)È'''
+        '''Â«Generator.toJavaTypeSignature(type)Â»'''
         
     
     def generateImports(HashSet<String> imports) '''
-    ÇFOR _import : importsÈ
-        import Ç_importÈ;
-    ÇENDFORÈ
+    Â«FOR _import : importsÂ»
+        import Â«_importÂ»;
+    Â«ENDFORÂ»
     '''
     
     def void addImport(String str) {

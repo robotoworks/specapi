@@ -31,14 +31,14 @@ class JsonGenerator {
     }
     def dispatch generate(ComplexTypeLiteral type) '''
     {
-      ÇFOR member:type.members SEPARATOR ", "È
-      "Çmember.nameÈ" : Çmember.type.generateÈ
-      ÇENDFORÈ
+      Â«FOR member:type.members SEPARATOR ", "Â»
+      "Â«member.nameÂ»" : Â«member.type.generateÂ»
+      Â«ENDFORÂ»
     }
     '''
     
     def dispatch generate(IntrinsicType type) '''
-    "Çtype.signatureÈ"
+    "Â«type.signatureÂ»"
     '''
     
     def dispatch generate(UserType type) {
@@ -47,20 +47,20 @@ class JsonGenerator {
     
     
     def dispatch generate(ArrayType type) '''
-    ÇIF type.elementType instanceof UserTypeÈ
+    Â«IF type.elementType instanceof UserTypeÂ»
     [
-      Ç(type.elementType as UserType).declaration.generateÈ
+      Â«(type.elementType as UserType).declaration.generateÂ»
     ]
-    ÇELSEÈ
-    Çtype.signatureÈ
-    ÇENDIFÈ
+    Â«ELSEÂ»
+    Â«type.signatureÂ»
+    Â«ENDIFÂ»
     '''
     
     def dispatch generate(ComplexTypeDeclaration type) '''
     {
-      ÇFOR member:type.literal.members SEPARATOR ", "È
-      "Çmember.nameÈ" : Çmember.type.generateÈ
-      ÇENDFORÈ       
+      Â«FOR member:type.literal.members SEPARATOR ", "Â»
+      "Â«member.nameÂ»" : Â«member.type.generateÂ»
+      Â«ENDFORÂ»       
     }
     '''
     

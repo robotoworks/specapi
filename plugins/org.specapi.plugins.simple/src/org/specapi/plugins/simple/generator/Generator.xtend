@@ -20,12 +20,12 @@ class Generator implements IGenerator {
 	
 	def generateMethodList(Api api) '''
 		<html>
-		<head>Çapi.nameÈ Çapi.baseUrlÈ</head>
+		<head>Â«api.nameÂ» Â«api.baseUrlÂ»</head>
 		<body>
 			<ul>
-			ÇFOR method : api.blocks.filter(typeof(HttpMethod))È
-			<li>Çmethod.type.getName().toUpperCaseÈ Çmethod.nameÈ</li>
-			ÇENDFORÈ
+			Â«FOR method : api.blocks.filter(typeof(HttpMethod))Â»
+			<li>Â«method.type.getName().toUpperCaseÂ» Â«method.nameÂ»</li>
+			Â«ENDFORÂ»
 			</ul>
 		<body>
 		<html>

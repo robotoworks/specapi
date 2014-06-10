@@ -17,34 +17,34 @@ class ApiEntityGenerator {
     var HashSet<String> imports = Sets.newHashSet()
        
     def generate(SpecApiDocument doc, UserTypeDeclaration decl) '''
-    package Çdoc.packageNameÈ;
+    package Â«doc.packageNameÂ»;
     
-    Çval body = generateBody(doc, decl)È
-    Çimports.generateImportsÈ
+    Â«val body = generateBody(doc, decl)Â»
+    Â«imports.generateImportsÂ»
     
-    ÇbodyÈ
-    Çimports.clearÈ
+    Â«bodyÂ»
+    Â«imports.clearÂ»
     '''
     
     def dispatch generateBody(SpecApiDocument document, ComplexTypeDeclaration decl) '''
-    public class Çdecl.nameÈ {
-        ÇFOR member:decl.literal.membersÈ
-        Çif(member.type instanceof ArrayType) {addImport("java.util.List")}È
-        public ÇGenerator.toJavaTypeSignature(member.type, false)È Çmember.nameÈ;
-        ÇENDFORÈ
+    public class Â«decl.nameÂ» {
+        Â«FOR member:decl.literal.membersÂ»
+        Â«if(member.type instanceof ArrayType) {addImport("java.util.List")}Â»
+        public Â«Generator.toJavaTypeSignature(member.type, false)Â» Â«member.nameÂ»;
+        Â«ENDFORÂ»
     }
     
     '''
     def dispatch generateBody(SpecApiDocument document, EnumTypeDeclaration decl) '''
-    public class Çdecl.nameÈ {
+    public class Â«decl.nameÂ» {
        
     }
     '''
     
     def generateImports(HashSet<String> imports) '''
-    ÇFOR _import : importsÈ
-        import Ç_importÈ;
-    ÇENDFORÈ
+    Â«FOR _import : importsÂ»
+        import Â«_importÂ»;
+    Â«ENDFORÂ»
     '''
     
     def void addImport(String str) {

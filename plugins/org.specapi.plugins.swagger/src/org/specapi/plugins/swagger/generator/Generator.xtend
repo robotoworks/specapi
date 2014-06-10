@@ -62,16 +62,16 @@ class Generator implements IGenerator {
     }
     
     def generateResourceListing(Api api, SpecApiDocument model) '''
-    Çvar docs = commentParser.parseDocComments(api, #{"@swaglist"->1})È
+    Â«var docs = commentParser.parseDocComments(api, #{"@swaglist"->1})Â»
     {
       "swaggerVersion": "1.2",
       "apis": [
-      ÇFOR path : api.resourcePaths SEPARATOR ","È
+      Â«FOR path : api.resourcePaths SEPARATOR ","Â»
         {
-          "path": "http://localhost:8000ÇpathÈ",
-          "description": "Çdocs?.getTagByArgument("@swaglist", 0, path)?.contentÈ"
+          "path": "http://localhost:8000Â«pathÂ»",
+          "description": "Â«docs?.getTagByArgument("@swaglist", 0, path)?.contentÂ»"
         }
-      ÇENDFORÈ
+      Â«ENDFORÂ»
       ]
     }
     '''
@@ -79,60 +79,60 @@ class Generator implements IGenerator {
     def generateOperationListing(Api api, SpecApiDocument model, Iterable<HttpMethod> methods, String path) '''
     {
       "swaggerVersion": "1.2",
-      "basePath": "Çapi.baseUrlÈ",
+      "basePath": "Â«api.baseUrlÂ»",
       "apis": [
-        ÇFOR method : methods SEPARATOR ","È
+        Â«FOR method : methods SEPARATOR ","Â»
         {
-          Çvar comments = commentParser.parseDocComments(method)È
-          "path": "Çmethod.getPathAsFormatString("{", "}")È",
+          Â«var comments = commentParser.parseDocComments(method)Â»
+          "path": "Â«method.getPathAsFormatString("{", "}")Â»",
           "operations": [
             {
-              "method": "Çmethod.type.getNameÈ",
-              "summary": "Çcomments?.contentÈ",
-              "type": "Çmethod.swaggerResponseTypeNameÈ",
-              "nickname": "Çmethod.nameÈ",
+              "method": "Â«method.type.getNameÂ»",
+              "summary": "Â«comments?.contentÂ»",
+              "type": "Â«method.swaggerResponseTypeNameÂ»",
+              "nickname": "Â«method.nameÂ»",
               "parameters": [
-                ÇFOR param : method.path.params SEPARATOR ","È
+                Â«FOR param : method.path.params SEPARATOR ","Â»
                 {
-                  "name": "Çparam.nameÈ",
-                  "description": "Çcomments?.params.get(param.name)?.contentÈ",
+                  "name": "Â«param.nameÂ»",
+                  "description": "Â«comments?.params.get(param.name)?.contentÂ»",
                   "required": true,
-                  "type": "Çparam.type.boxedTypeSignature.toLowerCaseÈ",
+                  "type": "Â«param.type.boxedTypeSignature.toLowerCaseÂ»",
                   "paramType": "path"
                 }
-                ÇENDFORÈ
-                ÇIF method.paramsBlock != nullÈ
-                ÇIF method.path.params.size > 0È,ÇENDIFÈ
-                ÇFOR param : method.paramsBlock.params SEPARATOR ","È
+                Â«ENDFORÂ»
+                Â«IF method.paramsBlock != nullÂ»
+                Â«IF method.path.params.size > 0Â»,Â«ENDIFÂ»
+                Â«FOR param : method.paramsBlock.params SEPARATOR ","Â»
                 {
-                  "name": "Çparam.nameÈ",
-                  "description": "Çcomments?.params.get(param.name)?.contentÈ",
+                  "name": "Â«param.nameÂ»",
+                  "description": "Â«comments?.params.get(param.name)?.contentÂ»",
                   "required": false,
-                  "type": "Çparam.type.boxedTypeSignature.toLowerCaseÈ",
+                  "type": "Â«param.type.boxedTypeSignature.toLowerCaseÂ»",
                   "paramType": "query"
                 }
-                ÇENDFORÈ
-                ÇENDIFÈ
-                ÇIF method.body != nullÈ
-                ÇIF method.path.params.size > 0 || 
-                (method.paramsBlock != null && method.paramsBlock.params.length > 0)È,ÇENDIFÈ
+                Â«ENDFORÂ»
+                Â«ENDIFÂ»
+                Â«IF method.body != nullÂ»
+                Â«IF method.path.params.size > 0 || 
+                (method.paramsBlock != null && method.paramsBlock.params.length > 0)Â»,Â«ENDIFÂ»
                 {
                   "name": "body",
                   "paramType": "body",
-                  "type": "Çmethod.getSwaggerBodyTypeNameÈ",
+                  "type": "Â«method.getSwaggerBodyTypeNameÂ»",
                   "required": true
                 }
-                ÇENDIFÈ
+                Â«ENDIFÂ»
               ]
             }
           ]
         }
-        ÇENDFORÈ
+        Â«ENDFORÂ»
       ],
       "models": {
-          Çmethods.generateModelForMethodResponseLiteralsÈÇIF methods.hasComplexTypeLiteralResponses && model.hasUserTypesÈ,ÇENDIFÈ
-          Çmodel.generateModelForEntitiesÈÇIF model.hasUserTypes && methods.hasComplexTypeLiteralBodiesÈ,ÇENDIFÈ
-          Çmethods.generateModelForMethodBodyLiteralsÈ
+          Â«methods.generateModelForMethodResponseLiteralsÂ»Â«IF methods.hasComplexTypeLiteralResponses && model.hasUserTypesÂ»,Â«ENDIFÂ»
+          Â«model.generateModelForEntitiesÂ»Â«IF model.hasUserTypes && methods.hasComplexTypeLiteralBodiesÂ»,Â«ENDIFÂ»
+          Â«methods.generateModelForMethodBodyLiteralsÂ»
           
       }
     }
@@ -209,11 +209,11 @@ class Generator implements IGenerator {
         window.swaggerUi.load();
       });
       
-    ÇIF api.headerBlock != nullÈ
-    ÇFOR header : api.headerBlock.headers.filter[it.defaultValue != null]È
-    window.authorizations.add("Çheader.nameÈ", new ApiKeyAuthorization("Çheader.nameÈ", "Çheader.defaultValue.generateLiteralValueÈ", "header"));
-    ÇENDFORÈ
-    ÇENDIFÈ
+    Â«IF api.headerBlock != nullÂ»
+    Â«FOR header : api.headerBlock.headers.filter[it.defaultValue != null]Â»
+    window.authorizations.add("Â«header.nameÂ»", new ApiKeyAuthorization("Â«header.nameÂ»", "Â«header.defaultValue.generateLiteralValueÂ»", "header"));
+    Â«ENDFORÂ»
+    Â«ENDIFÂ»
       
       </script>
     </head>
@@ -282,44 +282,44 @@ class Generator implements IGenerator {
     }
     
     def generateModelForMethodResponseLiterals(Iterable<HttpMethod> methods) '''
-    ÇFOR method : methods.filter[it.responseBlock != null && it.responseBlock.type instanceof ComplexTypeLiteral] SEPARATOR ","È
-        Çvar type = method.responseBlock.type as ComplexTypeLiteralÈ
-        "Çmethod.swaggerResponseTypeNameÈ": {
-            "id": "Çmethod.swaggerResponseTypeNameÈ",
+    Â«FOR method : methods.filter[it.responseBlock != null && it.responseBlock.type instanceof ComplexTypeLiteral] SEPARATOR ","Â»
+        Â«var type = method.responseBlock.type as ComplexTypeLiteralÂ»
+        "Â«method.swaggerResponseTypeNameÂ»": {
+            "id": "Â«method.swaggerResponseTypeNameÂ»",
             "properties": {
-                ÇFOR mem : type.members SEPARATOR ","È
-                Çmem.generateSwaggerModelMemberÈ
-                ÇENDFORÈ
+                Â«FOR mem : type.members SEPARATOR ","Â»
+                Â«mem.generateSwaggerModelMemberÂ»
+                Â«ENDFORÂ»
             }
         }
-    ÇENDFORÈ
+    Â«ENDFORÂ»
     '''
     
     def generateModelForMethodBodyLiterals(Iterable<HttpMethod> methods) '''
-    ÇFOR method : methods.filter[it.body != null && it.body.type instanceof ComplexTypeLiteral] SEPARATOR ","È
-        Çvar type = method.body.type as ComplexTypeLiteralÈ
-        "Çmethod.getSwaggerBodyTypeNameÈ": {
-            "id": "Çmethod.getSwaggerBodyTypeNameÈ",
+    Â«FOR method : methods.filter[it.body != null && it.body.type instanceof ComplexTypeLiteral] SEPARATOR ","Â»
+        Â«var type = method.body.type as ComplexTypeLiteralÂ»
+        "Â«method.getSwaggerBodyTypeNameÂ»": {
+            "id": "Â«method.getSwaggerBodyTypeNameÂ»",
             "properties": {
-                ÇFOR mem : type.members SEPARATOR ","È
-                Çmem.generateSwaggerModelMemberÈ
-                ÇENDFORÈ
+                Â«FOR mem : type.members SEPARATOR ","Â»
+                Â«mem.generateSwaggerModelMemberÂ»
+                Â«ENDFORÂ»
             }
         }
-    ÇENDFORÈ
+    Â«ENDFORÂ»
     '''
     
     def generateModelForEntities(SpecApiDocument model) '''
-    ÇFOR entity : model.declarations.filter(typeof(ComplexTypeDeclaration)) SEPARATOR ","È
-        "Çentity.nameÈ": {
-            "id": "Çentity.nameÈ",
+    Â«FOR entity : model.declarations.filter(typeof(ComplexTypeDeclaration)) SEPARATOR ","Â»
+        "Â«entity.nameÂ»": {
+            "id": "Â«entity.nameÂ»",
             "properties": {
-                ÇFOR mem : entity.literal.members SEPARATOR ","È
-                Çmem.generateSwaggerModelMemberÈ
-                ÇENDFORÈ
+                Â«FOR mem : entity.literal.members SEPARATOR ","Â»
+                Â«mem.generateSwaggerModelMemberÂ»
+                Â«ENDFORÂ»
             }
         }
-    ÇENDFORÈ
+    Â«ENDFORÂ»
     '''
     
     def generateSwaggerModelMember(Member member) {
@@ -327,20 +327,20 @@ class Generator implements IGenerator {
     }
     
     def dispatch generateSwaggerModelMemberForType(IntrinsicType type, Member member) '''
-        "Çmember.nameÈ": {
-            "type": "Çmember.type.signatureÈ"
+        "Â«member.nameÂ»": {
+            "type": "Â«member.type.signatureÂ»"
         }
     '''
 
     def dispatch generateSwaggerModelMemberForType(ArrayType type, Member member) '''
-        "Çmember.nameÈ": {
+        "Â«member.nameÂ»": {
             "type": "array",
             "items": {
-                ÇIF type.elementType instanceof IntrinsicTypeÈ
-                "type": "Çtype.signatureÈ"
-                ÇELSEÈ
-                "$ref": "Çtype.innerSignatureÈ"
-                ÇENDIFÈ
+                Â«IF type.elementType instanceof IntrinsicTypeÂ»
+                "type": "Â«type.signatureÂ»"
+                Â«ELSEÂ»
+                "$ref": "Â«type.innerSignatureÂ»"
+                Â«ENDIFÂ»
             }
         }
     '''
@@ -351,18 +351,18 @@ class Generator implements IGenerator {
     
     
     def dispatch generateSwaggerModelMemberForUserType(ComplexTypeDeclaration type, Member member) '''
-        "Çmember.nameÈ": {
-            "$ref": "Çmember.type.signatureÈ"
+        "Â«member.nameÂ»": {
+            "$ref": "Â«member.type.signatureÂ»"
         }    
     '''
     
     def dispatch generateSwaggerModelMemberForUserType(EnumTypeDeclaration type, Member member) '''
-        "Çmember.nameÈ": {
+        "Â«member.nameÂ»": {
             "type": "string",
             "enum": [
-                ÇFOR mem : type.literal.members SEPARATOR ","È
-                "Çmem.nameÈ"
-                ÇENDFORÈ
+                Â«FOR mem : type.literal.members SEPARATOR ","Â»
+                "Â«mem.nameÂ»"
+                Â«ENDFORÂ»
             ]
         }
     '''

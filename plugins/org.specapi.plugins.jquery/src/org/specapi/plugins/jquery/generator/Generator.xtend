@@ -25,39 +25,39 @@ class Generator implements IGenerator {
     }
     
     def CharSequence generate(Api api, SpecApiDocument document) '''
-    if (typeof jQuery === 'undefined') { throw new Error('Çapi.nameÈ requires jQuery') }
+    if (typeof jQuery === 'undefined') { throw new Error('Â«api.nameÂ» requires jQuery') }
     
     +function (window, $) {
         'use strict';
         
-        var client = window.Çapi.nameÈ = function (options) {
-            this.options = $.extend({}, Çapi.nameÈ.DEFAULTS, options)
+        var client = window.Â«api.nameÂ» = function (options) {
+            this.options = $.extend({}, Â«api.nameÂ».DEFAULTS, options)
         }
         
-        Çapi.nameÈ.DEFAULTS = {
-            baseUrl: 'Çapi.baseUrlÈ'
+        Â«api.nameÂ».DEFAULTS = {
+            baseUrl: 'Â«api.baseUrlÂ»'
         }
         
-        ÇFOR method:api.blocks.filter(typeof(HttpMethod))È
-        client.prototype.Çmethod.nameÈ = function(Çmethod.generateMethodArgsÈ) {
+        Â«FOR method:api.blocks.filter(typeof(HttpMethod))Â»
+        client.prototype.Â«method.nameÂ» = function(Â«method.generateMethodArgsÂ») {
             var opts = $.extend(true, {query:{}}, options)
             var query = $.param(opts.query);
-            var path = "Çmethod.pathAsStringÈ";
-            ÇFOR param:method.path.paramsÈ
-            path = path.replace(/\:Çparam.nameÈ/, Çparam.nameÈ);
-            ÇENDFORÈ
+            var path = "Â«method.pathAsStringÂ»";
+            Â«FOR param:method.path.paramsÂ»
+            path = path.replace(/\:Â«param.nameÂ»/, Â«param.nameÂ»);
+            Â«ENDFORÂ»
             var url = this.options.baseUrl + path + (query.length > 0 ? "?" + query : "");
             
             return $.ajax(url, {
-                type:"Çmethod.type.literal.toUpperCaseÈ"
-                ÇIF method.hasBodyÈ
+                type:"Â«method.type.literal.toUpperCaseÂ»"
+                Â«IF method.hasBodyÂ»
                 ,contentType:"application/json"
                 ,data:data
-                ÇENDIFÈ
+                Â«ENDIFÂ»
             });
         }
 
-        ÇENDFORÈ
+        Â«ENDFORÂ»
     
     }(window, jQuery);
     '''

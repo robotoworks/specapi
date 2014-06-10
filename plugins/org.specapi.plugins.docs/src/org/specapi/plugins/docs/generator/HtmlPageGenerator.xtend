@@ -35,23 +35,23 @@ abstract class HtmlPageGenerator {
     <!DOCTYPE html>
     <html lang="en">
     <head>
-    ÇgenerateHeadÈ
+    Â«generateHeadÂ»
     </head>
     <body>
-    ÇgenerateTopNavÈ
+    Â«generateTopNavÂ»
     <div class="container-fluid">
     <div class="row row-offcanvas row-offcanvas-left">
     <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
     <div class="sidebar-nav">
-    ÇgenerateSideNavÈ
+    Â«generateSideNavÂ»
     </div>
     </div>
     <div class="col-xs-12 col-sm-9">
-    ÇgenerateContentÈ
+    Â«generateContentÂ»
     </div>
     </div>
     </div>
-    ÇgenerateFootÈ
+    Â«generateFootÂ»
     </body>
     </html>
     '''
@@ -62,7 +62,7 @@ abstract class HtmlPageGenerator {
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Çapi.nameÈ</title>
+    <title>Â«api.nameÂ»</title>
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="specapi.css" rel="stylesheet">
     <link rel="stylesheet" href="highlight/styles/tomorrow.css">
@@ -74,7 +74,7 @@ abstract class HtmlPageGenerator {
     <div class="navbar navbar-fixed-top navbar-inverse" role="navigation">
     <div class="container-fluid">
     <div class="navbar-header">
-    <a class="navbar-brand pull-right" href="index.html">Çapi.nameÈ</a>
+    <a class="navbar-brand pull-right" href="index.html">Â«api.nameÂ»</a>
     <button type="button" class="navbar-toggle pull-left" data-toggle="offcanvas">
     <span class="sr-only">Toggle navigation</span>
     <span class="icon-bar"></span>
@@ -90,17 +90,17 @@ abstract class HtmlPageGenerator {
     <ul class="nav nav-list">
     <li><a href="configure.html"><span class="glyphicon glyphicon-cog inverse"></span> Configure</a></li>
     <li class="nav-header">Methods</li>
-    ÇFOR method : api.blocks.filter(typeof(HttpMethod))È
-    <li ÇIF method.isMethodLinkActiveÈclass="active"ÇENDIFÈ><a href="method_Çmethod.nameÈ.html">Çmethod.name.humanize.toTitleCaseÈ</a></li>
-    ÇENDFORÈ
+    Â«FOR method : api.blocks.filter(typeof(HttpMethod))Â»
+    <li Â«IF method.isMethodLinkActiveÂ»class="active"Â«ENDIFÂ»><a href="method_Â«method.nameÂ».html">Â«method.name.humanize.toTitleCaseÂ»</a></li>
+    Â«ENDFORÂ»
     <li class="nav-header">Entities</li>
-    ÇFOR type : model.declarations.filter(typeof(ComplexTypeDeclaration))È
-    <li ÇIF type.isUserTypeDeclarationActiveÈclass="active"ÇENDIFÈ><a href="Çtype.toFileNameÈ.html">Çtype.nameÈ</a></li>
-    ÇENDFORÈ
+    Â«FOR type : model.declarations.filter(typeof(ComplexTypeDeclaration))Â»
+    <li Â«IF type.isUserTypeDeclarationActiveÂ»class="active"Â«ENDIFÂ»><a href="Â«type.toFileNameÂ».html">Â«type.nameÂ»</a></li>
+    Â«ENDFORÂ»
     <li class="nav-header">Enums</li>
-    ÇFOR type : model.declarations.filter(typeof(EnumTypeDeclaration))È
-    <li ÇIF type.isUserTypeDeclarationActiveÈclass="active"ÇENDIFÈ><a href="Çtype.toFileNameÈ.html">Çtype.nameÈ</a></li>
-    ÇENDFORÈ
+    Â«FOR type : model.declarations.filter(typeof(EnumTypeDeclaration))Â»
+    <li Â«IF type.isUserTypeDeclarationActiveÂ»class="active"Â«ENDIFÂ»><a href="Â«type.toFileNameÂ».html">Â«type.nameÂ»</a></li>
+    Â«ENDFORÂ»
     </ul>
     '''
     
@@ -112,7 +112,7 @@ abstract class HtmlPageGenerator {
     def generateFoot() '''
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="Çapi.name.toLowerCaseÈ.js"></script>
+    <script src="Â«api.name.toLowerCaseÂ».js"></script>
     <script>
     $(document).ready(function () {
       $('[data-toggle=offcanvas]').click(function () {
@@ -142,24 +142,24 @@ abstract class HtmlPageGenerator {
     
     def dispatch generateSignature(ComplexTypeLiteral type) '''
     {
-        ÇFOR member:type.membersÈ
-        "Çmember.nameÈ" : Çmember.generateMemberSignatureÈ
-        ÇENDFORÈ
+        Â«FOR member:type.membersÂ»
+        "Â«member.nameÂ»" : Â«member.generateMemberSignatureÂ»
+        Â«ENDFORÂ»
     }
     '''
     
     def generateMemberSignature(Member member) '''
-    ÇIF member.type instanceof UserTypeÈ
-    <a href="Ç(member.type as UserType).declaration.nameÈ.html">Çmember.type.signatureÈ</a>
-    ÇELSEIF member.type instanceof ArrayType && (member.type as ArrayType).elementType instanceof UserTypeÈ
-    <a href="Ç((member.type as ArrayType).elementType as UserType).declaration.nameÈ.html">Çmember.type.signatureÈ</a>
-    ÇELSEÈ
-    Çmember.type.signatureÈ
-    ÇENDIFÈ
+    Â«IF member.type instanceof UserTypeÂ»
+    <a href="Â«(member.type as UserType).declaration.nameÂ».html">Â«member.type.signatureÂ»</a>
+    Â«ELSEIF member.type instanceof ArrayType && (member.type as ArrayType).elementType instanceof UserTypeÂ»
+    <a href="Â«((member.type as ArrayType).elementType as UserType).declaration.nameÂ».html">Â«member.type.signatureÂ»</a>
+    Â«ELSEÂ»
+    Â«member.type.signatureÂ»
+    Â«ENDIFÂ»
     '''
     
     def dispatch generateSignature(IntrinsicType type) '''
-    Çtype.signatureÈ
+    Â«type.signatureÂ»
     '''
     
     def dispatch generateSignature(UserType type) {
@@ -168,20 +168,20 @@ abstract class HtmlPageGenerator {
     
     
     def dispatch generateSignature(ArrayType type) '''
-    ÇIF type.elementType instanceof UserTypeÈ
+    Â«IF type.elementType instanceof UserTypeÂ»
     [
-        Ç(type.elementType as UserType).declaration.generateUserTypeSignatureÈ
+        Â«(type.elementType as UserType).declaration.generateUserTypeSignatureÂ»
     ]
-    ÇELSEÈ
-    Çtype.signatureÈ
-    ÇENDIFÈ
+    Â«ELSEÂ»
+    Â«type.signatureÂ»
+    Â«ENDIFÂ»
     '''
     
     def dispatch generateUserTypeSignature(ComplexTypeDeclaration type) '''
-    <a href="Çtype.nameÈ.html">Çtype.nameÈ</a> {
-        ÇFOR member:type.literal.membersÈ
-        "Çmember.nameÈ" : Çmember.generateMemberSignatureÈ
-        ÇENDFORÈ       
+    <a href="Â«type.nameÂ».html">Â«type.nameÂ»</a> {
+        Â«FOR member:type.literal.membersÂ»
+        "Â«member.nameÂ»" : Â«member.generateMemberSignatureÂ»
+        Â«ENDFORÂ»       
     }
     '''
     

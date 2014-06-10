@@ -21,8 +21,8 @@ class DocIndexGenerator extends HtmlPageGenerator {
     }
     
     override generateContent() '''
-    Çvar serviceComments = commentParser.parseDocComments(api)È
-    <p>ÇserviceComments?.contentÈ</p>
+    Â«var serviceComments = commentParser.parseDocComments(api)Â»
+    <p>Â«serviceComments?.contentÂ»</p>
     <div class="page-header">
     <h1>Resources</h1>
     </div>          
@@ -35,20 +35,20 @@ class DocIndexGenerator extends HtmlPageGenerator {
     </tr>
     </thead>
     <tbody>
-    ÇgenerateMethods(api, model)È
+    Â«generateMethods(api, model)Â»
     </tbody>
     </table>
     </div>
     '''
 	
 	def generateMethods(Api api, SpecApiDocument model) '''
-	ÇFOR method:api.blocks.filter(typeof(HttpMethod))È
+	Â«FOR method:api.blocks.filter(typeof(HttpMethod))Â»
 	<tr>
-	<td><span class="label Çmethod.cssLabelClassÈ">Çmethod.type.literal.toUpperCaseÈ</span> <a href="method_Çmethod.nameÈ.html">Çmethod.pathAsStringÈ</a></td>
-	Çvar comments = commentParser.parseDocComments(method)È
-	<td>Çcomments?.contentÈ</td>
+	<td><span class="label Â«method.cssLabelClassÂ»">Â«method.type.literal.toUpperCaseÂ»</span> <a href="method_Â«method.nameÂ».html">Â«method.pathAsStringÂ»</a></td>
+	Â«var comments = commentParser.parseDocComments(method)Â»
+	<td>Â«comments?.contentÂ»</td>
 	</tr>
-	ÇENDFORÈ
+	Â«ENDFORÂ»
 	'''
     
     override isMethodLinkActive(HttpMethod method) {

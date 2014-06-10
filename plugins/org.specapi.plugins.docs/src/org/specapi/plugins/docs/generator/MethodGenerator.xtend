@@ -57,18 +57,18 @@ class MethodGenerator extends HtmlPageGenerator {
     <div id="testConsole" class="console container-fluid collapse">
     <div id="consoleHeading" class="clearfix">
     <button type="button" class="close" data-toggle="collapse" data-target="#testConsole">&times;</button>
-    <p class="pull-left"><span class="label Çmethod.cssLabelClassÈ">Çmethod.type.literal.toUpperCaseÈ</span> <b>Çapi.baseUrl + method.pathAsStringÈ</b></p>
+    <p class="pull-left"><span class="label Â«method.cssLabelClassÂ»">Â«method.type.literal.toUpperCaseÂ»</span> <b>Â«api.baseUrl + method.pathAsStringÂ»</b></p>
     </div>
     <form role="form">
-    ÇIF hasParamsÈ
-    ÇgenerateParamFormFields(api, model, method, comments)È
-    ÇENDIFÈ
-    ÇIF body != nullÈ
+    Â«IF hasParamsÂ»
+    Â«generateParamFormFields(api, model, method, comments)Â»
+    Â«ENDIFÂ»
+    Â«IF body != nullÂ»
     <div class="form-group">
     <label for="f_request">Request</label>
-    <pre id="f_request" class="container-fluid">ÇjsonGenerator.generateForBodyBlock(body, 3)È</pre>
+    <pre id="f_request" class="container-fluid">Â«jsonGenerator.generateForBodyBlock(body, 3)Â»</pre>
     </div>
-    ÇENDIFÈ
+    Â«ENDIFÂ»
     <div class="form-group">
     <label for="f_response pull-left">Response</label> [<a id="clearResponseButton" href="javascript:void()">clear</a>] <label id="response_status"></label>
     <pre id="f_response" class="container-fluid clearfix"></pre>
@@ -84,11 +84,11 @@ class MethodGenerator extends HtmlPageGenerator {
     <button id="console_button" type="button" class="btn btn-secondary pull-right btn-pull-down-handle" data-toggle="collapse" data-target="#testConsole">
       API Console
     </button>
-    <h1 class="pull-left">Çmethod.name.humanize.toTitleCaseÈ</h1>
+    <h1 class="pull-left">Â«method.name.humanize.toTitleCaseÂ»</h1>
     </div>
-    <p><span class="label Çmethod.cssLabelClassÈ">Çmethod.type.literal.toUpperCaseÈ</span> <b>Çapi.baseUrl + method.pathAsStringÈ</b></p>
-    <p>Çcomments?.contentÈ</p>
-    ÇIF hasParamsÈ
+    <p><span class="label Â«method.cssLabelClassÂ»">Â«method.type.literal.toUpperCaseÂ»</span> <b>Â«api.baseUrl + method.pathAsStringÂ»</b></p>
+    <p>Â«comments?.contentÂ»</p>
+    Â«IF hasParamsÂ»
     <div class="panel panel-default">
     <div class="panel-heading" data-toggle="collapse" data-target="#params">
     <h4 class="panel-title"">Parameters</h4>
@@ -102,56 +102,56 @@ class MethodGenerator extends HtmlPageGenerator {
     </tr>
     </thead>
     <tbody>
-    ÇgenerateParams(api, model, method, comments)È
+    Â«generateParams(api, model, method, comments)Â»
     </tbody>
     </table>
     </div>
     </div>
-    ÇENDIFÈ
-    ÇIF body != nullÈ
-    <p>Çcomments?.body?.contentÈ</p>
+    Â«ENDIFÂ»
+    Â«IF body != nullÂ»
+    <p>Â«comments?.body?.contentÂ»</p>
     <div class="panel panel-default">
     <div class="panel-heading" data-toggle="collapse" data-target="#requestBody">
     <h4 class="panel-title"">Request</h4>
     </div>
     <div id="requestBody" class="panel-collapse collapse">
     <div class="panel-body">
-    <pre><code class="javascript">ÇgenerateBody(api, model, body)È</code></pre>
+    <pre><code class="javascript">Â«generateBody(api, model, body)Â»</code></pre>
     </div>
     </div>
     </div>
-    ÇENDIFÈ
-    ÇIF responses.size > 0È
+    Â«ENDIFÂ»
+    Â«IF responses.size > 0Â»
     <div class="panel-group" id="accordion">
-    ÇFOR response : responsesÈ
-    <div class="panel panel-Çresponse.getPanelCssClassÈ">
-    <div class="panel-heading" data-toggle="collapse" data-target="#responseÇresponse.codeÈ">
-    <h4 class="panel-title"">Çresponse.responseLineÈ</h4>
+    Â«FOR response : responsesÂ»
+    <div class="panel panel-Â«response.getPanelCssClassÂ»">
+    <div class="panel-heading" data-toggle="collapse" data-target="#responseÂ«response.codeÂ»">
+    <h4 class="panel-title"">Â«response.responseLineÂ»</h4>
     </div>
-    <div id="responseÇresponse.codeÈ" class="panel-collapse collapse">
-    ÇIF (response.code == 0 || response.code == 200) && commentsHaveContentForResponse(comments)È
-    <div class="panel-body-heading">Çcomments?.response?.contentÈ</div>
-    ÇENDIFÈ
+    <div id="responseÂ«response.codeÂ»" class="panel-collapse collapse">
+    Â«IF (response.code == 0 || response.code == 200) && commentsHaveContentForResponse(comments)Â»
+    <div class="panel-body-heading">Â«comments?.response?.contentÂ»</div>
+    Â«ENDIFÂ»
     <div class="panel-body">
-    <pre><code class="javascript">ÇgenerateResponse(api, model, response)È</code></pre>
+    <pre><code class="javascript">Â«generateResponse(api, model, response)Â»</code></pre>
     </div>
     </div>
     </div>
-    ÇENDFORÈ
+    Â«ENDFORÂ»
     </div>
-    ÇENDIFÈ
+    Â«ENDIFÂ»
 	'''
 	
     override generateFoot() '''
-    Çsuper.generateFoot()È
+    Â«super.generateFoot()Â»
     <script src="ace/ace.js" type="text/javascript" charset="utf-8"></script>
     <script>
-    ÇIF body != nullÈ
+    Â«IF body != nullÂ»
         var requestEditor = ace.edit("f_request");
         requestEditor.setTheme("ace/theme/twilight");
         requestEditor.setOptions({ maxLines: Infinity });
         requestEditor.getSession().setMode("ace/mode/javascript");
-    ÇENDIFÈ
+    Â«ENDIFÂ»
         var responseEditor = ace.edit("f_response");
         responseEditor.setTheme("ace/theme/twilight");
         responseEditor.setOptions({ maxLines: Infinity });
@@ -162,26 +162,26 @@ class MethodGenerator extends HtmlPageGenerator {
 
       $('#go_button').click(function () {
         var btn = $(this);
-        var baseUrl = "Çapi.baseUrlÈ";
-        var url = baseUrl + "Çmethod.pathAsStringÈ";
+        var baseUrl = "Â«api.baseUrlÂ»";
+        var url = baseUrl + "Â«method.pathAsStringÂ»";
         var params = {};
         var paramsSet = false;
-        ÇFOR p:method.path?.paramsÈ
-        url = url.replace(/\:Çp.nameÈ/, $('#f_param_Çp.nameÈ').val());
-        ÇENDFORÈ
+        Â«FOR p:method.path?.paramsÂ»
+        url = url.replace(/\:Â«p.nameÂ»/, $('#f_param_Â«p.nameÂ»').val());
+        Â«ENDFORÂ»
 
-        ÇIF hasQueryParamsÈ
-        ÇFOR p:method.paramsBlock.paramsÈ
-        if($('#f_param_Çp.nameÈ').val()) {
+        Â«IF hasQueryParamsÂ»
+        Â«FOR p:method.paramsBlock.paramsÂ»
+        if($('#f_param_Â«p.nameÂ»').val()) {
             paramsSet = true;
-            params["Çp.nameÈ"] = $('#f_param_Çp.nameÈ').val()
+            params["Â«p.nameÂ»"] = $('#f_param_Â«p.nameÂ»').val()
         }
-        ÇENDFORÈ
+        Â«ENDFORÂ»
         
         if(paramsSet) {
             url  = url + "?" + $.param(params);
         }
-        ÇENDIFÈ
+        Â«ENDIFÂ»
              
         console.log(url);
 
@@ -229,29 +229,29 @@ class MethodGenerator extends HtmlPageGenerator {
     }
 
     def generateBody(Api api, SpecApiDocument model, BodyBlock body) '''
-    Çbody.type.generateSignatureÈ
+    Â«body.type.generateSignatureÂ»
     '''
     
     	
 	def generateResponse(Api api, SpecApiDocument model, ResponseBlock response) '''
-    Çresponse.type.generateSignatureÈ
+    Â«response.type.generateSignatureÂ»
 	'''
 	
 	def generateParams(Api api, SpecApiDocument model, HttpMethod method, DocComments comments) '''
-	ÇFOR p:method.path?.paramsÈ
+	Â«FOR p:method.path?.paramsÂ»
 	<tr>
-	<td>Çp.nameÈ</td>
-	<td>Çcomments?.params?.get(p.name)?.contentÈ</td>
+	<td>Â«p.nameÂ»</td>
+	<td>Â«comments?.params?.get(p.name)?.contentÂ»</td>
 	</tr>
-	ÇENDFORÈ
-	ÇIF hasQueryParamsÈ
-	ÇFOR p:method.paramsBlock.paramsÈ
+	Â«ENDFORÂ»
+	Â«IF hasQueryParamsÂ»
+	Â«FOR p:method.paramsBlock.paramsÂ»
 	<tr>
-	<td>Çp.nameÈ</td>
-	<td>Çcomments?.params?.get(p.name)?.contentÈ</td>
+	<td>Â«p.nameÂ»</td>
+	<td>Â«comments?.params?.get(p.name)?.contentÂ»</td>
 	</tr>
-	ÇENDFORÈ
-	ÇENDIFÈ
+	Â«ENDFORÂ»
+	Â«ENDIFÂ»
 	'''
     
     override isUserTypeDeclarationActive(UserTypeDeclaration decleration) {
@@ -281,22 +281,22 @@ class MethodGenerator extends HtmlPageGenerator {
     }
     
     def generateParamFormFields(Api api, SpecApiDocument model, HttpMethod method, DocComments comments) '''
-    ÇFOR p:method.path?.paramsÈ
+    Â«FOR p:method.path?.paramsÂ»
     <div class="form-group">
-    <label for="f_param_Çp.nameÈ">Çp.nameÈ</label>
-    <input type="text" class="form-control" id="f_param_Çp.nameÈ" placeholder="">
-    <p class="help-block">Çcomments?.params?.get(p.name)?.contentÈ</p>
+    <label for="f_param_Â«p.nameÂ»">Â«p.nameÂ»</label>
+    <input type="text" class="form-control" id="f_param_Â«p.nameÂ»" placeholder="">
+    <p class="help-block">Â«comments?.params?.get(p.name)?.contentÂ»</p>
     </div>
-    ÇENDFORÈ
-    ÇIF method.paramsBlock != nullÈ
-    ÇFOR p:method.paramsBlock?.paramsÈ
+    Â«ENDFORÂ»
+    Â«IF method.paramsBlock != nullÂ»
+    Â«FOR p:method.paramsBlock?.paramsÂ»
     <div class="form-group">
-    <label for="f_param_Çp.nameÈ">Çp.nameÈ</label>
-    <input type="text" class="form-control" id="f_param_Çp.nameÈ" placeholder="">
-    <p class="help-block">Çcomments?.params?.get(p.name)?.contentÈ</p>
+    <label for="f_param_Â«p.nameÂ»">Â«p.nameÂ»</label>
+    <input type="text" class="form-control" id="f_param_Â«p.nameÂ»" placeholder="">
+    <p class="help-block">Â«comments?.params?.get(p.name)?.contentÂ»</p>
     </div>
-    ÇENDFORÈ
-    ÇENDIFÈ
+    Â«ENDFORÂ»
+    Â«ENDIFÂ»
     '''
     
 }

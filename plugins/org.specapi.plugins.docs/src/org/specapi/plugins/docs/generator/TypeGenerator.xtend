@@ -29,8 +29,8 @@ class TypeGenerator extends HtmlPageGenerator {
     }
     
     override generateContent() '''
-    <h1>Çtype.nameÈ</h1>
-    <pre><code class="javascript">Çtype.generateUserTypeSignatureÈ</code></pre>
+    <h1>Â«type.nameÂ»</h1>
+    <pre><code class="javascript">Â«type.generateUserTypeSignatureÂ»</code></pre>
     '''
     
 }
