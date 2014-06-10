@@ -18,7 +18,6 @@ import org.specapi.specapiLang.UserTypeDeclaration
 import static org.specapi.specapiLang.HttpMethodType.*
 
 import static extension org.specapi.util.SpecApiStringExtensions.*
-import org.specapi.specapiLang.Type
 
 abstract class HtmlPageGenerator {
 	
@@ -89,6 +88,7 @@ abstract class HtmlPageGenerator {
 	
     def generateSideNav() '''
     <ul class="nav nav-list">
+    <li><a href="configure.html"><span class="glyphicon glyphicon-cog inverse"></span> Configure</a></li>
     <li class="nav-header">Methods</li>
     «FOR method : api.blocks.filter(typeof(HttpMethod))»
     <li «IF method.isMethodLinkActive»class="active"«ENDIF»><a href="method_«method.name».html">«method.name.humanize.toTitleCase»</a></li>
@@ -112,6 +112,7 @@ abstract class HtmlPageGenerator {
     def generateFoot() '''
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="«api.name.toLowerCase».js"></script>
     <script>
     $(document).ready(function () {
       $('[data-toggle=offcanvas]').click(function () {

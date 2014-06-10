@@ -70,7 +70,7 @@ class MethodGenerator extends HtmlPageGenerator {
     </div>
     «ENDIF»
     <div class="form-group">
-    <label for="f_response pull-left">Response</label> <label id="response_status"></label>
+    <label for="f_response pull-left">Response</label> [<a id="clearResponseButton" href="javascript:void()">clear</a>] <label id="response_status"></label>
     <pre id="f_response" class="container-fluid clearfix"></pre>
     </div>
     <div class="form-group">
@@ -158,9 +158,10 @@ class MethodGenerator extends HtmlPageGenerator {
         responseEditor.getSession().setMode("ace/mode/javascript");
         responseEditor.getSession().setUseWorker(false);
         
+        var responseStatusLabel = $("#response_status");
+
       $('#go_button').click(function () {
         var btn = $(this);
-        var responseStatusLabel = $("#response_status");
         var baseUrl = "«api.baseUrl»";
         var url = baseUrl + "«method.pathAsString»";
         var params = {};
@@ -202,6 +203,11 @@ class MethodGenerator extends HtmlPageGenerator {
           responseStatusLabel.css("color", "red");
           responseEditor.getSession().setValue(jqXHR.responseText);
         });
+      });
+      
+      $('#clearResponseButton').on('click', function (e) {
+        responseEditor.getSession().setValue("");
+        responseStatusLabel.text("");
       });
     </script>
     '''
