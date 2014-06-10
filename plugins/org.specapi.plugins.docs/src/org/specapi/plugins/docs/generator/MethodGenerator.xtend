@@ -13,6 +13,7 @@ import org.specapi.specapiLang.SpecApiDocument
 import org.specapi.specapiLang.UserTypeDeclaration
 
 import static extension org.specapi.util.SpecApiStringExtensions.*
+import java.util.ArrayList
 
 class MethodGenerator extends HtmlPageGenerator {
 	
@@ -147,70 +148,77 @@ class MethodGenerator extends HtmlPageGenerator {
     <script src="ace/ace.js" type="text/javascript" charset="utf-8"></script>
     <script>
     «IF body != null»
-        var requestEditor = ace.edit("f_request");
-        requestEditor.setTheme("ace/theme/twilight");
-        requestEditor.setOptions({ maxLines: Infinity });
-        requestEditor.getSession().setMode("ace/mode/javascript");
+    var requestEditor = ace.edit("f_request");
+    requestEditor.setTheme("ace/theme/twilight");
+    requestEditor.setOptions({ maxLines: Infinity });
+    requestEditor.getSession().setMode("ace/mode/javascript");
     «ENDIF»
-        var responseEditor = ace.edit("f_response");
-        responseEditor.setTheme("ace/theme/twilight");
-        responseEditor.setOptions({ maxLines: Infinity });
-        responseEditor.getSession().setMode("ace/mode/javascript");
-        responseEditor.getSession().setUseWorker(false);
-        
-        var responseStatusLabel = $("#response_status");
-
-      $('#go_button').click(function () {
+    var responseEditor = ace.edit("f_response");
+    responseEditor.setTheme("ace/theme/twilight");
+    responseEditor.setOptions({ maxLines: Infinity });
+    responseEditor.getSession().setMode("ace/mode/javascript");
+    responseEditor.getSession().setUseWorker(false);
+    
+    var responseStatusLabel = $("#response_status");
+    var api = new «api.name»();
+    
+    $('#go_button').click(function () {
         var btn = $(this);
-        var baseUrl = "«api.baseUrl»";
-        var url = baseUrl + "«method.pathAsString»";
-        var params = {};
-        var paramsSet = false;
-        «FOR p:method.path?.params»
-        url = url.replace(/\:«p.name»/, $('#f_param_«p.name»').val());
-        «ENDFOR»
-
+        var query = {};
         «IF hasQueryParams»
+        
         «FOR p:method.paramsBlock.params»
         if($('#f_param_«p.name»').val()) {
-            paramsSet = true;
-            params["«p.name»"] = $('#f_param_«p.name»').val()
+            query["«p.name»"] = $('#f_param_«p.name»').val()
         }
-        «ENDFOR»
         
-        if(paramsSet) {
-            url  = url + "?" + $.param(params);
-        }
+        «ENDFOR»
+        «ENDIF» 
+        «IF method.hasBody»
+        var data = $.parseJSON(requestEditor.getSession().getValue());
         «ENDIF»
-             
-        console.log(url);
-
         btn.button('loading');
-        $.ajax(url)
-        .done(function(data, textStatus, jqXHR ) {
-          btn.button('reset');
-          responseStatusLabel.text(jqXHR.status + " " + jqXHR.statusText);
-          responseStatusLabel.css("color", "green");
-          responseEditor.getSession().setValue(jqXHR.responseText);
-        })
-        .fail(function(jqXHR, textStatus, errorThrown ) {
-          btn.button('reset');
-          if(jqXHR.status == 0 ) {
-            responseStatusLabel.text("No Connection");
-          } else {
+        api.«method.name»(«method.generateJsApiCallParams»)
+        .done(function(data, textStatus, jqXHR) {
+            btn.button('reset');
             responseStatusLabel.text(jqXHR.status + " " + jqXHR.statusText);
-          }
-          responseStatusLabel.css("color", "red");
-          responseEditor.getSession().setValue(jqXHR.responseText);
+            responseStatusLabel.css("color", "green");
+            responseEditor.getSession().setValue(jqXHR.responseText);
+        })
+        .fail(function(jqXHR, textStatus, errorThrown) {
+            btn.button('reset');
+            if(jqXHR.status == 0 ) {
+                responseStatusLabel.text("No Connection");
+            } else {
+                responseStatusLabel.text(jqXHR.status + " " + jqXHR.statusText);
+            }
+            responseStatusLabel.css("color", "red");
+            responseEditor.getSession().setValue(jqXHR.responseText);
         });
-      });
+    });
       
-      $('#clearResponseButton').on('click', function (e) {
+    $('#clearResponseButton').on('click', function (e) {
         responseEditor.getSession().setValue("");
         responseStatusLabel.text("");
-      });
+    });
     </script>
     '''
+
+    def generateJsApiCallParams(HttpMethod method) {
+        var params = new ArrayList<String>
+        
+        for(param : method.path.params) {
+            params.add("$('#f_param_" + param.name + "').val()");
+        }
+        
+        if(method.hasBody) {
+            params.add("data")
+        }
+        
+        params.add("{query:query}")
+        
+        return params.join(", ")
+    }
     
     def commentsHaveContentForResponse(DocComments comments) {
         return comments != null && 

@@ -251,48 +251,43 @@ var requestEditor = ace.edit("f_request");
 requestEditor.setTheme("ace/theme/twilight");
 requestEditor.setOptions({ maxLines: Infinity });
 requestEditor.getSession().setMode("ace/mode/javascript");
-    var responseEditor = ace.edit("f_response");
-    responseEditor.setTheme("ace/theme/twilight");
-    responseEditor.setOptions({ maxLines: Infinity });
-    responseEditor.getSession().setMode("ace/mode/javascript");
-    responseEditor.getSession().setUseWorker(false);
-    
-    var responseStatusLabel = $("#response_status");
+var responseEditor = ace.edit("f_response");
+responseEditor.setTheme("ace/theme/twilight");
+responseEditor.setOptions({ maxLines: Infinity });
+responseEditor.getSession().setMode("ace/mode/javascript");
+responseEditor.getSession().setUseWorker(false);
 
-  $('#go_button').click(function () {
+var responseStatusLabel = $("#response_status");
+var api = new GithubAPI();
+
+$('#go_button').click(function () {
     var btn = $(this);
-    var baseUrl = "https://api.github.com";
-    var url = baseUrl + "/user/repos";
-    var params = {};
-    var paramsSet = false;
-
-         
-    console.log(url);
-
+    var query = {};
+    var data = $.parseJSON(requestEditor.getSession().getValue());
     btn.button('loading');
-    $.ajax(url)
-    .done(function(data, textStatus, jqXHR ) {
-      btn.button('reset');
-      responseStatusLabel.text(jqXHR.status + " " + jqXHR.statusText);
-      responseStatusLabel.css("color", "green");
-      responseEditor.getSession().setValue(jqXHR.responseText);
-    })
-    .fail(function(jqXHR, textStatus, errorThrown ) {
-      btn.button('reset');
-      if(jqXHR.status == 0 ) {
-        responseStatusLabel.text("No Connection");
-      } else {
+    api.createRepository(data, {query:query})
+    .done(function(data, textStatus, jqXHR) {
+        btn.button('reset');
         responseStatusLabel.text(jqXHR.status + " " + jqXHR.statusText);
-      }
-      responseStatusLabel.css("color", "red");
-      responseEditor.getSession().setValue(jqXHR.responseText);
+        responseStatusLabel.css("color", "green");
+        responseEditor.getSession().setValue(jqXHR.responseText);
+    })
+    .fail(function(jqXHR, textStatus, errorThrown) {
+        btn.button('reset');
+        if(jqXHR.status == 0 ) {
+            responseStatusLabel.text("No Connection");
+        } else {
+            responseStatusLabel.text(jqXHR.status + " " + jqXHR.statusText);
+        }
+        responseStatusLabel.css("color", "red");
+        responseEditor.getSession().setValue(jqXHR.responseText);
     });
-  });
+});
   
-  $('#clearResponseButton').on('click', function (e) {
+$('#clearResponseButton').on('click', function (e) {
     responseEditor.getSession().setValue("");
     responseStatusLabel.text("");
-  });
+});
 </script>
 </body>
 </html>
