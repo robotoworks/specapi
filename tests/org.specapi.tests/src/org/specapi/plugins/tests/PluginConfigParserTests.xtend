@@ -23,7 +23,7 @@ public class PluginConfigParserTests {
 		var configStream = new ByteArrayInputStream('''
 		{
 			"plugin":"org.specapi.plugins.docs.TestPlugin",
-			"configurations":[
+			"outputs":[
 				{
 					"name":"A",
 					"description":"A Output Folder",
@@ -77,7 +77,7 @@ public class PluginConfigParserTests {
 			"targets":[
 				{
 					"plugin":"org.specapi.plugins.docs.TestPlugin",
-					"configurations":[
+					"outputs":[
 						{
 							"name":"A",
 							"output_directory":"./a-gen"
@@ -86,7 +86,7 @@ public class PluginConfigParserTests {
 				},
 				{
 					"plugin":"org.specapi.plugins.docs.TestPlugin2",
-					"configurations":[
+					"outputs":[
 						{
 							"name":"B",
 							"output_directory":"./a-gen"

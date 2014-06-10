@@ -19,7 +19,7 @@ generate into, which by default in ```./doc-gen```.
         },
         {
             "plugin":"org.specapi.plugins.jquery.Plugin",
-            "configurations":[
+            "outputs":[
                 {
                     "name":"JQUERY",
                     "output_directory":"./doc-gen"

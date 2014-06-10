@@ -26,7 +26,7 @@ public class OutputConfigurationMergerTests {
 		var configStream = new ByteArrayInputStream('''
 		{
 			"plugin":"org.specapi.plugins.docs.TestPlugin",
-			"configurations":[
+			"outputs":[
 				{
 					"name":"A",
 					"description":"A Output Folder",
@@ -56,7 +56,7 @@ public class OutputConfigurationMergerTests {
 			"targets":[
 				{
 					"plugin":"org.specapi.plugins.docs.TestPlugin",
-					"configurations":[
+					"outputs":[
 						{
 							"name":"A",
 							"output_directory":"./a-gen-changed",

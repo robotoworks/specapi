@@ -33,7 +33,7 @@ class PluginConfigParser {
 				config.setPluginClassName(reader.nextString());
 			}
 			
-			if(name.equals("configurations")) {
+			if(name.equals("outputs")) {
 				parseOutputConfigurations(reader, config);
 			}
 		}
