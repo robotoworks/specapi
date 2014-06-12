@@ -22,13 +22,13 @@ entity Issue {
 }
 ``` 
   
-Then use one of the available code generators, see the [quick start wiki page](Quick-Start/)  to get started.
+Then use one of the available code generators, see the [quick start wiki page](https://github.com/robotoworks/specapi/wiki/Quick-Start)  to get started.
 
 Contribute
 ----------
 If you would like to submit pull requests for this project you will need to install eclipse and the xText framework.
 
-If you would just like to author a plugin, you can see the [plugin development guide](Plugin-Development/).
+If you would just like to author a plugin, you can see the [plugin development guide](https://github.com/robotoworks/specapi/wiki/Plugin-Development/).
 
 In Eclipse create a new workspace and import the projects:-
 
