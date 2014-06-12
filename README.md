@@ -28,7 +28,7 @@ Contribute
 ----------
 If you would like to submit pull requests for this project you will need to install eclipse and the xText framework.
 
-If you would just like to author a plugin, you can see the [plugin development guide](https://github.com/robotoworks/specapi/wiki/Plugin-Development/).
+If you would just like to author a plugin, you can see the [plugin development guide](https://github.com/robotoworks/specapi/wiki/Plugin-Development/), read on if you would like to modify the specapi language itself, improve the editor experience, or write a core plugin to be included with future releases of SpecAPI.
 
 In Eclipse create a new workspace and import the projects:-
 
@@ -39,7 +39,7 @@ In Eclipse create a new workspace and import the projects:-
 * org.specapi.ui
 * org.specapi.updatesite
 
-Then create a new Run/Debug Configuration to launch the a new Eclipse instance which will allow you to debug and test SpecAPI:
+Create a new Run/Debug Configuration to launch a new Eclipse instance which will allow you to debug and test SpecAPI:
 
 ```Run Configurations > Eclipse Application > New```
 
@@ -50,7 +50,7 @@ In the new running Eclipse instance, you can then add the SpecAPI plugin and exa
 * org.specapi.plugins.docs
 * org.specapi.plugins.docs.example
 
-These projects demonstrate how to author SpecAPI plugins, the example projects are companions to each plugin project that should provide the end user with a working example of what your plugin can do, also a Readme.md file should be provided in the root of the example project
+These projects demonstrate how to author SpecAPI plugins, the example projects are companions to each plugin project that should provide the end user with a working example of what your plugin can do, also a Readme.md file should be provided in the root of the plugin project and the plugin example project that should provide instructions on how to use the plugin.
 
 License
 =======
