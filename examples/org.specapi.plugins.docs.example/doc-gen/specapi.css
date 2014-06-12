@@ -66,7 +66,7 @@ footer {
 
 .nav > .nav-header {
     padding: 8px 15px;
-    background-color: #343434;
+    background-color: #484949;
     color: #bababa;
     border-bottom:1px solid #565656;
     border-top:1px solid #565656;
@@ -74,21 +74,21 @@ footer {
 }
 
 .nav > li {
-  background-color: #232323;
+  background-color: #363636;
   border-bottom:1px solid #000;
 }
 
 .nav > li.active {
-   background-color:#454545;
+   background-color:#484848;
 }
 
 .sidebar-nav > .nav > li > a {
-  color: #bababa;
+    color: #bababa;
     padding: 8px 15px;
 }
 
 .sidebar-nav > .nav > li > a:hover {
-  background-color: #343434;
+  background-color: #484848;
 }
 
 pre {
@@ -133,4 +133,23 @@ pre {
 #consoleHeading {
     padding-top:12px;
     padding-bottom:12px;
+}
+
+.form-configure {
+    padding-top:15px;
+}
+.form-configure > .form-group > .row {
+    padding-left:15px;
+}
+.form-configure > .form-group > .row > .col-xs-4 {
+    padding-left:1px;
+    padding-right:1px;
+}
+.form-configure > .form-group > .row > .col-xs-2 {
+    padding-left:1px;
+    padding-right:1px;
+}
+.form-configure > .row > .col-xs-1 {
+    padding-left:1px;
+    padding-right:1px;
 }

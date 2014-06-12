@@ -155,12 +155,20 @@ class MethodGenerator extends HtmlPageGenerator {
     «ENDIF»
     var responseEditor = ace.edit("f_response");
     responseEditor.setTheme("ace/theme/twilight");
-    responseEditor.setOptions({ maxLines: Infinity });
+    responseEditor.setOptions({ maxLines: 32 });
     responseEditor.getSession().setMode("ace/mode/javascript");
     responseEditor.getSession().setUseWorker(false);
     
     var responseStatusLabel = $("#response_status");
     var api = new «api.name»();
+    var config = specApiConfig.getConfig();
+
+    if(config != null) {
+        for(var i=0; i < config.headers.length; i++) {
+            var header = config.headers[i];
+            api.addDefaultHeader(header.key, header.value);
+        }
+    }
     
     $('#go_button').click(function () {
         var btn = $(this);
@@ -170,6 +178,13 @@ class MethodGenerator extends HtmlPageGenerator {
         «FOR p:method.paramsBlock.params»
         if($('#f_param_«p.name»').val()) {
             query["«p.name»"] = $('#f_param_«p.name»').val()
+        }
+        
+        if(config != null) {
+            for(var i=0; i < config.params.length; i++) {
+                var param = config.params[i];
+                query[param.key] = param.value;
+            }
         }
         
         «ENDFOR»
@@ -183,7 +198,7 @@ class MethodGenerator extends HtmlPageGenerator {
             btn.button('reset');
             responseStatusLabel.text(jqXHR.status + " " + jqXHR.statusText);
             responseStatusLabel.css("color", "green");
-            responseEditor.getSession().setValue(jqXHR.responseText);
+            responseEditor.setValue(JSON.stringify(data, undefined, 4));
         })
         .fail(function(jqXHR, textStatus, errorThrown) {
             btn.button('reset');
@@ -193,7 +208,7 @@ class MethodGenerator extends HtmlPageGenerator {
                 responseStatusLabel.text(jqXHR.status + " " + jqXHR.statusText);
             }
             responseStatusLabel.css("color", "red");
-            responseEditor.getSession().setValue(jqXHR.responseText);
+            responseEditor.setValue(JSON.stringify(JSON.parse(jqXHR.responseText), undefined, 4));
         });
     });
       

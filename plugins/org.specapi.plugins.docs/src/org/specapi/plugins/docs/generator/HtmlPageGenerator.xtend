@@ -2,7 +2,6 @@ package org.specapi.plugins.docs.generator
 
 import com.google.inject.Inject
 import org.specapi.SpecApiModelUtils
-import org.specapi.generator.DocCommentParser
 import org.specapi.specapiLang.Api
 import org.specapi.specapiLang.ArrayType
 import org.specapi.specapiLang.ComplexTypeDeclaration
@@ -24,7 +23,6 @@ abstract class HtmlPageGenerator {
     @Property Api api
     @Property SpecApiDocument model
     @Extension @Inject SpecApiModelUtils modelUtil
-    @Inject DocCommentParser commentParser
     
     new (Api api, SpecApiDocument model) {
         this.api = api
@@ -88,21 +86,25 @@ abstract class HtmlPageGenerator {
 	
     def generateSideNav() '''
     <ul class="nav nav-list">
-    <li><a href="configure.html"><span class="glyphicon glyphicon-cog inverse"></span> Configure</a></li>
+    <li«IF isConfigurePageActive» class="active"«ENDIF»><a href="configure.html"><span class="glyphicon glyphicon-cog inverse"></span> Configure</a></li>
     <li class="nav-header">Methods</li>
     «FOR method : api.blocks.filter(typeof(HttpMethod))»
-    <li «IF method.isMethodLinkActive»class="active"«ENDIF»><a href="method_«method.name».html">«method.name.humanize.toTitleCase»</a></li>
+    <li«IF method.isMethodLinkActive» class="active"«ENDIF»><a href="method_«method.name».html">«method.name.humanize.toTitleCase»</a></li>
     «ENDFOR»
     <li class="nav-header">Entities</li>
     «FOR type : model.declarations.filter(typeof(ComplexTypeDeclaration))»
-    <li «IF type.isUserTypeDeclarationActive»class="active"«ENDIF»><a href="«type.toFileName».html">«type.name»</a></li>
+    <li«IF type.isUserTypeDeclarationActive» class="active"«ENDIF»><a href="«type.toFileName».html">«type.name»</a></li>
     «ENDFOR»
     <li class="nav-header">Enums</li>
     «FOR type : model.declarations.filter(typeof(EnumTypeDeclaration))»
-    <li «IF type.isUserTypeDeclarationActive»class="active"«ENDIF»><a href="«type.toFileName».html">«type.name»</a></li>
+    <li«IF type.isUserTypeDeclarationActive» class="active"«ENDIF»><a href="«type.toFileName».html">«type.name»</a></li>
     «ENDFOR»
     </ul>
     '''
+    
+    def boolean isConfigurePageActive() {
+        return this instanceof ConfigurePageGenerator
+    }
     
     abstract def boolean isUserTypeDeclarationActive(UserTypeDeclaration decleration)
     abstract def boolean isMethodLinkActive(HttpMethod method)
@@ -112,6 +114,8 @@ abstract class HtmlPageGenerator {
     def generateFoot() '''
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.storageapi.min.js"></script>
+    <script src="js/specapi.config.js"></script>
     <script src="«api.name.toLowerCase».js"></script>
     <script>
     $(document).ready(function () {

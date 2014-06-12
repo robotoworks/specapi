@@ -30,7 +30,7 @@
 <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
 <div class="sidebar-nav">
 <ul class="nav nav-list">
-<li><a href="configure.html"><span class="glyphicon glyphicon-cog inverse"></span> Configure</a></li>
+<li class="active"><a href="configure.html"><span class="glyphicon glyphicon-cog inverse"></span> Configure</a></li>
 <li class="nav-header">Methods</li>
 <li><a href="method_listRepositories.html">List Repositories</a></li>
 <li><a href="method_listUserRepositories.html">List User Repositories</a></li>
@@ -46,14 +46,18 @@
 <li><a href="ErrorMessage.html">ErrorMessage</a></li>
 <li><a href="Error.html">Error</a></li>
 <li class="nav-header">Enums</li>
-<li class="active"><a href="ErrorCode.html">ErrorCode</a></li>
+<li><a href="ErrorCode.html">ErrorCode</a></li>
 </ul>
 </div>
 </div>
 <div class="col-xs-12 col-sm-9">
-<h1>ErrorCode</h1>
-<pre><code class="javascript">    
-</code></pre>
+<form role="form" class="form-configure">
+<div class="form-group form-actions">
+<button type="button" id="btn_save_config" class="btn btn-primary">Save</button>
+<!--<button type="button" id="btn_export_config" class="btn btn-secondary"><span class="glyphicon glyphicon-save"></span> Export</button> -->
+<button type="button" id="btn_add_config" class="btn btn-secondary"><span class="glyphicon glyphicon-plus"></span> Add</button>
+</div>
+</form>
 </div>
 </div>
 </div>
@@ -72,5 +76,10 @@ $(document).ready(function () {
 <script>
 hljs.configure({tabReplace: '<span class="indent"> </span>'});
 hljs.initHighlightingOnLoad();</script>
+<script>
+$(function() {
+  specApiConfig.restore();
+});
+</script>
 </body>
 </html>

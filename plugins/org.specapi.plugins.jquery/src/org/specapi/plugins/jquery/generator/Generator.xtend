@@ -27,15 +27,20 @@ class Generator implements IGenerator {
     def CharSequence generate(Api api, SpecApiDocument document) '''
     if (typeof jQuery === 'undefined') { throw new Error('«api.name» requires jQuery') }
     
-    +function (window, $) {
+    (function (window, $) {
         'use strict';
         
         var client = window.«api.name» = function (options) {
+            this.defaultHeaders = {};
             this.options = $.extend({}, «api.name».DEFAULTS, options)
         }
         
         «api.name».DEFAULTS = {
             baseUrl: '«api.baseUrl»'
+        }
+        
+        client.prototype.addDefaultHeader = function (key, value) {
+            this.defaultHeaders[key] = value;
         }
         
         «FOR method:api.blocks.filter(typeof(HttpMethod))»
@@ -48,8 +53,10 @@ class Generator implements IGenerator {
             «ENDFOR»
             var url = this.options.baseUrl + path + (query.length > 0 ? "?" + query : "");
             
-            return $.ajax(url, {
-                type:"«method.type.literal.toUpperCase»"
+            return $.ajax({
+                url:url,
+                type:"«method.type.literal.toUpperCase»",
+                headers:this.defaultHeaders
                 «IF method.hasBody»
                 ,contentType:"application/json"
                 ,data:data
@@ -59,7 +66,7 @@ class Generator implements IGenerator {
 
         «ENDFOR»
     
-    }(window, jQuery);
+    }(window, jQuery));
     '''
     
     def getGenerateMethodArgs(HttpMethod method) {

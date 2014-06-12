@@ -25,6 +25,8 @@ class Generator implements IGenerator {
 		val api = model.declarations.filter(typeof(Api)).head
 		api.generate(model, fsa)
 		model.declarations.filter(typeof(UserTypeDeclaration)).forEach[generateUserType(api, model, fsa)]
+		
+		fsa.generateFile("configure.html", Plugin.OUTPUT_CONFIG , new ConfigurePageGenerator(api, model).generate)
 	}
 	
 	def generate(Api api, SpecApiDocument model, IFileSystemAccess fsa) {

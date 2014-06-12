@@ -1,6 +1,6 @@
 if (typeof jQuery === 'undefined') { throw new Error('GithubAPI requires jQuery') }
 
-+function (window, $) {
+(function (window, $) {
     'use strict';
     
     var client = window.GithubAPI = function (options) {
@@ -85,4 +85,4 @@ if (typeof jQuery === 'undefined') { throw new Error('GithubAPI requires jQuery'
     }
 
 
-}(window, jQuery);
+}(window, jQuery));
