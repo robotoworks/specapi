@@ -1,8 +1,6 @@
 ![Logo](/gfx/specAPI-small.png)
 
-A Web API specification language powered by the awesome xText framework.
-
-To get started refer to the wiki [Quick Start](/wiki/Quick-Start)
+A specification language to describe Web APIs for the automatic programming of documentation, platform specific API client implementations, Server-Side contracts and more.
 
 You can define your Web API like this using SpecAPI
 
