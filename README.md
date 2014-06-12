@@ -2,7 +2,7 @@
 
 A Web API specification language powered by the awesome xText framework.
 
-To get started refer to the wiki [[Quick Start|Quick Start]]
+To get started refer to the wiki [Quick Start](Quick-Start)
 
 You can define your Web API like this using SpecAPI
 
