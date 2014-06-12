@@ -12,15 +12,7 @@ api GithubAPI https://api.github.com {
 		  response Issue[]
 	}
 }
-
-entity Issue {
-	id:long,
-	number:long,
-	title:String,
-	"body":String	
-	url:String,
-}
-``` 
+```
   
 Then use one of the available code generators, see the [quick start wiki page](https://github.com/robotoworks/specapi/wiki/Quick-Start)  to get started.
 
