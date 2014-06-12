@@ -1,4 +1,4 @@
-![Logo](/gfx/specAPI-small.png)
+![Logo](/gfx/specAPI-smaller.png)
 
 A specification language to describe Web APIs for the automatic programming of documentation, platform specific API client implementations, Server-Side contracts and more.
 
