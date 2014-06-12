@@ -134,7 +134,7 @@ abstract class HtmlPageGenerator {
             case GET:
             "label-info"
             case DELETE:
-            "label-important"
+            "label-danger"
             default:
             "label-warning"
         }
