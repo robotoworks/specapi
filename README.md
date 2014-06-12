@@ -16,6 +16,19 @@ api GithubAPI https://api.github.com {
   
 Then use one of the available code generators, see the [quick start wiki page](https://github.com/robotoworks/specapi/wiki/Quick-Start)  to get started.
 
+Quick Start
+-----------
+A SpecAPI file (*.specapi) describes the specification of a WebAPI, you can see what one looks like by checking out the example [GithubAPI Specification](../blob/master/specs/github/github.specapi).
+
+This quick start guide will guide you through the installation, and usage of SpecAPI. It will show you how generate a static documentation website from the GithubAPI Specification, using the [SpecAPI Documentation Plugin](../blob/master/plugins/org.specapi.plugins.docs).
+
+Installation
+------------
+Currently SpecAPI is distrubuted as a github release, grab the latest version as follows.
+```sh
+wget https://github.com/robotoworks/specapi/releases/download/v0.1.0/specapi-0.1.0.zip 
+```
+
 Contribute
 ----------
 If you would like to submit pull requests for this project you will need to install eclipse and the xText framework.
