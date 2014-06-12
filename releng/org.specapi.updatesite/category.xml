@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <site>
-   <description url="http://www.specapi.org/specapi/updates" name="SpecApi Update Site">
+   <description name="SpecApi Update Site" url="http://www.specapi.org/specapi/updates">
       SpecApi Plugins
    </description>
-   <feature id="org.specapi.sdk" url="features/org.specapi.sdk_0.1.0.qualifier.jar" version="0.1.0.qualifier">
+   <feature id="org.specapi.sdk" url="features/org.specapi.sdk_0.1.0.qualifier.jar" version="1.1.1.qualifier">
       <category name="specapi"/>
    </feature>
-   <category-def name="specapi" label="SpecApi">
+   <category-def label="SpecApi" name="specapi">
       <description>
          SpecApi Plugins
       </description>

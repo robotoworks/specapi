@@ -33,9 +33,7 @@ end
 
 updatePomVersion("pom.xml", newVersion, false)
 
-updateDocsVersion("docs/source/conf.py", newVersion)
-
-updateShellScriptMechVersion("build.sh", newVersion)
+updateShellScriptVersion("build.sh", newVersion)
 
 BEGIN {
     def updateManifestVersions(path, version)
@@ -167,14 +165,14 @@ BEGIN {
         File.delete(tempFile.path)
     end
     
-    def updateShellScriptMechVersion(filePath, version)
+    def updateShellScriptVersion(filePath, version)
         puts "Updating #{filePath} to version #{version}"
         
         tempFile = Tempfile.new("mechanoid.temp")
         
         IO.foreach(filePath) { |block|
-            if(block =~ /MECH_VERSION=/)
-                tempFile.syswrite("MECH_VERSION=#{version}\n")
+            if(block =~ /VERSION=/)
+                tempFile.syswrite("VERSION=#{version}\n")
                 else
                 tempFile.syswrite(block)
             end
