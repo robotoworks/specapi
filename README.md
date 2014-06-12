@@ -22,19 +22,13 @@ entity Issue {
 }
 ``` 
   
-Then use code generators to generate your assets, such as api clients, server-side contracts, documentation and more.
-
-Why SpecAPI?
-------------
-SpecAPI was born from a specification language to specify Web API Clients for Android (Mechanoid NET), its motiviation was "What you see is what you spec" - this came about from the fact that every Web API client that I have hand-written, was either specified in a Word Document or had some manually maintained website, or possibly even a specification using one of your favourite markup languages (XML or JSON).
-
-Under the hood SpecAPI is powered by an outstanding Language Development Environment known as xText. xText provides a lot of core features such as lexing/parsing, validation as well as top class Eclipse IDE integration giving a well rounded editor experience.
-
-SpecAPI aims to provide a concise grammar in the domain of HTTP, its a work in progress, and definetly in need of contributors to anyone who is interested, wether that be providing code generators or helping shape the grammar.
+Then use one of the available code generators, see the [quick start wiki page](Quick-Start/)  to get started.
 
 Contribute
 ----------
-To get started you need to install the Eclipse IDE and the xText Plugin.
+If you would like to submit pull requests for this project you will need to install eclipse and the xText framework.
+
+If you would just like to author a plugin, you can see the [plugin development guide](Plugin-Development/).
 
 In Eclipse create a new workspace and import the projects:-
 
