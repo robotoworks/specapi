@@ -2,7 +2,7 @@
 
 A specification language to describe Web APIs for the automatic programming of documentation, platform specific API client implementations, Server-Side contracts and more.
 
-You can define your Web API like this using SpecAPI
+You can define your Web API like this using SpecAPI:-
 
 ``` specapi
 package com.example.github
@@ -14,13 +14,15 @@ api GithubAPI https://api.github.com {
 }
 ```
   
-Then use one of the available code generators, see the [quick start wiki page](https://github.com/robotoworks/specapi/wiki/Quick-Start)  to get started.
+Then use one of the available code generators, follow the quick start below to see it in action.
 
 Quick Start
 -----------
 A SpecAPI file (*.specapi) describes the specification of a WebAPI, you can see what one looks like by checking out the example [GithubAPI Specification](../blob/master/specs/github/github.specapi).
 
 This quick start guide will guide you through the installation, and usage of SpecAPI. It will show you how generate a static documentation website from the GithubAPI Specification, using the [SpecAPI Documentation Plugin](../blob/master/plugins/org.specapi.plugins.docs).
+
+SpecAPI is written in Java, so you will need a java runtime available to use it.
 
 ### Installation
 Currently SpecAPI is distrubuted as a github release and it can be installed with [homebrew](https://github.com/Homebrew/homebrew) as follows.
@@ -33,11 +35,12 @@ or you can directly install from the formula's url:-
 brew install https://raw.githubusercontent.com/robotoworks/homebrew-specapi/master/specapi.rb
 ```
 
-You can check that its installed ok by typing which should print the SpecAPI version:-
-
+You can check the installation by running:-
 ```sh
 specapi -v
 ```
+which should print the SpecAPI version.
+
 ### Generating Documentation
 Navigate to a folder of your choice, ie: ~/temp and create a specapi.config file:-
 
@@ -46,7 +49,7 @@ cd ~/temp
 touch specapi.config
 ```
 
-Now open up the config file and put this into it and save:-
+Open up the config file and put this into it and save:-
 
 ```js
 {
