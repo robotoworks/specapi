@@ -1,6 +1,10 @@
 package org.specapi.standalone;
 
 import java.io.File;
+import java.io.FileOutputStream;
+import java.net.URL;
+import java.nio.channels.Channels;
+import java.nio.channels.ReadableByteChannel;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
@@ -34,6 +38,28 @@ public class CompilerMain {
 				return;
 			} else {
 				inputSource = arg;
+			}
+		}
+		
+		// TODO: this is very basic way of downloading a single file, we should
+		// expand on this to make it more flexibile
+		if(inputSource != null && 
+				(inputSource.startsWith("http://") || inputSource.startsWith("https://"))) {
+			try {
+			URL website = new URL(inputSource);
+			String targetFileName = inputSource.substring(inputSource.lastIndexOf("/") + 1);
+			ReadableByteChannel rbc = Channels.newChannel(website.openStream());
+			System.out.println("[downloading] " + targetFileName);
+			FileOutputStream fos = new FileOutputStream(targetFileName);
+			fos.getChannel().transferFrom(rbc, 0, Long.MAX_VALUE);
+			fos.close();
+			
+			inputSource = targetFileName;
+			
+			} catch(Exception e) {
+				e.printStackTrace();
+				System.out.println("[error] could not download specification " + inputSource);
+				return;
 			}
 		}
 		

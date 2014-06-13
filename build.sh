@@ -31,6 +31,7 @@ buildSpecApi() {
     cp $WORKING_DIR/plugins/org.specapi.plugins.simple/target/org.specapi.plugins.simple-$VERSION-SNAPSHOT.jar $BIN_PATH_PLUGINS/org.specapi.plugins.simple.jar
     cp $WORKING_DIR/plugins/org.specapi.plugins.docs/target/org.specapi.plugins.docs-$VERSION-SNAPSHOT.jar $BIN_PATH_PLUGINS/org.specapi.plugins.docs.jar
     cp $WORKING_DIR/plugins/org.specapi.plugins.swagger/target/org.specapi.plugins.swagger-$VERSION-SNAPSHOT.jar $BIN_PATH_PLUGINS/org.specapi.plugins.swagger.jar
+    cp $WORKING_DIR/plugins/org.specapi.plugins.jquery/target/org.specapi.plugins.jquery-$VERSION-SNAPSHOT.jar $BIN_PATH_PLUGINS/org.specapi.plugins.jquery.jar
 
     echo "Packaging new distribution"
     mkdir -p $DIST_PATH
