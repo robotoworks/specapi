@@ -37,6 +37,7 @@
 	<module>plugins/org.specapi.plugins.simple</module>
 	<module>plugins/org.specapi.plugins.docs</module>
 	<module>plugins/org.specapi.plugins.swagger</module>
+	<module>plugins/org.specapi.plugins.jquery</module>
 	</modules>
 
 	<repositories>
