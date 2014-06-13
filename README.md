@@ -24,10 +24,48 @@ This quick start guide will guide you through the installation, and usage of Spe
 
 Installation
 ------------
-Currently SpecAPI is distrubuted as a github release, grab the latest version as follows.
+Currently SpecAPI is distrubuted as a github release and it can be installed with [homebrew](https://github.com/Homebrew/homebrew) as follows.
 ```sh
-wget https://github.com/robotoworks/specapi/releases/download/v0.1.0/specapi-0.1.0.zip 
+brew install https://raw.githubusercontent.com/robotoworks/homebrew-specapi/master/specapi.rb
 ```
+
+You can check that its installed ok by typing
+
+```sh
+specapi
+```
+
+Navigate to a folder of your choice, ie: ~/temp and create a specapi.config file
+
+```sh
+cd ~/temp
+touch specapi.config
+```
+
+Now open up the config file and put this in it and save the file:-
+
+```js
+{
+	"targets":[
+		{
+			"plugin":"org.specapi.plugins.docs.Plugin"
+		},
+		{
+			"plugin":"org.specapi.plugins.jquery.Plugin",
+            "outputs":[
+                {
+                    "name":"JQUERY",
+                    "output_directory":"./doc-gen"
+                }
+            ]
+		}
+	]
+}
+```
+
+This configuration tells SpecAPI that we want to use the documentation plugin, the documentation plugin also depends on the jquery plugin to generate a jquery api client, so you will need that also.
+
+Now still in ```~/temp``` we will use specapi to generate according to this configuration. TODO
 
 Contribute
 ----------
