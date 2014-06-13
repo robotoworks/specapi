@@ -9,6 +9,8 @@ import org.specapi.SpecApiLangStandaloneSetup;
 
 public class CompilerMain {
 	
+    private static final String VERSION="0.1.2";
+	
 	public static void main(String[] args) {
 		
 		if(args == null || args.length == 0) {
@@ -26,6 +28,10 @@ public class CompilerMain {
 			
 			if(arg.equals("-r")) {
 				recurse = true;
+			}
+			else if(arg.equals("-v")) {
+				printVersion();
+				return;
 			} else {
 				inputSource = arg;
 			}
@@ -45,6 +51,10 @@ public class CompilerMain {
 		compiler.compile(inputSource, recurse);
 	}
 	
+	private static void printVersion() {
+		System.out.println("SpecAPI " + VERSION);
+	}
+
 	private static void printUsage() {
 		System.out.println("Usage: <options> <input source>");
 		System.out.println("Options:");

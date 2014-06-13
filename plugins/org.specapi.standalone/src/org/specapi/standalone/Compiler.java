@@ -80,7 +80,7 @@ public class Compiler {
 		
 		ArrayList<String> resourcePaths = new ArrayList<String>();
 		
-		getResourcePaths(resourcePaths, file, recurse);
+		gatherResourcePaths(resourcePaths, file, recurse);
 		
 		loadResources(resourcePaths);
 		
@@ -161,7 +161,7 @@ public class Compiler {
 		}
 	}
 
-	private void getResourcePaths(ArrayList<String> paths, File file, boolean recurse) {
+	private void gatherResourcePaths(ArrayList<String> paths, File file, boolean recurse) {
 		
 		if(file.isFile() && file.toString().endsWith(mExtension)) {
 			paths.add(file.toString());
@@ -173,7 +173,7 @@ public class Compiler {
 			
 			for(File f : files) {
 				if(f.isDirectory() && recurse) {
-					getResourcePaths(paths, f, recurse);
+					gatherResourcePaths(paths, f, recurse);
 				} else if (f.isFile() && f.toString().endsWith(mExtension)) {
 					paths.add(f.toString());
 				}

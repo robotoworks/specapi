@@ -1,22 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<feature
-      id="org.specapi.sdk"
-      label="SpecAPI SDK"
-      version="1.1.1.qualifier"
-      provider-name="SpecAPI">
+<?xml version='1.0' encoding='UTF-8'?>
+<feature id="org.specapi.sdk" label="SpecAPI SDK" provider-name="SpecAPI" version="0.1.2.qualifier">
 
-   <plugin
-         id="org.specapi"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
+   <plugin download-size="0" id="org.specapi" install-size="0" unpack="false" version="0.0.0"/>
 
-   <plugin
-         id="org.specapi.ui"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
+   <plugin download-size="0" id="org.specapi.ui" install-size="0" unpack="false" version="0.0.0"/>
 
 </feature>

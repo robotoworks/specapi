@@ -34,6 +34,7 @@ end
 updatePomVersion("pom.xml", newVersion, false)
 
 updateShellScriptVersion("build.sh", newVersion)
+updateCompilerVersion("plugins/org.specapi.standalone/src/org/specapi/standalone/CompilerMain.java", newVersion)
 
 BEGIN {
     def updateManifestVersions(path, version)
@@ -182,6 +183,26 @@ BEGIN {
         
         FileUtils.cp(tempFile.path, filePath) if File.size(tempFile.path) > 0
         
+        File.delete(tempFile.path)
+    end
+    
+    def updateCompilerVersion(filePath, version)
+        puts "Updating #{filePath} to version #{version}"
+    
+        tempFile = Tempfile.new("mechanoid.temp")
+    
+        IO.foreach(filePath) { |block|
+            if(block =~ /VERSION=/)
+                tempFile.syswrite("    private static final String VERSION=\"#{version}\";\n")
+                else
+                tempFile.syswrite(block)
+            end
+        }
+    
+        tempFile.close()
+    
+        FileUtils.cp(tempFile.path, filePath) if File.size(tempFile.path) > 0
+    
         File.delete(tempFile.path)
     end
 }
