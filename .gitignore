@@ -1,6 +1,7 @@
 bin
 classes
 target
+dist
 .metadata
 org.eclipse.xtext.*
 org.eclipse.xtend.*
