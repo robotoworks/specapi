@@ -6,7 +6,9 @@ TARGET=target
 SITE_PATH=$WORKING_DIR/target/ide/eclipse
 BIN_PATH=$WORKING_DIR/target/bin
 BIN_PATH_PLUGINS=$WORKING_DIR/target/bin/plugins
+DIST_PATH=$WORKING_DIR/dist
 
+rm -r $DIST_PATH
 rm -r $TARGET
 mkdir $TARGET
 
@@ -29,6 +31,12 @@ buildSpecApi() {
     cp $WORKING_DIR/plugins/org.specapi.plugins.simple/target/org.specapi.plugins.simple-$VERSION-SNAPSHOT.jar $BIN_PATH_PLUGINS/org.specapi.plugins.simple.jar
     cp $WORKING_DIR/plugins/org.specapi.plugins.docs/target/org.specapi.plugins.docs-$VERSION-SNAPSHOT.jar $BIN_PATH_PLUGINS/org.specapi.plugins.docs.jar
     cp $WORKING_DIR/plugins/org.specapi.plugins.swagger/target/org.specapi.plugins.swagger-$VERSION-SNAPSHOT.jar $BIN_PATH_PLUGINS/org.specapi.plugins.swagger.jar
+
+    echo "Packaging new distribution"
+    mkdir -p $DIST_PATH
+	tar czf $DIST_PATH/specapi.tar.gz target
+	openssl sha1 $DIST_PATH/specapi.tar.gz 
+
 }
 
 build() {
