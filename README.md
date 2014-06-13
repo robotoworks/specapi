@@ -22,8 +22,7 @@ A SpecAPI file (*.specapi) describes the specification of a WebAPI, you can see 
 
 This quick start guide will guide you through the installation, and usage of SpecAPI. It will show you how generate a static documentation website from the GithubAPI Specification, using the [SpecAPI Documentation Plugin](../blob/master/plugins/org.specapi.plugins.docs).
 
-Installation
-------------
+### Installation
 Currently SpecAPI is distrubuted as a github release and it can be installed with [homebrew](https://github.com/Homebrew/homebrew) as follows.
 ```sh
 brew tap robotoworks/specapi
@@ -39,7 +38,7 @@ You can check that its installed ok by typing which should print the SpecAPI ver
 ```sh
 specapi -v
 ```
-
+### Generating Documentation
 Navigate to a folder of your choice, ie: ~/temp and create a specapi.config file:-
 
 ```sh
