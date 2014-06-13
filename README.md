@@ -24,9 +24,9 @@ This quick start guide will guide you through the installation, and usage of Spe
 
 Installation
 ------------
-Currently SpecAPI is distrubuted as a github release, grab the latest version as follows.
+Currently SpecAPI is distrubuted as a github release and it can be installed with [homebrew](https://github.com/Homebrew/homebrew)
 ```sh
-wget https://github.com/robotoworks/specapi/releases/download/v0.1.0/specapi-0.1.0.zip 
+brew install https://raw.githubusercontent.com/robotoworks/homebrew-specapi/master/specapi.rb
 ```
 
 Contribute
