@@ -76,7 +76,7 @@ Now still in ```~/temp``` we will use specapi to generate according to this conf
 specapi https://raw.github.com/robotoworks/specapi/master/specs/github/github.specapi
 ```
 
-With a bit of luck you should now have a folder generated ```doc-gen``
+With a bit of luck you should now have a folder generated `doc-gen`
 
 go into this folder and open up the file ```index.html``` in your favourite browser.
 
