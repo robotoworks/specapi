@@ -59,5 +59,6 @@ public class CompilerMain {
 		System.out.println("Usage: <options> <input source>");
 		System.out.println("Options:");
 		System.out.println("-r 			recurse the given input source (must be a directory)");
+		System.out.println("-v 			version");
 	}
 }
