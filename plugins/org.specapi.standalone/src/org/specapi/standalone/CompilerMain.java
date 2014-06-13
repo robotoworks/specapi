@@ -30,13 +30,14 @@ public class CompilerMain {
 		while(arguments.hasNext()) {
 			String arg = arguments.next();
 			
-			if(arg.equals("-r")) {
-				recurse = true;
-			}
-			else if(arg.equals("-v")) {
+			if(arg.equals("-v")) {
 				printVersion();
 				return;
-			} else {
+			} 
+			else if(arg.equals("-r")) {
+				recurse = true;
+			}
+			else {
 				inputSource = arg;
 			}
 		}
@@ -78,7 +79,7 @@ public class CompilerMain {
 	}
 	
 	private static void printVersion() {
-		System.out.println("SpecAPI " + VERSION);
+		System.out.println("SpecAPI v" + VERSION);
 	}
 
 	private static void printUsage() {
