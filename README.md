@@ -22,27 +22,31 @@ A SpecAPI file (*.specapi) describes the specification of a WebAPI, you can see 
 
 This quick start guide will guide you through the installation, and usage of SpecAPI. It will show you how generate a static documentation website from the GithubAPI Specification, using the [SpecAPI Documentation Plugin](../blob/master/plugins/org.specapi.plugins.docs).
 
-Installation
-------------
+### Installation
 Currently SpecAPI is distrubuted as a github release and it can be installed with [homebrew](https://github.com/Homebrew/homebrew) as follows.
+```sh
+brew tap robotoworks/specapi
+brew install specapi
+```
+or you can directly install from the formula's url:-
 ```sh
 brew install https://raw.githubusercontent.com/robotoworks/homebrew-specapi/master/specapi.rb
 ```
 
-You can check that its installed ok by typing
+You can check that its installed ok by typing which should print the SpecAPI version:-
 
 ```sh
-specapi
+specapi -v
 ```
-
-Navigate to a folder of your choice, ie: ~/temp and create a specapi.config file
+### Generating Documentation
+Navigate to a folder of your choice, ie: ~/temp and create a specapi.config file:-
 
 ```sh
 cd ~/temp
 touch specapi.config
 ```
 
-Now open up the config file and put this in it and save the file:-
+Now open up the config file and put this into it and save:-
 
 ```js
 {
@@ -63,9 +67,19 @@ Now open up the config file and put this in it and save the file:-
 }
 ```
 
-This configuration tells SpecAPI that we want to use the documentation plugin, the documentation plugin also depends on the jquery plugin to generate a jquery api client, so you will need that also.
+This configuration tells SpecAPI that we want to use the SpecAPI documentation plugin, the documentation plugin also depends on the jquery plugin to generate a jquery api client which you can also see in the configuration.
 
-Now still in ```~/temp``` we will use specapi to generate according to this configuration. TODO
+Now still in ```~/temp``` we will use specapi to generate according to this configuration.
+
+```sh
+specapi https://raw.github.com/robotoworks/specapi/master/specs/github/github.specapi
+```
+
+With a bit of luck you should now have a folder generated `doc-gen`
+
+go into this folder and open up the file ```index.html``` in your favourite browser.
+
+You should now see the generated documentation for the GithubAPI specification.
 
 Contribute
 ----------
