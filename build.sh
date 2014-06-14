@@ -1,7 +1,7 @@
 #!/bin/bash
 
 WORKING_DIR=$PWD
-VERSION=0.1.2
+VERSION=0.1.3
 TARGET=target
 SITE_PATH=$WORKING_DIR/target/ide/eclipse
 BIN_PATH=$WORKING_DIR/target/bin
