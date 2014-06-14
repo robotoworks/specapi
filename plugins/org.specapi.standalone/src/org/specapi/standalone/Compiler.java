@@ -87,7 +87,12 @@ public class Compiler {
 		List<Issue> issues = validate();
 		
 		for(Issue issue : issues) {
-			System.out.println(issue.getCode() + ":" + issue.getMessage());
+			System.out.println(String.format("%s %s, line:%s, col:%s, len:%s", 
+					issue.getSeverity().name(),
+					issue.getMessage(), 
+					issue.getLineNumber(), 
+					issue.getOffset(), 
+					issue.getLength()));
 		}
 		
 		if(issues.size() == 0) {
