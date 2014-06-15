@@ -83,7 +83,7 @@
         <page
             class="org.specapi.ui.SpecApiLangExecutableExtensionFactory:org.eclipse.xtext.ui.editor.preferences.LanguageRootPreferencePage"
             id="org.specapi.SpecApiLang"
-            name="SpecApiLang">
+            name="SpecAPI">
             <keywordReference id="org.specapi.ui.keyword_SpecApiLang"/>
         </page>
         <page
@@ -258,9 +258,9 @@
             point="org.eclipse.ui.preferencePages">
         <page
             category="org.specapi.SpecApiLang"
-            class="org.specapi.ui.SpecApiLangExecutableExtensionFactory:org.eclipse.xtext.builder.preferences.BuilderPreferencePage"
-            id="org.specapi.SpecApiLang.compiler.preferencePage"
-            name="Compiler">
+            class="org.specapi.ui.SpecApiLangExecutableExtensionFactory:org.specapi.ui.editor.preferences.SpecApiGeneralPreferencePage"
+            id="org.specapi.SpecApiLang.general.preferencePage"
+            name="General">
             <keywordReference id="org.specapi.ui.keyword_SpecApiLang"/>
         </page>
     </extension>

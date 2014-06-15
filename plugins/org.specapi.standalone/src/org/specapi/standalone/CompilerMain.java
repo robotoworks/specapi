@@ -15,7 +15,7 @@ import com.google.inject.Injector;
 
 public class CompilerMain {
 	
-    private static final String VERSION="0.1.3";
+	private static final String VERSION="0.1.3";
 	
 	public static void main(String[] args) {
 		
@@ -32,7 +32,11 @@ public class CompilerMain {
 		while(arguments.hasNext()) {
 			String arg = arguments.next();
 			
-			if(arg.equals("-v")) {
+			if(arg.equals("plugins")) {
+				new PluginsCommand().execute(arguments);
+				return;
+			}
+			else if(arg.equals("-v")) {
 				printVersion();
 				return;
 			} 
@@ -80,15 +84,27 @@ public class CompilerMain {
 		
 	    compiler.compile(pluginRoots, inputSource, recurse);
 	}
-	
+
 	private static void printVersion() {
 		System.out.println("SpecAPI v" + VERSION);
 	}
 
 	private static void printUsage() {
-		System.out.println("Usage: <options> <input source>");
+		System.out.println("Usage: <command> or <options> <input source>");
 		System.out.println("Options:");
-		System.out.println("-r		recurse the given input source (must be a directory)");
-		System.out.println("-v		version");
+		System.out.println("-v			version");
+		System.out.println("-r			recurse the given input source (must be a directory)");
+		System.out.println("Commands:");
+		System.out.println("plugins		print the plugins location path");
+	}
+	
+    public static class PluginsCommand {
+		public void execute(Iterator<String> arguments) {
+			String mainPath = CompilerMain.class.getProtectionDomain().getCodeSource().getLocation().getPath();
+			mainPath = mainPath.substring(0, mainPath.lastIndexOf("/"));
+			File defaultPluginRoot = new File(new File(mainPath).getParentFile(), "plugins");
+			
+			System.out.println("[plugins path] " + defaultPluginRoot.getAbsolutePath());			
+		}
 	}
 }
