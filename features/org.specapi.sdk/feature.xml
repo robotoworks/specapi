@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<feature id="org.specapi.sdk" label="SpecAPI SDK" provider-name="SpecAPI" version="0.1.3.qualifier">
+<feature id="org.specapi.sdk" label="SpecAPI SDK" provider-name="SpecAPI" version="0.1.4.qualifier">
 
    <plugin download-size="0" id="org.specapi" install-size="0" unpack="false" version="0.0.0"/>
 

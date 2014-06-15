@@ -5,10 +5,10 @@
     <artifactId>specapi</artifactId>
     <groupId>org.specapi</groupId>
     <relativePath>../../pom.xml</relativePath>
-    <version>0.1.3-SNAPSHOT</version>
+    <version>0.1.4-SNAPSHOT</version>
   </parent>
   <groupId>org.specapi.features</groupId>
   <artifactId>org.specapi.sdk</artifactId>
-  <version>0.1.3-SNAPSHOT</version>
+  <version>0.1.4-SNAPSHOT</version>
   <packaging>eclipse-feature</packaging>
 </project>
