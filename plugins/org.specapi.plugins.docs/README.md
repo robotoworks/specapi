@@ -29,3 +29,13 @@ generate into, which by default in ```./doc-gen```.
     ]
 }
 ```
+
+Credits
+-------
+This plugin makes use of the following fantastic components:-
+
+* [Bootstrap](https://github.com/twbs/bootstrap)
+* [Ace](https://github.com/ajaxorg/ace)
+* [Highlight.js] (https://github.com/isagalaev/highlight.js)
+* [JSON-js] (https://github.com/douglascrockford/JSON-js)
+* [JQuery Storage API](https://github.com/julien-maurel/jQuery-Storage-API)
