@@ -2,6 +2,10 @@ Docs Plugin
 ===========
 The docs plugin will create rich documentation for your API's from your SpecAPI specifications.
 
+Each generated API method page has a pull down API Console tab that allows you to test drive that API method.
+
+Some API's require extra headers and configuration such as auth tokens, you can add these on the Configure page of the generated documentation.
+
 To see it in action look at the [example project](../../examples/org.specapi.plugins.docs.example)
 Configuration
 -------------
