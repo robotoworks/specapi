@@ -26,6 +26,8 @@ SpecAPI is written in Java, so you will need a java runtime available to use it.
 
 ### Installation
 Currently SpecAPI is distrubuted as a github release and it can be installed with [homebrew](https://github.com/Homebrew/homebrew) as follows.
+
+For installation on other platforms such as Windows, refer to the wiki [Installation](https://github.com/robotoworks/specapi/wiki/Installation/) page.
 ```sh
 brew tap robotoworks/specapi
 brew install specapi
