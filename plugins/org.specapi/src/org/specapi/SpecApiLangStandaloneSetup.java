@@ -3,6 +3,7 @@
 */
 package org.specapi;
 
+import com.google.inject.Guice;
 import com.google.inject.Injector;
 
 /**
@@ -18,6 +19,11 @@ public class SpecApiLangStandaloneSetup extends SpecApiLangStandaloneSetupGenera
 	@Override
 	public void register(Injector injector) {
 		super.register(injector);
+	}
+	
+	@Override
+	public Injector createInjector() {
+		return Guice.createInjector(new SpecApiStandaloneRuntimeModule());
 	}
 }
 

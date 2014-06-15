@@ -11,6 +11,8 @@ import java.util.Iterator;
 
 import org.specapi.SpecApiLangStandaloneSetup;
 
+import com.google.inject.Injector;
+
 public class CompilerMain {
 	
     private static final String VERSION="0.1.3";
@@ -73,9 +75,10 @@ public class CompilerMain {
 		
 		System.out.println("[plugins path] " + defaultPluginRoot.getAbsolutePath());
 		
-		Compiler compiler = new Compiler(new SpecApiLangStandaloneSetup(), pluginRoots, ".specapi");
+	    Injector injector = new SpecApiLangStandaloneSetup().createInjectorAndDoEMFRegistration();
+	    Compiler compiler = injector.getInstance(Compiler.class);
 		
-		compiler.compile(inputSource, recurse);
+	    compiler.compile(pluginRoots, inputSource, recurse);
 	}
 	
 	private static void printVersion() {

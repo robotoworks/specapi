@@ -19,7 +19,6 @@ import org.eclipse.xtext.resource.XtextResourceSet;
 import org.eclipse.xtext.validation.CheckMode;
 import org.eclipse.xtext.validation.IResourceValidator;
 import org.eclipse.xtext.validation.Issue;
-import org.specapi.SpecApiLangStandaloneSetup;
 import org.specapi.StandaloneFileSystemAccess;
 import org.specapi.plugins.IPlugin;
 import org.specapi.plugins.OutputConfigurationMerger;
@@ -29,34 +28,25 @@ import org.specapi.plugins.PluginLoader;
 import org.specapi.plugins.UserPluginConfig;
 
 import com.google.common.collect.Lists;
+import com.google.inject.Inject;
 import com.google.inject.Injector;
 
 public class Compiler {
 	
-	private Injector mInjector;
-	private StandaloneFileSystemAccess mFileSystemAccess;
-	private XtextResourceSet mResourceSet;
-	private String mExtension;
+	@Inject Injector mInjector;
+	@Inject StandaloneFileSystemAccess mFileSystemAccess;
+	@Inject XtextResourceSet mResourceSet;
+	@Inject PluginConfigParser mConfigParser;
+	@Inject PluginLoader mPluginLoader;
+	@Inject OutputConfigurationMerger mOutputConfigMerger;
 	private ArrayList<Plugin> mPlugins;
 	private UserPluginConfig mTargetConfig;
-	private PluginConfigParser mConfigParser;
-	private OutputConfigurationMerger mOutputConfigMerger;
 	private Map<String, OutputConfiguration> mOutputConfigurations;
 
-	public Compiler(SpecApiLangStandaloneSetup setup, List<File> pluginRoots, String extension) {
-		mExtension = extension;
-		mInjector = setup.createInjectorAndDoEMFRegistration();
-		mConfigParser = mInjector.getInstance(PluginConfigParser.class);
-		mPlugins = mInjector.getInstance(PluginLoader.class).loadPlugins(pluginRoots);
+	public void compile(List<File> pluginRoots, String source, boolean recurse) {
 		
-		mFileSystemAccess = mInjector.getInstance(StandaloneFileSystemAccess.class);
-		mOutputConfigMerger = mInjector.getInstance(OutputConfigurationMerger.class);
-		
-		mResourceSet = mInjector.getInstance(XtextResourceSet.class);
+		mPlugins = mPluginLoader.loadPlugins(pluginRoots);
 		mResourceSet.addLoadOption(XtextResource.OPTION_RESOLVE_ALL, Boolean.TRUE);
-	}
-
-	public void compile(String source, boolean recurse) {
 		
 		File file = new File(System.getProperty("user.dir"), source);
 		
@@ -87,7 +77,7 @@ public class Compiler {
 		List<Issue> issues = validate();
 		
 		for(Issue issue : issues) {
-			System.out.println(String.format("%s %s, line:%s, col:%s, len:%s", 
+			System.out.println(String.format("%s %s, line:%s, offset:%s, len:%s", 
 					issue.getSeverity().name(),
 					issue.getMessage(), 
 					issue.getLineNumber(), 
@@ -168,7 +158,7 @@ public class Compiler {
 
 	private void gatherResourcePaths(ArrayList<String> paths, File file, boolean recurse) {
 		
-		if(file.isFile() && file.toString().endsWith(mExtension)) {
+		if(file.isFile() && file.toString().endsWith(".specapi")) {
 			paths.add(file.toString());
 			return;
 		}
@@ -179,7 +169,7 @@ public class Compiler {
 			for(File f : files) {
 				if(f.isDirectory() && recurse) {
 					gatherResourcePaths(paths, f, recurse);
-				} else if (f.isFile() && f.toString().endsWith(mExtension)) {
+				} else if (f.isFile() && f.toString().endsWith(".specapi")) {
 					paths.add(f.toString());
 				}
 			}
