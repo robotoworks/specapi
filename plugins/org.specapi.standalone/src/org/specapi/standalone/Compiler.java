@@ -143,9 +143,7 @@ public class Compiler {
 	protected void copyResources() throws IOException {
 		for(IPlugin plugin : mPlugins) {
 			if(mTargetConfig.targetsPlugin(plugin.getConfig().getPluginClassName())) {
-				OutputConfiguration outConfiguration = mOutputConfigurations.get(plugin.getConfig().getOutputConfigurations().get(0).getName());
-				File outputFolder = new File(System.getProperty("user.dir"), outConfiguration.getOutputDirectory());
-			    plugin.copyResources(outputFolder);
+			    plugin.copyResources(new File(System.getProperty("user.dir")));
 			}
 		}
 	}

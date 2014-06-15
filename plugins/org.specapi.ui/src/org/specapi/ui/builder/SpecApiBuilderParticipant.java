@@ -2,6 +2,7 @@ package org.specapi.ui.builder;
 
 import static com.google.common.collect.Maps.uniqueIndex;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Map;
@@ -9,8 +10,10 @@ import java.util.Set;
 
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IProgressMonitor;
+import org.eclipse.jface.preference.IPreferenceStore;
 import org.eclipse.xtext.builder.BuilderParticipant;
 import org.eclipse.xtext.generator.OutputConfiguration;
+import org.eclipse.xtext.ui.editor.preferences.PreferenceStoreAccessImpl;
 import org.specapi.plugins.IPlugin;
 import org.specapi.plugins.OutputConfigurationMerger;
 import org.specapi.plugins.Plugin;
@@ -22,6 +25,7 @@ import org.specapi.ui.generator.EclipseSpecApiGenerator;
 
 import com.google.common.base.Function;
 import com.google.inject.Inject;
+import com.specapi.ui.plugins.SpecAPIUIConstants;
 
 public class SpecApiBuilderParticipant extends BuilderParticipant {
 	
@@ -30,6 +34,7 @@ public class SpecApiBuilderParticipant extends BuilderParticipant {
 	private ArrayList<Plugin> mPlugins;
 	private UserPluginConfig mTargetConfig;
 	@Inject OutputConfigurationMerger mOutputConfigMerger;
+	@Inject PreferenceStoreAccessImpl preferenceStoreAccessImpl;
 	
 	@Override
 	public void build(IBuildContext context, IProgressMonitor monitor)
@@ -38,8 +43,10 @@ public class SpecApiBuilderParticipant extends BuilderParticipant {
 		EclipseSpecApiGenerator generator = (EclipseSpecApiGenerator) getGenerator();
 		
 		if(ProjectUtil.isGeneratorTargetProject(context.getBuiltProject())) {
-			// TODO: Replace null with the plugin path ie:- /a/b/c/plugins or wherever it is
-			mPlugins = pluginLoader.loadPlugins(null);
+			ArrayList<File> pluginPaths = getPluginPaths();
+			
+			mPlugins = pluginLoader.loadPlugins(pluginPaths);
+			
 			mTargetConfig = ProjectUtil.loadTargetConfig(context.getBuiltProject(), pluginConfigParser);
 			
 			generator.setPlugins(mPlugins);
@@ -53,6 +60,17 @@ public class SpecApiBuilderParticipant extends BuilderParticipant {
 		}
 		
 		super.build(context, monitor);
+	}
+
+	private ArrayList<File> getPluginPaths() {
+		ArrayList<File> files = new ArrayList<File>();
+		IPreferenceStore preferenceStore = preferenceStoreAccessImpl.getPreferenceStore();
+		String pluginLocation = preferenceStore.getString(SpecAPIUIConstants.PREF_PLUGINS_LOCATION);
+		File file = new File(pluginLocation);
+		if(file.exists()) {
+			files.add(file);
+		}
+		return files;
 	}
 	
 	private void copyPluginResources(IBuildContext context, IProgressMonitor monitor) {

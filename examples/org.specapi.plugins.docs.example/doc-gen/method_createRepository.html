@@ -214,6 +214,21 @@
 </div>
 </div>
 <div class="panel panel-danger">
+<div class="panel-heading" data-toggle="collapse" data-target="#response401">
+<h4 class="panel-title"">401 Unauthorized</h4>
+</div>
+<div id="response401" class="panel-collapse collapse">
+<div class="panel-body">
+<pre><code class="javascript"><a href="ErrorMessage.html">ErrorMessage</a> {
+    "message" : string
+    "documentation_url" : string
+    "errors" : <a href="Error.html">Error[]</a>
+}
+</code></pre>
+</div>
+</div>
+</div>
+<div class="panel panel-danger">
 <div class="panel-heading" data-toggle="collapse" data-target="#response422">
 <h4 class="panel-title"">422 Unprocessable Entity</h4>
 </div>
@@ -255,13 +270,20 @@ requestEditor.setOptions({ maxLines: Infinity });
 requestEditor.getSession().setMode("ace/mode/javascript");
 var responseEditor = ace.edit("f_response");
 responseEditor.setTheme("ace/theme/twilight");
-responseEditor.setOptions({ maxLines: Infinity });
+responseEditor.setOptions({ maxLines: 32 });
 responseEditor.getSession().setMode("ace/mode/javascript");
 responseEditor.getSession().setUseWorker(false);
 
 var responseStatusLabel = $("#response_status");
 var api = new GithubAPI();
 var config = specApiConfig.getConfig();
+
+if(config != null) {
+    for(var i=0; i < config.headers.length; i++) {
+        var header = config.headers[i];
+        api.addDefaultHeader(header.key, header.value);
+    }
+}
 
 $('#go_button').click(function () {
     var btn = $(this);
@@ -273,7 +295,7 @@ $('#go_button').click(function () {
         btn.button('reset');
         responseStatusLabel.text(jqXHR.status + " " + jqXHR.statusText);
         responseStatusLabel.css("color", "green");
-        responseEditor.getSession().setValue(jqXHR.responseText);
+        responseEditor.setValue(JSON.stringify(data, undefined, 4));
     })
     .fail(function(jqXHR, textStatus, errorThrown) {
         btn.button('reset');
@@ -283,17 +305,7 @@ $('#go_button').click(function () {
             responseStatusLabel.text(jqXHR.status + " " + jqXHR.statusText);
         }
         responseStatusLabel.css("color", "red");
-        responseEditor.getSession().setValue(jqXHR.responseText);
-    })
-    .beforeSend(function(xhr, settings) {
-        if(config != null) {
-            var headers = {};
-            for(var i=0; i < config.headers.length; i++) {
-                var header = config.headers[i];
-                headers[header.key] = header.value;
-            }
-            settings.headers = headers;
-        }
+        responseEditor.setValue(JSON.stringify(JSON.parse(jqXHR.responseText), undefined, 4));
     });
 });
   

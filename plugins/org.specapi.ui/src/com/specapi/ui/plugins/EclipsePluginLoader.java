@@ -5,6 +5,7 @@ import java.net.URL;
 import java.net.URLClassLoader;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 import org.eclipse.core.resources.IFolder;
 import org.eclipse.core.resources.IProject;
@@ -14,11 +15,23 @@ import org.specapi.plugins.PluginConfig;
 import org.specapi.plugins.PluginLoader;
 import org.specapi.ui.ProjectUtil;
 
+import com.google.common.base.Function;
+import com.google.common.collect.Maps;
+
 public class EclipsePluginLoader extends PluginLoader {
 	
 	@Override
 	public ArrayList<Plugin> loadPlugins(List<File> files) {
 		ArrayList<Plugin> plugins =  super.loadPlugins(files);
+		
+		// Make sure we have unique plugins, we do this so that plugin
+		// projects in the workspace will take priority over compiled
+		// plugin jars at the plugins path
+		Map<String, Plugin> pluginMap = Maps.uniqueIndex(plugins, new Function<Plugin, String>() {
+			public String apply(Plugin from) {
+				return from.getConfig().getPluginClassName();
+			}
+		});
 
 		ArrayList<IProject> projects = ProjectUtil.getSpecApiPluginProjects();
 		
@@ -37,12 +50,12 @@ public class EclipsePluginLoader extends PluginLoader {
 	
 						Plugin plugin = loadPlugin(file, pluginConfig, project);
 						
-						plugins.add(plugin);
+						pluginMap.put(pluginConfig.getPluginClassName(), plugin);
 					}
 				}
 		}
 		
-		return plugins;
+		return new ArrayList<Plugin>(pluginMap.values());
 	}
 
 	private Plugin loadPlugin(File file, PluginConfig config, IProject project) {

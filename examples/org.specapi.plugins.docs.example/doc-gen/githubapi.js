@@ -4,11 +4,16 @@ if (typeof jQuery === 'undefined') { throw new Error('GithubAPI requires jQuery'
     'use strict';
     
     var client = window.GithubAPI = function (options) {
+        this.defaultHeaders = {};
         this.options = $.extend({}, GithubAPI.DEFAULTS, options)
     }
     
     GithubAPI.DEFAULTS = {
         baseUrl: 'https://api.github.com'
+    }
+    
+    client.prototype.addDefaultHeader = function (key, value) {
+        this.defaultHeaders[key] = value;
     }
     
     client.prototype.listRepositories = function(options) {
@@ -17,8 +22,10 @@ if (typeof jQuery === 'undefined') { throw new Error('GithubAPI requires jQuery'
         var path = "/user/repos";
         var url = this.options.baseUrl + path + (query.length > 0 ? "?" + query : "");
         
-        return $.ajax(url, {
-            type:"GET"
+        return $.ajax({
+            url:url,
+            type:"GET",
+            headers:this.defaultHeaders
         });
     }
 
@@ -29,8 +36,10 @@ if (typeof jQuery === 'undefined') { throw new Error('GithubAPI requires jQuery'
         path = path.replace(/\:user/, user);
         var url = this.options.baseUrl + path + (query.length > 0 ? "?" + query : "");
         
-        return $.ajax(url, {
-            type:"GET"
+        return $.ajax({
+            url:url,
+            type:"GET",
+            headers:this.defaultHeaders
         });
     }
 
@@ -41,8 +50,10 @@ if (typeof jQuery === 'undefined') { throw new Error('GithubAPI requires jQuery'
         path = path.replace(/\:org/, org);
         var url = this.options.baseUrl + path + (query.length > 0 ? "?" + query : "");
         
-        return $.ajax(url, {
-            type:"GET"
+        return $.ajax({
+            url:url,
+            type:"GET",
+            headers:this.defaultHeaders
         });
     }
 
@@ -52,8 +63,10 @@ if (typeof jQuery === 'undefined') { throw new Error('GithubAPI requires jQuery'
         var path = "/repositories";
         var url = this.options.baseUrl + path + (query.length > 0 ? "?" + query : "");
         
-        return $.ajax(url, {
-            type:"GET"
+        return $.ajax({
+            url:url,
+            type:"GET",
+            headers:this.defaultHeaders
         });
     }
 
@@ -63,8 +76,10 @@ if (typeof jQuery === 'undefined') { throw new Error('GithubAPI requires jQuery'
         var path = "/user/repos";
         var url = this.options.baseUrl + path + (query.length > 0 ? "?" + query : "");
         
-        return $.ajax(url, {
-            type:"POST"
+        return $.ajax({
+            url:url,
+            type:"POST",
+            headers:this.defaultHeaders
             ,contentType:"application/json"
             ,data:data
         });
@@ -77,8 +92,10 @@ if (typeof jQuery === 'undefined') { throw new Error('GithubAPI requires jQuery'
         path = path.replace(/\:org/, org);
         var url = this.options.baseUrl + path + (query.length > 0 ? "?" + query : "");
         
-        return $.ajax(url, {
-            type:"POST"
+        return $.ajax({
+            url:url,
+            type:"POST",
+            headers:this.defaultHeaders
             ,contentType:"application/json"
             ,data:data
         });
