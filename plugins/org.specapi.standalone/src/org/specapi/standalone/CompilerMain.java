@@ -70,7 +70,7 @@ public class CompilerMain {
 		
 		String mainPath = CompilerMain.class.getProtectionDomain().getCodeSource().getLocation().getPath();
 		mainPath = mainPath.substring(0, mainPath.lastIndexOf("/"));
-		File defaultPluginRoot = new File(mainPath, "../plugins");
+		File defaultPluginRoot = new File(new File(mainPath).getParentFile(), "plugins");
 		pluginRoots.add(defaultPluginRoot);
 		
 		System.out.println("[plugins path] " + defaultPluginRoot.getAbsolutePath());
@@ -88,7 +88,7 @@ public class CompilerMain {
 	private static void printUsage() {
 		System.out.println("Usage: <options> <input source>");
 		System.out.println("Options:");
-		System.out.println("-r 			recurse the given input source (must be a directory)");
-		System.out.println("-v 			version");
+		System.out.println("-r		recurse the given input source (must be a directory)");
+		System.out.println("-v		version");
 	}
 }
