@@ -34,4 +34,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="github\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\specs\github\github.specapi">
+      <Link>github\github.specapi</Link>
+    </None>
+  </ItemGroup>
 </Project>
