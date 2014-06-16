@@ -1,6 +1,7 @@
 package org.specapi.plugins;
 
 import org.eclipse.xtext.generator.IGenerator;
+import org.eclipse.xtext.generator.OutputConfiguration;
 
 public abstract class Plugin implements IPlugin {
 
@@ -22,5 +23,12 @@ public abstract class Plugin implements IPlugin {
 	@Override
 	public PluginConfig getConfig() {
 		return config;
+	}
+	
+	protected OutputConfiguration getFirstOutputConfigurationOrNull() {
+		if(config.getOutputConfigurations().size() == 0) {
+			return null;
+		}
+		return config.getOutputConfigurations().get(0);
 	}
 }

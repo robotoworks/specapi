@@ -21,10 +21,9 @@ public class JarFilePlugin extends Plugin {
 	
 	@Override
 	public void copyResources(File outputFolder) throws IOException {
-		if(getConfig().getOutputConfigurations().size() > 0) {
-			OutputConfiguration outputConfig = getConfig().getOutputConfigurations().iterator().next();
-			outputFolder = new File(outputFolder, outputConfig.getOutputDirectory());
-			
+		OutputConfiguration outputConfig = getFirstOutputConfigurationOrNull();
+		
+		if(outputConfig != null) {
 			JarFile jar = new JarFile(jarFile);
 			
 			Enumeration<JarEntry> entries = jar.entries();
@@ -33,14 +32,13 @@ public class JarFilePlugin extends Plugin {
 				JarEntry entry = entries.nextElement();
 				
 				if(entry.getName().startsWith(DEFAULT_RESOURCES_PATH)) {
-					String resourceRelativePath = entry.getName().substring(DEFAULT_RESOURCES_PATH.length());
-					System.out.println("[copy resource] " + resourceRelativePath);
+					File resourceRelativePath = new File(outputConfig.getOutputDirectory(), entry.getName().substring(DEFAULT_RESOURCES_PATH.length()));
+					File outputFile = new File(outputFolder, resourceRelativePath.getPath());
+					System.out.println("[copy resource] " + resourceRelativePath.getPath());
 					
 					if(entry.isDirectory()) {
-						File dir = new File(outputFolder, resourceRelativePath);
-						dir.mkdirs();
+						outputFile.mkdirs();
 					} else {
-						File outputFile = new File(outputFolder, resourceRelativePath);
 						Files.copyStream(jar.getInputStream(entry), new FileOutputStream(outputFile));
 					}
 				}

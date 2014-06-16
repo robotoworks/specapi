@@ -24,8 +24,9 @@ public class EclipseSpecApiPlugin extends Plugin {
 	
 	@Override
 	public void copyResources(File outputFolder) throws IOException {
-		if(getConfig().getOutputConfigurations().size() > 0) {
-			OutputConfiguration outputConfig = getConfig().getOutputConfigurations().iterator().next();
+		OutputConfiguration outputConfig = getFirstOutputConfigurationOrNull();
+		
+		if(outputConfig != null) {
 			File sourceFolder = project.getFolder(DEFAULT_RESOURCES_PATH).getLocation().toFile();
 			
 			File targetFolder = new File(outputFolder, outputConfig.getOutputDirectory());
