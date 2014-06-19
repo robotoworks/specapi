@@ -16,7 +16,7 @@ api GithubAPI https://api.github.com {
         response Repository[]
         response 401 ErrorMessage
     }
- 
+
     /*
      * List public repositories for the specified user.
      * 

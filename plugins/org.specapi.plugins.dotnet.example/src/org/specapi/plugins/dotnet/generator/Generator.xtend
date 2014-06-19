@@ -17,7 +17,6 @@ class Generator implements IGenerator {
     @Inject ApiClientGenerator mApiClientGenerator
     @Inject EntityGenerator mEntityGenerator
     @Inject RequestGenerator mRequestGenerator
-    @Inject ResponseHandlerGenerator mResponseHandlerGenerator
     
     override doGenerate(Resource input, IFileSystemAccess fsa) {
         val doc = input.contents.head as SpecApiDocument
@@ -30,14 +29,6 @@ class Generator implements IGenerator {
                 doc.packageName.pascalizePackageName + "/" + it.name.pascalize + "Request.cs",
                 Plugin::OUTPUT_CONFIG,
                 mRequestGenerator.generate(doc, api, it)
-            )
-        ]
-        
-        api.blocks.filter(typeof(HttpMethod)).forEach[
-            fsa.generateFile(
-                doc.packageName.pascalizePackageName + "/" + it.name.pascalize + "Responder.cs",
-                Plugin::OUTPUT_CONFIG,
-                mResponseHandlerGenerator.generate(doc, api, it)
             )
         ]
         

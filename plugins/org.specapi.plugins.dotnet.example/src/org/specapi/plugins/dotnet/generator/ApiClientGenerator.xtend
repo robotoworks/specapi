@@ -29,7 +29,7 @@ class ApiClientGenerator extends DotNetTypeGenerator {
         }
         
         «FOR method : api.blocks.filter(typeof(HttpMethod))»
-        public void «method.name.pascalize»(«method.name.pascalize»Request request, «method.name.pascalize»Responder responder)
+        public void «method.name.pascalize»(«method.name.pascalize»Request request)
         {
             try {
                 var uri = request.CreateUri(BaseUrl);
@@ -38,33 +38,34 @@ class ApiClientGenerator extends DotNetTypeGenerator {
                 webRequest.UserAgent = "DotNet-«api.name.pascalize»";
 
                 var webResponse = (HttpWebResponse) webRequest.GetResponse ();
-                handle«method.name.pascalize»Response((int) webResponse.StatusCode, webResponse, responder);
+                handle«method.name.pascalize»Response(request, webResponse);
             }
             catch(WebException webException) {
                 var webResponse = (HttpWebResponse)  webException.Response;
-                handle«method.name.pascalize»Response((int) webResponse.StatusCode, webResponse, responder);
+                handle«method.name.pascalize»Response(request, webResponse);
             }
             catch(Exception exception) {
                 throw;
             }
         }
         
-        void handle«method.name.pascalize»Response (int status, HttpWebResponse webResponse, «method.name.pascalize»Responder responder)
+        void handle«method.name.pascalize»Response («method.name.pascalize»Request request, HttpWebResponse webResponse)
         {
+            int status = (int) webResponse.StatusCode;
             var responseStream = webResponse.GetResponseStream ();
             DataContractJsonSerializer serializer = null;
             
             «FOR response: method.blocks.filter(typeof(ResponseBlock)) SEPARATOR 'else'»
-            if (status == «response.resolveCode» && responder.On«response.resolveCode» != null) 
+            if (status == «response.resolveCode» && request.On«response.resolveCode» != null) 
             {
                 serializer = new DataContractJsonSerializer (typeof(«response.generateResponseType(method)»));
                 «response.generateResponseType(method)» result = («response.generateResponseType(method)») serializer.ReadObject (responseStream);
-                responder.On«response.resolveCode»(result);
+                request.On«response.resolveCode»(result);
             }
             «ENDFOR»
-            else if(responder.OnOther != null) 
+            else if(request.OnOther != null) 
             {
-                responder.OnOther(webResponse);
+                request.OnOther(webResponse);
             }
         }       
         «ENDFOR»

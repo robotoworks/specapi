@@ -16,16 +16,13 @@ namespace org.specapi.plugins.dotnet.example.test
 		{
 			var api = new GithubAPI ();
 
-			api.ListUserRepositories (
-				new ListUserRepositoriesRequest("fluxtah") { 
+			api.ListUserRepositories (new ListUserRepositoriesRequest("fluxtah") { 
 					Sort = "full_name", 
-					Direction = "asc" 
-				},
-				new ListUserRepositoriesResponder 
-				{
-					On200 = (repositories) => {
-						// TODO: handle 200 response
+					Direction = "asc",
 
+					On200 = (repositories) => {
+						
+						
 					},
 					OnOther = (response) => {
 						// TODO: handle any other response that

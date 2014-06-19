@@ -13,7 +13,7 @@ namespace Org.Specapi.Github
             BaseUrl = DefaultBaseUrl;
         }
         
-        public void ListRepositories(ListRepositoriesRequest request, ListRepositoriesResponder responder)
+        public void ListRepositories(ListRepositoriesRequest request)
         {
             try {
                 var uri = request.CreateUri(BaseUrl);
@@ -22,40 +22,41 @@ namespace Org.Specapi.Github
                 webRequest.UserAgent = "DotNet-GithubAPI";
     
                 var webResponse = (HttpWebResponse) webRequest.GetResponse ();
-                handleListRepositoriesResponse((int) webResponse.StatusCode, webResponse, responder);
+                handleListRepositoriesResponse(request, webResponse);
             }
             catch(WebException webException) {
                 var webResponse = (HttpWebResponse)  webException.Response;
-                handleListRepositoriesResponse((int) webResponse.StatusCode, webResponse, responder);
+                handleListRepositoriesResponse(request, webResponse);
             }
             catch(Exception exception) {
                 throw;
             }
         }
         
-        void handleListRepositoriesResponse (int status, HttpWebResponse webResponse, ListRepositoriesResponder responder)
+        void handleListRepositoriesResponse (ListRepositoriesRequest request, HttpWebResponse webResponse)
         {
+            int status = (int) webResponse.StatusCode;
             var responseStream = webResponse.GetResponseStream ();
             DataContractJsonSerializer serializer = null;
             
-            if (status == 200 && responder.On200 != null) 
+            if (status == 200 && request.On200 != null) 
             {
                 serializer = new DataContractJsonSerializer (typeof(Repository[]));
                 Repository[] result = (Repository[]) serializer.ReadObject (responseStream);
-                responder.On200(result);
+                request.On200(result);
             }else
-            if (status == 401 && responder.On401 != null) 
+            if (status == 401 && request.On401 != null) 
             {
                 serializer = new DataContractJsonSerializer (typeof(ErrorMessage));
                 ErrorMessage result = (ErrorMessage) serializer.ReadObject (responseStream);
-                responder.On401(result);
+                request.On401(result);
             }
-            else if(responder.OnOther != null) 
+            else if(request.OnOther != null) 
             {
-                responder.OnOther(webResponse);
+                request.OnOther(webResponse);
             }
         }       
-        public void ListUserRepositories(ListUserRepositoriesRequest request, ListUserRepositoriesResponder responder)
+        public void ListUserRepositories(ListUserRepositoriesRequest request)
         {
             try {
                 var uri = request.CreateUri(BaseUrl);
@@ -64,34 +65,35 @@ namespace Org.Specapi.Github
                 webRequest.UserAgent = "DotNet-GithubAPI";
     
                 var webResponse = (HttpWebResponse) webRequest.GetResponse ();
-                handleListUserRepositoriesResponse((int) webResponse.StatusCode, webResponse, responder);
+                handleListUserRepositoriesResponse(request, webResponse);
             }
             catch(WebException webException) {
                 var webResponse = (HttpWebResponse)  webException.Response;
-                handleListUserRepositoriesResponse((int) webResponse.StatusCode, webResponse, responder);
+                handleListUserRepositoriesResponse(request, webResponse);
             }
             catch(Exception exception) {
                 throw;
             }
         }
         
-        void handleListUserRepositoriesResponse (int status, HttpWebResponse webResponse, ListUserRepositoriesResponder responder)
+        void handleListUserRepositoriesResponse (ListUserRepositoriesRequest request, HttpWebResponse webResponse)
         {
+            int status = (int) webResponse.StatusCode;
             var responseStream = webResponse.GetResponseStream ();
             DataContractJsonSerializer serializer = null;
             
-            if (status == 200 && responder.On200 != null) 
+            if (status == 200 && request.On200 != null) 
             {
                 serializer = new DataContractJsonSerializer (typeof(Repository[]));
                 Repository[] result = (Repository[]) serializer.ReadObject (responseStream);
-                responder.On200(result);
+                request.On200(result);
             }
-            else if(responder.OnOther != null) 
+            else if(request.OnOther != null) 
             {
-                responder.OnOther(webResponse);
+                request.OnOther(webResponse);
             }
         }       
-        public void ListOrganizationRepositories(ListOrganizationRepositoriesRequest request, ListOrganizationRepositoriesResponder responder)
+        public void ListOrganizationRepositories(ListOrganizationRepositoriesRequest request)
         {
             try {
                 var uri = request.CreateUri(BaseUrl);
@@ -100,34 +102,35 @@ namespace Org.Specapi.Github
                 webRequest.UserAgent = "DotNet-GithubAPI";
     
                 var webResponse = (HttpWebResponse) webRequest.GetResponse ();
-                handleListOrganizationRepositoriesResponse((int) webResponse.StatusCode, webResponse, responder);
+                handleListOrganizationRepositoriesResponse(request, webResponse);
             }
             catch(WebException webException) {
                 var webResponse = (HttpWebResponse)  webException.Response;
-                handleListOrganizationRepositoriesResponse((int) webResponse.StatusCode, webResponse, responder);
+                handleListOrganizationRepositoriesResponse(request, webResponse);
             }
             catch(Exception exception) {
                 throw;
             }
         }
         
-        void handleListOrganizationRepositoriesResponse (int status, HttpWebResponse webResponse, ListOrganizationRepositoriesResponder responder)
+        void handleListOrganizationRepositoriesResponse (ListOrganizationRepositoriesRequest request, HttpWebResponse webResponse)
         {
+            int status = (int) webResponse.StatusCode;
             var responseStream = webResponse.GetResponseStream ();
             DataContractJsonSerializer serializer = null;
             
-            if (status == 200 && responder.On200 != null) 
+            if (status == 200 && request.On200 != null) 
             {
                 serializer = new DataContractJsonSerializer (typeof(Repository[]));
                 Repository[] result = (Repository[]) serializer.ReadObject (responseStream);
-                responder.On200(result);
+                request.On200(result);
             }
-            else if(responder.OnOther != null) 
+            else if(request.OnOther != null) 
             {
-                responder.OnOther(webResponse);
+                request.OnOther(webResponse);
             }
         }       
-        public void ListAllPublicRepositories(ListAllPublicRepositoriesRequest request, ListAllPublicRepositoriesResponder responder)
+        public void ListAllPublicRepositories(ListAllPublicRepositoriesRequest request)
         {
             try {
                 var uri = request.CreateUri(BaseUrl);
@@ -136,34 +139,35 @@ namespace Org.Specapi.Github
                 webRequest.UserAgent = "DotNet-GithubAPI";
     
                 var webResponse = (HttpWebResponse) webRequest.GetResponse ();
-                handleListAllPublicRepositoriesResponse((int) webResponse.StatusCode, webResponse, responder);
+                handleListAllPublicRepositoriesResponse(request, webResponse);
             }
             catch(WebException webException) {
                 var webResponse = (HttpWebResponse)  webException.Response;
-                handleListAllPublicRepositoriesResponse((int) webResponse.StatusCode, webResponse, responder);
+                handleListAllPublicRepositoriesResponse(request, webResponse);
             }
             catch(Exception exception) {
                 throw;
             }
         }
         
-        void handleListAllPublicRepositoriesResponse (int status, HttpWebResponse webResponse, ListAllPublicRepositoriesResponder responder)
+        void handleListAllPublicRepositoriesResponse (ListAllPublicRepositoriesRequest request, HttpWebResponse webResponse)
         {
+            int status = (int) webResponse.StatusCode;
             var responseStream = webResponse.GetResponseStream ();
             DataContractJsonSerializer serializer = null;
             
-            if (status == 200 && responder.On200 != null) 
+            if (status == 200 && request.On200 != null) 
             {
                 serializer = new DataContractJsonSerializer (typeof(Repository[]));
                 Repository[] result = (Repository[]) serializer.ReadObject (responseStream);
-                responder.On200(result);
+                request.On200(result);
             }
-            else if(responder.OnOther != null) 
+            else if(request.OnOther != null) 
             {
-                responder.OnOther(webResponse);
+                request.OnOther(webResponse);
             }
         }       
-        public void CreateRepository(CreateRepositoryRequest request, CreateRepositoryResponder responder)
+        public void CreateRepository(CreateRepositoryRequest request)
         {
             try {
                 var uri = request.CreateUri(BaseUrl);
@@ -172,52 +176,53 @@ namespace Org.Specapi.Github
                 webRequest.UserAgent = "DotNet-GithubAPI";
     
                 var webResponse = (HttpWebResponse) webRequest.GetResponse ();
-                handleCreateRepositoryResponse((int) webResponse.StatusCode, webResponse, responder);
+                handleCreateRepositoryResponse(request, webResponse);
             }
             catch(WebException webException) {
                 var webResponse = (HttpWebResponse)  webException.Response;
-                handleCreateRepositoryResponse((int) webResponse.StatusCode, webResponse, responder);
+                handleCreateRepositoryResponse(request, webResponse);
             }
             catch(Exception exception) {
                 throw;
             }
         }
         
-        void handleCreateRepositoryResponse (int status, HttpWebResponse webResponse, CreateRepositoryResponder responder)
+        void handleCreateRepositoryResponse (CreateRepositoryRequest request, HttpWebResponse webResponse)
         {
+            int status = (int) webResponse.StatusCode;
             var responseStream = webResponse.GetResponseStream ();
             DataContractJsonSerializer serializer = null;
             
-            if (status == 200 && responder.On200 != null) 
+            if (status == 200 && request.On200 != null) 
             {
                 serializer = new DataContractJsonSerializer (typeof(Repository));
                 Repository result = (Repository) serializer.ReadObject (responseStream);
-                responder.On200(result);
+                request.On200(result);
             }else
-            if (status == 400 && responder.On400 != null) 
+            if (status == 400 && request.On400 != null) 
             {
                 serializer = new DataContractJsonSerializer (typeof(ErrorMessage));
                 ErrorMessage result = (ErrorMessage) serializer.ReadObject (responseStream);
-                responder.On400(result);
+                request.On400(result);
             }else
-            if (status == 401 && responder.On401 != null) 
+            if (status == 401 && request.On401 != null) 
             {
                 serializer = new DataContractJsonSerializer (typeof(ErrorMessage));
                 ErrorMessage result = (ErrorMessage) serializer.ReadObject (responseStream);
-                responder.On401(result);
+                request.On401(result);
             }else
-            if (status == 422 && responder.On422 != null) 
+            if (status == 422 && request.On422 != null) 
             {
                 serializer = new DataContractJsonSerializer (typeof(ErrorMessage));
                 ErrorMessage result = (ErrorMessage) serializer.ReadObject (responseStream);
-                responder.On422(result);
+                request.On422(result);
             }
-            else if(responder.OnOther != null) 
+            else if(request.OnOther != null) 
             {
-                responder.OnOther(webResponse);
+                request.OnOther(webResponse);
             }
         }       
-        public void CreateOrganizationRepository(CreateOrganizationRepositoryRequest request, CreateOrganizationRepositoryResponder responder)
+        public void CreateOrganizationRepository(CreateOrganizationRepositoryRequest request)
         {
             try {
                 var uri = request.CreateUri(BaseUrl);
@@ -226,49 +231,50 @@ namespace Org.Specapi.Github
                 webRequest.UserAgent = "DotNet-GithubAPI";
     
                 var webResponse = (HttpWebResponse) webRequest.GetResponse ();
-                handleCreateOrganizationRepositoryResponse((int) webResponse.StatusCode, webResponse, responder);
+                handleCreateOrganizationRepositoryResponse(request, webResponse);
             }
             catch(WebException webException) {
                 var webResponse = (HttpWebResponse)  webException.Response;
-                handleCreateOrganizationRepositoryResponse((int) webResponse.StatusCode, webResponse, responder);
+                handleCreateOrganizationRepositoryResponse(request, webResponse);
             }
             catch(Exception exception) {
                 throw;
             }
         }
         
-        void handleCreateOrganizationRepositoryResponse (int status, HttpWebResponse webResponse, CreateOrganizationRepositoryResponder responder)
+        void handleCreateOrganizationRepositoryResponse (CreateOrganizationRepositoryRequest request, HttpWebResponse webResponse)
         {
+            int status = (int) webResponse.StatusCode;
             var responseStream = webResponse.GetResponseStream ();
             DataContractJsonSerializer serializer = null;
             
-            if (status == 200 && responder.On200 != null) 
+            if (status == 200 && request.On200 != null) 
             {
                 serializer = new DataContractJsonSerializer (typeof(Repository));
                 Repository result = (Repository) serializer.ReadObject (responseStream);
-                responder.On200(result);
+                request.On200(result);
             }else
-            if (status == 400 && responder.On400 != null) 
+            if (status == 400 && request.On400 != null) 
             {
                 serializer = new DataContractJsonSerializer (typeof(ErrorMessage));
                 ErrorMessage result = (ErrorMessage) serializer.ReadObject (responseStream);
-                responder.On400(result);
+                request.On400(result);
             }else
-            if (status == 401 && responder.On401 != null) 
+            if (status == 401 && request.On401 != null) 
             {
                 serializer = new DataContractJsonSerializer (typeof(ErrorMessage));
                 ErrorMessage result = (ErrorMessage) serializer.ReadObject (responseStream);
-                responder.On401(result);
+                request.On401(result);
             }else
-            if (status == 422 && responder.On422 != null) 
+            if (status == 422 && request.On422 != null) 
             {
                 serializer = new DataContractJsonSerializer (typeof(ErrorMessage));
                 ErrorMessage result = (ErrorMessage) serializer.ReadObject (responseStream);
-                responder.On422(result);
+                request.On422(result);
             }
-            else if(responder.OnOther != null) 
+            else if(request.OnOther != null) 
             {
-                responder.OnOther(webResponse);
+                request.OnOther(webResponse);
             }
         }       
     }

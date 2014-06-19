@@ -37,7 +37,9 @@ class RequestGenerator extends DotNetTypeGenerator {
     {
         «generatePropertiesForPathParameters»
         «generateMembersForQueryParameters»
-        
+        «generateResponseDelegates»
+        «generateResponseDelegateProperties»
+                
         public «method.name.pascalize»Request(«createConstructorArgs») {
             «generateConstructorArgAssignments»
         }
@@ -132,4 +134,18 @@ class RequestGenerator extends DotNetTypeGenerator {
         
         return args.join(", ")
     }
+    
+    def generateResponseDelegates() '''
+    «FOR response:method.blocks.filter(typeof(ResponseBlock))»
+    public delegate void Status«response.resolveCode»Handler(«response.generateResponseType(method)» result);
+    «ENDFOR»
+    public delegate void StatusUnexpectedHandler(HttpWebResponse result);
+    '''
+    
+    def generateResponseDelegateProperties() '''
+    «FOR response:method.blocks.filter(typeof(ResponseBlock))»
+    public Status«response.resolveCode»Handler On«response.resolveCode» { get; set; }
+    «ENDFOR»
+    public StatusUnexpectedHandler OnOther { get; set; }
+    '''   
 }
