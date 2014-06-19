@@ -18,7 +18,7 @@ Then use one of the available code generators, follow the quick start below to s
 
 Quick Start
 -----------
-A SpecAPI file (*.specapi) describes the specification of a WebAPI, you can see what one looks like by checking out the example [GithubAPI Specification](../blob/master/specs/github/github.specapi).
+A SpecAPI file (*.specapi) describes the specification of a WebAPI, you can see what one looks like by checking out the example [GithubAPI Specification](../../blob/master/specs/github/github.specapi).
 
 This quick start guide will guide you through the installation, and usage of SpecAPI. It will show you how generate a static documentation website from the GithubAPI Specification, using the [SpecAPI Documentation Plugin](../master/plugins/org.specapi.plugins.docs).
 
