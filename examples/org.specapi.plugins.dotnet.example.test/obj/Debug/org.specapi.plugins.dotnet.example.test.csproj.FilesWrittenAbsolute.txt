@@ -1,0 +1,7 @@
+/Users/ian.warwick/Documents/sdev/proj/specapi/examples/org.specapi.plugins.dotnet.example.test/obj/Debug/.NETFramework,Version=v4.0.AssemblyAttribute.cs
+/Users/ian.warwick/Documents/sdev/proj/specapi/examples/org.specapi.plugins.dotnet.example.test/bin/Debug/org.specapi.plugins.dotnet.example.test.dll.mdb
+/Users/ian.warwick/Documents/sdev/proj/specapi/examples/org.specapi.plugins.dotnet.example.test/bin/Debug/org.specapi.plugins.dotnet.example.test.dll
+/Users/ian.warwick/Documents/sdev/proj/specapi/examples/org.specapi.plugins.dotnet.example.test/obj/Debug/org.specapi.plugins.dotnet.example.test.dll
+/Users/ian.warwick/Documents/sdev/proj/specapi/examples/org.specapi.plugins.dotnet.example.test/obj/Debug/org.specapi.plugins.dotnet.example.test.dll.mdb
+/Users/ian.warwick/Documents/sdev/proj/specapi/examples/org.specapi.plugins.dotnet.example.test/bin/Debug/org.specapi.plugins.dotnet.example.dll
+/Users/ian.warwick/Documents/sdev/proj/specapi/examples/org.specapi.plugins.dotnet.example.test/bin/Debug/org.specapi.plugins.dotnet.example.dll.mdb

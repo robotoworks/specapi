@@ -1,4 +1,4 @@
-package com.specapi.github
+package org.specapi.github
 
 api GithubAPI https://api.github.com {
     /*

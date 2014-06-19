@@ -1,0 +1,16 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="org.specapi.plugins.dotnet.example.test/Test.cs">
+    <Files>
+      <File FileName="org.specapi.plugins.dotnet.example/org.specapi.plugins.dotnet.example.csproj" Line="10" Column="20" />
+      <File FileName="org.specapi.plugins.dotnet.example.test/Test.cs" Line="47" Column="7" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/ian.warwick/Documents/sdev/proj/specapi/examples/org.specapi.plugins.dotnet.example/dotnet-gen/Org.Specapi.Github/GithubAPI.cs" line="23" column="1" />
+      <Breakpoint file="/Users/ian.warwick/Documents/sdev/proj/specapi/examples/org.specapi.plugins.dotnet.example.test/Test.cs" line="44" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

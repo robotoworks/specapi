@@ -27,32 +27,31 @@ public class EclipsePluginLoader extends PluginLoader {
 		// Make sure we have unique plugins, we do this so that plugin
 		// projects in the workspace will take priority over compiled
 		// plugin jars at the plugins path
-		Map<String, Plugin> pluginMap = Maps.uniqueIndex(plugins, new Function<Plugin, String>() {
-			public String apply(Plugin from) {
-				return from.getConfig().getPluginClassName();
-			}
-		});
+		Map<String, Plugin> pluginMap = Maps.newHashMap();
+		
+		for(Plugin plugin : plugins) {
+			pluginMap.put(plugin.getConfig().getPluginClassName(), plugin);
+		}
 
 		ArrayList<IProject> projects = ProjectUtil.getSpecApiPluginProjects();
 		
 		for(IProject project : projects) {
+			PluginConfig pluginConfig = ProjectUtil.loadConfig(project, getPluginConfigParser());
+							
+			if(pluginConfig != null) {
+				
+				IFolder bin = project.getFolder("bin"); // TODO should look this up
+				
+				if(bin.exists()) {
+					String fullPath = bin.getLocation().toOSString();
+					
+					File file = new File(fullPath);
 
-				PluginConfig pluginConfig = ProjectUtil.loadConfig(project, getPluginConfigParser());
-								
-				if(pluginConfig != null) {
+					Plugin plugin = loadPlugin(file, pluginConfig, project);
 					
-					IFolder bin = project.getFolder("bin"); // TODO should look this up
-					
-					if(bin.exists()) {
-						String fullPath = bin.getLocation().toOSString();
-						
-						File file = new File(fullPath);
-	
-						Plugin plugin = loadPlugin(file, pluginConfig, project);
-						
-						pluginMap.put(pluginConfig.getPluginClassName(), plugin);
-					}
+					pluginMap.put(pluginConfig.getPluginClassName(), plugin);
 				}
+			}
 		}
 		
 		return new ArrayList<Plugin>(pluginMap.values());

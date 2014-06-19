@@ -58,6 +58,29 @@ class SpecApiModelUtils {
 		}
 	}
 	
+	def String getPathAsIndexedFormatString(HttpMethod method, String paramPrefix, String paramPostfix) {
+		if(method.getPath() == null) {
+			return "";
+		}
+		
+		try {
+			var path = serializer.serialize(method.getPath()).trim();
+		
+			path = path.replaceAll("([\\^a-zA-Z_0-9]+):[a-zA-Z_0-9]+", ":$1");
+			
+			
+			for(i : 0 ..< method.path.params.length) {
+				var param = method.path.params.get(i)
+				path = path.replace(":" + param.name, String.format("%s%s%s", paramPrefix, i, paramPostfix))
+			}
+			
+			return path
+				
+		} catch(Exception e) {
+			return "";
+		}
+	}
+	
 	private static val reservedWords = #[
 		"source", "target","abstract","continue","continue","for",
 		"new", "switch", "assert", "default",

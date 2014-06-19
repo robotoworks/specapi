@@ -2,7 +2,7 @@ package org.specapi.util;
 
 public class SpecApiStringExtensions {
 
-	public static final char[] DEFAULT_BOUNDARY_CHARS = {'-', '_', ' '};
+	public static final char[] DEFAULT_BOUNDARY_CHARS = {'-', '_', ' ', '.'};
 	
 	public static String camelize(String str, boolean upperFirst) {
 		StringBuilder builder = new StringBuilder();

@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "org.specapi.plugins.dotnet.example", "org.specapi.plugins.dotnet.example\org.specapi.plugins.dotnet.example.csproj", "{A341D4D6-78E0-4981-87C7-344B8DE24294}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "org.specapi.plugins.dotnet.example.test", "org.specapi.plugins.dotnet.example.test\org.specapi.plugins.dotnet.example.test.csproj", "{891FC54E-0B58-429E-B7B7-B74A3FD239EB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "org.specapi.plugins.dotnet.example", "org.specapi.plugins.dotnet.example\org.specapi.plugins.dotnet.example.csproj", "{C1661972-54E5-4630-9ECC-62A07C4AF8AB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,12 +15,12 @@ Global
 		{891FC54E-0B58-429E-B7B7-B74A3FD239EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{891FC54E-0B58-429E-B7B7-B74A3FD239EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{891FC54E-0B58-429E-B7B7-B74A3FD239EB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A341D4D6-78E0-4981-87C7-344B8DE24294}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A341D4D6-78E0-4981-87C7-344B8DE24294}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A341D4D6-78E0-4981-87C7-344B8DE24294}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A341D4D6-78E0-4981-87C7-344B8DE24294}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1661972-54E5-4630-9ECC-62A07C4AF8AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1661972-54E5-4630-9ECC-62A07C4AF8AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1661972-54E5-4630-9ECC-62A07C4AF8AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1661972-54E5-4630-9ECC-62A07C4AF8AB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = org.specapi.plugins.dotnet.example\org.specapi.plugins.dotnet.example.csproj
+		StartupItem = org.specapi.plugins.dotnet.example.test\org.specapi.plugins.dotnet.example.test.csproj
 	EndGlobalSection
 EndGlobal

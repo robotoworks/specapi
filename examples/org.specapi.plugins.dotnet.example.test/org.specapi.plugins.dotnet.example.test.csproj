@@ -29,6 +29,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="nunit.framework" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Test.cs" />
@@ -36,7 +38,7 @@
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <ProjectReference Include="..\org.specapi.plugins.dotnet.example\org.specapi.plugins.dotnet.example.csproj">
-      <Project>{A341D4D6-78E0-4981-87C7-344B8DE24294}</Project>
+      <Project>{C1661972-54E5-4630-9ECC-62A07C4AF8AB}</Project>
       <Name>org.specapi.plugins.dotnet.example</Name>
     </ProjectReference>
   </ItemGroup>

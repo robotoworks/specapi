@@ -1,4 +1,4 @@
-/Users/ian.warwick/Documents/sdev/proj/specapi/examples/org.specapi.plugins.dotnet.example/obj/Debug/.NETPortable,Version=v4.0,Profile=Profile136.AssemblyAttribute.cs
+/Users/ian.warwick/Documents/sdev/proj/specapi/examples/org.specapi.plugins.dotnet.example/obj/Debug/.NETFramework,Version=v4.0.AssemblyAttribute.cs
 /Users/ian.warwick/Documents/sdev/proj/specapi/examples/org.specapi.plugins.dotnet.example/bin/Debug/org.specapi.plugins.dotnet.example.dll.mdb
 /Users/ian.warwick/Documents/sdev/proj/specapi/examples/org.specapi.plugins.dotnet.example/bin/Debug/org.specapi.plugins.dotnet.example.dll
 /Users/ian.warwick/Documents/sdev/proj/specapi/examples/org.specapi.plugins.dotnet.example/obj/Debug/org.specapi.plugins.dotnet.example.dll
