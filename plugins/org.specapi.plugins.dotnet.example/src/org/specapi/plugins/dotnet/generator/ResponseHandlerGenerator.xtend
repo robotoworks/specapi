@@ -29,28 +29,28 @@ class ResponseHandlerGenerator extends DotNetTypeGenerator {
     }
     
     override generateBody(SpecApiDocument doc, Api api)  '''
-    ÇaddImport("System")È
-    ÇaddImport("System.Net")È
-    ÇaddImport("System.Linq")È
-    ÇaddImport("System.Collections.Specialized")È
-    public partial class Çmethod.name.pascalizeÈResponder
+    Â«addImport("System")Â»
+    Â«addImport("System.Net")Â»
+    Â«addImport("System.Linq")Â»
+    Â«addImport("System.Collections.Specialized")Â»
+    public partial class Â«method.name.pascalizeÂ»Responder
     {
-        ÇgenerateResponseDelegatesÈ
-        ÇgenerateResponseDelegatePropertiesÈ
+        Â«generateResponseDelegatesÂ»
+        Â«generateResponseDelegatePropertiesÂ»
     }
     '''
     
     def generateResponseDelegates() '''
-    ÇFOR response:method.blocks.filter(typeof(ResponseBlock))È
-    public delegate void StatusÇresponse.resolveCodeÈHandler(Çresponse.generateResponseType(method)È result);
-    ÇENDFORÈ
+    Â«FOR response:method.blocks.filter(typeof(ResponseBlock))Â»
+    public delegate void StatusÂ«response.resolveCodeÂ»Handler(Â«response.generateResponseType(method)Â» result);
+    Â«ENDFORÂ»
     public delegate void StatusUnexpectedHandler(HttpWebResponse result);
     '''
     
     def generateResponseDelegateProperties() '''
-    ÇFOR response:method.blocks.filter(typeof(ResponseBlock))È
-    public StatusÇresponse.resolveCodeÈHandler OnÇresponse.resolveCodeÈ { get; set; }
-    ÇENDFORÈ
+    Â«FOR response:method.blocks.filter(typeof(ResponseBlock))Â»
+    public StatusÂ«response.resolveCodeÂ»Handler OnÂ«response.resolveCodeÂ» { get; set; }
+    Â«ENDFORÂ»
     public StatusUnexpectedHandler OnOther { get; set; }
     '''   
 }

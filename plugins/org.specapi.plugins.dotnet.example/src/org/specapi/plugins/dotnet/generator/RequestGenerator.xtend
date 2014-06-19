@@ -29,85 +29,85 @@ class RequestGenerator extends DotNetTypeGenerator {
     }
     
     override generateBody(SpecApiDocument doc, Api api)  '''
-    ÇaddImport("System")È
-    ÇaddImport("System.Net")È
-    ÇaddImport("System.Linq")È
-    ÇaddImport("System.Collections.Specialized")È
-    public partial class Çmethod.name.pascalizeÈRequest
+    Â«addImport("System")Â»
+    Â«addImport("System.Net")Â»
+    Â«addImport("System.Linq")Â»
+    Â«addImport("System.Collections.Specialized")Â»
+    public partial class Â«method.name.pascalizeÂ»Request
     {
-        ÇgeneratePropertiesForPathParametersÈ
-        ÇgenerateMembersForQueryParametersÈ
+        Â«generatePropertiesForPathParametersÂ»
+        Â«generateMembersForQueryParametersÂ»
         
-        public Çmethod.name.pascalizeÈRequest(ÇcreateConstructorArgsÈ) {
-            ÇgenerateConstructorArgAssignmentsÈ
+        public Â«method.name.pascalizeÂ»Request(Â«createConstructorArgsÂ») {
+            Â«generateConstructorArgAssignmentsÂ»
         }
         
         public Uri CreateUri (string baseUrl)
         {
-            ÇgenerateUriCreationStatementsÈ
+            Â«generateUriCreationStatementsÂ»
             
-            ÇIF method.paramsBlock != nullÈ
+            Â«IF method.paramsBlock != nullÂ»
             var uriBuilder = new UriBuilder(url);
             NameValueCollection query = new NameValueCollection ();
-            ÇFOR param:method.paramsBlock.paramsÈ
-            if(_Çparam.name.camelizeÈParamSet) {
-                query ["Çparam.nameÈ"] = _Çparam.name.camelizeÈParam;
+            Â«FOR param:method.paramsBlock.paramsÂ»
+            if(_Â«param.name.camelizeÂ»ParamSet) {
+                query ["Â«param.nameÂ»"] = _Â«param.name.camelizeÂ»Param;
             }
-            ÇENDFORÈ
+            Â«ENDFORÂ»
             uriBuilder.Query = string.Join("&", query.AllKeys.Select(key => string.Format("{0}={1}", WebUtility.UrlEncode(key), WebUtility.UrlEncode(query[key]))));
             return uriBuilder.Uri;
-            ÇELSEÈ
+            Â«ELSEÂ»
             return new Uri(url);
-            ÇENDIFÈ
+            Â«ENDIFÂ»
         }
     }
     '''
     
     def generateUriCreationStatements() '''
-    ÇIF method.path != nullÈ
-    ÇIF method.hasPathParamsÈ
-    String path = String.Format ("Çmethod.getPathAsIndexedFormatString("{","}")È", ÇcreateFormatStringFromQueryArgsÈ);
+    Â«IF method.path != nullÂ»
+    Â«IF method.hasPathParamsÂ»
+    String path = String.Format ("Â«method.getPathAsIndexedFormatString("{","}")Â»", Â«createFormatStringFromQueryArgsÂ»);
     String url = baseUrl + path;
-    ÇELSEÈ
-    String url = baseUrl + "Çmethod.pathAsStringÈ";
-    ÇENDIFÈ
-    ÇELSEÈ
+    Â«ELSEÂ»
+    String url = baseUrl + "Â«method.pathAsStringÂ»";
+    Â«ENDIFÂ»
+    Â«ELSEÂ»
     String url = baseUrl;
-    ÇENDIFÈ
+    Â«ENDIFÂ»
     '''
     
     def generateConstructorArgAssignments() '''
-    ÇFOR param:method.path?.paramsÈ
-    Çparam.name.pascalizeÈ = Çparam.nameÈ;
-    ÇENDFORÈ
+    Â«FOR param:method.path?.paramsÂ»
+    Â«param.name.pascalizeÂ» = Â«param.nameÂ»;
+    Â«ENDFORÂ»
     '''
     
     def generatePropertiesForPathParameters() '''
-    ÇFOR param:method.path?.paramsÈ
-    public Çparam.type.dotNetTypeStringÈ Çparam.name.pascalizeÈ { get; set; }
-    ÇENDFORÈ
+    Â«FOR param:method.path?.paramsÂ»
+    public Â«param.type.dotNetTypeStringÂ» Â«param.name.pascalizeÂ» { get; set; }
+    Â«ENDFORÂ»
     '''
  
     def generateMembersForQueryParameters() '''
-    ÇIF method.paramsBlock != nullÈ
-    ÇFOR param: method.paramsBlock.paramsÈ
-    bool _Çparam.name.camelizeÈParamSet = false;
-    Çparam.type.dotNetTypeStringÈ _Çparam.name.camelizeÈParam;
-    public Çparam.type.dotNetTypeStringÈ Çparam.name.pascalizeÈ 
+    Â«IF method.paramsBlock != nullÂ»
+    Â«FOR param: method.paramsBlock.paramsÂ»
+    bool _Â«param.name.camelizeÂ»ParamSet = false;
+    Â«param.type.dotNetTypeStringÂ» _Â«param.name.camelizeÂ»Param;
+    public Â«param.type.dotNetTypeStringÂ» Â«param.name.pascalizeÂ» 
     { 
         get 
         {
-            return _Çparam.name.camelizeÈParam;
+            return _Â«param.name.camelizeÂ»Param;
         } 
         set 
         {
-            _Çparam.name.camelizeÈParamSet = true;
-            _Çparam.name.camelizeÈParam = value;
+            _Â«param.name.camelizeÂ»ParamSet = true;
+            _Â«param.name.camelizeÂ»Param = value;
         }
     }
 
-    ÇENDFORÈ
-    ÇENDIFÈ
+    Â«ENDFORÂ»
+    Â«ENDIFÂ»
     '''
     def createFormatStringFromQueryArgs() {
         var args = new ArrayList<String>();

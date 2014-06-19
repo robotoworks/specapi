@@ -15,59 +15,59 @@ class ApiClientGenerator extends DotNetTypeGenerator {
     }
     
     override generateBody(SpecApiDocument doc, Api api)  '''
-    ÇaddImport("System")È
-    ÇaddImport("System.Net")È
-    ÇaddImport("System.Runtime.Serialization.Json")È
-    public partial class Çapi.name.pascalizeÈ
+    Â«addImport("System")Â»
+    Â«addImport("System.Net")Â»
+    Â«addImport("System.Runtime.Serialization.Json")Â»
+    public partial class Â«api.name.pascalizeÂ»
     {
-        public static String DefaultBaseUrl { get { return "Çapi.baseUrlÈ"; }}
+        public static String DefaultBaseUrl { get { return "Â«api.baseUrlÂ»"; }}
         
         public String BaseUrl { get; set; }
         
-        public Çapi.name.pascalizeÈ() {
+        public Â«api.name.pascalizeÂ»() {
             BaseUrl = DefaultBaseUrl;
         }
         
-        ÇFOR method : api.blocks.filter(typeof(HttpMethod))È
-        public void Çmethod.name.pascalizeÈ(Çmethod.name.pascalizeÈRequest request, Çmethod.name.pascalizeÈResponder responder)
+        Â«FOR method : api.blocks.filter(typeof(HttpMethod))Â»
+        public void Â«method.name.pascalizeÂ»(Â«method.name.pascalizeÂ»Request request, Â«method.name.pascalizeÂ»Responder responder)
         {
             try {
                 var uri = request.CreateUri(BaseUrl);
                 var webRequest = WebRequest.CreateHttp (uri);
-                webRequest.Method = "Çmethod.type.literal.toUpperCaseÈ";
-                webRequest.UserAgent = "DotNet-Çapi.name.pascalizeÈ";
+                webRequest.Method = "Â«method.type.literal.toUpperCaseÂ»";
+                webRequest.UserAgent = "DotNet-Â«api.name.pascalizeÂ»";
 
                 var webResponse = (HttpWebResponse) webRequest.GetResponse ();
-                handleÇmethod.name.pascalizeÈResponse((int) webResponse.StatusCode, webResponse, responder);
+                handleÂ«method.name.pascalizeÂ»Response((int) webResponse.StatusCode, webResponse, responder);
             }
             catch(WebException webException) {
                 var webResponse = (HttpWebResponse)  webException.Response;
-                handleÇmethod.name.pascalizeÈResponse((int) webResponse.StatusCode, webResponse, responder);
+                handleÂ«method.name.pascalizeÂ»Response((int) webResponse.StatusCode, webResponse, responder);
             }
             catch(Exception exception) {
                 throw;
             }
         }
         
-        void handleÇmethod.name.pascalizeÈResponse (int status, HttpWebResponse webResponse, Çmethod.name.pascalizeÈResponder responder)
+        void handleÂ«method.name.pascalizeÂ»Response (int status, HttpWebResponse webResponse, Â«method.name.pascalizeÂ»Responder responder)
         {
             var responseStream = webResponse.GetResponseStream ();
             DataContractJsonSerializer serializer = null;
             
-            ÇFOR response: method.blocks.filter(typeof(ResponseBlock)) SEPARATOR 'else'È
-            if (status == Çresponse.resolveCodeÈ && responder.OnÇresponse.resolveCodeÈ != null) 
+            Â«FOR response: method.blocks.filter(typeof(ResponseBlock)) SEPARATOR 'else'Â»
+            if (status == Â«response.resolveCodeÂ» && responder.OnÂ«response.resolveCodeÂ» != null) 
             {
-                serializer = new DataContractJsonSerializer (typeof(Çresponse.generateResponseType(method)È));
-                Çresponse.generateResponseType(method)È result = (Çresponse.generateResponseType(method)È) serializer.ReadObject (responseStream);
-                responder.OnÇresponse.resolveCodeÈ(result);
+                serializer = new DataContractJsonSerializer (typeof(Â«response.generateResponseType(method)Â»));
+                Â«response.generateResponseType(method)Â» result = (Â«response.generateResponseType(method)Â») serializer.ReadObject (responseStream);
+                responder.OnÂ«response.resolveCodeÂ»(result);
             }
-            ÇENDFORÈ
+            Â«ENDFORÂ»
             else if(responder.OnOther != null) 
             {
                 responder.OnOther(webResponse);
             }
         }       
-        ÇENDFORÈ
+        Â«ENDFORÂ»
     }
     '''
     

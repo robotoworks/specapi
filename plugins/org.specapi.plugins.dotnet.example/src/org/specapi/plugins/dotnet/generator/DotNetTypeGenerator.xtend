@@ -22,11 +22,11 @@ abstract class DotNetTypeGenerator {
     }
     
     def protected doGenerate() '''    
-    Çval body = generateBody(doc, api)È
-    Çimports.generateImportsÈ
-    namespace ÇgetNamespaceÈ
+    Â«val body = generateBody(doc, api)Â»
+    Â«imports.generateImportsÂ»
+    namespace Â«getNamespaceÂ»
     {
-        ÇbodyÈ
+        Â«bodyÂ»
     }
     '''
     
@@ -35,9 +35,9 @@ abstract class DotNetTypeGenerator {
     def abstract String generateBody(SpecApiDocument doc, Api api)
 
     def generateImports(HashSet<String> imports) '''
-    ÇFOR _import : importsÈ
-    using Ç_importÈ;
-    ÇENDFORÈ
+    Â«FOR _import : importsÂ»
+    using Â«_importÂ»;
+    Â«ENDFORÂ»
     '''
     
     def void addImport(String str) {

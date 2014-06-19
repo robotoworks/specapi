@@ -27,34 +27,34 @@ class EntityGenerator extends DotNetTypeGenerator {
     }
     
     override generateBody(SpecApiDocument doc, Api api)  '''
-    ÇaddImport("System")È
-    ÇaddImport("System.Runtime.Serialization")È
-    ÇIF userType instanceof EnumTypeDeclarationÈ
-    ÇgenerateEnumType(userType as EnumTypeDeclaration)È
-    ÇELSEÈ
-    ÇgenerateComplexType(userType as ComplexTypeDeclaration)È
-    ÇENDIFÈ
+    Â«addImport("System")Â»
+    Â«addImport("System.Runtime.Serialization")Â»
+    Â«IF userType instanceof EnumTypeDeclarationÂ»
+    Â«generateEnumType(userType as EnumTypeDeclaration)Â»
+    Â«ELSEÂ»
+    Â«generateComplexType(userType as ComplexTypeDeclaration)Â»
+    Â«ENDIFÂ»
     '''
     
     def generateComplexType(ComplexTypeDeclaration declaration) '''
     [DataContract]
-    public partial class ÇuserType.name.pascalizeÈ
+    public partial class Â«userType.name.pascalizeÂ»
     {
-        ÇFOR member: declaration.literal.membersÈ
-        [DataMember(Name = "Çmember.nameÈ")]
-        public Çmember.type.dotNetTypeStringÈ Çmember.name.pascalizeÈ { get; set; }
-        ÇENDFORÈ
+        Â«FOR member: declaration.literal.membersÂ»
+        [DataMember(Name = "Â«member.nameÂ»")]
+        public Â«member.type.dotNetTypeStringÂ» Â«member.name.pascalizeÂ» { get; set; }
+        Â«ENDFORÂ»
     }
     '''
     
     def generateEnumType(EnumTypeDeclaration enumType) '''
     [DataContract]
-    public enum ÇuserType.name.pascalizeÈÇIF(enumType.superType != null)È: intÇENDIFÈ
+    public enum Â«userType.name.pascalizeÂ»Â«IF(enumType.superType != null)Â»: intÂ«ENDIFÂ»
     {
-        ÇFOR member: enumType.literal.members SEPARATOR ","È
-        [DataMember(Name = "Çmember.nameÈ")]
-        Çmember.name.pascalizeÈÇIF(enumType.superType != null && member.value != null)È = Çmember.valueÈÇENDIFÈ
-        ÇENDFORÈ
+        Â«FOR member: enumType.literal.members SEPARATOR ","Â»
+        [DataMember(Name = "Â«member.nameÂ»")]
+        Â«member.name.pascalizeÂ»Â«IF(enumType.superType != null && member.value != null)Â» = Â«member.valueÂ»Â«ENDIFÂ»
+        Â«ENDFORÂ»
     }    
     '''
     
