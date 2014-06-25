@@ -113,7 +113,7 @@ class Generator implements IGenerator {
                 }
                 «ENDFOR»
                 «ENDIF»
-                «IF method.body != null»
+                «IF method.request != null»
                 «IF method.path.params.size > 0 || 
                 (method.paramsBlock != null && method.paramsBlock.params.length > 0)»,«ENDIF»
                 {
@@ -143,7 +143,7 @@ class Generator implements IGenerator {
     }
     
     def boolean hasComplexTypeLiteralBodies(Iterable<HttpMethod> methods) {
-        return methods.exists[it.body != null && it.body.type instanceof ComplexTypeLiteral]
+        return methods.exists[it.request != null && it.request.type instanceof ComplexTypeLiteral]
     }
     
     def boolean hasUserTypes(SpecApiDocument model) {
@@ -266,7 +266,7 @@ class Generator implements IGenerator {
     }
     
     def String getSwaggerBodyTypeName(HttpMethod method) {
-        var body = method.body
+        var body = method.request
         
         if(body == null) {
             return "void"
@@ -296,8 +296,8 @@ class Generator implements IGenerator {
     '''
     
     def generateModelForMethodBodyLiterals(Iterable<HttpMethod> methods) '''
-    «FOR method : methods.filter[it.body != null && it.body.type instanceof ComplexTypeLiteral] SEPARATOR ","»
-        «var type = method.body.type as ComplexTypeLiteral»
+    «FOR method : methods.filter[it.request != null && it.request.type instanceof ComplexTypeLiteral] SEPARATOR ","»
+        «var type = method.request.type as ComplexTypeLiteral»
         "«method.getSwaggerBodyTypeName»": {
             "id": "«method.getSwaggerBodyTypeName»",
             "properties": {

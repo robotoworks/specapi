@@ -242,14 +242,14 @@ public class SpecApiLangGrammarAccess extends AbstractGrammarElementFinder {
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final RuleCall cHeaderBlockParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cParamsBlockParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
-		private final RuleCall cBodyBlockParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
+		private final RuleCall cRequestBlockParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
 		private final RuleCall cResponseBlockParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
 		
 		//HttpMethodBlock:
-		//	HeaderBlock | ParamsBlock | BodyBlock | ResponseBlock;
+		//	HeaderBlock | ParamsBlock | RequestBlock | ResponseBlock;
 		public ParserRule getRule() { return rule; }
 
-		//HeaderBlock | ParamsBlock | BodyBlock | ResponseBlock
+		//HeaderBlock | ParamsBlock | RequestBlock | ResponseBlock
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//HeaderBlock
@@ -258,8 +258,8 @@ public class SpecApiLangGrammarAccess extends AbstractGrammarElementFinder {
 		//ParamsBlock
 		public RuleCall getParamsBlockParserRuleCall_1() { return cParamsBlockParserRuleCall_1; }
 
-		//BodyBlock
-		public RuleCall getBodyBlockParserRuleCall_2() { return cBodyBlockParserRuleCall_2; }
+		//RequestBlock
+		public RuleCall getRequestBlockParserRuleCall_2() { return cRequestBlockParserRuleCall_2; }
 
 		//ResponseBlock
 		public RuleCall getResponseBlockParserRuleCall_3() { return cResponseBlockParserRuleCall_3; }
@@ -457,22 +457,22 @@ public class SpecApiLangGrammarAccess extends AbstractGrammarElementFinder {
 		public RuleCall getLiteralSignedNumberParserRuleCall_2_1_0() { return cLiteralSignedNumberParserRuleCall_2_1_0; }
 	}
 
-	public class BodyBlockElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "BodyBlock");
+	public class RequestBlockElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "RequestBlock");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cBodyKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cRequestKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cTypeAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cTypeBlockTypeParserRuleCall_1_0 = (RuleCall)cTypeAssignment_1.eContents().get(0);
 		
-		//BodyBlock:
-		//	"body" type=BlockType;
+		//RequestBlock:
+		//	"request" type=BlockType;
 		public ParserRule getRule() { return rule; }
 
-		//"body" type=BlockType
+		//"request" type=BlockType
 		public Group getGroup() { return cGroup; }
 
-		//"body"
-		public Keyword getBodyKeyword_0() { return cBodyKeyword_0; }
+		//"request"
+		public Keyword getRequestKeyword_0() { return cRequestKeyword_0; }
 
 		//type=BlockType
 		public Assignment getTypeAssignment_1() { return cTypeAssignment_1; }
@@ -1210,7 +1210,7 @@ public class SpecApiLangGrammarAccess extends AbstractGrammarElementFinder {
 	private ArbitraryPathSegmentElements pArbitraryPathSegment;
 	private ParamsBlockElements pParamsBlock;
 	private LiteralElements pLiteral;
-	private BodyBlockElements pBodyBlock;
+	private RequestBlockElements pRequestBlock;
 	private ResponseBlockElements pResponseBlock;
 	private BlockTypeElements pBlockType;
 	private MemberElements pMember;
@@ -1334,7 +1334,7 @@ public class SpecApiLangGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//HttpMethodBlock:
-	//	HeaderBlock | ParamsBlock | BodyBlock | ResponseBlock;
+	//	HeaderBlock | ParamsBlock | RequestBlock | ResponseBlock;
 	public HttpMethodBlockElements getHttpMethodBlockAccess() {
 		return (pHttpMethodBlock != null) ? pHttpMethodBlock : (pHttpMethodBlock = new HttpMethodBlockElements());
 	}
@@ -1393,14 +1393,14 @@ public class SpecApiLangGrammarAccess extends AbstractGrammarElementFinder {
 		return getLiteralAccess().getRule();
 	}
 
-	//BodyBlock:
-	//	"body" type=BlockType;
-	public BodyBlockElements getBodyBlockAccess() {
-		return (pBodyBlock != null) ? pBodyBlock : (pBodyBlock = new BodyBlockElements());
+	//RequestBlock:
+	//	"request" type=BlockType;
+	public RequestBlockElements getRequestBlockAccess() {
+		return (pRequestBlock != null) ? pRequestBlock : (pRequestBlock = new RequestBlockElements());
 	}
 	
-	public ParserRule getBodyBlockRule() {
-		return getBodyBlockAccess().getRule();
+	public ParserRule getRequestBlockRule() {
+		return getRequestBlockAccess().getRule();
 	}
 
 	//ResponseBlock:

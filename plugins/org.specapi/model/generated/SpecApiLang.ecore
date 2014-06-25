@@ -44,7 +44,7 @@
         eType="#//Member" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Literal"/>
-  <eClassifiers xsi:type="ecore:EClass" name="BodyBlock" eSuperTypes="#//HttpMethodBlock">
+  <eClassifiers xsi:type="ecore:EClass" name="RequestBlock" eSuperTypes="#//HttpMethodBlock">
     <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="#//BlockType"
         containment="true"/>
   </eClassifiers>

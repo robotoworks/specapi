@@ -66,7 +66,7 @@ public class SpecApiLangParser extends AbstractContentAssistParser {
 					put(grammarAccess.getLiteralAccess().getGroup_0(), "rule__Literal__Group_0__0");
 					put(grammarAccess.getLiteralAccess().getGroup_1(), "rule__Literal__Group_1__0");
 					put(grammarAccess.getLiteralAccess().getGroup_2(), "rule__Literal__Group_2__0");
-					put(grammarAccess.getBodyBlockAccess().getGroup(), "rule__BodyBlock__Group__0");
+					put(grammarAccess.getRequestBlockAccess().getGroup(), "rule__RequestBlock__Group__0");
 					put(grammarAccess.getResponseBlockAccess().getGroup(), "rule__ResponseBlock__Group__0");
 					put(grammarAccess.getResponseBlockAccess().getGroup_4(), "rule__ResponseBlock__Group_4__0");
 					put(grammarAccess.getMemberAccess().getGroup(), "rule__Member__Group__0");
@@ -102,7 +102,7 @@ public class SpecApiLangParser extends AbstractContentAssistParser {
 					put(grammarAccess.getLiteralAccess().getLiteralAssignment_0_1(), "rule__Literal__LiteralAssignment_0_1");
 					put(grammarAccess.getLiteralAccess().getLiteralAssignment_1_1(), "rule__Literal__LiteralAssignment_1_1");
 					put(grammarAccess.getLiteralAccess().getLiteralAssignment_2_1(), "rule__Literal__LiteralAssignment_2_1");
-					put(grammarAccess.getBodyBlockAccess().getTypeAssignment_1(), "rule__BodyBlock__TypeAssignment_1");
+					put(grammarAccess.getRequestBlockAccess().getTypeAssignment_1(), "rule__RequestBlock__TypeAssignment_1");
 					put(grammarAccess.getResponseBlockAccess().getCodeAssignment_2(), "rule__ResponseBlock__CodeAssignment_2");
 					put(grammarAccess.getResponseBlockAccess().getMessageAssignment_3(), "rule__ResponseBlock__MessageAssignment_3");
 					put(grammarAccess.getResponseBlockAccess().getSuperTypeAssignment_4_1(), "rule__ResponseBlock__SuperTypeAssignment_4_1");

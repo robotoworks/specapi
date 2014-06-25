@@ -125,9 +125,9 @@ public class SpecapiLangAdapterFactory extends AdapterFactoryImpl
         return createLiteralAdapter();
       }
       @Override
-      public Adapter caseBodyBlock(BodyBlock object)
+      public Adapter caseRequestBlock(RequestBlock object)
       {
-        return createBodyBlockAdapter();
+        return createRequestBlockAdapter();
       }
       @Override
       public Adapter caseResponseBlock(ResponseBlock object)
@@ -412,16 +412,16 @@ public class SpecapiLangAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.specapi.specapiLang.BodyBlock <em>Body Block</em>}'.
+   * Creates a new adapter for an object of class '{@link org.specapi.specapiLang.RequestBlock <em>Request Block</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.specapi.specapiLang.BodyBlock
+   * @see org.specapi.specapiLang.RequestBlock
    * @generated
    */
-  public Adapter createBodyBlockAdapter()
+  public Adapter createRequestBlockAdapter()
   {
     return null;
   }

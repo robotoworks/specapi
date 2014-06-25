@@ -22,7 +22,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalSpecApiLangParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_NUMBER", "RULE_URL", "RULE_INTEGER", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'get'", "'put'", "'post'", "'delete'", "'patch'", "'true'", "'false'", "'package'", "'api'", "'{'", "'}'", "'headers'", "','", "'/'", "'-'", "'params'", "'body'", "'response'", "'mixin'", "':'", "'='", "'extends'", "'.'", "'[]'", "'entity'", "'enum'", "'string'", "'boolean'", "'int'", "'long'", "'double'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_NUMBER", "RULE_URL", "RULE_INTEGER", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'get'", "'put'", "'post'", "'delete'", "'patch'", "'true'", "'false'", "'package'", "'api'", "'{'", "'}'", "'headers'", "','", "'/'", "'-'", "'params'", "'request'", "'response'", "'mixin'", "':'", "'='", "'extends'", "'.'", "'[]'", "'entity'", "'enum'", "'string'", "'boolean'", "'int'", "'long'", "'double'"
     };
     public static final int RULE_ID=4;
     public static final int T__29=29;
@@ -950,21 +950,21 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
     // $ANTLR end "ruleLiteral"
 
 
-    // $ANTLR start "entryRuleBodyBlock"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:368:1: entryRuleBodyBlock : ruleBodyBlock EOF ;
-    public final void entryRuleBodyBlock() throws RecognitionException {
+    // $ANTLR start "entryRuleRequestBlock"
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:368:1: entryRuleRequestBlock : ruleRequestBlock EOF ;
+    public final void entryRuleRequestBlock() throws RecognitionException {
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:369:1: ( ruleBodyBlock EOF )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:370:1: ruleBodyBlock EOF
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:369:1: ( ruleRequestBlock EOF )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:370:1: ruleRequestBlock EOF
             {
-             before(grammarAccess.getBodyBlockRule()); 
-            pushFollow(FOLLOW_ruleBodyBlock_in_entryRuleBodyBlock721);
-            ruleBodyBlock();
+             before(grammarAccess.getRequestBlockRule()); 
+            pushFollow(FOLLOW_ruleRequestBlock_in_entryRuleRequestBlock721);
+            ruleRequestBlock();
 
             state._fsp--;
 
-             after(grammarAccess.getBodyBlockRule()); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleBodyBlock728); 
+             after(grammarAccess.getRequestBlockRule()); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleRequestBlock728); 
 
             }
 
@@ -977,35 +977,35 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
         }
         return ;
     }
-    // $ANTLR end "entryRuleBodyBlock"
+    // $ANTLR end "entryRuleRequestBlock"
 
 
-    // $ANTLR start "ruleBodyBlock"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:377:1: ruleBodyBlock : ( ( rule__BodyBlock__Group__0 ) ) ;
-    public final void ruleBodyBlock() throws RecognitionException {
+    // $ANTLR start "ruleRequestBlock"
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:377:1: ruleRequestBlock : ( ( rule__RequestBlock__Group__0 ) ) ;
+    public final void ruleRequestBlock() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:381:2: ( ( ( rule__BodyBlock__Group__0 ) ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:382:1: ( ( rule__BodyBlock__Group__0 ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:381:2: ( ( ( rule__RequestBlock__Group__0 ) ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:382:1: ( ( rule__RequestBlock__Group__0 ) )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:382:1: ( ( rule__BodyBlock__Group__0 ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:383:1: ( rule__BodyBlock__Group__0 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:382:1: ( ( rule__RequestBlock__Group__0 ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:383:1: ( rule__RequestBlock__Group__0 )
             {
-             before(grammarAccess.getBodyBlockAccess().getGroup()); 
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:384:1: ( rule__BodyBlock__Group__0 )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:384:2: rule__BodyBlock__Group__0
+             before(grammarAccess.getRequestBlockAccess().getGroup()); 
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:384:1: ( rule__RequestBlock__Group__0 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:384:2: rule__RequestBlock__Group__0
             {
-            pushFollow(FOLLOW_rule__BodyBlock__Group__0_in_ruleBodyBlock754);
-            rule__BodyBlock__Group__0();
+            pushFollow(FOLLOW_rule__RequestBlock__Group__0_in_ruleRequestBlock754);
+            rule__RequestBlock__Group__0();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getBodyBlockAccess().getGroup()); 
+             after(grammarAccess.getRequestBlockAccess().getGroup()); 
 
             }
 
@@ -1024,7 +1024,7 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
         }
         return ;
     }
-    // $ANTLR end "ruleBodyBlock"
+    // $ANTLR end "ruleRequestBlock"
 
 
     // $ANTLR start "entryRuleResponseBlock"
@@ -2929,13 +2929,13 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__HttpMethodBlock__Alternatives"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1072:1: rule__HttpMethodBlock__Alternatives : ( ( ruleHeaderBlock ) | ( ruleParamsBlock ) | ( ruleBodyBlock ) | ( ruleResponseBlock ) );
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1072:1: rule__HttpMethodBlock__Alternatives : ( ( ruleHeaderBlock ) | ( ruleParamsBlock ) | ( ruleRequestBlock ) | ( ruleResponseBlock ) );
     public final void rule__HttpMethodBlock__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1076:1: ( ( ruleHeaderBlock ) | ( ruleParamsBlock ) | ( ruleBodyBlock ) | ( ruleResponseBlock ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1076:1: ( ( ruleHeaderBlock ) | ( ruleParamsBlock ) | ( ruleRequestBlock ) | ( ruleResponseBlock ) )
             int alt3=4;
             switch ( input.LA(1) ) {
             case 24:
@@ -3005,18 +3005,18 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
                     }
                     break;
                 case 3 :
-                    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1089:6: ( ruleBodyBlock )
+                    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1089:6: ( ruleRequestBlock )
                     {
-                    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1089:6: ( ruleBodyBlock )
-                    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1090:1: ruleBodyBlock
+                    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1089:6: ( ruleRequestBlock )
+                    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:1090:1: ruleRequestBlock
                     {
-                     before(grammarAccess.getHttpMethodBlockAccess().getBodyBlockParserRuleCall_2()); 
-                    pushFollow(FOLLOW_ruleBodyBlock_in_rule__HttpMethodBlock__Alternatives2271);
-                    ruleBodyBlock();
+                     before(grammarAccess.getHttpMethodBlockAccess().getRequestBlockParserRuleCall_2()); 
+                    pushFollow(FOLLOW_ruleRequestBlock_in_rule__HttpMethodBlock__Alternatives2271);
+                    ruleRequestBlock();
 
                     state._fsp--;
 
-                     after(grammarAccess.getHttpMethodBlockAccess().getBodyBlockParserRuleCall_2()); 
+                     after(grammarAccess.getHttpMethodBlockAccess().getRequestBlockParserRuleCall_2()); 
 
                     }
 
@@ -7770,93 +7770,23 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
     // $ANTLR end "rule__Literal__Group_2__1__Impl"
 
 
-    // $ANTLR start "rule__BodyBlock__Group__0"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2778:1: rule__BodyBlock__Group__0 : rule__BodyBlock__Group__0__Impl rule__BodyBlock__Group__1 ;
-    public final void rule__BodyBlock__Group__0() throws RecognitionException {
+    // $ANTLR start "rule__RequestBlock__Group__0"
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2778:1: rule__RequestBlock__Group__0 : rule__RequestBlock__Group__0__Impl rule__RequestBlock__Group__1 ;
+    public final void rule__RequestBlock__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2782:1: ( rule__BodyBlock__Group__0__Impl rule__BodyBlock__Group__1 )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2783:2: rule__BodyBlock__Group__0__Impl rule__BodyBlock__Group__1
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2782:1: ( rule__RequestBlock__Group__0__Impl rule__RequestBlock__Group__1 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2783:2: rule__RequestBlock__Group__0__Impl rule__RequestBlock__Group__1
             {
-            pushFollow(FOLLOW_rule__BodyBlock__Group__0__Impl_in_rule__BodyBlock__Group__05721);
-            rule__BodyBlock__Group__0__Impl();
+            pushFollow(FOLLOW_rule__RequestBlock__Group__0__Impl_in_rule__RequestBlock__Group__05721);
+            rule__RequestBlock__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__BodyBlock__Group__1_in_rule__BodyBlock__Group__05724);
-            rule__BodyBlock__Group__1();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__BodyBlock__Group__0"
-
-
-    // $ANTLR start "rule__BodyBlock__Group__0__Impl"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2790:1: rule__BodyBlock__Group__0__Impl : ( 'body' ) ;
-    public final void rule__BodyBlock__Group__0__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2794:1: ( ( 'body' ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2795:1: ( 'body' )
-            {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2795:1: ( 'body' )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2796:1: 'body'
-            {
-             before(grammarAccess.getBodyBlockAccess().getBodyKeyword_0()); 
-            match(input,29,FOLLOW_29_in_rule__BodyBlock__Group__0__Impl5752); 
-             after(grammarAccess.getBodyBlockAccess().getBodyKeyword_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__BodyBlock__Group__0__Impl"
-
-
-    // $ANTLR start "rule__BodyBlock__Group__1"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2809:1: rule__BodyBlock__Group__1 : rule__BodyBlock__Group__1__Impl ;
-    public final void rule__BodyBlock__Group__1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2813:1: ( rule__BodyBlock__Group__1__Impl )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2814:2: rule__BodyBlock__Group__1__Impl
-            {
-            pushFollow(FOLLOW_rule__BodyBlock__Group__1__Impl_in_rule__BodyBlock__Group__15783);
-            rule__BodyBlock__Group__1__Impl();
+            pushFollow(FOLLOW_rule__RequestBlock__Group__1_in_rule__RequestBlock__Group__05724);
+            rule__RequestBlock__Group__1();
 
             state._fsp--;
 
@@ -7875,35 +7805,25 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
         }
         return ;
     }
-    // $ANTLR end "rule__BodyBlock__Group__1"
+    // $ANTLR end "rule__RequestBlock__Group__0"
 
 
-    // $ANTLR start "rule__BodyBlock__Group__1__Impl"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2820:1: rule__BodyBlock__Group__1__Impl : ( ( rule__BodyBlock__TypeAssignment_1 ) ) ;
-    public final void rule__BodyBlock__Group__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__RequestBlock__Group__0__Impl"
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2790:1: rule__RequestBlock__Group__0__Impl : ( 'request' ) ;
+    public final void rule__RequestBlock__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2824:1: ( ( ( rule__BodyBlock__TypeAssignment_1 ) ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2825:1: ( ( rule__BodyBlock__TypeAssignment_1 ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2794:1: ( ( 'request' ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2795:1: ( 'request' )
             {
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2825:1: ( ( rule__BodyBlock__TypeAssignment_1 ) )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2826:1: ( rule__BodyBlock__TypeAssignment_1 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2795:1: ( 'request' )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2796:1: 'request'
             {
-             before(grammarAccess.getBodyBlockAccess().getTypeAssignment_1()); 
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2827:1: ( rule__BodyBlock__TypeAssignment_1 )
-            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2827:2: rule__BodyBlock__TypeAssignment_1
-            {
-            pushFollow(FOLLOW_rule__BodyBlock__TypeAssignment_1_in_rule__BodyBlock__Group__1__Impl5810);
-            rule__BodyBlock__TypeAssignment_1();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getBodyBlockAccess().getTypeAssignment_1()); 
+             before(grammarAccess.getRequestBlockAccess().getRequestKeyword_0()); 
+            match(input,29,FOLLOW_29_in_rule__RequestBlock__Group__0__Impl5752); 
+             after(grammarAccess.getRequestBlockAccess().getRequestKeyword_0()); 
 
             }
 
@@ -7922,7 +7842,87 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
         }
         return ;
     }
-    // $ANTLR end "rule__BodyBlock__Group__1__Impl"
+    // $ANTLR end "rule__RequestBlock__Group__0__Impl"
+
+
+    // $ANTLR start "rule__RequestBlock__Group__1"
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2809:1: rule__RequestBlock__Group__1 : rule__RequestBlock__Group__1__Impl ;
+    public final void rule__RequestBlock__Group__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2813:1: ( rule__RequestBlock__Group__1__Impl )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2814:2: rule__RequestBlock__Group__1__Impl
+            {
+            pushFollow(FOLLOW_rule__RequestBlock__Group__1__Impl_in_rule__RequestBlock__Group__15783);
+            rule__RequestBlock__Group__1__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__RequestBlock__Group__1"
+
+
+    // $ANTLR start "rule__RequestBlock__Group__1__Impl"
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2820:1: rule__RequestBlock__Group__1__Impl : ( ( rule__RequestBlock__TypeAssignment_1 ) ) ;
+    public final void rule__RequestBlock__Group__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2824:1: ( ( ( rule__RequestBlock__TypeAssignment_1 ) ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2825:1: ( ( rule__RequestBlock__TypeAssignment_1 ) )
+            {
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2825:1: ( ( rule__RequestBlock__TypeAssignment_1 ) )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2826:1: ( rule__RequestBlock__TypeAssignment_1 )
+            {
+             before(grammarAccess.getRequestBlockAccess().getTypeAssignment_1()); 
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2827:1: ( rule__RequestBlock__TypeAssignment_1 )
+            // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:2827:2: rule__RequestBlock__TypeAssignment_1
+            {
+            pushFollow(FOLLOW_rule__RequestBlock__TypeAssignment_1_in_rule__RequestBlock__Group__1__Impl5810);
+            rule__RequestBlock__TypeAssignment_1();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getRequestBlockAccess().getTypeAssignment_1()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__RequestBlock__Group__1__Impl"
 
 
     // $ANTLR start "rule__ResponseBlock__Group__0"
@@ -12557,9 +12557,9 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
     // $ANTLR end "rule__Literal__LiteralAssignment_2_1"
 
 
-    // $ANTLR start "rule__BodyBlock__TypeAssignment_1"
-    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4580:1: rule__BodyBlock__TypeAssignment_1 : ( ruleBlockType ) ;
-    public final void rule__BodyBlock__TypeAssignment_1() throws RecognitionException {
+    // $ANTLR start "rule__RequestBlock__TypeAssignment_1"
+    // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4580:1: rule__RequestBlock__TypeAssignment_1 : ( ruleBlockType ) ;
+    public final void rule__RequestBlock__TypeAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
@@ -12570,13 +12570,13 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
             // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4585:1: ( ruleBlockType )
             // ../org.specapi.ui/src-gen/org/specapi/ui/contentassist/antlr/internal/InternalSpecApiLang.g:4586:1: ruleBlockType
             {
-             before(grammarAccess.getBodyBlockAccess().getTypeBlockTypeParserRuleCall_1_0()); 
-            pushFollow(FOLLOW_ruleBlockType_in_rule__BodyBlock__TypeAssignment_19309);
+             before(grammarAccess.getRequestBlockAccess().getTypeBlockTypeParserRuleCall_1_0()); 
+            pushFollow(FOLLOW_ruleBlockType_in_rule__RequestBlock__TypeAssignment_19309);
             ruleBlockType();
 
             state._fsp--;
 
-             after(grammarAccess.getBodyBlockAccess().getTypeBlockTypeParserRuleCall_1_0()); 
+             after(grammarAccess.getRequestBlockAccess().getTypeBlockTypeParserRuleCall_1_0()); 
 
             }
 
@@ -12595,7 +12595,7 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
         }
         return ;
     }
-    // $ANTLR end "rule__BodyBlock__TypeAssignment_1"
+    // $ANTLR end "rule__RequestBlock__TypeAssignment_1"
 
 
     // $ANTLR start "rule__ResponseBlock__CodeAssignment_2"
@@ -13915,9 +13915,9 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
     public static final BitSet FOLLOW_ruleLiteral_in_entryRuleLiteral661 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleLiteral668 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Literal__Alternatives_in_ruleLiteral694 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBodyBlock_in_entryRuleBodyBlock721 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleBodyBlock728 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BodyBlock__Group__0_in_ruleBodyBlock754 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleRequestBlock_in_entryRuleRequestBlock721 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleRequestBlock728 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__RequestBlock__Group__0_in_ruleRequestBlock754 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleResponseBlock_in_entryRuleResponseBlock781 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleResponseBlock788 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__ResponseBlock__Group__0_in_ruleResponseBlock814 = new BitSet(new long[]{0x0000000000000002L});
@@ -13990,7 +13990,7 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
     public static final BitSet FOLLOW_ruleHttpMethod_in_rule__ServiceBlock__Alternatives2205 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleHeaderBlock_in_rule__HttpMethodBlock__Alternatives2237 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleParamsBlock_in_rule__HttpMethodBlock__Alternatives2254 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBodyBlock_in_rule__HttpMethodBlock__Alternatives2271 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleRequestBlock_in_rule__HttpMethodBlock__Alternatives2271 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleResponseBlock_in_rule__HttpMethodBlock__Alternatives2288 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleArbitraryPathSegment_in_rule__Path__Alternatives_22320 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Path__ParamsAssignment_2_1_in_rule__Path__Alternatives_22337 = new BitSet(new long[]{0x0000000000000002L});
@@ -14132,11 +14132,11 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
     public static final BitSet FOLLOW_rule__Literal__Group_2__1_in_rule__Literal__Group_2__05602 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Literal__Group_2__1__Impl_in_rule__Literal__Group_2__15660 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Literal__LiteralAssignment_2_1_in_rule__Literal__Group_2__1__Impl5687 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BodyBlock__Group__0__Impl_in_rule__BodyBlock__Group__05721 = new BitSet(new long[]{0x00000F8000400010L});
-    public static final BitSet FOLLOW_rule__BodyBlock__Group__1_in_rule__BodyBlock__Group__05724 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_29_in_rule__BodyBlock__Group__0__Impl5752 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BodyBlock__Group__1__Impl_in_rule__BodyBlock__Group__15783 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BodyBlock__TypeAssignment_1_in_rule__BodyBlock__Group__1__Impl5810 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__RequestBlock__Group__0__Impl_in_rule__RequestBlock__Group__05721 = new BitSet(new long[]{0x00000F8000400010L});
+    public static final BitSet FOLLOW_rule__RequestBlock__Group__1_in_rule__RequestBlock__Group__05724 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_29_in_rule__RequestBlock__Group__0__Impl5752 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__RequestBlock__Group__1__Impl_in_rule__RequestBlock__Group__15783 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__RequestBlock__TypeAssignment_1_in_rule__RequestBlock__Group__1__Impl5810 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__ResponseBlock__Group__0__Impl_in_rule__ResponseBlock__Group__05844 = new BitSet(new long[]{0x0000000071000000L});
     public static final BitSet FOLLOW_rule__ResponseBlock__Group__1_in_rule__ResponseBlock__Group__05847 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__ResponseBlock__Group__1__Impl_in_rule__ResponseBlock__Group__15905 = new BitSet(new long[]{0x00000F8080400130L});
@@ -14278,7 +14278,7 @@ public class InternalSpecApiLangParser extends AbstractInternalContentAssistPars
     public static final BitSet FOLLOW_ruleBooleanValue_in_rule__Literal__LiteralAssignment_0_19216 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_RULE_STRING_in_rule__Literal__LiteralAssignment_1_19247 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleSignedNumber_in_rule__Literal__LiteralAssignment_2_19278 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBlockType_in_rule__BodyBlock__TypeAssignment_19309 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBlockType_in_rule__RequestBlock__TypeAssignment_19309 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_RULE_INTEGER_in_rule__ResponseBlock__CodeAssignment_29340 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_RULE_STRING_in_rule__ResponseBlock__MessageAssignment_39371 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_RULE_ID_in_rule__ResponseBlock__SuperTypeAssignment_4_19406 = new BitSet(new long[]{0x0000000000000002L});

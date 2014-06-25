@@ -13,7 +13,6 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
 import org.specapi.specapiLang.Api;
 import org.specapi.specapiLang.ArrayType;
 import org.specapi.specapiLang.BlockType;
-import org.specapi.specapiLang.BodyBlock;
 import org.specapi.specapiLang.BooleanLiteral;
 import org.specapi.specapiLang.BooleanType;
 import org.specapi.specapiLang.BooleanValue;
@@ -37,6 +36,7 @@ import org.specapi.specapiLang.NumericLiteral;
 import org.specapi.specapiLang.NumericType;
 import org.specapi.specapiLang.ParamsBlock;
 import org.specapi.specapiLang.Path;
+import org.specapi.specapiLang.RequestBlock;
 import org.specapi.specapiLang.ResponseBlock;
 import org.specapi.specapiLang.ServiceBlock;
 import org.specapi.specapiLang.SpecApiDocument;
@@ -131,7 +131,7 @@ public class SpecapiLangPackageImpl extends EPackageImpl implements SpecapiLangP
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass bodyBlockEClass = null;
+  private EClass requestBlockEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -589,9 +589,9 @@ public class SpecapiLangPackageImpl extends EPackageImpl implements SpecapiLangP
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getBodyBlock()
+  public EClass getRequestBlock()
   {
-    return bodyBlockEClass;
+    return requestBlockEClass;
   }
 
   /**
@@ -599,9 +599,9 @@ public class SpecapiLangPackageImpl extends EPackageImpl implements SpecapiLangP
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getBodyBlock_Type()
+  public EReference getRequestBlock_Type()
   {
-    return (EReference)bodyBlockEClass.getEStructuralFeatures().get(0);
+    return (EReference)requestBlockEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1136,8 +1136,8 @@ public class SpecapiLangPackageImpl extends EPackageImpl implements SpecapiLangP
 
     literalEClass = createEClass(LITERAL);
 
-    bodyBlockEClass = createEClass(BODY_BLOCK);
-    createEReference(bodyBlockEClass, BODY_BLOCK__TYPE);
+    requestBlockEClass = createEClass(REQUEST_BLOCK);
+    createEReference(requestBlockEClass, REQUEST_BLOCK__TYPE);
 
     responseBlockEClass = createEClass(RESPONSE_BLOCK);
     createEAttribute(responseBlockEClass, RESPONSE_BLOCK__CODE);
@@ -1246,7 +1246,7 @@ public class SpecapiLangPackageImpl extends EPackageImpl implements SpecapiLangP
     httpMethodEClass.getESuperTypes().add(this.getServiceBlock());
     paramsBlockEClass.getESuperTypes().add(this.getServiceBlock());
     paramsBlockEClass.getESuperTypes().add(this.getHttpMethodBlock());
-    bodyBlockEClass.getESuperTypes().add(this.getHttpMethodBlock());
+    requestBlockEClass.getESuperTypes().add(this.getHttpMethodBlock());
     responseBlockEClass.getESuperTypes().add(this.getHttpMethodBlock());
     typeEClass.getESuperTypes().add(this.getBlockType());
     arrayTypeEClass.getESuperTypes().add(this.getType());
@@ -1299,8 +1299,8 @@ public class SpecapiLangPackageImpl extends EPackageImpl implements SpecapiLangP
 
     initEClass(literalEClass, Literal.class, "Literal", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-    initEClass(bodyBlockEClass, BodyBlock.class, "BodyBlock", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getBodyBlock_Type(), this.getBlockType(), null, "type", null, 0, 1, BodyBlock.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(requestBlockEClass, RequestBlock.class, "RequestBlock", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getRequestBlock_Type(), this.getBlockType(), null, "type", null, 0, 1, RequestBlock.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(responseBlockEClass, ResponseBlock.class, "ResponseBlock", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getResponseBlock_Code(), ecorePackage.getEInt(), "code", null, 0, 1, ResponseBlock.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

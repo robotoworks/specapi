@@ -47,8 +47,8 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpecApiLang.ecore#//ParamsBlock/params"/>
     </genClasses>
     <genClasses ecoreClass="SpecApiLang.ecore#//Literal"/>
-    <genClasses ecoreClass="SpecApiLang.ecore#//BodyBlock">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpecApiLang.ecore#//BodyBlock/type"/>
+    <genClasses ecoreClass="SpecApiLang.ecore#//RequestBlock">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpecApiLang.ecore#//RequestBlock/type"/>
     </genClasses>
     <genClasses ecoreClass="SpecApiLang.ecore#//ResponseBlock">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpecApiLang.ecore#//ResponseBlock/code"/>

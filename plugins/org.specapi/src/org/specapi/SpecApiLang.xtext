@@ -34,7 +34,7 @@ HttpMethod:
 ;
 
 HttpMethodBlock:
-	HeaderBlock | ParamsBlock | BodyBlock | ResponseBlock
+	HeaderBlock | ParamsBlock | RequestBlock | ResponseBlock
 ;
 
 enum HttpMethodType:
@@ -62,8 +62,8 @@ Literal:
 	{NumericLiteral} literal=SignedNumber
 ;
 
-BodyBlock:
-	'body' type=BlockType
+RequestBlock:
+	'request' type=BlockType
 ;
 
 ResponseBlock:

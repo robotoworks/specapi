@@ -44,7 +44,7 @@ class RequestGenerator extends DotNetTypeGenerator {
         method.type == HttpMethodType.POST ||
         method.type == HttpMethodType.PATCH»
         
-        public «method.body.generateRequestType(method)» Entity { get; set; }
+        public «method.request.generateRequestType(method)» Entity { get; set; }
         «ENDIF»
 
         public «method.name.pascalize»Request(«createConstructorArgs») {

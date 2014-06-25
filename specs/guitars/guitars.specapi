@@ -6,7 +6,7 @@ api TestAPI http://api.specapi.org {
     }
     
     post createGuitar /guitars {
-        body Guitar
+        request Guitar
     }
     
     delete deleteGuitar /guitars {

@@ -13,8 +13,8 @@ class DocCommentParser {
     
     @Inject MultiLineCommentDocumentationProvider commentProvider
     
-    static var multilineTags = #{"@param", "@response", "@body", "@see", "@example"}
-    static var multilineTagArgs = #{"@param"->1, "@response"->0, "@body"->0, "@see"->1, "@example"->0}
+    static var multilineTags = #{"@param", "@response", "@request", "@see", "@example"}
+    static var multilineTagArgs = #{"@param"->1, "@response"->0, "@request"->0, "@see"->1, "@example"->0}
     
     // LATER: static var inlineTags = Sets.newHashSet("@see")
     
@@ -22,12 +22,12 @@ class DocCommentParser {
     	parseDocComments(obj, multilineTags, multilineTagArgs)
     }
     
-    def parseDocComments(EObject obj, Map<String, Integer> customTagDefinition) {
+    def parseDocComments(EObject obj, Map<String, Integer> customTagDefinitions) {
     	var args = Maps.newHashMap(multilineTagArgs)
-    	args.putAll(customTagDefinition)
+    	args.putAll(customTagDefinitions)
     	
     	var tags = Sets.newHashSet(multilineTags)
-    	tags.addAll(customTagDefinition.keySet)
+    	tags.addAll(customTagDefinitions.keySet)
     	
     	parseDocComments(obj, tags, args)
     }

@@ -364,25 +364,25 @@ finally {
 
 
 
-// Entry rule entryRuleBodyBlock
-entryRuleBodyBlock 
+// Entry rule entryRuleRequestBlock
+entryRuleRequestBlock 
 :
-{ before(grammarAccess.getBodyBlockRule()); }
-	 ruleBodyBlock
-{ after(grammarAccess.getBodyBlockRule()); } 
+{ before(grammarAccess.getRequestBlockRule()); }
+	 ruleRequestBlock
+{ after(grammarAccess.getRequestBlockRule()); } 
 	 EOF 
 ;
 
-// Rule BodyBlock
-ruleBodyBlock
+// Rule RequestBlock
+ruleRequestBlock
     @init {
 		int stackSize = keepStackSize();
     }
 	:
 (
-{ before(grammarAccess.getBodyBlockAccess().getGroup()); }
-(rule__BodyBlock__Group__0)
-{ after(grammarAccess.getBodyBlockAccess().getGroup()); }
+{ before(grammarAccess.getRequestBlockAccess().getGroup()); }
+(rule__RequestBlock__Group__0)
+{ after(grammarAccess.getRequestBlockAccess().getGroup()); }
 )
 
 ;
@@ -1087,9 +1087,9 @@ rule__HttpMethodBlock__Alternatives
 )
 
     |(
-{ before(grammarAccess.getHttpMethodBlockAccess().getBodyBlockParserRuleCall_2()); }
-	ruleBodyBlock
-{ after(grammarAccess.getHttpMethodBlockAccess().getBodyBlockParserRuleCall_2()); }
+{ before(grammarAccess.getHttpMethodBlockAccess().getRequestBlockParserRuleCall_2()); }
+	ruleRequestBlock
+{ after(grammarAccess.getHttpMethodBlockAccess().getRequestBlockParserRuleCall_2()); }
 )
 
     |(
@@ -2775,29 +2775,29 @@ finally {
 
 
 
-rule__BodyBlock__Group__0
+rule__RequestBlock__Group__0
     @init {
 		int stackSize = keepStackSize();
     }
 :
-	rule__BodyBlock__Group__0__Impl
-	rule__BodyBlock__Group__1
+	rule__RequestBlock__Group__0__Impl
+	rule__RequestBlock__Group__1
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__BodyBlock__Group__0__Impl
+rule__RequestBlock__Group__0__Impl
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getBodyBlockAccess().getBodyKeyword_0()); }
+{ before(grammarAccess.getRequestBlockAccess().getRequestKeyword_0()); }
 
-	'body' 
+	'request' 
 
-{ after(grammarAccess.getBodyBlockAccess().getBodyKeyword_0()); }
+{ after(grammarAccess.getRequestBlockAccess().getRequestKeyword_0()); }
 )
 
 ;
@@ -2806,26 +2806,26 @@ finally {
 }
 
 
-rule__BodyBlock__Group__1
+rule__RequestBlock__Group__1
     @init {
 		int stackSize = keepStackSize();
     }
 :
-	rule__BodyBlock__Group__1__Impl
+	rule__RequestBlock__Group__1__Impl
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__BodyBlock__Group__1__Impl
+rule__RequestBlock__Group__1__Impl
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getBodyBlockAccess().getTypeAssignment_1()); }
-(rule__BodyBlock__TypeAssignment_1)
-{ after(grammarAccess.getBodyBlockAccess().getTypeAssignment_1()); }
+{ before(grammarAccess.getRequestBlockAccess().getTypeAssignment_1()); }
+(rule__RequestBlock__TypeAssignment_1)
+{ after(grammarAccess.getRequestBlockAccess().getTypeAssignment_1()); }
 )
 
 ;
@@ -4577,14 +4577,14 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__BodyBlock__TypeAssignment_1
+rule__RequestBlock__TypeAssignment_1
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getBodyBlockAccess().getTypeBlockTypeParserRuleCall_1_0()); }
-	ruleBlockType{ after(grammarAccess.getBodyBlockAccess().getTypeBlockTypeParserRuleCall_1_0()); }
+{ before(grammarAccess.getRequestBlockAccess().getTypeBlockTypeParserRuleCall_1_0()); }
+	ruleBlockType{ after(grammarAccess.getRequestBlockAccess().getTypeBlockTypeParserRuleCall_1_0()); }
 )
 
 ;

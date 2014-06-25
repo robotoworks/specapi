@@ -8,7 +8,7 @@ class DocComments {
     private var all = new ArrayList<DocCommentTag>
     
     @Property String content
-    @Property DocCommentTag body
+    @Property DocCommentTag request
     @Property DocCommentTag response
     
     def addTag(DocCommentTag tag) {
@@ -17,8 +17,8 @@ class DocComments {
     	
         if(tag.getTag == "@param" && tag.getArgs.size > 0) {
             params.put(tag.getArgs.get(0), tag)
-        } else if (tag.getTag == "@body") {
-            body = tag
+        } else if (tag.getTag == "@request") {
+            request = tag
         }
         else if(tag.getTag == "@response") {
             response = tag

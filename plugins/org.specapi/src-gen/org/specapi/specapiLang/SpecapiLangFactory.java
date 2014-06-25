@@ -113,13 +113,13 @@ public interface SpecapiLangFactory extends EFactory
   Literal createLiteral();
 
   /**
-   * Returns a new object of class '<em>Body Block</em>'.
+   * Returns a new object of class '<em>Request Block</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Body Block</em>'.
+   * @return a new object of class '<em>Request Block</em>'.
    * @generated
    */
-  BodyBlock createBodyBlock();
+  RequestBlock createRequestBlock();
 
   /**
    * Returns a new object of class '<em>Response Block</em>'.

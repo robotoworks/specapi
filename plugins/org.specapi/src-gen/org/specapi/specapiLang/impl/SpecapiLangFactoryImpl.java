@@ -75,7 +75,7 @@ public class SpecapiLangFactoryImpl extends EFactoryImpl implements SpecapiLangF
       case SpecapiLangPackage.PATH: return createPath();
       case SpecapiLangPackage.PARAMS_BLOCK: return createParamsBlock();
       case SpecapiLangPackage.LITERAL: return createLiteral();
-      case SpecapiLangPackage.BODY_BLOCK: return createBodyBlock();
+      case SpecapiLangPackage.REQUEST_BLOCK: return createRequestBlock();
       case SpecapiLangPackage.RESPONSE_BLOCK: return createResponseBlock();
       case SpecapiLangPackage.BLOCK_TYPE: return createBlockType();
       case SpecapiLangPackage.MEMBER: return createMember();
@@ -256,10 +256,10 @@ public class SpecapiLangFactoryImpl extends EFactoryImpl implements SpecapiLangF
    * <!-- end-user-doc -->
    * @generated
    */
-  public BodyBlock createBodyBlock()
+  public RequestBlock createRequestBlock()
   {
-    BodyBlockImpl bodyBlock = new BodyBlockImpl();
-    return bodyBlock;
+    RequestBlockImpl requestBlock = new RequestBlockImpl();
+    return requestBlock;
   }
 
   /**

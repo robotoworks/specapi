@@ -63,7 +63,7 @@ api GithubAPI https://api.github.com {
      * @response an entity describing the newly created repository
      */
     post createRepository /user/repos {
-        body CreateRepositoryInput
+        request CreateRepositoryInput
         response Repository
         response 400 ErrorMessage
         response 401 ErrorMessage
@@ -78,7 +78,7 @@ api GithubAPI https://api.github.com {
      * @response an entity describing the newly created repository
      */
     post createOrganizationRepository /orgs/org:string/repos {
-        body CreateRepositoryInput
+        request CreateRepositoryInput
         response Repository
         response 400 ErrorMessage
         response 401 ErrorMessage

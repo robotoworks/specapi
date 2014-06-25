@@ -11,23 +11,23 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.specapi.specapiLang.BlockType;
-import org.specapi.specapiLang.BodyBlock;
+import org.specapi.specapiLang.RequestBlock;
 import org.specapi.specapiLang.SpecapiLangPackage;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Body Block</b></em>'.
+ * An implementation of the model object '<em><b>Request Block</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.specapi.specapiLang.impl.BodyBlockImpl#getType <em>Type</em>}</li>
+ *   <li>{@link org.specapi.specapiLang.impl.RequestBlockImpl#getType <em>Type</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class BodyBlockImpl extends HttpMethodBlockImpl implements BodyBlock
+public class RequestBlockImpl extends HttpMethodBlockImpl implements RequestBlock
 {
   /**
    * The cached value of the '{@link #getType() <em>Type</em>}' containment reference.
@@ -44,7 +44,7 @@ public class BodyBlockImpl extends HttpMethodBlockImpl implements BodyBlock
    * <!-- end-user-doc -->
    * @generated
    */
-  protected BodyBlockImpl()
+  protected RequestBlockImpl()
   {
     super();
   }
@@ -57,7 +57,7 @@ public class BodyBlockImpl extends HttpMethodBlockImpl implements BodyBlock
   @Override
   protected EClass eStaticClass()
   {
-    return SpecapiLangPackage.Literals.BODY_BLOCK;
+    return SpecapiLangPackage.Literals.REQUEST_BLOCK;
   }
 
   /**
@@ -81,7 +81,7 @@ public class BodyBlockImpl extends HttpMethodBlockImpl implements BodyBlock
     type = newType;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SpecapiLangPackage.BODY_BLOCK__TYPE, oldType, newType);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SpecapiLangPackage.REQUEST_BLOCK__TYPE, oldType, newType);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -98,14 +98,14 @@ public class BodyBlockImpl extends HttpMethodBlockImpl implements BodyBlock
     {
       NotificationChain msgs = null;
       if (type != null)
-        msgs = ((InternalEObject)type).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SpecapiLangPackage.BODY_BLOCK__TYPE, null, msgs);
+        msgs = ((InternalEObject)type).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SpecapiLangPackage.REQUEST_BLOCK__TYPE, null, msgs);
       if (newType != null)
-        msgs = ((InternalEObject)newType).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SpecapiLangPackage.BODY_BLOCK__TYPE, null, msgs);
+        msgs = ((InternalEObject)newType).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SpecapiLangPackage.REQUEST_BLOCK__TYPE, null, msgs);
       msgs = basicSetType(newType, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, SpecapiLangPackage.BODY_BLOCK__TYPE, newType, newType));
+      eNotify(new ENotificationImpl(this, Notification.SET, SpecapiLangPackage.REQUEST_BLOCK__TYPE, newType, newType));
   }
 
   /**
@@ -118,7 +118,7 @@ public class BodyBlockImpl extends HttpMethodBlockImpl implements BodyBlock
   {
     switch (featureID)
     {
-      case SpecapiLangPackage.BODY_BLOCK__TYPE:
+      case SpecapiLangPackage.REQUEST_BLOCK__TYPE:
         return basicSetType(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -134,7 +134,7 @@ public class BodyBlockImpl extends HttpMethodBlockImpl implements BodyBlock
   {
     switch (featureID)
     {
-      case SpecapiLangPackage.BODY_BLOCK__TYPE:
+      case SpecapiLangPackage.REQUEST_BLOCK__TYPE:
         return getType();
     }
     return super.eGet(featureID, resolve, coreType);
@@ -150,7 +150,7 @@ public class BodyBlockImpl extends HttpMethodBlockImpl implements BodyBlock
   {
     switch (featureID)
     {
-      case SpecapiLangPackage.BODY_BLOCK__TYPE:
+      case SpecapiLangPackage.REQUEST_BLOCK__TYPE:
         setType((BlockType)newValue);
         return;
     }
@@ -167,7 +167,7 @@ public class BodyBlockImpl extends HttpMethodBlockImpl implements BodyBlock
   {
     switch (featureID)
     {
-      case SpecapiLangPackage.BODY_BLOCK__TYPE:
+      case SpecapiLangPackage.REQUEST_BLOCK__TYPE:
         setType((BlockType)null);
         return;
     }
@@ -184,10 +184,10 @@ public class BodyBlockImpl extends HttpMethodBlockImpl implements BodyBlock
   {
     switch (featureID)
     {
-      case SpecapiLangPackage.BODY_BLOCK__TYPE:
+      case SpecapiLangPackage.REQUEST_BLOCK__TYPE:
         return type != null;
     }
     return super.eIsSet(featureID);
   }
 
-} //BodyBlockImpl
+} //RequestBlockImpl

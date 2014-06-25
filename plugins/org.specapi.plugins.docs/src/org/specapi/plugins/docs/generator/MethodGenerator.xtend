@@ -6,7 +6,7 @@ import org.specapi.SpecApiModelUtils
 import org.specapi.generator.DocCommentParser
 import org.specapi.generator.DocComments
 import org.specapi.specapiLang.Api
-import org.specapi.specapiLang.BodyBlock
+import org.specapi.specapiLang.RequestBlock
 import org.specapi.specapiLang.HttpMethod
 import org.specapi.specapiLang.ResponseBlock
 import org.specapi.specapiLang.SpecApiDocument
@@ -26,7 +26,7 @@ class MethodGenerator extends HtmlPageGenerator {
     
     @Property List<ResponseBlock> responses
     
-    @Property BodyBlock body
+    @Property RequestBlock body
     
     @Inject JsonGenerator jsonGenerator
     
@@ -37,7 +37,7 @@ class MethodGenerator extends HtmlPageGenerator {
     
 	override generate() {
         this.responses = method.responseBlocks
-        this.body = method.body
+        this.body = method.request
 		super.generate()
 	}
     
@@ -67,7 +67,7 @@ class MethodGenerator extends HtmlPageGenerator {
     «IF body != null»
     <div class="form-group">
     <label for="f_request">Request</label>
-    <pre id="f_request" class="container-fluid">«jsonGenerator.generateForBodyBlock(body, 3)»</pre>
+    <pre id="f_request" class="container-fluid">«jsonGenerator.generateForRequestBlock(body, 3)»</pre>
     </div>
     «ENDIF»
     <div class="form-group">
@@ -110,7 +110,7 @@ class MethodGenerator extends HtmlPageGenerator {
     </div>
     «ENDIF»
     «IF body != null»
-    <p>«comments?.body?.content»</p>
+    <p>«comments?.request?.content»</p>
     <div class="panel panel-default">
     <div class="panel-heading" data-toggle="collapse" data-target="#requestBody">
     <h4 class="panel-title"">Request</h4>
@@ -189,7 +189,7 @@ class MethodGenerator extends HtmlPageGenerator {
         
         «ENDFOR»
         «ENDIF» 
-        «IF method.hasBody»
+        «IF method.hasRequest»
         var data = $.parseJSON(requestEditor.getSession().getValue());
         «ENDIF»
         btn.button('loading');
@@ -226,7 +226,7 @@ class MethodGenerator extends HtmlPageGenerator {
             params.add("$('#f_param_" + param.name + "').val()");
         }
         
-        if(method.hasBody) {
+        if(method.hasRequest) {
             params.add("data")
         }
         
@@ -251,7 +251,7 @@ class MethodGenerator extends HtmlPageGenerator {
         }
     }
 
-    def generateBody(Api api, SpecApiDocument model, BodyBlock body) '''
+    def generateBody(Api api, SpecApiDocument model, RequestBlock body) '''
     «body.type.generateSignature»
     '''
     

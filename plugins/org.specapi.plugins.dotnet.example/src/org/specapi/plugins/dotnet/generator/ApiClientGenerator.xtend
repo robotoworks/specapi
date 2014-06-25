@@ -57,7 +57,7 @@ class ApiClientGenerator extends DotNetTypeGenerator {
                 
                 var payload = request.Entity;
                 var requestStream = webRequest.GetRequestStream();
-                var serializer = new DataContractJsonSerializer (typeof(«method.body.generateRequestType(method)»));
+                var serializer = new DataContractJsonSerializer (typeof(«method.request.generateRequestType(method)»));
                 serializer.WriteObject(requestStream, payload);
                 «ENDIF»
 

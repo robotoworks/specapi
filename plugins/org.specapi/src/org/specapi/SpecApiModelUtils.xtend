@@ -5,7 +5,7 @@ import java.util.List
 import org.eclipse.xtext.serializer.ISerializer
 import org.specapi.specapiLang.Api
 import org.specapi.specapiLang.ArrayType
-import org.specapi.specapiLang.BodyBlock
+import org.specapi.specapiLang.RequestBlock
 import org.specapi.specapiLang.BooleanType
 import org.specapi.specapiLang.DoubleType
 import org.specapi.specapiLang.HeaderBlock
@@ -132,12 +132,12 @@ class SpecApiModelUtils {
 		}
 	}
 	
-	def boolean hasBody(HttpMethod method){
-		!method.blocks.filter(typeof(BodyBlock)).empty
+	def boolean hasRequest(HttpMethod method){
+		!method.blocks.filter(typeof(RequestBlock)).empty
 	}
 	
-	def BodyBlock getBody(HttpMethod method){
-		method.blocks.filter(typeof(BodyBlock)).head
+	def RequestBlock getRequest(HttpMethod method){
+		method.blocks.filter(typeof(RequestBlock)).head
 	}
 	
 	def ParamsBlock getParamsBlock(Api api){

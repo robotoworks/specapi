@@ -10,7 +10,7 @@ import com.google.inject.Inject
 import org.specapi.specapiLang.IntrinsicType
 import org.specapi.specapiLang.ComplexTypeDeclaration
 import org.specapi.specapiLang.EnumTypeDeclaration
-import org.specapi.specapiLang.BodyBlock
+import org.specapi.specapiLang.RequestBlock
 
 class JsonGenerator {
     
@@ -19,7 +19,7 @@ class JsonGenerator {
     int recurseCount
     int recursions
     
-    def generateForBodyBlock(BodyBlock block, int recurseCount) {
+    def generateForRequestBlock(RequestBlock block, int recurseCount) {
         this.recurseCount = recurseCount
         this.recursions = 0
         

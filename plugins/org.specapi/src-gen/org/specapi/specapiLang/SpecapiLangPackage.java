@@ -365,14 +365,14 @@ public interface SpecapiLangPackage extends EPackage
   int LITERAL_FEATURE_COUNT = 0;
 
   /**
-   * The meta object id for the '{@link org.specapi.specapiLang.impl.BodyBlockImpl <em>Body Block</em>}' class.
+   * The meta object id for the '{@link org.specapi.specapiLang.impl.RequestBlockImpl <em>Request Block</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see org.specapi.specapiLang.impl.BodyBlockImpl
-   * @see org.specapi.specapiLang.impl.SpecapiLangPackageImpl#getBodyBlock()
+   * @see org.specapi.specapiLang.impl.RequestBlockImpl
+   * @see org.specapi.specapiLang.impl.SpecapiLangPackageImpl#getRequestBlock()
    * @generated
    */
-  int BODY_BLOCK = 10;
+  int REQUEST_BLOCK = 10;
 
   /**
    * The feature id for the '<em><b>Type</b></em>' containment reference.
@@ -381,16 +381,16 @@ public interface SpecapiLangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int BODY_BLOCK__TYPE = HTTP_METHOD_BLOCK_FEATURE_COUNT + 0;
+  int REQUEST_BLOCK__TYPE = HTTP_METHOD_BLOCK_FEATURE_COUNT + 0;
 
   /**
-   * The number of structural features of the '<em>Body Block</em>' class.
+   * The number of structural features of the '<em>Request Block</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int BODY_BLOCK_FEATURE_COUNT = HTTP_METHOD_BLOCK_FEATURE_COUNT + 1;
+  int REQUEST_BLOCK_FEATURE_COUNT = HTTP_METHOD_BLOCK_FEATURE_COUNT + 1;
 
   /**
    * The meta object id for the '{@link org.specapi.specapiLang.impl.ResponseBlockImpl <em>Response Block</em>}' class.
@@ -1370,25 +1370,25 @@ public interface SpecapiLangPackage extends EPackage
   EClass getLiteral();
 
   /**
-   * Returns the meta object for class '{@link org.specapi.specapiLang.BodyBlock <em>Body Block</em>}'.
+   * Returns the meta object for class '{@link org.specapi.specapiLang.RequestBlock <em>Request Block</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Body Block</em>'.
-   * @see org.specapi.specapiLang.BodyBlock
+   * @return the meta object for class '<em>Request Block</em>'.
+   * @see org.specapi.specapiLang.RequestBlock
    * @generated
    */
-  EClass getBodyBlock();
+  EClass getRequestBlock();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.specapi.specapiLang.BodyBlock#getType <em>Type</em>}'.
+   * Returns the meta object for the containment reference '{@link org.specapi.specapiLang.RequestBlock#getType <em>Type</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Type</em>'.
-   * @see org.specapi.specapiLang.BodyBlock#getType()
-   * @see #getBodyBlock()
+   * @see org.specapi.specapiLang.RequestBlock#getType()
+   * @see #getRequestBlock()
    * @generated
    */
-  EReference getBodyBlock_Type();
+  EReference getRequestBlock_Type();
 
   /**
    * Returns the meta object for class '{@link org.specapi.specapiLang.ResponseBlock <em>Response Block</em>}'.
@@ -2103,14 +2103,14 @@ public interface SpecapiLangPackage extends EPackage
     EClass LITERAL = eINSTANCE.getLiteral();
 
     /**
-     * The meta object literal for the '{@link org.specapi.specapiLang.impl.BodyBlockImpl <em>Body Block</em>}' class.
+     * The meta object literal for the '{@link org.specapi.specapiLang.impl.RequestBlockImpl <em>Request Block</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see org.specapi.specapiLang.impl.BodyBlockImpl
-     * @see org.specapi.specapiLang.impl.SpecapiLangPackageImpl#getBodyBlock()
+     * @see org.specapi.specapiLang.impl.RequestBlockImpl
+     * @see org.specapi.specapiLang.impl.SpecapiLangPackageImpl#getRequestBlock()
      * @generated
      */
-    EClass BODY_BLOCK = eINSTANCE.getBodyBlock();
+    EClass REQUEST_BLOCK = eINSTANCE.getRequestBlock();
 
     /**
      * The meta object literal for the '<em><b>Type</b></em>' containment reference feature.
@@ -2118,7 +2118,7 @@ public interface SpecapiLangPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference BODY_BLOCK__TYPE = eINSTANCE.getBodyBlock_Type();
+    EReference REQUEST_BLOCK__TYPE = eINSTANCE.getRequestBlock_Type();
 
     /**
      * The meta object literal for the '{@link org.specapi.specapiLang.impl.ResponseBlockImpl <em>Response Block</em>}' class.

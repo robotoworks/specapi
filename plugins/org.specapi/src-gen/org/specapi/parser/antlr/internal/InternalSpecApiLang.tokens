@@ -45,7 +45,6 @@ RULE_INTEGER=7
 'string'=31
 'response'=23
 '='=26
-'body'=22
 'api'=14
 '.'=36
 'delete'=40
@@ -68,4 +67,5 @@ RULE_INTEGER=7
 '-'=20
 ','=18
 'get'=37
+'request'=22
 'long'=34

@@ -510,11 +510,11 @@ ruleHttpMethodBlock returns [EObject current=null]
 
     |
     { 
-        newCompositeNode(grammarAccess.getHttpMethodBlockAccess().getBodyBlockParserRuleCall_2()); 
+        newCompositeNode(grammarAccess.getHttpMethodBlockAccess().getRequestBlockParserRuleCall_2()); 
     }
-    this_BodyBlock_2=ruleBodyBlock
+    this_RequestBlock_2=ruleRequestBlock
     { 
-        $current = $this_BodyBlock_2.current; 
+        $current = $this_RequestBlock_2.current; 
         afterParserOrEnumRuleCall();
     }
 
@@ -838,32 +838,32 @@ ruleLiteral returns [EObject current=null]
 
 
 
-// Entry rule entryRuleBodyBlock
-entryRuleBodyBlock returns [EObject current=null] 
+// Entry rule entryRuleRequestBlock
+entryRuleRequestBlock returns [EObject current=null] 
 	:
-	{ newCompositeNode(grammarAccess.getBodyBlockRule()); }
-	 iv_ruleBodyBlock=ruleBodyBlock 
-	 { $current=$iv_ruleBodyBlock.current; } 
+	{ newCompositeNode(grammarAccess.getRequestBlockRule()); }
+	 iv_ruleRequestBlock=ruleRequestBlock 
+	 { $current=$iv_ruleRequestBlock.current; } 
 	 EOF 
 ;
 
-// Rule BodyBlock
-ruleBodyBlock returns [EObject current=null] 
+// Rule RequestBlock
+ruleRequestBlock returns [EObject current=null] 
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
-(	otherlv_0='body' 
+(	otherlv_0='request' 
     {
-    	newLeafNode(otherlv_0, grammarAccess.getBodyBlockAccess().getBodyKeyword_0());
+    	newLeafNode(otherlv_0, grammarAccess.getRequestBlockAccess().getRequestKeyword_0());
     }
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getBodyBlockAccess().getTypeBlockTypeParserRuleCall_1_0()); 
+	        newCompositeNode(grammarAccess.getRequestBlockAccess().getTypeBlockTypeParserRuleCall_1_0()); 
 	    }
 		lv_type_1_0=ruleBlockType		{
 	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getBodyBlockRule());
+	            $current = createModelElementForParent(grammarAccess.getRequestBlockRule());
 	        }
        		set(
        			$current, 

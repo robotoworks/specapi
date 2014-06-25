@@ -22,7 +22,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_URL", "RULE_STRING", "RULE_INTEGER", "RULE_NUMBER", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'package'", "'api'", "'{'", "'}'", "'headers'", "','", "'/'", "'-'", "'params'", "'body'", "'response'", "'mixin'", "':'", "'='", "'[]'", "'entity'", "'enum'", "'extends'", "'string'", "'boolean'", "'int'", "'long'", "'double'", "'.'", "'get'", "'put'", "'post'", "'delete'", "'patch'", "'true'", "'false'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_URL", "RULE_STRING", "RULE_INTEGER", "RULE_NUMBER", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'package'", "'api'", "'{'", "'}'", "'headers'", "','", "'/'", "'-'", "'params'", "'request'", "'response'", "'mixin'", "':'", "'='", "'[]'", "'entity'", "'enum'", "'extends'", "'string'", "'boolean'", "'int'", "'long'", "'double'", "'.'", "'get'", "'put'", "'post'", "'delete'", "'patch'", "'true'", "'false'"
     };
     public static final int RULE_ID=4;
     public static final int T__29=29;
@@ -1204,7 +1204,7 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleHttpMethodBlock"
-    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:487:1: ruleHttpMethodBlock returns [EObject current=null] : (this_HeaderBlock_0= ruleHeaderBlock | this_ParamsBlock_1= ruleParamsBlock | this_BodyBlock_2= ruleBodyBlock | this_ResponseBlock_3= ruleResponseBlock ) ;
+    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:487:1: ruleHttpMethodBlock returns [EObject current=null] : (this_HeaderBlock_0= ruleHeaderBlock | this_ParamsBlock_1= ruleParamsBlock | this_RequestBlock_2= ruleRequestBlock | this_ResponseBlock_3= ruleResponseBlock ) ;
     public final EObject ruleHttpMethodBlock() throws RecognitionException {
         EObject current = null;
 
@@ -1212,7 +1212,7 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
 
         EObject this_ParamsBlock_1 = null;
 
-        EObject this_BodyBlock_2 = null;
+        EObject this_RequestBlock_2 = null;
 
         EObject this_ResponseBlock_3 = null;
 
@@ -1220,10 +1220,10 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:490:28: ( (this_HeaderBlock_0= ruleHeaderBlock | this_ParamsBlock_1= ruleParamsBlock | this_BodyBlock_2= ruleBodyBlock | this_ResponseBlock_3= ruleResponseBlock ) )
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:491:1: (this_HeaderBlock_0= ruleHeaderBlock | this_ParamsBlock_1= ruleParamsBlock | this_BodyBlock_2= ruleBodyBlock | this_ResponseBlock_3= ruleResponseBlock )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:490:28: ( (this_HeaderBlock_0= ruleHeaderBlock | this_ParamsBlock_1= ruleParamsBlock | this_RequestBlock_2= ruleRequestBlock | this_ResponseBlock_3= ruleResponseBlock ) )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:491:1: (this_HeaderBlock_0= ruleHeaderBlock | this_ParamsBlock_1= ruleParamsBlock | this_RequestBlock_2= ruleRequestBlock | this_ResponseBlock_3= ruleResponseBlock )
             {
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:491:1: (this_HeaderBlock_0= ruleHeaderBlock | this_ParamsBlock_1= ruleParamsBlock | this_BodyBlock_2= ruleBodyBlock | this_ResponseBlock_3= ruleResponseBlock )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:491:1: (this_HeaderBlock_0= ruleHeaderBlock | this_ParamsBlock_1= ruleParamsBlock | this_RequestBlock_2= ruleRequestBlock | this_ResponseBlock_3= ruleResponseBlock )
             int alt9=4;
             switch ( input.LA(1) ) {
             case 17:
@@ -1291,18 +1291,18 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:512:5: this_BodyBlock_2= ruleBodyBlock
+                    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:512:5: this_RequestBlock_2= ruleRequestBlock
                     {
                      
-                            newCompositeNode(grammarAccess.getHttpMethodBlockAccess().getBodyBlockParserRuleCall_2()); 
+                            newCompositeNode(grammarAccess.getHttpMethodBlockAccess().getRequestBlockParserRuleCall_2()); 
                         
-                    pushFollow(FOLLOW_ruleBodyBlock_in_ruleHttpMethodBlock1082);
-                    this_BodyBlock_2=ruleBodyBlock();
+                    pushFollow(FOLLOW_ruleRequestBlock_in_ruleHttpMethodBlock1082);
+                    this_RequestBlock_2=ruleRequestBlock();
 
                     state._fsp--;
 
                      
-                            current = this_BodyBlock_2; 
+                            current = this_RequestBlock_2; 
                             afterParserOrEnumRuleCall();
                         
 
@@ -2213,26 +2213,26 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
     // $ANTLR end "ruleLiteral"
 
 
-    // $ANTLR start "entryRuleBodyBlock"
-    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:842:1: entryRuleBodyBlock returns [EObject current=null] : iv_ruleBodyBlock= ruleBodyBlock EOF ;
-    public final EObject entryRuleBodyBlock() throws RecognitionException {
+    // $ANTLR start "entryRuleRequestBlock"
+    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:842:1: entryRuleRequestBlock returns [EObject current=null] : iv_ruleRequestBlock= ruleRequestBlock EOF ;
+    public final EObject entryRuleRequestBlock() throws RecognitionException {
         EObject current = null;
 
-        EObject iv_ruleBodyBlock = null;
+        EObject iv_ruleRequestBlock = null;
 
 
         try {
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:843:2: (iv_ruleBodyBlock= ruleBodyBlock EOF )
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:844:2: iv_ruleBodyBlock= ruleBodyBlock EOF
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:843:2: (iv_ruleRequestBlock= ruleRequestBlock EOF )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:844:2: iv_ruleRequestBlock= ruleRequestBlock EOF
             {
-             newCompositeNode(grammarAccess.getBodyBlockRule()); 
-            pushFollow(FOLLOW_ruleBodyBlock_in_entryRuleBodyBlock1815);
-            iv_ruleBodyBlock=ruleBodyBlock();
+             newCompositeNode(grammarAccess.getRequestBlockRule()); 
+            pushFollow(FOLLOW_ruleRequestBlock_in_entryRuleRequestBlock1815);
+            iv_ruleRequestBlock=ruleRequestBlock();
 
             state._fsp--;
 
-             current =iv_ruleBodyBlock; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleBodyBlock1825); 
+             current =iv_ruleRequestBlock; 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleRequestBlock1825); 
 
             }
 
@@ -2246,12 +2246,12 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "entryRuleBodyBlock"
+    // $ANTLR end "entryRuleRequestBlock"
 
 
-    // $ANTLR start "ruleBodyBlock"
-    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:851:1: ruleBodyBlock returns [EObject current=null] : (otherlv_0= 'body' ( (lv_type_1_0= ruleBlockType ) ) ) ;
-    public final EObject ruleBodyBlock() throws RecognitionException {
+    // $ANTLR start "ruleRequestBlock"
+    // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:851:1: ruleRequestBlock returns [EObject current=null] : (otherlv_0= 'request' ( (lv_type_1_0= ruleBlockType ) ) ) ;
+    public final EObject ruleRequestBlock() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_0=null;
@@ -2261,15 +2261,15 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:854:28: ( (otherlv_0= 'body' ( (lv_type_1_0= ruleBlockType ) ) ) )
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:855:1: (otherlv_0= 'body' ( (lv_type_1_0= ruleBlockType ) ) )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:854:28: ( (otherlv_0= 'request' ( (lv_type_1_0= ruleBlockType ) ) ) )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:855:1: (otherlv_0= 'request' ( (lv_type_1_0= ruleBlockType ) ) )
             {
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:855:1: (otherlv_0= 'body' ( (lv_type_1_0= ruleBlockType ) ) )
-            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:855:3: otherlv_0= 'body' ( (lv_type_1_0= ruleBlockType ) )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:855:1: (otherlv_0= 'request' ( (lv_type_1_0= ruleBlockType ) ) )
+            // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:855:3: otherlv_0= 'request' ( (lv_type_1_0= ruleBlockType ) )
             {
-            otherlv_0=(Token)match(input,22,FOLLOW_22_in_ruleBodyBlock1862); 
+            otherlv_0=(Token)match(input,22,FOLLOW_22_in_ruleRequestBlock1862); 
 
-                	newLeafNode(otherlv_0, grammarAccess.getBodyBlockAccess().getBodyKeyword_0());
+                	newLeafNode(otherlv_0, grammarAccess.getRequestBlockAccess().getRequestKeyword_0());
                 
             // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:859:1: ( (lv_type_1_0= ruleBlockType ) )
             // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:860:1: (lv_type_1_0= ruleBlockType )
@@ -2278,16 +2278,16 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
             // ../org.specapi/src-gen/org/specapi/parser/antlr/internal/InternalSpecApiLang.g:861:3: lv_type_1_0= ruleBlockType
             {
              
-            	        newCompositeNode(grammarAccess.getBodyBlockAccess().getTypeBlockTypeParserRuleCall_1_0()); 
+            	        newCompositeNode(grammarAccess.getRequestBlockAccess().getTypeBlockTypeParserRuleCall_1_0()); 
             	    
-            pushFollow(FOLLOW_ruleBlockType_in_ruleBodyBlock1883);
+            pushFollow(FOLLOW_ruleBlockType_in_ruleRequestBlock1883);
             lv_type_1_0=ruleBlockType();
 
             state._fsp--;
 
 
             	        if (current==null) {
-            	            current = createModelElementForParent(grammarAccess.getBodyBlockRule());
+            	            current = createModelElementForParent(grammarAccess.getRequestBlockRule());
             	        }
                    		set(
                    			current, 
@@ -2319,7 +2319,7 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "ruleBodyBlock"
+    // $ANTLR end "ruleRequestBlock"
 
 
     // $ANTLR start "entryRuleResponseBlock"
@@ -5675,7 +5675,7 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_EOF_in_entryRuleHttpMethodBlock981 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleHeaderBlock_in_ruleHttpMethodBlock1028 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleParamsBlock_in_ruleHttpMethodBlock1055 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBodyBlock_in_ruleHttpMethodBlock1082 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleRequestBlock_in_ruleHttpMethodBlock1082 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleResponseBlock_in_ruleHttpMethodBlock1109 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rulePath_in_entryRulePath1144 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRulePath1154 = new BitSet(new long[]{0x0000000000000002L});
@@ -5701,10 +5701,10 @@ public class InternalSpecApiLangParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_ruleBooleanValue_in_ruleLiteral1701 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_RULE_STRING_in_ruleLiteral1735 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleSignedNumber_in_ruleLiteral1778 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBodyBlock_in_entryRuleBodyBlock1815 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleBodyBlock1825 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_22_in_ruleBodyBlock1862 = new BitSet(new long[]{0x0000000F80008010L});
-    public static final BitSet FOLLOW_ruleBlockType_in_ruleBodyBlock1883 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleRequestBlock_in_entryRuleRequestBlock1815 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleRequestBlock1825 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_22_in_ruleRequestBlock1862 = new BitSet(new long[]{0x0000000F80008010L});
+    public static final BitSet FOLLOW_ruleBlockType_in_ruleRequestBlock1883 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleResponseBlock_in_entryRuleResponseBlock1919 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleResponseBlock1929 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_23_in_ruleResponseBlock1975 = new BitSet(new long[]{0x0000000F810080D2L});

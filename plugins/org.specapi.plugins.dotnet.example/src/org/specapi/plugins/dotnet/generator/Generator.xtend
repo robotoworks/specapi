@@ -46,11 +46,11 @@ class Generator implements IGenerator {
         ]
         
         api.blocks.filter(typeof(HttpMethod)).forEach[method |
-            if(method.body != null && method.body.type instanceof ComplexTypeLiteral) {
+            if(method.request != null && method.request.type instanceof ComplexTypeLiteral) {
                 fsa.generateFile(
                     doc.packageName.pascalizePackageName + "/" + method.name.pascalize + "Input.cs",
                     Plugin::OUTPUT_CONFIG,
-                    mEntityForLiteralGenerator.generate(doc, api, method.name.pascalize + "Input", method.body.type as ComplexTypeLiteral)
+                    mEntityForLiteralGenerator.generate(doc, api, method.name.pascalize + "Input", method.request.type as ComplexTypeLiteral)
                 )                
             }
         ]

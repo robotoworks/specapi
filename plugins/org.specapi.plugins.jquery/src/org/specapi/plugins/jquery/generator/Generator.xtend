@@ -57,7 +57,7 @@ class Generator implements IGenerator {
                 url:url,
                 type:"«method.type.literal.toUpperCase»",
                 headers:this.defaultHeaders
-                «IF method.hasBody»
+                «IF method.hasRequest»
                 ,contentType:"application/json"
                 ,data:data
                 «ENDIF»
@@ -76,7 +76,7 @@ class Generator implements IGenerator {
             args.add(arg.name)
         }
         
-        if(method.hasBody) {
+        if(method.hasRequest) {
             args.add("data")
         }
         

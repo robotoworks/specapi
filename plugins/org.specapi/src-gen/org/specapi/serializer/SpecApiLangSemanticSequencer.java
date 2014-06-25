@@ -16,7 +16,6 @@ import org.eclipse.xtext.serializer.sequencer.ITransientValueService.ValueTransi
 import org.specapi.services.SpecApiLangGrammarAccess;
 import org.specapi.specapiLang.Api;
 import org.specapi.specapiLang.ArrayType;
-import org.specapi.specapiLang.BodyBlock;
 import org.specapi.specapiLang.BooleanLiteral;
 import org.specapi.specapiLang.BooleanType;
 import org.specapi.specapiLang.ComplexTypeDeclaration;
@@ -33,6 +32,7 @@ import org.specapi.specapiLang.Member;
 import org.specapi.specapiLang.NumericLiteral;
 import org.specapi.specapiLang.ParamsBlock;
 import org.specapi.specapiLang.Path;
+import org.specapi.specapiLang.RequestBlock;
 import org.specapi.specapiLang.ResponseBlock;
 import org.specapi.specapiLang.SpecApiDocument;
 import org.specapi.specapiLang.SpecapiLangPackage;
@@ -60,13 +60,6 @@ public class SpecApiLangSemanticSequencer extends AbstractDelegatingSemanticSequ
 				   context == grammarAccess.getBlockTypeRule() ||
 				   context == grammarAccess.getTypeRule()) {
 					sequence_ArrayType(context, (ArrayType) semanticObject); 
-					return; 
-				}
-				else break;
-			case SpecapiLangPackage.BODY_BLOCK:
-				if(context == grammarAccess.getBodyBlockRule() ||
-				   context == grammarAccess.getHttpMethodBlockRule()) {
-					sequence_BodyBlock(context, (BodyBlock) semanticObject); 
 					return; 
 				}
 				else break;
@@ -191,6 +184,13 @@ public class SpecApiLangSemanticSequencer extends AbstractDelegatingSemanticSequ
 					return; 
 				}
 				else break;
+			case SpecapiLangPackage.REQUEST_BLOCK:
+				if(context == grammarAccess.getHttpMethodBlockRule() ||
+				   context == grammarAccess.getRequestBlockRule()) {
+					sequence_RequestBlock(context, (RequestBlock) semanticObject); 
+					return; 
+				}
+				else break;
 			case SpecapiLangPackage.RESPONSE_BLOCK:
 				if(context == grammarAccess.getHttpMethodBlockRule() ||
 				   context == grammarAccess.getResponseBlockRule()) {
@@ -246,22 +246,6 @@ public class SpecApiLangSemanticSequencer extends AbstractDelegatingSemanticSequ
 	 */
 	protected void sequence_ArrayType(EObject context, ArrayType semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Constraint:
-	 *     type=BlockType
-	 */
-	protected void sequence_BodyBlock(EObject context, BodyBlock semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, SpecapiLangPackage.Literals.BODY_BLOCK__TYPE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, SpecapiLangPackage.Literals.BODY_BLOCK__TYPE));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getBodyBlockAccess().getTypeBlockTypeParserRuleCall_1_0(), semanticObject.getType());
-		feeder.finish();
 	}
 	
 	
@@ -464,6 +448,22 @@ public class SpecApiLangSemanticSequencer extends AbstractDelegatingSemanticSequ
 	 */
 	protected void sequence_Path(EObject context, Path semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     type=BlockType
+	 */
+	protected void sequence_RequestBlock(EObject context, RequestBlock semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, SpecapiLangPackage.Literals.REQUEST_BLOCK__TYPE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, SpecapiLangPackage.Literals.REQUEST_BLOCK__TYPE));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getRequestBlockAccess().getTypeBlockTypeParserRuleCall_1_0(), semanticObject.getType());
+		feeder.finish();
 	}
 	
 	

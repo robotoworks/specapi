@@ -148,11 +148,11 @@ public class SpecapiLangSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case SpecapiLangPackage.BODY_BLOCK:
+      case SpecapiLangPackage.REQUEST_BLOCK:
       {
-        BodyBlock bodyBlock = (BodyBlock)theEObject;
-        T result = caseBodyBlock(bodyBlock);
-        if (result == null) result = caseHttpMethodBlock(bodyBlock);
+        RequestBlock requestBlock = (RequestBlock)theEObject;
+        T result = caseRequestBlock(requestBlock);
+        if (result == null) result = caseHttpMethodBlock(requestBlock);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -513,17 +513,17 @@ public class SpecapiLangSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Body Block</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Request Block</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Body Block</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Request Block</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseBodyBlock(BodyBlock object)
+  public T caseRequestBlock(RequestBlock object)
   {
     return null;
   }
