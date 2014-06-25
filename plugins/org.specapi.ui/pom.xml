@@ -5,9 +5,9 @@
     <artifactId>specapi</artifactId>
     <groupId>org.specapi</groupId>
     <relativePath>../../pom.xml</relativePath>
-    <version>0.1.4-SNAPSHOT</version>
+    <version>0.1.5-SNAPSHOT</version>
   </parent>
   <artifactId>org.specapi.ui</artifactId>
-  <version>0.1.4-SNAPSHOT</version>
+  <version>0.1.5-SNAPSHOT</version>
   <packaging>eclipse-plugin</packaging>
 </project>

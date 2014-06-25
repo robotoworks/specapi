@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: .NET Plugin
 Bundle-SymbolicName: org.specapi.plugins.dotnet
-Bundle-Version: 0.1.4.qualifier
+Bundle-Version: 0.1.5.qualifier
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Require-Bundle: org.specapi;bundle-version="0.1.4",
  org.eclipse.xtext.generator;bundle-version="2.5.3"

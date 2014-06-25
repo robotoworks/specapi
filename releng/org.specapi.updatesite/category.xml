@@ -3,7 +3,7 @@
    <description name="SpecApi Update Site" url="http://www.specapi.org/specapi/updates">
       SpecApi Plugins
    </description>
-   <feature id="org.specapi.sdk" url="features/org.specapi.sdk_0.1.0.qualifier.jar" version="0.1.4.qualifier">
+   <feature id="org.specapi.sdk" url="features/org.specapi.sdk_0.1.0.qualifier.jar" version="0.1.5.qualifier">
       <category name="specapi"/>
    </feature>
    <category-def label="SpecApi" name="specapi">

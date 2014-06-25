@@ -15,7 +15,7 @@ import com.google.inject.Injector;
 
 public class CompilerMain {
 	
-    private static final String VERSION="0.1.4";
+    private static final String VERSION="0.1.5";
 	
 	public static void main(String[] args) {
 		
