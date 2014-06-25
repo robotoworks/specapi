@@ -1,0 +1,31 @@
+package org.specapi.test
+
+api TestAPI http://api.specapi.org {
+    get getGuitar /guitars/id:long {
+        response Guitar
+    }
+    
+    post createGuitar /guitars {
+        body Guitar
+    }
+    
+    delete deleteGuitar /guitars {
+        response Guitar
+    }
+}
+
+entity Guitar {
+    name:string,
+    model:string,
+    manufacturer:Manufacturer,
+    type:GuitarType
+}
+
+entity Manufacturer {
+    name:string
+}
+
+enum GuitarType {
+    acoustic,
+    electric
+}

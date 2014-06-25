@@ -13,27 +13,37 @@ namespace Org.Specapi.Github
             BaseUrl = DefaultBaseUrl;
         }
         
+        protected HttpWebRequest CreateRequest(Uri uri)
+        {
+            var request = WebRequest.CreateHttp (uri);
+            ConfigureRequest(request);
+            return request;
+    
+        }
+    
+        partial void ConfigureRequest(HttpWebRequest request);
+    
         public void ListRepositories(ListRepositoriesRequest request)
         {
             try {
                 var uri = request.CreateUri(BaseUrl);
-                var webRequest = WebRequest.CreateHttp (uri);
+                var webRequest = CreateRequest (uri);
                 webRequest.Method = "GET";
                 webRequest.UserAgent = "DotNet-GithubAPI";
     
                 var webResponse = (HttpWebResponse) webRequest.GetResponse ();
-                handleListRepositoriesResponse(request, webResponse);
+                HandleListRepositoriesResponse(request, webResponse);
             }
             catch(WebException webException) {
                 var webResponse = (HttpWebResponse)  webException.Response;
-                handleListRepositoriesResponse(request, webResponse);
+                HandleListRepositoriesResponse(request, webResponse);
             }
             catch(Exception exception) {
                 throw;
             }
         }
         
-        void handleListRepositoriesResponse (ListRepositoriesRequest request, HttpWebResponse webResponse)
+        protected void HandleListRepositoriesResponse (ListRepositoriesRequest request, HttpWebResponse webResponse)
         {
             int status = (int) webResponse.StatusCode;
             var responseStream = webResponse.GetResponseStream ();
@@ -60,23 +70,23 @@ namespace Org.Specapi.Github
         {
             try {
                 var uri = request.CreateUri(BaseUrl);
-                var webRequest = WebRequest.CreateHttp (uri);
+                var webRequest = CreateRequest (uri);
                 webRequest.Method = "GET";
                 webRequest.UserAgent = "DotNet-GithubAPI";
     
                 var webResponse = (HttpWebResponse) webRequest.GetResponse ();
-                handleListUserRepositoriesResponse(request, webResponse);
+                HandleListUserRepositoriesResponse(request, webResponse);
             }
             catch(WebException webException) {
                 var webResponse = (HttpWebResponse)  webException.Response;
-                handleListUserRepositoriesResponse(request, webResponse);
+                HandleListUserRepositoriesResponse(request, webResponse);
             }
             catch(Exception exception) {
                 throw;
             }
         }
         
-        void handleListUserRepositoriesResponse (ListUserRepositoriesRequest request, HttpWebResponse webResponse)
+        protected void HandleListUserRepositoriesResponse (ListUserRepositoriesRequest request, HttpWebResponse webResponse)
         {
             int status = (int) webResponse.StatusCode;
             var responseStream = webResponse.GetResponseStream ();
@@ -97,23 +107,23 @@ namespace Org.Specapi.Github
         {
             try {
                 var uri = request.CreateUri(BaseUrl);
-                var webRequest = WebRequest.CreateHttp (uri);
+                var webRequest = CreateRequest (uri);
                 webRequest.Method = "GET";
                 webRequest.UserAgent = "DotNet-GithubAPI";
     
                 var webResponse = (HttpWebResponse) webRequest.GetResponse ();
-                handleListOrganizationRepositoriesResponse(request, webResponse);
+                HandleListOrganizationRepositoriesResponse(request, webResponse);
             }
             catch(WebException webException) {
                 var webResponse = (HttpWebResponse)  webException.Response;
-                handleListOrganizationRepositoriesResponse(request, webResponse);
+                HandleListOrganizationRepositoriesResponse(request, webResponse);
             }
             catch(Exception exception) {
                 throw;
             }
         }
         
-        void handleListOrganizationRepositoriesResponse (ListOrganizationRepositoriesRequest request, HttpWebResponse webResponse)
+        protected void HandleListOrganizationRepositoriesResponse (ListOrganizationRepositoriesRequest request, HttpWebResponse webResponse)
         {
             int status = (int) webResponse.StatusCode;
             var responseStream = webResponse.GetResponseStream ();
@@ -134,23 +144,23 @@ namespace Org.Specapi.Github
         {
             try {
                 var uri = request.CreateUri(BaseUrl);
-                var webRequest = WebRequest.CreateHttp (uri);
+                var webRequest = CreateRequest (uri);
                 webRequest.Method = "GET";
                 webRequest.UserAgent = "DotNet-GithubAPI";
     
                 var webResponse = (HttpWebResponse) webRequest.GetResponse ();
-                handleListAllPublicRepositoriesResponse(request, webResponse);
+                HandleListAllPublicRepositoriesResponse(request, webResponse);
             }
             catch(WebException webException) {
                 var webResponse = (HttpWebResponse)  webException.Response;
-                handleListAllPublicRepositoriesResponse(request, webResponse);
+                HandleListAllPublicRepositoriesResponse(request, webResponse);
             }
             catch(Exception exception) {
                 throw;
             }
         }
         
-        void handleListAllPublicRepositoriesResponse (ListAllPublicRepositoriesRequest request, HttpWebResponse webResponse)
+        protected void HandleListAllPublicRepositoriesResponse (ListAllPublicRepositoriesRequest request, HttpWebResponse webResponse)
         {
             int status = (int) webResponse.StatusCode;
             var responseStream = webResponse.GetResponseStream ();
@@ -171,23 +181,28 @@ namespace Org.Specapi.Github
         {
             try {
                 var uri = request.CreateUri(BaseUrl);
-                var webRequest = WebRequest.CreateHttp (uri);
+                var webRequest = CreateRequest (uri);
                 webRequest.Method = "POST";
                 webRequest.UserAgent = "DotNet-GithubAPI";
+                
+                var payload = request.Entity;
+                var requestStream = webRequest.GetRequestStream();
+                var serializer = new DataContractJsonSerializer (typeof(CreateRepositoryInput));
+                serializer.WriteObject(requestStream, payload);
     
                 var webResponse = (HttpWebResponse) webRequest.GetResponse ();
-                handleCreateRepositoryResponse(request, webResponse);
+                HandleCreateRepositoryResponse(request, webResponse);
             }
             catch(WebException webException) {
                 var webResponse = (HttpWebResponse)  webException.Response;
-                handleCreateRepositoryResponse(request, webResponse);
+                HandleCreateRepositoryResponse(request, webResponse);
             }
             catch(Exception exception) {
                 throw;
             }
         }
         
-        void handleCreateRepositoryResponse (CreateRepositoryRequest request, HttpWebResponse webResponse)
+        protected void HandleCreateRepositoryResponse (CreateRepositoryRequest request, HttpWebResponse webResponse)
         {
             int status = (int) webResponse.StatusCode;
             var responseStream = webResponse.GetResponseStream ();
@@ -226,23 +241,28 @@ namespace Org.Specapi.Github
         {
             try {
                 var uri = request.CreateUri(BaseUrl);
-                var webRequest = WebRequest.CreateHttp (uri);
+                var webRequest = CreateRequest (uri);
                 webRequest.Method = "POST";
                 webRequest.UserAgent = "DotNet-GithubAPI";
+                
+                var payload = request.Entity;
+                var requestStream = webRequest.GetRequestStream();
+                var serializer = new DataContractJsonSerializer (typeof(CreateRepositoryInput));
+                serializer.WriteObject(requestStream, payload);
     
                 var webResponse = (HttpWebResponse) webRequest.GetResponse ();
-                handleCreateOrganizationRepositoryResponse(request, webResponse);
+                HandleCreateOrganizationRepositoryResponse(request, webResponse);
             }
             catch(WebException webException) {
                 var webResponse = (HttpWebResponse)  webException.Response;
-                handleCreateOrganizationRepositoryResponse(request, webResponse);
+                HandleCreateOrganizationRepositoryResponse(request, webResponse);
             }
             catch(Exception exception) {
                 throw;
             }
         }
         
-        void handleCreateOrganizationRepositoryResponse (CreateOrganizationRepositoryRequest request, HttpWebResponse webResponse)
+        protected void HandleCreateOrganizationRepositoryResponse (CreateOrganizationRepositoryRequest request, HttpWebResponse webResponse)
         {
             int status = (int) webResponse.StatusCode;
             var responseStream = webResponse.GetResponseStream ();

@@ -57,7 +57,7 @@ namespace Org.Specapi.Github
         public Status200Handler On200 { get; set; }
         public Status401Handler On401 { get; set; }
         public StatusUnexpectedHandler OnOther { get; set; }
-                
+    
         public ListRepositoriesRequest() {
         }
         

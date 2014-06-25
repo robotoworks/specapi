@@ -17,7 +17,9 @@ namespace Org.Specapi.Github
         public Status401Handler On401 { get; set; }
         public Status422Handler On422 { get; set; }
         public StatusUnexpectedHandler OnOther { get; set; }
-                
+        
+        public CreateRepositoryInput Entity { get; set; }
+    
         public CreateOrganizationRepositoryRequest(string org) {
             Org = org;
         }

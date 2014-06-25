@@ -49,7 +49,9 @@ public class EclipsePluginLoader extends PluginLoader {
 
 					Plugin plugin = loadPlugin(file, pluginConfig, project);
 					
-					pluginMap.put(pluginConfig.getPluginClassName(), plugin);
+					if(plugin != null) {
+						pluginMap.put(pluginConfig.getPluginClassName(), plugin);
+					}
 				}
 			}
 		}
@@ -72,6 +74,5 @@ public class EclipsePluginLoader extends PluginLoader {
 		
 		return null;
 	}
-	
 	
 }

@@ -12,6 +12,7 @@ import org.specapi.SpecApiModelUtils
 import org.specapi.specapiLang.ResponseBlock
 import org.specapi.specapiLang.ComplexTypeLiteral
 import org.specapi.specapiLang.Type
+import org.specapi.specapiLang.HttpMethodType
 
 class RequestGenerator extends DotNetTypeGenerator {
     
@@ -39,7 +40,13 @@ class RequestGenerator extends DotNetTypeGenerator {
         «generateMembersForQueryParameters»
         «generateResponseDelegates»
         «generateResponseDelegateProperties»
-                
+        «IF method.type == HttpMethodType.PUT || 
+        method.type == HttpMethodType.POST ||
+        method.type == HttpMethodType.PATCH»
+        
+        public «method.body.generateRequestType(method)» Entity { get; set; }
+        «ENDIF»
+
         public «method.name.pascalize»Request(«createConstructorArgs») {
             «generateConstructorArgAssignments»
         }

@@ -13,6 +13,8 @@ import org.specapi.specapiLang.LongType
 import org.specapi.specapiLang.ResponseBlock
 import org.specapi.specapiLang.HttpMethod
 import org.specapi.specapiLang.ComplexTypeLiteral
+import org.specapi.specapiLang.BlockType
+import org.specapi.specapiLang.BodyBlock
 
 class DotNetUtil {
     def static String pascalizePackageName(String packageName) {
@@ -62,4 +64,12 @@ class DotNetUtil {
             (response.type as Type).dotNetTypeString
         }
     }     
+    
+     def static generateRequestType(BodyBlock block, HttpMethod method) {
+        if(block.type instanceof ComplexTypeLiteral) {
+            method.name.pascalize + "Input"
+        } else {
+            (block.type as Type).dotNetTypeString
+        }
+    }   
 }

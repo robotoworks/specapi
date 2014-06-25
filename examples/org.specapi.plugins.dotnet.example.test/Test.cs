@@ -12,24 +12,49 @@ namespace org.specapi.plugins.dotnet.example.test
 	public class Test
 	{
 		[Test ()]
-		public void TestCase ()
+		public void ListUserRepositoriesTest ()
 		{
 			var api = new GithubAPI ();
 
-			api.ListUserRepositories (new ListUserRepositoriesRequest("fluxtah") { 
+			api.ListUserRepositories (
+				new ListUserRepositoriesRequest("fluxtah") { 
 					Sort = "full_name", 
 					Direction = "asc",
 
 					On200 = (repositories) => {
-						
-						
+						foreach(Repository repo in repositories) {
+							Console.WriteLine(repo.Name);
+						}
 					},
 					OnOther = (response) => {
-						// TODO: handle any other response that
-						// is otherwise not handled by this responder
-						// or not handled by the user
+
 					}
 				});
+
+		}
+
+		[Test ()]
+		public void ListRepositoriesTest ()
+		{
+			var api = new GithubAPI ();
+
+			api.ListRepositories (new ListRepositoriesRequest { 
+				Sort = "full_name", 
+				Direction = "asc",
+
+				On200 = (repositories) => {
+
+
+				},
+				On401 = (error) =>  {
+
+				},
+				OnOther = (response) => {
+					// TODO: handle any other response that
+					// is otherwise not handled by this responder
+					// or not handled by the user
+				}
+			});
 
 		}
 	}
