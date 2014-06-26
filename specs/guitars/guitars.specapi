@@ -1,20 +1,42 @@
 package org.specapi.test
 
-api TestAPI http://api.specapi.org {
+api GuitarAPI http://api.specapi.org {
     get getGuitar /guitars/id:long {
         response Guitar
     }
     
     post createGuitar /guitars {
         request Guitar
+        response {
+        	id:long
+        }
+    }
+    
+    post createGuitar2 /guitars {
+        request  {
+			id:long,
+		    name:string,
+		    model:string,
+		    manufacturer:Manufacturer,
+		    type:GuitarType
+		}
+        response {
+        	id:long
+        }
     }
     
     delete deleteGuitar /guitars {
         response Guitar
     }
+    
+    get getGuitars /guitars {
+    	params model:string
+        response Guitar[]
+    }
 }
 
 entity Guitar {
+	id:long,
     name:string,
     model:string,
     manufacturer:Manufacturer,

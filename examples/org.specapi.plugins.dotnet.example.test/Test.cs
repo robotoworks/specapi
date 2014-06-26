@@ -22,12 +22,10 @@ namespace org.specapi.plugins.dotnet.example.test
 					Direction = "asc",
 
 					On200 = (repositories) => {
-						foreach(Repository repo in repositories) {
-							Console.WriteLine(repo.Name);
-						}
+						// TODO: Handle a 200 response
 					},
 					OnOther = (response) => {
-
+						// TODO: Handle any other response
 					}
 				});
 
