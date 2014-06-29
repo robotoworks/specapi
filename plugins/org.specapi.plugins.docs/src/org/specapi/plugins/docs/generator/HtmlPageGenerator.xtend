@@ -190,6 +190,10 @@ abstract class HtmlPageGenerator {
     '''
     
     def dispatch generateUserTypeSignature(EnumTypeDeclaration type) '''
-    
+    «type.name» {
+        «FOR member : type.literal.members»
+        «member.name»
+        «ENDFOR»
+    }
     '''
 }

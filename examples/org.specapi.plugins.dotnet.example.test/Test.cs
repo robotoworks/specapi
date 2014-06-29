@@ -8,10 +8,10 @@ using System.Runtime.Serialization.Json;
 
 namespace org.specapi.plugins.dotnet.example.test
 {
-	[TestFixture ()]
+	[TestFixture]
 	public class Test
 	{
-		[Test ()]
+		[Test]
 		public void ListUserRepositoriesTest ()
 		{
 			var api = new GithubAPI ();
@@ -31,7 +31,7 @@ namespace org.specapi.plugins.dotnet.example.test
 
 		}
 
-		[Test ()]
+		[Test]
 		public void ListRepositoriesTest ()
 		{
 			var api = new GithubAPI ();

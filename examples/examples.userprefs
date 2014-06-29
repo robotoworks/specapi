@@ -2,8 +2,8 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="org.specapi.plugins.dotnet.example.test/Test.cs">
     <Files>
-      <File FileName="org.specapi.plugins.dotnet.example/dotnet-gen/Org.Specapi.Github/GithubAPI.cs" Line="19" Column="27" />
-      <File FileName="org.specapi.plugins.dotnet.example.test/Test.cs" Line="32" Column="8" />
+      <File FileName="org.specapi.plugins.dotnet.example/dotnet-gen/Org.Specapi.Github/GithubAPI.cs" Line="1" Column="1" />
+      <File FileName="org.specapi.plugins.dotnet.example.test/Test.cs" Line="18" Column="4" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
