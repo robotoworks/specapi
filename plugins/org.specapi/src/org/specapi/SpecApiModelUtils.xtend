@@ -157,7 +157,12 @@ class SpecApiModelUtils {
 	}
 	
 	def ResponseBlock getResponseBlock(HttpMethod method){
-		method.blocks.filter(typeof(ResponseBlock)).head
+		method.blocks.filter[
+			var isResponse = it instanceof ResponseBlock
+			if(!isResponse) return false
+			var r = it as ResponseBlock
+			(r.code >=200 || r.code == 0 || r.code <= 299)
+		].head as ResponseBlock
 	}
 	
 	def List<ResponseBlock> getResponseBlocks(HttpMethod method){
@@ -188,7 +193,97 @@ class SpecApiModelUtils {
 		code + " " + message
 	}
 	
+	val responseCodeIds = #{
+		100 -> "Continue",
+		101 -> "SwitchingProtocols",
+		102 -> "Processing",
+		200 -> "OK",
+		201 -> "Created",
+		202 -> "Accepted",
+		203 -> "NonAuthoritativeInformation",
+		204 -> "NoContent",
+		205 -> "ResetContent",
+		206 -> "PartialContent",
+		207 -> "MultiStatus",
+		208 -> "AlreadyReported",
+		226 -> "IMUsed",
+		300 -> "MultipleChoices",
+		301 -> "MovedPermanently",
+		302 -> "Found",
+		303 -> "SeeOther",
+		304 -> "NotModified",
+		305 -> "UseProxy",
+		306 -> "SwitchProxy",
+		307 -> "TemporaryRedirect",
+		308 -> "PermanentRedirect",
+		400 -> "BadRequest",
+		401 -> "Unauthorized",
+		402 -> "PaymentRequired",
+		403 -> "Forbidden",
+		404 -> "NotFound",
+		405 -> "MethodNotAllowed",
+		406 -> "NotAcceptable",
+		407 -> "ProxyAuthenticationRequired",
+		408 -> "RequestTimeout",
+		409 -> "Conflict",
+		410 -> "Gone",
+		411 -> "LengthRequired",
+		412 -> "PreconditionFailed",
+		413 -> "RequestEntityTooLarge",
+		414 -> "RequestUriTooLong",
+		415 -> "UnsupportedMediaType",
+		416 -> "RequestedRangeNotSatisfiable",
+		417 -> "ExpectationFailed",
+		418 -> "ImATeapot",
+		419 -> "AuthenticationTimeout",
+		420 -> "EnhanceYourCalm",
+		422 -> "UnprocessableEntity",
+		423 -> "Locked",
+		424 -> "FailedDependency",
+		425 -> "UnorderedCollection",
+		426 -> "UpgradeRequired",
+		428 -> "PreconditionRequired",
+		429 -> "TooManyRequests",
+		431 -> "RequestHeaderFieldsTooLarge",
+		440 -> "LoginTimeout",
+		444 -> "NoResponse",
+		449 -> "RetryWith",
+		450 -> "BlockedByWindowsParentalControls",
+		451 -> "UnavailableForLegalReasons",
+		494 -> "RequestHeaderTooLarge",
+		495 -> "CertError",
+		496 -> "NoCert",
+		497 -> "HttpToHttps",
+		499 -> "ClientClosedRequest",
+		500 -> "InternalServerError",
+		501 -> "NotImplemented",
+		502 -> "BadGateway",
+		503 -> "ServiceUnavailable",
+		504 -> "GatewayTimeout",
+		505 -> "HTTPVersionNotSupported",
+		506 -> "VariantAlsoNegotiates",
+		507 -> "InsufficientStorage",
+		508 -> "LoopDetected",
+		509 -> "BandwidthLimitExceeded",
+		510 -> "NotExtended",
+		511 -> "NetworkAuthenticationRequired",
+		520 -> "OriginError",
+		521 -> "WebServerIsDown",
+		522 -> "ConnectionTimedOut",
+		523 -> "ProxyDeclinedRequest",
+		524 -> "ATimeoutOccurred",
+		598 -> "NetworkReadTimeoutError",
+		599 -> "NetworkConnectTimeoutError"
+	}
+	
+	def getStandardResponseMessageId(int code) {
+		var id = responseCodeIds.get(code)
+		if(id == null) return "Unspecified"
+		return id;
+	}
+	
 	def getStandardResponseMessage(int code) {
+
 		switch(code) {
 			case 100: "Continue"
 			case 101: "Switching Protocols"

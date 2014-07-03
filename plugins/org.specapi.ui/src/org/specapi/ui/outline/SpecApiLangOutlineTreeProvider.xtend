@@ -9,6 +9,10 @@ import org.eclipse.xtext.ui.editor.outline.IOutlineNode
 import org.specapi.specapiLang.ComplexTypeDeclaration
 import org.eclipse.emf.ecore.EObject
 import org.specapi.specapiLang.EnumTypeDeclaration
+import org.specapi.specapiLang.Path
+import org.specapi.specapiLang.ResponseBlock
+import org.specapi.specapiLang.ParamsBlock
+import org.specapi.specapiLang.RequestBlock
 
 /**
  * Customization of the default outline structure.
@@ -20,8 +24,26 @@ class SpecApiLangOutlineTreeProvider extends org.eclipse.xtext.ui.editor.outline
         return true;
     }
     
-    def _isLeaf(HttpMethod modelElement) {
+    def _isLeaf(Path modelElement) {
         return true;
+    }
+
+    def _isLeaf(ResponseBlock modelElement) {
+        return true;
+    }
+    def _isLeaf(RequestBlock modelElement) {
+        return true;
+    }
+    
+    def _createChildren(IOutlineNode parent, HttpMethod element) {
+        for (ParamsBlock params : element.blocks.filter(typeof(ParamsBlock))) {
+        	for(Member param : params.params) {
+            	createNode(parent, param);
+            }
+        }
+        for (EObject obj : element.blocks.filter[!(it instanceof ParamsBlock)]) {
+			createNode(parent, obj);
+        }
     }
     
     def _createChildren(IOutlineNode parent, ComplexTypeDeclaration element) {

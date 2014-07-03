@@ -3,7 +3,7 @@
   "basePath": "https://api.github.com",
   "apis": [
     {
-      "path": "/user/repos",
+      "path": "/user",
       "operations": [
         {
           "method": "get",
@@ -79,7 +79,7 @@
       ]
     },
     {
-      "path": "/user/repos",
+      "path": "/user",
       "operations": [
         {
           "method": "post",

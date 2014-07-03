@@ -38,11 +38,13 @@
 <li><a href="method_listAllPublicRepositories.html">List All Public Repositories</a></li>
 <li><a href="method_createRepository.html">Create Repository</a></li>
 <li><a href="method_createOrganizationRepository.html">Create Organization Repository</a></li>
+<li><a href="method_editRepository.html">Edit Repository</a></li>
 <li class="nav-header">Entities</li>
 <li><a href="Repository.html">Repository</a></li>
 <li><a href="RepositoryOwner.html">RepositoryOwner</a></li>
 <li><a href="RepositoryPermissions.html">RepositoryPermissions</a></li>
-<li><a href="CreateRepositoryInput.html">CreateRepositoryInput</a></li>
+<li><a href="RepositoryProperties.html">RepositoryProperties</a></li>
+<li><a href="RepositoryPatch.html">RepositoryPatch</a></li>
 <li><a href="ErrorMessage.html">ErrorMessage</a></li>
 <li><a href="Error.html">Error</a></li>
 <li class="nav-header">Enums</li>
@@ -65,7 +67,7 @@
 </thead>
 <tbody>
 <tr>
-<td><span class="label label-info">GET</span> <a href="method_listRepositories.html">/user/repos</a></td>
+<td><span class="label label-info">GET</span> <a href="method_listRepositories.html">/user</a></td>
 <td>List repositories for the authenticated user. Note that this does not include repositories owned by organizations which the user can access. You can list user organizations and list organization repositories separately.</td>
 </tr>
 <tr>
@@ -81,12 +83,16 @@
 <td>This provides a dump of every public repository, in the order that they were created. Note: Pagination is powered exclusively by the since parameter. Use the Link header to get the URL for the next page of repositories.</td>
 </tr>
 <tr>
-<td><span class="label label-warning">POST</span> <a href="method_createRepository.html">/user/repos</a></td>
+<td><span class="label label-warning">POST</span> <a href="method_createRepository.html">/user</a></td>
 <td>Create a new repository for the authenticated user.</td>
 </tr>
 <tr>
 <td><span class="label label-warning">POST</span> <a href="method_createOrganizationRepository.html">/orgs/:org/repos</a></td>
 <td>Create a new repository in this organization. The authenticated user must be a member of the specified organization.</td>
+</tr>
+<tr>
+<td><span class="label label-warning">PATCH</span> <a href="method_editRepository.html">/repos/:owner/:repo</a></td>
+<td></td>
 </tr>
 </tbody>
 </table>

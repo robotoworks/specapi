@@ -63,7 +63,7 @@ namespace Org.Specapi.Github
         
         public Uri CreateUri (string baseUrl)
         {
-            String url = baseUrl + "/user/repos";
+            String url = baseUrl + "/user";
             
             var uriBuilder = new UriBuilder(url);
             NameValueCollection query = new NameValueCollection ();

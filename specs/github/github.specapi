@@ -64,8 +64,8 @@ api GithubAPI https://api.github.com {
      * @response an entity describing the newly created repository
      */
     post createRepository /user/repos {
-        request CreateRepositoryInput
-        response Repository
+        request RepositoryProperties
+        response 201 Repository
         response 400 ErrorMessage
         response 401 ErrorMessage
         response 422 ErrorMessage
@@ -79,11 +79,16 @@ api GithubAPI https://api.github.com {
      * @response an entity describing the newly created repository
      */
     post createOrganizationRepository /orgs/org:string/repos {
-        request CreateRepositoryInput
-        response Repository
+        request RepositoryProperties
+        response 201 Repository
         response 400 ErrorMessage
         response 401 ErrorMessage
         response 422 ErrorMessage
+    }
+    
+    patch editRepository /repos/owner:string/repo:string {
+        request RepositoryPatch
+        response 200 Repository
     }
 }
 
@@ -183,7 +188,7 @@ entity RepositoryPermissions {
     pull: boolean    
 }
 
-entity CreateRepositoryInput {
+entity RepositoryProperties {
     /* Required. The name of the repository */
     name: string,
     /* A short description of the repository */
@@ -219,17 +224,43 @@ entity CreateRepositoryInput {
     auto_init:boolean,
     /* Desired language or platform .gitignore template to 
      * apply. Use the name of the template without the 
-     * extension. For example, ÒHaskellÓ. Ignored if the 
+     * extension. For example, ï¿½Haskellï¿½. Ignored if the 
      * auto_init parameter is not provided.
      */
     gitigore_template:string,
     /*
      * Desired LICENSE template to apply. Use the name of 
      * the template without the extension. For example, 
-     * ÒmitÓ or ÒmozillaÓ. Ignored if the auto_init parameter 
+     * ï¿½mitï¿½ or ï¿½mozillaï¿½. Ignored if the auto_init parameter 
      * is not provided.
      */
     license_template:string    
+}
+
+entity RepositoryPatch {
+    /* Required. The name of the repository */
+    name: string,
+    /* A short description of the repository */
+    description:string,
+    /* A URL with more information about the repository */
+    homepage:string,
+    /* Either true to create a private repository, or false 
+     * to create a public one. Creating private repositories 
+     * requires a paid GitHub account. Default: false
+     */
+    private:boolean,
+    /* Either true to enable issues for this repository, 
+     * false to disable them. Default: true
+     */
+    has_issues:boolean,
+    /* Either true to enable the wiki for this repository, 
+     * false to disable it. Default: true
+     */
+    has_wiki:boolean,
+    /* Either true to enable downloads for this repository, 
+     * false to disable them. Default: true
+     */
+    has_downloads:boolean    
 }
 
 entity ErrorMessage {

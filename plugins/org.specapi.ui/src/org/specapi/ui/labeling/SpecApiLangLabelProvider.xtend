@@ -16,6 +16,11 @@ import org.specapi.specapiLang.HttpMethod
 import org.specapi.specapiLang.Member
 import org.specapi.specapiLang.SpecApiDocument
 import org.specapi.specapiLang.Type
+import org.specapi.specapiLang.ResponseBlock
+import org.specapi.specapiLang.ComplexTypeLiteral
+import org.specapi.specapiLang.ParamsBlock
+import org.specapi.specapiLang.RequestBlock
+import org.specapi.specapiLang.BlockType
 
 /**
  * Provides labels for a EObjects.
@@ -46,6 +51,9 @@ class SpecApiLangLabelProvider extends DefaultEObjectLabelProvider {
     }
     
     def image(Member ele) {
+    	if(ele.eContainer instanceof ParamsBlock) {
+    		return "query_param.gif"
+    	}
         return "member_obj.gif";
     }
     
@@ -57,6 +65,10 @@ class SpecApiLangLabelProvider extends DefaultEObjectLabelProvider {
         return "httpmethod_obj.gif";
     }
     
+    def image(RequestBlock ele) {
+        return "request.gif";
+    }
+    
     def image(Api ele) {
         return "api_obj.gif";
     }
@@ -66,18 +78,39 @@ class SpecApiLangLabelProvider extends DefaultEObjectLabelProvider {
     }
     
     def text(HttpMethod ele) {
-        var block = ele.responseBlock;
-        
         var name = ele.getName();
         
         name = name.concat(" " + ele.getPathAsFormatString("{", "}"))
         
-        if(block != null && block.getType() instanceof Type) {
-			name = name.concat(" : " + (block.getType() as Type).signature)
-        }
-        
-        return name;
+        return name
     }
+    
+    def text(ResponseBlock block) {
+    	return block.responseLine + " : " + getBlockTypeLabel(block.type);
+    }
+    
+    def text(RequestBlock block) {
+    	return getBlockTypeLabel(block.type);
+    }
+    
+    def image(ResponseBlock block) {
+    	var code = block.code
+    	if(code == 0 || code >=200 && code <=299) {
+    		return "response_ok.gif"
+    	} else if((code > 0 && code <= 99) || (code >=300 && code <=399)) {
+    		return "response_info.gif"
+    	} else {
+    		return "response_error.gif"
+    	}
+    }
+	
+	def getBlockTypeLabel(BlockType type) {
+		if(type instanceof ComplexTypeLiteral) {
+			return "{..}"
+		} else {
+			return (type as Type).signature
+		}
+	}
     
     def text (HeaderBlock ele) {
         return "headers";

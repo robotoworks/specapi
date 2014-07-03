@@ -38,11 +38,13 @@
 <li><a href="method_listAllPublicRepositories.html">List All Public Repositories</a></li>
 <li class="active"><a href="method_createRepository.html">Create Repository</a></li>
 <li><a href="method_createOrganizationRepository.html">Create Organization Repository</a></li>
+<li><a href="method_editRepository.html">Edit Repository</a></li>
 <li class="nav-header">Entities</li>
 <li><a href="Repository.html">Repository</a></li>
 <li><a href="RepositoryOwner.html">RepositoryOwner</a></li>
 <li><a href="RepositoryPermissions.html">RepositoryPermissions</a></li>
-<li><a href="CreateRepositoryInput.html">CreateRepositoryInput</a></li>
+<li><a href="RepositoryProperties.html">RepositoryProperties</a></li>
+<li><a href="RepositoryPatch.html">RepositoryPatch</a></li>
 <li><a href="ErrorMessage.html">ErrorMessage</a></li>
 <li><a href="Error.html">Error</a></li>
 <li class="nav-header">Enums</li>
@@ -54,7 +56,7 @@
 <div id="testConsole" class="console container-fluid collapse">
 <div id="consoleHeading" class="clearfix">
 <button type="button" class="close" data-toggle="collapse" data-target="#testConsole">&times;</button>
-<p class="pull-left"><span class="label label-warning">POST</span> <b>https://api.github.com/user/repos</b></p>
+<p class="pull-left"><span class="label label-warning">POST</span> <b>https://api.github.com/user</b></p>
 </div>
 <form role="form">
 <div class="form-group">
@@ -91,7 +93,7 @@
 </button>
 <h1 class="pull-left">Create Repository</h1>
 </div>
-<p><span class="label label-warning">POST</span> <b>https://api.github.com/user/repos</b></p>
+<p><span class="label label-warning">POST</span> <b>https://api.github.com/user</b></p>
 <p>Create a new repository for the authenticated user.</p>
 <p></p>
 <div class="panel panel-default">
@@ -100,7 +102,7 @@
 </div>
 <div id="requestBody" class="panel-collapse collapse">
 <div class="panel-body">
-<pre><code class="javascript"><a href="CreateRepositoryInput.html">CreateRepositoryInput</a> {
+<pre><code class="javascript"><a href="RepositoryProperties.html">RepositoryProperties</a> {
     "name" : string
     "description" : string
     "homepage" : string
@@ -119,11 +121,10 @@
 </div>
 <div class="panel-group" id="accordion">
 <div class="panel panel-success">
-<div class="panel-heading" data-toggle="collapse" data-target="#response0">
-<h4 class="panel-title"">200 OK</h4>
+<div class="panel-heading" data-toggle="collapse" data-target="#response201">
+<h4 class="panel-title"">201 Created</h4>
 </div>
-<div id="response0" class="panel-collapse collapse">
-<div class="panel-body-heading">an entity describing the newly created repository</div>
+<div id="response201" class="panel-collapse collapse">
 <div class="panel-body">
 <pre><code class="javascript"><a href="Repository.html">Repository</a> {
     "id" : long

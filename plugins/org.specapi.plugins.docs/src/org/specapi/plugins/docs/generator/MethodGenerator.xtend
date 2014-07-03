@@ -245,8 +245,8 @@ class MethodGenerator extends HtmlPageGenerator {
     def getPanelCssClass(ResponseBlock block) {
         switch(block.code) {
             case 0:"success"
-            case 200:"success"
-            case block.code>=400 && block.code <=500: "danger"
+            case block.code >= 200 && block.code < 299:"success"
+            case block.code>=400 && block.code <=600: "danger"
             default:"default"
         }
     }

@@ -208,11 +208,11 @@ namespace Org.Specapi.Github
             var responseStream = webResponse.GetResponseStream ();
             DataContractJsonSerializer serializer = null;
             
-            if (status == 200 && request.On200 != null) 
+            if (status == 201 && request.On201 != null) 
             {
                 serializer = new DataContractJsonSerializer (typeof(Repository));
                 Repository result = (Repository) serializer.ReadObject (responseStream);
-                request.On200(result);
+                request.On201(result);
             }else
             if (status == 400 && request.On400 != null) 
             {
@@ -268,11 +268,11 @@ namespace Org.Specapi.Github
             var responseStream = webResponse.GetResponseStream ();
             DataContractJsonSerializer serializer = null;
             
-            if (status == 200 && request.On200 != null) 
+            if (status == 201 && request.On201 != null) 
             {
                 serializer = new DataContractJsonSerializer (typeof(Repository));
                 Repository result = (Repository) serializer.ReadObject (responseStream);
-                request.On200(result);
+                request.On201(result);
             }else
             if (status == 400 && request.On400 != null) 
             {
