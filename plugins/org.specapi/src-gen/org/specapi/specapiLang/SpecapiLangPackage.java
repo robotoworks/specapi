@@ -421,22 +421,13 @@ public interface SpecapiLangPackage extends EPackage
   int RESPONSE_BLOCK__MESSAGE = HTTP_METHOD_BLOCK_FEATURE_COUNT + 1;
 
   /**
-   * The feature id for the '<em><b>Super Type</b></em>' reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int RESPONSE_BLOCK__SUPER_TYPE = HTTP_METHOD_BLOCK_FEATURE_COUNT + 2;
-
-  /**
    * The feature id for the '<em><b>Type</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int RESPONSE_BLOCK__TYPE = HTTP_METHOD_BLOCK_FEATURE_COUNT + 3;
+  int RESPONSE_BLOCK__TYPE = HTTP_METHOD_BLOCK_FEATURE_COUNT + 2;
 
   /**
    * The number of structural features of the '<em>Response Block</em>' class.
@@ -445,7 +436,7 @@ public interface SpecapiLangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int RESPONSE_BLOCK_FEATURE_COUNT = HTTP_METHOD_BLOCK_FEATURE_COUNT + 4;
+  int RESPONSE_BLOCK_FEATURE_COUNT = HTTP_METHOD_BLOCK_FEATURE_COUNT + 3;
 
   /**
    * The meta object id for the '{@link org.specapi.specapiLang.impl.BlockTypeImpl <em>Block Type</em>}' class.
@@ -1423,17 +1414,6 @@ public interface SpecapiLangPackage extends EPackage
   EAttribute getResponseBlock_Message();
 
   /**
-   * Returns the meta object for the reference '{@link org.specapi.specapiLang.ResponseBlock#getSuperType <em>Super Type</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the reference '<em>Super Type</em>'.
-   * @see org.specapi.specapiLang.ResponseBlock#getSuperType()
-   * @see #getResponseBlock()
-   * @generated
-   */
-  EReference getResponseBlock_SuperType();
-
-  /**
    * Returns the meta object for the containment reference '{@link org.specapi.specapiLang.ResponseBlock#getType <em>Type</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2145,14 +2125,6 @@ public interface SpecapiLangPackage extends EPackage
      * @generated
      */
     EAttribute RESPONSE_BLOCK__MESSAGE = eINSTANCE.getResponseBlock_Message();
-
-    /**
-     * The meta object literal for the '<em><b>Super Type</b></em>' reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference RESPONSE_BLOCK__SUPER_TYPE = eINSTANCE.getResponseBlock_SuperType();
 
     /**
      * The meta object literal for the '<em><b>Type</b></em>' containment reference feature.

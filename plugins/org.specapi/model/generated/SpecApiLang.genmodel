@@ -4,7 +4,7 @@
     editorDirectory="/org.specapi.editor/src" modelPluginID="org.specapi" forceOverwrite="true"
     modelName="SpecApiLang" updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     complianceLevel="5.0" copyrightFields="false" editPluginID="org.specapi.edit"
-    editorPluginID="org.specapi.editor" runtimeVersion="2.9">
+    editorPluginID="org.specapi.editor" runtimeVersion="2.10">
   <genPackages prefix="SpecapiLang" basePackage="org.specapi" disposableProviderFactory="true"
       fileExtensions="specapi" ecorePackage="SpecApiLang.ecore#/">
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="SpecApiLang.ecore#//HttpMethodType">
@@ -53,7 +53,6 @@
     <genClasses ecoreClass="SpecApiLang.ecore#//ResponseBlock">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpecApiLang.ecore#//ResponseBlock/code"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpecApiLang.ecore#//ResponseBlock/message"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SpecApiLang.ecore#//ResponseBlock/superType"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpecApiLang.ecore#//ResponseBlock/type"/>
     </genClasses>
     <genClasses ecoreClass="SpecApiLang.ecore#//BlockType"/>

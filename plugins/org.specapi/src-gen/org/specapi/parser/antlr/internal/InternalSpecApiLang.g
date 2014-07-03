@@ -941,36 +941,19 @@ ruleResponseBlock returns [EObject current=null]
 	    }
 
 )
-)?(	otherlv_4='mixin' 
-    {
-    	newLeafNode(otherlv_4, grammarAccess.getResponseBlockAccess().getMixinKeyword_4_0());
-    }
-(
-(
-		{
-			if ($current==null) {
-	            $current = createModelElement(grammarAccess.getResponseBlockRule());
-	        }
-        }
-	otherlv_5=RULE_ID
-	{
-		newLeafNode(otherlv_5, grammarAccess.getResponseBlockAccess().getSuperTypeComplexTypeDeclarationCrossReference_4_1_0()); 
-	}
-
-)
-))?(
+)?(
 (
 		{ 
-	        newCompositeNode(grammarAccess.getResponseBlockAccess().getTypeBlockTypeParserRuleCall_5_0()); 
+	        newCompositeNode(grammarAccess.getResponseBlockAccess().getTypeBlockTypeParserRuleCall_4_0()); 
 	    }
-		lv_type_6_0=ruleBlockType		{
+		lv_type_4_0=ruleBlockType		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getResponseBlockRule());
 	        }
        		set(
        			$current, 
        			"type",
-        		lv_type_6_0, 
+        		lv_type_4_0, 
         		"BlockType");
 	        afterParserOrEnumRuleCall();
 	    }

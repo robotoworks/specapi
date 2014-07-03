@@ -68,7 +68,7 @@ RequestBlock:
 
 ResponseBlock:
 	{ResponseBlock}
-	'response' code=INTEGER? message=STRING? ('mixin' superType=[ComplexTypeDeclaration])? (type=BlockType)?
+	'response' code=INTEGER? message=STRING? (type=BlockType)?
 ;
 
 BlockType:

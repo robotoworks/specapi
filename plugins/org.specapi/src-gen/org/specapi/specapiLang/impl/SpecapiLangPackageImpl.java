@@ -639,19 +639,9 @@ public class SpecapiLangPackageImpl extends EPackageImpl implements SpecapiLangP
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getResponseBlock_SuperType()
-  {
-    return (EReference)responseBlockEClass.getEStructuralFeatures().get(2);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EReference getResponseBlock_Type()
   {
-    return (EReference)responseBlockEClass.getEStructuralFeatures().get(3);
+    return (EReference)responseBlockEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -1142,7 +1132,6 @@ public class SpecapiLangPackageImpl extends EPackageImpl implements SpecapiLangP
     responseBlockEClass = createEClass(RESPONSE_BLOCK);
     createEAttribute(responseBlockEClass, RESPONSE_BLOCK__CODE);
     createEAttribute(responseBlockEClass, RESPONSE_BLOCK__MESSAGE);
-    createEReference(responseBlockEClass, RESPONSE_BLOCK__SUPER_TYPE);
     createEReference(responseBlockEClass, RESPONSE_BLOCK__TYPE);
 
     blockTypeEClass = createEClass(BLOCK_TYPE);
@@ -1305,7 +1294,6 @@ public class SpecapiLangPackageImpl extends EPackageImpl implements SpecapiLangP
     initEClass(responseBlockEClass, ResponseBlock.class, "ResponseBlock", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getResponseBlock_Code(), ecorePackage.getEInt(), "code", null, 0, 1, ResponseBlock.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getResponseBlock_Message(), ecorePackage.getEString(), "message", null, 0, 1, ResponseBlock.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getResponseBlock_SuperType(), this.getComplexTypeDeclaration(), null, "superType", null, 0, 1, ResponseBlock.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getResponseBlock_Type(), this.getBlockType(), null, "type", null, 0, 1, ResponseBlock.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(blockTypeEClass, BlockType.class, "BlockType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

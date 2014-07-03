@@ -11,7 +11,6 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.specapi.specapiLang.BlockType;
-import org.specapi.specapiLang.ComplexTypeDeclaration;
 import org.specapi.specapiLang.ResponseBlock;
 import org.specapi.specapiLang.SpecapiLangPackage;
 
@@ -24,7 +23,6 @@ import org.specapi.specapiLang.SpecapiLangPackage;
  * <ul>
  *   <li>{@link org.specapi.specapiLang.impl.ResponseBlockImpl#getCode <em>Code</em>}</li>
  *   <li>{@link org.specapi.specapiLang.impl.ResponseBlockImpl#getMessage <em>Message</em>}</li>
- *   <li>{@link org.specapi.specapiLang.impl.ResponseBlockImpl#getSuperType <em>Super Type</em>}</li>
  *   <li>{@link org.specapi.specapiLang.impl.ResponseBlockImpl#getType <em>Type</em>}</li>
  * </ul>
  * </p>
@@ -72,16 +70,6 @@ public class ResponseBlockImpl extends HttpMethodBlockImpl implements ResponseBl
    * @ordered
    */
   protected String message = MESSAGE_EDEFAULT;
-
-  /**
-   * The cached value of the '{@link #getSuperType() <em>Super Type</em>}' reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getSuperType()
-   * @generated
-   * @ordered
-   */
-  protected ComplexTypeDeclaration superType;
 
   /**
    * The cached value of the '{@link #getType() <em>Type</em>}' containment reference.
@@ -165,49 +153,6 @@ public class ResponseBlockImpl extends HttpMethodBlockImpl implements ResponseBl
    * <!-- end-user-doc -->
    * @generated
    */
-  public ComplexTypeDeclaration getSuperType()
-  {
-    if (superType != null && superType.eIsProxy())
-    {
-      InternalEObject oldSuperType = (InternalEObject)superType;
-      superType = (ComplexTypeDeclaration)eResolveProxy(oldSuperType);
-      if (superType != oldSuperType)
-      {
-        if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, SpecapiLangPackage.RESPONSE_BLOCK__SUPER_TYPE, oldSuperType, superType));
-      }
-    }
-    return superType;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public ComplexTypeDeclaration basicGetSuperType()
-  {
-    return superType;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setSuperType(ComplexTypeDeclaration newSuperType)
-  {
-    ComplexTypeDeclaration oldSuperType = superType;
-    superType = newSuperType;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, SpecapiLangPackage.RESPONSE_BLOCK__SUPER_TYPE, oldSuperType, superType));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public BlockType getType()
   {
     return type;
@@ -281,9 +226,6 @@ public class ResponseBlockImpl extends HttpMethodBlockImpl implements ResponseBl
         return getCode();
       case SpecapiLangPackage.RESPONSE_BLOCK__MESSAGE:
         return getMessage();
-      case SpecapiLangPackage.RESPONSE_BLOCK__SUPER_TYPE:
-        if (resolve) return getSuperType();
-        return basicGetSuperType();
       case SpecapiLangPackage.RESPONSE_BLOCK__TYPE:
         return getType();
     }
@@ -305,9 +247,6 @@ public class ResponseBlockImpl extends HttpMethodBlockImpl implements ResponseBl
         return;
       case SpecapiLangPackage.RESPONSE_BLOCK__MESSAGE:
         setMessage((String)newValue);
-        return;
-      case SpecapiLangPackage.RESPONSE_BLOCK__SUPER_TYPE:
-        setSuperType((ComplexTypeDeclaration)newValue);
         return;
       case SpecapiLangPackage.RESPONSE_BLOCK__TYPE:
         setType((BlockType)newValue);
@@ -332,9 +271,6 @@ public class ResponseBlockImpl extends HttpMethodBlockImpl implements ResponseBl
       case SpecapiLangPackage.RESPONSE_BLOCK__MESSAGE:
         setMessage(MESSAGE_EDEFAULT);
         return;
-      case SpecapiLangPackage.RESPONSE_BLOCK__SUPER_TYPE:
-        setSuperType((ComplexTypeDeclaration)null);
-        return;
       case SpecapiLangPackage.RESPONSE_BLOCK__TYPE:
         setType((BlockType)null);
         return;
@@ -356,8 +292,6 @@ public class ResponseBlockImpl extends HttpMethodBlockImpl implements ResponseBl
         return code != CODE_EDEFAULT;
       case SpecapiLangPackage.RESPONSE_BLOCK__MESSAGE:
         return MESSAGE_EDEFAULT == null ? message != null : !MESSAGE_EDEFAULT.equals(message);
-      case SpecapiLangPackage.RESPONSE_BLOCK__SUPER_TYPE:
-        return superType != null;
       case SpecapiLangPackage.RESPONSE_BLOCK__TYPE:
         return type != null;
     }
