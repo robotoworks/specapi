@@ -39,6 +39,7 @@
 	<module>plugins/org.specapi.plugins.swagger</module>
 	<module>plugins/org.specapi.plugins.jquery</module>
 	<module>plugins/org.specapi.plugins.dotnet</module>
+	<module>plugins/org.specapi.plugins.android</module>
 	</modules>
 
 	<repositories>
