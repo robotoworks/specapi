@@ -65,7 +65,7 @@ public class HttpUrlConnectionResponse<T> implements Response<T> {
 	@Override
 	public void checkResponseCode(int responseCode) throws UnexpectedHttpStatusException {
 		if(mResponseCode != responseCode) {
-			throw new UnexpectedHttpStatusException(mResponseCode, HTTP_OK);
+			throw new UnexpectedHttpStatusException(mResponseCode, responseCode);
 		}
 	}
 
