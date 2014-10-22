@@ -2,14 +2,15 @@ package org.specapi.generator
 
 import java.util.HashMap
 import java.util.ArrayList
+import org.eclipse.xtend.lib.annotations.Accessors
 
 class DocComments {
-    @Property var params = new HashMap<String, DocCommentTag>
+    @Accessors HashMap<String, DocCommentTag> params = new HashMap<String, DocCommentTag>
     private var all = new ArrayList<DocCommentTag>
     
-    @Property String content
-    @Property DocCommentTag request
-    @Property DocCommentTag response
+    @Accessors String content
+    @Accessors DocCommentTag request
+    @Accessors DocCommentTag response
     
     def addTag(DocCommentTag tag) {
     	

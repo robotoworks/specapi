@@ -187,7 +187,7 @@ namespace Org.Specapi.Github
                 
                 var payload = request.Entity;
                 var requestStream = webRequest.GetRequestStream();
-                var serializer = new DataContractJsonSerializer (typeof(CreateRepositoryInput));
+                var serializer = new DataContractJsonSerializer (typeof(RepositoryProperties));
                 serializer.WriteObject(requestStream, payload);
     
                 var webResponse = (HttpWebResponse) webRequest.GetResponse ();
@@ -247,7 +247,7 @@ namespace Org.Specapi.Github
                 
                 var payload = request.Entity;
                 var requestStream = webRequest.GetRequestStream();
-                var serializer = new DataContractJsonSerializer (typeof(CreateRepositoryInput));
+                var serializer = new DataContractJsonSerializer (typeof(RepositoryProperties));
                 serializer.WriteObject(requestStream, payload);
     
                 var webResponse = (HttpWebResponse) webRequest.GetResponse ();
@@ -291,6 +291,48 @@ namespace Org.Specapi.Github
                 serializer = new DataContractJsonSerializer (typeof(ErrorMessage));
                 ErrorMessage result = (ErrorMessage) serializer.ReadObject (responseStream);
                 request.On422(result);
+            }
+            else if(request.OnOther != null) 
+            {
+                request.OnOther(webResponse);
+            }
+        }       
+        public void EditRepository(EditRepositoryRequest request)
+        {
+            try {
+                var uri = request.CreateUri(BaseUrl);
+                var webRequest = CreateRequest (uri);
+                webRequest.Method = "PATCH";
+                webRequest.UserAgent = "DotNet-GithubAPI";
+                
+                var payload = request.Entity;
+                var requestStream = webRequest.GetRequestStream();
+                var serializer = new DataContractJsonSerializer (typeof(RepositoryPatch));
+                serializer.WriteObject(requestStream, payload);
+    
+                var webResponse = (HttpWebResponse) webRequest.GetResponse ();
+                HandleEditRepositoryResponse(request, webResponse);
+            }
+            catch(WebException webException) {
+                var webResponse = (HttpWebResponse)  webException.Response;
+                HandleEditRepositoryResponse(request, webResponse);
+            }
+            catch(Exception exception) {
+                throw;
+            }
+        }
+        
+        protected void HandleEditRepositoryResponse (EditRepositoryRequest request, HttpWebResponse webResponse)
+        {
+            int status = (int) webResponse.StatusCode;
+            var responseStream = webResponse.GetResponseStream ();
+            DataContractJsonSerializer serializer = null;
+            
+            if (status == 200 && request.On200 != null) 
+            {
+                serializer = new DataContractJsonSerializer (typeof(Repository));
+                Repository result = (Repository) serializer.ReadObject (responseStream);
+                request.On200(result);
             }
             else if(request.OnOther != null) 
             {

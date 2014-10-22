@@ -131,4 +131,8 @@ public class SpecApiStringExtensions {
 		
 		return builder.toString();
 	}
+	
+	public static String pluralize(String str) {
+		return Inflector.pluralize(str);
+	}
 }

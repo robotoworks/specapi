@@ -1,0 +1,13 @@
+/CreateOrganizationRepositoryRequest.cs
+/CreateRepositoryRequest.cs
+/Error.cs
+/ErrorCode.cs
+/ErrorMessage.cs
+/GithubAPI.cs
+/ListAllPublicRepositoriesRequest.cs
+/ListOrganizationRepositoriesRequest.cs
+/ListRepositoriesRequest.cs
+/ListUserRepositoriesRequest.cs
+/Repository.cs
+/RepositoryOwner.cs
+/RepositoryPermissions.cs

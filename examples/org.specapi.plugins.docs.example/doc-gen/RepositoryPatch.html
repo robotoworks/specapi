@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GithubAPI</title>
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="specapi.css" rel="stylesheet">
+<link rel="stylesheet" href="highlight/styles/tomorrow.css">
+<script src="highlight/highlight.pack.js"></script>
+<script src="js/json2.js"></script>
+</head>
+<body>
+<div class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+<div class="container-fluid">
+<div class="navbar-header">
+<a class="navbar-brand pull-right" href="index.html">GithubAPI</a>
+<button type="button" class="navbar-toggle pull-left" data-toggle="offcanvas">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+</div>
+</div>
+</div>
+<div class="container-fluid">
+<div class="row row-offcanvas row-offcanvas-left">
+<div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+<div class="sidebar-nav">
+<ul class="nav nav-list">
+<li><a href="configure.html"><span class="glyphicon glyphicon-cog inverse"></span> Configure</a></li>
+<li class="nav-header">Methods</li>
+<li><a href="method_listRepositories.html">List Repositories</a></li>
+<li><a href="method_listUserRepositories.html">List User Repositories</a></li>
+<li><a href="method_listOrganizationRepositories.html">List Organization Repositories</a></li>
+<li><a href="method_listAllPublicRepositories.html">List All Public Repositories</a></li>
+<li><a href="method_createRepository.html">Create Repository</a></li>
+<li><a href="method_createOrganizationRepository.html">Create Organization Repository</a></li>
+<li><a href="method_editRepository.html">Edit Repository</a></li>
+<li class="nav-header">Entities</li>
+<li><a href="Repository.html">Repository</a></li>
+<li><a href="RepositoryOwner.html">RepositoryOwner</a></li>
+<li><a href="RepositoryPermissions.html">RepositoryPermissions</a></li>
+<li><a href="RepositoryProperties.html">RepositoryProperties</a></li>
+<li class="active"><a href="RepositoryPatch.html">RepositoryPatch</a></li>
+<li><a href="ErrorMessage.html">ErrorMessage</a></li>
+<li><a href="Error.html">Error</a></li>
+<li class="nav-header">Enums</li>
+<li><a href="ErrorCode.html">ErrorCode</a></li>
+</ul>
+</div>
+</div>
+<div class="col-xs-12 col-sm-9">
+<h1>RepositoryPatch</h1>
+<pre><code class="javascript"><a href="RepositoryPatch.html">RepositoryPatch</a> {
+    "name" : string
+    "description" : string
+    "homepage" : string
+    "private" : boolean
+    "has_issues" : boolean
+    "has_wiki" : boolean
+    "has_downloads" : boolean
+}
+</code></pre>
+</div>
+</div>
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.storageapi.min.js"></script>
+<script src="js/specapi.config.js"></script>
+<script src="githubapi.js"></script>
+<script>
+$(document).ready(function () {
+  $('[data-toggle=offcanvas]').click(function () {
+    $('.row-offcanvas').toggleClass('active')
+  });
+});
+</script>
+<script>
+hljs.configure({tabReplace: '<span class="indent"> </span>'});
+hljs.initHighlightingOnLoad();</script>
+</body>
+</html>
